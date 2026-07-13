@@ -52,9 +52,9 @@ then one of the following occurs.
    \]
 
    Thus the `L`-based contact has moved literally from the pair carrier to
-   the named target `A`.  Under the inherited raw-rank-one hypothesis this
-   is the unique raw decoration.  In the exact decorated cell it is a
-   supported target decoration precisely when
+   the named target `A`.  This says nothing about a direct `w-K'` contact
+   which may survive the surgery.  In the exact decorated cell the new
+   target contact is a supported decoration precisely when
    `\{w\} union (A cap T)` is independent; otherwise the failed
    independence is the corresponding literal boundary-incompatibility
    certificate.
@@ -122,7 +122,7 @@ Admissibility of the trace of `A` depends only on the literal edges from
 opposite shore makes the same trace admissible on the first side.  Apply
 Theorem 2.1 there.  In outcome 1 the peel makes `W` contact `A` as well as
 the retained pair carrier; in outcome 2 the exact rotation makes it
-contact `A` instead.  In either case the first side now supports `w->A`.
+contact `A`.  In either case the first side now supports `w->A`.
 The audited bilateral decorated-overlap theorem aligns this common exact
 state and six-colours `G`. \(\square\)
 

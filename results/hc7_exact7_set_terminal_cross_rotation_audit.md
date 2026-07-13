@@ -5,9 +5,9 @@ Audited file: `results/hc7_exact7_set_terminal_cross_rotation.md`.
 ## Verdict
 
 **Theorem 2.1 is GREEN as a local trace-preserving surgery.  Corollary
-3.1 is GREEN in the original supported bilateral core.  The final claimed
-application to an arbitrary cross from the spanning-rural theorem needs
-two additional endpoint/scope hypotheses.**
+3.1 is GREEN in the original supported bilateral core.  The promoted
+source now states the endpoint and side-terminal hypotheses needed before
+applying it to a cross from the spanning-rural theorem.**
 
 The local proof correctly turns a cross with
 
@@ -31,11 +31,12 @@ Theorem 2.1 does not yet yield a supported bilateral state.  The last
 paragraph must retain these as attained-duty conditions rather than say
 the cross is discharged completely.
 
-One wording qualification is also needed: under the hypotheses as stated,
-the theorem moves the **`L`-based contact** exactly.  Calling it the
-“unique raw decoration” additionally assumes the inherited raw-rank-one
-condition for `W={w} union L`; `L`-anticompleteness alone does not exclude
-raw `w`-contacts to `A` or `B`.
+One wording correction remains.  The theorem moves the **`L`-based
+contact** exactly.  Even inherited raw rank one does not imply that the
+new target decoration is the unique raw decoration after surgery: `w`
+may retain a direct edge to an internal vertex of the shortened pair
+carrier `K'`.  The formal equations (2.2) concern `L`, not all of
+`W={w} union L`.
 
 ## 1. Connected-pair conversion
 
@@ -145,16 +146,41 @@ a supported decoration exactly when
 is independent.  If it is not, the offending literal `w`--trace edge is
 the stated boundary-incompatibility certificate.  This caveat is exact.
 
-However, `E(L,A union B)=empty` does not imply that `W={w} union L` has
-raw contact only with `K`: `w` itself may see a trace vertex of `A` or
-`B`.  Therefore the phrase “the unique raw decoration has moved” is valid
-only under the inherited raw-rank-one hypothesis.  Without explicitly
-importing that hypothesis, say instead:
+However, `E(L,A union B)=empty` does not control direct `w`-core edges.
+Raw rank one initially excludes `w-A` and `w-B`, but it still permits
+`w-K`.  After replacing `K` by `K'`, such an edge can remain while the
+new `L-A'` edge creates a second raw contact.  Therefore the phrase
+“under inherited raw rank one this is the unique raw decoration” is still
+too strong.  Replace it by:
 
 > all literal contacts supplied by the locked region `L` have moved from
 > the pair carrier to the named target `A`.
 
-The formal theorem equations are unaffected.
+The formal theorem equations and the supported-target conclusion are
+unaffected.  Likewise, Corollary 3.1 should say that outcome 2 makes `W`
+contact `A`, not necessarily contact `A` **instead** of `K`.
+
+### Six-vertex wheel guardrail
+
+This is witnessed already by a wheel.  Let `K` have rim
+
+\[
+                         x,u,y,s,p,x
+\]
+
+and hub `q`.  It is three-connected, `xy` is absent, and the paths
+`x-u-y` and `q-p` are vertex-disjoint.  Let `L={ell}`, with edges
+`w ell` and `ell p`, so `P={p}`.  Give `q` a literal edge to `A`, give
+the traces of `K` their required edges to `A,B`, and make the three core
+blocks pairwise adjacent.  Add the edge `wu`, but no `w-A` or `w-B` edge.
+Then `W={w,ell}` initially has raw rank one and supports the pair trace
+provided `w` misses `x,y`.
+
+The only `x-y` path avoiding `q,p` in this wheel is `R=x-u-y`; its
+complement is connected.  Outcome 2 moves `C={q,s,p}` into `A'`.  The
+edge `ell p` gives `W-A'`, while `wu` still gives `W-K'`.  Thus the local
+surgery and (2.2) hold exactly, but the resulting target decoration is
+not unique even under initial raw rank one.
 
 ## 5. Bilateral corollary
 
@@ -174,8 +200,10 @@ Thus Corollary 3.1 is GREEN under its stated supported-core hypotheses.
 
 ## 6. Scope for a spanning-rural cross
 
-The final paragraph presently requires only that the cross portal `q` be
-labelled to `A` or `B`.  That is necessary but not sufficient.
+The promoted source now retains all three needed duties: a literal named
+target at the `q` end, an original `L`-attachment at the `p` end, and
+absence (or separate reassignment) of the side terminal.  Each restriction
+is necessary.
 
 ### Marked-end duty
 
@@ -203,6 +231,19 @@ Therefore direct application requires
 
 Otherwise the cross is only a topological spanning-pole linkage and still
 needs a label-assignment or endpoint-transfer lemma.
+
+This failure has a five-vertex-carrier guardrail.  Take
+`K=K_5-xy` on `x,y,q,p,r`.  Let the original locked set `L={ell}` meet
+`K` only at `r`.  Enlarge the spanning pole by a vertex `s` with edges
+`ell s` and `sp`; then `p` is a spanning-pole attachment but not an
+original `L`-attachment.  Add a named `q-A` edge and the required trace
+and core adjacencies.  The paths `x-r-y` and `q-p` form the claimed
+cross.  The only nonseparating `x-y` path avoiding `q,p` is `x-r-y`, so
+the spanning marked set appears on both sides, but moving
+`C={q,p}` to `A` creates no `L-A` edge.  This is not a counterexample to
+Theorem 2.1, because its required condition `p in N(L) cap K` fails; it
+shows exactly why endpoint transfer cannot be inferred from a topological
+spanning-pole label.
 
 ### Side-terminal duty
 
