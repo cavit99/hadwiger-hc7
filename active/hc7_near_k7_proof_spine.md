@@ -213,6 +213,18 @@ such a literal cycle from an arbitrary alternating duty web, or turn its
 failure into an actual adhesion/state-gluing certificate.  Source:
 `../results/hc7_exact7_moser_cyclic_packet_completion.md`.
 
+That extraction is now uniform for a 4-connected packet with three binary
+attained duties.  Pairwise failure of the three two-duty linkages puts all
+six portals on one facial cycle in order `A B D A B D`.  If a whole shore
+component is not 4-connected, an internal gate of order at most three has
+lobe support at least `7-r`.  In the paired-triangle attained state, a
+dutyless three-gate lobe has exactly the singleton `c` and one literal from
+each duty in its boundary support.  Adjoining the three gate vertices gives
+its literal neighbourhood of order seven, hence a strictly smaller actual
+exact-seven adhesion.  This descent may change both the returned state and
+the packet vector, so it does not yet terminate S3.  Source:
+`../results/hc7_exact7_binary_duty_cycle_or_gate.md`.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore

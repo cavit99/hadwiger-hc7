@@ -139,6 +139,20 @@ subdivisions, and cycles in the same or different rich components.  The
 remaining web gap is therefore extraction: an alternating duty web need
 not yet contain such a literal cycle.
 
+A uniform cycle-or-gate theorem now performs that extraction for every
+4-connected packet with three binary attained duties.  If no two duties
+have disjoint linkage paths, the packet is planar and all six literal duty
+portals lie on one facial cycle in order `A B D A B D`.  Without
+4-connectivity, a whole shore component instead exposes an internal gate of
+order at most three; an `r`-gate lobe contacts at least `7-r` boundary
+literals.  For an attained paired-triangle state and a completing full
+packet in the same rich shore, every dutyless three-gate lobe has the exact
+`c`-plus-one-from-each-duty trace.  Its literal neighbourhood is therefore
+a new seven-boundary and gives a strictly smaller exact-seven adhesion.
+This is a real descent, but it does not preserve the attained state or rule
+out a descendant `(1,1)` cell.  The next step is to control duty-bearing
+lobes or prove compatibility across successive exact-seven states.
+
 Controlling sources:
 
 - [general labelled-carrier reflection](results/hc7_exact7_rich_cutpacket_exchange.md)
@@ -159,6 +173,8 @@ Controlling sources:
   and its [audit](results/hc7_exact7_two_packet_cyclic_web_exchange_audit.md);
 - [Moser cyclic-packet completion](results/hc7_exact7_moser_cyclic_packet_completion.md)
   and its [audit](results/hc7_exact7_moser_cyclic_packet_completion_audit.md);
+- [binary-duty cycle or labelled gate](results/hc7_exact7_binary_duty_cycle_or_gate.md)
+  and its [audit](results/hc7_exact7_binary_duty_cycle_or_gate_audit.md);
 - [alternating gate-bypass barrier](barriers/hc7_exact7_gate_bypass_falsifier.md)
   and its [audit](barriers/hc7_exact7_gate_bypass_falsifier_audit.md);
 - [static packet-quotient exhaustion](results/hc7_exact7_three_packet_quotient_characterization.md)
