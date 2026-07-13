@@ -164,6 +164,14 @@ all-crossless family is closed by one block-terminal web, while a surviving
 shore has a crossed frame and a model-carried connector separator.  This is
 supporting infrastructure, not a reduction of general `(1,2)` to Moser.
 
+One further infinite cyclic family is closed.  For the normalized attained
+state `23|14|05|6`, a cycle through the six selected duty portals reflects
+unless its duty pairs alternate.  Of the eight literal alternating orders,
+six give audited explicit `K_7` models using the other rich full packet and
+the thin full packet.  Only the symmetry orbit represented by
+`2,4,5,3,1,0` remains; arbitrary bridges not containing such a six-portal
+cycle are outside this theorem.
+
 A recent audit corrected the conditional exact-order-six rural endgame:
 
 - two disjoint crossed-frame carriers join alternating pairs on the literal
@@ -188,6 +196,8 @@ Sources:
   [verifier](barriers/hc7_exact7_crossed_frame_disk_barrier_verify.py);
 - [paired-Kempe self-lock barrier](barriers/hc7_exact7_two_shore_kempe_pairing_barrier.md)
   and [verifier](barriers/hc7_exact7_two_shore_kempe_pairing_barrier_verify.py).
+- [Moser cyclic duty exchange](results/hc7_exact7_moser_cyclic_duty_exchange.md)
+  and its [audit](results/hc7_exact7_moser_cyclic_duty_exchange_audit.md).
 
 ## Exact remaining gap
 

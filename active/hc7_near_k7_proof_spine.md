@@ -266,6 +266,15 @@ it is to reserve a connector outside the rooted bags or expose a bilateral
 internal adhesion on which the four-corner equality state can be transferred.
 Source: `../results/hc7_exact7_moser_one_component_allweb_closure.md`.
 
+The atomic alternating packet web is now label-sensitive.  In the normalized
+attained state `23|14|05|6`, any actual cycle through the six duty portals
+closes when two duty pairs are nonalternating.  When all three alternate,
+six of the eight literal orientations have explicit seven-bag models using
+the other rich full packet and the thin full packet.  The only surviving
+literal orbit is `2,4,5,3,1,0`.  This is an infinite six-portal-cycle
+closure, not a claim about arbitrary multi-attachment bridges.  Source:
+`../results/hc7_exact7_moser_cyclic_duty_exchange.md`.
+
 The carrier step cannot follow from shore connectivity alone.  The audited
 essential-portal barrier `../barriers/hc7_sole_exterior_reserved_connector_barrier.md`
 has a seven-connected, minimum-degree-seven, `K_7`-minor-free shore with both
