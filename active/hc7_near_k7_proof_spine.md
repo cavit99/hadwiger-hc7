@@ -183,35 +183,21 @@ connectivity and static Dirac data alone cannot do so; the next step must use
 `../results/hc7_exact7_bipartite_cutvertex_exchange.md` and
 `../barriers/hc7_exact7_bipartite_carrier_connectivity_dirac_barrier.md`.
 
-In the pure-Moser degree-seven cell with exactly two exterior components,
-all separators internal to either component of order at most two are now
-closed.  Cutvertices give a literal model.  A two-cut produces two adjacent
-defect-at-most-two carriers; every static quotient except `[13|24]` and
-`[14|23]` has an `S`-meeting `K_6`, and those two states glue by a symbolic
-complementary-defect exchange.  Thus each surviving exterior component is
-tiny (order at most three) or 3-connected.  This is a genuine infinite-
-family closure, but it does not close the 3-connected web residue.  Source:
-`../results/hc7_exact7_moser_rich_twocut_exchange.md`.
+The pure-Moser degree-seven cell with exactly two exterior components is now
+closed in full.  A single four-port call on `1,2,3,4` returns adjacent
+carriers for `13|24` in its linkage outcome or `14|23` in its rural outcome.
+Both complementary independent matchings feed one exact-state exchange, so
+the former favourable-crossing and multi-frame compatibility gaps disappear.
+The low-cut theorem sends every component of order at least four into this
+two-connected closure; open twins, Hall matchings, and the cutvertex theorem
+handle orders one, two, and three.  Sources:
+`../results/hc7_exact7_moser_four_corner_exchange.md` and
+`../results/hc7_exact7_moser_two_component_closure.md`.
 
-Conditional on the favourable disjoint `0`--`5` and `2`--`4` crossing in
-one exterior component, **all** internal geometries of the opposite
-component are now eliminated.  The thin-rural theorem handles singleton,
-bridge, cutvertex, cycle, and cactus shores; the finite crossed-page theorem
-handles a triangle; the low-cut theorem reduces every remaining component
-of order at least four to the three-connected case; and the new rural
-complementary-block theorem closes that case.  In its disk outcome, facial
-carriers for `13` and `24` reproduce each exact state returned through the
-crossed shore, so palette alignment is literal and no colour-to-bag lift is
-assumed.
-
-The exact live Moser step is therefore multi-frame composition: prove that
-one of the four trace frames supplies the favourable crossing, or that the
-simultaneous rural orders force a literal `K_7` or the same exact boundary
-state from opposite proper-minor operations.  Witness paths from different
-frames are not known disjoint.  Sources:
-`../results/hc7_moser_thin_rural_exchange.md`,
-`../results/hc7_exact7_moser_triangle_shore.md`, and
-`../results/hc7_exact7_moser_3connected_web_exchange.md`.
+This does not close the one-exterior pure-Moser branch, an arbitrary
+connected-rich `(1,2)` adhesion, or the other degree classes.  Those are now
+the live interfaces; no multi-frame crossing-selection problem remains in
+the exact two-component Moser cell.
 
 The connected-rich branch has a stronger uniform capacity theorem.  In all
 ten absolute-demand-three boundary types, two full packets absorb any third
