@@ -47,6 +47,17 @@ from `v`, so seven-connectivity gives at least seven distinct vertices and
 hence at least five in the named block.  The displayed closed-shore
 separation follows directly from `Q=N_J(K_w)`.
 
+Corollary 4.3 is also **GREEN**.  A component `L` of `K_w` is one of the
+components remaining after deletion of the open-core vertices, so it has
+no edge to another residual component.  Any `L`--`U` edge lands in the
+corresponding named core block, and raw rank at most one puts every such
+contact in the same block `K`.  Exact-shore containment excludes the
+opposite shore, opposite terminal, and `v`, leaving only
+`K\cup\{w,t\}`.  Since `v\notin L\cup N_G(L)`, deleting `N_G(L)` genuinely
+separates nonempty `L` from `v`.  Seven-connectivity gives at least seven
+neighbours, of which at most `w,t` lie outside `K`; hence every component
+has at least five distinct contacts in `K`.
+
 ## Trust boundary
 
 The exact adhesion `T=U dotcup {w}` is assumed.  The general rooted-model

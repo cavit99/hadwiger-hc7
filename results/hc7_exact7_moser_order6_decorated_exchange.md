@@ -200,6 +200,36 @@ gives it order at least seven, and at most `w,t` lie outside `K`, proving
 the five-attachment bound.  Finally `Q=N_J(K_w)` is by definition the
 adhesion in (4.4). `square`
 
+### Corollary 4.3 (the five-attachment lock is componentwise)
+
+In outcome 3 of Lemma 4.2, every component `L` of `K_w` satisfies
+
+\[
+       N_G(L)\subseteq K\cup\{w,t\},
+       \qquad |N_G(L)\cap K|\ge5.                  \tag{4.5}
+\]
+
+In particular, every connected `w`-attached region in the lock separately
+meets the five-contact hypothesis; the contacts cannot be hidden by
+distributing them among several components.
+
+#### Proof
+
+The set `K_w` is the union of components left after deleting the
+open-shore vertices of the three core blocks.  Hence its distinct
+components are mutually anticomplete.  Fix one such component `L`.
+By the definition of `K_w`, it has a neighbour at `w`.  Every edge from
+`L` to `U` or to the deleted open-core vertices lands in a named core
+block.  In Lemma 4.2(3) the raw contact rank is at most one, so all those
+contacts land in the same named block `K`.  The exact terminal separation
+excludes the opposite shore and `v`; the only remaining possible boundary
+neighbour is the side terminal `t`.  Thus the first containment in (4.5)
+holds.
+
+The set `N_G(L)` separates the nonempty set `L` from `v`.  Seven-
+connectivity gives `|N_G(L)|\ge7`, while at most `w,t` lie outside `K`.
+This proves the second assertion. \(\square\)
+
 ## 5. Degree surplus and a label-faithful lobe surgery
 
 The following statements continue to assume the exact cell (1.1): the two

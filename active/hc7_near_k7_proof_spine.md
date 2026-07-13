@@ -272,7 +272,8 @@ two independent nonseparating paths then segregate all nonroot locked
 attachments onto one rail and all three movable portals onto the other;
 each rail complement is connected.  The live task is to turn an overlapping
 rail bridge into a peel, or the nonoverlap into a coherent rural/fixed-pair
-output.  Sources:
+output.  The five-contact input is componentwise, so disconnected locked
+regions do not evade this route by scattering contacts.  Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
 `../results/hc7_exact7_pair_carrier_bypass.md`.

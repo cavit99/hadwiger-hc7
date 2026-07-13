@@ -313,6 +313,10 @@ one rail and all three movable foreign portals lie on the other, with each
 rail complement connected.  The remaining task is now a rail-bridge
 exchange: overlapping bridges must give a peel, while nonoverlap should
 give the coherent rural/two-apex output.
+The five-contact premise is componentwise: every connected component of a
+locked `w`-region separately has at least five contacts with the same named
+carrier.  A disconnected attachment region cannot evade the bypass theorem
+by distributing its contacts.
 This is still conditional on the literal order-six adhesion and does not
 close the sole-exterior branch.
 
