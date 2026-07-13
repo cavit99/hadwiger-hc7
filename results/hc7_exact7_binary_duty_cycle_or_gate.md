@@ -96,7 +96,8 @@ The respective web completions show on `F` that `A,B` alternate, that
 `B,D` forces the same order on the second arc.  This is exactly (1.1).
 \(\square\)
 
-The web-completion form used here is Theorem 1.5 of S. Humeau and D. Pous,
+The web-completion form used here is Theorem 1.5 in version 1 (Theorem 1.3
+in version 2) of S. Humeau and D. Pous,
 *On the Two Paths Theorem and the Two Disjoint Paths Problem*,
 arXiv:2505.16431.  For a four-tuple it is the classical Two Paths Theorem
 of Seymour and Thomassen.

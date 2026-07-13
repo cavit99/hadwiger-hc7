@@ -233,6 +233,38 @@ exact-seven adhesion.  This descent may change both the returned state and
 the packet vector, so it does not yet terminate S3.  Source:
 `../results/hc7_exact7_binary_duty_cycle_or_gate.md`.
 
+The packet vector can nevertheless be recovered in every nondegenerate gate
+exit system.  For a dutyless lobe `K`, every sibling lobe is either already
+full to the new boundary or has a nonempty exit set in the three discarded
+old-boundary vertices.  Two self-full siblings, a self-full sibling plus any
+other sibling, or two siblings with distinct exit representatives combine
+literally with the two old full packets to give two disjoint full packets on
+the new opposite shore.  The packet theorem then orients the descendant as
+`(1,2)` or `(1,3)`, with `K` thin, and adaptive reflection closes `(1,3)`.
+The exact residuals are:
+
+1. one sibling lobe, with no further exit restriction; or
+2. at least two non-self-full siblings whose exit sets are all the same
+   singleton.
+
+Source: `../results/hc7_exact7_three_gate_exit_matching.md`.
+
+No exact equality state has been transported.  A verified 14-vertex,
+seven-connected local architecture satisfies the old `(1,2)` packet data,
+legal paired-triangle attainment, and the dutyless gate trace while every
+old-support/gate pair is an edge.  It therefore rules out deriving the
+proposed three paired blocks from the audited local hypotheses alone.  The
+host is six-colourable, so it is a barrier to that inference rather than an
+`HC_7` counterexample.  Source:
+`../barriers/hc7_exact7_three_gate_pullback_matching_barrier.md`.
+
+The next S3-to-S1 handoff must close the one-sibling and common-exit residues
+by a literal missing-row model regeneration, a genuinely attained new state,
+or the fixed-pair terminal outcome.  An unlabelled regenerated `K_6` model is
+insufficient.  No global lexicographic measure is currently justified: the
+descended lobe becomes thin, the next rich component need not be nested, and
+the audited S1 rotations include involutions.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore

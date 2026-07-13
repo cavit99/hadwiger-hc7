@@ -160,9 +160,24 @@ literals.  For an attained paired-triangle state and a completing full
 packet in the same rich shore, every dutyless three-gate lobe has the exact
 `c`-plus-one-from-each-duty trace.  Its literal neighbourhood is therefore
 a new seven-boundary and gives a strictly smaller exact-seven adhesion.
-This is a real descent, but it does not preserve the attained state or rule
-out a descendant `(1,1)` cell.  The next step is to control duty-bearing
-lobes or prove compatibility across successive exact-seven states.
+This is a real descent, but it does not preserve the attained state.
+
+A state-free exit-matching theorem now controls the packet vector after
+most such descents.  Relative to the new boundary, sibling lobes and the two
+old full packets construct two disjoint full packets unless either there is
+exactly one sibling lobe, or at least two siblings all use one common
+singleton exit outside the new boundary.  In every other case the new cell
+is `(1,2)` or `(1,3)`, with the descended lobe as its thin shore; `(1,3)`
+closes by adaptive reflection.  Thus the exact gate residues are the
+**one-return-lobe** and **common-exit** configurations.
+
+This is not a state-preserving induction and supplies no global descent
+measure.  In particular, a prescribed pullback partition pairing the three
+old support literals with the three gate vertices is not implied: a verified
+seven-connected local architecture makes all nine such pairs edges.  The
+active handoff target is therefore label-preserving near-`K_7` regeneration
+or a genuinely attained state in the two named residues, not a guessed
+descendant equality partition.
 
 Controlling sources:
 
@@ -186,6 +201,10 @@ Controlling sources:
   and its [audit](results/hc7_exact7_moser_cyclic_packet_completion_audit.md);
 - [binary-duty cycle or labelled gate](results/hc7_exact7_binary_duty_cycle_or_gate.md)
   and its [audit](results/hc7_exact7_binary_duty_cycle_or_gate_audit.md);
+- [state-free three-gate exit matching](results/hc7_exact7_three_gate_exit_matching.md)
+  and its [audit](results/hc7_exact7_three_gate_exit_matching_audit.md);
+- [three-gate prescribed-pullback barrier](barriers/hc7_exact7_three_gate_pullback_matching_barrier.md)
+  and its [verifier](barriers/hc7_exact7_three_gate_pullback_matching_barrier_verify.py);
 - [permutation-labelled encoding gap](barriers/hc7_exact7_permutation_path_encoding_gap.md);
 - [block-terminal clean-ear barrier](barriers/hc7_block_terminal_clean_ear_barrier.md)
   and its [verifier](barriers/hc7_block_terminal_clean_ear_barrier_verify.py);
