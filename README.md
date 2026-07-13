@@ -135,6 +135,20 @@ the Moser boundary no triangle vertex is pure, so a nonsingleton thin shore
 has no cutvertex and cannot have order two.  The singleton Moser shore
 remains live; neither this theorem nor the finite verifier closes `(1,2)`.
 
+The singleton-thin part of the 129-boundary residue is now completely
+identified.  If the thin shore is `{q}`, then `N(q)=S` and Dirac's
+neighbourhood inequality gives `alpha(G[S])<=2`.  Conditional on the frozen
+129-boundary census, only the pure Moser spindle and `M+13` remain.  In the
+`M+13` cell the unique demand-at-most-two state is
+`0|1|3|25|46`.  Exact `25` and `46` traces, followed by singleton Kempe
+exchange, force respectively an `R`-internal `4-6` or `2-5` path.  If either
+path avoids the two rich packets, explicit branch sets give a literal
+`K_7`.  Thus the exact residual is packet entanglement; the two returned
+paths need not coexist or meet both packets.
+
+Source: [singleton-thin `M+13` packet escape](results/hc7_exact7_singleton_thin_moser_extension_escape.md)
+— [independent audit](results/hc7_exact7_singleton_thin_moser_extension_escape_audit.md).
+
 Source: [double-triangle partial-packet exchange](results/hc7_exact7_double_triangle_partial_packet_exchange.md)
 — [independent audit](results/hc7_exact7_double_triangle_partial_packet_exchange_audit.md).
 
@@ -639,6 +653,7 @@ that link.
 - [Adaptive exact-seven `(1,2)` robust-state and anchored-model closure](results/hc7_exact7_adaptive_12_boundary_closure.md) — [audit](results/hc7_exact7_adaptive_12_boundary_closure_audit.md); [boundary/model verifier](active/hc7_exact7_adaptive_12_packet_quotient_probe.py)
 - [Packet demand as clique-deletion chromatic number](results/hc7_exact7_packet_demand_identity.md) — [audit](results/hc7_exact7_packet_demand_identity_audit.md)
 - [Exact singleton-block Kempe exchange](results/hc7_exact7_singleton_block_kempe_exchange.md) — [audit](results/hc7_exact7_singleton_block_kempe_exchange_audit.md)
+- [Singleton-thin reduction and `M+13` packet escape](results/hc7_exact7_singleton_thin_moser_extension_escape.md) — [audit](results/hc7_exact7_singleton_thin_moser_extension_escape_audit.md)
 - [Exact three-packet quotient characterization](results/hc7_exact7_three_packet_quotient_characterization.md) — [audit](results/hc7_exact7_three_packet_quotient_characterization_audit.md); [exact minor verifier](active/hc7_exact7_three_packet_quotient_verify.py)
 - [Double-triangle partial-packet exchange in exact `(1,2)`](results/hc7_exact7_double_triangle_partial_packet_exchange.md) — [audit](results/hc7_exact7_double_triangle_partial_packet_exchange_audit.md); [crossed-pure verifier](active/hc7_exact7_double_triangle_four_carrier_probe.py)
 - [Adaptive three-carrier reflection and rich cut-packet closure](results/hc7_exact7_rich_cutpacket_exchange.md) — [audit](results/hc7_exact7_rich_cutpacket_exchange_audit.md); [state verifier](active/hc7_exact7_three_carrier_state_probe.py)
