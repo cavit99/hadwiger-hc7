@@ -9,7 +9,7 @@ This audit covers:
 * Lemma 1, Theorem 2, and Corollaries 3--6 of
   `results/hc7_lexminimal_carrier_block_rigidity.md`;
 * the matching normalization formerly stated as Theorem 1.6 and
-  Corollary 1.7 of `active/hc7_three_anchor_capacity_web.md`.
+  Corollary 1.7 of `archive/hc7_three_anchor_capacity_web.md`.
 
 It does **not** audit the later certified-interface assumptions `(C1)--(C2)`.
 

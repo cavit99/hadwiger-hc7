@@ -139,7 +139,7 @@ Take `I={1,5}`, except when `{a,b}={3,4}`, when take `I={0,5}`.
 
 The deterministic verifier
 
-`active/hc7_exact7_three_carrier_state_probe.py`
+`results/hc7_exact7_three_carrier_state_probe.py`
 
 enumerates all proper partitions of the seven literal vertices, all
 maximum singleton cliques, all six assignments of the remaining three

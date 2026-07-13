@@ -123,7 +123,7 @@ This distinction is essential for the fixed two-apex endgame.
 ## 4. Application to the exact-six rural page
 
 In the literal two-pole planar quotient of
-`../active/hc7_exact7_rural_bilateral_endgame.md`, apply Corollary 3.1
+`../archive/hc7_exact7_rural_bilateral_endgame.md`, apply Corollary 3.1
 separately to
 the poles
 

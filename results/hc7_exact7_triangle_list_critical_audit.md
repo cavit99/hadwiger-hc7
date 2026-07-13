@@ -28,7 +28,7 @@ From the repository root I ran
 
 ```text
 PYTHONPATH=active/runtime/deps python3 \
-    active/hc7_exact7_triangle_list_critical_verify.py
+    results/hc7_exact7_triangle_list_critical_verify.py
 ```
 
 The process exited successfully and printed

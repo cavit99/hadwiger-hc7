@@ -82,7 +82,7 @@ The fixed Moser edges make the four ordinary bags a clique, fullness makes
 both shore bags see all ordinary bags and `{v}`, and their mutual edges are
 respectively `34,16,12,35`.  The five-cycle calculation leaves precisely
 the six listed negative triples.  The independent quotient verifier in
-`active/hc7_exact6_w_boundary_quotient_probe.py` regenerates the same four
+`results/hc7_exact6_w_boundary_quotient_probe.py` regenerates the same four
 minimal positive contact sets; its negative output is used only as a
 guardrail, not as proof for uncontracted shores.
 

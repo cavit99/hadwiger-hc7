@@ -359,5 +359,5 @@ Run:
 
 ```bash
 PYTHONPATH=active/runtime/deps python3 \
-  active/hc7_exact7_adaptive_12_boundary_verify.py
+  results/hc7_exact7_adaptive_12_boundary_verify.py
 ```

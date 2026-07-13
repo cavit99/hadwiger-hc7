@@ -60,7 +60,7 @@ H and the two geometric defects
   -> choose a maximum singleton clique and assign the three carriers.
 ```
 
-`active/hc7_exact7_equal_defect_extension.py` implements that order.  It
+`results/hc7_exact7_equal_defect_extension.py` implements that order.  It
 checks all 49 ordered defect pairs for each of the ten hard boundary graphs.
 For the first nine graph6 certificates one fixed block works for every pair.
 For the standard Moser spindle, `{0,5}` is used exactly when both defects lie
@@ -184,11 +184,11 @@ contacts.
 The audited runs were:
 
 ```text
-PYTHONPATH=active/runtime/deps:active active/runtime/venv/bin/python \
-  active/hc7_exact7_equal_defect_extension.py
+PYTHONPATH=active/runtime/deps:results active/runtime/venv/bin/python \
+  results/hc7_exact7_equal_defect_extension.py
 
-PYTHONPATH=active/runtime/deps:active active/runtime/venv/bin/python \
-  active/hc7_exact7_single_defect2_probe.py
+PYTHONPATH=active/runtime/deps:results active/runtime/venv/bin/python \
+  results/hc7_exact7_single_defect2_probe.py
 ```
 
 Both terminated at their stated certificates.  The computational part is a

@@ -13,7 +13,7 @@ I reran the full catalogue from scratch with
 
 ```text
 PYTHONPATH=active/runtime/deps python3 \
-  active/hc7_exact7_raw_list_no_k4_search.py --start 0 --end 107
+  results/hc7_exact7_raw_list_no_k4_search.py --start 0 --end 107
 ```
 
 The run completed successfully and printed
@@ -22,7 +22,7 @@ The run completed successfully and printed
 triangle_free_graphs=107
 graphs_with_obstructions=3
 raw_assignments=150
-catalogue=.../active/hc7_exact7_raw_list_no_k4_catalogue_0_107.json
+catalogue=.../results/hc7_exact7_raw_list_no_k4_catalogue_0_107.json
 ```
 
 Its nonzero per-graph outputs were exactly

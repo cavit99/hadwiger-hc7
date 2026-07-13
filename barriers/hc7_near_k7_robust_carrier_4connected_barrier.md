@@ -175,13 +175,13 @@ PYTHONPATH=active/runtime/deps python3 barriers/hc7_near_k7_robust_carrier_4conn
 ```
 
 The reusable graph6 stream search is
-`../active/hc7_robust_carrier_geng_search.py`.
+`../barriers/hc7_robust_carrier_geng_search.py`.
 
 The full order-nine rural-book classification was run as
 
 ```bash
 geng -q -d4 9 | PYTHONPATH=active/runtime/deps \
-  python3 active/hc7_robust_carrier_geng_search.py \
+  python3 barriers/hc7_robust_carrier_geng_search.py \
   --classify-all --progress 0
 ```
 

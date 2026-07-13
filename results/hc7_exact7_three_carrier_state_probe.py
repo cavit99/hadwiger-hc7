@@ -13,7 +13,7 @@ the three carriers really are disjoint, connected, and X,Y are adjacent.
 Run from the repository root with
 
   PYTHONPATH=active/runtime/deps:active python3 \
-      active/hc7_exact7_three_carrier_state_probe.py
+      results/hc7_exact7_three_carrier_state_probe.py
 """
 
 from __future__ import annotations

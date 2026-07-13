@@ -306,7 +306,7 @@ The independent exhaustive verifier
 
 ```text
 PYTHONPATH=active/runtime/deps python3 \
-    active/hc7_gate_rooted_triangle_search.py
+    results/hc7_gate_rooted_triangle_search.py
 ```
 
 finds this as the smallest graph-atlas counterexample.  It is only a

@@ -18,8 +18,8 @@ As an independent finite guardrail, I also examined the completed
 no-anchored-`K_4` catalogues
 
 ```text
-active/hc7_exact7_raw_list_no_k4_catalogue_0_20.json
-active/hc7_exact7_raw_list_no_k4_catalogue_20_107.json
+results/hc7_exact7_raw_list_no_k4_catalogue_0_20.json
+results/hc7_exact7_raw_list_no_k4_catalogue_20_107.json
 ```
 
 covering all 107 triangle-free atlas graphs.  They contain 150 uncolourable,

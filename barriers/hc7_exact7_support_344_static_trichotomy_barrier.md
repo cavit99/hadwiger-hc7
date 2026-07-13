@@ -27,7 +27,7 @@ clique can cover at most one of the two disjoint edges, so `S-Q` is never
 independent.
 
 The exact checks are reproduced by the functions in
-`../active/hc7_exact7_raw_list_no_k4_verify.py`:
+`../results/hc7_exact7_raw_list_no_k4_verify.py`:
 
 ```text
 supports=[3,4,4]

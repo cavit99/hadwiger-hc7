@@ -343,7 +343,7 @@ proper-minor state witnesses must enter after Theorem 4.2.
 
 The deterministic verifier
 
-`active/hc7_exact7_double_triangle_four_carrier_probe.py`
+`results/hc7_exact7_double_triangle_four_carrier_probe.py`
 
 independently checks this example by exhaustive deletion/contraction and
 tests all crossed-pure markings of the ten hard boundary orbits.

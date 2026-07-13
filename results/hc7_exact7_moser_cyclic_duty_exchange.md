@@ -155,7 +155,7 @@ order.
 
 ## 4. Reproducibility aid
 
-`active/hc7_exact7_moser_alternating_cycle_probe.py` independently
+`results/hc7_exact7_moser_alternating_cycle_probe.py` independently
 enumerates the eight orientations and searches for the rooted `K_5` core
 of (2.5)--(2.6).  It is not needed for the proof: the orbit table and both
 branch-set templates above are directly checkable.

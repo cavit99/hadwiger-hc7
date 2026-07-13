@@ -3,7 +3,7 @@
 ## Status
 
 This note proves a new uniform state lemma for the induced bridge corridors
-in `../active/hc7_near_k7_constant_owner_corridor.md`.  It does not prove
+in `../archive/hc7_near_k7_constant_owner_corridor.md`.  It does not prove
 `HC_7`.
 
 The previous edge-by-edge argument gives at least three externally started
@@ -291,7 +291,7 @@ being assumed.
 
 For an interval consisting of strictly internal vertices in the ordered
 `K_7^vee` source, Theorem 2.1 of
-`../active/hc7_near_k7_constant_owner_corridor.md` says that none of these direct
+`../archive/hc7_near_k7_constant_owner_corridor.md` says that none of these direct
 outside contacts lies in an owner bag.  Consequently all five synchronized
 layers are forced through the nonowner bags or through unused exterior
 material.  This is a sharper collision input than the three per-edge

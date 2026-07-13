@@ -7,7 +7,7 @@ here need not be realizable as the equality state of a shore minor.
 Run from the repository root with
 
   PYTHONPATH=active/runtime/deps python3 \
-      active/hc7_exact7_adaptive_12_boundary_verify.py
+      results/hc7_exact7_adaptive_12_boundary_verify.py
 """
 
 from __future__ import annotations

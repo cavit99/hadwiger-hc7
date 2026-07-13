@@ -189,6 +189,14 @@ non-tree edges; the live descent must use endpoint-preserving augmentation
 or state transitions to make it tree-invariant or expose an adhesion.
 Source: `../results/hc7_exact7_point_tree_gate_core.md`.
 
+Pap's permutation-labelled non-returning-path theorem remains a guarded
+backup, not a proved lift.  The current rotations form a groupoid of partial
+state-dependent moves: state vertices preserve legality but lose literal
+disjointness, while resource vertices preserve disjointness but do not carry
+one total permutation action.  Perfect--Pym endpoint augmentation does not
+repair that label defect.  Source:
+`../barriers/hc7_exact7_permutation_path_encoding_gap.md`.
+
 The first two-packet web composition is now proved for an attained
 paired-triangle state.  If both full packets contain cycles through the six
 selected duty portals, a clean path joining nonhomologous portals splits the

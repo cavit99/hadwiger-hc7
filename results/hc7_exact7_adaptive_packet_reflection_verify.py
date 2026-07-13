@@ -4,7 +4,7 @@
 Run from the repository root with
 
   PYTHONPATH=active/runtime/deps python3 \
-      active/hc7_exact7_adaptive_packet_reflection_verify.py
+      results/hc7_exact7_adaptive_packet_reflection_verify.py
 """
 
 from __future__ import annotations

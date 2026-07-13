@@ -42,7 +42,7 @@ The conclusion “`H` is `M` or `M+13`” does **not** follow from
 the already-audited 129-graph residual of the adaptive `(1,2)` census.
 
 The frozen verifier
-`active/hc7_exact7_adaptive_12_boundary_verify.py` asserts that the residual
+`results/hc7_exact7_adaptive_12_boundary_verify.py` asserts that the residual
 counter is
 
 ```text

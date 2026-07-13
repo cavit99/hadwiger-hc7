@@ -137,6 +137,6 @@ minor-critical state transfer, or a literal branch-set construction; frame
 signs alone cannot close the residue.
 
 The dependency-free check
-`../active/hc7_exact7_moser_multiframe_sign_barrier_verify.py` verifies the
+`../barriers/hc7_exact7_moser_multiframe_sign_barrier_verify.py` verifies the
 twelve hard path pairs and the eight alternating favourable pairs.
 

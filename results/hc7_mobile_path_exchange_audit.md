@@ -145,7 +145,7 @@ containing both ends is the whole path.
 
 Running
 
-`python3 active/hc7_mobile_path_probe.py`
+`python3 results/hc7_mobile_path_probe.py`
 
 returned
 

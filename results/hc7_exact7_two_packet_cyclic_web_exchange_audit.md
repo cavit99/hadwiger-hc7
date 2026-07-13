@@ -127,7 +127,7 @@ link the two rich components internally.
 A fresh run of
 
 ```text
-python3 active/hc7_exact7_two_packet_cyclic_web_exchange_verify.py
+python3 results/hc7_exact7_two_packet_cyclic_web_exchange_verify.py
 ```
 
 terminates with

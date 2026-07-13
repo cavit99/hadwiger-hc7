@@ -128,7 +128,7 @@ shore than this quotient does.
 
 ## 6. Finite cross-check
 
-`active/hc7_exact7_three_packet_quotient_verify.py` independently enumerates
+`results/hc7_exact7_three_packet_quotient_verify.py` independently enumerates
 all 5,880 set partitions of the ten quotient vertices into seven nonempty
 branch sets for every one of the 685 unlabelled seven-vertex graphs of
 clique number at most three.  Its exact minor search agrees with (1.1) and

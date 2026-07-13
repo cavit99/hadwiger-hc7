@@ -10,7 +10,7 @@ exact-seven `(1,3)` hypotheses:
 > has a `T`-rooted `K_3` model of literal portal rank three.
 
 The verifier
-`active/hc7_exact7_portal_rooted_triangle_probe.py` constructs an
+`barriers/hc7_exact7_portal_rooted_triangle_probe.py` constructs an
 18-vertex counterexample and checks every cut of order at most six.
 
 ## Construction

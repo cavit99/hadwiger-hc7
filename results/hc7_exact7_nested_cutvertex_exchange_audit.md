@@ -3,7 +3,7 @@
 ## Verdict
 
 **GREEN.**  Under the hypotheses written in
-`../active/hc7_exact7_nested_cutvertex_exchange.md`, Lemma 2.1,
+`../results/hc7_exact7_nested_cutvertex_exchange.md`, Lemma 2.1,
 Theorem 3.1, and Corollary 3.2 are correct.  The gate assignment is
 exhaustive, all carrier sets are disjoint and connected, the four
 carrier--carrier adjacencies are literal, the two uses of

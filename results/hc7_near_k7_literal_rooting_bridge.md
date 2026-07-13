@@ -293,7 +293,7 @@ ordinary portal counting cannot distinguish two consecutive cuts with
 the same owner set.
 
 The constant interval has now been sharpened in
-`../active/hc7_near_k7_constant_owner_corridor.md`.  Every block internal to it
+`../archive/hc7_near_k7_constant_owner_corridor.md`.  Every block internal to it
 is a `K_2` bridge, there are no off-corridor source branches, and every
 internal interval is behind an actual gate of order at least seven.  At
 gate order seven this is the existing exact-seven descent.  At larger

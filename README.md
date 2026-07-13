@@ -11,8 +11,9 @@ structural endgame is either a literal `K_7` model or a fixed pair
 colours on the remainder and two fresh colours finish.
 
 The detailed dependency chain is
-[the proof spine](active/hc7_near_k7_proof_spine.md).  This file is the sole
-authoritative status statement.
+[the proof spine](active/hc7_near_k7_proof_spine.md).  This `README.md` is
+the sole authoritative status statement; the spine records its detailed
+dependencies.
 
 ## Frozen minimal-counterexample kernel
 
@@ -120,6 +121,16 @@ pairwise disjoint leaf witnesses around a common subtree contained in every
 hull of the other two duties.  The core is not yet tree-invariant, bounded,
 or a separator; that gate-descent is the immediate structural gap.
 
+The permutation-labelled non-returning-path route has been audited but is
+not yet a theorem in this setting.  Pap's packing theorem would give two
+disjoint useful transitions or a two-vertex transversal only after a
+faithful encoding in which auxiliary disjointness lifts to literal carrier
+disjointness.  Current packet rotations are partial state-dependent moves,
+so that encoding is missing.  Perfect--Pym augmentation preserves endpoint
+sets, not the permutation label.  A separate verified 7-connected
+icosahedral-tube construction also rules out a connectivity-only clean-ear
+or gate-bypass shortcut.  Both are guardrails, not new reductions.
+
 One label-compatible web exchange is also audited.  For an attained
 paired-triangle state, if two full rich packets contain alternating cycles
 through the six selected duty portals, any clean transverse path between
@@ -175,6 +186,9 @@ Controlling sources:
   and its [audit](results/hc7_exact7_moser_cyclic_packet_completion_audit.md);
 - [binary-duty cycle or labelled gate](results/hc7_exact7_binary_duty_cycle_or_gate.md)
   and its [audit](results/hc7_exact7_binary_duty_cycle_or_gate_audit.md);
+- [permutation-labelled encoding gap](barriers/hc7_exact7_permutation_path_encoding_gap.md);
+- [block-terminal clean-ear barrier](barriers/hc7_block_terminal_clean_ear_barrier.md)
+  and its [verifier](barriers/hc7_block_terminal_clean_ear_barrier_verify.py);
 - [alternating gate-bypass barrier](barriers/hc7_exact7_gate_bypass_falsifier.md)
   and its [audit](barriers/hc7_exact7_gate_bypass_falsifier_audit.md);
 - [static packet-quotient exhaustion](results/hc7_exact7_three_packet_quotient_characterization.md)
@@ -264,10 +278,14 @@ until their encodings and coverage are independently checked.
 
 ## Repository layout
 
-- `results/`: proved live lemmas, with `_audit.md` files beside them.
-- `active/`: the current proof spine, current proof attempt, and scripts.
-- `barriers/`: explicit counterexamples and blocked mechanisms.
-- `archive/`: superseded, retracted, peripheral, or frozen work.
+- `results/`: proved live lemmas, their adjacent `_audit.md` files, and the
+  exact verification assets cited by those lemmas.
+- `active/`: only the current proof spine.  The ignored `active/runtime/`
+  directory is local tooling, not mathematical status.
+- `barriers/`: explicit counterexamples, falsifiers, and blocked mechanisms.
+- `archive/`: superseded, retracted, peripheral, frozen, or unaudited work.
 
-Do not add new files at the repository root.  Historical status reports in
-`archive/` are not current.
+`README.md` is the only authoritative status file.  Do not add new files at
+the repository root.  Historical status reports in `archive/` are not
+current, and moving a draft there is not a mathematical retraction unless
+its own text says so.

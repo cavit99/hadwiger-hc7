@@ -18,7 +18,7 @@ checks the simple invariant that at most two vertices can have a full list.
 Run from the repository root with
 
   PYTHONPATH=active/runtime/deps python3 \
-      active/hc7_exact7_triangle_list_critical_verify.py
+      results/hc7_exact7_triangle_list_critical_verify.py
 """
 
 from __future__ import annotations

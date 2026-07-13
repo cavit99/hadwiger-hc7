@@ -253,7 +253,7 @@ two classes each already contain two vertices of `C-c_i`, so both have
 order at least two.  Put `Q={c_i}` to obtain (6.1).  This proves the lemma.
 \(\square\)
 
-As a dependency-free check, `active/hc7_exact_seven_partition_probe.cpp`
+As a dependency-free check, `results/hc7_exact_seven_partition_probe.cpp`
 enumerates all `2^21` labelled graphs, finds exactly `133501`
 triangle-free graphs, and verifies (6.1) for every one.  It also verifies
 that every nonbipartite instance admits the balanced singleton deletion

@@ -7,8 +7,8 @@ carriers miss the same literal.  It reuses the audited state predicates.
 
 Run with
 
-  PYTHONPATH=active/runtime/deps:active python3 \
-      active/hc7_exact7_equal_defect_extension.py
+  PYTHONPATH=active/runtime/deps:results python3 \
+      results/hc7_exact7_equal_defect_extension.py
 """
 
 from __future__ import annotations

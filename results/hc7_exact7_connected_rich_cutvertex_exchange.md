@@ -131,7 +131,7 @@ for all 49 ordered pairs in `S times S`.  In the standard Moser labeling
 use `I={0,5}` when both defects lie in `{3,4}`, and use `I={1,5}`
 otherwise.  The verifier
 
-`active/hc7_exact7_equal_defect_extension.py`
+`results/hc7_exact7_equal_defect_extension.py`
 
 enumerates every exact proper partition containing the selected block,
 every maximum singleton clique, all six assignments of the three remaining
@@ -158,7 +158,7 @@ third connected carrier `T` with `D(T) subseteq D`.
 Lemma 1.2 gives the exact state-by-state carrier criterion and the only
 possible obstruction.  The deterministic verifier
 
-`active/hc7_exact7_single_defect2_probe.py`
+`results/hc7_exact7_single_defect2_probe.py`
 
 chooses `I` after `H,D` are known but before the equality state is known,
 and explicitly checks that `I` is inclusion-maximal in `H`.

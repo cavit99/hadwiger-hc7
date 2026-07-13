@@ -16,7 +16,7 @@ to the two cyclic orders and use only the four matching edges selected by
 the crossing.  The construction below gives four literal rooted branch
 sets and is unaffected by arbitrarily many extra matching endpoints.
 
-Audited source: `active/hc7_port_matching_cycle_exchange.md`.
+Audited source: `results/hc7_port_matching_cycle_exchange.md`.
 
 ## 1. The formal defect in the all-edge contraction proof
 

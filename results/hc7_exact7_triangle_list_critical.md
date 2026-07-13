@@ -21,7 +21,7 @@ necessarily about the raw carrier-contact lists before singleton colours are
 assigned.
 
 The classification is exhaustively verified by
-`../active/hc7_exact7_triangle_list_critical_verify.py`.
+`../results/hc7_exact7_triangle_list_critical_verify.py`.
 
 ## 2. Unit propagation
 

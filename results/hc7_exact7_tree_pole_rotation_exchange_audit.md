@@ -1,6 +1,6 @@
 # Independent audit: tree-pole rotation exchange
 
-Audited file: `active/hc7_exact7_tree_pole_rotation_exchange.md`.
+Audited file: `results/hc7_exact7_tree_pole_rotation_exchange.md`.
 
 ## Verdict
 

@@ -3,7 +3,7 @@
 Audited files:
 
 - `results/hc7_exact7_moser_cyclic_duty_exchange.md`;
-- `active/hc7_exact7_moser_alternating_cycle_probe.py`.
+- `results/hc7_exact7_moser_alternating_cycle_probe.py`.
 
 ## Verdict
 

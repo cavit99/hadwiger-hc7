@@ -135,7 +135,7 @@ states.
 Running
 
 ```text
-PYTHONPATH=active/runtime/deps python3 active/hc7_set_root_rural_order_verify.py
+PYTHONPATH=active/runtime/deps python3 results/hc7_set_root_rural_order_verify.py
 ```
 
 returned

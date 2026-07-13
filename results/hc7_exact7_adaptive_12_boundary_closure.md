@@ -205,7 +205,7 @@ three and two disjoint boundary triangles.
 
 The verifier
 
-`active/hc7_exact7_adaptive_12_packet_quotient_probe.py`
+`results/hc7_exact7_adaptive_12_packet_quotient_probe.py`
 
 uses the complete NetworkX atlas of unlabelled graphs through order seven.
 For each of the 685 graphs it:

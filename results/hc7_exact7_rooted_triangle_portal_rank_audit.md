@@ -33,7 +33,7 @@ median.  This proves the dichotomy, including cases in which a root is
 itself a cutvertex.
 
 As a bounded independent check,
-`active/hc7_exact7_rooted_triangle_portal_rank_verify.py` tested all
+`results/hc7_exact7_rooted_triangle_portal_rank_verify.py` tested all
 32,331 connected atlas-graph/root-triple instances of order at most
 seven.  In every instance, exactly one of the rooted model and the
 cutvertex obstruction occurred.

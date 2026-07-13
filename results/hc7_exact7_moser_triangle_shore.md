@@ -72,7 +72,7 @@ outside `D_i`.  Equivalently, each `x_i` has a neighbour in every `B_j`.
 
 #### Exhaustive certificate
 
-`../active/hc7_exact7_moser_triangle_shore_verify.py` is dependency-free.
+`../results/hc7_exact7_moser_triangle_shore_verify.py` is dependency-free.
 It enumerates every nonempty connected subset of `W` meeting the literal
 boundary, and then every four-tuple of disjoint such sets.  It retains a
 tuple exactly when all six bag adjacencies are literal edges of `W`.
@@ -88,7 +88,7 @@ used.
 Run
 
 ```text
-python3 active/hc7_exact7_moser_triangle_shore_verify.py
+python3 results/hc7_exact7_moser_triangle_shore_verify.py
 ```
 
 from the repository root.  The script prints exact counts and a SHA-256 hash

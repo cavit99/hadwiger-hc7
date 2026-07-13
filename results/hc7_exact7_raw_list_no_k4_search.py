@@ -8,7 +8,7 @@ formulae do not accumulate in Z3's global context.
 Run from the repository root with
 
   PYTHONPATH=active/runtime/deps python3 \
-      active/hc7_exact7_raw_list_no_k4_search.py
+      results/hc7_exact7_raw_list_no_k4_search.py
 """
 
 from __future__ import annotations
