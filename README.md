@@ -289,3 +289,7 @@ until their encodings and coverage are independently checked.
 the repository root.  Historical status reports in `archive/` are not
 current, and moving a draft there is not a mathematical retraction unless
 its own text says so.
+
+## License
+
+This repository is available under the [MIT License](LICENSE).
