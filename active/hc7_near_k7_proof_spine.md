@@ -327,8 +327,15 @@ replace the locked subregion by its whole component.  This preserves its
 trace `{w}` and makes every shared portal or cross an actual attained-duty
 endpoint.  Thus those two branches close uniformly; the survivors are a
 literal carrier cut of order at most two or a planar two-pole quotient
-spanning `J^circ`.  Low-cut conversion, induced-pole expansion, and
-reinsertion of `t` remain.
+spanning `J^circ`.  Carrier minimization now closes the low-cut branch:
+a trace-free leaf side is either absorbed into its unique pole, reaches
+both poles and gives an attained pair-plus-target state, or violates
+seven-connectivity.  The target is selected by its actual edge and need not
+be the target already supported opposite, so bilateral state matching
+remains.  In the rural branch induced-pole expansion is now the only
+geometric duty.  No side-terminal reinsertion is needed: two terminal-free
+disk pages make `G-{v,w,a,b}` planar, and the independent set `{a,b,w}`
+uses one fifth colour while `v` uses the sixth.
 Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
@@ -339,7 +346,9 @@ Sources:
 `../results/hc7_exact7_spanning_rural_quotient.md`, and
 `../results/hc7_exact7_rural_rotation_rooted_k4.md`, and
 `../results/hc7_exact7_set_terminal_cross_rotation.md`, and
-`../results/hc7_exact7_terminal_free_state_or_rural.md`.
+`../results/hc7_exact7_terminal_free_state_or_rural.md`, and
+`../results/hc7_exact7_terminal_free_lowcut_descent.md`, and
+`../results/hc7_exact7_terminal_free_bilateral_endgame.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force

@@ -209,20 +209,19 @@ licenses replacing an attained duty by an unlabelled contact.
 To finish the rural branch one must therefore prove the following stronger
 exact statement on **each** terminal shore:
 
-> Every rank-first supported rural core either (i) expands its two selected
-> poles and admits a compatible assignment of **every leftover shore
-> component and the side terminal** to a disk embedding of the entire
-> closed shore with boundary `U`, or (ii) a pole/leftover rotation
+> Every carrier-minimal terminal-free rural core either (i) expands its two
+> induced poles to a disk embedding of the entire graph
+> `J_t^circ=G[D_t union U]` with boundary `G[U]`, or (ii) a pole rotation
 > obstruction yields a literal `K_7` model or a common bilateral equality
 > state.
 
-If both whole shores satisfy (i), Theorem 3.1 closes the conditional cell
-with the fixed pair `{v,w}`.  The former nonspanning-carrier gap is closed
-at quotient level, and the terminal-free normalization closes its
-shared-portal and cross branches.  The exact remaining work is to convert
-the literal carrier cut, expand each **induced** pole society in the
-terminal-free rural page, reinsert `t`, or convert a rotation
-collision/rooted-`K_4` certificate into a `K_7`, a common boundary state,
-or the same fixed pair.
+The audited terminal-free low-cut descent converts an absorbed-carrier cut
+to strict descent or an attained pair-plus-target state, so no low-cut
+geometry remains.  If both shores satisfy (i), the terminal-free bilateral
+endgame glues them to a planar `G-{v,w,a,b}`; `{a,b,w}` receives one new
+colour and `v` another.  Thus side-terminal reinsertion is unnecessary.
+The exact remaining geometric work is to expand each **induced** pole
+society, or convert a rotation collision/rooted-`K_4` certificate into a
+literal `K_7`, a common boundary state, or the same direct six-colouring.
 That conversion must discharge the attained decorated-state duty; raw
 contact alone is insufficient.
