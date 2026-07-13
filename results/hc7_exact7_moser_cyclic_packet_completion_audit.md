@@ -74,8 +74,8 @@ If `x` lies in the interior of the unique open arc `A_g` from `p_g` to
 This path lies entirely in the branch set already containing `6,p_g`.
 The unused remainder from `x` to `p_{g+1}` may be deleted, so it cannot meet
 the bag containing `p_{g+1}`.  If `x=p_i`, the corrected choice `g=i`
-makes the replacement path just the literal edge `6p_i`; no preceding arc
-is consumed.
+makes the replacement path equal to the clean first-hit path `R` (which may
+have internal vertices in `P`); no preceding cycle arc is consumed.
 
 Every other subdivided cycle edge lifts in the standard way.  When both
 portals lie in one bag, assigning the whole open arc to that bag preserves
