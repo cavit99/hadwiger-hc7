@@ -84,3 +84,14 @@ component contains no adhesion vertex and the trace change is exact.
 
 These lemmas do not prove the central-core case left when every relevant
 foreign portal avoids every pendant lobe containing a `W`-attachment.
+
+## Equality-five packet handoff
+
+Lemma 5.4 is **GREEN**.  In the equality case, `w` is already in
+`N(K_w)`.  The containment from Lemma 4.2 and seven-connectivity therefore
+force `t` to be the seventh neighbour and give the literal equality
+`Q=N(K_w)=P union {w,t}`.  Both open shores are nonempty (`K_w` on one
+side and `v` on the other).  Each component on either side has neighbourhood
+contained in `Q` and a nonempty far side, so seven-connectivity makes it
+`Q`-full.  The packet theorem then gives the stated component and
+orientation bounds.  No packet-number-one transversal claim is made.

@@ -335,13 +335,65 @@ minimal central path or subdivided `Y`, or in pendant lobes containing no
 `W`-attachment.  This is a structural central-core lock, not another
 boundary-state enumeration.
 
+The equality case in the attachment count is itself an already controlled
+interface.
+
+### Lemma 5.4 (five attachments give an exact-seven adhesion)
+
+Retain the five-attachment outcome of Lemma 4.2, put
+
+\[
+                         P=N_G(K_w)\cap K,
+\]
+
+and let `t` be the side terminal.  Exactly one of the following holds.
+
+1. `|P|>=6`; or
+2. `|P|=5`, `K_w` is adjacent to `t`, and
+
+   \[
+                        Q=N_G(K_w)=P\cup\{w,t\}      \tag{5.8}
+   \]
+
+   is an actual adhesion of order seven.  Every component of either open
+   shore of `(K_w union Q,G-K_w)` is `Q`-full.
+
+In outcome 2, if `m` is the number of components of `K_w`, then `m<=3`.
+If `m>=2`, the opposite shore has packet number one.
+
+### Proof
+
+Lemma 4.2 gives `N_G(K_w) subseteq P union {w,t}`, while `w` belongs to
+`N_G(K_w)` by the definition of `K_w`.  Seven-connectivity gives
+`|N_G(K_w)|>=7`.  Thus `|P|=5` forces `t` to be a neighbour and equality
+throughout, proving (5.8); otherwise `|P|>=6`.
+
+Assume (5.8).  The displayed pair is a literal separation with two
+nonempty open shores: `K_w` is nonempty and `v` lies on the other side.
+Every component `C` of either open shore has `N_G(C) subseteq Q`.  Its far
+side is nonempty, so seven-connectivity forces `N_G(C)=Q`; hence every such
+component is a full packet.
+
+The audited exact-seven packet theorem gives total packet number at most
+four and says that one shore has packet number one.  The inside packet
+number is at least `m`, and the opposite shore has at least one packet.
+Therefore `m<=3`; if `m>=2`, the packet-number-one shore must be the
+opposite one. `square`
+
+Thus a surviving central-core lock has one of two precise capacities:
+at least six named attachments in `K`, or an actual exact-seven interface
+already governed by the packet theorem.  No small transversal is inferred
+from packet number one.
+
 ## 6. Exact scope
 
 This theorem closes every exact-order-six cell with a common frame and
 bilateral admissible rank at least two, converts rank at most one into one
 of three literal geometric certificates, excludes all but six dense
 three-root contact patterns, and label-faithfully promotes every
-pendant-lobe instance of the five-attachment lock.  It does **not** prove
+pendant-lobe instance of the five-attachment lock.  Its equality-five case
+is an actual exact-seven packet adhesion; the other case has at least six
+attachments.  It does **not** prove
 that the general separator from the rooted `K_5` theorem has order six,
 that the two shores possess a common crossed frame, or that the remaining
 central-core locks can be rerouted.  Those are the remaining bridge/Tutte

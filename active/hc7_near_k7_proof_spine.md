@@ -259,7 +259,9 @@ label-faithfully transfers a pendant lobe whenever it contains both a
 `w`-attachment and a portal to an admissible foreign block.  Hence every
 surviving five-attachment lock has all useful foreign portals concentrated
 on a central path or subdivided `Y`, or in pendant lobes with no
-`w`-attachment.  The live task is to exchange across this central core or
+`w`-attachment.  Equality at five is a literal exact-seven adhesion governed
+by the packet theorem; otherwise the lock has at least six distinct named
+carrier attachments.  The live task is to exchange across this central core or
 extract the same literal state on the opposite shore.  Source:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md`.
 

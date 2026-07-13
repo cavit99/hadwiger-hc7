@@ -292,6 +292,10 @@ importantly, a protected-tree surgery promotes the extra portal whenever a
 `w`-attachment and an admissible foreign-block portal occur in the same
 pendant lobe of the five-hit carrier.  The unresolved residue is therefore
 a central path/subdivided-`Y` lock, not an arbitrary five-attachment bag.
+At exact equality, the five carrier attachments together with `w` and the
+terminal are the whole neighbourhood of the locked piece and form a
+literal exact-seven adhesion; the audited packet theorem then applies.
+Otherwise the central lock has at least six distinct carrier attachments.
 This is still conditional on the literal order-six adhesion and does not
 close the sole-exterior branch.
 
