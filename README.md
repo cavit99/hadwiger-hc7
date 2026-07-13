@@ -183,7 +183,10 @@ All 290 boundary/defect cells were independently checked.  Consequently:
 * every cutvertex of a connected rich shore has exactly two deletion lobes;
 * for any chosen pair of disjoint full packets, every component outside
   their union has at least three distinct attachment vertices on the packet
-  union.
+  union; and
+* a complementary bridge attached to both rich packets cannot contact a
+  whole boundary triangle and any further boundary literal, since those
+  contacts give seven explicit clique branch sets.
 
 The second statement is a stable-bridge condition, not yet a linkage: it
 does not prescribe how the three attachments are distributed between the
@@ -193,6 +196,21 @@ state, or a coherent rural/two-apex certificate.
 
 Source: [connected-rich carrier exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md)
 — [independent audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md).
+
+The first literal packet rerouting step is also audited.  Choose one portal
+witness for each boundary label in a full packet and a minimal tree through
+those witnesses.  Its labelled skeleton has at most twelve vertices and
+eleven portal-free segments.  If a complementary rich-shore bridge has three
+attachments on one segment, replacing the old segment between the extreme
+attachments by a path through the bridge preserves both disjoint full
+packets and frees the deleted segment as a third connected carrier.  Support
+at least five closes by the preceding defect-two theorem; otherwise this is
+an exactly reversible low-support rotation.  This is a uniform
+label-preserving exchange, but it does not yet prove that an arbitrary
+sequence of rotations terminates or has a coherent rural embedding.
+
+Source: [portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md)
+— [independent audit](results/hc7_exact7_packet_bridge_rotation_audit.md).
 
 #### Retained `(1,3)` infrastructure (superseded on this branch)
 
@@ -555,6 +573,7 @@ that link.
 - [Bipartite thin-shore cutvertex exchange](results/hc7_exact7_bipartite_cutvertex_exchange.md) — [audit](results/hc7_exact7_bipartite_cutvertex_exchange_audit.md); [crossed-frame barrier](barriers/hc7_exact7_bipartite_carrier_connectivity_dirac_barrier.md)
 - [Pure-Moser two-component cutvertex/two-cut closure](results/hc7_exact7_moser_rich_twocut_exchange.md) — [audit](results/hc7_exact7_moser_rich_twocut_exchange_audit.md); [exact quotient verifier](archive/moser_global_2cut_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
+- [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)
 - [Exact-seven thin-shore near-full exchange](results/hc7_exact7_thin_shore_exchange.md) — [audit](results/hc7_exact7_thin_shore_exchange_audit.md)
 - [Exact-seven portal matching and rooted-`K_4` exchange](results/hc7_exact7_portal_rooted_k4.md) — [audit](results/hc7_exact7_portal_rooted_k4_audit.md)
 - [Four-connected and planar three-connected thin-shore closure](results/hc7_exact7_rooted_portal_face_closure.md) — [audit](results/hc7_exact7_rooted_portal_face_closure_audit.md)

@@ -191,6 +191,22 @@ problem, not boundary palette assignment.  Three attachments alone do not
 give their distribution or three disjoint paths.  Source:
 `../results/hc7_exact7_connected_rich_cutvertex_exchange.md`.
 
+If a complementary bridge attaches to both rich packets and contacts a
+whole boundary triangle plus one further literal, seven explicit bags give
+a `K_7`; this removes one cross-packet support pattern without converting
+the remaining attachment count into linkage.
+
+One local rerouting is now rigorous.  A minimal portal-witness tree for a
+full packet has at most twelve skeleton vertices.  Three bridge attachments
+on one portal-free segment permit an exact tree rotation: the replacement
+packet stays full and disjoint from the other packet, while the deleted
+nonempty segment becomes a third connected carrier.  Boundary support at
+least five closes by adaptive defect-two reflection; otherwise the move is
+an exactly reversible low-support rotation.  The live S3 task is therefore
+global composition: show that these rotations expose a support-five peel,
+a common exact state, or a bounded stable/rural society.  Source:
+`../results/hc7_exact7_packet_bridge_rotation.md`.
+
 Static packet contraction is now rigorously exhausted, not merely
 computationally unproductive.  The exact quotient theorem says that three
 independent universal packet vertices yield `K_7` exactly in the two-anchor

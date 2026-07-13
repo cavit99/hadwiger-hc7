@@ -162,7 +162,24 @@ The attachments counted here are three distinct **vertices** of
 `P_1 union P_2`; the corollary does not claim three disjoint paths, three
 attachments on each packet, or any prescribed distribution between them.
 
-## 7. Reproducibility
+## 7. Cross-bridge triangle addendum
+
+Lemma 3.3 is GREEN.  Its seven branch sets are literal and pairwise
+disjoint: three full packets receive three distinct anchors outside the
+boundary triangle, the cross-bridge is the fourth nonsingleton bag, and the
+three triangle vertices remain singleton bags.  Packet fullness supplies
+all adjacencies among the anchored packet bags and from them to the
+triangle.  The stated two rich-packet attachments, the bridge contact with
+the thin packet's anchor, and the three triangle contacts supply every
+remaining adjacency.  No quotient edge, palette-to-label identification,
+or stronger connectivity assertion is used.
+
+The conclusion is deliberately conditional on the bridge attaching to both
+rich packets and contacting a whole boundary triangle plus one further
+literal.  It does not say that every complementary bridge has those
+contacts.
+
+## 8. Reproducibility
 
 The audited runs were:
 
