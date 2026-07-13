@@ -1,6 +1,6 @@
 # Tree-pole rotation exchange for a rural carrier
 
-**Status:** self-contained structural theorem; pending independent audit.
+**Status:** proved and independently audited.
 It replaces a vague "rotation obstruction" by two literal disjoint
 carriers joining alternating attachment occurrences.  It is local: it does
 not assert that the rest of a terminal shore is planar, and it does not by
@@ -8,7 +8,8 @@ itself turn the two carriers into a `K_7` model or a common colour state.
 
 ## 1. Occurrence societies
 
-Let `T` be a tree.  An **attachment occurrence** `omega` has a specified
+Let `T` be a tree and let there be at least one attachment occurrence.
+An **attachment occurrence** `omega` has a specified
 base `b(omega) in V(T)`.  Different occurrences may have the same base.
 Let
 
@@ -96,7 +97,7 @@ is still literal and remains disjoint from the path on the other side of
 Let `X` be a connected subgraph used as one contracted pole of a plane
 quotient, and assign every quotient edge at that pole to its literal end
 in `X`.  Let `rho` be the rotation of those edge occurrences in the
-quotient.  Choose an edge-minimal connected subgraph `T of X` containing
+quotient.  Choose an edge-minimal connected subgraph `T` of `X` containing
 all attachment bases.  Then `T` is a tree, and exactly one of the
 following occurs.
 
@@ -122,7 +123,8 @@ This distinction is essential for the fixed two-apex endgame.
 ## 4. Application to the exact-six rural page
 
 In the literal two-pole planar quotient of
-`hc7_exact7_rural_bilateral_endgame.md`, apply Corollary 3.1 separately to
+`../active/hc7_exact7_rural_bilateral_endgame.md`, apply Corollary 3.1
+separately to
 the poles
 
 \[
@@ -131,7 +133,7 @@ the poles
 
 There is no longer an unspecified rotation obstruction.  For either pole,
 one obtains a compatible local connector or two disjoint literal carriers
-whose attachment pairs alternate in the unique block-terminal rib
+whose attachment pairs alternate in the fixed selected block-terminal rib
 rotation.  Thus the remaining constructive HC7 step has the following
 exact input:
 
