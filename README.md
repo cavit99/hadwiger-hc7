@@ -120,6 +120,16 @@ pairwise disjoint leaf witnesses around a common subtree contained in every
 hull of the other two duties.  The core is not yet tree-invariant, bounded,
 or a separator; that gate-descent is the immediate structural gap.
 
+One label-compatible web exchange is also audited.  For an attained
+paired-triangle state, if two full rich packets contain alternating cycles
+through the six selected duty portals, any clean transverse path between
+nonhomologous portals reflects the exact state, subject only to the named
+literal block edge supplied by that returned state.  Under portal-pure
+attachments this eliminates every cross-packet bridge with at least three
+attachments.  The surviving interface is a coherent submatching of
+homologous portal classes, not a generic cylinder theorem and not yet a
+separator.
+
 Controlling sources:
 
 - [general labelled-carrier reflection](results/hc7_exact7_rich_cutpacket_exchange.md)
@@ -136,6 +146,8 @@ Controlling sources:
   and its [audit](results/hc7_exact7_attained_duty_tree_gate_audit.md);
 - [portal-choice-invariant gate core](results/hc7_exact7_point_tree_gate_core.md)
   and its [audit](results/hc7_exact7_point_tree_gate_core_audit.md);
+- [two-packet cyclic-web exchange](results/hc7_exact7_two_packet_cyclic_web_exchange.md)
+  and its [audit](results/hc7_exact7_two_packet_cyclic_web_exchange_audit.md);
 - [alternating gate-bypass barrier](barriers/hc7_exact7_gate_bypass_falsifier.md)
   and its [audit](barriers/hc7_exact7_gate_bypass_falsifier_audit.md);
 - [static packet-quotient exhaustion](results/hc7_exact7_three_packet_quotient_characterization.md)
@@ -172,6 +184,14 @@ the thin full packet.  Only the symmetry orbit represented by
 `2,4,5,3,1,0` remains; arbitrary bridges not containing such a six-portal
 cycle are outside this theorem.
 
+For two such packet cycles, the audited transverse-web theorem eliminates
+every nonhomologous clean cross-path in the paired-triangle state.  Its
+static verifier also shows that homologous rungs alone do not split the
+cycles into three disjoint duty carriers.  This is a sharp carrier barrier,
+not evidence that the cylinder is `K_7`-minor-free: a separate exact search
+is currently being converted into literal branch-set templates for that
+residue.
+
 A recent audit corrected the conditional exact-order-six rural endgame:
 
 - two disjoint crossed-frame carriers join alternating pairs on the literal
@@ -198,6 +218,8 @@ Sources:
   and [verifier](barriers/hc7_exact7_two_shore_kempe_pairing_barrier_verify.py).
 - [Moser cyclic duty exchange](results/hc7_exact7_moser_cyclic_duty_exchange.md)
   and its [audit](results/hc7_exact7_moser_cyclic_duty_exchange_audit.md).
+- [two-packet cyclic-web exchange](results/hc7_exact7_two_packet_cyclic_web_exchange.md)
+  and its [audit](results/hc7_exact7_two_packet_cyclic_web_exchange_audit.md).
 
 ## Exact remaining gap
 

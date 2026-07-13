@@ -189,6 +189,20 @@ non-tree edges; the live descent must use endpoint-preserving augmentation
 or state transitions to make it tree-invariant or expose an adhesion.
 Source: `../results/hc7_exact7_point_tree_gate_core.md`.
 
+The first two-packet web composition is now proved for an attained
+paired-triangle state.  If both full packets contain cycles through the six
+selected duty portals, a clean path joining nonhomologous portals splits the
+two cycles into three disjoint duty carriers.  Two representative
+adjacencies come from literal cycle edges and the third is the precisely
+named boundary block edge required for that offset, so the attained state
+reflects.  Under portal-pure attachments, every complementary component
+meeting both cycles has at least three attachments and therefore closes;
+the only surviving cross-cycle interface is a submatching of homologous
+portal classes.  The theorem is an unbounded web-exchange result, but it
+does not turn that coherent matching cylinder into a separator or a global
+state.  Source:
+`../results/hc7_exact7_two_packet_cyclic_web_exchange.md`.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore
@@ -274,6 +288,17 @@ the other rich full packet and the thin full packet.  The only surviving
 literal orbit is `2,4,5,3,1,0`.  This is an infinite six-portal-cycle
 closure, not a claim about arbitrary multi-attachment bridges.  Source:
 `../results/hc7_exact7_moser_cyclic_duty_exchange.md`.
+
+When two exceptional cycles coexist in the paired-triangle state, the
+two-packet cyclic-web theorem eliminates every clean transverse path and
+leaves only homologous rungs and one-sided bridges.  Its exhaustive static
+carrier verifier proves that homologous rungs alone need not yield three
+disjoint duty carriers.  A distinct literal-minor experiment nevertheless
+finds `K_7` models in the minimal coherent Moser cylinder once the seventh
+boundary literal has a portal on either full cycle.  Those certificates are
+not yet promoted: the current constructive task is to express them uniformly
+for every portal position and arbitrary subdivisions, then audit all seven
+branch sets.
 
 The carrier step cannot follow from shore connectivity alone.  The audited
 essential-portal barrier `../barriers/hc7_sole_exterior_reserved_connector_barrier.md`
