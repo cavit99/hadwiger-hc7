@@ -305,15 +305,24 @@ edge split returns two literal vertex-disjoint carriers joining alternating
 attachment occurrences.  This closes the abstract pole-rotation step but
 not the induced-pole or whole-shore expansion; unused pole edges and leftover
 shore components remain part of the live bilateral exchange.
-The nonspanning ambiguity has also been removed at quotient level.  For a
-whole terminal shore, minimize over newly tested crossless spanning
-two-pole triples rather than assuming absorption preserves the old carrier.
-The audited result returns a low carrier cut, shared portal, literal
-set-terminal cross, proper bilateral three-gated cell, or a planar simple
-quotient containing every shore vertex.  The side terminal is only a
-topological member of that partition and is not silently reused as a legal
-core block.  Thus the remaining conversion is induced-pole expansion or
-attained-duty discharge for one of those literal certificates.
+The nonspanning ambiguity has also been removed at quotient level.  For
+every whole-terminal-shore spanning triple, the audited result returns a
+low carrier cut, a shared portal, a literal set-terminal cross, or a planar
+simple quotient containing every shore vertex.  No minimization is needed:
+in the crossless three-connected branch every web cell avoids the roots and
+the whole portal sets, hence has no pole neighbour and violates the exact
+outside-neighbour bound plus seven-connectivity.  The side terminal is only
+a topological member of that partition and is not silently reused as a
+legal core block.  Thus the remaining conversion is induced-pole expansion
+or attained-duty discharge for one of those literal certificates.
+For two certificates the local conversion is now audited.  Rotation failure
+with four distinct carrier ends gives a literal rooted `K_4` subdivision;
+repeated ends retain an exact collision certificate.  A set-terminal cross
+whose endpoints still carry the original named target and locked-region
+duties gives either a label-faithful peel or an exact decoration rotation,
+and glues whenever the opposite shore supports that target state.  A cross
+to an absorbed pole piece, or one whose carrier contains the side terminal,
+still requires endpoint transfer without changing `D_U(B)`.
 Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
@@ -321,7 +330,9 @@ Sources:
 `../results/hc7_exact7_two_rail_bridge_overlap.md`, and
 `../results/hc7_exact7_block_terminal_web.md`, and
 `../results/hc7_exact7_tree_pole_rotation_exchange.md`, and
-`../results/hc7_exact7_spanning_rural_quotient.md`.
+`../results/hc7_exact7_spanning_rural_quotient.md`, and
+`../results/hc7_exact7_rural_rotation_rooted_k4.md`, and
+`../results/hc7_exact7_set_terminal_cross_rotation.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force

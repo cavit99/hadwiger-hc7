@@ -348,17 +348,29 @@ from a rotation obstruction to labelled geometry, but it expands only the
 selected connector tree: it does not embed the induced pole or assign the
 remaining shore components.  Whole-shore expansion, or conversion of those
 alternating carriers to an attained-duty state, remains open.
-The earlier nonspanning gap is now closed at quotient level.  Minimizing
-over recomputed crossless spanning triples gives a uniform whole-shore
-trichotomy: an actual carrier cut of order at most two, a shared portal, a
-literal set-terminal cross, a proper bilateral three-gated cell, or a
-planar simple two-pole quotient containing every shore vertex.  This does
-not assume that component absorption preserves three-connectivity or the
-old captured-path property; their failures are explicit outcomes.  The
-side terminal is tracked topologically and is not treated as a legal colour
-block.  What remains is induced-pole expansion, or conversion of the
-literal cut/cross/gate/alternating carriers into a state satisfying its
-attained duty, a `K_7`, or one coherent fixed pair.
+The earlier nonspanning gap is now closed at quotient level.  Every
+eligible spanning triple has a uniform whole-shore quadrichotomy: an actual
+carrier cut of order at most two, a shared portal, a literal set-terminal
+cross, or a planar simple two-pole quotient containing every shore vertex.
+No minimization is needed.  In the crossless three-connected branch, a web
+cell avoids the roots and the **whole** two portal sets, so it has no pole
+neighbour; the exact outside-neighbour bound and seven-connectivity exclude
+it immediately.  Component absorption need not preserve three-connectivity
+or the old captured-path property; their failures are explicit outcomes.
+The side terminal is tracked topologically and is not treated as a legal
+colour block.  What remains is induced-pole expansion, or conversion of the
+literal cut/cross/alternating carriers into a state satisfying its attained
+duty, a `K_7`, or one coherent fixed pair.
+Two parts of that conversion are now exact.  A failed tree-pole rotation
+with four distinct carrier ends gives a literal rooted `K_4` subdivision on
+the carrier face; repeated ends give a precisely recorded collision, not a
+four-root model.  Also, a set-terminal cross whose two ends retain their
+original named target and locked-region duties gives either the audited
+labelled peel or an exact decoration rotation.  If the opposite shore
+supports that named target state, the two proper-minor colourings glue.
+An arbitrary spanning cross remains open when an endpoint only contacts an
+absorbed pole piece or the carrier contains the side terminal: those are
+attained-duty transfer problems, not consequences of raw contact.
 The five-contact premise is componentwise: every connected component of a
 locked `w`-region separately has at least five contacts with the same named
 carrier.  A disconnected attachment region cannot evade the bypass theorem
@@ -811,7 +823,9 @@ that link.
 - [Two-rail reversed-bridge and rural-carrier exchange](results/hc7_exact7_two_rail_bridge_overlap.md) — [audit](results/hc7_exact7_two_rail_bridge_overlap_audit.md)
 - [Uniform block-terminal web and literal three-gate certificate](results/hc7_exact7_block_terminal_web.md) — [audit](results/hc7_exact7_block_terminal_web_audit.md)
 - [Tree-pole circular-split rotation exchange](results/hc7_exact7_tree_pole_rotation_exchange.md) — [audit](results/hc7_exact7_tree_pole_rotation_exchange_audit.md)
-- [Whole-shore spanning rural quotient trichotomy](results/hc7_exact7_spanning_rural_quotient.md) — [audit](results/hc7_exact7_spanning_rural_quotient_audit.md)
+- [Whole-shore spanning rural quotient quadrichotomy](results/hc7_exact7_spanning_rural_quotient.md) — [audit](results/hc7_exact7_spanning_rural_quotient_audit.md)
+- [Rural rotation rooted-`K_4` certificate](results/hc7_exact7_rural_rotation_rooted_k4.md) — [audit](results/hc7_exact7_rural_rotation_rooted_k4_audit.md)
+- [Set-terminal cross decoration rotation](results/hc7_exact7_set_terminal_cross_rotation.md) — [audit](results/hc7_exact7_set_terminal_cross_rotation_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)

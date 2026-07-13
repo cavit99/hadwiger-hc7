@@ -186,10 +186,21 @@ embedded or assigned.
 The whole-shore assignment part is now governed by the audited spanning
 rural quotient theorem
 `../results/hc7_exact7_spanning_rural_quotient.md`.  It does not assume
-that component absorption preserves connectivity or capture.  It returns
-an actual low carrier cut, a shared portal, a set-terminal cross, a proper
-bilateral three-gated cell, or a planar quotient in which every shore
-vertex belongs to the carrier or one of the two poles.
+that component absorption preserves connectivity or capture.  For every
+eligible spanning triple it returns an actual low carrier cut, a shared
+portal, a set-terminal cross, or a planar quotient in which every shore
+vertex belongs to the carrier or one of the two poles.  In the last branch
+the whole portal sets rule out every web cell directly; no carrier
+minimization or bilateral three-gate residue remains.
+
+Two literal exchange outcomes have partial audited conversions.  The
+rotation theorem plus the fixed carrier face gives either a rooted `K_4`
+subdivision or an exact repeated-end collision
+(`../results/hc7_exact7_rural_rotation_rooted_k4.md`).  A set-terminal
+cross with its original named target endpoint, original `N(L) cap K`
+endpoint, and side-terminal scope gives a labelled peel or exact decoration
+rotation (`../results/hc7_exact7_set_terminal_cross_rotation.md`).  Neither
+statement licenses replacing an attained duty by an unlabelled contact.
 
 To finish the rural branch one must therefore prove the following stronger
 exact statement on **each** terminal shore:

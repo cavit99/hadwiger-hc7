@@ -53,7 +53,7 @@ outside neighbour.  Hence all outside neighbours lie in `{v,w}`, and
 
 ## 2. The whole-shore theorem
 
-### Theorem 2.1 (spanning rural quotient trichotomy)
+### Theorem 2.1 (spanning rural quotient quadrichotomy)
 
 Let `G` be seven-connected and let `J` be an induced connected subgraph
 with an allowed carrier set `Z` satisfying `(E)`.  Fix disjoint connected
@@ -65,46 +65,32 @@ two-pole triple with `K subseteq Z` exists with
  |Q(K,X)|,|P(K,Y)|\ge3.                             \tag{2.1}
 \]
 
-Then at least one of the following occurs.
+Then every such spanning triple has at least one of the following outcomes.
 
-1. **Low carrier cut.**  Among the crossless spanning triples with
-   `K subseteq Z` satisfying (2.1), one with minimum `|K|` has a carrier
-   `J[K]` which is not three-connected.
-2. **Literal pole exchange.**  A spanning triple with `K subseteq Z`
-   satisfying (2.1) has
-   either
-   * a shared nonroot portal in `Q(K,X) cap P(K,Y)`;
-   * a set-terminal cross in `J[K]`; or
-   * a nonempty proper connected set
-     `D subseteq K-(\{x,y\} union Q(K,X) union P(K,Y))` with
-
-     \[
-       |N_{J[K]}(D)|=3,\qquad J[K-D]\text{ connected},           \tag{2.2}
-     \]
-
-     which has a neighbour in each of `X,Y` (a literal three-gate pole
-     bridge).
-3. **Whole-shore rural quotient.**  There is a spanning triple with
-   `K subseteq Z` satisfying (2.1) such that the simple quotient
+1. **Low carrier cut.**  The carrier `J[K]` is not three-connected.
+2. **Shared portal.**  There is a literal nonroot vertex in
+   `Q(K,X) cap P(K,Y)`.
+3. **Set-terminal cross.**  The carrier `J[K]` has vertex-disjoint paths,
+   one joining `x` to `y` and the other joining a member of `Q(K,X)` to a
+   member of `P(K,Y)`.
+4. **Whole-shore rural quotient.**  The simple quotient
 
    \[
-                 J/(X\mapsto\alpha,\;Y\mapsto\beta)             \tag{2.3}
+                 J/(X\mapsto\alpha,\;Y\mapsto\beta)             \tag{2.2}
    \]
 
    is planar.  More precisely it is a subgraph of a plane rib with frame
    `(x,alpha,y,beta)`.
 
-Here outcome 2 records actual vertices and paths.  It is not shorthand for
-a colour contact or for an edge of a web completion.
+The shared portal and the paths in outcomes 2--3 are literal.  They are not
+shorthand for colour contacts or edges of a web completion.
 
 #### Proof
 
-If no crossless spanning triple with `K subseteq Z` satisfies (2.1), every
-available triple has either a shared portal or a set-terminal cross, and
-outcome 2 holds.  Otherwise choose such a crossless triple with minimum
-`|K|`.
-If its carrier is not three-connected, outcome 1 holds.  Assume therefore
-that the selected carrier is three-connected.
+Fix an eligible spanning triple.  If its carrier is not three-connected,
+outcome 1 holds.  If its two portal sets meet, outcome 2 holds.  If it has
+a set-terminal cross, outcome 3 holds.  Assume none of these outcomes
+occurs.  The carrier is therefore three-connected and crossless.
 
 Adjoin bookkeeping vertices `alpha,beta` to `J[K]`, with neighbourhoods
 `Q=Q(K,X)` and `P=P(K,Y)`.  The block-terminal Two-Paths theorem applies:
@@ -113,36 +99,28 @@ crosslessness gives a same-vertex web completion with frame
 component `D` of actual carrier vertices in a nonempty web cell has
 
 \[
-                         N_{J[K]}(D)=Delta,                        \tag{2.4}
+                         N_{J[K]}(D)=Delta,                        \tag{2.3}
 \]
 
 where `Delta` is its literal three-vertex gate, and `J[K]-D` is connected.
 These are Theorem 3.1 and the connectivity paragraph of Lemma 5.1 in the
 audited block-terminal theorem.
 
-We show that no such `D` exists.  Seven-connectivity and the three-gate
-equation (2.4) give at
-least four distinct neighbours of `D` outside `K`.  At most two lie
-outside `J` by `(E)`.  Since (1.1) spans `J`, `D` has a literal
-neighbour in `X union Y`.
-
-If `D` sees both poles, it itself is the third bullet of outcome 2.  Thus,
-after interchanging the poles if necessary, assume that `D` sees `X` and
-does not see `Y`.  Define
+We show directly that no such `D` exists.  Every member of `Q union P` is
+a rib vertex, while `D` lies inside a nonempty cell; moreover `D` contains
+neither root.  Since `Q` and `P` are the **whole** nonroot pole-neighbour
+sets, it follows from their definitions that
 
 \[
- K'=K-D,\qquad X'=X\cup D,\qquad Y'=Y.               \tag{2.5}
+                         E_J(D,X\cup Y)=\varnothing.             \tag{2.4}
 \]
 
-The three new parts are induced and connected, span `J`, contain the same
-fixed sets and roots, and `X'` remains anticomplete to `Y'`.  No old member
-of `Q union P` belongs to a cell, so all old contacts survive; in
-particular the two lower bounds in (2.1) still hold.
-
-If the new portal sets meet, the first bullet of outcome 2 holds.  If the
-new carrier has a set-terminal cross, the second bullet holds.  Otherwise
-the triple (2.5) is another crossless triple satisfying (2.1), with a
-strictly smaller carrier, contrary to the choice of `K`.  Hence the web
+The six distinct vertices of the disjoint sets `Q,P` cannot all lie in
+the three-vertex gate `Delta`.  Hence some carrier vertex lies beyond
+`D union Delta`, so `N_G(D)` is a genuine separator.  Seven-connectivity
+and (2.3) give `|N_G(D)|>=7`, with exactly three neighbours inside `K`.
+But (2.4), spanning (1.1), and `(E)` leave at most two further neighbours,
+all outside `J`.  Thus `|N_G(D)|<=5`, a contradiction.  Therefore the web
 has no nonempty actual cell.
 
 It remains to read the quotient.  All internal carrier edges lie in the
@@ -150,16 +128,12 @@ plane rib.  A quotient edge from `alpha` to a nonroot carrier vertex is
 exactly an edge to a member of `Q`, and similarly for `beta,P`.  Quotient
 edges from either pole to `x` or `y` are among the four outer-frame edges.
 There is no `alpha-beta` edge because `X,Y` are anticomplete.  These are
-all edges because (1.1) spans `J`.  Thus the simple quotient (2.3) is a
-subgraph of the same plane rib, proving outcome 3. \(\square\)
+all edges because (1.1) spans `J`.  Thus the simple quotient (2.2) is a
+subgraph of the same plane rib, proving outcome 4. \(\square\)
 
-The minimization is deliberately over all crossless spanning triples, not
-only those with three-connected carrier.  Thus moving a cell to a pole
-cannot hide a new low cut: if the smaller triple is still crossless it is
-a valid smaller competitor, whether or not its carrier remains
-three-connected.  Conversely, the initial passage to a spanning triple is
-not claimed to preserve connectivity or crosslessness; those are outcomes
-1 and 2.
+No connectivity or captured-path property is inherited from an earlier
+carrier.  They are tested afresh on the chosen spanning triple: low
+connectivity is outcome 1 and a new detour is outcome 3.
 
 ## 3. Obtaining a spanning triple from the selected core
 
@@ -196,18 +170,19 @@ other components does not add a new `U`-vertex to the pair trace of `K`.
 The side terminal may be assigned topologically to one of the three
 spanning parts; it is not a vertex of the adhesion `T=U union \{w\}`.
 This assignment is not asserted to preserve the earlier supported-core
-normalization, which required the core to avoid the side terminal.  Thus the carrier
-constructed in the second case of Lemma 3.1 lies in `Z`.  If the first
+normalization, which required the core to avoid the side terminal.  The
+carrier constructed in the second case of Lemma 3.1 nevertheless lies in
+`Z`.  If the first
 case occurs, a shortest path to `A union B` is a literal outside-carrier
 pole connector.  It is **not automatically a valid core promotion**: the
 path may run through the side terminal, and a separate label-faithful
-assignment is required.  If the second case occurs, Theorem 2.1 applies
-unless the absorption has exposed exactly the low cut or literal pole
-exchange which it records.
+assignment is required.  If the second case occurs, Theorem 2.1 gives
+exactly a low cut, a shared portal, a set-terminal cross, or the planar
+whole-shore quotient.
 
 ## 4. What remains after the spanning repair
 
-Outcome 3 is genuinely stronger than the earlier selected-core quotient:
+Outcome 4 is genuinely stronger than the earlier selected-core quotient:
 every vertex of the closed shore `J` belongs to the carrier or one of the
 two contracted poles.  It still does not say that the induced pole graphs
 have local disk embeddings.  Apply the audited tree-pole rotation theorem
@@ -216,14 +191,14 @@ in each pole.  One then obtains either a
 rotation-compatible connector or two literal disjoint carriers joining
 alternating attachment occurrences.
 
-Thus the exact remaining conversion is shared by outcomes 1--3.  It must
+Thus the exact remaining conversion is shared by outcomes 1--4.  It must
 preserve the **attained decorated-state duty** of the current frame; an
 unlabelled pole contact is not sufficient.  None of the literal exchange
 certificates is silently identified with another:
 
 \[
  \boxed{\begin{array}{c}
- \text{low cut, shared portal, set-terminal cross, bilateral three-gate,}\\
+ \text{low cut, shared portal, set-terminal cross,}\\
  \text{or alternating pole carriers}\\
  \Longrightarrow K_7,\text{ common state, or fixed pair.}
  \end{array}}
