@@ -299,8 +299,19 @@ Otherwise the central lock has at least six distinct carrier attachments.
 This is still conditional on the literal order-six adhesion and does not
 close the sole-exterior branch.
 
+Frame ownership in that exact cell is now synchronized whenever both
+terminal shores are three-connected and non-all-web.  An occurrence-level
+disk theorem proves that three crossless Moser frames force all five
+crossless, even with overlapping portal sets.  Hence every non-all-web shore
+has at least three crossed frames, and two such shores share one.  The
+remaining frame mismatch is genuinely one-sided: one terminal shore is an
+all-crossless web.  The theorem retains a small exact circular-order
+certificate as part of its proof.
+
 Source: [exact-order-six decorated exchange](results/hc7_exact7_moser_order6_decorated_exchange.md)
 — [independent audit](results/hc7_exact7_moser_order6_decorated_exchange_audit.md).
+Frame source: [three-crossless synchronization](results/hc7_exact7_moser_three_crossless_synchronization.md)
+— [independent audit](results/hc7_exact7_moser_three_crossless_synchronization_audit.md).
 
 The connected-rich branch now has a uniform capacity theorem.  For each of
 the ten absolute-demand-three boundary types, after seeing the defect set
@@ -725,6 +736,7 @@ that link.
 - [Rooted `K_5` connector-or-full-separator theorem](results/hc7_exact7_rooted_k5_connector_separator.md) — [audit](results/hc7_exact7_rooted_k5_connector_separator_audit.md)
 - [Pure-Moser sole-exterior failure certificate](results/hc7_exact7_moser_sole_exterior_failure_certificate.md) — [audit](results/hc7_exact7_moser_sole_exterior_failure_certificate_audit.md)
 - [Exact-order-six decorated Moser exchange](results/hc7_exact7_moser_order6_decorated_exchange.md) — [audit](results/hc7_exact7_moser_order6_decorated_exchange_audit.md)
+- [Three-crossless Moser frame synchronization](results/hc7_exact7_moser_three_crossless_synchronization.md) — [audit](results/hc7_exact7_moser_three_crossless_synchronization_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)

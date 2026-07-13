@@ -265,6 +265,14 @@ carrier attachments.  The live task is to exchange across this central core or
 extract the same literal state on the opposite shore.  Source:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md`.
 
+The frame-mismatch part is also closed whenever both exact terminal shores
+are three-connected and non-all-web.  Three crossless Moser frames force
+all five crossless at the level of literal portal occurrences; therefore a
+non-all-web shore has at least three crossed frames, and two such shores
+share one.  The only frame-level residue is a genuinely one-sided all-web
+shore.  Source:
+`../results/hc7_exact7_moser_three_crossless_synchronization.md`.
+
 The connected-rich branch has a stronger uniform capacity theorem.  In all
 ten absolute-demand-three boundary types, two full packets absorb any third
 disjoint connected carrier of boundary defect at most two, with the forced
