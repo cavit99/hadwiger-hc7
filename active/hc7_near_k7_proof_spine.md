@@ -203,6 +203,16 @@ does not turn that coherent matching cylinder into a separator or a global
 state.  Source:
 `../results/hc7_exact7_two_packet_cyclic_web_exchange.md`.
 
+The coherent cyclic residue is itself impossible in the pure-Moser state.
+If both disjoint full packets contain the exceptional literal portal cycle
+`2,4,5,3,1,0`, any third disjoint full packet completes a literal `K_7`.
+Six gap-avoiding models lift along a clean first-hit path from boundary
+literal `6` to either cycle, so no rung, common rich component, or on-cycle
+seventh portal is required.  The remaining structural gap is now to extract
+such a literal cycle from an arbitrary alternating duty web, or turn its
+failure into an actual adhesion/state-gluing certificate.  Source:
+`../results/hc7_exact7_moser_cyclic_packet_completion.md`.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore
@@ -293,12 +303,12 @@ When two exceptional cycles coexist in the paired-triangle state, the
 two-packet cyclic-web theorem eliminates every clean transverse path and
 leaves only homologous rungs and one-sided bridges.  Its exhaustive static
 carrier verifier proves that homologous rungs alone need not yield three
-disjoint duty carriers.  A distinct literal-minor experiment nevertheless
-finds `K_7` models in the minimal coherent Moser cylinder once the seventh
-boundary literal has a portal on either full cycle.  Those certificates are
-not yet promoted: the current constructive task is to express them uniformly
-for every portal position and arbitrary subdivisions, then audit all seven
-branch sets.
+disjoint duty carriers.  The audited cyclic-packet completion bypasses that
+carrier barrier: the two exceptional cycles and the third full packet
+already contain a literal `K_7`, even without a path between the cycles.
+The six explicit templates handle arbitrary subdivisions and an arbitrary
+packet-internal first-hit path from boundary literal `6`.  Source:
+`../results/hc7_exact7_moser_cyclic_packet_completion.md`.
 
 The carrier step cannot follow from shore connectivity alone.  The audited
 essential-portal barrier `../barriers/hc7_sole_exterior_reserved_connector_barrier.md`

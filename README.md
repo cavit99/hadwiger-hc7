@@ -130,6 +130,15 @@ attachments.  The surviving interface is a coherent submatching of
 homologous portal classes, not a generic cylinder theorem and not yet a
 separator.
 
+The atomic coherent cylinder is now eliminated in the pure-Moser state.
+If both disjoint full packets contain an exceptional alternating cycle in
+literal portal order `2,4,5,3,1,0`, any third disjoint full packet completes
+an explicit `K_7`.  Six gap-avoiding branch-set templates handle an
+arbitrary clean first-hit path from literal `6` to either cycle, arbitrary
+subdivisions, and cycles in the same or different rich components.  The
+remaining web gap is therefore extraction: an alternating duty web need
+not yet contain such a literal cycle.
+
 Controlling sources:
 
 - [general labelled-carrier reflection](results/hc7_exact7_rich_cutpacket_exchange.md)
@@ -148,6 +157,8 @@ Controlling sources:
   and its [audit](results/hc7_exact7_point_tree_gate_core_audit.md);
 - [two-packet cyclic-web exchange](results/hc7_exact7_two_packet_cyclic_web_exchange.md)
   and its [audit](results/hc7_exact7_two_packet_cyclic_web_exchange_audit.md);
+- [Moser cyclic-packet completion](results/hc7_exact7_moser_cyclic_packet_completion.md)
+  and its [audit](results/hc7_exact7_moser_cyclic_packet_completion_audit.md);
 - [alternating gate-bypass barrier](barriers/hc7_exact7_gate_bypass_falsifier.md)
   and its [audit](barriers/hc7_exact7_gate_bypass_falsifier_audit.md);
 - [static packet-quotient exhaustion](results/hc7_exact7_three_packet_quotient_characterization.md)
@@ -187,10 +198,10 @@ cycle are outside this theorem.
 For two such packet cycles, the audited transverse-web theorem eliminates
 every nonhomologous clean cross-path in the paired-triangle state.  Its
 static verifier also shows that homologous rungs alone do not split the
-cycles into three disjoint duty carriers.  This is a sharp carrier barrier,
-not evidence that the cylinder is `K_7`-minor-free: a separate exact search
-is currently being converted into literal branch-set templates for that
-residue.
+cycles into three disjoint duty carriers.  The separate audited
+cyclic-packet completion now kills that entire coherent residue directly:
+the two exceptional cycles and the third full packet already form a
+literal `K_7`, even with no rungs or path between the cycles.
 
 A recent audit corrected the conditional exact-order-six rural endgame:
 
@@ -220,6 +231,8 @@ Sources:
   and its [audit](results/hc7_exact7_moser_cyclic_duty_exchange_audit.md).
 - [two-packet cyclic-web exchange](results/hc7_exact7_two_packet_cyclic_web_exchange.md)
   and its [audit](results/hc7_exact7_two_packet_cyclic_web_exchange_audit.md).
+- [Moser cyclic-packet completion](results/hc7_exact7_moser_cyclic_packet_completion.md)
+  and its [audit](results/hc7_exact7_moser_cyclic_packet_completion_audit.md).
 
 ## Exact remaining gap
 
