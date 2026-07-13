@@ -305,13 +305,23 @@ edge split returns two literal vertex-disjoint carriers joining alternating
 attachment occurrences.  This closes the abstract pole-rotation step but
 not the induced-pole or whole-shore expansion; unused pole edges and leftover
 shore components remain part of the live bilateral exchange.
+The nonspanning ambiguity has also been removed at quotient level.  For a
+whole terminal shore, minimize over newly tested crossless spanning
+two-pole triples rather than assuming absorption preserves the old carrier.
+The audited result returns a low carrier cut, shared portal, literal
+set-terminal cross, proper bilateral three-gated cell, or a planar simple
+quotient containing every shore vertex.  The side terminal is only a
+topological member of that partition and is not silently reused as a legal
+core block.  Thus the remaining conversion is induced-pole expansion or
+attained-duty discharge for one of those literal certificates.
 Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
 `../results/hc7_exact7_pair_carrier_bypass.md`, and
 `../results/hc7_exact7_two_rail_bridge_overlap.md`, and
 `../results/hc7_exact7_block_terminal_web.md`, and
-`../results/hc7_exact7_tree_pole_rotation_exchange.md`.
+`../results/hc7_exact7_tree_pole_rotation_exchange.md`, and
+`../results/hc7_exact7_spanning_rural_quotient.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force
