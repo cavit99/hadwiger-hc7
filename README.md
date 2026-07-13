@@ -366,11 +366,15 @@ with four distinct carrier ends gives a literal rooted `K_4` subdivision on
 the carrier face; repeated ends give a precisely recorded collision, not a
 four-root model.  Also, a set-terminal cross whose two ends retain their
 original named target and locked-region duties gives either the audited
-labelled peel or an exact decoration rotation.  If the opposite shore
-supports that named target state, the two proper-minor colourings glue.
-An arbitrary spanning cross remains open when an endpoint only contacts an
-absorbed pole piece or the carrier contains the side terminal: those are
-attained-duty transfer problems, not consequences of raw contact.
+labelled peel or an exact decoration rotation.  The exact cell now removes
+those endpoint defects uniformly: form the spanning triple in the
+terminal-free shore `J^circ=G[D_t union U]`, repartition the whole target
+pole into the two named target blocks, and enlarge the locked region to its
+whole component.  Then every shared portal or cross is duty-correct at the
+attained-state level.  The only survivors of this normalization are a
+literal carrier cut of order at most two or a planar two-pole quotient
+spanning `J^circ`.  Reinserting `t`, expanding the induced poles, and
+matching the resulting bilateral state remain open.
 The five-contact premise is componentwise: every connected component of a
 locked `w`-region separately has at least five contacts with the same named
 carrier.  A disconnected attachment region cannot evade the bypass theorem
@@ -826,6 +830,7 @@ that link.
 - [Whole-shore spanning rural quotient quadrichotomy](results/hc7_exact7_spanning_rural_quotient.md) — [audit](results/hc7_exact7_spanning_rural_quotient_audit.md)
 - [Rural rotation rooted-`K_4` certificate](results/hc7_exact7_rural_rotation_rooted_k4.md) — [audit](results/hc7_exact7_rural_rotation_rooted_k4_audit.md)
 - [Set-terminal cross decoration rotation](results/hc7_exact7_set_terminal_cross_rotation.md) — [audit](results/hc7_exact7_set_terminal_cross_rotation_audit.md)
+- [Terminal-free state-or-rural normalization](results/hc7_exact7_terminal_free_state_or_rural.md) — [audit](results/hc7_exact7_terminal_free_state_or_rural_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)

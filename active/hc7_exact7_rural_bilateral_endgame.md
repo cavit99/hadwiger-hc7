@@ -193,14 +193,18 @@ vertex belongs to the carrier or one of the two poles.  In the last branch
 the whole portal sets rule out every web cell directly; no carrier
 minimization or bilateral three-gate residue remains.
 
-Two literal exchange outcomes have partial audited conversions.  The
-rotation theorem plus the fixed carrier face gives either a rooted `K_4`
-subdivision or an exact repeated-end collision
-(`../results/hc7_exact7_rural_rotation_rooted_k4.md`).  A set-terminal
-cross with its original named target endpoint, original `N(L) cap K`
-endpoint, and side-terminal scope gives a labelled peel or exact decoration
-rotation (`../results/hc7_exact7_set_terminal_cross_rotation.md`).  Neither
-statement licenses replacing an attained duty by an unlabelled contact.
+Two literal exchange outcomes now have audited conversions.  The rotation
+theorem plus the fixed carrier face gives either a rooted `K_4` subdivision
+or an exact repeated-end collision
+(`../results/hc7_exact7_rural_rotation_rooted_k4.md`).  The local
+set-terminal cross theorem gives a labelled peel or exact decoration
+rotation when its endpoints have their original duties.  In the exact cell,
+the terminal-free state-or-rural theorem removes that qualification by
+forming the spanning triple in `J^circ=G[D_t union U]`, repartitioning the
+whole target pole, and enlarging the locked region to its whole component
+(`../results/hc7_exact7_terminal_free_state_or_rural.md`).  Thus shared
+portals and crosses close at attained-state level.  Neither statement
+licenses replacing an attained duty by an unlabelled contact.
 
 To finish the rural branch one must therefore prove the following stronger
 exact statement on **each** terminal shore:
@@ -214,8 +218,11 @@ exact statement on **each** terminal shore:
 
 If both whole shores satisfy (i), Theorem 3.1 closes the conditional cell
 with the fixed pair `{v,w}`.  The former nonspanning-carrier gap is closed
-at quotient level.  The exact remaining work is to expand each **induced**
-pole society, or convert one of the literal cut/cross/gate/alternating-path
-certificates into a `K_7`, a common boundary state, or the same fixed pair.
+at quotient level, and the terminal-free normalization closes its
+shared-portal and cross branches.  The exact remaining work is to convert
+the literal carrier cut, expand each **induced** pole society in the
+terminal-free rural page, reinsert `t`, or convert a rotation
+collision/rooted-`K_4` certificate into a `K_7`, a common boundary state,
+or the same fixed pair.
 That conversion must discharge the attained decorated-state duty; raw
 contact alone is insufficient.

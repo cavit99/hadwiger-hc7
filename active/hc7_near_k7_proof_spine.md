@@ -320,9 +320,15 @@ with four distinct carrier ends gives a literal rooted `K_4` subdivision;
 repeated ends retain an exact collision certificate.  A set-terminal cross
 whose endpoints still carry the original named target and locked-region
 duties gives either a label-faithful peel or an exact decoration rotation,
-and glues whenever the opposite shore supports that target state.  A cross
-to an absorbed pole piece, or one whose carrier contains the side terminal,
-still requires endpoint transfer without changing `D_U(B)`.
+and glues whenever the opposite shore supports that target state.  In the
+exact cell the endpoint and side-terminal qualifications are removed by
+working in `J^circ=G[D_t union U]`: repartition the whole target pole and
+replace the locked subregion by its whole component.  This preserves its
+trace `{w}` and makes every shared portal or cross an actual attained-duty
+endpoint.  Thus those two branches close uniformly; the survivors are a
+literal carrier cut of order at most two or a planar two-pole quotient
+spanning `J^circ`.  Low-cut conversion, induced-pole expansion, and
+reinsertion of `t` remain.
 Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
@@ -332,7 +338,8 @@ Sources:
 `../results/hc7_exact7_tree_pole_rotation_exchange.md`, and
 `../results/hc7_exact7_spanning_rural_quotient.md`, and
 `../results/hc7_exact7_rural_rotation_rooted_k4.md`, and
-`../results/hc7_exact7_set_terminal_cross_rotation.md`.
+`../results/hc7_exact7_set_terminal_cross_rotation.md`, and
+`../results/hc7_exact7_terminal_free_state_or_rural.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force
