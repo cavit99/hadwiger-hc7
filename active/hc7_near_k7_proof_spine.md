@@ -128,6 +128,19 @@ part to seven.  These finite counts locate the interface but are not the
 proof mechanism.  The live theorem must be a two-carrier exchange in the
 thin shore, with a web/separator certificate when the exchange fails.
 
+The packet-demand identity
+
+\[
+ \min_\Pi d_H(\Pi)
+ =\min\{\chi(H-U):H[U]\text{ is a clique}\}
+\]
+
+is now independently audited.  Hence the 119 safe-state residuals are
+exactly those with a clique odd-cycle transversal.  The constructive target
+is therefore “force a clique-OCT state,” not “search 119 partitions.”  The
+identity does not itself realize that state by a legal shore operation.
+Source: `../results/hc7_exact7_packet_demand_identity.md`.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore

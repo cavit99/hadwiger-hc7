@@ -97,6 +97,16 @@ These mechanisms close 556 of all 685 unlabelled `K_4`-free seven-boundaries.
 The unconditional residual has 129 types: 119 admit some abstract
 demand-at-most-two state but no single forced block makes every return safe;
 ten have minimum demand three, and all ten contain two disjoint triangles.
+An audited identity now removes the enumerative language from this split:
+
+\[
+ \min_\Pi d_H(\Pi)
+ =\min\{\chi(H-U): H[U]\text{ is a clique}\}.
+\]
+
+Thus the 119 are exactly the residual boundaries with a clique odd-cycle
+transversal, while the ten have none.  This names the uniform target but does
+not force the thin shore to return its clique-OCT partition.
 In the connected-rich branch the one-anchor lift leaves 96 types and removes
 both independence-number-two residues, including Moser.  Thus raw packet
 existence and boundary quotient models are now exhausted.  This last claim is
@@ -127,6 +137,9 @@ remains live; neither this theorem nor the finite verifier closes `(1,2)`.
 
 Source: [double-triangle partial-packet exchange](results/hc7_exact7_double_triangle_partial_packet_exchange.md)
 — [independent audit](results/hc7_exact7_double_triangle_partial_packet_exchange_audit.md).
+
+Packet-demand source: [clique-deletion identity](results/hc7_exact7_packet_demand_identity.md)
+— [independent audit](results/hc7_exact7_packet_demand_identity_audit.md).
 
 The adaptive carrier has now been forced for another infinite geometric
 family.  In a two-component rich shore, if either full component has a
