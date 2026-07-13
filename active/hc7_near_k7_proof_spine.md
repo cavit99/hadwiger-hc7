@@ -199,6 +199,22 @@ connected-rich `(1,2)` adhesion, or the other degree classes.  Those are now
 the live interfaces; no multi-frame crossing-selection problem remains in
 the exact two-component Moser cell.
 
+In the one-exterior pure-Moser branch, the all-crossless family is already
+closed uniformly by one five-terminal web: it makes the sole exterior plus
+the five unique roots planar and yields a `4+1+1` colouring.  Thus a survivor
+has a literal crossed frame.  The active step is not another frame census;
+it is to reserve a connector outside the rooted bags or expose a bilateral
+internal adhesion on which the four-corner equality state can be transferred.
+Source: `../results/hc7_exact7_moser_one_component_allweb_closure.md`.
+
+The carrier step cannot follow from shore connectivity alone.  The audited
+essential-portal barrier `../barriers/hc7_sole_exterior_reserved_connector_barrier.md`
+has a seven-connected, minimum-degree-seven, `K_7`-minor-free shore with both
+complementary carrier pairs, no disjoint full connector, and no internal cut
+of order at most six.  The next lemma must therefore spend an exact
+proper-minor state transition, literal-boundary connectivity/degree, or a
+global `K_7`-free extremality argument.
+
 The connected-rich branch has a stronger uniform capacity theorem.  In all
 ten absolute-demand-three boundary types, two full packets absorb any third
 disjoint connected carrier of boundary defect at most two, with the forced

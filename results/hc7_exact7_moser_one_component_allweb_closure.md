@@ -1,5 +1,7 @@
 # The all-crossless sole-exterior Moser cell is six-colourable
 
+**Status:** proved and independently audited.
+
 ## 1. Setting
 
 Let \(G\) be seven-connected, let \(v\) have degree seven, and suppose

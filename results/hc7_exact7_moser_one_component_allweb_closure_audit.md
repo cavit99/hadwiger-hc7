@@ -1,4 +1,4 @@
-# Final audit: the sole-exterior all-crossless pure-Moser cell
+# Independent audit: the sole-exterior all-crossless pure-Moser cell
 
 ## Verdict
 
