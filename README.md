@@ -339,6 +339,15 @@ otherwise the carrier has a cut of order at most two.  Web-frame drift and
 unbounded three-gate recursion are therefore gone.  The exact remaining
 operation is the bilateral rural-page exchange, with a common state or the
 coherent fixed-two-apex outcome as its required terminal alternative.
+At a contracted pole of that page, the local rotation test is now exact.
+After restoring every parallel attachment occurrence, a minimal connector
+tree embeds in the prescribed disk order exactly when every tree-edge split
+is a circular interval.  Failure returns two literal vertex-disjoint
+carriers joining alternating occurrences.  This is a reusable conversion
+from a rotation obstruction to labelled geometry, but it expands only the
+selected connector tree: it does not embed the induced pole or assign the
+remaining shore components.  Whole-shore expansion, or conversion of those
+alternating carriers to an attained-duty state, remains open.
 The five-contact premise is componentwise: every connected component of a
 locked `w`-region separately has at least five contacts with the same named
 carrier.  A disconnected attachment region cannot evade the bypass theorem
@@ -790,6 +799,7 @@ that link.
 - [Three-bypass amplification and two-rail segregation](results/hc7_exact7_pair_carrier_bypass.md) — [audit](results/hc7_exact7_pair_carrier_bypass_audit.md)
 - [Two-rail reversed-bridge and rural-carrier exchange](results/hc7_exact7_two_rail_bridge_overlap.md) — [audit](results/hc7_exact7_two_rail_bridge_overlap_audit.md)
 - [Uniform block-terminal web and literal three-gate certificate](results/hc7_exact7_block_terminal_web.md) — [audit](results/hc7_exact7_block_terminal_web_audit.md)
+- [Tree-pole circular-split rotation exchange](results/hc7_exact7_tree_pole_rotation_exchange.md) — [audit](results/hc7_exact7_tree_pole_rotation_exchange_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)

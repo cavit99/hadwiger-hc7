@@ -298,12 +298,20 @@ lex-optimal carrier is a literal planar/rural page; the alternative is an
 actual cut of order at most two.  The remaining constructive step is the
 bilateral rural-page exchange to a common state or coherent fixed pair, not
 another web frame or three-gate recursion.
+For a contracted pole on that page, the local rotation obstruction is now
+exact: retain every parallel attachment occurrence and take a minimal
+connector tree.  It either embeds in the prescribed disk rotation, or one
+edge split returns two literal vertex-disjoint carriers joining alternating
+attachment occurrences.  This closes the abstract pole-rotation step but
+not the induced-pole or whole-shore expansion; unused pole edges and leftover
+shore components remain part of the live bilateral exchange.
 Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
 `../results/hc7_exact7_pair_carrier_bypass.md`, and
 `../results/hc7_exact7_two_rail_bridge_overlap.md`, and
-`../results/hc7_exact7_block_terminal_web.md`.
+`../results/hc7_exact7_block_terminal_web.md`, and
+`../results/hc7_exact7_tree_pole_rotation_exchange.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force
