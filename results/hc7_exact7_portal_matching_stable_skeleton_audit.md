@@ -5,6 +5,12 @@ pure-Moser exterior-component application below is **GREEN**.  In particular,
 the application is justified by a separator-matching lemma that forces at
 least four distinct portal witnesses, and hence at least three segments.
 
+**Duplication note.**  The separator--component matching lemma below was
+already proved in this repository as Theorem 1.1 of
+`results/hc7_exact7_portal_rooted_k4.md` (using Hall deficiency rather than
+Konig's vertex-cover form).  The new contribution here is the stable-tree
+application, not the portal-matching statement itself.
+
 ## 1. Exact external input
 
 For a subgraph `F` of a graph `C`, fix a set `X` of branch vertices containing

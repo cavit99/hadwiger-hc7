@@ -7,6 +7,11 @@ at least three.  The one-segment formulation recorded in
 
 ## 1. A full-adhesion portal matching
 
+The matching lemma is included for a self-contained application.  It is the
+Konig-dual form of the Hall-deficiency theorem already proved as Theorem 1.1
+of `hc7_exact7_portal_rooted_k4.md`; the new content here is its combination
+with the order-at-least-three stable-bridges theorem.
+
 ### Lemma 1.1 (component portal matching)
 
 Let `G` be `k`-connected, let `S` be a vertex set of order `k`, and let `C`

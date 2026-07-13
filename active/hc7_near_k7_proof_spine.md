@@ -180,6 +180,15 @@ tiny (order at most three) or 3-connected.  This is a genuine infinite-
 family closure, but it does not close the 3-connected web residue.  Source:
 `../results/hc7_exact7_moser_rich_twocut_exchange.md`.
 
+Conditional on the favourable disjoint `0`--`5` and `2`--`4` crossing in
+the opposite exterior component, the triangular shore is now eliminated by
+an independently audited finite crossed-page theorem.  Its 598 rooted
+`K_4` traces cover all 3,928 allowable defect triples and lift to seven
+literal bags.  Thus the tiny-shore step is no longer geometric; the live
+issue is the order-at-least-four 3-connected shore and, globally, selection
+of a favourable crossing.  Source:
+`../results/hc7_exact7_moser_triangle_shore.md`.
+
 The connected-rich branch has a stronger uniform capacity theorem.  In all
 ten absolute-demand-three boundary types, two full packets absorb any third
 disjoint connected carrier of boundary defect at most two, with the forced
