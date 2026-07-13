@@ -160,6 +160,23 @@ A connected carrier `T` disjoint from the two full packets funds `B` when
 hard-boundary normalizations where the forced block was chosen from that
 defect; it is not a state-independent carrier criterion.
 
+The first state-specific geometric exchange is now proved.  In either full
+packet, choose duty-specific portals for the three attained duties and a
+tree containing them.  If two duty hulls are disjoint, cutting their joining
+path gives two adjacent duty-correct carriers; the other full packet funds
+the third block, so the exact state reflects.  Otherwise the three hulls
+have a literal Helly gate.  This conclusion is valid for every witness
+selection, but the gate need not be canonical.
+
+A generic gate bypass does not force a split.  The sharp private two-portal
+cycle obstruction has cyclic order `A B D A B D`: every packet tree has a
+bypassed common gate while no pair of duty-correct carriers is disjoint.
+Every other private two-portal cyclic order does split.  Thus the live
+uniform mechanism is a label-compatible bypass-or-web theorem followed by a
+web-to-adhesion/state-gluing step using the second packet and criticality.
+Sources: `../results/hc7_exact7_attained_duty_tree_gate.md` and
+`../barriers/hc7_exact7_gate_bypass_falsifier.md`.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore

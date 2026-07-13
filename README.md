@@ -103,6 +103,16 @@ actual attained duty, not merely count its total boundary support.  Failure
 of all duty-correct rotations must produce a common exact state or one
 coherent rural/fixed-pair certificate.
 
+One uniform step is now audited.  For any attained demand-three state,
+choose duty-specific portals in either full packet and take the three duty
+hulls in a containing tree.  If two hulls are disjoint, they split into two
+adjacent duty-correct carriers and the other full packet funds the third
+block, so the exact state reflects.  Otherwise the three hulls have a
+literal Helly gate.  A generic gate bypass is insufficient: the unique
+private two-portal cyclic obstruction has order `A B D A B D`.  The live
+target is therefore label-compatible bypass, or conversion of that coherent
+width-two web into an actual adhesion/state-gluing certificate.
+
 Controlling sources:
 
 - [general labelled-carrier reflection](results/hc7_exact7_rich_cutpacket_exchange.md)
@@ -115,6 +125,10 @@ Controlling sources:
   and its [audit](results/hc7_exact7_packet_bridge_rotation_audit.md);
 - [stable labelled skeleton](results/hc7_exact7_portal_matching_stable_skeleton.md)
   and its [audit](results/hc7_exact7_portal_matching_stable_skeleton_audit.md);
+- [attained-duty tree split or gate](results/hc7_exact7_attained_duty_tree_gate.md)
+  and its [audit](results/hc7_exact7_attained_duty_tree_gate_audit.md);
+- [alternating gate-bypass barrier](barriers/hc7_exact7_gate_bypass_falsifier.md)
+  and its [audit](barriers/hc7_exact7_gate_bypass_falsifier_audit.md);
 - [static packet-quotient exhaustion](results/hc7_exact7_three_packet_quotient_characterization.md)
   and its [audit](results/hc7_exact7_three_packet_quotient_characterization_audit.md).
 
