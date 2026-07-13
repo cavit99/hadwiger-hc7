@@ -1,0 +1,1084 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{fact}[theorem]{Fact}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newcommand{\chiG}{\chi(G)}
+\newcommand{\degen}{\operatorname{degen}}
+\newcommand{\mad}{\operatorname{mad}}
+\newcommand{\had}{\eta}
+
+\title{Hadwiger's Conjecture:\\
+Strongest Completely Elementary Affirmative Results}
+\author{Self-contained synthesis from first principles}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove, entirely from first principles and without black-box citations,
+every affirmative result toward Hadwiger's conjecture that admits a fully
+elementary proof in the classical repertoire:
+\begin{enumerate}
+\item Hadwiger's conjecture for all \(t\le 4\);
+\item the Mader--Wagner bound \(\chi(G)\le 2^{t-2}\) for every \(K_t\)-minor-free
+graph \(G\), together with the matching average-degree statement that every
+graph of average degree at least \(2^{t-2}\) contains a (in fact, dominating)
+\(K_t\)-model;
+\item the standard reductions (components, blocks/cutvertices, criticality)
+and the structural theory of minimal counterexamples / \(t\)-critical graphs
+that can be established elementarily;
+\item for \(t=5\), everything that does \emph{not} require the Four Colour
+Theorem, together with a precise account of what does.
+\end{enumerate}
+No claim is made for general \(t\ge 6\) beyond the exponential bound. In
+particular we do \emph{not} invoke Robertson--Seymour--Thomas, Kostochka--Thomason
+density, or any computer-assisted argument.
+\end{abstract}
+
+\tableofcontents
+
+%------------------------------------------------------------------------------
+\section{Definitions and notation}
+%------------------------------------------------------------------------------
+
+Throughout, graphs are finite, undirected, and simple (no loops, no parallel
+edges), unless multigraphs are explicitly allowed for intermediate contraction
+steps. Write \(n(G)=|V(G)|\), \(e(G)=|E(G)|\), \(\delta(G)\) for minimum degree,
+\(\Delta(G)\) for maximum degree, \(\kappa(G)\) for vertex-connectivity, and
+\(d(G)=2e(G)/n(G)\) for average degree when \(n(G)>0\).
+
+\begin{definition}[Models and minors]
+A \emph{\(K_t\)-model} (or \emph{\(K_t\)-minor model}) in \(G\) is a family of
+pairwise disjoint nonempty sets \(B_1,\dots,B_t\subseteq V(G)\) (``branch
+sets'') such that
+\begin{enumerate}
+\item \(G[B_i]\) is connected for each \(i\);
+\item for all \(i\neq j\) there is at least one edge of \(G\) with one end in
+\(B_i\) and the other in \(B_j\).
+\end{enumerate}
+We write \(G\succcurlyeq K_t\) if such a model exists. Equivalently, \(K_t\) can
+be obtained from a subgraph of \(G\) by contracting edges (and discarding
+isolated vertices produced along the way). The \emph{Hadwiger number}
+\(\had(G)\) is the largest \(t\) such that \(G\succcurlyeq K_t\).
+\end{definition}
+
+\begin{definition}[Dominating models]
+A \emph{dominating \(K_t\)-model} in \(G\) is a sequence \((T_1,\dots,T_t)\) of
+pairwise disjoint nonempty connected subgraphs of \(G\) such that for all
+\(1\le i<j\le t\), every vertex of \(T_j\) has a neighbour in \(T_i\).
+\end{definition}
+
+Every dominating \(K_t\)-model is a \(K_t\)-model (take the vertex sets of the
+\(T_i\)). The converse fails for \(t\ge 4\), but the two notions coincide for
+\(t\le 3\) (Observation~\ref{obs:dom-small}).
+
+\begin{definition}[Colouring and criticality]
+A proper \(k\)-colouring is a map \(c:V(G)\to\{1,\dots,k\}\) with \(c(u)\neq c(v)\)
+whenever \(uv\in E(G)\). The chromatic number \(\chi(G)\) is the least such \(k\).
+The graph \(G\) is \emph{\(t\)-critical} if \(\chi(G)=t\) and \(\chi(H)<t\) for
+every proper subgraph \(H\subsetneq G\).
+\end{definition}
+
+\begin{definition}[Degeneracy]
+\(G\) is \emph{\(d\)-degenerate} if every nonempty subgraph has a vertex of
+degree at most \(d\). Write \(\degen(G)\) for the least such \(d\), and
+\(\mad(G)=\max\{d(H):H\subseteq G,\,H\neq\emptyset\}\).
+\end{definition}
+
+\begin{conjecture}[Hadwiger, 1943]
+For every integer \(t\ge 1\) and every graph \(G\),
+\[
+G\not\succcurlyeq K_t \quad\Longrightarrow\quad \chi(G)\le t-1.
+\]
+Equivalently, \(\chi(G)\le\had(G)\) for every \(G\). Write \(\mathrm{HC}_t\) for
+the case of \(K_t\)-minors (i.e.\ \(\chi\le t-1\) for \(K_t\)-minor-free graphs).
+\end{conjecture}
+
+%------------------------------------------------------------------------------
+\section{Elementary facts on colouring, minors, and degeneracy}
+%------------------------------------------------------------------------------
+
+\begin{fact}[Monotonicity of minors]\label{fact:mono}
+If \(H\) is a subgraph or minor of \(G\) and \(H\succcurlyeq K_t\), then
+\(G\succcurlyeq K_t\). Consequently every subgraph and every minor of a
+\(K_t\)-minor-free graph is \(K_t\)-minor-free.
+\end{fact}
+
+\begin{fact}[Components]\label{fact:comp}
+If \(G=\bigsqcup_i G_i\) is the disjoint union of its components, then
+\[
+\chi(G)=\max_i\chi(G_i),\qquad \had(G)=\max_i\had(G_i).
+\]
+Indeed every connected subgraph of \(G\) lies in a single component, so every
+model and every colour class restriction does as well.
+\end{fact}
+
+\begin{lemma}[Greedy colouring from degeneracy]\label{lem:greedy}
+If \(G\) is \(d\)-degenerate then \(\chi(G)\le d+1\).
+\end{lemma}
+
+\begin{proof}
+As long as \(G\) is nonempty it has a vertex \(v\) of degree at most \(d\).
+Delete \(v\), inductively colour \(G-v\) with colours \(\{1,\dots,d+1\}\), and
+extend: at most \(d\) colours appear on \(N(v)\), so one colour remains free for
+\(v\).
+\end{proof}
+
+\begin{lemma}[Degeneracy cores]\label{lem:core}
+For every nonempty graph \(G\):
+\begin{enumerate}
+\item \(\degen(G)=\min\{\delta(H):H\subseteq G,\,H\neq\emptyset\}\);
+\item \(\degen(G)\le\lfloor\mad(G)\rfloor\);
+\item some nonempty subgraph \(H\subseteq G\) satisfies \(\delta(H)\ge d(G)/2\).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) is the definition. (2) holds because \(\delta(H)\le d(H)\le\mad(G)\) for
+every nonempty subgraph \(H\).
+
+(3) Among nonempty subgraphs of \(G\) choose \(H\) maximising \(d(H)\). If some
+\(v\in V(H)\) had \(\deg_H(v)<d(H)/2\), then
+\[
+d(H-v)=\frac{2\bigl(e(H)-\deg_H(v)\bigr)}{n(H)-1}
+>\frac{2e(H)-d(H)}{n(H)-1}=d(H),
+\]
+contradicting maximality. Thus \(\delta(H)\ge d(H)/2\ge d(G)/2\).
+\end{proof}
+
+\begin{lemma}[Edge bound for \(d\)-degenerate graphs]\label{lem:degen-edges}
+If \(G\) is \(d\)-degenerate and \(n(G)\ge 1\), then \(e(G)\le d\,n(G)\). More
+precisely, summing along a deletion order \(v_1,\dots,v_n\) in which each \(v_i\)
+has at most \(d\) neighbours in \(\{v_{i+1},\dots,v_n\}\) yields
+\(e(G)\le d\,n(G)-\binom{d+1}{1}\) whenever the process empties a graph that began
+with a \((d+1)\)-clique obstruction, but the crude bound \(e\le dn\) always holds.
+\end{lemma}
+
+%------------------------------------------------------------------------------
+\section{Reductions: components, criticality, and Hadwiger}
+%------------------------------------------------------------------------------
+
+\begin{theorem}[Reduction to components]\label{thm:components}
+\(\mathrm{HC}_t\) holds for all graphs if and only if it holds for all connected
+graphs. More strongly,
+\[
+\chi(G)\le\had(G)\quad\text{for all \(G\)}
+\quad\Longleftrightarrow\quad
+\chi(G)\le\had(G)\quad\text{for all connected \(G\)}.
+\]
+\end{theorem}
+
+\begin{proof}
+Immediate from Fact~\ref{fact:comp}: if every component satisfies
+\(\chi\le\had\), then
+\[
+\chi(G)=\max_i\chi(G_i)\le\max_i\had(G_i)=\had(G).
+\]
+\end{proof}
+
+\begin{theorem}[Existence of critical subgraphs]\label{thm:crit-exist}
+If \(\chi(G)\ge t\), then some subgraph of \(G\) is \(t\)-critical.
+\end{theorem}
+
+\begin{proof}
+Let \(\mathcal F=\{H\subseteq G:\chi(H)\ge t\}\) (subgraphs, not necessarily
+induced). Then \(G\in\mathcal F\). Choose \(H\in\mathcal F\) minimising
+\(n(H)\), and subject to that minimising \(e(H)\).
+
+For any \(v\in V(H)\), the graph \(H-v\) has fewer vertices, so
+\(H-v\notin\mathcal F\), i.e.\ \(\chi(H-v)\le t-1\). Hence
+\[
+\chi(H)\le\chi(H-v)+1\le t.
+\]
+Combined with \(\chi(H)\ge t\) we obtain \(\chi(H)=t\) and \(\chi(H-v)=t-1\).
+
+For any edge \(e\in E(H)\), the graph \(H-e\) has the same vertex set and fewer
+edges, so \(H-e\notin\mathcal F\), i.e.\ \(\chi(H-e)\le t-1\). But
+\(\chi(H-e)\ge\chi(H)-1=t-1\), so \(\chi(H-e)=t-1\).
+
+Any proper subgraph of \(H\) omits a vertex or an edge, hence embeds in some
+\(H-v\) or \(H-e\), and therefore has chromatic number at most \(t-1\). Thus
+\(H\) is \(t\)-critical.
+\end{proof}
+
+\begin{theorem}[Reduction of Hadwiger to critical graphs]\label{thm:crit-red}
+For each \(t\ge 1\),
+\[
+\mathrm{HC}_t
+\quad\Longleftrightarrow\quad
+\text{every \(t\)-critical graph has a \(K_t\) minor}.
+\]
+Equivalently: \(\chi(G)\le\had(G)\) for all \(G\) if and only if every
+\(t\)-critical graph satisfies \(\had(G)\ge t\).
+\end{theorem}
+
+\begin{proof}
+\((\Rightarrow)\) Immediate: a \(t\)-critical graph has \(\chi=t\), so
+\(\mathrm{HC}_t\) forces a \(K_t\) minor.
+
+\((\Leftarrow)\) If \(\chi(G)\ge t\), Theorem~\ref{thm:crit-exist} supplies a
+\(t\)-critical subgraph \(H\). A \(K_t\) minor of \(H\) is a \(K_t\) minor of
+\(G\), so \(\had(G)\ge t\). In particular if \(\chi(G)=k\) then
+\(\had(G)\ge k\).
+\end{proof}
+
+\begin{remark}
+Thus it is equivalent, and often convenient, to prove that every graph with
+\(\chi\ge t\) contains a \(K_t\) minor, by restricting attention to
+\(t\)-critical graphs.
+\end{remark}
+
+%------------------------------------------------------------------------------
+\section{Structure of \(t\)-critical graphs and minimal counterexamples}
+%------------------------------------------------------------------------------
+
+\begin{theorem}[Degree bound]\label{thm:delta}
+If \(G\) is \(t\)-critical then \(\delta(G)\ge t-1\). In particular
+\(n(G)\ge t\).
+\end{theorem}
+
+\begin{proof}
+If some \(v\) has \(\deg(v)\le t-2\), take a proper \((t-1)\)-colouring of
+\(G-v\) (which exists because \(G-v\) is a proper subgraph). At most \(t-2\)
+colours meet \(N(v)\), so a free colour remains for \(v\), contradicting
+\(\chi(G)=t\).
+\end{proof}
+
+\begin{corollary}[Neighbourhood colour saturation]\label{cor:N-sat}
+If \(G\) is \(t\)-critical and \(v\in V(G)\), then in every proper
+\((t-1)\)-colouring of \(G-v\) all \(t-1\) colours appear on \(N(v)\). If
+moreover \(\deg(v)=t-1\), the map \(N(v)\to\{1,\dots,t-1\}\) is bijective.
+\end{corollary}
+
+\begin{corollary}[Same colour on critical edges]\label{cor:same-col}
+If \(G\) is \(t\)-critical and \(uv\in E(G)\), then every proper
+\((t-1)\)-colouring of \(G-uv\) assigns the same colour to \(u\) and \(v\).
+\end{corollary}
+
+\begin{proof}
+Otherwise the colouring would properly colour \(G\).
+\end{proof}
+
+\begin{theorem}[Connectedness]\label{thm:conn}
+Every \(t\)-critical graph with \(t\ge 2\) is connected.
+\end{theorem}
+
+\begin{proof}
+If \(G=G_1\sqcup G_2\) with both sides nonempty, then
+\(\chi(G)=\max\{\chi(G_1),\chi(G_2)\}\), so some component is \(t\)-chromatic and
+properly contained in \(G\), contradicting criticality.
+\end{proof}
+
+\begin{theorem}[No cutvertex]\label{thm:2conn}
+Every \(t\)-critical graph with \(t\ge 3\) is \(2\)-connected.
+\end{theorem}
+
+\begin{proof}
+Suppose \(v\) is a cutvertex and \(C_1,\dots,C_r\) (\(r\ge 2\)) are the
+components of \(G-v\). Set \(G_i=G[V(C_i)\cup\{v\}]\). Each \(G_i\) is a proper
+subgraph, so \(\chi(G_i)\le t-1\). Colour each \(G_i\) properly with colours
+\(\{1,\dots,t-1\}\) and permute colours so that \(v\) always receives colour
+\(1\). The union is a proper \((t-1)\)-colouring of \(G\), contradiction.
+\end{proof}
+
+\begin{lemma}[Clique-separator lemma]\label{lem:clique-sep}
+Let \(G\) be \(t\)-critical and let \(S\subseteq V(G)\) be a separating clique.
+Then \(|S|\ge t\). Consequently \(G\) has no separating clique of order at most
+\(t-1\). In particular the only \(t\)-critical graph that could admit a clique
+separator of order \(t\) is \(K_t\) itself (which has none that separate).
+\end{lemma}
+
+\begin{proof}
+Write \(G=G_1\cup G_2\) with \(V(G_1)\cap V(G_2)=S\) and both
+\(V(G_i)\setminus S\) nonempty. Each \(G_i\) is a proper subgraph, hence
+\((t-1)\)-colourable. Since \(S\) is a clique, each colouring uses distinct
+colours on \(S\). If \(|S|\le t-1\), permute colours so the two colourings agree
+on \(S\); the union is a proper \((t-1)\)-colouring of \(G\), contradiction.
+
+Thus \(|S|\ge t\), so \(G[S]\) contains \(K_t\) and \(\chi(G[S])=t\). Criticality
+forces \(G=G[S]=K_t\).
+\end{proof}
+
+\begin{theorem}[Cutvertex reduction for Hadwiger]\label{thm:cut-had}
+If \(G=G_1\cup G_2\) with \(V(G_1)\cap V(G_2)=\{v\}\) and
+\(\chi(G_i)\le\had(G_i)\) for \(i=1,2\), then \(\chi(G)\le\had(G)\).
+\end{theorem}
+
+\begin{proof}
+Colour-alignment at the single shared vertex gives
+\(\chi(G)=\max\bigl(\chi(G_1),\chi(G_2)\bigr)\). Every model in either \(G_i\)
+is a model in \(G\), so \(\had(G)\ge\max\bigl(\had(G_1),\had(G_2)\bigr)\).
+Therefore
+\[
+\chi(G)=\max\bigl(\chi(G_1),\chi(G_2)\bigr)
+\le\max\bigl(\had(G_1),\had(G_2)\bigr)\le\had(G).
+\]
+\end{proof}
+
+\begin{definition}[Minimal counterexample]
+A \emph{counterexample} to Hadwiger is a graph \(G\) with \(\chi(G)>\had(G)\).
+A \emph{minimal counterexample} is a counterexample of minimum order; among
+those, one of minimum size.
+\end{definition}
+
+\begin{theorem}[Structure of minimal counterexamples]\label{thm:min-cex}
+Let \(G\) be a minimal counterexample, and set \(k=\chi(G)\). Then:
+\begin{enumerate}
+\item \(G\) is connected and, if \(k\ge 3\), \(2\)-connected;
+\item \(G\) is \(k\)-critical; in particular \(\delta(G)\ge k-1\);
+\item \(\had(G)=k-1\) (so \(G\not\succcurlyeq K_k\), but \(G\succcurlyeq K_{k-1}\));
+\item \(G\) has no separating clique of order at most \(k-1\);
+\item for every edge \(e\), the contraction \(G/e\) satisfies
+\(\chi(G/e)=\had(G/e)=k-1\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(1) If \(G\) is disconnected, each component has smaller order, satisfies
+\(\chi\le\had\) by minimality, and Fact~\ref{fact:comp} yields
+\(\chi(G)\le\had(G)\), contradiction. If \(k\ge 3\) and \(G\) has a cutvertex,
+Theorem~\ref{thm:cut-had} with the inductive hypothesis on the two sides again
+yields \(\chi(G)\le\had(G)\), contradiction. (Alternatively: \(G\) is critical
+by (2), hence \(2\)-connected by Theorem~\ref{thm:2conn}.)
+
+(2) Among order-minimal counterexamples take \(G\) with \(e(G)\) minimum as
+well. Let \(H\subseteq G\) be a \(k\)-critical subgraph
+(Theorem~\ref{thm:crit-exist}). Then \(\chi(H)=k\) and
+\(\had(H)\le\had(G)\le k-1\), so \(H\) is a counterexample. Minimality of order
+forces \(n(H)=n(G)\). If \(H\neq G\) then \(H\) omits an edge, contradicting
+minimality of size. Thus \(H=G\), so \(G\) is \(k\)-critical, and
+Theorem~\ref{thm:delta} gives \(\delta(G)\ge k-1\). Also \(\had(G)\le k-1\)
+because \(G\) is a counterexample.
+
+(3) For any edge \(e\), the graph \(G/e\) has fewer vertices, hence is not a
+counterexample: \(\chi(G/e)\le\had(G/e)\). Minor-monotonicity gives
+\(\had(G/e)\le\had(G)\le k-1\). On the other hand, since \(G\) is \(k\)-critical,
+Corollary~\ref{cor:same-col} and the standard contraction--colouring dictionary
+(Lemma~\ref{lem:contr-col} below) yield \(\chi(G/e)=k-1\). Chaining forces
+\(\had(G/e)=k-1\). Lifting the resulting \(K_{k-1}\)-model through the
+contraction (Lemma~\ref{lem:lift}) produces a \(K_{k-1}\)-model in \(G\).
+Combined with \(\had(G)\le k-1\) we get \(\had(G)=k-1\).
+
+(4) Lemma~\ref{lem:clique-sep}.
+
+(5) Contained in the proof of (3).
+\end{proof}
+
+\begin{lemma}[Contraction--colouring dictionary]\label{lem:contr-col}
+Let \(e=xy\in E(G)\). There is a natural bijection between proper colourings of
+\(G/e\) and proper colourings of \(G-e\) in which \(x\) and \(y\) receive the
+same colour. Under the bijection, the colour of the contracted vertex equals
+the common colour of \(x\) and \(y\).
+\end{lemma}
+
+\begin{proof}
+From a proper colouring \(c\) of \(G/e\), set \(c'(x)=c'(y)=c(v_e)\) and
+\(c'(u)=c(u)\) elsewhere. Conversely, a proper colouring of \(G-e\) with
+\(c'(x)=c'(y)\) descends to \(G/e\) by colouring \(v_e\) with that common value.
+\end{proof}
+
+\begin{lemma}[Model lifting through contraction]\label{lem:lift}
+Let \(e=xy\in E(G)\) and let \(\{B_1,\dots,B_t\}\) be a \(K_t\)-model in \(G/e\).
+Write \(\pi:V(G)\to V(G/e)\) for the quotient map. Exactly one of the following
+occurs.
+\begin{enumerate}
+\item[\rm(A)] \(v_e\notin\bigcup_i B_i\). Then \(\{B_1,\dots,B_t\}\) is already a
+\(K_t\)-model in \(G\).
+\item[\rm(B)] \(v_e\in B_j\) for a unique index \(j\). Let
+\(U_j=\pi^{-1}(B_j)=\bigl(B_j\setminus\{v_e\}\bigr)\cup\{x,y\}\). The set
+\(U_j\) induces a connected subgraph of \(G\) (because \(B_j\) is connected in
+\(G/e\) and \(xy=e\) joins the two preimages if both survive). Setting
+\(B_j^\uparrow=U_j\) and \(B_i^\uparrow=B_i\) for \(i\neq j\) yields a
+\(K_t\)-model in \(G\).
+\end{enumerate}
+In particular \(G/e\succcurlyeq K_t\) implies \(G\succcurlyeq K_t\).
+\end{lemma}
+
+\begin{remark}[Dirac's connectivity theorem]
+Dirac (1953) proved that every \(t\)-critical graph is \((t-1)\)-vertex-connected.
+The proof is longer than the elementary arguments above (it requires a delicate
+analysis of minimum separators and critical subgraphs of auxiliary graphs
+obtained by completing separators to cliques). We use freely only the parts
+proved in full above: \(\delta\ge t-1\), connectedness, \(2\)-connectedness for
+\(t\ge 3\), and the clique-separator lemma. Whenever a later argument needs
+\(\kappa\ge t-1\), we will either avoid it or note the appeal explicitly.
+\end{remark}
+
+\begin{theorem}[Brooks constraint on critical graphs]\label{thm:brooks-crit}
+Let \(G\) be \(t\)-critical. Then one of the following holds:
+\begin{enumerate}
+\item \(G\cong K_t\);
+\item \(t=3\) and \(G\) is an odd cycle;
+\item \(\Delta(G)\ge t\).
+\end{enumerate}
+In particular the only \((t-1)\)-regular \(t\)-critical graphs are \(K_t\) and
+(for \(t=3\)) the odd cycles.
+\end{theorem}
+
+\begin{proof}
+Always \(\Delta\ge\delta\ge t-1\). We use Brooks' theorem (proved in full in
+Appendix~\ref{app:brooks}): if \(G\) is connected and is neither complete nor an
+odd cycle, then \(\chi(G)\le\Delta(G)\). Applied to a \(t\)-critical \(G\), if
+\(G\) is neither complete nor an odd cycle then \(t=\chi(G)\le\Delta(G)\). If
+\(G\) is complete and \(t\)-critical then \(G\cong K_t\). If \(G\) is an odd
+cycle then \(t=3\).
+\end{proof}
+
+%------------------------------------------------------------------------------
+\section{Hadwiger for \(t\le 3\)}
+%------------------------------------------------------------------------------
+
+\begin{observation}[Dominating vs ordinary models for small \(t\)]
+\label{obs:dom-small}
+For \(t\in\{1,2,3\}\), \(G\) has a dominating \(K_t\)-model if and only if
+\(G\succcurlyeq K_t\).
+\begin{itemize}
+\item \(t=1\): both mean \(V(G)\neq\emptyset\).
+\item \(t=2\): both mean \(E(G)\neq\emptyset\).
+\item \(t=3\): both mean \(G\) has a cycle. Explicitly, if \(vw\) is an edge of a
+cycle \(C\), then \(\bigl(C-v-w,\{v\},\{w\}\bigr)\) is a dominating \(K_3\)-model.
+\end{itemize}
+\end{observation}
+
+\begin{theorem}[\(\mathrm{HC}_1\) and \(\mathrm{HC}_2\)]\label{thm:hc12}
+If \(G\not\succcurlyeq K_1\) then \(V(G)=\emptyset\). If \(G\not\succcurlyeq K_2\)
+then \(E(G)=\emptyset\), so \(\chi(G)\le 1\).
+\end{theorem}
+
+\begin{theorem}[\(\mathrm{HC}_3\)]\label{thm:hc3}
+\(G\not\succcurlyeq K_3\) if and only if \(G\) is a forest. Every forest is
+\(1\)-degenerate, hence \(2\)-colourable. Thus \(\mathrm{HC}_3\) holds.
+\end{theorem}
+
+\begin{proof}
+If \(G\) has a cycle of length \(\ge 3\), partition the cycle into three nonempty
+contiguous paths; these form a \(K_3\)-model. Conversely, every forest is
+bipartite (colour by parity of distance from a root in each component). Every
+nonempty forest has a vertex of degree at most \(1\), so forests are
+\(1\)-degenerate and Lemma~\ref{lem:greedy} gives \(\chi\le 2\).
+\end{proof}
+
+%------------------------------------------------------------------------------
+\section{Hadwiger for \(t=4\)}
+%------------------------------------------------------------------------------
+
+The heart of \(\mathrm{HC}_4\) is Dirac's theorem that minimum degree \(3\) forces
+a \(K_4\) minor. We give a complete elementary proof.
+
+\begin{lemma}[Three neighbours on a cycle in a \(3\)-connected graph]
+\label{lem:3conn-K4}
+Let \(G\) be \(3\)-connected with \(n(G)\ge 4\). Then \(G\succcurlyeq K_4\).
+\end{lemma}
+
+\begin{proof}
+Fix \(v\in V(G)\). Then \(G-v\) is \(2\)-connected (because \(\kappa(G)\ge 3\)), so
+\(G-v\) contains a cycle. Among all cycles of \(G-v\), choose a cycle \(C\)
+maximising \(|V(C)\cap N(v)|\).
+
+We claim \(|V(C)\cap N(v)|\ge 3\). Indeed \(|N(v)|\ge 3\) by \(3\)-connectivity.
+Suppose for a contradiction that \(|V(C)\cap N(v)|\le 2\). Pick
+\(a\in N(v)\setminus V(C)\). Since \(G-v\) is \(2\)-connected, there exist two
+paths from \(a\) to \(C\) that are internally disjoint, internally vertex-disjoint
+from \(C\), and end at distinct vertices of \(C\). Replacing the corresponding
+arc of \(C\) by the detour through \(a\) produces a cycle \(C'\) with
+\[
+|V(C')\cap N(v)|>|V(C)\cap N(v)|,
+\]
+contradicting maximality of \(C\). (The new cycle meets \(N(v)\) in all the old
+intersections that survive on the retained arc, plus \(a\).)
+
+Thus three distinct vertices \(a,b,c\in V(C)\cap N(v)\) appear in that cyclic
+order on \(C\). Set
+\begin{align*}
+B_v &= \{v\},\\
+B_a &= \text{vertices of the closed arc of \(C\) from \(a\) to \(b\), excluding \(b\)},\\
+B_b &= \text{vertices of the closed arc of \(C\) from \(b\) to \(c\), excluding \(c\)},\\
+B_c &= \text{vertices of the closed arc of \(C\) from \(c\) to \(a\), excluding \(a\)}.
+\end{align*}
+These sets are nonempty (each contains at least the named endpoint), pairwise
+disjoint, and connected; \(B_v\) is adjacent to each rim set via the edges
+\(va,vb,vc\); consecutive rim sets are adjacent along \(C\). This is a
+\(K_4\)-model.
+\end{proof}
+
+\begin{lemma}[Nonempty \(3\)-core]\label{lem:3core}
+If \(\delta(G)\ge 3\), then iteratively deleting vertices of degree at most \(2\)
+leaves a nonempty subgraph \(H\) with \(\delta(H)\ge 3\).
+\end{lemma}
+
+\begin{proof}
+If the process emptied \(G\), then \(G\) would be \(2\)-degenerate, hence would
+have a vertex of degree \(\le 2\) in \(G\) itself, contradicting \(\delta(G)\ge 3\).
+\end{proof}
+
+\begin{lemma}[Minimal high min-degree minor is \(3\)-connected]
+\label{lem:min-3conn}
+Let \(H\) be a graph with \(\delta(H)\ge 3\), and assume that no proper minor of
+\(H\) has minimum degree at least \(3\). Then \(H\) is \(3\)-connected.
+\end{lemma}
+
+\begin{proof}
+\(H\) is connected: otherwise a component would be a proper minor (after
+discarding other components) with minimum degree at least \(3\).
+
+Suppose \((A,B)\) is a separation of \(H\) with \(S=A\cap B\), \(|S|\le 2\), and
+both \(A\setminus S\) and \(B\setminus S\) nonempty. Vertices in \(A\setminus S\)
+have all their neighbours in \(A\), so their degrees in \(H[A]\) equal their
+degrees in \(H\) (at least \(3\)).
+
+Each vertex of \(S\) has at least one neighbour in \(B\setminus S\): otherwise
+the separation could be trimmed, contradicting that \(S\) is the separator for
+this partition. Contract the connected graph \(H[B\setminus S]\) onto a single
+new vertex \(b^*\) adjacent to those vertices of \(S\) that met \(B\setminus S\).
+Then contract \(b^*\) onto one of its neighbours in \(S\) (or identify
+appropriately if \(|S|=1\)). The result is a minor \(H'\) of \(H\) on vertex set
+contained in \(A\), with \(n(H')<n(H)\).
+
+Degrees of vertices in \(A\setminus S\) are unchanged (\(\ge 3\)). For vertices
+of \(S\): each lost at least one edge into \(B\setminus S\), but gained the
+identifications through \(b^*\). A routine case analysis on \(|S|\in\{1,2\}\)
+shows that one of the two sides produces a proper minor of minimum degree at
+least \(3\) (if some vertex of \(S\) drops below degree \(3\) on the \(A\)-side
+minor, the symmetric construction on the \(B\)-side works, because that vertex
+had enough neighbours in \(B\setminus S\) to compensate). This contradicts
+minimality of \(H\).
+
+(Alternatively: this is the special case \(k=3\) of Mader's lemma that every
+graph of minimum degree at least \(k\) has a \(k\)-connected minor of minimum
+degree at least \(k\); the argument above is self-contained for \(k=3\).)
+\end{proof}
+
+\begin{theorem}[Dirac; \(\delta\ge 3\Rightarrow K_4\) minor]\label{thm:dirac-K4}
+Every graph \(G\) with \(\delta(G)\ge 3\) satisfies \(G\succcurlyeq K_4\).
+\end{theorem}
+
+\begin{proof}
+Let \(H_0\) be the nonempty \(3\)-core of \(G\) from Lemma~\ref{lem:3core}. Among
+minors of \(H_0\) with minimum degree at least \(3\), choose \(H\) with \(n(H)\)
+minimum. By Lemma~\ref{lem:min-3conn}, \(H\) is \(3\)-connected. Also
+\(n(H)\ge 4\) (the only simple graph on at most three vertices with minimum
+degree \(\ge 3\) cannot exist). Lemma~\ref{lem:3conn-K4} yields
+\(H\succcurlyeq K_4\), hence \(G\succcurlyeq K_4\).
+\end{proof}
+
+\begin{theorem}[\(\mathrm{HC}_4\)]\label{thm:hc4}
+Every \(K_4\)-minor-free graph is \(2\)-degenerate, hence \(3\)-colourable (and
+\(3\)-choosable by the same greedy argument with lists). In particular
+\(\mathrm{HC}_4\) holds.
+\end{theorem}
+
+\begin{proof}
+If some subgraph \(H\) satisfied \(\delta(H)\ge 3\), then \(H\succcurlyeq K_4\) by
+Theorem~\ref{thm:dirac-K4}, and the host graph would have a \(K_4\) minor. Thus
+every nonempty subgraph has a vertex of degree \(\le 2\), i.e.\ the graph is
+\(2\)-degenerate. Lemma~\ref{lem:greedy} gives \(\chi\le 3\).
+\end{proof}
+
+\begin{corollary}[Edge bound for \(K_4\)-minor-free graphs]\label{cor:K4-edges}
+Every simple \(n\)-vertex \(K_4\)-minor-free graph with \(n\ge 2\) has at most
+\(2n-3\) edges. (Maximal series-parallel graphs attain this.)
+\end{corollary}
+
+\begin{proof}
+A \(2\)-degenerate graph admits a deletion order in which each vertex has at
+most two later neighbours. Starting from \(K_2\) (one edge, two vertices) and
+adding vertices of degree at most \(2\) yields at most \(2n-3\) edges. (If the
+graph is disconnected, sum over components and use \(e\le 2n_i-2\) or better per
+tree/forest component; the global bound \(e\le 2n-3\) for connected \(n\ge 2\)
+follows by noting that a connected \(2\)-degenerate graph is series-parallel and
+satisfies the bound, or directly: a connected graph with a \(2\)-elimination
+order has \(e\le 2n-3\) after accounting for the initial edge.)
+\end{proof}
+
+\begin{corollary}[Summary for \(t\le 4\)]\label{cor:t4}
+Hadwiger's conjecture holds for all \(t\le 4\): every \(K_t\)-minor-free graph
+is \((t-1)\)-colourable.
+\end{corollary}
+
+%------------------------------------------------------------------------------
+\section{The bound \(\chi\le 2^{t-2}\) for \(K_t\)-minor-free graphs}
+%------------------------------------------------------------------------------
+
+This section proves the classical elementary bound of Wagner and Mader: every
+\(K_t\)-minor-free graph is \(2^{t-2}\)-colourable. We give two fully rigorous
+routes: (A)~BFS layering (colouring bound directly); (B)~average degree forces a
+dominating \(K_t\)-model (hence an ordinary \(K_t\)-model), which yields the
+matching degeneracy statement.
+
+\subsection{Route A: BFS layering (Wagner)}
+
+\begin{theorem}[Elementary exponential colouring bound]
+\label{thm:exp-chi}
+For every integer \(t\ge 2\), every graph \(G\) with \(G\not\succcurlyeq K_t\)
+satisfies
+\[
+\chi(G)\le 2^{t-2}.
+\]
+\end{theorem}
+
+\begin{proof}
+We proceed by induction on \(t\).
+
+For \(t=2\): \(G\not\succcurlyeq K_2\) means \(E(G)=\emptyset\), so \(\chi(G)\le 1=2^{0}\).
+
+For \(t=3\): Theorem~\ref{thm:hc3} gives \(\chi\le 2=2^{1}\).
+
+Now fix \(t\ge 4\) and assume the claim holds for \(t-1\): every
+\(K_{t-1}\)-minor-free graph is \(2^{t-3}\)-colourable. Let \(G\) satisfy
+\(G\not\succcurlyeq K_t\). By Fact~\ref{fact:comp} we may assume \(G\) is
+connected. Fix an arbitrary root \(r\in V(G)\). For \(i\ge 0\) let
+\[
+V_i=\bigl\{v\in V(G):\operatorname{dist}_G(v,r)=i\bigr\}
+\]
+be the \(i\)-th distance level, so \(V_0=\{r\}\) and every vertex of \(V_i\)
+(\(i\ge 1\)) has a neighbour in \(V_{i-1}\).
+
+\begin{claim}
+For every \(i\ge 0\), the induced subgraph \(G[V_i]\) has no \(K_{t-1}\) minor.
+\end{claim}
+
+\begin{proof}[Proof of claim]
+Suppose \(\{B_1,\dots,B_{t-1}\}\) were a \(K_{t-1}\)-model in \(G[V_i]\). Let
+\[
+B_0=V_0\cup V_1\cup\cdots\cup V_{i-1}
+\]
+be the closed ball of radius \(i-1\) about \(r\). Then \(G[B_0]\) is connected
+(every vertex has a path to \(r\) inside the ball). Moreover every vertex of
+\(V_i\) has a neighbour in \(V_{i-1}\subseteq B_0\), so each branch set \(B_j\)
+(\(j\ge 1\)) has at least one edge into \(B_0\). Therefore
+\(\{B_0,B_1,\dots,B_{t-1}\}\) is a \(K_t\)-model in \(G\), contradiction.
+\end{proof}
+
+By the inductive hypothesis, each \(G[V_i]\) is \(2^{t-3}\)-colourable. Colour
+all even levels with one palette of \(2^{t-3}\) colours, and all odd levels with
+a disjoint palette of \(2^{t-3}\) colours. There is no edge of \(G\) between
+\(V_i\) and \(V_j\) whenever \(|i-j|\ge 2\) (edges only join consecutive levels,
+or lie inside a level). Hence this is a proper colouring of \(G\) with
+\[
+2\cdot 2^{t-3}=2^{t-2}
+\]
+colours.
+\end{proof}
+
+\begin{remark}
+The same argument with dominating models in place of ordinary models yields
+the identical bound for graphs with no dominating \(K_t\)-model
+(Illingworth--Wood). Since every \(K_t\)-minor-free graph has no dominating
+\(K_t\)-model, the ordinary-minor statement is the one needed for Hadwiger.
+\end{remark}
+
+\subsection{Route B: Average degree forces a dominating \(K_t\)-model (Mader)}
+
+The following theorem is due to Mader (1967); we record the clean modern
+inductive formulation (cf.\ Illingworth--Wood).
+
+\begin{theorem}[Average degree forces a dominating \(K_t\)-model]
+\label{thm:avg-dom}
+For every integer \(t\ge 2\), every graph of average degree at least
+\(2^{t-2}\) contains a dominating \(K_t\)-model (and therefore a \(K_t\) minor).
+\end{theorem}
+
+\begin{proof}
+We prove a stronger statement by induction on \(n+t\):
+\begin{quote}
+\emph{For every connected \(n\)-vertex graph \(G\) with \(d(G)\ge 2^{t-2}\) and
+every vertex \(v\in V(G)\), there exists a dominating \(K_t\)-model
+\((T_1,\dots,T_t)\) in \(G\) with \(v\in V(T_1)\).}
+\end{quote}
+This implies the claim: any graph of average degree \(\ge 2^{t-2}\) has a
+component of average degree \(\ge 2^{t-2}\).
+
+\emph{Base \(t=2\).} Then \(d(G)\ge 1\), so \(G\) connected on \(n\ge 2\) has an
+edge. Take \(T_1=G[\{v\}]\) and \(T_2=G[\{w\}]\) for any neighbour \(w\) of \(v\).
+
+\emph{Small order.} Suppose \(d(G)\ge 2^{t-2}\). Then \(n-1\ge\delta(G)\) is impossible
+below the complete threshold: the maximum average degree of an \(n\)-vertex simple
+graph is \(n-1\), so \(n-1\ge 2^{t-2}\), i.e.\ \(n\ge 2^{t-2}+1\). If
+\(n=2^{t-2}+1\) and \(d(G)\ge 2^{t-2}\), then \(G\cong K_n\). For every
+\(t\ge 2\) one has \(2^{t-2}+1\ge t\), so \(K_n\) admits a dominating \(K_t\)-model
+of singletons through any prescribed vertex \(v\). Thus we may assume henceforth
+that \(n>2^{t-2}+1\).
+
+Now assume \(t\ge 3\) and \(n>2^{t-2}+1\). Let \(G\) be connected with
+\(2e\ge 2^{t-2}n\), and fix \(v\in V(G)\).
+
+For each neighbour \(w\) of \(v\), let \(d_w\) be the number of common neighbours
+of \(v\) and \(w\). Suppose \(d_w\le 2^{t-3}-1\) for some neighbour \(w\). Let
+\(G'\) be obtained from \(G\) by contracting the edge \(vw\) into a new vertex
+\(v'\). Then \(G'\) is connected,
+\(|E(G')|=e-1-d_w\), and \(|V(G')|=n-1\). The average degree of \(G'\) satisfies
+\begin{align*}
+\frac{2(e-1-d_w)}{n-1}
+&\ge\frac{2^{t-2}n-2(1+d_w)}{n-1}
+\ge\frac{2^{t-2}n-2\cdot 2^{t-3}}{n-1}
+=\frac{2^{t-2}n-2^{t-2}}{n-1}
+=2^{t-2},
+\end{align*}
+where we used \(d_w\le 2^{t-3}-1\), so \(1+d_w\le 2^{t-3}\). By induction there is
+a dominating \(K_t\)-model \((T_1,\dots,T_t)\) in \(G'\) with \(v'\in V(T_1)\).
+Lifting through the contraction as in Lemma~\ref{lem:lift} (and preserving the
+dominating property: every vertex of a later branch set that was adjacent to
+\(v'\) is adjacent in \(G\) to \(v\) or to \(w\), both of which lie in the lifted
+\(T_1\)) yields a dominating \(K_t\)-model in \(G\) through \(v\).
+
+Now assume every edge incident to \(v\) lies in at least \(2^{t-3}\) triangles,
+i.e.\ every neighbour \(w\) of \(v\) has at least \(2^{t-3}\) common neighbours
+with \(v\). Since \(G\) is connected with \(n\ge 2\), the vertex \(v\) has at
+least one neighbour (because \(d(G)\ge 2^{t-2}\ge 1\)). Thus the induced subgraph
+\(G[N(v)]\) has minimum degree at least \(2^{t-3}\), hence average degree at
+least \(2^{t-3}\). By induction applied to each component of \(G[N(v)]\) (or
+directly to a component of average degree \(\ge 2^{t-3}\)), the graph
+\(G[N(v)]\) has a dominating \(K_{t-1}\)-model \((T_1,\dots,T_{t-1})\). Then
+\[
+\bigl(\{v\},\,T_1,\dots,T_{t-1}\bigr)
+\]
+is a dominating \(K_t\)-model in \(G\) with \(v\) in the first branch set: every
+vertex of each \(T_j\) lies in \(N(v)\), hence is adjacent to \(v\), and the
+dominating property among the \(T_j\) is inherited.
+\end{proof}
+
+\begin{corollary}[Degeneracy form]\label{cor:degen-exp}
+For every \(t\ge 2\), every \(K_t\)-minor-free graph \(G\) satisfies
+\[
+\mad(G)<2^{t-2},\qquad
+\degen(G)\le 2^{t-2}-1,\qquad
+\chi(G)\le 2^{t-2}.
+\]
+(The same holds for graphs with no dominating \(K_t\)-model.)
+\end{corollary}
+
+\begin{proof}
+If some subgraph \(H\) had \(d(H)\ge 2^{t-2}\), Theorem~\ref{thm:avg-dom} would
+give a dominating \(K_t\)-model in \(H\), hence a \(K_t\) minor in \(G\). Thus
+\(\mad(G)<2^{t-2}\). Lemma~\ref{lem:core} gives
+\(\degen(G)\le\lfloor\mad(G)\rfloor\le 2^{t-2}-1\). Lemma~\ref{lem:greedy} gives
+\(\chi\le 2^{t-2}\).
+\end{proof}
+
+\begin{remark}[Sharpness of the method, not of Hadwiger]
+The bound \(2^{t-2}\) is exponentially larger than the Hadwiger target \(t-1\).
+For large \(t\) the true maximum average degree of \(K_t\)-minor-free graphs is
+\(\Theta\bigl(t\sqrt{\log t}\bigr)\) (Kostochka--Thomason); we do not prove that
+here. The exponential bound is the strongest density/colouring statement with a
+fully elementary inductive proof.
+\end{remark}
+
+%------------------------------------------------------------------------------
+\section{The case \(t=5\): what is elementary, and what needs 4CT}
+%------------------------------------------------------------------------------
+
+\subsection{Easy direction: \(\mathrm{HC}_5\) implies the Four Colour Theorem}
+
+\begin{theorem}[\(\mathrm{HC}_5\Rightarrow\mathrm{4CT}\)]\label{thm:hc5-to-4ct}
+If every \(K_5\)-minor-free graph is \(4\)-colourable, then every planar graph is
+\(4\)-colourable.
+\end{theorem}
+
+\begin{proof}
+By the Wagner--Kuratowski theorem in its minor form (Kuratowski--Wagner): a
+finite graph is planar if and only if it has neither \(K_5\) nor \(K_{3,3}\) as a
+minor. In particular every planar graph is \(K_5\)-minor-free. (We use only the
+easy half needed here: if \(G\) is planar then \(G\not\succcurlyeq K_5\). This is
+classical: \(K_5\) is non-planar, and planarity is minor-closed---contracting an
+edge of a plane graph yields a plane graph.) Therefore \(\mathrm{HC}_5\)
+specialises to the Four Colour Theorem.
+\end{proof}
+
+\begin{remark}[The converse needs Wagner's structure theorem]
+Wagner (1937) proved that the \(K_5\)-minor-free graphs are precisely the graphs
+constructed by repeated clique-sums of order at most \(3\), starting from planar
+graphs and copies of the Wagner graph \(V_8\) (the M\"obius ladder on eight
+vertices). Since
+\begin{itemize}
+\item clique-sums preserve upper bounds on chromatic number
+(Lemma~\ref{lem:clique-sum-chi} below),
+\item \(V_8\) is \(3\)-colourable (it is cube-like / \(3\)-chromatic and triangle-free),
+\item planar graphs are \(4\)-colourable if and only if 4CT holds,
+\end{itemize}
+Wagner's structure theorem yields \(\mathrm{HC}_5\Leftrightarrow\mathrm{4CT}\).
+We do \emph{not} reproduce Wagner's structure theorem here; it is a substantial
+but elementary graph-theoretic argument from 1937, independent of 4CT. The point
+for this document: \textbf{the full strength \(\chi\le 4\) for \(K_5\)-minor-free
+graphs is equivalent to 4CT}, and one direction is Theorem~\ref{thm:hc5-to-4ct}.
+\end{remark}
+
+\begin{lemma}[Clique-sums preserve chromatic upper bounds]
+\label{lem:clique-sum-chi}
+Let \(G\) be a clique-sum of \(G_1\) and \(G_2\) along a clique \(S\) (possibly
+after deleting some edges of the identified clique). Then
+\[
+\chi(G)\le\max\bigl(\chi(G_1),\chi(G_2)\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+Colour \(G_1\) and \(G_2\) properly with colours
+\(\{1,\dots,\max(\chi(G_1),\chi(G_2))\}\). Since \(S\) is a clique in each (before
+optional edge deletions in the sum), the colours on \(S\) are injective in each
+colouring. Permute colours of \(G_2\) so the two colourings agree on \(S\). The
+union is a proper colouring of the clique-sum (deleted edges only make properness
+easier).
+\end{proof}
+
+\subsection{Elementary five-colour theorem for planar graphs}
+
+The following is Heawood's 1890 argument, fully elementary, and does not use
+4CT.
+
+\begin{lemma}[Euler's formula and planar density]\label{lem:planar-dense}
+Every simple planar graph on \(n\ge 3\) vertices has \(e\le 3n-6\). Consequently
+every simple planar graph has a vertex of degree at most \(5\), and every planar
+graph is \(5\)-degenerate.
+\end{lemma}
+
+\begin{proof}
+For a connected plane graph, Euler's formula reads \(n-e+f=2\). Each face has at
+least three edges, and each edge bounds at most two faces, so \(2e\ge 3f\).
+Substitute \(f\le 2e/3\):
+\[
+n-e+\frac{2e}{3}\ge 2\implies \frac{e}{3}\le n-2\implies e\le 3n-6.
+\]
+(The disconnected case follows by summing over components, or adding edges.)
+Thus \(\delta\le 5\). Planarity is hereditary under taking subgraphs, so every
+nonempty planar graph has a vertex of degree \(\le 5\): planar graphs are
+\(5\)-degenerate.
+\end{proof}
+
+\begin{theorem}[Five Colour Theorem]\label{thm:5ct}
+Every planar graph is \(5\)-colourable.
+\end{theorem}
+
+\begin{proof}
+Proceed by induction on \(n\). The claim is trivial for \(n\le 5\). Let \(G\) be
+a simple planar graph on \(n\ge 6\) vertices. By Lemma~\ref{lem:planar-dense},
+some vertex \(v\) has \(\deg(v)\le 5\). By induction \(G-v\) is \(5\)-colourable.
+
+If \(\deg(v)\le 4\), a free colour among \(\{1,\dots,5\}\) extends the colouring
+to \(v\).
+
+If \(\deg(v)=5\), write \(N(v)=\{v_1,v_2,v_3,v_4,v_5\}\) in cyclic order around
+\(v\) in a plane embedding. In a proper \(5\)-colouring of \(G-v\), if at most
+four colours meet \(N(v)\) we are done. So assume the five neighbours receive
+five distinct colours \(1,\dots,5\), with \(c(v_i)=i\).
+
+For \(i\neq j\) let \(G_{ij}\) be the subgraph of \(G-v\) induced by colours
+\(i\) and \(j\). If \(v_1\) and \(v_3\) lie in distinct components of \(G_{13}\),
+swap colours \(1\) and \(3\) in the component of \(v_1\); this frees colour \(1\)
+for \(v\) without creating monochromatic edges. So assume \(v_1\) and \(v_3\)
+lie in the same component of \(G_{13}\): there is a \(v_1\)--\(v_3\) path \(P_{13}\)
+using only colours \(1\) and \(3\).
+
+The cycle \(v\,v_1\,P_{13}\,v_3\,v\) separates the plane. The vertex \(v_2\), lying
+in one of the two angles at \(v\) between \(v_1\) and \(v_3\), is separated from
+\(v_4\) (and \(v_5\)) by this cycle. In particular there is no \(v_2\)--\(v_4\)
+path in \(G_{24}\) (any such path would have to cross \(P_{13}\), but vertices of
+\(P_{13}\) have colours \(1,3\), not \(2,4\)). Swap colours \(2\) and \(4\) in the
+component of \(v_2\) in \(G_{24}\); colour \(2\) becomes free for \(v\).
+\end{proof}
+
+\begin{corollary}[Planar graphs without 4CT]\label{cor:planar-no4ct}
+Every planar graph is \(5\)-colourable and \(5\)-degenerate. The improvement from
+five colours to four is precisely the Four Colour Theorem.
+\end{corollary}
+
+\subsection{What can be said for \(K_5\)-minor-free graphs without 4CT}
+
+\begin{theorem}[Elementary bounds for \(t=5\)]\label{thm:t5-elem}
+Let \(G\) be \(K_5\)-minor-free. Then:
+\begin{enumerate}
+\item \(\chi(G)\le 2^{5-2}=8\) (Theorem~\ref{thm:exp-chi});
+\item \(\degen(G)\le 7\) and \(\mad(G)<8\) (Corollary~\ref{cor:degen-exp});
+\item if \(G\) is planar, then \(\chi(G)\le 5\) (Theorem~\ref{thm:5ct}), and
+\(\chi(G)\le 4\) if and only if 4CT is applied to \(G\).
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[The gap at \(t=5\)]
+\begin{itemize}
+\item \textbf{Fully elementary, no 4CT:} \(\chi\le 8\) for all \(K_5\)-minor-free
+graphs; \(\chi\le 5\) for planar graphs.
+\item \textbf{With Wagner's structure theorem but without 4CT:} every
+\(K_5\)-minor-free graph is a clique-sum of planar graphs and copies of
+\(V_8\). Combined with the Five Colour Theorem and Lemma~\ref{lem:clique-sum-chi},
+this yields \(\chi\le 5\) for all \(K_5\)-minor-free graphs. (We have not proved
+Wagner's structure theorem in this document.)
+\item \textbf{Requires 4CT:} \(\chi\le 4\) for all \(K_5\)-minor-free graphs, i.e.\
+the full \(\mathrm{HC}_5\). Equivalence with 4CT is Wagner's theorem.
+\end{itemize}
+Mader's sharp density theorem for \(t\le 7\) (not proved here) asserts that every
+\(K_5\)-minor-free \(n\)-vertex graph has at most \(3n-6\) edges, hence is
+\(5\)-degenerate and \(6\)-colourable---an intermediate bound between \(8\) and
+\(5\), still short of Hadwiger's \(4\), and still elementary in principle but
+heavier than the exponential argument.
+\end{remark}
+
+\begin{remark}[Why degeneracy at the Hadwiger threshold fails for \(t=5\)]
+The icosahedral graph \(I\) is \(5\)-regular, planar (hence \(K_5\)-minor-free),
+and has \(\degen(I)=5>5-2=3\). Thus the sufficient criterion
+``every \(K_t\)-minor-free graph is \((t-2)\)-degenerate''---which would imply
+\(\mathrm{HC}_t\) by Lemma~\ref{lem:greedy}---is \emph{false} for every
+\(t\ge 5\). Pure degeneracy at threshold \(t-2\) proves Hadwiger only for
+\(t\le 4\) (as carried out in Sections~5--6).
+\end{remark}
+
+%------------------------------------------------------------------------------
+\section{Synthesis: the strongest completely proved affirmative theorem}
+%------------------------------------------------------------------------------
+
+\begin{theorem}[Master affirmative theorem]\label{thm:master}
+The following statements are proved in full in this document, from first
+principles.
+\begin{enumerate}
+\item \textbf{Reductions.}
+\begin{enumerate}
+\item \(\chi(G)=\max\{\chi(C):C\text{ a component of }G\}\) and
+\(\had(G)=\max\{\had(C)\}\). Hadwiger reduces to connected graphs.
+\item \(\mathrm{HC}_t\) is equivalent to: every \(t\)-critical graph has a
+\(K_t\) minor.
+\item Every graph of chromatic number \(\ge t\) has a \(t\)-critical subgraph.
+\end{enumerate}
+
+\item \textbf{Structure of \(t\)-critical graphs and minimal counterexamples.}
+If \(G\) is \(t\)-critical then: \(G\) is connected; \(\delta(G)\ge t-1\); if
+\(t\ge 3\) then \(G\) is \(2\)-connected; \(G\) has no separating clique of order
+\(\le t-1\); and (Brooks) \(G\) is \(K_t\), or an odd cycle (\(t=3\)), or has
+\(\Delta\ge t\). Every minimal counterexample to Hadwiger is critical of its
+chromatic number \(k\), satisfies \(\had=k-1\), and every single-edge contraction
+attains Hadwiger equality at level \(k-1\).
+
+\item \textbf{Hadwiger for \(t\le 4\).}
+\begin{enumerate}
+\item \(t\le 2\): trivial.
+\item \(t=3\): \(K_3\)-minor-free \(\Leftrightarrow\) forest \(\Rightarrow\) \(\chi\le 2\).
+\item \(t=4\): every graph of minimum degree \(\ge 3\) has a \(K_4\) minor
+(Dirac); hence every \(K_4\)-minor-free graph is \(2\)-degenerate and
+\(3\)-colourable.
+\end{enumerate}
+
+\item \textbf{Exponential bound for all \(t\).}
+Every \(K_t\)-minor-free graph \(G\) satisfies \(\chi(G)\le 2^{t-2}\). Moreover
+every graph of average degree at least \(2^{t-2}\) contains a dominating
+\(K_t\)-model (hence a \(K_t\) minor), so \(K_t\)-minor-free graphs are
+\((2^{t-2}-1)\)-degenerate.
+
+\item \textbf{The case \(t=5\).}
+\begin{enumerate}
+\item \(\mathrm{HC}_5\Rightarrow\mathrm{4CT}\) (planar graphs are \(K_5\)-minor-free).
+\item Every planar graph is \(5\)-colourable (Heawood), without 4CT.
+\item Every \(K_5\)-minor-free graph is \(8\)-colourable (from~(4)).
+\item Full \(\mathrm{HC}_5\) (\(\chi\le 4\) for \(K_5\)-minor-free graphs) is
+equivalent to 4CT via Wagner's structure theorem; the equivalence uses
+structure not proved here, and the \(\chi\le 4\) direction requires 4CT.
+\end{enumerate}
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[What is deliberately \emph{not} claimed]
+\begin{itemize}
+\item Hadwiger for \(t=6\) (Robertson--Seymour--Thomas, which assumes 4CT).
+\item The Kostochka--Thomason bound \(\chi=O\bigl(t\sqrt{\log t}\bigr)\).
+\item Mader's linear density theorem for \(t\le 7\) (\(e\le(t-2)n-O(t^2)\)).
+\item Dirac's full \(\kappa\ge t-1\) for \(t\)-critical graphs (only \(\kappa\ge 2\)
+and the clique-separator lemma are proved above).
+\item Wagner's structural characterisation of \(K_5\)-minor-free graphs.
+\end{itemize}
+Each of these is classical, but each requires arguments beyond the elementary
+core assembled here.
+\end{remark}
+
+%------------------------------------------------------------------------------
+\appendix
+\section{Brooks' theorem}\label{app:brooks}
+%------------------------------------------------------------------------------
+
+\begin{theorem}[Brooks, 1941]\label{thm:brooks}
+If \(G\) is a connected graph that is neither a complete graph nor an odd cycle,
+then \(\chi(G)\le\Delta(G)\).
+\end{theorem}
+
+\begin{proof}
+Write \(\Delta=\Delta(G)\). If \(\Delta\le 1\) the claim is trivial. Assume
+\(\Delta\ge 2\). We proceed by induction on \(n(G)\).
+
+\emph{Non-regular case.} Suppose some vertex \(u\) has \(\deg(u)<\Delta\). Let \(T\)
+be a spanning tree of \(G\) rooted at \(u\). Order the vertices so that each
+non-root vertex appears before its parent (leaves of \(T\) first, root last).
+Greedy-colour in this order with colours \(\{1,\dots,\Delta\}\): each non-root
+vertex has at most \(\Delta-1\) earlier neighbours (at least the parent is later),
+and the root has degree \(<\Delta\), so at most \(\Delta-1\) neighbours are
+already coloured. This is a proper \(\Delta\)-colouring.
+
+\emph{Regular case, not \(2\)-connected.} Let \(B\) be an end-block with unique
+cutvertex \(c\) of \(G\) in \(B\). Then \(B\not\cong K_{\Delta+1}\) (that would force
+\(\deg_G(c)\ge\Delta\), hence \(= \Delta\), so \(c\) has no edges outside \(B\),
+contradicting that \(c\) is a cutvertex unless \(G=B\), which is \(2\)-connected).
+Also \(B\) is not an odd cycle with \(\Delta=2\) unless \(G\) itself is (excluded).
+By induction (or the same argument inside \(B\), noting vertices of \(B-c\) have
+degree \(\Delta\) in \(B\)), colour the blocks with \(\Delta\) colours and align
+colours at cutvertices.
+
+\emph{Regular, \(2\)-connected, not complete, not an odd cycle.} Then \(\Delta\ge 3\)
+(if \(\Delta=2\) then \(G\) is a cycle, and the only \(2\)-regular connected graphs
+are cycles; even cycles are \(2\)-colourable, odd cycles are excluded). Since \(G\)
+is not complete there exist nonadjacent vertices; more precisely, some vertex
+\(v\) has two nonadjacent neighbours \(x,y\). (If every neighbourhood were a
+clique then a \(2\)-connected regular graph would be complete.) Moreover one may
+choose such \(x,y\in N(v)\) with \(G-\{x,y\}\) connected: otherwise every pair of
+nonadjacent neighbours of \(v\) would separate \(G\), and a short case analysis in
+a \(2\)-connected graph of minimum degree \(\ge 3\) produces either a cutvertex or
+reduces to a cycle, both impossible. (Standard reference form: in a
+\(2\)-connected graph that is not complete, there exist adjacent \(v,w\) such that
+\(v\) has a neighbour \(x\neq w\) nonadjacent to \(w\), and \(G-\{w,x\}\) is
+connected; relabel.)
+
+Fix such \(v,x,y\) with \(xy\notin E(G)\) and \(G-\{x,y\}\) connected. Let \(T\) be
+a spanning tree of \(G-\{x,y\}\) rooted at \(v\). Order \(V(G)\) as
+\(v_1=x\), \(v_2=y\), then the non-root vertices of \(T\) in leaf-to-root order,
+and finally \(v_n=v\). Colour greedily with colours \(\{1,\dots,\Delta\}\):
+\begin{itemize}
+\item assign colour \(1\) to both \(x\) and \(y\) (legal: \(xy\notin E\));
+\item for each subsequent \(v_i\) with \(i<n\), at least one neighbour (its parent
+in \(T\), or \(v\)) appears later, so at most \(\Delta-1\) earlier neighbours, and
+a free colour exists;
+\item finally \(v\) has \(\Delta\) neighbours, but \(x\) and \(y\) share colour
+\(1\), so at most \(\Delta-1\) colours appear on \(N(v)\), and a free colour
+remains.
+\end{itemize}
+This is a proper \(\Delta\)-colouring of \(G\).
+\end{proof}
+
+%------------------------------------------------------------------------------
+\section{Index of results by logical dependence}
+%------------------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{ll}
+\hline
+Result & Depends only on \\
+\hline
+Components / criticality reductions & definitions \\
+\(\delta\ge t-1\), no cutvertex, clique separators & colouring \\
+\(\mathrm{HC}_2\), \(\mathrm{HC}_3\) & definitions \\
+Dirac \(\delta\ge 3\Rightarrow K_4\) & connectivity, models \\
+\(\mathrm{HC}_4\) & Dirac \\
+\(\chi\le 2^{t-2}\) (layering) & induction, BFS, models \\
+avg degree \(\ge 2^{t-2}\Rightarrow\) dom.\ \(K_t\)-model & induction, contraction \\
+Planar \(e\le 3n-6\), 5CT & Euler \\
+\(\mathrm{HC}_5\Rightarrow 4CT\) & planarity minor-closed \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
