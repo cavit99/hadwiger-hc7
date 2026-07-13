@@ -181,13 +181,24 @@ family closure, but it does not close the 3-connected web residue.  Source:
 `../results/hc7_exact7_moser_rich_twocut_exchange.md`.
 
 Conditional on the favourable disjoint `0`--`5` and `2`--`4` crossing in
-the opposite exterior component, the triangular shore is now eliminated by
-an independently audited finite crossed-page theorem.  Its 598 rooted
-`K_4` traces cover all 3,928 allowable defect triples and lift to seven
-literal bags.  Thus the tiny-shore step is no longer geometric; the live
-issue is the order-at-least-four 3-connected shore and, globally, selection
-of a favourable crossing.  Source:
-`../results/hc7_exact7_moser_triangle_shore.md`.
+one exterior component, **all** internal geometries of the opposite
+component are now eliminated.  The thin-rural theorem handles singleton,
+bridge, cutvertex, cycle, and cactus shores; the finite crossed-page theorem
+handles a triangle; the low-cut theorem reduces every remaining component
+of order at least four to the three-connected case; and the new rural
+complementary-block theorem closes that case.  In its disk outcome, facial
+carriers for `13` and `24` reproduce each exact state returned through the
+crossed shore, so palette alignment is literal and no colour-to-bag lift is
+assumed.
+
+The exact live Moser step is therefore multi-frame composition: prove that
+one of the four trace frames supplies the favourable crossing, or that the
+simultaneous rural orders force a literal `K_7` or the same exact boundary
+state from opposite proper-minor operations.  Witness paths from different
+frames are not known disjoint.  Sources:
+`../results/hc7_moser_thin_rural_exchange.md`,
+`../results/hc7_exact7_moser_triangle_shore.md`, and
+`../results/hc7_exact7_moser_3connected_web_exchange.md`.
 
 The connected-rich branch has a stronger uniform capacity theorem.  In all
 ten absolute-demand-three boundary types, two full packets absorb any third

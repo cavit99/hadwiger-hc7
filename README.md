@@ -173,19 +173,33 @@ but not the 3-connected or tiny two-component Moser residue.
 Source: [pure-Moser two-component low-cut exchange](results/hc7_exact7_moser_rich_twocut_exchange.md)
 — [independent audit](results/hc7_exact7_moser_rich_twocut_exchange_audit.md).
 
-The remaining triangular shore is also closed whenever the opposite page
-contains the favourable disjoint `0`--`5` and `2`--`4` crossing paths.  A
-dependency-free ten-vertex certificate enumerates 598 boundary traces of
-rooted `K_4` models and covers all 3,928 possible triples of vertex defects
-of order at most two with empty total intersection.  The four lifted crossed-
-page bags and the three triangle vertices are seven literal clique branch
-sets.  This is a complete finite closure of that tiny shore, but remains
-conditional on the favourable crossing; it says nothing by itself about the
-multi-frame crossing-selection gap.
+The favourable pure-Moser crossing now closes **every** geometry of the
+opposite exterior component.  The older thin-rural exchange eliminates
+singletons, bridges, cutvertices, cycles, and cactus shores.  A
+dependency-free ten-vertex certificate closes the triangular shore by
+covering all 3,928 allowable triples of vertex defects.  The low-cut theorem
+forces every remaining component of order at least four to be
+three-connected.  In that last case, the four-port theorem gives either the
+two crossing row carriers and a literal `K_7`, or a rural disk.  Two facial
+arcs in the disk are adjacent connected carriers for the complementary
+independent blocks `13` and `24`; proper-minor contractions then reproduce
+exactly every possible returned boundary state and glue to a six-colouring.
 
-Source: [pure-Moser triangular shore closure](results/hc7_exact7_moser_triangle_shore.md)
-— [independent audit](results/hc7_exact7_moser_triangle_shore_audit.md);
-[dependency-free certificate](active/hc7_exact7_moser_triangle_shore_verify.py).
+Consequently a two-exterior pure-Moser counterexample cannot contain the
+specific disjoint `0`--`5` and `2`--`4` crossing.  The remaining gap is no
+longer internal shore geometry: it is the **multi-frame crossing-selection
+step**.  One must prove that the four exact-trace five-cycles force a
+favourable frame, or compose their incompatible rural orders into a literal
+model or a common equality state.  Paths supplied in different frames may
+not be assumed mutually disjoint.
+
+Sources: [thin-rural exchange](results/hc7_moser_thin_rural_exchange.md) —
+[audit](results/hc7_moser_thin_rural_exchange_audit.md);
+[triangular shore closure](results/hc7_exact7_moser_triangle_shore.md) —
+[audit](results/hc7_exact7_moser_triangle_shore_audit.md) —
+[certificate](active/hc7_exact7_moser_triangle_shore_verify.py); and
+[three-connected rural exchange](results/hc7_exact7_moser_3connected_web_exchange.md)
+— [independent audit](results/hc7_exact7_moser_3connected_web_exchange_audit.md).
 
 The connected-rich branch now has a uniform capacity theorem.  For each of
 the ten absolute-demand-three boundary types, after seeing the defect set
