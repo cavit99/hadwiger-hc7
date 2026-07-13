@@ -52,5 +52,35 @@ separation follows directly from `Q=N_J(K_w)`.
 The exact adhesion `T=U dotcup {w}` is assumed.  The general rooted-model
 separator may be larger and need not contain the literal roots.  The audit
 does not assert a common crossed frame on both shores, does not convert
-segment stability into block rank, and does not close the five-attachment
-lock.  These limitations are correctly retained in the promoted theorem.
+segment stability into block rank, and does not close the central-core
+residue of the five-attachment lock.  These limitations are correctly
+retained in the promoted theorem.
+
+## Degree surplus and pendant-lobe promotion
+
+The newly promoted Lemmas 5.1--5.3 are also **GREEN**, under the same
+exact-cell exhaustion hypothesis.
+
+For Lemma 5.1, `w` has no neighbours outside `U,D_a,D_b`: it misses `v` by
+definition and `a,b` by Lemma 3.1.  Thus the displayed degree identity is
+exact, and the admissibility statements are simply the intersection counts
+for blocks of sizes `2,2,1`.
+
+For Lemma 5.2, every one of the four displayed rows was checked pairwise.
+The fixed Moser edges make the four ordinary bags a clique, fullness makes
+both shore bags see all ordinary bags and `{v}`, and their mutual edges are
+respectively `34,16,12,35`.  The five-cycle calculation leaves precisely
+the six listed negative triples.  The independent quotient verifier in
+`active/hc7_exact6_w_boundary_quotient_probe.py` regenerates the same four
+minimal positive contact sets; its negative output is used only as a
+guardrail, not as proof for uncontracted shores.
+
+For Lemma 5.3, removing one component outside the protected tree leaves the
+old block connected, while the two stipulated endpoint contacts make the
+enlarged target block connected.  The protected `K-L` portal, old `M-L`
+edge, and a component-to-tree edge preserve all three block adjacencies.
+Since the protected tree contains the whole old adhesion trace, the moved
+component contains no adhesion vertex and the trace change is exact.
+
+These lemmas do not prove the central-core case left when every relevant
+foreign portal avoids every pendant lobe containing a `W`-attachment.

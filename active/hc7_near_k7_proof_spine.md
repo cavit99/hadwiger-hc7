@@ -251,8 +251,16 @@ independent on the literal trace.  Rank at most one produces one of three
 named certificates: a literal `w`--root incompatibility, direct-core
 concentration, or a recursive adhesion with at least five attachments to one
 named carrier block.  This discharges state matching once rank two occurs;
-it does not reduce the arbitrary model separator to order six or reroute the
-five-attachment lock.  Source:
+it does not reduce the arbitrary model separator to order six.  Exact degree
+accounting now excludes every root-contact set containing a nonzero-centred
+three-vertex arc of the Moser missing cycle, leaving at most three root
+neighbours and at least four shore contacts.  A protected-tree surgery
+label-faithfully transfers a pendant lobe whenever it contains both a
+`w`-attachment and a portal to an admissible foreign block.  Hence every
+surviving five-attachment lock has all useful foreign portals concentrated
+on a central path or subdivided `Y`, or in pendant lobes with no
+`w`-attachment.  The live task is to exchange across this central core or
+extract the same literal state on the opposite shore.  Source:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md`.
 
 The connected-rich branch has a stronger uniform capacity theorem.  In all

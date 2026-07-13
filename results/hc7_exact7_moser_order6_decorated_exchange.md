@@ -200,12 +200,149 @@ gives it order at least seven, and at most `w,t` lie outside `K`, proving
 the five-attachment bound.  Finally `Q=N_J(K_w)` is by definition the
 adhesion in (4.4). `square`
 
-## 5. Exact scope
+## 5. Degree surplus and a label-faithful lobe surgery
+
+The following statements continue to assume the exact cell (1.1): the two
+open shores `D_a,D_b` exhaust all vertices outside
+`T union {a,b,v}`.  Put `k=|N_U(w)|`.
+
+### Lemma 5.1 (palette obstruction versus shore surplus)
+
+In the exact cell,
+
+\[
+ |N_{D_a}(w)|+|N_{D_b}(w)|=d_G(w)-k\ge 7-k.       \tag{5.1}
+\]
+
+For a frame `e|f|{r}`, the number of blocks to which `w` may legally be
+adjoined is the number of those three blocks disjoint from `N_U(w)`.
+Consequently:
+
+1. if `k=0`, all three decorations are admissible;
+2. if `k=1`, exactly two are admissible;
+3. if `k=2`, two are admissible exactly when the two neighbours form one
+   of the two two-vertex frame blocks, and otherwise exactly one is; and
+4. if `k>=3`, at most one is admissible.
+
+### Proof
+
+The vertex `w` misses `v` because `w` is not in `N(v)`, and it misses
+`a,b` by Lemma 3.1.  Exact exhaustion therefore accounts for every
+neighbour of `w` in `U,D_a,D_b`, proving the equality in (5.1); the frozen
+minimum-degree bound gives the inequality.  The remaining assertions count
+the blocks of the partition `e|f|{r}` which meet `N_U(w)`. `square`
+
+Use the missing-edge cyclic order
+
+\[
+                              0,5,2,4,6,0.          \tag{5.2}
+\]
+
+### Lemma 5.2 (dense extra-portal contacts close)
+
+If `N_U(w)` contains three consecutive vertices of (5.2) whose middle
+vertex is not `0`, then `G` has a `K_7` minor.  Hence every
+`K_7`-minor-free exact cell satisfies
+
+\[
+ |N_U(w)|\le3.                                      \tag{5.3}
+\]
+
+If equality holds, then
+
+\[
+ N_U(w)\in\{024,045,026,056,256,456\}.             \tag{5.4}
+\]
+
+### Proof
+
+For the four possible three-vertex arcs, the following rows are literal
+`K_7` models.  A term such as `{4} union D_a` denotes one branch set.
+
+\[
+\begin{array}{c|lllllll}
+N_U(w)&\multicolumn{7}{c}{\text{branch sets}}\\ \hline
+025&\{0\}&\{2\}&\{1,6\}&\{v\}&\{5,w\}&\{4\}\cup D_a&\{3\}\cup D_b\\
+245&\{0\}&\{4\}&\{3,5\}&\{v\}&\{2,w\}&\{1\}\cup D_a&\{6\}\cup D_b\\
+046&\{0\}&\{4\}&\{3,5\}&\{v\}&\{6,w\}&\{1\}\cup D_a&\{2\}\cup D_b\\
+246&\{0\}&\{2\}&\{1,6\}&\{v\}&\{4,w\}&\{5\}\cup D_a&\{3\}\cup D_b.
+\end{array}                                         \tag{5.5}
+\]
+
+The fixed Moser edges make the four nonshore, non-`v` bags in each row a
+clique.  Every such bag contains a boundary vertex and hence sees `{v}`.
+Fullness in (1.1) supplies all contacts with the two shore bags; their
+mutual contacts in the four rows are respectively the boundary edges
+`34,16,12,35`.  Thus all seven displayed bags are disjoint, connected, and
+pairwise adjacent.
+
+Every four-subset of a five-cycle contains a three-vertex arc whose middle
+is not `0`, proving (5.3).  Removing the four positive triples
+`025,245,046,246` from the ten triples of `U` leaves exactly (5.4).
+`square`
+
+Combining Lemmas 5.1 and 5.2, `w` has at least four literal edges into the
+two shores, and at least five unless its root neighbourhood is one of the
+six triples in (5.4).
+
+The five-attachment lock of Lemma 4.2 admits the following first
+label-faithful surgery.  This statement is independent of the Moser labels.
+
+### Lemma 5.3 (pendant-lobe decoration promotion)
+
+Let `K,L,M` be disjoint connected pairwise adjacent blocks with prescribed
+literal traces in an adhesion `T`.  Let `W` be connected, disjoint from
+those blocks and from the side terminal, with trace `{w}`, and suppose `W`
+is adjacent to `K`.  Assume that adjoining `w` to the trace of `M` is
+independent.
+
+Choose an endpoint `q_L in K` of a `K-L` edge, and let `Q_L` be an
+inclusion-minimal tree in `G[K]` containing
+
+\[
+                         (K\cap T)\cup\{q_L\}.       \tag{5.6}
+\]
+
+If a component `C` of `G[K]-V(Q_L)` contains both an endpoint of a `W-K`
+edge and an endpoint of a `K-M` edge, then the replacements
+
+\[
+ K\longmapsto K-C,\qquad M\longmapsto M\cup C\cup W \tag{5.7}
+\]
+
+give three disjoint connected pairwise adjacent blocks with the old traces,
+except that `w` is adjoined to the trace of `M`.
+
+### Proof
+
+Every component of `G[K]-V(Q_L)` has a neighbour in the connected tree
+`Q_L`.  Hence `K-C` is connected: it consists of `Q_L` and all the other
+components, each attached to `Q_L`.  It retains the complete trace of `K`
+and the protected `K-L` edge at `q_L`.
+
+The two endpoint hypotheses make `M union C union W` connected.  This new
+block sees `K-C` through a `C-Q_L` edge and sees `L` through the old `M-L`
+edge.  The other two blocks retain their old adjacency.  Finally `C`
+contains no adhesion vertex, since all of `K cap T` lies in `Q_L`.
+Therefore the only trace change is the stipulated legal addition of `w` to
+`M`. `square`
+
+Lemma 5.3 eliminates every five-attachment lock in which a `W`-attachment
+and a portal to an admissible foreign block occur in the same pendant lobe
+of a protected witness tree.  If promotion fails, then for every admissible
+target `M` and every protected choice, all such foreign portals lie in the
+minimal central path or subdivided `Y`, or in pendant lobes containing no
+`W`-attachment.  This is a structural central-core lock, not another
+boundary-state enumeration.
+
+## 6. Exact scope
 
 This theorem closes every exact-order-six cell with a common frame and
-bilateral admissible rank at least two, and converts rank at most one into
-one of three literal geometric certificates.  It does **not** prove that
-the general separator from the rooted `K_5` theorem has order six, that the
-two shores possess a common crossed frame, or that a five-attachment lock
-can already be rerouted label-faithfully.  Those are the remaining
-bridge/Tutte composition tasks.
+bilateral admissible rank at least two, converts rank at most one into one
+of three literal geometric certificates, excludes all but six dense
+three-root contact patterns, and label-faithfully promotes every
+pendant-lobe instance of the five-attachment lock.  It does **not** prove
+that the general separator from the rooted `K_5` theorem has order six,
+that the two shores possess a common crossed frame, or that the remaining
+central-core locks can be rerouted.  Those are the remaining bridge/Tutte
+composition tasks.

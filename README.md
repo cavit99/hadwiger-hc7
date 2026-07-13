@@ -283,6 +283,18 @@ it yields a literal `w`--root incompatibility, direct concentration in one
 core block, or a recursive adhesion with at least five distinct attachments
 to one named block.  This remains conditional on the exact-order-six cell.
 
+That recursive cell now has its first label-faithful infinite-family
+closure.  Exact degree accounting forces at least `7-|N_U(w)|` literal
+shore contacts; four explicit `K_7` models rule out every root-contact set
+containing a nonzero-centred three-vertex arc of the Moser missing cycle.
+Thus `|N_U(w)|<=3`, with only six dense triples surviving.  More
+importantly, a protected-tree surgery promotes the extra portal whenever a
+`w`-attachment and an admissible foreign-block portal occur in the same
+pendant lobe of the five-hit carrier.  The unresolved residue is therefore
+a central path/subdivided-`Y` lock, not an arbitrary five-attachment bag.
+This is still conditional on the literal order-six adhesion and does not
+close the sole-exterior branch.
+
 Source: [exact-order-six decorated exchange](results/hc7_exact7_moser_order6_decorated_exchange.md)
 — [independent audit](results/hc7_exact7_moser_order6_decorated_exchange_audit.md).
 
