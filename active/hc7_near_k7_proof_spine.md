@@ -160,6 +160,37 @@ components of a surviving two-component rich shore are cutvertex-free.
 Singleton components and the connected-rich case remain open.  Source:
 `../results/hc7_exact7_rich_cutpacket_exchange.md`.
 
+For a nonempty bipartite boundary, an independent cutvertex theorem also
+funds the bipartition state except for one crossed two-lobe geometry:
+distinct defects in the same boundary component at even parity, both missed
+by the cutvertex.  Dirac forces at least three lobe neighbours but does not
+close the cell.  A verified `K_7`-containing counterarchitecture shows that
+connectivity and static Dirac data alone cannot do so; the next step must use
+`K_7`-freeness or a proper-minor state transition.  Source:
+`../results/hc7_exact7_bipartite_cutvertex_exchange.md` and
+`../barriers/hc7_exact7_bipartite_carrier_connectivity_dirac_barrier.md`.
+
+In the pure-Moser degree-seven cell with exactly two exterior components,
+all separators internal to either component of order at most two are now
+closed.  Cutvertices give a literal model.  A two-cut produces two adjacent
+defect-at-most-two carriers; every static quotient except `[13|24]` and
+`[14|23]` has an `S`-meeting `K_6`, and those two states glue by a symbolic
+complementary-defect exchange.  Thus each surviving exterior component is
+tiny (order at most three) or 3-connected.  This is a genuine infinite-
+family closure, but it does not close the 3-connected web residue.  Source:
+`../results/hc7_exact7_moser_rich_twocut_exchange.md`.
+
+The connected-rich branch has a stronger uniform capacity theorem.  In all
+ten absolute-demand-three boundary types, two full packets absorb any third
+disjoint connected carrier of boundary defect at most two, with the forced
+block chosen after the defect but before the returned state.  Hence every
+cutvertex has exactly two deletion lobes, and every component outside any
+fixed pair of full packets has at least three distinct attachment vertices
+on their union.  The remaining problem is now a stable-bridge rerouting
+problem, not boundary palette assignment.  Three attachments alone do not
+give their distribution or three disjoint paths.  Source:
+`../results/hc7_exact7_connected_rich_cutvertex_exchange.md`.
+
 Static packet contraction is now rigorously exhausted, not merely
 computationally unproductive.  The exact quotient theorem says that three
 independent universal packet vertices yield `K_7` exactly in the two-anchor

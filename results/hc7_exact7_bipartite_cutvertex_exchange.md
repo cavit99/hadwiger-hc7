@@ -2,11 +2,15 @@
 
 ## Status and scope
 
+**Status:** proved and independently audited.
+
 This is a proved structural lemma for an actual order-seven adhesion with
-packet vector `(1,2)`.  It closes every cutvertex configuration except one
-precisely described crossed-defect cell.  The result is label-free and uses
-the audited exact two-carrier state criterion.  It does not close the
-remaining two-lobe cell or all bipartite boundaries.
+thin-shore packet number one and at least two rich-shore packets.  In the
+current `HC_7` residue it applies in particular to the exact vector `(1,2)`.
+It closes every cutvertex configuration in the nonempty bipartite-boundary
+branch except one precisely described crossed-defect cell.  The result is
+label-free and uses the audited exact two-carrier state criterion.  It does
+not close the remaining two-lobe cell or all bipartite boundaries.
 
 Let
 
@@ -15,10 +19,11 @@ Let
  \qquad |S|=7,
 \]
 
-with no `LR` edge.  Assume `G` is seven-connected, every proper minor is
-six-colourable, `L` has packet number one, and `R` contains two disjoint
-`S`-full packets.  Put `H=G[S]`.  Suppose `H` is bipartite and nonempty, and
-fix a bipartition
+with no `LR` edge.  Assume `G` is strongly seven-contraction-critical:
+`chi(G)=7` and every proper minor is six-colourable.  Assume also that `G`
+is seven-connected, `L` has packet number one, and `R` contains two
+disjoint `S`-full packets.  Put `H=G[S]`.  Suppose `H` is bipartite and
+nonempty, and fix a bipartition
 
 \[
                          S=I\mathbin{\dot\cup}J            \tag{0.1}
@@ -46,6 +51,11 @@ Moreover outcome 2 can persist over the freedom to choose a bipartition of
 distance there.
 
 ### Proof
+
+First, `L` is connected.  Indeed, for every component `C` of `G[L]`,
+`N_G(C)\subseteq S`; since the opposite shore is nonempty,
+seven-connectivity gives `N_G(C)=S`.  Thus every component of `G[L]` is an
+`S`-full packet, and packet number one permits only one component.
 
 Let `C_1,...,C_k` be the components of `L-z`.  Each is adjacent to `z`
 because `L` is connected.  Since
@@ -109,21 +119,26 @@ opposite classes and outcome 1 applies.  This proves the last assertion.
 
 ## Corollary 2 (Dirac refinement of the crossed cell)
 
-Assume the live classes have orders four and three, with `a,b` in the
-four-class `I`.  In outcome 2 put
+In outcome 2, name the class containing `a,b` as `I`, put `p=|I|`, and put
 
 \[
  r=d_L(z),\qquad Z=N_S(z).
 \]
 
-Then
+Then `2<=p<=6`,
 
 \[
        r+|Z\cap J|\ge5,\qquad r+|Z\cap I|\ge5,             \tag{2.1}
 \]
 
-and in particular `r>=3`.  Thus one of the two lobes contains at least two
-distinct neighbours of `z`.
+and
+
+\[
+                     r\ge \max\{7-p,p-2\}\ge3.             \tag{2.2}
+\]
+
+Thus one of the two lobes contains at least two distinct neighbours of
+`z`.
 
 ### Proof
 
@@ -141,10 +156,18 @@ Dirac's inequality at parameter seven says
                     \alpha(G[N(z)])\le d_G(z)-5=r+|Z|-5.
 \]
 
-Using first `I` and then `J` gives (2.1).  Since `z` misses the distinct
-vertices `a,b` of the four-class, `|Z\cap I|<=2`, so the second inequality
-gives `r>=3`.  The pigeonhole conclusion follows because `L-z` has two
-components. \(\square\)
+Using first `I` and then `J` gives (2.1).  Both bipartition classes are
+nonempty and `I` contains the two distinct defects, so `2<=p<=6`.  Since
+`z` misses `a,b`,
+
+\[
+        |Z\cap I|\le p-2,\qquad |Z\cap J|\le 7-p.
+\]
+
+The two inequalities in (2.1) now give `r>=p-2` and `r>=7-p`,
+respectively.  Their maximum is at least three for every integer
+`2<=p<=6`, proving (2.2).  The pigeonhole conclusion follows because
+`L-z` has two components. \(\square\)
 
 ## Exact remaining sub-gap
 

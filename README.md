@@ -142,6 +142,58 @@ not yet handle a connected rich shore.
 Source: [adaptive rich cut-packet exchange](results/hc7_exact7_rich_cutpacket_exchange.md)
 — [independent audit](results/hc7_exact7_rich_cutpacket_exchange_audit.md).
 
+A separate label-free cutvertex theorem handles every nonempty bipartite
+boundary except one exact crossed-frame residue.  If the thin shore has a
+cutvertex, either two disjoint adjacent carriers realize the bipartition
+state and the two rich packets reflect it, or there are exactly two lobes
+with distinct same-parity boundary defects, both missed by the cutvertex.
+Dirac's inequality forces at least three cutvertex-to-lobe neighbours in
+that residue.  A verified 24-vertex construction shows that 7-connectivity,
+packet vector `(1,2)`, and all static Dirac inequalities still do not force
+the carriers; the construction deliberately contains `K_7`, so it isolates
+the need for `K_7`-freeness or proper-minor transitions rather than refuting
+the HC7 theorem.
+
+Source: [bipartite thin-shore cutvertex exchange](results/hc7_exact7_bipartite_cutvertex_exchange.md)
+— [audit](results/hc7_exact7_bipartite_cutvertex_exchange_audit.md); barrier:
+[connectivity-and-Dirac counterarchitecture](barriers/hc7_exact7_bipartite_carrier_connectivity_dirac_barrier.md).
+
+The degree-seven pure-Moser two-component branch now has a stronger
+low-separator closure.  Every exterior component is full to the seven
+literal neighbours.  A cutvertex gives a literal `K_7`; an arbitrary
+two-cut splits a component into adjacent connected carriers with disjoint
+defects of order at most two.  An exact ten-vertex quotient enumeration
+gives an `N(v)`-meeting `K_6` for 258 of the 260 defect pairs.  The two
+exceptions `[13|24]` and `[14|23]` are eliminated symbolically by producing
+and reproducing one of three exact complementary-defect boundary states.
+Consequently every surviving exterior component is either of order at most
+three or internally 3-connected.  This closes the old 33 two-cut geometries,
+but not the 3-connected or tiny two-component Moser residue.
+
+Source: [pure-Moser two-component low-cut exchange](results/hc7_exact7_moser_rich_twocut_exchange.md)
+— [independent audit](results/hc7_exact7_moser_rich_twocut_exchange_audit.md).
+
+The connected-rich branch now has a uniform capacity theorem.  For each of
+the ten absolute-demand-three boundary types, after seeing the defect set
+but before receiving the minor colouring, one can force a maximal independent
+exact block so that **two full packets plus any disjoint connected carrier
+meeting at least five boundary vertices** reproduce every returned state.
+All 290 boundary/defect cells were independently checked.  Consequently:
+
+* every cutvertex of a connected rich shore has exactly two deletion lobes;
+* for any chosen pair of disjoint full packets, every component outside
+  their union has at least three distinct attachment vertices on the packet
+  union.
+
+The second statement is a stable-bridge condition, not yet a linkage: it
+does not prescribe how the three attachments are distributed between the
+packets.  The new constructive target is a packet rerouting/stable-bridge
+exchange turning those attachments into a third defect-two carrier, a common
+state, or a coherent rural/two-apex certificate.
+
+Source: [connected-rich carrier exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md)
+— [independent audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md).
+
 #### Retained `(1,3)` infrastructure (superseded on this branch)
 
 The detailed thin-shore results below remain proved and may be reusable in a
@@ -500,6 +552,9 @@ that link.
 - [Exact three-packet quotient characterization](results/hc7_exact7_three_packet_quotient_characterization.md) — [audit](results/hc7_exact7_three_packet_quotient_characterization_audit.md); [exact minor verifier](active/hc7_exact7_three_packet_quotient_verify.py)
 - [Double-triangle partial-packet exchange in exact `(1,2)`](results/hc7_exact7_double_triangle_partial_packet_exchange.md) — [audit](results/hc7_exact7_double_triangle_partial_packet_exchange_audit.md); [crossed-pure verifier](active/hc7_exact7_double_triangle_four_carrier_probe.py)
 - [Adaptive three-carrier reflection and rich cut-packet closure](results/hc7_exact7_rich_cutpacket_exchange.md) — [audit](results/hc7_exact7_rich_cutpacket_exchange_audit.md); [state verifier](active/hc7_exact7_three_carrier_state_probe.py)
+- [Bipartite thin-shore cutvertex exchange](results/hc7_exact7_bipartite_cutvertex_exchange.md) — [audit](results/hc7_exact7_bipartite_cutvertex_exchange_audit.md); [crossed-frame barrier](barriers/hc7_exact7_bipartite_carrier_connectivity_dirac_barrier.md)
+- [Pure-Moser two-component cutvertex/two-cut closure](results/hc7_exact7_moser_rich_twocut_exchange.md) — [audit](results/hc7_exact7_moser_rich_twocut_exchange_audit.md); [exact quotient verifier](archive/moser_global_2cut_verify.py)
+- [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Exact-seven thin-shore near-full exchange](results/hc7_exact7_thin_shore_exchange.md) — [audit](results/hc7_exact7_thin_shore_exchange_audit.md)
 - [Exact-seven portal matching and rooted-`K_4` exchange](results/hc7_exact7_portal_rooted_k4.md) — [audit](results/hc7_exact7_portal_rooted_k4_audit.md)
 - [Four-connected and planar three-connected thin-shore closure](results/hc7_exact7_rooted_portal_face_closure.md) — [audit](results/hc7_exact7_rooted_portal_face_closure_audit.md)
