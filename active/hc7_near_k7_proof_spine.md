@@ -177,6 +177,18 @@ web-to-adhesion/state-gluing step using the second packet and criticality.
 Sources: `../results/hc7_exact7_attained_duty_tree_gate.md` and
 `../barriers/hc7_exact7_gate_bypass_falsifier.md`.
 
+The selected-gate quantifier is now removed for each fixed packet spanning
+tree.  Apply the Aharoni--Berger--Ziv point--tree theorem to the three
+families of all attainable duty hulls.  Nonreflection makes those families
+cross-intersecting, so one attainable hull meets every attainable hull.
+Minimizing inside it gives either one literal vertex common to all three
+families, or one exceptional duty with pairwise disjoint leaf witnesses
+around a core contained in every hull of the other two duties.  This core
+can still change with the spanning tree and need not meet carriers using
+non-tree edges; the live descent must use endpoint-preserving augmentation
+or state transitions to make it tree-invariant or expose an adhesion.
+Source: `../results/hc7_exact7_point_tree_gate_core.md`.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore
