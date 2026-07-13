@@ -225,6 +225,24 @@ of order at most six.  The next lemma must therefore spend an exact
 proper-minor state transition, literal-boundary connectivity/degree, or a
 global `K_7`-free extremality argument.
 
+The exact five-root trace now supplies a model-carried interface uniformly.
+The rooted `K_5` either has an `a-b` connector outside all five bags, giving
+a literal `K_7` with `v`, or it contains an inclusion-minimal `a-b`
+separator `Z` of order at least six.  Both terminal components are literally
+`Z`-full and one named bag is hit twice.  The separator is arbitrary:
+neither order six nor the form `U union {w}` has been proved.  Source:
+`../results/hc7_exact7_rooted_k5_connector_separator.md`.
+
+For a fixed adjacent complementary carrier pair `X,Y`, each component `R`
+of the remaining sole exterior obeys
+`|N_S(R)|+|N_{X union Y}(R)|>=7`.  Equality is an actual full exact-seven
+adhesion; strict failure has surplus at least eight.  If the remainder is
+connected but deficient, `X union Y` consumes an entire literal portal
+class, of multiplicity at least two for root `0` and at least three for all
+other Moser roots.  Thus the constructive bridge step has only two valid
+inputs: multiple-portal exhaustion or surplus attachments.  Source:
+`../results/hc7_exact7_moser_sole_exterior_failure_certificate.md`.
+
 The connected-rich branch has a stronger uniform capacity theorem.  In all
 ten absolute-demand-three boundary types, two full packets absorb any third
 disjoint connected carrier of boundary defect at most two, with the forced

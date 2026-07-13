@@ -242,6 +242,36 @@ itself cannot reserve the connector.
 Barrier: [essential-portal reserved-connector counterarchitecture](barriers/hc7_sole_exterior_reserved_connector_barrier.md)
 — [verifier](active/hc7_sole_exterior_reserved_connector_barrier_verify.py).
 
+The exact trace now gives a second, genuinely uniform sole-exterior
+dichotomy.  Build the rooted `K_5` on the five unique roots.  If the repeated
+pair has a connector outside its bags, that connector, the five bags, and
+`v` are a literal `K_7`.  Otherwise an inclusion-minimal connector separator
+`Z` lies inside the five named bags, has order at least six, and both
+distinguished sides are literally `Z`-full; one bag is hit at least twice.
+This is an actual model-carried separator, not a generic nonseparating-rooted
+minor reduction.  It does not imply `|Z|=6` or `Z=U union {w}`.
+
+Source: [rooted `K_5` connector-or-separator theorem](results/hc7_exact7_rooted_k5_connector_separator.md)
+— [independent audit](results/hc7_exact7_rooted_k5_connector_separator_audit.md).
+
+There is also an exact failure certificate for a chosen complementary
+carrier pair `X,Y`.  Every component `R` left in the sole exterior satisfies
+
+\[
+ |N_S(R)|+|N_{X\cup Y}(R)|\ge7.
+\]
+
+Equality is a literal full order-seven adhesion on both shores; if equality
+never occurs, every deficient component has attachment surplus at least
+eight.  A connected deficient remainder instead forces complete consumption
+of a literal portal class—at least two exterior portals for label `0` and at
+least three for every other Moser label.  Thus the live bridge step is now
+multiple-portal rerouting or surplus-to-state transfer; the unique-portal
+local barrier cannot occur under the actual boundary degrees.
+
+Source: [sole-exterior failure certificate](results/hc7_exact7_moser_sole_exterior_failure_certificate.md)
+— [independent audit](results/hc7_exact7_moser_sole_exterior_failure_certificate_audit.md).
+
 The connected-rich branch now has a uniform capacity theorem.  For each of
 the ten absolute-demand-three boundary types, after seeing the defect set
 but before receiving the minor colouring, one can force a maximal independent
@@ -662,6 +692,8 @@ that link.
 - [Pure-Moser four-corner exact-state exchange](results/hc7_exact7_moser_four_corner_exchange.md) — [audit](results/hc7_exact7_moser_four_corner_exchange_audit.md)
 - [Complete pure-Moser two-component closure](results/hc7_exact7_moser_two_component_closure.md) — [audit](results/hc7_exact7_moser_two_component_closure_audit.md)
 - [Pure-Moser sole-exterior all-crossless closure](results/hc7_exact7_moser_one_component_allweb_closure.md) — [audit](results/hc7_exact7_moser_one_component_allweb_closure_audit.md)
+- [Rooted `K_5` connector-or-full-separator theorem](results/hc7_exact7_rooted_k5_connector_separator.md) — [audit](results/hc7_exact7_rooted_k5_connector_separator_audit.md)
+- [Pure-Moser sole-exterior failure certificate](results/hc7_exact7_moser_sole_exterior_failure_certificate.md) — [audit](results/hc7_exact7_moser_sole_exterior_failure_certificate_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)
