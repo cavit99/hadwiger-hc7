@@ -147,7 +147,15 @@ construction, does **not** reduce the whole `(1,2)` cell to Moser; the Moser
 reduction below is confined to the singleton-thin, `alpha(H)<=2` cell.
 Second, carrier sufficiency is relative to the partition actually returned.
 The correct datum is its attained duty `D_U(B)`: which block and retained
-singleton adjacencies that particular carrier must fund.  A bound such as
+singleton adjacencies that particular carrier must fund.  More precisely,
+if `C` is the retained singleton clique of an attained partition `Pi`, put
+
+\[
+ D_{\Pi,C}(B)=B\cup\{c\in C:N_H(c)\cap B=\varnothing\}.
+\]
+
+A connected carrier `T` disjoint from the two full packets funds `B` when
+`D_{\Pi,C}(B) subseteq N_S(T)`.  A bound such as
 “defect at most two” is only a proved sufficient surrogate in the audited
 hard-boundary normalizations where the forced block was chosen from that
 defect; it is not a state-independent carrier criterion.
@@ -295,47 +303,28 @@ full three-gate in the induced carrier and has at least four distinct
 outside-carrier neighbours.  Rank-first, size-last optimization evacuates
 every such cell without lowering contact rank.  Thus a three-connected
 lex-optimal carrier is a literal planar/rural page; the alternative is an
-actual cut of order at most two.  The remaining constructive step is the
-bilateral rural-page exchange to a common state or coherent fixed pair, not
-another web frame or three-gate recursion.
-For a contracted pole on that page, the local rotation obstruction is now
-exact: retain every parallel attachment occurrence and take a minimal
-connector tree.  It either embeds in the prescribed disk rotation, or one
-edge split returns two literal vertex-disjoint carriers joining alternating
-attachment occurrences.  This closes the abstract pole-rotation step but
-not the induced-pole or whole-shore expansion; unused pole edges and leftover
-shore components remain part of the live bilateral exchange.
-The nonspanning ambiguity has also been removed at quotient level.  For
-every whole-terminal-shore spanning triple, the audited result returns a
-low carrier cut, a shared portal, a literal set-terminal cross, or a planar
-simple quotient containing every shore vertex.  No minimization is needed:
-in the crossless three-connected branch every web cell avoids the roots and
-the whole portal sets, hence has no pole neighbour and violates the exact
-outside-neighbour bound plus seven-connectivity.  The side terminal is only
-a topological member of that partition and is not silently reused as a
-legal core block.  Thus the remaining conversion is induced-pole expansion
-or attained-duty discharge for one of those literal certificates.
-For two certificates the local conversion is now audited.  Rotation failure
-with four distinct carrier ends gives a literal rooted `K_4` subdivision;
-repeated ends retain an exact collision certificate.  A set-terminal cross
-whose endpoints still carry the original named target and locked-region
-duties gives either a label-faithful peel or an exact decoration rotation,
-and glues whenever the opposite shore supports that target state.  In the
-exact cell the endpoint and side-terminal qualifications are removed by
-working in `J^circ=G[D_t union U]`: repartition the whole target pole and
-replace the locked subregion by its whole component.  This preserves its
-trace `{w}` and makes every shared portal or cross an actual attained-duty
-endpoint.  Thus those two branches close uniformly; the survivors are a
-literal carrier cut of order at most two or a planar two-pole quotient
-spanning `J^circ`.  Carrier minimization now closes the low-cut branch:
-a trace-free leaf side is either absorbed into its unique pole, reaches
-both poles and gives an attained pair-plus-target state, or violates
-seven-connectivity.  The target is selected by its actual edge and need not
-be the target already supported opposite, so bilateral state matching
-remains.  In the rural branch induced-pole expansion is now the only
-geometric duty.  No side-terminal reinsertion is needed: two terminal-free
-disk pages make `G-{v,w,a,b}` planar, and the independent set `{a,b,w}`
-uses one fifth colour while `v` uses the sixth.
+actual cut of order at most two.  The quotient and low-cut results still
+return literal crosses, attained-duty rotations, or a spanning planar
+two-pole quotient.  They do **not** return a one-disk shore.
+
+Indeed, a supported crossed frame already contains two disjoint carriers
+joining alternating pairs on the literal `U`-cycle.  The shore therefore
+cannot embed in a disk with that cycle as boundary, even when both
+contracted poles are rural.  The exact barrier, including a planar
+width-five spanning quotient, is
+`../barriers/hc7_exact7_crossed_frame_disk_barrier.md`.  Consequently the
+former “induced-pole expansion to two disk pages” endgame is retracted.
+
+The surviving dynamic statement is
+`../results/hc7_exact7_bilateral_decoration_kempe_lock.md`: a mismatch of
+supported decoration states either switches to a common exact state or
+returns a terminal-free bichromatic path whose first core hit lies in an
+actual named supported block.  In rank-one mismatch both paths may return
+to their already owned blocks.  The explicit self-lock example
+`../barriers/hc7_exact7_two_shore_kempe_pairing_barrier.md` shows that this
+does not itself produce an opposite attained duty.  The remaining exact-six
+obstruction is therefore a critical owner change, a duty-correct labelled
+peel, or a common colour-gluable adhesion—not induced-pole expansion.
 Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
