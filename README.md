@@ -272,6 +272,20 @@ local barrier cannot occur under the actual boundary degrees.
 Source: [sole-exterior failure certificate](results/hc7_exact7_moser_sole_exterior_failure_certificate.md)
 — [independent audit](results/hc7_exact7_moser_sole_exterior_failure_certificate_audit.md).
 
+The special connector separation of exact order six now has a complete
+state-exchange theorem.  When its adhesion is `U union {w}`, a crossed frame
+on each terminal shore supplies three named carrier blocks.  If both shores
+give `w` at least two common **admissible** block contacts, their exact
+partitions coincide and bilateral transfer six-colours `G`.  The word
+admissible is essential: `w` must be nonadjacent to every literal root in
+the block it joins.  Rank at most one is no longer an unnamed state failure;
+it yields a literal `w`--root incompatibility, direct concentration in one
+core block, or a recursive adhesion with at least five distinct attachments
+to one named block.  This remains conditional on the exact-order-six cell.
+
+Source: [exact-order-six decorated exchange](results/hc7_exact7_moser_order6_decorated_exchange.md)
+— [independent audit](results/hc7_exact7_moser_order6_decorated_exchange_audit.md).
+
 The connected-rich branch now has a uniform capacity theorem.  For each of
 the ten absolute-demand-three boundary types, after seeing the defect set
 but before receiving the minor colouring, one can force a maximal independent
@@ -694,6 +708,7 @@ that link.
 - [Pure-Moser sole-exterior all-crossless closure](results/hc7_exact7_moser_one_component_allweb_closure.md) — [audit](results/hc7_exact7_moser_one_component_allweb_closure_audit.md)
 - [Rooted `K_5` connector-or-full-separator theorem](results/hc7_exact7_rooted_k5_connector_separator.md) — [audit](results/hc7_exact7_rooted_k5_connector_separator_audit.md)
 - [Pure-Moser sole-exterior failure certificate](results/hc7_exact7_moser_sole_exterior_failure_certificate.md) — [audit](results/hc7_exact7_moser_sole_exterior_failure_certificate_audit.md)
+- [Exact-order-six decorated Moser exchange](results/hc7_exact7_moser_order6_decorated_exchange.md) — [audit](results/hc7_exact7_moser_order6_decorated_exchange_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)

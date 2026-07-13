@@ -243,6 +243,18 @@ other Moser roots.  Thus the constructive bridge step has only two valid
 inputs: multiple-portal exhaustion or surplus attachments.  Source:
 `../results/hc7_exact7_moser_sole_exterior_failure_certificate.md`.
 
+Inside the conditional exact-order-six connector cell
+`T=U union {w}`, bilateral crossed frames now have an audited state
+exchange.  Two admissible `w`-contacts on each side force a common decorated
+block and six-colour `G`.  Admissible means both geometrically supported and
+independent on the literal trace.  Rank at most one produces one of three
+named certificates: a literal `w`--root incompatibility, direct-core
+concentration, or a recursive adhesion with at least five attachments to one
+named carrier block.  This discharges state matching once rank two occurs;
+it does not reduce the arbitrary model separator to order six or reroute the
+five-attachment lock.  Source:
+`../results/hc7_exact7_moser_order6_decorated_exchange.md`.
+
 The connected-rich branch has a stronger uniform capacity theorem.  In all
 ten absolute-demand-three boundary types, two full packets absorb any third
 disjoint connected carrier of boundary defect at most two, with the forced
