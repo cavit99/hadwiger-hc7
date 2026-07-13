@@ -310,9 +310,14 @@ paths.  Failure of every peel makes all three portals universally avoided
 by marked-vital trace rails.  Tutte's two independent nonseparating paths
 then segregate the configuration: every nonroot locked attachment lies on
 one rail and all three movable foreign portals lie on the other, with each
-rail complement connected.  The remaining task is now a rail-bridge
-exchange: overlapping bridges must give a peel, while nonoverlap should
-give the coherent rural/two-apex output.
+rail complement connected.  A literal pair of distinct reversed cross-rail
+bridges spanning both label sets now gives the peel.  More generally, every
+four-connected carrier in this residue is one coherent rural facial
+society, while a nonrural three-connected carrier exposes a literal
+three-cut; any trace-free cut component mixing a portal with a proper
+nonempty part of the attachment set also peels.  The live task is the
+remaining label-pure three-gate/gate-descent structure, not bridge-order
+enumeration.
 The five-contact premise is componentwise: every connected component of a
 locked `w`-region separately has at least five contacts with the same named
 carrier.  A disconnected attachment region cannot evade the bypass theorem
@@ -760,6 +765,7 @@ that link.
 - [Three-crossless Moser frame synchronization](results/hc7_exact7_moser_three_crossless_synchronization.md) — [audit](results/hc7_exact7_moser_three_crossless_synchronization_audit.md)
 - [Five-attachment label-faithful carrier peels](results/hc7_exact7_five_attachment_carrier_peel.md) — [audit](results/hc7_exact7_five_attachment_carrier_peel_audit.md)
 - [Three-bypass amplification and two-rail segregation](results/hc7_exact7_pair_carrier_bypass.md) — [audit](results/hc7_exact7_pair_carrier_bypass_audit.md)
+- [Two-rail reversed-bridge and rural-carrier exchange](results/hc7_exact7_two_rail_bridge_overlap.md) — [audit](results/hc7_exact7_two_rail_bridge_overlap_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)

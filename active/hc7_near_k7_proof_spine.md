@@ -270,13 +270,18 @@ every movable foreign portal.  Seven-connectivity now amplifies the
 pair-trace residue to three simultaneous outside-core portals.  Tutte's
 two independent nonseparating paths then segregate all nonroot locked
 attachments onto one rail and all three movable portals onto the other;
-each rail complement is connected.  The live task is to turn an overlapping
-rail bridge into a peel, or the nonoverlap into a coherent rural/fixed-pair
-output.  The five-contact input is componentwise, so disconnected locked
-regions do not evade this route by scattering contacts.  Sources:
+each rail complement is connected.  Distinct reversed cross-rail bridges
+spanning both label sets peel; every four-connected residue is one coherent
+rural face; and a nonrural three-connected residue exposes a three-cut in
+which every trace-free portal component is pure with respect to the locked
+attachments.  The live task is now the remaining three-gate descent or
+rural fixed-pair/state output.  The five-contact input is componentwise, so
+disconnected locked regions do not evade this route by scattering contacts.
+Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
-`../results/hc7_exact7_pair_carrier_bypass.md`.
+`../results/hc7_exact7_pair_carrier_bypass.md`, and
+`../results/hc7_exact7_two_rail_bridge_overlap.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force
