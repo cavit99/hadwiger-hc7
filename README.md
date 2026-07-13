@@ -107,6 +107,15 @@ An audited identity now removes the enumerative language from this split:
 Thus the 119 are exactly the residual boundaries with a clique odd-cycle
 transversal, while the ten have none.  This names the uniform target but does
 not force the thin shore to return its clique-OCT partition.
+Nor does failure to attain such a partition, together with failure of one
+generic carrier construction, reduce the `(1,2)` cell to Moser.  The Moser
+reduction below uses the additional singleton-thin and
+`alpha(G[S])<=2` hypotheses.  In the general cell, carrier sufficiency is
+partition-dependent: after the minor colouring returns a state, the exact
+object is the attained duty `D_U(B)` of the carrier assigned to block `B`,
+not an unconditional defect-at-most-two label.  The audited defect-two
+theorems remain valid specialized sufficient criteria because their forced
+block is selected from the known defect before the state is returned.
 In the connected-rich branch the one-anchor lift leaves 96 types and removes
 both independence-number-two residues, including Moser.  Thus raw packet
 existence and boundary quotient models are now exhausted.  This last claim is
@@ -315,9 +324,21 @@ bridges spanning both label sets now gives the peel.  More generally, every
 four-connected carrier in this residue is one coherent rural facial
 society, while a nonrural three-connected carrier exposes a literal
 three-cut; any trace-free cut component mixing a portal with a proper
-nonempty part of the attachment set also peels.  The live task is the
-remaining label-pure three-gate/gate-descent structure, not bridge-order
-enumeration.
+nonempty part of the attachment set also peels.
+The pairwise web certificates have also been replaced by one uniform
+block-terminal certificate: adjoining two bookkeeping terminals to the
+entire portal and attachment sets turns failure of every labelled cross
+into one same-vertex Two-Paths web.  All marked vertices lie on its planar
+rib.  Any nonempty nonplanar cell is behind a literal full three-gate of
+the induced carrier and, by seven-connectivity, has at least four distinct
+neighbours outside that carrier.  Rank-first, size-last optimization then
+evacuates every such cell by discarding it or reallocating it to the
+decorated/target block without lowering either contact rank.  Consequently
+every three-connected lex-optimal carrier is one literal planar/rural page;
+otherwise the carrier has a cut of order at most two.  Web-frame drift and
+unbounded three-gate recursion are therefore gone.  The exact remaining
+operation is the bilateral rural-page exchange, with a common state or the
+coherent fixed-two-apex outcome as its required terminal alternative.
 The five-contact premise is componentwise: every connected component of a
 locked `w`-region separately has at least five contacts with the same named
 carrier.  A disconnected attachment region cannot evade the bypass theorem
@@ -357,8 +378,10 @@ All 290 boundary/defect cells were independently checked.  Consequently:
 The second statement is a stable-bridge condition, not yet a linkage: it
 does not prescribe how the three attachments are distributed between the
 packets.  The new constructive target is a packet rerouting/stable-bridge
-exchange turning those attachments into a third defect-two carrier, a common
-state, or a coherent rural/two-apex certificate.
+exchange turning those attachments into a carrier that discharges the
+attained duty `D_U(B)`, a common state, or a coherent rural/two-apex
+certificate.  A defect-two carrier is sufficient only inside the audited
+normalization that chose its forced block from that defect.
 
 Source: [connected-rich carrier exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md)
 — [independent audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md).
@@ -766,6 +789,7 @@ that link.
 - [Five-attachment label-faithful carrier peels](results/hc7_exact7_five_attachment_carrier_peel.md) — [audit](results/hc7_exact7_five_attachment_carrier_peel_audit.md)
 - [Three-bypass amplification and two-rail segregation](results/hc7_exact7_pair_carrier_bypass.md) — [audit](results/hc7_exact7_pair_carrier_bypass_audit.md)
 - [Two-rail reversed-bridge and rural-carrier exchange](results/hc7_exact7_two_rail_bridge_overlap.md) — [audit](results/hc7_exact7_two_rail_bridge_overlap_audit.md)
+- [Uniform block-terminal web and literal three-gate certificate](results/hc7_exact7_block_terminal_web.md) — [audit](results/hc7_exact7_block_terminal_web_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)

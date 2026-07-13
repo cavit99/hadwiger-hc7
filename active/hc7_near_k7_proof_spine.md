@@ -141,6 +141,17 @@ is therefore “force a clique-OCT state,” not “search 119 partitions.”  T
 identity does not itself realize that state by a legal shore operation.
 Source: `../results/hc7_exact7_packet_demand_identity.md`.
 
+Two hygiene constraints are binding here.  First, failure to attain a
+clique-OCT state, even together with failure of one generic carrier
+construction, does **not** reduce the whole `(1,2)` cell to Moser; the Moser
+reduction below is confined to the singleton-thin, `alpha(H)<=2` cell.
+Second, carrier sufficiency is relative to the partition actually returned.
+The correct datum is its attained duty `D_U(B)`: which block and retained
+singleton adjacencies that particular carrier must fund.  A bound such as
+“defect at most two” is only a proved sufficient surrogate in the audited
+hard-boundary normalizations where the forced block was chosen from that
+defect; it is not a state-independent carrier criterion.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore
@@ -169,9 +180,10 @@ colourings, so no simultaneous routing is asserted.  Source:
 
 Thus the named constructive substep in S3 is:
 
-> Extract the adaptive third partial carrier from the rich shore, or turn
-> its failure into a literal `K_7`, a common exact state, or the fixed-pair
-> endgame.  Static contact patterns alone cannot do this.
+> After the proper-minor state is attained, extract a rich-shore carrier
+> discharging its exact duty `D_U(B)`, or turn failure into a literal `K_7`,
+> a common exact state, or the fixed-pair endgame.  Static contact or defect
+> counts alone cannot do this.
 
 One infinite subfamily now supplies that carrier.  If the rich shore has
 two components and one has a cutvertex, split that component at the
@@ -274,14 +286,24 @@ each rail complement is connected.  Distinct reversed cross-rail bridges
 spanning both label sets peel; every four-connected residue is one coherent
 rural face; and a nonrural three-connected residue exposes a three-cut in
 which every trace-free portal component is pure with respect to the locked
-attachments.  The live task is now the remaining three-gate descent or
-rural fixed-pair/state output.  The five-contact input is componentwise, so
+attachments.  The five-contact input is componentwise, so
 disconnected locked regions do not evade this route by scattering contacts.
+One block-terminal augmentation now eliminates pairwise web drift entirely:
+the whole portal set and whole attachment set have one same-vertex web.
+Every marked vertex lies on its rib; every nonempty cell is behind a literal
+full three-gate in the induced carrier and has at least four distinct
+outside-carrier neighbours.  Rank-first, size-last optimization evacuates
+every such cell without lowering contact rank.  Thus a three-connected
+lex-optimal carrier is a literal planar/rural page; the alternative is an
+actual cut of order at most two.  The remaining constructive step is the
+bilateral rural-page exchange to a common state or coherent fixed pair, not
+another web frame or three-gate recursion.
 Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
 `../results/hc7_exact7_five_attachment_carrier_peel.md`, and
 `../results/hc7_exact7_pair_carrier_bypass.md`, and
-`../results/hc7_exact7_two_rail_bridge_overlap.md`.
+`../results/hc7_exact7_two_rail_bridge_overlap.md`, and
+`../results/hc7_exact7_block_terminal_web.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force
@@ -291,10 +313,12 @@ share one.  The only frame-level residue is a genuinely one-sided all-web
 shore.  Source:
 `../results/hc7_exact7_moser_three_crossless_synchronization.md`.
 
-The connected-rich branch has a stronger uniform capacity theorem.  In all
-ten absolute-demand-three boundary types, two full packets absorb any third
-disjoint connected carrier of boundary defect at most two, with the forced
-block chosen after the defect but before the returned state.  Hence every
+The connected-rich branch has a stronger specialized capacity theorem.  In
+the ten absolute-demand-three boundary types, once the defect is known, a
+forced block can be chosen before the returned state so that two full packets
+absorb the resulting defect-at-most-two carrier.  This is not an
+unconditional carrier criterion: outside that normalization the carrier
+must discharge its attained duty `D_U(B)`.  Hence every
 cutvertex has exactly two deletion lobes, and every component outside any
 fixed pair of full packets has at least three distinct attachment vertices
 on their union.  The remaining problem is now a stable-bridge rerouting
