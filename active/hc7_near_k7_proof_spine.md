@@ -261,9 +261,15 @@ surviving five-attachment lock has all useful foreign portals concentrated
 on a central path or subdivided `Y`, or in pendant lobes with no
 `w`-attachment.  Equality at five is a literal exact-seven adhesion governed
 by the packet theorem; otherwise the lock has at least six distinct named
-carrier attachments.  The live task is to exchange across this central core or
-extract the same literal state on the opposite shore.  Source:
-`../results/hc7_exact7_moser_order6_decorated_exchange.md`.
+carrier attachments.  Two audited carrier peels eliminate a two-connected
+singleton-trace block with any movable nonroot portal and a three-connected
+pair-trace block when one locked attachment is also a movable portal.  The
+exact residue is a cutvertex/2-cut, a literal singleton gate, or a
+pair-trace rail capturing every locked attachment and separating it from
+every movable foreign portal.  The live task is to exchange across that
+gate/rail or extract the same literal state on the opposite shore.  Sources:
+`../results/hc7_exact7_moser_order6_decorated_exchange.md` and
+`../results/hc7_exact7_five_attachment_carrier_peel.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force
