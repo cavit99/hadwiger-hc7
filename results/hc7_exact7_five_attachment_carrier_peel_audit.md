@@ -2,6 +2,58 @@
 
 Audited file: `results/hc7_exact7_five_attachment_carrier_peel.md`.
 
+## Audit addendum: corrected Theorem 3.3
+
+**GREEN after a precise hypothesis repair now made in the result.**  The
+statement explicitly requires
+
+* `P=N(L) cap K` to have order at least five;
+* `L` to be a nonempty connected subgraph of the present open shore; and
+* `w` to have a neighbour in `L`, so `W={w} union L` is connected.
+
+Connectedness of `L` alone did not imply the last condition and did not
+formally place `L` in the shore.  These are local application hypotheses,
+not new structural conclusions.
+
+Assume first that Corollary 3.2 has forced
+`E(K-{r},A union B)=empty`.  The traces of `A,B` and the singleton `r`
+partition all five vertices of `U`.  Thus deleting
+`A union B union {r,w,t}` deletes every boundary neighbour of the present
+open shore.  Since `L` lies in that shore, the component `X_0` containing
+`L` stays inside it: it cannot reach the opposite shore, the opposite
+terminal, or `v`.  At least four members of the five-element attachment
+set lie in `K-{r}` and are adjacent to `L`, so `X_0` is nonempty and
+contains a non-root vertex of `K`.
+
+If `X_0` missed both `A` and `B`, its whole-graph neighbourhood would be
+contained in `{r,w,t}`.  Since `v` lies outside `X_0` and outside those
+three vertices, this is a genuine cut of order at most three, contradicting
+seven-connectivity.  Hence an `A_0-L` path with internal vertices in `X_0`
+exists.
+
+Choose such a path shortest and with its first `L` vertex as its final
+vertex.  If it avoids `K`, adjoining all path vertices except the final
+`L` vertex to `A_0` preserves connectivity and disjointness from the other
+two core blocks and from `L`; all added vertices lie in the open shore, so
+the literal trace
+of `A_0` is unchanged.  The last edge makes the enlarged block adjacent to
+`L`, while `L` was already adjacent to `K`.  Because `w-L` is now an
+explicit hypothesis, this is a genuine connected-carrier raw-rank-two
+promotion for `W`.
+
+If the path meets `K`, let `q` be its first such vertex.  The deleted root
+`r` cannot be `q`.  The prefix excluding `q` is disjoint from all three
+core blocks and from `L`; adjoining it to `A_0` preserves connectivity and
+trace and creates a literal `A_0-q` edge.  The carrier `K` itself is
+unchanged and remains two-connected, while `P` is unchanged.  Theorem 3.1
+therefore supplies the labelled peel.  Its three post-peel block
+adjacencies and trace preservation are already checked below.
+
+The repaired theorem consequently closes exactly the connected,
+`w`-attached, two-connected singleton-trace five-attachment region.  It
+does not apply when the five attachments are split among disconnected
+regions or when the relevant region has no `w` edge.
+
 ## Verdict
 
 **GREEN.**  The line-item verdicts are:
@@ -9,6 +61,8 @@ Audited file: `results/hc7_exact7_five_attachment_carrier_peel.md`.
 * labelled peel operation (1.4): **GREEN**;
 * Lemma 2.1, marked bipolar split: **GREEN**;
 * Theorem 3.1, singleton-trace peel: **GREEN**;
+* Theorem 3.3, seven-connected singleton-lock promotion: **GREEN after the
+  explicit local hypothesis repair above**;
 * Theorem 4.1, three-connected pair-trace peel: **GREEN**;
 * Corollaries 3.2 and 4.2: **GREEN**.
 

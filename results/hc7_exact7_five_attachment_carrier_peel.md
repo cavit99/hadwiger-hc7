@@ -1,10 +1,11 @@
 # Five-attachment carrier peels
 
-**Status:** proved and independently audited.  In the actual exact-order-six
-cell they close the entire two-connected singleton-trace five-attachment
-family, and close a substantial three-connected pair-trace family.  They
-do not close a carrier of low internal connectivity or the residual
-pair-trace portal-distribution lock described in Section 5.
+**Status:** proved and independently audited, including the corrected
+outside-core Theorem 3.3.  That theorem eliminates raw rank-one locking for
+a two-connected singleton-trace carrier with one connected `w`-attached
+region; it does not combine attachments split among several components.
+The results do not close a carrier of low internal connectivity or the
+residual pair-trace portal-distribution lock described in Section 5.
 
 ## 1. Labelled carrier setting
 
@@ -144,14 +145,20 @@ attachments themselves---are the next exchange objects.
 
 In the actual exact-order-six cell, those bridges can be used immediately.
 
-### Theorem 3.3 (seven-connected singleton lock closure)
+### Theorem 3.3 (seven-connected singleton lock promotion)
 
 Work in the exact terminal-shore setting of
 `../results/hc7_exact7_moser_order6_decorated_exchange.md`.  Thus the
 opposite open shore is anticomplete to the present open shore, `t` is its
 side terminal, and `v` has no neighbour in the open shore.  Suppose the
 five-attachment block `K` has singleton trace `{r}` and is two-connected.
-Then a labelled peel exists toward `A` or `B`.
+Assume, as in Section 1, that `P=N(L) cap K` has order at least five, that
+`L` is a nonempty connected subgraph of the present open shore, and that
+`w` has a neighbour in `L`.  Thus `W={w} union L` is connected.  Then
+either a labelled peel exists toward `A` or `B`, or one of those two blocks
+can be enlarged through vertices outside the core so that it becomes
+adjacent to `L`.  In either case the raw contact rank of `W={w} union L`
+is promoted from one to at least two.
 
 #### Proof
 
@@ -176,28 +183,42 @@ at-least-five-element set `P` is `r`.  If `X_0` had no neighbour in
                              N_G(X_0)\subseteq\{r,w,t\}.          \tag{3.4}
 \]
 
-Indeed all remaining literal roots lie in `A\cup B`; the exact separation
-excludes the opposite shore; and `v` has no open-shore neighbour.  The
+Indeed the traces of `A,B`, together with `r`, are all of `U`; with `w,t`
+they are every boundary neighbour of the present open shore.  Hence `X_0`
+lies inside that open shore, cannot contain `v`, and has no neighbour in
+the opposite shore.  The
 nonempty set `X_0` is separated from `v` by the at-most-three vertices in
 (3.4), contrary to seven-connectivity.  Hence `X_0` has an edge to one of
 `A,B`; call that target block `A_0`.
 
-Choose a shortest `A_0-L` path whose internal vertices lie in `X_0`.
-Its first vertex `q` in `K` belongs to `K-{r}`.  The prefix from `A_0` to
-`q`, with `q` omitted, is disjoint from all three core blocks and from
-`L`: the path first enters `L` only at its final vertex, while `X_0` was
-defined after deleting `A\cup B\cup\{r,w,t\}`.  Absorb that prefix into
-`A_0`.  This preserves its connectivity and literal trace and creates a
-direct edge from the enlarged target block to `q`.
+Choose a shortest `A_0-L` path whose internal vertices lie in `X_0`, and
+choose it to first enter `L` at its final vertex.
+
+If this path does not meet `K`, absorb all its vertices except its final
+vertex into `A_0`.  The enlarged target remains connected, disjoint from
+the core and `L`, and has the same literal trace; its last path edge makes
+it adjacent to `L`.  Since `L` was already adjacent to `K`, this is the
+claimed raw rank-two promotion.
+
+Otherwise let `q` be its first vertex in `K`.  Then `q in K-{r}`.  The
+prefix from `A_0` to `q`, with `q` omitted, is disjoint from all three core
+blocks and from `L`: the path first enters `L` only at its final vertex,
+while `X_0` was defined after deleting
+`A\cup B\cup\{r,w,t\}`.  Absorb that prefix into `A_0`.  This preserves
+its connectivity and literal trace and creates a direct edge from the
+enlarged target block to `q`.
 
 Now apply Theorem 3.1 to the unchanged two-connected carrier `K`, using
 the new non-root portal `q`.  The resulting bipolar split is a labelled
 peel. \(\square\)
 
-Theorem 3.3 eliminates the entire two-connected singleton-trace
-five-attachment family.  A survivor with the singleton block locked must
-therefore expose an actual cutvertex inside every label-faithful choice of
-that carrier; mere root-gating is not stable under outside-core bypasses.
+Theorem 3.3 eliminates raw rank-one locking for the entire two-connected
+singleton-trace family with one connected attachment region.  A survivor
+with the singleton block locked must therefore expose an actual cutvertex
+inside every label-faithful choice of that carrier, split the attachments
+among different connected regions, or move into the already isolated
+boundary-incompatibility case.  Mere root-gating is not stable under
+outside-core bypasses.
 
 ## 4. Pair-trace peel
 
@@ -343,16 +364,17 @@ In the exact-order-six Moser cell, a five-attachment lock in a named core
 block is eliminated geometrically in either of the following reusable
 cases:
 
-1. the block has singleton trace and is two-connected (Theorem 3.3 creates
-   a movable non-root portal from an outside-core bypass if none is
-   initially present);
+1. the block has singleton trace, is two-connected, and the attachment
+   region is connected (Theorem 3.3 produces either a direct outside-core
+   raw promotion or a movable non-root portal);
 2. the block has pair trace, is three-connected, and one of its at least
    five `L`-attachments is also a movable portal to either other named
    block.
 
 Any survivor must therefore expose one of four literal certificates:
 
-* an internal cutvertex/2-cut of the named carrier;
+* an internal cutvertex/2-cut of the named carrier, or several connected
+  attachment regions whose union supplied the five-attachment count;
 * complete separation of the five attachment vertices from all movable
   cross-block portals; or
 * a pair-trace rail which captures all five attachments for every
