@@ -207,6 +207,16 @@ global composition: show that these rotations expose a support-five peel,
 a common exact state, or a bounded stable/rural society.  Source:
 `../results/hc7_exact7_packet_bridge_rotation.md`.
 
+For an actual pure-Moser exterior component of order at least four, a
+separator--component matching supplies four distinct portal witnesses.
+Together with internal 3-connectivity, this puts the portal tree within the
+safe order-at-least-three form of Tutte's stable-bridges theorem.  All seven
+selected labels remain fixed and no bridge of the rerouted tree has its
+attachment set contained in one segment.  Hence S3 no longer needs a
+termination proof for one-segment rotations in this branch; its exact live
+geometry is a bounded multi-segment bridge/web society.  Source:
+`../results/hc7_exact7_portal_matching_stable_skeleton.md`.
+
 Static packet contraction is now rigorously exhausted, not merely
 computationally unproductive.  The exact quotient theorem says that three
 independent universal packet vertices yield `K_7` exactly in the two-anchor

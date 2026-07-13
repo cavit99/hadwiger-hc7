@@ -212,6 +212,21 @@ sequence of rotations terminates or has a coherent rural embedding.
 Source: [portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md)
 — [independent audit](results/hc7_exact7_packet_bridge_rotation_audit.md).
 
+Inside the 3-connected pure-Moser exterior components, the local rotations
+can now be globalized without an unproved termination potential.  A general
+separator lemma gives an `S`--component portal matching of order
+`min(7,|C|)`.  Thus every component of order at least four has four distinct
+labelled portal witnesses, and a minimal tree through all seven selected
+witnesses has at least three skeleton segments.  Tutte's stable-bridges
+theorem then reroutes those segments while fixing every witness so that no
+bridge has all its attachments on one segment.  This removes the entire
+one-segment drift family, but multi-segment web bridges remain.
+
+Source: [portal matching and stable skeleton](results/hc7_exact7_portal_matching_stable_skeleton.md)
+— [independent audit](results/hc7_exact7_portal_matching_stable_skeleton_audit.md); the false
+unrestricted one-segment formulation is retained as a
+[barrier](barriers/hc7_exact7_tutte_single_segment_barrier.md).
+
 #### Retained `(1,3)` infrastructure (superseded on this branch)
 
 The detailed thin-shore results below remain proved and may be reusable in a
@@ -574,6 +589,7 @@ that link.
 - [Pure-Moser two-component cutvertex/two-cut closure](results/hc7_exact7_moser_rich_twocut_exchange.md) — [audit](results/hc7_exact7_moser_rich_twocut_exchange_audit.md); [exact quotient verifier](archive/moser_global_2cut_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)
+- [Portal matching and Tutte-stable skeleton in a 3-connected shore](results/hc7_exact7_portal_matching_stable_skeleton.md) — [audit](results/hc7_exact7_portal_matching_stable_skeleton_audit.md); [one-segment barrier](barriers/hc7_exact7_tutte_single_segment_barrier.md)
 - [Exact-seven thin-shore near-full exchange](results/hc7_exact7_thin_shore_exchange.md) — [audit](results/hc7_exact7_thin_shore_exchange_audit.md)
 - [Exact-seven portal matching and rooted-`K_4` exchange](results/hc7_exact7_portal_rooted_k4.md) — [audit](results/hc7_exact7_portal_rooted_k4_audit.md)
 - [Four-connected and planar three-connected thin-shore closure](results/hc7_exact7_rooted_portal_face_closure.md) — [audit](results/hc7_exact7_rooted_portal_face_closure_audit.md)
