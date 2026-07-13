@@ -266,10 +266,16 @@ singleton-trace block with any movable nonroot portal and a three-connected
 pair-trace block when one locked attachment is also a movable portal.  The
 exact residue is a cutvertex/2-cut, a literal singleton gate, or a
 pair-trace rail capturing every locked attachment and separating it from
-every movable foreign portal.  The live task is to exchange across that
-gate/rail or extract the same literal state on the opposite shore.  Sources:
+every movable foreign portal.  Seven-connectivity now amplifies the
+pair-trace residue to three simultaneous outside-core portals.  Tutte's
+two independent nonseparating paths then segregate all nonroot locked
+attachments onto one rail and all three movable portals onto the other;
+each rail complement is connected.  The live task is to turn an overlapping
+rail bridge into a peel, or the nonoverlap into a coherent rural/fixed-pair
+output.  Sources:
 `../results/hc7_exact7_moser_order6_decorated_exchange.md` and
-`../results/hc7_exact7_five_attachment_carrier_peel.md`.
+`../results/hc7_exact7_five_attachment_carrier_peel.md`, and
+`../results/hc7_exact7_pair_carrier_bypass.md`.
 
 The frame-mismatch part is also closed whenever both exact terminal shores
 are three-connected and non-all-web.  Three crossless Moser frames force

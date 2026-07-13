@@ -304,6 +304,15 @@ using a prescribed nonseparating trace path followed by a bipolar split.
 Thus a survivor has an actual cutvertex/2-cut, a literal singleton gate, or
 a pair-trace rail capturing all locked attachments while separating them
 from every movable foreign portal.
+In the three-connected pair-trace residue, seven-connectivity amplifies
+one bypass to three simultaneous, internally disjoint outside-core portal
+paths.  Failure of every peel makes all three portals universally avoided
+by marked-vital trace rails.  Tutte's two independent nonseparating paths
+then segregate the configuration: every nonroot locked attachment lies on
+one rail and all three movable foreign portals lie on the other, with each
+rail complement connected.  The remaining task is now a rail-bridge
+exchange: overlapping bridges must give a peel, while nonoverlap should
+give the coherent rural/two-apex output.
 This is still conditional on the literal order-six adhesion and does not
 close the sole-exterior branch.
 
@@ -746,6 +755,7 @@ that link.
 - [Exact-order-six decorated Moser exchange](results/hc7_exact7_moser_order6_decorated_exchange.md) — [audit](results/hc7_exact7_moser_order6_decorated_exchange_audit.md)
 - [Three-crossless Moser frame synchronization](results/hc7_exact7_moser_three_crossless_synchronization.md) — [audit](results/hc7_exact7_moser_three_crossless_synchronization_audit.md)
 - [Five-attachment label-faithful carrier peels](results/hc7_exact7_five_attachment_carrier_peel.md) — [audit](results/hc7_exact7_five_attachment_carrier_peel_audit.md)
+- [Three-bypass amplification and two-rail segregation](results/hc7_exact7_pair_carrier_bypass.md) — [audit](results/hc7_exact7_pair_carrier_bypass_audit.md)
 - [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
 - [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)
