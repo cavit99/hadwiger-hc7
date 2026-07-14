@@ -191,9 +191,10 @@ exactly when they lie in opposite bipartition sides.  The retained-clique
 duty is automatic in the two audited frontier forms.  Apply the exact
 two-carrier list theorem.  \(\square\)
 
-Thus a clean edge closes unless it exposes exactly the already known
-same-parity crossed-defect certificate.  Merely finding a clean edge is
-not, by itself, the whole connector theorem.
+This was the exact conclusion available at the time of the original tree
+audit.  The subsequently audited atomic near-full two-carrier exchange
+closes the same-parity defect as well.  Therefore **every clean edge now
+closes**; a surviving core is fully crossed.
 
 ## 5. The fully crossed bridge hull
 
@@ -211,12 +212,11 @@ edge would lie on their unique `T`-path and would be an edge of `T`, a
 contradiction.  The edge form of Menger's theorem now gives two
 edge-disjoint paths.  \(\square\)
 
-This does not give internally vertex-disjoint paths.  If a cutvertex `v`
-separates two `T` terminals, each relevant component of `A-v` has at least
-six boundary contacts by (2.2), returning to the crossed-defect cutvertex
-cell.  If no cutvertex separates the selected terminals, ordinary vertex
-Menger gives the corresponding two internally disjoint paths.  Neither
-conclusion assigns the paths to the two frontier duties.
+The subsequently audited near-full exchange also proves that `A` is
+two-connected.  Ordinary vertex Menger therefore gives two internally
+vertex-disjoint paths between any one prescribed pair of `T` vertices.
+This is still only a one-pair statement and assigns neither route to a
+frontier duty.
 
 For an edge `f=xy` internal to the rich shore, the audited double-
 contraction split adds only the following literal signal.  In every
@@ -247,9 +247,10 @@ None of the following is currently a valid black-box completion.
 3. **Tutte paths and stable bridges.**  A Tutte-path theorem needs a planar
    or otherwise specially structured ambient graph.  Stable-bridge
    rerouting needs an appropriate multi-segment path system in a
-   three-connected ambient graph.  `G[A]` need not even be two-connected;
-   seven-connectivity of `G` does not repair this.  The repository's
-   unrestricted tree version was correctly retracted.
+   three-connected ambient graph.  The atomic shore is now known to be
+   two-connected, but this does not supply the required stable multi-segment
+   path system or a two-pair linkage.  The repository's unrestricted tree
+   version was correctly retracted.
 4. **Generalized Two Paths/web theorems.**  Humeau--Pous can be applied
    after fixing literal terminal occurrences.  It gives an uncoloured
    crossing or a web completion and its recursive parallel composition can
@@ -272,58 +273,39 @@ replace it.
 
 ## 7. Weakest useful next theorem and proposed mechanism
 
-The separating-edge atom would be closed by the following statement; it is
-strictly narrower than the full support-four theorem because the localized
-state, the fixed connector path, the compulsory edge, and the path-or-`Y`
-core are hypotheses.
+The separating-edge atom is closed by the following statement, now adopted
+as the active goal.
 
-> **Crossed-hull state exchange lemma.**  In the setup of Sections 1--5,
-> with the legally localized compressed state and the double-contraction
-> fork, either:
+> **Atomic fully crossed carrier-or-rooted-model theorem.**  In the setup
+> of Sections 1--5, assuming every edge of `T` is crossed, either:
 >
-> 1. a clean edge has a non-crossed-defect list orientation, or a legal
->    bridge reassignment repairs the crossed-defect orientation, yielding
->    the two exact-duty carriers;
-> 2. `G[A union S]` contains an `S`-rooted `K_5` model;
-> 3. a bridge-hull separation gives a strictly smaller actual seven-
->    adhesion together with an explicit old-to-new boundary map and a
->    legally attained paired state; or
-> 4. the hull gives the already specified normalized labelled `S1/S4`
->    handoff with a strictly decreasing receiving rank.
+> 1. there are two disjoint nonempty connected adjacent carriers in `A`
+>    whose literal contact lists admit the audited adaptive
+>    clique-reservoir two-colouring; or
+> 2. `G[A union S]` contains an `S`-rooted `K_5` model.
 
-Item 2 is terminal by Lemma 3.1.  Item 1 is terminal by Corollary 4.2 and
-the audited carrier theorem.  Items 3--4 exactly match the strict receiving
-obligations in the active goal; an unlabelled web or `K_7^vee` does not
-count.
+Item 1 is terminal because its named contractions manufacture a fresh
+reflectable state.  Item 2 is terminal by Lemma 3.1.  No state-pullback or
+recursive boundary map is required.
 
-A candidate proof mechanism is a **minimal bridge-hull induction**.
+The first proof mechanism is an **alternating four-portal decoder**.
 
-1. Work along the `z`--connector arm and choose an inclusion-minimal chain
-   of bridge attachment hulls covering its non-clean edges.
-2. At an end of the chain, perform only literal first-hit reroutings.  A
-   newly clean edge invokes Corollary 4.2.  A same-parity defect is kept as
-   a named state bit rather than discarded.
-3. If the chain cannot shorten, fix the four literal terminal occurrences
-   selected by its two end bridges and apply the generalized Two Paths
-   theorem.  A crossing is decoded as two labelled carriers.  In a
-   crossless web, recurse through the first parallel-composition node.
-4. At every composition node, either a side has at most six total literal
-   gate/boundary neighbours (contradicting (2.1)), exactly seven neighbours
-   (candidate strict adhesion), or portals occur on both web sides.  In the
-   last case, five disjoint boundary-rooted bags are the target prohibited
-   by Lemma 3.1.
-5. Use the common double-contraction colouring at the node where a bridge
-   rerouting would otherwise reverse the orientation bit.  The missing
-   alternate colour must produce the common state; saturation must be
-   converted through the *same* literal bridge hull, not identified with a
-   row label.
+1. Use an `st`-ordering or one ear step of the two-connected shore to obtain
+   literal connected adjacent prefix/suffix carriers.
+2. Failure of every permitted singleton clique-reservoir return is encoded
+   by parity-incompatible paths in the width-two boundary frontier.  Reduce
+   this to two vertex-disjoint bad boundary paths and hence four distinct
+   literal portal labels.
+3. Apply the generalized Two Paths theorem only to those literal terminal
+   occurrences.  A crossing must be decoded as the carrier pair or five
+   rooted bags.  In the crossless branch, recurse through a host-side
+   parallel-composition split of the web.
+4. Reject any split that uses a completion edge as a host edge or creates a
+   family of labels growing with shore order.
 
-Steps 1--3 are supported by the proved lemmas and Humeau--Pous.  The new
-mathematics is the label-faithful decoder in steps 4--5.  Before promotion
-it must prove, rather than assume, that the five rooted bags are disjoint,
-that every completion edge used by the web is replaced by a literal host
-path, and that the proper-minor operation on the seven-boundary really
-attains the named state.
+The new mathematics is the label-faithful decoder in step 3.  The exact
+state is handled afterwards by the audited carrier contractions, not by
+the web theorem.
 
 ## 8. Relation to the proposed three-gate pullback
 

@@ -17,41 +17,35 @@ dependency chain.
 ## Active research goal
 
 The active dependency-level target is the
-[stateful support-four composition theorem](active/hc7_stateful_support_four_goal.md).
-It aims to carry a legally attained paired state through the remaining
-connected-rich width-two `(1,2)` transition, or return a literal `K_7`, a
-valid fixed-pair terminal, or a strictly smaller state-carrying `(1,2)`
-instance.  An unlabelled near model or an unspecified `(1,1)` handoff is
-not a success outcome.
+[atomic fully crossed carrier-or-rooted-model theorem](active/hc7_atomic_fully_crossed_goal.md).
+It concerns the normalized separating-edge atom of the connected-rich
+width-two `(1,2)` cell.  It must produce either two literal adjacent
+carriers whose named contractions manufacture a reflectable exact state, or
+five literal boundary-rooted bags which the two rich packets complete to a
+`K_7` model.
 
-The first falsifiable milestone is now the **rooted path/`Y` bridge-hull
-state-exchange lemma** in the one-branch compulsory-bridge atom.  The former
-comparison of independently chosen deletion-state families had no coupling
-mechanism and has been retired.  A colouring of the double contraction of
-`zu` and a rich edge gives an exact thin-saturation/rich-saturation fork.
-Separately, a separating edge of the final bichromatic trace carries one
-compressed state, all five edge locks, and a literal connector through the
-opposite thin shore.
+This is a deliberate simplification of the earlier stateful support-four
+goal.  The independently audited near-full carrier theorem closes every
+clean core edge and proves that every nonsingleton atomic thin shore is
+two-connected.  It also shows that a web decomposition need not transport
+an old equality state: the correct carriers create a fresh
+packet-demand-at-most-two state by a proper-minor contraction.  Hence the
+only live geometric branch is a genuinely fully crossed path/`Y` hull.
 
-A new audited normalization removes the root-cutvertex ambiguity.  In every
-nonsingleton atom, deleting the compulsory root `z` leaves one connected
-subgraph meeting all six other boundary literals.  The connector may
-therefore be chosen outside `z`; adjoining a shortest `z`-tail produces a
-literal path or subdivided `Y` with `z` as a leaf.  The next theorem must
-allocate the bridges of that fixed core to the two labelled carriers required
-by the exact list/duty criterion, or return a literal terminal, a normalized
-labelled handoff, or a strict state-carrying seven-adhesion descent.
+The first falsifiable milestone is an **alternating four-portal decoder**
+for the connected bipartite frontier.  Failure of an adaptive carrier
+return must expose four distinct portal labels; literal crossings or a
+host-side web composition must then give the carriers or an `S`-rooted
+`K_5`.  Completion edges are never host edges.  The low-root-degree atom
+and every bare cyclic shore of order at least four are already closed by
+independently audited uniform lemmas.
 
-This choice follows a new literature and barrier audit.  Generalized web
-theorems are uncoloured, permutation-labelled path theorems require a total
-action which the present rotations do not yet have, and rooted-folio
-theorems do not preserve exact colour-extension states.  The local
-double-critical-edge theorem supplies five colour-distinguished common
-neighbours only when deleting both edge ends lowers the chromatic number to
-five; using those contacts as five rooted bags would otherwise require the
-still-unavailable five-colour Strong Hadwiger principle.  Accordingly the
-programme will use that theorem only inside the labelled connector geometry,
-not as a substitute for state-preserving composition.
+Current primary literature confirms the boundary of the target:
+generalized webs and rooted four-terminal subdivisions supply uncoloured
+routing, knittedness requires much higher connectivity, and rooted-folio or
+colourful-minor theory does not preserve exact colour-extension languages.
+Near-`K_7` regeneration remains the independent escape route, not a
+substitute for the literal decoder.
 
 ## Frozen kernel
 
@@ -480,29 +474,40 @@ and equality is an actual exact-seven boundary.  This is not yet a state
 pullback: the replacement connector need not remain bichromatic, and the new
 boundary has no automatically attained equality state.
 
+The next carrier theorem removes the former clean-edge residue completely.
+Whenever two disjoint connected adjacent thin carriers, one containing
+`z`, each meet at least six boundary literals, one named contraction
+returns a demand-at-most-two state in the connected bipartite frontier; in
+the exceptional frontier the only bad list pattern gives five literal
+rooted bags and hence `K_7`.  Consequently every clean core edge closes and
+every nonsingleton atomic shore is two-connected.  Two further audited
+consequences close all connected-bipartite atoms with internal root degree
+at most two and every bare cyclic shore `C_n`, `n>=4`.
+
 Sources: [atomic blocking-path checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
 [double-contraction state split](results/hc7_atomic_double_contraction_state_split.md),
 and [bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md),
 [root-deletion normalization](results/hc7_atomic_root_deletion_normalization.md),
 its [independent audit](results/hc7_atomic_root_deletion_normalization_audit.md),
+the [near-full carrier theorem](results/hc7_atomic_near_full_two_carrier_exchange.md)
+and its [audit](results/hc7_atomic_near_full_two_carrier_exchange_audit.md),
+the [low-root-degree closure](results/hc7_atomic_low_root_degree_closure.md)
+and its [audit](results/hc7_atomic_low_root_degree_closure_audit.md),
+the [cycle-shore closure](results/hc7_atomic_cycle_shore_closure.md)
+and its [audit](results/hc7_atomic_cycle_shore_closure_audit.md),
 and the [connector-tree bridge audit](active/hc7_atomic_connector_tree_bridge_audit.md).
 
-The terminal-or-recursive theorem still needed is now exact:
+The terminal theorem still needed in the atomic separating-edge branch is
+now exact and purely literal:
 
-> At a strict `(1,2)` descendant `Omega=T union N_S(D)`, produce a literal
-> clique-reservoir seed allocation, transport a useful exact state with a
-> strict measure, or regenerate a labelled near-`K_7`/fixed-pair handoff.
-> In the two-lobe branch, the same conclusion is needed only for a
-> proper-row labelled peel or a singleton lobe; the non-singleton full-row
-> branch is closed.  At a
-> prescribed-portal Hall descent, `|U|=2,3` already gives a strict twin
-> boundary; the sole nondecreasing output is the atomic bridge `z-u_*`
-> over its locked width-two six-core.  There the remaining output is a
-> pair of independently attained trace-blocking rich-shore paths.  Convert
-> one into a legal thin-side carrier reassignment repairing the single
-> frontier parity bit, or decode the failed lift as a labelled near model,
-> fixed pair, or strict exact-seven descent.  The construction must bridge
-> the incompatibility between contracting `zu` and deleting `zu`.
+> In the fully crossed normalized path/`Y` hull, produce two disjoint
+> connected adjacent carriers whose boundary contact lists admit the
+> audited adaptive clique-reservoir return, or produce five disjoint
+> connected pairwise adjacent boundary-rooted bags in `G[A union S]`.
+
+The first outcome manufactures and reflects a fresh exact state; the
+second is completed by the two rich packets to a literal `K_7`.  No old
+state must be pulled through a web composition.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
 yet proved is that a legally useful equality state survives this map.  In
@@ -626,14 +631,15 @@ its compressible states are closed.  The exact atom now has a canonical
 double-contraction saturation fork.  In the separating-edge trace branch it
 also has, in one proper-minor colouring, the compressed state, five locks,
 and an opposite-shore duty connector.  No audited theorem yet allocates the
-bridges of the normalized rooted path/`Y` into two adjacent literal carriers
-with the correct frontier lists/duties, or decodes the fully crossed bridge
-hull as a strict terminal or recursive outcome.  A clean tree edge closes
-except for one exact same-parity crossed-defect orientation; the live step
-must repair that bit or process the fully crossed hull using a named
-proper-minor transition.  The four-vertex packet path is classified but not
-fully terminal under the strict outcome list; generic `K_7^vee` triggers
-still require a normalized near-model handoff.
+fully crossed normalized rooted path/`Y` hull into two literal carriers
+with the correct frontier lists/duties, or decodes it as an `S`-rooted
+`K_5`.  Every clean tree edge, every root-degree-at-most-two
+connected-bipartite atom, and every bare cycle shore of order at least four
+are now closed.  Thus the live atom is two-connected, has a genuinely
+noncyclic crossed bridge/ear structure, and must be handled by the
+alternating four-portal decoder in the active goal.  The four-vertex packet
+path is classified but not fully terminal under the strict outcome list;
+generic `K_7^vee` triggers still require a normalized near-model handoff.
 After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
 and S1 rotation components remain.
 

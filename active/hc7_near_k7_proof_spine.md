@@ -18,15 +18,18 @@ needed.
 
 ## Current research goal
 
-The active dependency-level target is the stateful support-four composition
-theorem stated in `hc7_stateful_support_four_goal.md`.  Its first mandatory
-milestone is the rooted path/`Y` bridge-hull state-exchange lemma for the
-separating-edge branch of the one-branch compulsory atom.  The goal is deliberately
-broader than closing one finite atom and
-narrower than `HC_7`: it must close the connected-rich paired width-two
-support-four transition by a common legal state, a terminal outcome, or a
-strict state-carrying `(1,2)` descent.  An unlabelled near model or an
-unspecified `(1,1)` handoff is not counted as progress.
+The active dependency-level target is the atomic fully crossed
+carrier-or-rooted-model theorem stated in
+`hc7_atomic_fully_crossed_goal.md`.  It is the separating-edge base case of
+the broader support-four programme.  The theorem must find either two
+literal adjacent carriers whose named contractions manufacture a fresh
+reflectable state, or an `S`-rooted `K_5` which the two rich packets lift to
+`K_7`.
+
+This is deliberately narrower than `HC_7` and stronger than another case
+reduction.  The former demand that a web composition preserve an old exact
+state has been dropped: current literature does not supply it, and the
+audited carrier theorem makes it unnecessary.
 
 ## Frozen kernel
 
@@ -724,19 +727,26 @@ and equality gives an actual exact-seven boundary.  The replacement
 connector need not be bichromatic and no equality state is automatically
 transported.
 
-Thus the next theorem is a rooted bridge-hull state exchange: allocate the
-bridges of this fixed path/`Y` to two adjacent labelled carriers satisfying
-the exact frontier list/duty criterion, or decode failure as `K_7`, a valid
-fixed pair, a decreasing normalized handoff, or a strict state-carrying
-seven-adhesion descent.  A clean core edge already closes except for one
-same-parity crossed-defect orientation.  The hard branch is a fully crossed
-bridge hull, where a named proper-minor transition must repair that bit or
-carry the state across the resulting exact boundary.  Colour saturation
-alone is not a palette-to-label lift.  Sources:
+The audited near-full carrier exchange now closes every clean core edge and
+proves that every nonsingleton atomic shore is two-connected.  Its named
+contractions manufacture a fresh demand-at-most-two state, so the hard
+branch no longer needs a state pullback.  Two further audited lemmas close
+all connected-bipartite atoms with `d_{G[A]}(z)<=2` and every bare cycle
+shore `C_n`, `n>=4`.
+
+Thus the next theorem is a fully crossed rooted-model exchange: allocate
+the literal bridge/ear structure to two adjacent carriers satisfying the
+frontier list/duty criterion, or decode failure as an `S`-rooted `K_5`.
+The first milestone is an alternating four-portal decoder.  A generalized
+web may organize the crossless branch, but completion edges are not host
+edges and no palette colour may be promoted to a branch label.  Sources:
 `hc7_atomic_blocking_path_packet_escape.md`,
 `../results/hc7_atomic_double_contraction_state_split.md`, and
 `../results/hc7_atomic_bichromatic_bridge_state_localization.md`,
 `../results/hc7_atomic_root_deletion_normalization.md`, and
+`../results/hc7_atomic_near_full_two_carrier_exchange.md`,
+`../results/hc7_atomic_low_root_degree_closure.md`,
+`../results/hc7_atomic_cycle_shore_closure.md`,
 `hc7_atomic_connector_tree_bridge_audit.md`.
 
 In the separate two-lobe proper-row branch, an exact bounded falsifier found
