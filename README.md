@@ -42,6 +42,14 @@ a reversible one-/two-hole model rotation, or a coherent fixed-pair
 certificate.  What remains is a composition theorem for a whole rotation
 component.  Reversible local rotations are not a descent.
 
+One new label-faithful local handoff is available: a reversed rooted-`K_4`
+expansion together with two full packets always contains a named
+`K_7^vee` model.  A width-five sharpness example shows that the same static
+data need not contain `K_7`, so this is an S1 input rather than a terminal
+outcome.  See the [handoff theorem](results/hc7_exact7_cross_lobe_rooted_k4_handoff.md),
+its [audit](results/hc7_exact7_cross_lobe_rooted_k4_handoff_audit.md), and
+the [upgrade barrier](barriers/hc7_exact7_rooted_k4_k7_upgrade_barrier.md).
+
 ### S2. Actual seven-adhesions — partly closed
 
 If `nu_i` is the maximum number of disjoint connected boundary-full packets
@@ -202,19 +210,26 @@ proper-minor state, label-preserving near-`K_7` regeneration, or the
 fixed-pair endgame.  No equality state or global descent measure has yet
 been transported.
 
-The nonplanar part of the first family is now closed uniformly.  If the
-three-connected lobe component contains no two disjoint duty carriers,
-three four-terminal web certificates synchronize to one literal face:
-seven-connectivity excludes every clique cell and Whitney uniqueness joins
-the three pages.  Hall then selects six distinct portals, and nonreflection
-forces their facial duty word to be `A B D A B D`; the component has order
-at least six.  Under a simultaneous side-specific cofacial matching, the
-literal cross-lobe linkage is the reversal
-`a_1-t_3, a_2-t_2, a_3-t_1`.  This is geometry, not state transport: the
-reversed paths do not legally attain the transposed equality partition.
-The immediate target is therefore a proper-minor/Kempe transition from this
-literal alternating page to reflection, a named near-`K_7` handoff, or one
-coherent two-vertex terminal certificate.
+The entire first, cross-lobe family is now closed uniformly.  The
+common-face theorem puts all six complete portal sets on one facial cycle
+and Hall selects representatives in duty order `A B D A B D`.  A new
+circle lemma bounds the total six-label portal incidence by `|F|+6` whenever
+no two duties have disjoint facial carriers.  Planar Euler curvature and
+minimum degree seven force at least `2|F|+6`, a contradiction.  This closes
+arbitrary portal multiplicities, rooted-expansion outcomes, and parallel
+strips at once; no equality-state transport is needed.
+
+The single active one-sibling target is therefore the second family
+
+```text
+N_S(J)={c,a_1,t_2,t_3},
+```
+
+where every possible second-duty gate completion is absent or all nonempty
+completion sets are concentrated at one literal gate vertex.  The required
+next theorem must turn that concentration into attained-duty reflection, a
+labelled near-`K_7` handoff with a well-founded composition step, or the
+fixed-pair endgame.
 
 Controlling sources:
 
@@ -246,6 +261,8 @@ Controlling sources:
   and its [audit](results/hc7_exact7_one_sibling_gate_funnel_audit.md);
 - [cross-lobe common-face theorem](results/hc7_exact7_cross_lobe_common_face.md)
   and its [audit](results/hc7_exact7_cross_lobe_common_face_audit.md);
+- [cross-lobe curvature exchange](results/hc7_exact7_cross_lobe_curvature_exchange.md)
+  and its [audit](results/hc7_exact7_cross_lobe_curvature_exchange_audit.md);
 - [three-gate prescribed-pullback barrier](barriers/hc7_exact7_three_gate_pullback_matching_barrier.md)
   and its [verifier](barriers/hc7_exact7_three_gate_pullback_matching_barrier_verify.py);
 - [permutation-labelled encoding gap](barriers/hc7_exact7_permutation_path_encoding_gap.md);

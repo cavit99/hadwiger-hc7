@@ -59,6 +59,15 @@ Principal normalization inputs:
 * `../results/hc7_near_k7_rotation_pair_overlap.md`; and
 * `../results/hc7_near_k7_one_hole_height_gap.md`.
 
+One audited local handoff is also available.  A reversed rooted-`K_4`
+expansion on the six cross-lobe labels, together with two disjoint
+`S`-full packets and the attained paired-triangle boundary state, contains
+a literal label-faithful `K_7^vee` model.  The companion width-five example
+shows that these static hypotheses do not force `K_7`; the handoff is an
+S1 input, not a terminal outcome.  Sources:
+`../results/hc7_exact7_cross_lobe_rooted_k4_handoff.md` and
+`../barriers/hc7_exact7_rooted_k4_k7_upgrade_barrier.md`.
+
 ### S2. Actual adhesions of order seven — **`(1,3)` CLOSED; `(1,1)`, `(1,2)` OPEN**
 
 For an actual seven-boundary `S`, let `nu_i` be the maximum number of
@@ -302,33 +311,39 @@ lexicographic measure is currently justified: the descended lobe becomes
 thin, the next rich component need not be nested, and the audited S1
 rotations include involutions.
 
-The first family now has one uniform geometric normalization.  Pairwise
-failure of two original duty carriers lets the generalized Two Paths
-Theorem place each pair of duty stars on a web page.  Seven-connectivity
-removes every clique cell, and nonadjacent opposite-lobe witnesses plus
-Whitney uniqueness force all six literal portal sets onto one common face.
-The component has order at least six; a Hall cut then gives six distinct
-portals, and nonreflection forces their cyclic duty word to be
+The first family is now closed uniformly.  Pairwise failure of two original
+duty carriers lets the generalized Two Paths Theorem place each pair of
+duty stars on a web page.  Seven-connectivity removes every clique cell,
+and nonadjacent opposite-lobe witnesses plus Whitney uniqueness force all
+six complete literal portal sets onto one common face.  The component has
+order at least six; a Hall cut then gives six distinct representatives, and
+nonreflection forces their cyclic duty word to be
 
 \[
                          A\ B\ D\ A\ B\ D.
 \]
 
-With a simultaneous side-specific cofacial matching, three-connectivity
-also gives the literal reversal
+On that literal cycle, failure of any two disjoint duty carriers confines
+each portal set to its selected sector.  Each of the six adjacent portal-set
+pairs overlaps in at most one vertex, so the total six-label incidence is at
+most `|F|+6`.  Planar Euler curvature and minimum degree seven force at
+least `2|F|+6`, a contradiction.  Hence the attained state reflects.  This
+closes arbitrary portal multiplicities and both rooted-expansion and
+parallel-strip outcomes without transporting a new equality state.
+Sources: `../results/hc7_exact7_cross_lobe_common_face.md` and
+`../results/hc7_exact7_cross_lobe_curvature_exchange.md`.
 
-\[
-                 a_1t_3,\qquad a_2t_2,\qquad a_3t_1.
-\]
+The sole remaining one-sibling family is therefore
 
-This closes every nonplanar cross-lobe instance and replaces unrelated web
-completions by one actual facial cycle.  It deliberately does not identify
-the reversal with a palette permutation: only the middle original duty is
-fixed, and neither the transposed equality blocks nor their representative
-adjacencies are automatically attained.  The next exact implication is a
-proper-minor/Kempe state transition, a named missing-row near-`K_7` handoff,
-or a fixed-pair terminal certificate from this alternating page.  Source:
-`../results/hc7_exact7_cross_lobe_common_face.md`.
+```text
+N_S(J)={c,a_1,t_2,t_3},
+```
+
+where every possible second-duty gate completion is absent or all nonempty
+completion sets are concentrated at one literal gate vertex.  The next
+exact implication must turn this concentration into attained-state
+reflection, a label-faithful near-`K_7` handoff with well-founded
+composition, or the fixed-pair terminal outcome.
 
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
