@@ -112,6 +112,24 @@ while a direct two-anchor contraction synchronizes the exact state
 Sources: [singleton-component closure](results/hc7_exact7_two_component_singleton_closure.md)
 and its [independent audit](results/hc7_exact7_two_component_singleton_closure_audit.md).
 
+A third audited theorem gives a genuinely multishore exact-state
+synchronization principle.  If one component contains two adjacent labelled
+carriers for independent blocks `I,J`, three boundary vertices remain, and
+at least two other full components are available, the state returned using
+those two components can be reproduced on every component side and glued.
+The duty-aware form requires only the literal adjacencies needed by the
+state actually returned, rather than complete carrier contact.
+
+Applied to the complementary two-lobe lock, this closes the whole branch in
+which both defect pairs are independent.  If exactly one defect pair is an
+edge, it also closes every case where the opposite independent pair contacts
+both edge endpoints, or contacts one endpoint which is adjacent to the
+retained singleton.  A survivor therefore has a literal edge in at least
+one defect pair and sharply sparse cross-duty contact.
+
+Sources: [multishore synchronization](results/hc7_exact7_multishore_state_synchronization.md)
+and its [independent audit](results/hc7_exact7_multishore_state_synchronization_audit.md).
+
 This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
 Moser-specific paired-state component closures whenever its component and
 disjoint-packet hypotheses hold.  Those earlier results remain valid
@@ -129,12 +147,16 @@ Prove one bridge-stable exchange theorem for a residual `(1,2)` cell:
 > state and strictly decrease a declared rooted measure.
 
 The immediate obstruction is not another boundary support pattern.  After
-the singleton closure, it is that two full packets can be interlaced inside
-one connected rich component or can lie in nonsingleton low-connectivity
-components, so the common-face cell cut has additional bridge exits.  The
-current packet-bridge rotation is a reversible local move; the missing
-theorem must compose a whole stable bridge component without losing literal
-labels or the attained state.
+the singleton and multishore closures, it is that two full packets can be
+interlaced inside one connected rich component, can lie in nonsingleton
+low-connectivity components, or can form the complementary two-lobe lock
+with an edged defect pair and sparse cross-duty contact.  The current
+packet-bridge rotation is a reversible local move; the missing theorem must
+compose a whole stable bridge component without losing literal labels or
+the attained state.  Static boundary data alone are insufficient: an
+explicit complementary-lock quotient has no `K_6` minor, so the next step
+must spend internal portal geometry, seven-connectivity, or a proper-minor
+state transition.
 
 Controlling inputs:
 
@@ -148,6 +170,8 @@ Controlling inputs:
   and [audit](results/hc7_exact7_portal_matching_stable_skeleton_audit.md);
 - [binary-duty cycle-or-gate theorem](results/hc7_exact7_binary_duty_cycle_or_gate.md)
   and [audit](results/hc7_exact7_binary_duty_cycle_or_gate_audit.md).
+- [multishore state synchronization](results/hc7_exact7_multishore_state_synchronization.md)
+  and [audit](results/hc7_exact7_multishore_state_synchronization_audit.md).
 
 ### S4. Other interfaces — open
 

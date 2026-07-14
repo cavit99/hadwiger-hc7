@@ -421,8 +421,35 @@ the complete pure-Moser two-component theorem closes the first, and a direct
 two-anchor exact-state gluing closes the second.  Source:
 `../results/hc7_exact7_two_component_singleton_closure.md`.
 
-Nonsingleton cutvertex-free components and the connected-rich case remain
-open.
+A uniform multishore synchronization theorem now closes a further infinite
+branch without choosing the returned colouring in advance.  If one
+component supplies adjacent labelled carriers for independent blocks `I,J`
+and the residual boundary is a three-set containing an edge, two other full
+components first produce an actual exact state.  A third full component and
+the same two labelled carriers then reproduce that state separately on
+every component side, after which palettes align and glue.  Its duty-aware
+form records precisely which retained singletons each carrier representative
+must see.
+
+For the complementary two-lobe lock
+
+```
+Delta(X)={a1,a2}=:P,    Delta(Y)={t1,t2}=:T,
+```
+
+this proves that `P,T` cannot both be independent.  If `P` is an edge and
+`T` is independent, put `D=N_H(T) cap P`; every survivor satisfies
+`|D|<=1`, and if `D={p}` then `cp` is absent.  The symmetric statement holds
+with `P,T` exchanged.  Source:
+`../results/hc7_exact7_multishore_state_synchronization.md`.
+
+Thus the precise two-component residue is a nonsingleton cutvertex-free
+complementary lock with at least one edged defect pair, sparse cross-duty
+contact as above, and the previously forced Kempe-component locks.  Static
+boundary data do not close it: a certified finite quotient realizing these
+contacts has no `K_6` minor.  Internal portal distribution,
+seven-connectivity, or a proper-minor transition must supply the next
+strict exchange.  The connected-rich case also remains open.
 
 For a nonempty bipartite boundary, an independent cutvertex theorem also
 funds the bipartition state except for one crossed two-lobe geometry:
