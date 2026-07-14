@@ -583,8 +583,21 @@ a labelled near model, or a strictly smaller literal full seven-adhesion.
 The **active gap** is no longer portal geometry.  It is exact-state descent
 composition: transport the attained paired duties or a demand-at-most-two
 return across either displayed boundary map, or turn a changed packet vector
-into the global S1/fixed-pair handoff.  No current theorem proves that the
-old equality state or the `(1,2)` packet vector survives the descent.
+into the global S1/fixed-pair handoff.  No current theorem transports the
+old equality state through the descent, and packet-vector preservation can
+still fail in the two-lobe matching obstruction.
+
+The support-four three-cut now has a stronger state-free capacity theorem.
+Give every lobe and gate its literal support in `S`; two disjoint capacity
+edges partition the shore into adjacent connected near-full carriers and
+force a labelled `K_7^vee`.  Exit matching then proves that every gate with
+at least three lobes gives that handoff or a strict packet-vector `(1,2)`
+descendant.  With two lobes, matching number one has only lobe-centred star
+or triangle support form: the gate-centred star would expose the five-cut
+`A union {t}`.  The exact remaining obligations are legal state selection
+at the strict descendant and a dynamic break of those two-lobe compulsory
+resources.  Source:
+`../results/hc7_exact7_threecut_capacity_transition.md`.
 
 The frontier has at least fourteen surplus packet contacts, but that count
 cannot be used as a static splitting theorem.  A verified 18-vertex graph

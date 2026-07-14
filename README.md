@@ -268,23 +268,36 @@ with its [audit](results/hc7_exact7_four_connected_basis_cover_closure_audit.md)
 
 ### Active target: support-four three-cut composition
 
-The only local transition left in the paired connected-rich width-two
-geometry is a support-four lobe behind a literal three-cut.  For its new
-boundary `Omega=T union N_S(D)`, prove one terminal-or-recursive theorem:
+The state-free geometry of the support-four transition is now sharper.
+Associate to every lobe and every one of the three gates its literal
+boundary support.  A two-edge matching in the resulting capacity graph
+partitions the shore into adjacent connected carriers whose supports both
+have order at least five and cover `S`; the audited two-defect theorem then
+gives a labelled `K_7^vee`.  Exit matching shows that every support-four
+three-cut with at least three lobes gives that near-model handoff or a
+strict new packet-vector `(1,2)` adhesion.  If only two lobes remain, the
+matching obstruction is a lobe-centred star or one capacity triangle; the
+apparent gate-centred star is impossible because it gives a five-cut.
 
-> At the new literal boundary `Omega`, either reproduce a legally attained
-> state of demand at most two and reflect it; pull back the three named
-> paired duties so that the smaller shore is a valid `(1,2)` recursive
-> instance; or regenerate a labelled near-`K_7`/fixed-pair handoff.  A
-> recursive outcome must strictly decrease the active shore order.
+Source: [three-cut capacity transition](results/hc7_exact7_threecut_capacity_transition.md)
+and its [independent audit](results/hc7_exact7_threecut_capacity_transition_audit.md).
+
+The terminal-or-recursive theorem still needed is now exact:
+
+> At a strict `(1,2)` descendant `Omega=T union N_S(D)`, legally attain a
+> demand-at-most-two state, transport the three named duties with a strict
+> state measure, or regenerate a labelled near-`K_7`/fixed-pair handoff.
+> In the two-lobe branch, the same conclusion must break the compulsory
+> lobe-centred star/triangle resource.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
-yet proved is that the old equality state or the rich-side packet vector
-survives this map.  A verified order-minimal architecture shows that the
-descended vector can be `(1,1)` and every natural paired pullback can fail,
-even under exact seven-connectivity, `chi=7`, Dirac's inequalities, and
-legal old-state attainment.  That architecture contains an explicit
-`K_7` and is not minor-minimal.  Thus a positive theorem must use
+yet proved is that a legally useful equality state survives this map.  In
+the capacity theorem's two-packet outcome the descendant vector is again
+`(1,2)`; in the remaining two-lobe obstruction it may collapse to `(1,1)`.
+A verified order-minimal architecture exhibits that collapse and defeats
+every natural paired pullback even under exact seven-connectivity, `chi=7`,
+Dirac's inequalities, and legal old-state attainment.  It contains an
+explicit `K_7` and is not minor-minimal.  Thus a positive theorem must use
 `K_7`-minor-freeness or the full proper-minor response; local packet and
 state data alone are exhausted.
 
@@ -341,6 +354,8 @@ Controlling inputs:
   and [audit](results/hc7_exact7_cofacial_portal_degree_obstruction_audit.md).
 - [four-connected basis-cover closure](results/hc7_exact7_four_connected_basis_cover_closure.md)
   and [audit](results/hc7_exact7_four_connected_basis_cover_closure_audit.md).
+- [three-cut capacity transition](results/hc7_exact7_threecut_capacity_transition.md)
+  and [audit](results/hc7_exact7_threecut_capacity_transition_audit.md).
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
   and its dependency-free verifier.
 - [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
@@ -359,11 +374,12 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the exact-seven descent-composition theorem above.  The new boundary and
-strictly smaller full shore are literal and audited; the attained paired
-state and packet vector are not yet transported.  After that, arbitrary
-attained demand-three states, `(1,1)`, larger adhesions, and S1 rotation
-components remain.
+is the exact-seven state-selection/composition theorem above.  Multi-lobe
+support-four gates now yield a labelled near model or a strict `(1,2)`
+descendant, but no theorem transports a legally useful state across that
+descent; the two-lobe lobe-star/triangle dynamics are also open.  After
+that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
+and S1 rotation components remain.
 
 Finite certificates in this repository prove only the interfaces stated in
 their accompanying notes.  They do not replace an unbounded exchange
