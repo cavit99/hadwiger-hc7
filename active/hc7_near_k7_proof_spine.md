@@ -20,8 +20,9 @@ needed.
 
 The active dependency-level target is the stateful support-four composition
 theorem stated in `hc7_stateful_support_four_goal.md`.  Its first mandatory
-milestone is a bridge-compatible state lift for the one-branch compulsory
-atom.  The goal is deliberately broader than closing one finite atom and
+milestone is the `z`-rooted connector composition lemma for the separating-
+edge branch of the one-branch compulsory atom.  The goal is deliberately
+broader than closing one finite atom and
 narrower than `HC_7`: it must close the connected-rich paired width-two
 support-four transition by a common legal state, a terminal outcome, or a
 strict state-carrying `(1,2)` descent.  An unlabelled near model or an
@@ -685,19 +686,39 @@ Second, the smallest four-vertex rich packet path has been classified over
 all 8,192 trace-legal edge extensions.  A blocking path can genuinely traverse
 both packets without giving an escape or near model, but every extension of
 that frozen architecture either has `K_7^vee` or retains the canonical
-fixed-pair terminal.  The live atom must therefore branch inside a packet or
-change first-hit ownership dynamically.  Source:
+fixed-pair terminal.  Under the current strict terminal list this does not
+remove the architecture: three singleton near-model triggers do not certify
+the canonical pair, and no decreasing normalized S1 handoff is known.  The
+classification is retained as a finite laboratory rather than a closure.
+Source:
 `../results/hc7_atomic_four_vertex_packet_path_classification.md`.
 
 The current constructive checkpoint supplies independently attained blocking
-paths on both bipartition duties.  The associated carrier contractions
-commute as graph operations but their returned state languages are disjoint.
-The exact incompatibility is that the trace contraction needs the compulsory
-edge `zu_*`, while the five bridge locks exist only in colourings of
-`G-zu_*`.  A positive composition theorem must lift one rich-side path to a
-literal thin-side parity repair, or turn the failed lift into the terminal
-near model/fixed pair/strict descent.  Source:
-`hc7_atomic_blocking_path_packet_escape.md`.
+paths on both bipartition duties.  The raw commuting-contraction comparison
+does not align their states, but two literal couplings now sharpen the atom.
+
+For disjoint `e=zu_*` and a rich edge `f=xy`, every colouring of `G/e/f`
+satisfies a boundary-preserving saturation fork: literal `z` sees all five
+alternative colours, or both literal rich endpoints do.  At a leaf of a
+selected path/`Y` core, the rich branch forces five boundary contacts, a
+chord, or an off-core bridge attachment.
+
+For a final two-duty bichromatic trace, every separating edge (including a
+boundary--rich edge) localizes the compressed demand-at-most-two state to
+one colouring of `G-f`.  All five `f`-locks coexist there, and the old-colour
+lock necessarily contains a literal connector between the two named duty
+blocks whose internal vertices lie in the thin shore.  If no edge separates
+the blocks, two edge-disjoint rich-side routes exist.
+
+Thus the next theorem is a `z`-rooted connector composition: split the
+minimal thin tree joining `z` to the connector into two adjacent labelled
+carriers satisfying the exact frontier list/duty criterion, or decode
+failure as `K_7`, a valid fixed pair, a decreasing normalized handoff, or a
+strict state-carrying seven-adhesion descent.  Colour saturation alone is
+not a palette-to-label lift.  Sources:
+`hc7_atomic_blocking_path_packet_escape.md`,
+`../results/hc7_atomic_double_contraction_state_split.md`, and
+`../results/hc7_atomic_bichromatic_bridge_state_localization.md`.
 
 In the separate two-lobe proper-row branch, an exact bounded falsifier found
 no seven-connected nonpeel instance among dense lobes or every eligible

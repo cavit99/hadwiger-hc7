@@ -24,19 +24,29 @@ valid fixed-pair terminal, or a strictly smaller state-carrying `(1,2)`
 instance.  An unlabelled near model or an unspecified `(1,1)` handoff is
 not a success outcome.
 
-The first falsifiable milestone is the one-branch compulsory-bridge atom.
-For a literal path-or-`Y` packet core `B`, compare the exact boundary-state
-set returned by deleting the unique bridge `zu` with the union of the sets
-returned by deleting or contracting one rich-core edge.  The existing
-critical-pinch theorem supplies literal boundary states and five entrances,
-but no current theorem forces the required intersection.
+The first falsifiable milestone is now the **`z`-rooted connector
+composition lemma** in the one-branch compulsory-bridge atom.  The former
+comparison of independently chosen deletion-state families had no coupling
+mechanism and has been retired.  Two new audited local mechanisms replace
+it.  A colouring of the double contraction of `zu` and a rich edge gives an
+exact thin-saturation/rich-saturation fork.  Separately, a separating edge
+of the final bichromatic trace carries one compressed state, all five edge
+locks, and a literal connector through the opposite thin shore.  The next
+theorem must split the minimal tree joining that connector to `z` into the
+two labelled carriers required by the exact list/duty criterion, or return a
+literal terminal, a normalized labelled handoff, or a strict state-carrying
+seven-adhesion descent.
 
 This choice follows a new literature and barrier audit.  Generalized web
 theorems are uncoloured, permutation-labelled path theorems require a total
 action which the present rotations do not yet have, and rooted-folio
-theorems do not preserve exact colour-extension states.  Accordingly the
-programme will not substitute another routing theorem or finite census for
-the missing state-preserving composition.
+theorems do not preserve exact colour-extension states.  The local
+double-critical-edge theorem supplies five colour-distinguished common
+neighbours only when deleting both edge ends lowers the chromatic number to
+five; using those contacts as five rooted bags would otherwise require the
+still-unavailable five-colour Strong Hadwiger principle.  Accordingly the
+programme will use that theorem only inside the labelled connector geometry,
+not as a substitute for state-preserving composition.
 
 ## Frozen kernel
 
@@ -414,26 +424,46 @@ nor `K_7^vee`.  It therefore falsifies the geometry-only implication
 “blocking path implies packet-disjoint escape.”  Nevertheless, across all
 `2^13=8,192` trace-legal extensions of this frozen four-vertex rich path,
 every packet-number-two graph either contains a labelled `K_7^vee` or the
-canonical pair deletion is `K_5`-minor-free.  Thus this entire finite
-first-hit architecture closes; a live obstruction must branch inside a
-packet/web or use a proper-minor transition that changes first-hit ownership.
+canonical pair deletion is `K_5`-minor-free.  This is a complete finite
+classification, but it is **not** a terminal closure under the current
+strict outcome list: nine singleton triggers give only `K_7^vee`, and three
+of those have a `K_5` minor after deleting the canonical pair.  They remain
+in scope until the near-model programme supplies a normalized decreasing
+handoff.  The classification is therefore a laboratory and falsifier, not
+permission to remove the whole four-vertex architecture.
 
 Sources: [four-vertex packet-path classification](results/hc7_atomic_four_vertex_packet_path_classification.md),
 its [independent audit](results/hc7_atomic_four_vertex_packet_path_classification_audit.md),
 and the adjacent exact verifier.
 
 The current constructive checkpoint produces blocking paths on **both**
-bipartition duties, but in independently attained colourings.  For a
-duty--duty path, the two relevant carrier contractions commute as graph
-operations, yet their returned exact-state languages are disjoint in a
-counterexample.  More sharply, the exact trace contraction requires the
-compulsory bridge `zu`, whereas all five bridge Kempe locks are supplied only
-by colourings of `G-zu`.  No present theorem puts the trace and locks into one
-legal state.  This is the live composition obstruction, rather than a lack of
-paths.
+bipartition duties, but in independently attained colourings.  The raw
+commuting-contraction square does not align their states.  Two sharper
+couplings are now available.
 
-Source: [atomic blocking-path checkpoint](active/hc7_atomic_blocking_path_packet_escape.md)
-(proved partial result; not yet promoted as a closure).
+First, for disjoint edges `e=zu` and `f=xy`, a six-colouring of `G/e/f`
+lifts to the same literal boundary state on both sides whenever `z` and one
+rich endpoint can be recoloured.  Hence every such colouring satisfies the
+exact alternative: literal `z` sees all five alternative colours, or both
+`x,y` do.  At a leaf of a selected path/`Y` core, the rich branch forces
+five boundary contacts, a chord, or a genuine off-core bridge attachment.
+
+Second, in the final two-duty trace, a separating bichromatic edge can be
+localized.  Swapping its boundary-side components merges the two duty
+blocks to a demand-at-most-two state; packet reflection then gives one full
+minor colouring containing that exact compressed state and all five edge
+locks.  The old-colour lock must leave the rich shore and therefore contains
+a literal connector between the two named duty blocks whose interior lies
+in the thin shore.  If there is no separating edge, edge-Menger gives two
+edge-disjoint rich-side duty routes.
+
+These facts put state and routing into the same colouring, but still do not
+split the thin shore into the two labelled carriers.  That is the live
+composition obstruction.
+
+Sources: [atomic blocking-path checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
+[double-contraction state split](results/hc7_atomic_double_contraction_state_split.md),
+and [bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md).
 
 The terminal-or-recursive theorem still needed is now exact:
 
@@ -534,6 +564,10 @@ Controlling inputs:
   and exact verifier.
 - [atomic blocking-path constructive checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
   which is partial and not a closure.
+- [atomic double-contraction state split](results/hc7_atomic_double_contraction_state_split.md)
+  and [audit](results/hc7_atomic_double_contraction_state_split_audit.md).
+- [atomic bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md)
+  and [audit](results/hc7_atomic_bichromatic_bridge_state_localization_audit.md).
 - [bounded adaptive peel-or-six-cut probe](active/hc7_two_lobe_peel_or_six_cut_probe.md)
   and its exact verifier; this is evidence, not a theorem.
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
@@ -561,12 +595,15 @@ descent.  In a two-lobe support-four cell, every non-singleton full-row
 lobe is closed; the labelled proper-row split and singleton lobe remain.
 Compulsory Hall descents of order two or three now strictly descend; their
 only nondecreasing residue is the atomic width-two bridge/Kempe lock, and
-its compressible states are closed.  The exact atom now has blocking paths
-on both duties, but only in different minor colourings.  Its carrier-state
-obstruction is a single parity bit, while the trace contraction uses `zu`
-and the bridge locks use `G-zu`; no audited transition yet reconciles those
-two state languages.  The four-vertex packet path is closed, so the first
-unresolved atom has genuine packet branching or a changing first-hit owner.
+its compressible states are closed.  The exact atom now has a canonical
+double-contraction saturation fork.  In the separating-edge trace branch it
+also has, in one proper-minor colouring, the compressed state, five locks,
+and an opposite-shore duty connector.  No audited theorem yet enlarges the
+minimal `z`-to-connector tree into the two adjacent literal carriers with
+the correct frontier lists/duties, or decodes failure as a strict terminal
+or recursive outcome.  The four-vertex packet path is classified but not
+fully terminal under the strict outcome list; generic `K_7^vee` triggers
+still require a normalized near-model handoff.
 After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
 and S1 rotation components remain.
 

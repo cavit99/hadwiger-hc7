@@ -67,79 +67,81 @@ Prove that at least one of the following occurs.
    already-audited low-cut, component, and four-connected normalizations,
    it either reaches outcomes 1--2 or re-enters this same support-four class
    with oriented thin-shore order at most `|L'|<|L|`.
+4. There is a normalized labelled `S1/S4` handoff together with an explicit
+   well-founded rank which strictly decreases under the handoff.  The named
+   normalization must be strong enough for the receiving spine theorem;
+   the mere existence of `K_7^vee` is not enough.
 
 An unlabelled `K_7^\vee` minor, an unspecified `(1,1)` adhesion, or an
 unaccompanied smaller separator is not an outcome of the theorem.  Those
 objects belong to the still-open `S1/S4` programmes and cannot be used to
 declare this goal met.
 
-## First mandatory milestone: one-branch bridge-state lift
+## First mandatory milestone: `z`-rooted connector composition
 
-Use the atomic compulsory-portal setup with unique bridge `e=zu`.  A
-witnessed tuple consists of one of the legally attained blocking trace
-colourings, one shortest blocking path `L_0` in that colouring (of either
-audited endpoint type), two disjoint edge-minimal connected `S`-full packet
-trees `P_0,Q_0`, and an inclusion-minimal connected rich-shore subgraph `B`
-containing
-`P_0 union Q_0 union (L_0-S)`.  Among all witnessed tuples, select one
-minimizing
+Use the atomic compulsory-portal setup with unique bridge `e=zu`.  Start
+with a legally attained final two-duty trace.  Let `B,C` be the two
+anticomplete equality blocks which remain to be merged in the rich-side
+bichromatic graph.
 
-\[
-                 (|V(B)|,|E(B)|,|E(L_0)|)
-\]
+The audited localization theorem gives an exhaustive alternative.
 
-lexicographically over all witnessed tuples.  Fix any tuple attaining this
-minimum; the theorem must hold for every minimizing tuple.  The first
-milestone covers the case in which its `B` is a subdivision of a tree with
-maximum degree at most three and at most one vertex of degree three:
-equivalently, an arbitrary path or `Y` core.  Only the exact frozen
-four-rich-vertex path architecture from the audited
-`8,192`-extension classification may be removed as already completed;
-longer zero-branch paths remain in scope.
+1. A separating bichromatic edge `f` (rich-internal or boundary--rich)
+   carries the compressed state `Pi/BC`, all five literal `f`-Kempe locks,
+   and a literal `B-C` path `P` whose internal vertices lie in the opposite
+   thin shore `A`.
+2. There are two edge-disjoint literal `B-C` routes in the rich closed
+   shore.
 
-For a six-colouring `phi`, let `pi_S(phi)` be its equality partition on the
-literal boundary.  Define
+The first milestone closes alternative 1.  Let `T` be an inclusion-minimal
+connected subgraph of `A` containing the internal vertices of `P` and the
+compulsory vertex `z` (adding a shortest `z`-to-`P` path when necessary).
+Work with the literal `T`-bridge decomposition; `T` is not assumed induced
+and omitted chords or external bridges may not be discarded.
 
-\[
- \mathcal D_e=
- \{\pi_S(\phi):\phi\in\operatorname{Col}_6(G-e)\}
-\]
-
-and, since every edge of `B` lies wholly in the rich open shore,
+When `f=xy` is rich-internal, the independently audited
+double-contraction theorem supplies, in every colouring of `G/e/f`, the
+canonical alternative
 
 \[
- \mathcal O_B=
- \bigcup_{f\in E(B)}
- \left(
-  \{\pi_S(\psi):\psi\in\operatorname{Col}_6(G-f)\}
-  \cup
-  \{\pi_S(\psi):\psi\in\operatorname{Col}_6(G/f)\}
- \right).
+ z\text{ sees all five alternative colours}
+ \quad\hbox{or}\quad
+ x,y\text{ both see all five alternative colours}.       \tag{M1}
 \]
 
-The critical-pinch theorem already puts every six-colouring of `G-e` on the
-literal seven-adhesion.  Every such live state has packet demand at least
-three: if its demand were at most two, the two rich full packets would
-reproduce it on the intact thin closed shore, contradicting the
-critical-pinch nonextension conclusion.  Compare this state family with
-the deletion/contraction family `O_B`.
+At a selected-core leaf the rich branch forces five boundary contacts, a
+literal chord, or a genuine external bridge attachment.  When `f` is a
+boundary-incidence edge, its boundary end is already a named portal anchor;
+do not apply (M1) by recolouring that boundary end.
 
-Prove one of:
+Prove one of the following strict outcomes.
 
-* `D_e cap O_B` is nonempty, which gives the opposite-operation collision
-  and six-colours `G`;
-* a legal reassignment of two named disjoint adjacent connected thin-side
-  carriers whose recomputed literal contact lists are list-colourable,
-  equivalently satisfy the common-orientation success side of the audited
-  two-carrier criterion, and hence yield target outcome 1;
-* a literal `K_7` or the fixed-pair terminal; or
-* an actual `(1,2)` exact-seven descent with smaller oriented thin shore,
-  explicit boundary map, and legally attained recursive state.
+* Split `T` together with selected `T`-bridges into two disjoint nonempty
+  connected adjacent thin carriers.  For a connected bipartite frontier,
+  their literal lists must admit one common bipartition orientation.  For
+  the exceptional `K_{1,3} dotunion K_3` frontier, retain one triangle
+  vertex `U` and list-colour
+  `F=K_{1,3} dotunion K_2`, with the audited automatic retained duty.
+  The resulting exact carrier state then reflects and six-colours `G`.
+* Produce a literal `K_7` model or a valid fixed pair whose deletion is
+  `K_5`-minor-free.
+* Produce a normalized labelled `S1/S4` handoff with an explicit decreasing
+  handoff rank, not merely an unlabelled `K_7^vee` minor.
+* Produce an actual `(1,2)` exact-seven descent with smaller oriented thin
+  shore, explicit boundary map, and a legally attained recursive paired
+  state.
 
-This is the first uniform extension of the completed four-vertex
-packet-path cell.  Do not enlarge to two branch vertices until the arbitrary
-path-or-`Y` milestone is proved or a counterexample satisfying every frozen
-literal hypothesis is certified.
+Failure must be expressed as a literal separator/bridge certificate that
+feeds one of the last three outcomes.  A claim that colour saturation alone
+supplies labelled carriers is invalid.
+
+The frozen four-rich-vertex path classification remains in scope under
+this strict outcome list.  Its nine singleton triggers supply
+`K_7^vee`, but three do not certify the canonical fixed pair and no
+decreasing normalized handoff has yet been proved.
+
+Only after the separating-edge branch is closed should the milestone move
+to alternative 2, where two edge-disjoint rich routes must be decoded.
 
 ## Research constraints
 
@@ -160,12 +162,12 @@ literal hypothesis is certified.
 ## Success and stopping tests
 
 The goal succeeds only when the target theorem is proved and independently
-audited.  The first milestone is falsified if a labelled path-or-`Y` atom is
-found which satisfies the entire frozen kernel, has
-`D_e cap O_B=emptyset`, has no legal carrier reassignment satisfying the
-list criterion, has no terminal outcome, and has no strict state-carrying
-descent.  A barrier missing seven-connectivity, `K_7`-minor-freeness, or full
-minor-criticality does not falsify the target.
+audited.  The first milestone is falsified only by a graph satisfying the
+entire frozen kernel and the localized separating-edge hypotheses, while
+having no legal carrier split, no literal/fixed-pair terminal, no decreasing
+normalized handoff, and no strict state-carrying descent.  A barrier missing
+seven-connectivity, `K_7`-minor-freeness, or full minor-criticality does not
+falsify the target.
 
 Even success leaves arbitrary demand-three `(1,2)` states, `(1,1)`, larger
 adhesions, and global `S1` rotation coherence.  It would close a genuine
@@ -184,3 +186,12 @@ The closest current tools do not supply the theorem directly:
 * [Dvořák--Swart](https://arxiv.org/abs/2504.07764) shows that abstract
   boundary-colouring languages can be realized with great freedom, so the
   literal critical geometry is indispensable.
+* [Kawarabayashi--Pedersen--Toft](https://doi.org/10.37236/359) gives
+  prescribed-colour generalized Kempe paths and one common neighbour in
+  every colour for a double-critical edge.  This is an input only when
+  `chi(G-{x,y})=5`; it does not itself manufacture five labelled branch
+  sets.
+* [Martinsson--Steiner](https://arxiv.org/abs/2209.00594) proves the Strong
+  Hadwiger statement for four colours and the prescribed-singleton `K_5`
+  consequence.  The five-colour rooted statement needed to turn an
+  arbitrary colourful common neighbourhood into five bags is not supplied.
