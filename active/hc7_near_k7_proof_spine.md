@@ -411,8 +411,18 @@ as the full third carrier.  An audited adaptive boundary theorem chooses the
 thin forced block after the two defects are known but before the proper-minor
 colouring is returned, and reflects every possible return.  Therefore both
 components of a surviving two-component rich shore are cutvertex-free.
-Singleton components and the connected-rich case remain open.  Source:
-`../results/hc7_exact7_rich_cutpacket_exchange.md`.
+Source: `../results/hc7_exact7_rich_cutpacket_exchange.md`.
+
+The singleton component is now also eliminated inside the frozen
+129-boundary residual.  Reorienting at it produces a degree-seven vertex
+with exactly two exterior components, because the opposite packet number is
+one.  Dirac and the audited residual extraction leave only `M` and `M+13`;
+the complete pure-Moser two-component theorem closes the first, and a direct
+two-anchor exact-state gluing closes the second.  Source:
+`../results/hc7_exact7_two_component_singleton_closure.md`.
+
+Nonsingleton cutvertex-free components and the connected-rich case remain
+open.
 
 For a nonempty bipartite boundary, an independent cutvertex theorem also
 funds the bipartition state except for one crossed two-lobe geometry:

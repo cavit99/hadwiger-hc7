@@ -101,6 +101,17 @@ bound `|F|+6` contradicts the curvature lower bound `2|F|+6`.
 Sources: [uniform reflection theorem](results/hc7_exact7_uniform_paired_curvature_reflection.md)
 and its [independent audit](results/hc7_exact7_uniform_paired_curvature_reflection_audit.md).
 
+A second audited theorem closes every **singleton component** in a
+two-component rich shore of the frozen 129-boundary residual.  Reorienting
+at the singleton gives a degree-seven vertex with exactly two exterior
+components.  Dirac and the frozen residual leave only the Moser spindle and
+`M+13`; the former is covered by the complete two-component Moser theorem,
+while a direct two-anchor contraction synchronizes the exact state
+`25|46|0|1|3` in the latter.
+
+Sources: [singleton-component closure](results/hc7_exact7_two_component_singleton_closure.md)
+and its [independent audit](results/hc7_exact7_two_component_singleton_closure_audit.md).
+
 This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
 Moser-specific paired-state component closures whenever its component and
 disjoint-packet hypotheses hold.  Those earlier results remain valid
@@ -117,12 +128,13 @@ Prove one bridge-stable exchange theorem for a residual `(1,2)` cell:
 > Every recursive adhesion outcome must transport a legally attained exact
 > state and strictly decrease a declared rooted measure.
 
-The immediate obstruction is not another boundary support pattern.  It is
-that two full packets can be interlaced inside one connected rich component,
-or can lie in low-connectivity components, so the common-face cell cut has
-additional bridge exits.  The current packet-bridge rotation is a reversible
-local move; the missing theorem must compose a whole stable bridge component
-without losing literal labels or the attained state.
+The immediate obstruction is not another boundary support pattern.  After
+the singleton closure, it is that two full packets can be interlaced inside
+one connected rich component or can lie in nonsingleton low-connectivity
+components, so the common-face cell cut has additional bridge exits.  The
+current packet-bridge rotation is a reversible local move; the missing
+theorem must compose a whole stable bridge component without losing literal
+labels or the attained state.
 
 Controlling inputs:
 
