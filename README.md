@@ -181,12 +181,26 @@ monotone templates covering `11,520+13,824` quotients; an independent replay
 rechecked connectivity, disjointness, and all 21 bag adjacencies without
 using the verifier's graph routines.
 
-Thus the only surviving gate residue is the **one-sibling**
-(one-return-lobe) configuration.  Its sibling may be self-full or may have
-an exit set of order one, two, or three.  No equality state has been
-transported, and no global descent measure follows.  The active handoff
-target is therefore label-preserving near-`K_7` regeneration, a genuinely
-attained state, or the fixed-pair endgame in this one-sibling gate.
+The remaining **one-sibling** gate is now sharply funnelled by a
+parameter-uniform Hall principle.  If boundary labels missed by both lobes
+can enter the old component only through its three-gate, they have distinct
+gate representatives.  Combining those representatives with the attained
+paired-triangle duties reflects every support pattern except, after
+renaming, exactly:
+
+1. the cross-lobe family `T subseteq N_S(J)`; or
+2. `N_S(J)={c,a_1,t_2,t_3}`, where every possible second-duty gate
+   completion is absent or all nonempty completion sets are concentrated at
+   one literal gate vertex.
+
+This is an infinite-family reduction by literal duty carriers, not a
+boundary census.  It is also sharp at the static level: a fourteen-vertex
+treewidth-five quotient remains `K_7`-minor-free even when the gate is a
+triangle and the lobe quotient is `K_5` minus one edge.  Therefore the live
+handoff must use internal portal distribution, a genuinely attained
+proper-minor state, label-preserving near-`K_7` regeneration, or the
+fixed-pair endgame.  No equality state or global descent measure has yet
+been transported.
 
 Controlling sources:
 
@@ -214,6 +228,8 @@ Controlling sources:
   and its [audit](results/hc7_exact7_three_gate_exit_matching_audit.md);
 - [paired-state common-exit gate closure](results/hc7_exact7_common_exit_gate_closure.md)
   and its [audit](results/hc7_exact7_common_exit_gate_closure_audit.md);
+- [one-sibling Hall-and-duty funnel](results/hc7_exact7_one_sibling_gate_funnel.md)
+  and its [audit](results/hc7_exact7_one_sibling_gate_funnel_audit.md);
 - [three-gate prescribed-pullback barrier](barriers/hc7_exact7_three_gate_pullback_matching_barrier.md)
   and its [verifier](barriers/hc7_exact7_three_gate_pullback_matching_barrier_verify.py);
 - [permutation-labelled encoding gap](barriers/hc7_exact7_permutation_path_encoding_gap.md);

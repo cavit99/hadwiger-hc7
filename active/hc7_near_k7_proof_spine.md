@@ -271,13 +271,35 @@ host is six-colourable, so it is a barrier to that inference rather than an
 `HC_7` counterexample.  Source:
 `../barriers/hc7_exact7_three_gate_pullback_matching_barrier.md`.
 
-The next S3-to-S1 handoff must close the sole remaining **one-sibling** gate
-by a literal missing-row model regeneration, a genuinely attained new state,
-or the fixed-pair terminal outcome.  Its sibling may be self-full, or if
-non-self-full may use any nonempty subset of the three discarded labels as
-its exit set.  An unlabelled regenerated `K_6` model is insufficient.  No
-global lexicographic measure is currently justified: the descended lobe
-becomes thin, the next rich component need not be nested, and the audited S1
+The sole remaining **one-sibling** gate now has an exact Hall-and-duty
+normal form.  Write `A={c,a_1,a_2,a_3}` for the dutyless lobe support,
+`T={t_1,t_2,t_3}`, and `B=N_S(J)` for the sibling support.  Boundary
+labels in `T-B` have a matching into the literal three-gate: Hall failure
+would give the separator
+
+\[
+              (S-U)\cup N_X(U)
+\]
+
+of order below seven.  Distinct gate representatives give two adjacent
+duty-correct carriers and reflect the attained state.  Consequently every
+nonreflecting one-sibling gate lies in exactly one of:
+
+1. `T subseteq B`; or
+2. after permuting duties, `B={c,a_1,t_2,t_3}`, with all possible
+   second-duty gate completions either absent or concentrated at one gate.
+
+Source: `../results/hc7_exact7_one_sibling_gate_funnel.md`.
+
+This normal form is statically sharp.  A fourteen-vertex quotient with a
+literal triangle gate and three-connected lobe quotient has treewidth at
+most five, so no contraction of each lobe to one vertex can finish the
+argument.  The next S3-to-S1 handoff must therefore split labelled portals
+inside a lobe, legally attain a replacement state, regenerate a labelled
+missing-row near-`K_7` model, or produce the fixed-pair terminal outcome.
+An unlabelled regenerated `K_6` model is insufficient.  No global
+lexicographic measure is currently justified: the descended lobe becomes
+thin, the next rich component need not be nested, and the audited S1
 rotations include involutions.
 
 The demand-three residue now has one common exact endgame.  For each of its
