@@ -16,6 +16,17 @@ The second outcome is terminal: `HC_5` four-colours the remainder and two
 fresh colours finish.  A planar remainder is sufficient but stronger than
 needed.
 
+## Current research goal
+
+The active dependency-level target is the stateful support-four composition
+theorem stated in `hc7_stateful_support_four_goal.md`.  Its first mandatory
+milestone is a bridge-compatible state lift for the one-branch compulsory
+atom.  The goal is deliberately broader than closing one finite atom and
+narrower than `HC_7`: it must close the connected-rich paired width-two
+support-four transition by a common legal state, a terminal outcome, or a
+strict state-carrying `(1,2)` descent.  An unlabelled near model or an
+unspecified `(1,1)` handoff is not counted as progress.
+
 ## Frozen kernel
 
 For a hypothetical minor-minimal counterexample `G`:

@@ -14,6 +14,30 @@ This file is the sole authoritative status statement.  The
 [proof spine](active/hc7_near_k7_proof_spine.md) records the detailed
 dependency chain.
 
+## Active research goal
+
+The active dependency-level target is the
+[stateful support-four composition theorem](active/hc7_stateful_support_four_goal.md).
+It aims to carry a legally attained paired state through the remaining
+connected-rich width-two `(1,2)` transition, or return a literal `K_7`, a
+valid fixed-pair terminal, or a strictly smaller state-carrying `(1,2)`
+instance.  An unlabelled near model or an unspecified `(1,1)` handoff is
+not a success outcome.
+
+The first falsifiable milestone is the one-branch compulsory-bridge atom.
+For a literal path-or-`Y` packet core `B`, compare the exact boundary-state
+set returned by deleting the unique bridge `zu` with the union of the sets
+returned by deleting or contracting one rich-core edge.  The existing
+critical-pinch theorem supplies literal boundary states and five entrances,
+but no current theorem forces the required intersection.
+
+This choice follows a new literature and barrier audit.  Generalized web
+theorems are uncoloured, permutation-labelled path theorems require a total
+action which the present rotations do not yet have, and rooted-folio
+theorems do not preserve exact colour-extension states.  Accordingly the
+programme will not substitute another routing theorem or finite census for
+the missing state-preserving composition.
+
 ## Frozen kernel
 
 For a hypothetical minor-minimal counterexample `G`:
