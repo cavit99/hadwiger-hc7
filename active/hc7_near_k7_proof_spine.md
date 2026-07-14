@@ -129,10 +129,24 @@ The exact constructive target is therefore:
 > a new return of demand at most two, or one fixed `K_5`-killing pair.
 
 For the attained paired-triangle state in the connected-rich width-two
-frontier, the carrier geometry in this target is now complete: it yields a
-labelled near model or a strict full exact-seven descent.  The current
-subtarget is to pull back or replace the attained state across that descent;
-the general 129-type statement below remains broader and open.
+frontier, the four-connected thin shore is now closed outright.  For every
+four-label portal family, seven-connectivity gives a rank-four transversal
+matroid; every literal portal is a nonloop and therefore lies in a basis.
+The rooted-`K_4`/common-face dichotomy then gives a labelled `K_7^vee` or a
+cofacial curvature contradiction.  No prescribed-edge extension, equality
+state pullback, or recursive descent is needed.  The sole local transition
+left in this frontier is the support-four lobe of a genuine three-cut; the
+general 129-type statement below remains broader and open.  Source:
+`../results/hc7_exact7_four_connected_basis_cover_closure.md`.
+
+Naive composition across that three-cut is false even after imposing exact
+seven-connectivity, `chi=7`, all local Dirac inequalities, and legal
+paired-state attainment: an order-fourteen certificate descends from
+`(1,2)` to `(1,1)` and has no compatible paired pullback.  It contains a
+literal `K_7` and is not minor-minimal.  Hence the missing positive theorem
+must spend `K_7`-minor-freeness or the universal proper-minor response,
+rather than more local packet bookkeeping.  Source:
+`../barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md`.
 
 The exact unconditional boundary residue has 129 types.  Of these, 119 have
 a combinatorially safe partition which has not yet been forced by a legal
