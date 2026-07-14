@@ -189,7 +189,7 @@ monotone templates covering `11,520+13,824` quotients; an independent replay
 rechecked connectivity, disjointness, and all 21 bag adjacencies without
 using the verifier's graph routines.
 
-The remaining **one-sibling** gate is now sharply funnelled by a
+The **one-sibling** gate is sharply funnelled by a
 parameter-uniform Hall principle.  If boundary labels missed by both lobes
 can enter the old component only through its three-gate, they have distinct
 gate representatives.  Combining those representatives with the attained
@@ -201,16 +201,7 @@ renaming, exactly:
    completion is absent or all nonempty completion sets are concentrated at
    one literal gate vertex.
 
-This is an infinite-family reduction by literal duty carriers, not a
-boundary census.  It is also sharp at the static level: a fourteen-vertex
-treewidth-five quotient remains `K_7`-minor-free even when the gate is a
-triangle and the lobe quotient is `K_5` minus one edge.  Therefore the live
-handoff must use internal portal distribution, a genuinely attained
-proper-minor state, label-preserving near-`K_7` regeneration, or the
-fixed-pair endgame.  No equality state or global descent measure has yet
-been transported.
-
-The entire first, cross-lobe family is now closed uniformly.  The
+The first, cross-lobe family is closed uniformly.  The
 common-face theorem puts all six complete portal sets on one facial cycle
 and Hall selects representatives in duty order `A B D A B D`.  A new
 circle lemma bounds the total six-label portal incidence by `|F|+6` whenever
@@ -219,17 +210,22 @@ minimum degree seven force at least `2|F|+6`, a contradiction.  This closes
 arbitrary portal multiplicities, rooted-expansion outcomes, and parallel
 strips at once; no equality-state transport is needed.
 
-The single active one-sibling target is therefore the second family
+The second, single-missing family is now closed by the same curvature
+mechanism with a weaker synchronization hypothesis.  Pairwise artificial-
+terminal pages exist for all three duty pairs.  The two genuinely crossed
+duties have nonadjacent portals in the two lobes, and those two witness
+pairs synchronize all three pages to one face, including the complete
+gate-supported duty stars.  The order-five component is impossible; Hall,
+facial alternation, and curvature then force reflection.  Thus **every
+one-sibling three-gate residue is eliminated**, including both isolated and
+concentrated gate contacts.
 
-```text
-N_S(J)={c,a_1,t_2,t_3},
-```
-
-where every possible second-duty gate completion is absent or all nonempty
-completion sets are concentrated at one literal gate vertex.  The required
-next theorem must turn that concentration into attained-duty reflection, a
-labelled near-`K_7` handoff with a well-founded composition step, or the
-fixed-pair endgame.
+The live gate branch is now only the state-free exit-matching outcome which
+creates a new `(1,2)` cell with the descended lobe as its thin shore.  Its
+boundary state is not transported and no well-founded composition measure
+is known.  The next theorem must legally select a reflectable state there,
+produce a label-faithful near-`K_7`/fixed-pair handoff, or orient this descent
+by a genuinely decreasing invariant.
 
 Controlling sources:
 
@@ -263,6 +259,10 @@ Controlling sources:
   and its [audit](results/hc7_exact7_cross_lobe_common_face_audit.md);
 - [cross-lobe curvature exchange](results/hc7_exact7_cross_lobe_curvature_exchange.md)
   and its [audit](results/hc7_exact7_cross_lobe_curvature_exchange_audit.md);
+- [single-missing curvature exchange](results/hc7_exact7_single_missing_curvature_exchange.md)
+  and its [audit](results/hc7_exact7_single_missing_curvature_exchange_audit.md);
+- [weaker crossed-duty carrier barrier](barriers/hc7_exact7_single_missing_crossed_duty_barrier.md)
+  and its [verifier](barriers/hc7_exact7_single_missing_crossed_duty_barrier_verify.py);
 - [three-gate prescribed-pullback barrier](barriers/hc7_exact7_three_gate_pullback_matching_barrier.md)
   and its [verifier](barriers/hc7_exact7_three_gate_pullback_matching_barrier_verify.py);
 - [permutation-labelled encoding gap](barriers/hc7_exact7_permutation_path_encoding_gap.md);

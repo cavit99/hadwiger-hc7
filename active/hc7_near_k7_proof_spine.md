@@ -280,7 +280,7 @@ host is six-colourable, so it is a barrier to that inference rather than an
 `HC_7` counterexample.  Source:
 `../barriers/hc7_exact7_three_gate_pullback_matching_barrier.md`.
 
-The sole remaining **one-sibling** gate now has an exact Hall-and-duty
+The **one-sibling** gate has an exact Hall-and-duty
 normal form.  Write `A={c,a_1,a_2,a_3}` for the dutyless lobe support,
 `T={t_1,t_2,t_3}`, and `B=N_S(J)` for the sibling support.  Boundary
 labels in `T-B` have a matching into the literal three-gate: Hall failure
@@ -299,17 +299,6 @@ nonreflecting one-sibling gate lies in exactly one of:
    second-duty gate completions either absent or concentrated at one gate.
 
 Source: `../results/hc7_exact7_one_sibling_gate_funnel.md`.
-
-This normal form is statically sharp.  A fourteen-vertex quotient with a
-literal triangle gate and three-connected lobe quotient has treewidth at
-most five, so no contraction of each lobe to one vertex can finish the
-argument.  The next S3-to-S1 handoff must therefore split labelled portals
-inside a lobe, legally attain a replacement state, regenerate a labelled
-missing-row near-`K_7` model, or produce the fixed-pair terminal outcome.
-An unlabelled regenerated `K_6` model is insufficient.  No global
-lexicographic measure is currently justified: the descended lobe becomes
-thin, the next rich component need not be nested, and the audited S1
-rotations include involutions.
 
 The first family is now closed uniformly.  Pairwise failure of two original
 duty carriers lets the generalized Two Paths Theorem place each pair of
@@ -333,17 +322,25 @@ parallel-strip outcomes without transporting a new equality state.
 Sources: `../results/hc7_exact7_cross_lobe_common_face.md` and
 `../results/hc7_exact7_cross_lobe_curvature_exchange.md`.
 
-The sole remaining one-sibling family is therefore
+The second family is now closed as well.  Pairwise artificial-terminal
+pages require no opposite-lobe witness.  Duties `2,3` each have a
+nonadjacent portal pair across `K,J`, and these two pairs identify all three
+facial pages by Whitney uniqueness.  One face therefore contains every
+portal of all six non-`c` labels, including the complete gate-supported
+first-duty stars.  The order-five case is excluded by outerplanarity or
+minimum degree; Hall gives six distinct representatives for larger `C`,
+and the same facial-incidence/curvature contradiction reflects the state.
+Thus isolated and concentrated gate contacts both close.  Source:
+`../results/hc7_exact7_single_missing_curvature_exchange.md`.
 
-```text
-N_S(J)={c,a_1,t_2,t_3},
-```
-
-where every possible second-duty gate completion is absent or all nonempty
-completion sets are concentrated at one literal gate vertex.  The next
-exact implication must turn this concentration into attained-state
-reflection, a label-faithful near-`K_7` handoff with well-founded
-composition, or the fixed-pair terminal outcome.
+Consequently no one-sibling outcome of the three-gate exit theorem remains.
+Together with the common-exit closure, the only live gate transition is its
+first outcome: a new exact-seven `(1,2)` cell with the descended lobe on the
+thin side.  No exact boundary state is transported, the next rich component
+need not be nested, and the audited S1 rotations contain involutions.  The
+next exact implication is therefore a state-selection or well-founded
+composition theorem for that descended cell, or a label-faithful
+near-`K_7`/fixed-pair terminal handoff.
 
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
