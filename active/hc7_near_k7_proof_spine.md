@@ -333,14 +333,37 @@ and the same facial-incidence/curvature contradiction reflects the state.
 Thus isolated and concentrated gate contacts both close.  Source:
 `../results/hc7_exact7_single_missing_curvature_exchange.md`.
 
-Consequently no one-sibling outcome of the three-gate exit theorem remains.
-Together with the common-exit closure, the only live gate transition is its
-first outcome: a new exact-seven `(1,2)` cell with the descended lobe on the
-thin side.  No exact boundary state is transported, the next rich component
-need not be nested, and the audited S1 rotations contain involutions.  The
-next exact implication is therefore a state-selection or well-founded
-composition theorem for that descended cell, or a label-faithful
-near-`K_7`/fixed-pair terminal handoff.
+A stronger uniform theorem now subsumes both one-sibling closures and every
+other paired-state gate analysis whenever the geometric object is a whole
+three-connected rich component.  Let
+
+\[
+ \Pi=\{\{a_1,t_1\},\{a_2,t_2\},\{a_3,t_3\},\{c\}\}
+\]
+
+be a legally attained state with the named inter-block and `c` adjacencies.
+If the rich shore contains a three-connected `S`-full component `C` and a
+disjoint connected `S`-full packet `Q`, then `Pi` reflects, for every order
+and every portal distribution.  A four-label Hall separator makes at least
+two duties have distinct nonadjacent portal witnesses.  The two-witness
+common-face theorem places all six complete portal stars on one face.
+Orders four and five contradict outerplanarity or minimum degree; at larger
+order a six-label SDR has cyclic word `A B D A B D`, and the facial
+incidence upper bound `|F|+6` contradicts the curvature lower bound
+`2|F|+6`.  Source:
+`../results/hc7_exact7_uniform_paired_curvature_reflection.md`.
+
+Consequently the old one-sibling and common-exit taxonomies are no longer
+the active paired-state component problem.  The live obstruction lies
+outside the new theorem's hypotheses: two full packets can be interlaced in
+one connected rich component, or a full component can have a low-order
+internal decomposition.  External packet bridges then create exits that
+invalidate the common-face cell cut.  The next exact implication is one
+state-preserving packet-extraction/composition theorem: reflect directly,
+extract a whole three-connected full component disjoint from another full
+packet, or return a label-faithful near-`K_7`/fixed-pair certificate.  Any
+recursive adhesion outcome must transport a legal exact state and decrease
+a declared rooted measure.
 
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
@@ -370,10 +393,16 @@ colourings, so no simultaneous routing is asserted.  Source:
 
 Thus the named constructive substep in S3 is:
 
-> After the proper-minor state is attained, extract a rich-shore carrier
-> discharging its exact duty `D_U(B)`, or turn failure into a literal `K_7`,
-> a common exact state, or the fixed-pair endgame.  Static contact or defect
-> counts alone cannot do this.
+> Stabilize the bridges of an extremal pair of full packets while preserving
+> the attained labels.  Either expose two duty-correct carriers and reflect,
+> isolate a whole three-connected full component so the uniform curvature
+> theorem applies, or return a labelled near-`K_7`/fixed-pair certificate.
+> A descended adhesion is useful only with a legally transported exact state
+> and a strict rooted descent.
+
+For an arbitrary demand-three state, this remains the more general task of
+extracting a carrier which discharges its exact duty `D_U(B)`.  Static
+contact or defect counts alone cannot do so.
 
 One infinite subfamily now supplies that carrier.  If the rich shore has
 two components and one has a cutvertex, split that component at the
