@@ -649,6 +649,26 @@ not be the global fixed pair; the composition note includes a sharp
 `K_2`-join falsifier.  Source:
 `../results/hc7_compulsory_portal_bridge_composition.md`.
 
+The atomic state is now compressed to one literal path obstruction.  Use
+the width-two partition `S=I dotunion J dotunion K`, with `I,J`
+independent, `u_* in I`, and `K` empty or a singleton clique.  Contracting
+the thin shore with `I` returns an exact `I`-trace.  Block-Kempe exchanges
+either merge all `J` blocks (and detach `K`) to obtain the demand-at-most-
+two state `I|J` or `I|J|{k}`, which reflects and glues, or produce a
+bichromatic path in the rich shore between two named `J` blocks or from
+`k` to `J`.  The live implication is not path existence but state-faithful
+packet escape: the path may intersect both full packets, and contracting it
+does not preserve the independently produced `I`-trace.  Source:
+`../results/hc7_compulsory_portal_atomic_state_exchange.md`.
+
+In the separate two-lobe proper-row branch, an exact bounded falsifier found
+no seven-connected nonpeel instance among dense lobes or every eligible
+thin atlas skeleton through seven vertices.  Its useful invariant is the
+uncrossing of four literal mixed-terminal separators into a six-cut, unless
+their crossing gives a labelled near model.  This remains a candidate
+unbounded theorem, not a promoted closure.  Source:
+`hc7_two_lobe_peel_or_six_cut_probe.md`.
+
 The frontier has at least fourteen surplus packet contacts, but that count
 cannot be used as a static splitting theorem.  A verified 18-vertex graph
 has exact seven-connectivity, minimum degree seven, packet vector `(1,2)`,

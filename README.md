@@ -348,6 +348,20 @@ Sources: [compulsory-portal composition](results/hc7_compulsory_portal_bridge_co
 its [independent audit](results/hc7_compulsory_portal_bridge_composition_audit.md),
 and the [saturated bridge-fan lemma](results/hc7_compulsory_portal_bridge_fan.md).
 
+The atomic state language now has a uniform trace exchange.  For the
+width-two clique-OCT partition `S=I dotunion J dotunion K`, contracting the
+thin shore with `I` legally produces an exact `I`-trace.  Generalized block
+Kempe exchanges then either compress the boundary to `I|J` or
+`I|J|{k}`, whose demand is at most two and therefore reflects, or return a
+literal bichromatic path through the rich shore joining two named `J`
+blocks (or `k` to `J`).  Hence every Kempe-compressible atomic state is
+closed.  The path alternative is not yet a new carrier: it may intersect
+both full packets, and contracting it does not preserve the independently
+manufactured trace.
+
+Sources: [atomic trace exchange](results/hc7_compulsory_portal_atomic_state_exchange.md)
+and its [independent audit](results/hc7_compulsory_portal_atomic_state_exchange_audit.md).
+
 The terminal-or-recursive theorem still needed is now exact:
 
 > At a strict `(1,2)` descendant `Omega=T union N_S(D)`, produce a literal
@@ -358,7 +372,9 @@ The terminal-or-recursive theorem still needed is now exact:
 > branch is closed.  At a
 > prescribed-portal Hall descent, `|U|=2,3` already gives a strict twin
 > boundary; the sole nondecreasing output is the atomic bridge `z-u_*`
-> over its locked width-two six-core.
+> over its locked width-two six-core.  There the remaining output is a
+> trace-blocking rich-shore path; compose it with the packets and bridge
+> locks without losing the attained trace.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
 yet proved is that a legally useful equality state survives this map.  In
@@ -433,6 +449,10 @@ Controlling inputs:
 - [compulsory-portal composition](results/hc7_compulsory_portal_bridge_composition.md),
   [audit](results/hc7_compulsory_portal_bridge_composition_audit.md), and
   [bridge fan](results/hc7_compulsory_portal_bridge_fan.md).
+- [atomic compulsory-portal trace exchange](results/hc7_compulsory_portal_atomic_state_exchange.md)
+  and [audit](results/hc7_compulsory_portal_atomic_state_exchange_audit.md).
+- [bounded adaptive peel-or-six-cut probe](active/hc7_two_lobe_peel_or_six_cut_probe.md)
+  and its exact verifier; this is evidence, not a theorem.
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
   and its dependency-free verifier.
 - [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
@@ -457,7 +477,9 @@ descendant, but no theorem transports a legally useful state across that
 descent.  In a two-lobe support-four cell, every non-singleton full-row
 lobe is closed; the labelled proper-row split and singleton lobe remain.
 Compulsory Hall descents of order two or three now strictly descend; their
-only nondecreasing residue is the atomic width-two bridge/Kempe lock.
+only nondecreasing residue is the atomic width-two bridge/Kempe lock, and
+its compressible states are closed.  The exact atom is now a blocking path
+whose packet intersections prevent state-preserving contraction.
 After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
 and S1 rotation components remain.
 
