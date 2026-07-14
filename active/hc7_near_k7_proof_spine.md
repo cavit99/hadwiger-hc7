@@ -595,8 +595,9 @@ at least three lobes gives that handoff or a strict packet-vector `(1,2)`
 descendant.  With two lobes, matching number one has only lobe-centred star
 or triangle support form: the gate-centred star would expose the five-cut
 `A union {t}`.  The exact remaining obligations are legal state selection
-at the strict descendant and a dynamic break of those two-lobe compulsory
-resources.  Source:
+at the strict descendant and, in the two-lobe resource, a label-faithful
+proper-row split or singleton-lobe exit.  The non-singleton full-row
+resource is closed.  Source:
 `../results/hc7_exact7_threecut_capacity_transition.md`.
 
 The first adaptive state-selection step is now uniform in `k`.  If one
@@ -612,6 +613,17 @@ clique-reservoir seed partition.  A paired width-two tree shows that the
 static lobe supports need not supply one, so the remaining theorem is now a
 literal interior split/rerouting theorem, not a palette-selection theorem.
 Source: `../results/hc7_uniform_adaptive_clique_reservoir_return.md`.
+
+The non-singleton support-four lobe has a literal portal peel.  For
+`N_G(D)=T dotunion A`, `|T|=3`, `|A|=4`, seven-connectivity gives a
+removable `A`-portal `x` such that `D-x` is connected and still meets `T`.
+Either `x` has a proper nonempty row in `A`, or both `{x}` and `D-x` retain
+the full row `A`.  With the second lobe, the full-row outcome gives adjacent
+carriers which are `A`-full and `S`-full; the adaptive theorem then closes
+all three width-two frontiers.  Hence the two-lobe branch no longer needs an
+unlabelled peel: its exact residue is a labelled proper-row split satisfying
+the selected two seed duties, plus the separate singleton-lobe cell.
+Source: `../results/hc7_exact7_support_four_literal_portal_peel.md`.
 
 The prescribed-portal Hall descent now has an exact packet classification.
 Write `U` for the inclusion-minimal deficient old-label set and

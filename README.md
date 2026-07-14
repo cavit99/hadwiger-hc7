@@ -266,7 +266,7 @@ and its [audit](results/hc7_exact7_cofacial_portal_degree_obstruction_audit.md),
 and [four-connected basis-cover closure](results/hc7_exact7_four_connected_basis_cover_closure.md)
 with its [audit](results/hc7_exact7_four_connected_basis_cover_closure_audit.md).
 
-### Active target: support-four three-cut composition
+### Active target: state-preserving support-four composition
 
 The state-free geometry of the support-four transition is now sharper.
 Associate to every lobe and every one of the three gates its literal
@@ -304,6 +304,20 @@ model.
 Sources: [adaptive clique-reservoir return](results/hc7_uniform_adaptive_clique_reservoir_return.md)
 and its [independent audit](results/hc7_uniform_adaptive_clique_reservoir_return_audit.md).
 
+The non-singleton support-four lobe now has a uniform literal peel.  If
+`N_G(D)=T dotunion A`, with `|T|=3`, `|A|=4`, and the far side nonempty,
+seven-connectivity supplies a removable `A`-portal `x` such that `D-x`
+remains connected and still meets `T`.  Either `x` has a proper nonempty
+row in `A`, or both `{x}` and `D-x` retain the full row `A`.  In the latter
+case `{x}` and `(D-x) union T union E` are adjacent carriers, respectively
+`A`-full and `S`-full, so adaptive clique-reservoir return six-colours `G`
+for every width-two frontier.  Thus the full-row branch is closed for every
+order of `D`; the exact live lobe obligation is the labelled proper-row
+split, together with the separate singleton-lobe cell.
+
+Sources: [literal portal peel](results/hc7_exact7_support_four_literal_portal_peel.md)
+and its [independent audit](results/hc7_exact7_support_four_literal_portal_peel_audit.md).
+
 The prescribed-portal Hall transition now has an exact packet
 classification.  If `U` is the minimal deficient old-label set and
 `X=N_L(U)` is the equally sized new gate set (`|U|=|X|<=3`), then the old
@@ -324,8 +338,9 @@ The terminal-or-recursive theorem still needed is now exact:
 > At a strict `(1,2)` descendant `Omega=T union N_S(D)`, produce a literal
 > clique-reservoir seed allocation, transport a useful exact state with a
 > strict measure, or regenerate a labelled near-`K_7`/fixed-pair handoff.
-> In the two-lobe branch, the same conclusion must break the compulsory
-> lobe-centred star/triangle resource by using its expanded interior.  At a
+> In the two-lobe branch, the same conclusion is needed only for a
+> proper-row labelled peel or a singleton lobe; the non-singleton full-row
+> branch is closed.  At a
 > prescribed-portal Hall descent, the sole additional output to compose is
 > the canonical compulsory pair `z-u_*`.
 
@@ -397,6 +412,8 @@ Controlling inputs:
   and [audit](results/hc7_exact7_threecut_capacity_transition_audit.md).
 - [Hall-descent packet classification](results/hc7_exact7_hall_descent_packet_classification.md)
   and [audit](results/hc7_exact7_hall_descent_packet_classification_audit.md).
+- [literal support-four portal peel](results/hc7_exact7_support_four_literal_portal_peel.md)
+  and [audit](results/hc7_exact7_support_four_literal_portal_peel_audit.md).
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
   and its dependency-free verifier.
 - [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
@@ -418,7 +435,9 @@ literal `K_7` or a valid global six-colouring.  The immediate missing step
 is the exact-seven state-selection/composition theorem above.  Multi-lobe
 support-four gates now yield a labelled near model or a strict `(1,2)`
 descendant, but no theorem transports a legally useful state across that
-descent; the two-lobe lobe-star/triangle dynamics are also open.  After
+descent.  In a two-lobe support-four cell, every non-singleton full-row
+lobe is closed; the labelled proper-row split and singleton lobe remain.
+After
 that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
 and S1 rotation components remain.
 
