@@ -446,10 +446,18 @@ with `P,T` exchanged.  Source:
 Thus the precise two-component residue is a nonsingleton cutvertex-free
 complementary lock with at least one edged defect pair, sparse cross-duty
 contact as above, and the previously forced Kempe-component locks.  Static
-boundary data do not close it: a certified finite quotient realizing these
-contacts has no `K_6` minor.  Internal portal distribution,
-seven-connectivity, or a proper-minor transition must supply the next
-strict exchange.  The connected-rich case also remains open.
+boundary-and-lobe data with only one full packet do not close it, but the
+actual `(1,2)` cell has a second full packet on the old thin shore.  Using
+that packet is decisive: the two lobes, the two full packets joined to
+`B_1,B_2`, and `c,B_3` form a spanning labelled `K_7^vee` model whose two
+possible missing spokes share a singleton centre.  The audited near-model
+trichotomies then output `K_7`, an actual separator, or a proper-bag
+deficiency rotation.  Source:
+`../results/hc7_exact7_complementary_lock_near_k7_handoff.md`.
+
+Hence the complementary lock is closed as an `S3` transition and must not
+receive further portal casework.  The connected-rich case and the global
+`S1` rotation/adhesion composition remain open.
 
 For a nonempty bipartite boundary, an independent cutvertex theorem also
 funds the bipartition state except for one crossed two-lobe geometry:

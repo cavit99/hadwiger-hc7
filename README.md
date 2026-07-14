@@ -130,6 +130,19 @@ one defect pair and sharply sparse cross-duty contact.
 Sources: [multishore synchronization](results/hc7_exact7_multishore_state_synchronization.md)
 and its [independent audit](results/hc7_exact7_multishore_state_synchronization_audit.md).
 
+The remaining complementary two-lobe lock now has a direct, audited
+near-model exit.  Its two lobe bags, the old thin full shore joined to one
+paired block, the other rich component joined to a second paired block, and
+the three remaining boundary vertices form a **spanning labelled
+`K_7^vee` model**.  The two possible missing edges share a named singleton
+centre.  Existing near-model trichotomies then return `K_7`, an actual
+separator, or a proper-bag deficiency rotation.  Thus this entire lock has
+left the local portal programme and entered `S1`; it is not a remaining
+two-cut case.
+
+Sources: [complementary-lock handoff](results/hc7_exact7_complementary_lock_near_k7_handoff.md)
+and its [independent audit](results/hc7_exact7_complementary_lock_near_k7_handoff_audit.md).
+
 This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
 Moser-specific paired-state component closures whenever its component and
 disjoint-packet hypotheses hold.  Those earlier results remain valid
@@ -146,17 +159,13 @@ Prove one bridge-stable exchange theorem for a residual `(1,2)` cell:
 > Every recursive adhesion outcome must transport a legally attained exact
 > state and strictly decrease a declared rooted measure.
 
-The immediate obstruction is not another boundary support pattern.  After
-the singleton and multishore closures, it is that two full packets can be
-interlaced inside one connected rich component, can lie in nonsingleton
-low-connectivity components, or can form the complementary two-lobe lock
-with an edged defect pair and sparse cross-duty contact.  The current
+The immediate obstruction is no longer the complementary two-lobe pattern.
+After the singleton, multishore, and near-model-handoff closures, it is that
+two full packets can be interlaced inside one connected rich component or
+can enter the global reversible near-model/adhesion system.  The current
 packet-bridge rotation is a reversible local move; the missing theorem must
-compose a whole stable bridge component without losing literal labels or
-the attained state.  Static boundary data alone are insufficient: an
-explicit complementary-lock quotient has no `K_6` minor, so the next step
-must spend internal portal geometry, seven-connectivity, or a proper-minor
-state transition.
+compose a whole stable bridge or rotation component without losing literal
+labels or the attained state.
 
 Controlling inputs:
 
@@ -172,6 +181,8 @@ Controlling inputs:
   and [audit](results/hc7_exact7_binary_duty_cycle_or_gate_audit.md).
 - [multishore state synchronization](results/hc7_exact7_multishore_state_synchronization.md)
   and [audit](results/hc7_exact7_multishore_state_synchronization_audit.md).
+- [complementary-lock near-model handoff](results/hc7_exact7_complementary_lock_near_k7_handoff.md)
+  and [audit](results/hc7_exact7_complementary_lock_near_k7_handoff_audit.md).
 
 ### S4. Other interfaces — open
 
