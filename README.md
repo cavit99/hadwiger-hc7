@@ -24,18 +24,23 @@ valid fixed-pair terminal, or a strictly smaller state-carrying `(1,2)`
 instance.  An unlabelled near model or an unspecified `(1,1)` handoff is
 not a success outcome.
 
-The first falsifiable milestone is now the **`z`-rooted connector
-composition lemma** in the one-branch compulsory-bridge atom.  The former
+The first falsifiable milestone is now the **rooted path/`Y` bridge-hull
+state-exchange lemma** in the one-branch compulsory-bridge atom.  The former
 comparison of independently chosen deletion-state families had no coupling
-mechanism and has been retired.  Two new audited local mechanisms replace
-it.  A colouring of the double contraction of `zu` and a rich edge gives an
-exact thin-saturation/rich-saturation fork.  Separately, a separating edge
-of the final bichromatic trace carries one compressed state, all five edge
-locks, and a literal connector through the opposite thin shore.  The next
-theorem must split the minimal tree joining that connector to `z` into the
-two labelled carriers required by the exact list/duty criterion, or return a
-literal terminal, a normalized labelled handoff, or a strict state-carrying
-seven-adhesion descent.
+mechanism and has been retired.  A colouring of the double contraction of
+`zu` and a rich edge gives an exact thin-saturation/rich-saturation fork.
+Separately, a separating edge of the final bichromatic trace carries one
+compressed state, all five edge locks, and a literal connector through the
+opposite thin shore.
+
+A new audited normalization removes the root-cutvertex ambiguity.  In every
+nonsingleton atom, deleting the compulsory root `z` leaves one connected
+subgraph meeting all six other boundary literals.  The connector may
+therefore be chosen outside `z`; adjoining a shortest `z`-tail produces a
+literal path or subdivided `Y` with `z` as a leaf.  The next theorem must
+allocate the bridges of that fixed core to the two labelled carriers required
+by the exact list/duty criterion, or return a literal terminal, a normalized
+labelled handoff, or a strict state-carrying seven-adhesion descent.
 
 This choice follows a new literature and barrier audit.  Generalized web
 theorems are uncoloured, permutation-labelled path theorems require a total
@@ -461,9 +466,26 @@ These facts put state and routing into the same colouring, but still do not
 split the thin shore into the two labelled carriers.  That is the live
 composition obstruction.
 
+The thin geometry is now normalized uniformly.  In every nonsingleton
+compulsory atom, `A-z` is connected and is full to `W=S-{u}`.  Hence a
+geometric duty connector can avoid `z`; together with a shortest `z`-tail it
+is a path or one subdivided `Y`, rooted at the leaf `z`.  Every complementary
+component `D` satisfies
+
+\[
+             |N_T(D)|+|N_S(D)|\ge7,
+\]
+
+and equality is an actual exact-seven boundary.  This is not yet a state
+pullback: the replacement connector need not remain bichromatic, and the new
+boundary has no automatically attained equality state.
+
 Sources: [atomic blocking-path checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
 [double-contraction state split](results/hc7_atomic_double_contraction_state_split.md),
-and [bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md).
+and [bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md),
+[root-deletion normalization](results/hc7_atomic_root_deletion_normalization.md),
+its [independent audit](results/hc7_atomic_root_deletion_normalization_audit.md),
+and the [connector-tree bridge audit](active/hc7_atomic_connector_tree_bridge_audit.md).
 
 The terminal-or-recursive theorem still needed is now exact:
 
@@ -568,6 +590,9 @@ Controlling inputs:
   and [audit](results/hc7_atomic_double_contraction_state_split_audit.md).
 - [atomic bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md)
   and [audit](results/hc7_atomic_bichromatic_bridge_state_localization_audit.md).
+- [atomic root-deletion normalization](results/hc7_atomic_root_deletion_normalization.md)
+  and [audit](results/hc7_atomic_root_deletion_normalization_audit.md).
+- [connector-tree bridge audit and next exact lemma](active/hc7_atomic_connector_tree_bridge_audit.md).
 - [bounded adaptive peel-or-six-cut probe](active/hc7_two_lobe_peel_or_six_cut_probe.md)
   and its exact verifier; this is evidence, not a theorem.
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
@@ -576,6 +601,8 @@ Controlling inputs:
   and its executable verifier.
 - [`K_7`-minor-free static-split barrier](barriers/hc7_width2_k7free_static_split_barrier.md)
   and its executable verifier.
+- [connector-saturation barrier](barriers/hc7_atomic_connector_saturation_barrier.md)
+  and its dependency-free verifier.
 
 ### S4. Other interfaces — open
 
@@ -598,10 +625,13 @@ only nondecreasing residue is the atomic width-two bridge/Kempe lock, and
 its compressible states are closed.  The exact atom now has a canonical
 double-contraction saturation fork.  In the separating-edge trace branch it
 also has, in one proper-minor colouring, the compressed state, five locks,
-and an opposite-shore duty connector.  No audited theorem yet enlarges the
-minimal `z`-to-connector tree into the two adjacent literal carriers with
-the correct frontier lists/duties, or decodes failure as a strict terminal
-or recursive outcome.  The four-vertex packet path is classified but not
+and an opposite-shore duty connector.  No audited theorem yet allocates the
+bridges of the normalized rooted path/`Y` into two adjacent literal carriers
+with the correct frontier lists/duties, or decodes the fully crossed bridge
+hull as a strict terminal or recursive outcome.  A clean tree edge closes
+except for one exact same-parity crossed-defect orientation; the live step
+must repair that bit or process the fully crossed hull using a named
+proper-minor transition.  The four-vertex packet path is classified but not
 fully terminal under the strict outcome list; generic `K_7^vee` triggers
 still require a normalized near-model handoff.
 After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,

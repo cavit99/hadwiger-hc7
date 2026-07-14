@@ -20,8 +20,8 @@ needed.
 
 The active dependency-level target is the stateful support-four composition
 theorem stated in `hc7_stateful_support_four_goal.md`.  Its first mandatory
-milestone is the `z`-rooted connector composition lemma for the separating-
-edge branch of the one-branch compulsory atom.  The goal is deliberately
+milestone is the rooted path/`Y` bridge-hull state-exchange lemma for the
+separating-edge branch of the one-branch compulsory atom.  The goal is deliberately
 broader than closing one finite atom and
 narrower than `HC_7`: it must close the connected-rich paired width-two
 support-four transition by a common legal state, a terminal outcome, or a
@@ -710,15 +710,34 @@ lock necessarily contains a literal connector between the two named duty
 blocks whose internal vertices lie in the thin shore.  If no edge separates
 the blocks, two edge-disjoint rich-side routes exist.
 
-Thus the next theorem is a `z`-rooted connector composition: split the
-minimal thin tree joining `z` to the connector into two adjacent labelled
-carriers satisfying the exact frontier list/duty criterion, or decode
-failure as `K_7`, a valid fixed pair, a decreasing normalized handoff, or a
-strict state-carrying seven-adhesion descent.  Colour saturation alone is
-not a palette-to-label lift.  Sources:
+There is now a uniform root normalization.  In every nonsingleton atom,
+`A-z` is connected and meets all six literals of `W=S-{u}`.  A geometric
+duty connector can therefore avoid `z`; retaining that path and adjoining a
+shortest `z`-tail gives a path or subdivided `Y` with `z` as a leaf.  Every
+component `D` outside the core satisfies
+
+\[
+                    |N_T(D)|+|N_S(D)|\ge7,
+\]
+
+and equality gives an actual exact-seven boundary.  The replacement
+connector need not be bichromatic and no equality state is automatically
+transported.
+
+Thus the next theorem is a rooted bridge-hull state exchange: allocate the
+bridges of this fixed path/`Y` to two adjacent labelled carriers satisfying
+the exact frontier list/duty criterion, or decode failure as `K_7`, a valid
+fixed pair, a decreasing normalized handoff, or a strict state-carrying
+seven-adhesion descent.  A clean core edge already closes except for one
+same-parity crossed-defect orientation.  The hard branch is a fully crossed
+bridge hull, where a named proper-minor transition must repair that bit or
+carry the state across the resulting exact boundary.  Colour saturation
+alone is not a palette-to-label lift.  Sources:
 `hc7_atomic_blocking_path_packet_escape.md`,
 `../results/hc7_atomic_double_contraction_state_split.md`, and
-`../results/hc7_atomic_bichromatic_bridge_state_localization.md`.
+`../results/hc7_atomic_bichromatic_bridge_state_localization.md`,
+`../results/hc7_atomic_root_deletion_normalization.md`, and
+`hc7_atomic_connector_tree_bridge_audit.md`.
 
 In the separate two-lobe proper-row branch, an exact bounded falsifier found
 no seven-connected nonpeel instance among dense lobes or every eligible

@@ -77,7 +77,7 @@ unaccompanied smaller separator is not an outcome of the theorem.  Those
 objects belong to the still-open `S1/S4` programmes and cannot be used to
 declare this goal met.
 
-## First mandatory milestone: `z`-rooted connector composition
+## First mandatory milestone: rooted path/`Y` bridge-hull exchange
 
 Use the atomic compulsory-portal setup with unique bridge `e=zu`.  Start
 with a legally attained final two-duty trace.  Let `B,C` be the two
@@ -93,11 +93,24 @@ The audited localization theorem gives an exhaustive alternative.
 2. There are two edge-disjoint literal `B-C` routes in the rich closed
    shore.
 
-The first milestone closes alternative 1.  Let `T` be an inclusion-minimal
-connected subgraph of `A` containing the internal vertices of `P` and the
-compulsory vertex `z` (adding a shortest `z`-to-`P` path when necessary).
-Work with the literal `T`-bridge decomposition; `T` is not assumed induced
-and omitted chords or external bridges may not be discarded.
+The first milestone closes alternative 1.  In the nonsingleton atom the
+audited root-deletion normalization proves that `A-z` is connected and
+meets all six literals of `W=S-{u}`.  Choose a geometric `B-C` path whose
+internal path `Q` lies in `A-z`.  Retain `Q` as a fixed subgraph and adjoin
+a shortest `z`-to-`Q` path stopped at its first hit.  Their union `T` is a
+literal path or subdivided `Y`, with `z` a leaf.  Work with the literal
+`T`-bridge decomposition; `T` is not assumed induced and omitted chords or
+external bridges may not be discarded.  The replacement path is geometric
+and need not be bichromatic.
+
+Every component `D` of `A-T` satisfies
+
+\[
+                     |N_T(D)|+|N_S(D)|\ge7.             \tag{M0}
+\]
+
+Equality gives an actual exact-seven boundary, but no equality state is
+automatically transported to it.
 
 When `f=xy` is rich-internal, the independently audited
 double-contraction theorem supplies, in every colouring of `G/e/f`, the
@@ -131,9 +144,25 @@ Prove one of the following strict outcomes.
   shore, explicit boundary map, and a legally attained recursive paired
   state.
 
+The clean-edge part is structurally isolated.  If no `T`-bridge crosses a
+tree edge, that edge partitions all of `A` into adjacent connected carriers
+each meeting at least six boundary literals.  The exact two-list criterion
+closes unless their two singleton defects lie in the same bipartition side
+of the same frontier component.  The theorem's live core is therefore the
+**crossed-hull state exchange**: repair this one orientation bit by a
+literal bridge reassignment, or process a fully crossed bridge hull into one
+of the strict outcomes above.
+
 Failure must be expressed as a literal separator/bridge certificate that
 feeds one of the last three outcomes.  A claim that colour saturation alone
 supplies labelled carriers is invalid.
+
+The fixed three-gate pullback `{b_i,z_{sigma(i)}}` is not an admissible
+shortcut.  Verified barriers allow all nine old-label--gate pairs to be
+edges and allow the descended packet vector to become `(1,1)`.  A successful
+proof must derive a compatible state from nonreflection,
+`K_7`-minor-freeness, or one named universal proper-minor response; it may
+not assume the prescribed pairing from web geometry.
 
 The frozen four-rich-vertex path classification remains in scope under
 this strict outcome list.  Its nine singleton triggers supply
@@ -179,6 +208,14 @@ The closest current tools do not supply the theorem directly:
 
 * [Humeau--Pous](https://arxiv.org/abs/2505.16431) gives an uncoloured
   two-path/web dichotomy and recursive web composition.
+* [Hayashi--Kawarabayashi--Yoo](https://doi.org/10.1137/23M157082X) gives a
+  four-terminal diamond/`K_{2,3}^+`/`K_5^-` rooted-subdivision trichotomy
+  under stronger relative-separation hypotheses.  It may decode a nonrural
+  hull, but it does not preserve both duty groups or the exact boundary
+  state.
+* [Kawarabayashi--Yu](https://arxiv.org/abs/2606.01586) proves a relative
+  knitted theorem only for `|S|<k/8`; it does not supply seven labelled
+  carriers at the `k=7` interface.
 * [Pap](https://doi.org/10.1007/s00493-007-0056-z) gives a min--max theorem
   for non-returning paths in a genuinely permutation-labelled graph.
 * [Cavallaro--Gorsky--Kreutzer--Thilikos--Wiederrecht](https://arxiv.org/abs/2605.14902)
