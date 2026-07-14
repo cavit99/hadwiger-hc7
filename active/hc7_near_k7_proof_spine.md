@@ -613,6 +613,17 @@ static lobe supports need not supply one, so the remaining theorem is now a
 literal interior split/rerouting theorem, not a palette-selection theorem.
 Source: `../results/hc7_uniform_adaptive_clique_reservoir_return.md`.
 
+The prescribed-portal Hall descent now has an exact packet classification.
+Write `U` for the inclusion-minimal deficient old-label set and
+`X=N_L(U)` for the equally sized new gate set.  Either two disjoint
+`X`-dominating traces in `U` pull the old adjacent packets through to the
+new boundary, the unique alternating `C_6` incidence gives a labelled
+`K_7^vee` through the prescribed edge, or one gate `z` has a unique
+neighbour `u_* in U` and every new full packet contains `u_*`.  Hence the
+Hall branch now has only one canonical packet-collapse interface, rather
+than an arbitrary `(1,1)` transition.  Source:
+`../results/hc7_exact7_hall_descent_packet_classification.md`.
+
 The frontier has at least fourteen surplus packet contacts, but that count
 cannot be used as a static splitting theorem.  A verified 18-vertex graph
 has exact seven-connectivity, minimum degree seven, packet vector `(1,2)`,

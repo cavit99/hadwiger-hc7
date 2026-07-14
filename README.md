@@ -304,13 +304,30 @@ model.
 Sources: [adaptive clique-reservoir return](results/hc7_uniform_adaptive_clique_reservoir_return.md)
 and its [independent audit](results/hc7_uniform_adaptive_clique_reservoir_return_audit.md).
 
+The prescribed-portal Hall transition now has an exact packet
+classification.  If `U` is the minimal deficient old-label set and
+`X=N_L(U)` is the equally sized new gate set (`|U|=|X|<=3`), then the old
+two full packets pull through to two full packets at the descended boundary
+unless one of two literal incidence obstructions occurs.  The alternating
+six-cycle obstruction already supplies a labelled `K_7^vee` through the
+prescribed portal edge.  The only surviving packet-collapse mechanism is a
+**compulsory portal**: one new gate `z` has a unique old-label neighbour
+`u_*`, and every full packet on the descended opposite shore contains
+`u_*`.  Thus this Hall branch no longer has an unspecified packet-vector
+failure.
+
+Sources: [Hall-descent packet classification](results/hc7_exact7_hall_descent_packet_classification.md)
+and its [independent audit](results/hc7_exact7_hall_descent_packet_classification_audit.md).
+
 The terminal-or-recursive theorem still needed is now exact:
 
 > At a strict `(1,2)` descendant `Omega=T union N_S(D)`, produce a literal
 > clique-reservoir seed allocation, transport a useful exact state with a
 > strict measure, or regenerate a labelled near-`K_7`/fixed-pair handoff.
 > In the two-lobe branch, the same conclusion must break the compulsory
-> lobe-centred star/triangle resource by using its expanded interior.
+> lobe-centred star/triangle resource by using its expanded interior.  At a
+> prescribed-portal Hall descent, the sole additional output to compose is
+> the canonical compulsory pair `z-u_*`.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
 yet proved is that a legally useful equality state survives this map.  In
@@ -378,6 +395,8 @@ Controlling inputs:
   and [audit](results/hc7_exact7_four_connected_basis_cover_closure_audit.md).
 - [three-cut capacity transition](results/hc7_exact7_threecut_capacity_transition.md)
   and [audit](results/hc7_exact7_threecut_capacity_transition_audit.md).
+- [Hall-descent packet classification](results/hc7_exact7_hall_descent_packet_classification.md)
+  and [audit](results/hc7_exact7_hall_descent_packet_classification_audit.md).
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
   and its dependency-free verifier.
 - [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
