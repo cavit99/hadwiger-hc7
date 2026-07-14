@@ -168,16 +168,25 @@ old full packets construct two disjoint full packets unless either there is
 exactly one sibling lobe, or at least two siblings all use one common
 singleton exit outside the new boundary.  In every other case the new cell
 is `(1,2)` or `(1,3)`, with the descended lobe as its thin shore; `(1,3)`
-closes by adaptive reflection.  Thus the exact gate residues are the
-**one-return-lobe** and **common-exit** configurations.
+closes by adaptive reflection.
 
-This is not a state-preserving induction and supplies no global descent
-measure.  In particular, a prescribed pullback partition pairing the three
-old support literals with the three gate vertices is not implied: a verified
-seven-connected local architecture makes all nine such pairs edges.  The
-active handoff target is therefore label-preserving near-`K_7` regeneration
-or a genuinely attained state in the two named residues, not a guessed
-descendant equality partition.
+The paired-triangle **common-exit** configuration is now eliminated.  Every
+sibling has the exact support consisting of the common exit plus three of
+the four retained labels.  Fullness of the old rich component forces the
+other two discarded labels to hit the literal three-gate.  Three or more
+siblings close by explicit branch sets or `(1,3)` reflection.  With exactly
+two siblings, a fixed fifteen-vertex quotient contains a literal `K_7` in
+every case.  Its essential finite core is certified solver-free by 37 frozen
+monotone templates covering `11,520+13,824` quotients; an independent replay
+rechecked connectivity, disjointness, and all 21 bag adjacencies without
+using the verifier's graph routines.
+
+Thus the only surviving gate residue is the **one-sibling**
+(one-return-lobe) configuration.  Its sibling may be self-full or may have
+an exit set of order one, two, or three.  No equality state has been
+transported, and no global descent measure follows.  The active handoff
+target is therefore label-preserving near-`K_7` regeneration, a genuinely
+attained state, or the fixed-pair endgame in this one-sibling gate.
 
 Controlling sources:
 
@@ -203,6 +212,8 @@ Controlling sources:
   and its [audit](results/hc7_exact7_binary_duty_cycle_or_gate_audit.md);
 - [state-free three-gate exit matching](results/hc7_exact7_three_gate_exit_matching.md)
   and its [audit](results/hc7_exact7_three_gate_exit_matching_audit.md);
+- [paired-state common-exit gate closure](results/hc7_exact7_common_exit_gate_closure.md)
+  and its [audit](results/hc7_exact7_common_exit_gate_closure_audit.md);
 - [three-gate prescribed-pullback barrier](barriers/hc7_exact7_three_gate_pullback_matching_barrier.md)
   and its [verifier](barriers/hc7_exact7_three_gate_pullback_matching_barrier_verify.py);
 - [permutation-labelled encoding gap](barriers/hc7_exact7_permutation_path_encoding_gap.md);

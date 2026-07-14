@@ -249,6 +249,19 @@ The exact residuals are:
 
 Source: `../results/hc7_exact7_three_gate_exit_matching.md`.
 
+The second residue is now closed in the attained paired-triangle setting.
+Every common-exit sibling has exactly one missing retained label.  The old
+rich component is `S`-full, while none of its lobes sees the other two
+discarded labels, so those labels have literal contacts in the three-gate.
+Three siblings give explicit `K_7` bags or a new exact `(1,3)` cell.  For
+exactly two siblings, contract the two old full packets and the three lobes.
+The resulting fixed fifteen-vertex quotient contains a literal `K_7` for
+every paired-triangle boundary and every placement of the two forced gate
+contacts.  A frozen solver-free catalogue covers the essential
+`11,520+13,824` two-sibling cases with 37 monotone branch-set templates;
+an independent implementation replayed every certificate.  Source:
+`../results/hc7_exact7_common_exit_gate_closure.md`.
+
 No exact equality state has been transported.  A verified 14-vertex,
 seven-connected local architecture satisfies the old `(1,2)` packet data,
 legal paired-triangle attainment, and the dutyless gate trace while every
@@ -258,12 +271,14 @@ host is six-colourable, so it is a barrier to that inference rather than an
 `HC_7` counterexample.  Source:
 `../barriers/hc7_exact7_three_gate_pullback_matching_barrier.md`.
 
-The next S3-to-S1 handoff must close the one-sibling and common-exit residues
+The next S3-to-S1 handoff must close the sole remaining **one-sibling** gate
 by a literal missing-row model regeneration, a genuinely attained new state,
-or the fixed-pair terminal outcome.  An unlabelled regenerated `K_6` model is
-insufficient.  No global lexicographic measure is currently justified: the
-descended lobe becomes thin, the next rich component need not be nested, and
-the audited S1 rotations include involutions.
+or the fixed-pair terminal outcome.  Its sibling may be self-full, or if
+non-self-full may use any nonempty subset of the three discarded labels as
+its exit set.  An unlabelled regenerated `K_6` model is insufficient.  No
+global lexicographic measure is currently justified: the descended lobe
+becomes thin, the next rich component need not be nested, and the audited S1
+rotations include involutions.
 
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
