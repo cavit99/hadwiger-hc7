@@ -492,15 +492,29 @@ packet/state exchange; the theorem does not by itself compose the returned
 near model.  Source:
 `../results/hc7_exact7_three_packet_boundary_core_handoff.md`.
 
-For a nonempty bipartite boundary, an independent cutvertex theorem also
-funds the bipartition state except for one crossed two-lobe geometry:
-distinct defects in the same boundary component at even parity, both missed
-by the cutvertex.  Dirac forces at least three lobe neighbours but does not
-close the cell.  A verified `K_7`-containing counterarchitecture shows that
-connectivity and static Dirac data alone cannot do so; the next step must use
-`K_7`-freeness or a proper-minor state transition.  Source:
-`../results/hc7_exact7_bipartite_cutvertex_exchange.md` and
-`../barriers/hc7_exact7_bipartite_carrier_connectivity_dirac_barrier.md`.
+The entire connected-rich paired-state quotient is now exact.  With the
+thin full packet and an adjacent full cover `P,Q` of the rich shore, a
+three-packet `K_7^vee` exists exactly when the boundary has a `K_4` minor or
+some one-vertex deletion has a triangle-with-pendant minor.  Otherwise the
+paired boundary is a tree, a six-cycle with one leaf, or
+`K_{1,3} dotcup K_3`, hence has treewidth at most two and a clique
+odd-cycle transversal of order at most one.
+
+This classification also closes every thin cutvertex.  A duty-faithful
+split returns the boundary bipartition state on both sides and glues; the
+only apparent two-lobe same-duty lock instead has an explicit seven-bag
+`K_7^vee` model.  Thus the live paired connected-rich geometry is a
+cutvertex-free thin packet over the width-two frontier.  Source:
+`../results/hc7_exact7_connected_rich_width2_frontier.md`.
+
+The frontier has at least fourteen surplus packet contacts, but that count
+cannot be used as a static splitting theorem.  A verified 18-vertex graph
+has exact seven-connectivity, minimum degree seven, packet vector `(1,2)`,
+thirty-nine surplus contacts, and all local Dirac inequalities, yet no
+disjoint carriers funding the two duties.  It contains a literal `K_7`, so
+the positive theorem must use `K_7`-minor-freeness or a genuine proper-minor
+state transition.  Source:
+`../barriers/hc7_exact7_width2_surplus_thin_split_barrier.md`.
 
 The pure-Moser degree-seven cell with exactly two exterior components is now
 closed in full.  A single four-port call on `1,2,3,4` returns adjacent

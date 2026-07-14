@@ -176,30 +176,55 @@ failure is a sparse boundary-web obstruction, not a new packet case.
 Sources: [three-packet boundary-core handoff](results/hc7_exact7_three_packet_boundary_core_handoff.md)
 and its [independent audit](results/hc7_exact7_three_packet_boundary_core_handoff_audit.md).
 
+The connected-rich paired-state quotient is now classified exactly.  After
+partitioning the connected rich shore into adjacent full packets `P,Q`, the
+thin full packet and `P,Q` contain a `K_7^vee` precisely when the boundary
+has a `K_4` minor or some one-vertex deletion has a
+triangle-with-pendant minor.  If neither occurs, the paired boundary is
+exactly a tree, a six-cycle with one pendant vertex, or
+`K_{1,3} dotcup K_3`; in particular it has treewidth at most two and a
+clique odd-cycle transversal of order at most one.  This is an unbounded,
+label-free frontier theorem, not a census of Moser labels.
+
+The same theorem eliminates every cutvertex of the thin packet.  A
+duty-faithful bipartition split gives a common exact state and six-colours
+`G`; the sole apparent two-lobe lock instead has seven explicit bags forming
+a labelled `K_7^vee`.  Thus the paired connected-rich local residue is a
+cutvertex-free thin packet over this width-two boundary.
+
+Sources: [connected-rich width-two frontier](results/hc7_exact7_connected_rich_width2_frontier.md)
+and its [independent audit](results/hc7_exact7_connected_rich_width2_frontier_audit.md).
+
 This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
 Moser-specific paired-state component closures whenever its component and
 disjoint-packet hypotheses hold.  Those earlier results remain valid
 dependencies and laboratories; they are not the active target.
 
-### Active target: state-preserving packet extraction
+### Active target: cutvertex-free width-two state transition
 
-Prove one bridge-stable exchange theorem for a residual `(1,2)` cell:
+Prove one bridge-stable exchange theorem for the residual paired `(1,2)`
+cell:
 
-> From two disjoint rich `S`-full packets and an attained paired-triangle
-> state, either reflect the state, extract a three-connected `S`-full
-> component disjoint from another full packet (so the uniform theorem
-> applies), or produce a label-faithful near-`K_7`/fixed-pair handoff.
-> Every recursive adhesion outcome must transport a legally attained exact
-> state and strictly decrease a declared rooted measure.
+> In the cutvertex-free width-two frontier, either find disjoint adjacent
+> thin carriers funding the two named duties, produce a label-faithful
+> near-`K_7`/fixed-pair handoff, or expose a strictly smaller actual adhesion
+> carrying a legally attained exact state.  Every recursive outcome must
+> strictly decrease a declared rooted measure.
 
-The immediate paired-state obstruction is no longer any two-component
-pattern.  It is that two full packets can be interlaced inside one connected
-rich component whose boundary has no boundary-core handoff, or can enter the
-global reversible near-model/adhesion system.  The current packet-bridge
-rotation is a reversible local move; the missing theorem must compose a
-whole stable bridge or rotation component without losing literal labels or
-the attained state.  Arbitrary attained demand-three states remain a
-separate, more general `S3` obligation.
+The fourteen-contact lower bound from the frontier theorem is not itself a
+solution.  A verified exact-seven, minimum-degree-seven graph has thirty-nine
+surplus contacts and all local Dirac inequalities but no such thin split.
+It deliberately contains a literal `K_7`; therefore the next positive
+theorem must spend `K_7`-minor-freeness or a genuine contraction-critical
+proper-minor transition.  Contact surplus and connectivity alone are now a
+closed route.
+
+The immediate paired-state obstruction is no longer any two-component or
+cutvertex pattern.  It is a cutvertex-free block-terminal web in the thin
+packet, coupled to a reversible near-model/adhesion system.  The missing
+theorem must compose the whole stable bridge or web transition without
+losing literal labels or the attained state.  Arbitrary attained
+demand-three states remain a separate, more general `S3` obligation.
 
 Controlling inputs:
 
@@ -223,6 +248,10 @@ Controlling inputs:
   and [audit](results/hc7_exact7_two_component_paired_trichotomy_audit.md).
 - [three-packet boundary-core handoff](results/hc7_exact7_three_packet_boundary_core_handoff.md)
   and [audit](results/hc7_exact7_three_packet_boundary_core_handoff_audit.md).
+- [connected-rich width-two frontier](results/hc7_exact7_connected_rich_width2_frontier.md)
+  and [audit](results/hc7_exact7_connected_rich_width2_frontier_audit.md).
+- [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
+  and its executable verifier.
 
 ### S4. Other interfaces — open
 
@@ -235,9 +264,9 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the state-preserving packet-extraction theorem above.  After it, arbitrary
-attained demand-three states, `(1,1)`, larger adhesions, and S1 rotation
-components remain.
+is the cutvertex-free width-two state-transition theorem above.  After it,
+arbitrary attained demand-three states, `(1,1)`, larger adhesions, and S1
+rotation components remain.
 
 Finite certificates in this repository prove only the interfaces stated in
 their accompanying notes.  They do not replace an unbounded exchange
