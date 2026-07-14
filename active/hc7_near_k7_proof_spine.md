@@ -661,6 +661,33 @@ packet escape: the path may intersect both full packets, and contracting it
 does not preserve the independently produced `I`-trace.  Source:
 `../results/hc7_compulsory_portal_atomic_state_exchange.md`.
 
+Two audited refinements now make that obstruction exact.  First, two named
+adjacent thin-side carriers synchronize precisely when their literal contact
+lists properly two-colour the width-two frontier; in the connected bipartite
+case the only obstruction is one component-orientation bit.  The
+clique-reservoir duty is automatic in both atomic frontier forms.  Thus a
+legal carrier-piece reassignment closes exactly when its affected portal set
+repairs the conflicting bit.  Source:
+`../results/hc7_exact7_two_carrier_list_obstruction.md`.
+
+Second, the smallest four-vertex rich packet path has been classified over
+all 8,192 trace-legal edge extensions.  A blocking path can genuinely traverse
+both packets without giving an escape or near model, but every extension of
+that frozen architecture either has `K_7^vee` or retains the canonical
+fixed-pair terminal.  The live atom must therefore branch inside a packet or
+change first-hit ownership dynamically.  Source:
+`../results/hc7_atomic_four_vertex_packet_path_classification.md`.
+
+The current constructive checkpoint supplies independently attained blocking
+paths on both bipartition duties.  The associated carrier contractions
+commute as graph operations but their returned state languages are disjoint.
+The exact incompatibility is that the trace contraction needs the compulsory
+edge `zu_*`, while the five bridge locks exist only in colourings of
+`G-zu_*`.  A positive composition theorem must lift one rich-side path to a
+literal thin-side parity repair, or turn the failed lift into the terminal
+near model/fixed pair/strict descent.  Source:
+`hc7_atomic_blocking_path_packet_escape.md`.
+
 In the separate two-lobe proper-row branch, an exact bounded falsifier found
 no seven-connected nonpeel instance among dense lobes or every eligible
 thin atlas skeleton through seven vertices.  Its useful invariant is the

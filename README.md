@@ -362,6 +362,55 @@ manufactured trace.
 Sources: [atomic trace exchange](results/hc7_compulsory_portal_atomic_state_exchange.md)
 and its [independent audit](results/hc7_compulsory_portal_atomic_state_exchange_audit.md).
 
+The carrier side of that atom now has an exact audited state theorem.  Two
+disjoint adjacent connected carriers, labelled by their literal boundary
+contact lists, synchronize with the two opposite full packets exactly when
+the boundary has a proper colouring from those two lists.  On a bipartite
+frontier the complete obstruction is one orientation bit per connected
+component.  The retained-clique extension uses the attained duty
+
+\[
+ I_i\cup\{q:N_{G[S]}(q)\cap I_i=\varnothing\},
+\]
+
+not an unconditional contact defect.  In both atomic width-two frontier
+forms this extra duty is automatic.  Consequently, once a literal thin-side
+carrier split exists, closing the state is equivalent to a legal connected
+piece reassignment whose changed portal set removes every conflicting parity
+demand.  The theorem characterizes that move exactly; it does not manufacture
+the move.
+
+Sources: [two-carrier list obstruction and reassignment](results/hc7_exact7_two_carrier_list_obstruction.md)
+and its [independent audit](results/hc7_exact7_two_carrier_list_obstruction_audit.md).
+
+The smallest trapped packet geometry is also completely classified.  A
+twelve-vertex shell has a unique bichromatic duty path that necessarily
+passes through both selected full packets, while containing neither `K_7`
+nor `K_7^vee`.  It therefore falsifies the geometry-only implication
+“blocking path implies packet-disjoint escape.”  Nevertheless, across all
+`2^13=8,192` trace-legal extensions of this frozen four-vertex rich path,
+every packet-number-two graph either contains a labelled `K_7^vee` or the
+canonical pair deletion is `K_5`-minor-free.  Thus this entire finite
+first-hit architecture closes; a live obstruction must branch inside a
+packet/web or use a proper-minor transition that changes first-hit ownership.
+
+Sources: [four-vertex packet-path classification](results/hc7_atomic_four_vertex_packet_path_classification.md),
+its [independent audit](results/hc7_atomic_four_vertex_packet_path_classification_audit.md),
+and the adjacent exact verifier.
+
+The current constructive checkpoint produces blocking paths on **both**
+bipartition duties, but in independently attained colourings.  For a
+duty--duty path, the two relevant carrier contractions commute as graph
+operations, yet their returned exact-state languages are disjoint in a
+counterexample.  More sharply, the exact trace contraction requires the
+compulsory bridge `zu`, whereas all five bridge Kempe locks are supplied only
+by colourings of `G-zu`.  No present theorem puts the trace and locks into one
+legal state.  This is the live composition obstruction, rather than a lack of
+paths.
+
+Source: [atomic blocking-path checkpoint](active/hc7_atomic_blocking_path_packet_escape.md)
+(proved partial result; not yet promoted as a closure).
+
 The terminal-or-recursive theorem still needed is now exact:
 
 > At a strict `(1,2)` descendant `Omega=T union N_S(D)`, produce a literal
@@ -373,8 +422,11 @@ The terminal-or-recursive theorem still needed is now exact:
 > prescribed-portal Hall descent, `|U|=2,3` already gives a strict twin
 > boundary; the sole nondecreasing output is the atomic bridge `z-u_*`
 > over its locked width-two six-core.  There the remaining output is a
-> trace-blocking rich-shore path; compose it with the packets and bridge
-> locks without losing the attained trace.
+> pair of independently attained trace-blocking rich-shore paths.  Convert
+> one into a legal thin-side carrier reassignment repairing the single
+> frontier parity bit, or decode the failed lift as a labelled near model,
+> fixed pair, or strict exact-seven descent.  The construction must bridge
+> the incompatibility between contracting `zu` and deleting `zu`.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
 yet proved is that a legally useful equality state survives this map.  In
@@ -451,6 +503,13 @@ Controlling inputs:
   [bridge fan](results/hc7_compulsory_portal_bridge_fan.md).
 - [atomic compulsory-portal trace exchange](results/hc7_compulsory_portal_atomic_state_exchange.md)
   and [audit](results/hc7_compulsory_portal_atomic_state_exchange_audit.md).
+- [two-carrier list obstruction and literal reassignment](results/hc7_exact7_two_carrier_list_obstruction.md)
+  and [audit](results/hc7_exact7_two_carrier_list_obstruction_audit.md).
+- [four-vertex packet-path classification](results/hc7_atomic_four_vertex_packet_path_classification.md),
+  [audit](results/hc7_atomic_four_vertex_packet_path_classification_audit.md),
+  and exact verifier.
+- [atomic blocking-path constructive checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
+  which is partial and not a closure.
 - [bounded adaptive peel-or-six-cut probe](active/hc7_two_lobe_peel_or_six_cut_probe.md)
   and its exact verifier; this is evidence, not a theorem.
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
@@ -478,8 +537,12 @@ descent.  In a two-lobe support-four cell, every non-singleton full-row
 lobe is closed; the labelled proper-row split and singleton lobe remain.
 Compulsory Hall descents of order two or three now strictly descend; their
 only nondecreasing residue is the atomic width-two bridge/Kempe lock, and
-its compressible states are closed.  The exact atom is now a blocking path
-whose packet intersections prevent state-preserving contraction.
+its compressible states are closed.  The exact atom now has blocking paths
+on both duties, but only in different minor colourings.  Its carrier-state
+obstruction is a single parity bit, while the trace contraction uses `zu`
+and the bridge locks use `G-zu`; no audited transition yet reconciles those
+two state languages.  The four-vertex packet path is closed, so the first
+unresolved atom has genuine packet branching or a changing first-hit owner.
 After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
 and S1 rotation components remain.
 
