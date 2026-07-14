@@ -459,6 +459,15 @@ Hence the complementary lock is closed as an `S3` transition and must not
 receive further portal casework.  The connected-rich case and the global
 `S1` rotation/adhesion composition remain open.
 
+The whole two-component paired-state family is now independently audited
+as one concise trichotomy.  A cutvertex or a component of order two or
+three reflects; a three-connected component reflects by uniform curvature;
+and every remaining two-cut either has two distinct available duties or
+has complementary defects which give the spanning `K_7^vee` above.  No
+exact two-lobe, Kempe-trace, or finite-boundary continuation remains in this
+branch.  Source:
+`../results/hc7_exact7_two_component_paired_trichotomy.md`.
+
 For a nonempty bipartite boundary, an independent cutvertex theorem also
 funds the bipartition state except for one crossed two-lobe geometry:
 distinct defects in the same boundary component at even parity, both missed

@@ -143,6 +143,16 @@ two-cut case.
 Sources: [complementary-lock handoff](results/hc7_exact7_complementary_lock_near_k7_handoff.md)
 and its [independent audit](results/hc7_exact7_complementary_lock_near_k7_handoff_audit.md).
 
+Combining that handoff with the audited cutvertex, small-component, and
+three-connected closures gives a concise theorem for the **entire
+two-component rich-shore paired-state family**: it either reflects and
+six-colours `G`, or supplies the spanning labelled near model above.  A
+single two-cut and a two-set Hall calculation suffice; the former exact
+two-lobe enumeration and Kempe trace analysis are not dependencies.
+
+Sources: [two-component paired-state trichotomy](results/hc7_exact7_two_component_paired_trichotomy.md)
+and its [independent audit](results/hc7_exact7_two_component_paired_trichotomy_audit.md).
+
 This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
 Moser-specific paired-state component closures whenever its component and
 disjoint-packet hypotheses hold.  Those earlier results remain valid
@@ -159,13 +169,13 @@ Prove one bridge-stable exchange theorem for a residual `(1,2)` cell:
 > Every recursive adhesion outcome must transport a legally attained exact
 > state and strictly decrease a declared rooted measure.
 
-The immediate obstruction is no longer the complementary two-lobe pattern.
-After the singleton, multishore, and near-model-handoff closures, it is that
-two full packets can be interlaced inside one connected rich component or
-can enter the global reversible near-model/adhesion system.  The current
-packet-bridge rotation is a reversible local move; the missing theorem must
-compose a whole stable bridge or rotation component without losing literal
-labels or the attained state.
+The immediate paired-state obstruction is no longer any two-component
+pattern.  It is that two full packets can be interlaced inside one connected
+rich component, or can enter the global reversible near-model/adhesion
+system.  The current packet-bridge rotation is a reversible local move; the
+missing theorem must compose a whole stable bridge or rotation component
+without losing literal labels or the attained state.  Arbitrary attained
+demand-three states remain a separate, more general `S3` obligation.
 
 Controlling inputs:
 
@@ -183,6 +193,8 @@ Controlling inputs:
   and [audit](results/hc7_exact7_multishore_state_synchronization_audit.md).
 - [complementary-lock near-model handoff](results/hc7_exact7_complementary_lock_near_k7_handoff.md)
   and [audit](results/hc7_exact7_complementary_lock_near_k7_handoff_audit.md).
+- [two-component paired-state trichotomy](results/hc7_exact7_two_component_paired_trichotomy.md)
+  and [audit](results/hc7_exact7_two_component_paired_trichotomy_audit.md).
 
 ### S4. Other interfaces — open
 
