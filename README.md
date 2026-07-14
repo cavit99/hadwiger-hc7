@@ -195,15 +195,28 @@ cutvertex-free thin packet over this width-two boundary.
 Sources: [connected-rich width-two frontier](results/hc7_exact7_connected_rich_width2_frontier.md)
 and its [independent audit](results/hc7_exact7_connected_rich_width2_frontier_audit.md).
 
+The remaining thin geometry has now been reduced further without boundary
+casework.  If a thin-shore vertex has internal degree at most three and its
+deletion leaves the shore connected, the literal seven-adhesion and Dirac's
+critical-neighbourhood inequality produce seven explicit bags forming a
+labelled `K_7^vee`.  Consequently every surviving cutvertex-free thin shore
+has internal minimum degree at least four.  Moreover, any two-cut with at
+least three deletion lobes also gives an explicit labelled `K_7^vee`; hence
+every surviving two-cut is binary.
+
+Sources: [low-internal-degree and two-gate handoffs](results/hc7_exact7_low_internal_degree_handoff.md)
+and their [independent audit](results/hc7_exact7_low_internal_degree_handoff_audit.md).
+
 This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
 Moser-specific paired-state component closures whenever its component and
 disjoint-packet hypotheses hold.  Those earlier results remain valid
 dependencies and laboratories; they are not the active target.
 
-### Active target: cutvertex-free width-two state transition
+### Active target: Dirac-aware binary-gate state transition
 
 Prove one bridge-stable exchange theorem for the residual paired `(1,2)`
-cell:
+cell, now with a cutvertex-free thin shore of internal minimum degree at
+least four and only binary two-cuts:
 
 > In the cutvertex-free width-two frontier, either find disjoint adjacent
 > thin carriers funding the two named duties, produce a label-faithful
@@ -211,13 +224,16 @@ cell:
 > carrying a legally attained exact state.  Every recursive outcome must
 > strictly decrease a declared rooted measure.
 
-The fourteen-contact lower bound from the frontier theorem is not itself a
-solution.  A verified exact-seven, minimum-degree-seven graph has thirty-nine
-surplus contacts and all local Dirac inequalities but no such thin split.
-It deliberately contains a literal `K_7`; therefore the next positive
-theorem must spend `K_7`-minor-freeness or a genuine contraction-critical
-proper-minor transition.  Contact surplus and connectivity alone are now a
-closed route.
+Two complementary falsifiers delimit the theorem.  First, a verified
+exact-seven, minimum-degree-seven graph has thirty-nine surplus contacts and
+all local Dirac inequalities but no such thin split; it deliberately contains
+a literal `K_7`.  Second, a verified `K_7`-minor-free width-two graph satisfies
+the full thin-side degree and cut-expansion bounds but still has no duty
+split; it is only five-connected and violates Dirac's neighbourhood
+inequality.  Thus neither contact surplus plus connectivity nor
+`K_7`-minor-freeness plus local expansion is enough.  A positive theorem must
+combine the actual counterexample inputs: global seven-connectivity, Dirac,
+`K_7`-minor-freeness, or genuine proper-minor state transitions.
 
 The immediate paired-state obstruction is no longer any two-component or
 cutvertex pattern.  It is a cutvertex-free block-terminal web in the thin
@@ -250,7 +266,11 @@ Controlling inputs:
   and [audit](results/hc7_exact7_three_packet_boundary_core_handoff_audit.md).
 - [connected-rich width-two frontier](results/hc7_exact7_connected_rich_width2_frontier.md)
   and [audit](results/hc7_exact7_connected_rich_width2_frontier_audit.md).
+- [low-internal-degree and two-gate handoffs](results/hc7_exact7_low_internal_degree_handoff.md)
+  and [audit](results/hc7_exact7_low_internal_degree_handoff_audit.md).
 - [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
+  and its executable verifier.
+- [`K_7`-minor-free static-split barrier](barriers/hc7_width2_k7free_static_split_barrier.md)
   and its executable verifier.
 
 ### S4. Other interfaces — open
@@ -264,7 +284,7 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the cutvertex-free width-two state-transition theorem above.  After it,
+is the Dirac-aware binary-gate state-transition theorem above.  After it,
 arbitrary attained demand-three states, `(1,1)`, larger adhesions, and S1
 rotation components remain.
 

@@ -507,6 +507,14 @@ only apparent two-lobe same-duty lock instead has an explicit seven-bag
 cutvertex-free thin packet over the width-two frontier.  Source:
 `../results/hc7_exact7_connected_rich_width2_frontier.md`.
 
+The literal adhesion and Dirac's critical-neighbourhood inequality now close
+every vertex of thin-shore internal degree at most three whose deletion leaves
+the shore connected.  Therefore the surviving cutvertex-free thin shore has
+internal minimum degree at least four.  The same packing mechanism, without
+Dirac, closes every two-cut with at least three lobes, so every surviving
+two-cut has exactly two lobes.  Source:
+`../results/hc7_exact7_low_internal_degree_handoff.md`.
+
 The frontier has at least fourteen surplus packet contacts, but that count
 cannot be used as a static splitting theorem.  A verified 18-vertex graph
 has exact seven-connectivity, minimum degree seven, packet vector `(1,2)`,
@@ -515,6 +523,15 @@ disjoint carriers funding the two duties.  It contains a literal `K_7`, so
 the positive theorem must use `K_7`-minor-freeness or a genuine proper-minor
 state transition.  Source:
 `../barriers/hc7_exact7_width2_surplus_thin_split_barrier.md`.
+
+`K_7`-minor-freeness plus all thin-side degree and cut-expansion inequalities
+is also insufficient.  A verified twelve-vertex width-two graph has no duty
+split and no `K_7` minor, although every nonempty thin subset has boundary at
+least seven.  It is only five-connected and fails Dirac's neighbourhood
+inequality.  Together the two barriers force the live theorem to spend the
+counterexample hypotheses in combination, rather than another static portal
+count.  Source:
+`../barriers/hc7_width2_k7free_static_split_barrier.md`.
 
 The pure-Moser degree-seven cell with exactly two exterior components is now
 closed in full.  A single four-port call on `1,2,3,4` returns adjacent
