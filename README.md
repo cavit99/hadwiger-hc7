@@ -201,30 +201,76 @@ deletion leaves the shore connected, the literal seven-adhesion and Dirac's
 critical-neighbourhood inequality produce seven explicit bags forming a
 labelled `K_7^vee`.  Consequently every surviving cutvertex-free thin shore
 has internal minimum degree at least four.  Moreover, any two-cut with at
-least three deletion lobes also gives an explicit labelled `K_7^vee`; hence
-every surviving two-cut is binary.
+least three deletion lobes gives the same handoff.
 
 Sources: [low-internal-degree and two-gate handoffs](results/hc7_exact7_low_internal_degree_handoff.md)
 and their [independent audit](results/hc7_exact7_low_internal_degree_handoff_audit.md).
 
-This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
-Moser-specific paired-state component closures whenever its component and
-disjoint-packet hypotheses hold.  Those earlier results remain valid
-dependencies and laboratories; they are not the active target.
+The residual binary two-cut is now closed as well.  Its two lobes, anchored
+at opposite gate vertices, are adjacent connected carriers whose supports
+have order at least five and cover `S`.  A label-free incidence lemma on the
+width-two boundary then gives seven explicit bags forming a labelled
+`K_7^vee`.  Thus, after the near-model handoff is excluded from `S3`, the
+surviving thin shore is **three-connected** and has internal minimum degree
+at least four.
 
-### Active target: Dirac-aware binary-gate state transition
+Sources: [binary two-gate near-model theorem](results/hc7_exact7_binary_gate_near_model.md)
+and its [independent audit](results/hc7_exact7_binary_gate_near_model_audit.md).
 
-Prove one bridge-stable exchange theorem for the residual paired `(1,2)`
-cell, now with a cutvertex-free thin shore of internal minimum degree at
-least four and only binary two-cuts:
+Two additional uniform tools control the next block.  No common portal core
+for three boundary labels can contain a `K_4` model; every such core is
+two-degenerate.  A `K_4` model in a two-label core can be met by any third
+label in at most one model bag unless a labelled `K_7^vee` already exists.
+Also, a prescribed portal edge for at most four boundary labels either
+extends to a literal matching, or a tight Hall witness exposes a strictly
+smaller actual seven-adhesion with an explicit boundary map.  In a
+four-connected thin shore the tiny-shore exception is impossible and the
+descended side is connected and full.
 
-> In the cutvertex-free width-two frontier, either find disjoint adjacent
-> thin carriers funding the two named duties, produce a label-faithful
-> near-`K_7`/fixed-pair handoff, or expose a strictly smaller actual adhesion
-> carrying a legally attained exact state.  Every recursive outcome must
-> strictly decrease a declared rooted measure.
+Sources: [common-portal core obstruction](results/hc7_exact7_common_portal_core_obstruction.md),
+its [audit](results/hc7_exact7_common_portal_core_obstruction_audit.md),
+[prescribed portal extension or adhesion](results/hc7_exact7_prescribed_portal_extension_or_adhesion.md),
+and its [audit](results/hc7_exact7_prescribed_portal_extension_or_adhesion_audit.md).
 
-Two complementary falsifiers delimit the theorem.  First, a verified
+The entire remaining three-connected thin geometry now has one uniform
+exit.  A three-cut either has a lobe supported on exactly four old boundary
+labels, which is itself a smaller full exact-seven shore, or all lobes have
+support at least five and split into two adjacent near-full carriers,
+forcing a labelled `K_7^vee`.  If no three-cut remains, the shore is
+four-connected.  Prescribed portal extension and rooted-`K_4` facial
+coherence then yield either the same labelled handoff or a smaller exact
+seven-adhesion.  In the no-descent planar alternative all six complete
+non-`c` portal sets lie on one face; disk curvature gives an off-face vertex
+of total degree at most six, contradicting seven-connectivity.
+
+Sources: [three-cut portal descent](results/hc7_exact7_three_cut_portal_descent.md)
+and its [audit](results/hc7_exact7_three_cut_portal_descent_audit.md),
+[cofacial portal degree obstruction](results/hc7_exact7_cofacial_portal_degree_obstruction.md)
+and its [audit](results/hc7_exact7_cofacial_portal_degree_obstruction_audit.md),
+and [four-connected portal exchange](results/hc7_exact7_four_connected_portal_exchange.md)
+with its [audit](results/hc7_exact7_four_connected_portal_exchange_audit.md).
+
+### Active target: exact-seven descent composition
+
+The paired connected-rich width-two geometry is therefore exhausted as a
+**transition**, but not yet as a colouring proof.  Prove one
+state-preserving pullback theorem for either strict descent emitted above:
+
+> At the new literal boundary `Omega`, either reproduce a legally attained
+> state of demand at most two and reflect it; pull back the three named
+> paired duties so that the smaller shore is a valid `(1,2)` recursive
+> instance; or regenerate a labelled near-`K_7`/fixed-pair handoff.  A
+> recursive outcome must strictly decrease the active shore order.
+
+The exact boundary maps are known.  A three-cut lobe returns
+`Omega=T union N_S(D)`.  A prescribed-portal failure returns
+`Omega=(S-U) union N_L(U)` with `|U|=|N_L(U)|<=3`.  Every new boundary
+vertex literally meets the smaller shore.  What is not yet proved is that
+the old equality state or the rich-side packet vector survives either map.
+This is now the sole local obstruction; further portal geometry inside the
+old shore is no longer relevant.
+
+Static carrier splitting cannot replace this dynamic step.  First, a verified
 exact-seven, minimum-degree-seven graph has thirty-nine surplus contacts and
 all local Dirac inequalities but no such thin split; it deliberately contains
 a literal `K_7`.  Second, a verified `K_7`-minor-free width-two graph satisfies
@@ -235,12 +281,9 @@ inequality.  Thus neither contact surplus plus connectivity nor
 combine the actual counterexample inputs: global seven-connectivity, Dirac,
 `K_7`-minor-freeness, or genuine proper-minor state transitions.
 
-The immediate paired-state obstruction is no longer any two-component or
-cutvertex pattern.  It is a cutvertex-free block-terminal web in the thin
-packet, coupled to a reversible near-model/adhesion system.  The missing
-theorem must compose the whole stable bridge or web transition without
-losing literal labels or the attained state.  Arbitrary attained
-demand-three states remain a separate, more general `S3` obligation.
+Arbitrary attained demand-three states remain a separate, more general
+`S3` obligation.  Packet vector `(1,1)` and near-model rotations remain the
+global `S1/S4` escape route if the descent does not preserve `(1,2)`.
 
 Controlling inputs:
 
@@ -268,6 +311,18 @@ Controlling inputs:
   and [audit](results/hc7_exact7_connected_rich_width2_frontier_audit.md).
 - [low-internal-degree and two-gate handoffs](results/hc7_exact7_low_internal_degree_handoff.md)
   and [audit](results/hc7_exact7_low_internal_degree_handoff_audit.md).
+- [binary two-gate near-model theorem](results/hc7_exact7_binary_gate_near_model.md)
+  and [audit](results/hc7_exact7_binary_gate_near_model_audit.md).
+- [common-portal core obstruction](results/hc7_exact7_common_portal_core_obstruction.md)
+  and [audit](results/hc7_exact7_common_portal_core_obstruction_audit.md).
+- [prescribed portal extension or adhesion](results/hc7_exact7_prescribed_portal_extension_or_adhesion.md)
+  and [audit](results/hc7_exact7_prescribed_portal_extension_or_adhesion_audit.md).
+- [three-cut portal descent](results/hc7_exact7_three_cut_portal_descent.md)
+  and [audit](results/hc7_exact7_three_cut_portal_descent_audit.md).
+- [cofacial portal degree obstruction](results/hc7_exact7_cofacial_portal_degree_obstruction.md)
+  and [audit](results/hc7_exact7_cofacial_portal_degree_obstruction_audit.md).
+- [four-connected portal exchange](results/hc7_exact7_four_connected_portal_exchange.md)
+  and [audit](results/hc7_exact7_four_connected_portal_exchange_audit.md).
 - [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
   and its executable verifier.
 - [`K_7`-minor-free static-split barrier](barriers/hc7_width2_k7free_static_split_barrier.md)
@@ -284,9 +339,11 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the Dirac-aware binary-gate state-transition theorem above.  After it,
-arbitrary attained demand-three states, `(1,1)`, larger adhesions, and S1
-rotation components remain.
+is the exact-seven descent-composition theorem above.  The new boundary and
+strictly smaller full shore are literal and audited; the attained paired
+state and packet vector are not yet transported.  After that, arbitrary
+attained demand-three states, `(1,1)`, larger adhesions, and S1 rotation
+components remain.
 
 Finite certificates in this repository prove only the interfaces stated in
 their accompanying notes.  They do not replace an unbounded exchange

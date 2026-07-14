@@ -128,6 +128,12 @@ The exact constructive target is therefore:
 > turn a nonrobust thin-side return into a second partial labelled carrier,
 > a new return of demand at most two, or one fixed `K_5`-killing pair.
 
+For the attained paired-triangle state in the connected-rich width-two
+frontier, the carrier geometry in this target is now complete: it yields a
+labelled near model or a strict full exact-seven descent.  The current
+subtarget is to pull back or replace the attained state across that descent;
+the general 129-type statement below remains broader and open.
+
 The exact unconditional boundary residue has 129 types.  Of these, 119 have
 a combinatorially safe partition which has not yet been forced by a legal
 shore operation; ten have no demand-at-most-two partition at all, and all
@@ -515,6 +521,55 @@ Dirac, closes every two-cut with at least three lobes, so every surviving
 two-cut has exactly two lobes.  Source:
 `../results/hc7_exact7_low_internal_degree_handoff.md`.
 
+The binary two-cut is now closed too.  Anchor its two lobes at opposite gate
+vertices.  Seven-connectivity gives each resulting adjacent carrier support
+at least five, and their supports cover `S`.  A repairable-incidence lemma
+for every width-two frontier boundary then produces seven literal bags
+forming a labelled `K_7^vee`.  Hence the live thin shore is three-connected
+and still has internal minimum degree at least four.  Source:
+`../results/hc7_exact7_binary_gate_near_model.md`.
+
+Two label-free tools control the three-connected block.  First, no
+three-label common portal core can contain a `K_4` model in a `K_7`-free
+host, and a third boundary literal can trace at most one bag of any `K_4`
+model in a two-label core unless a labelled `K_7^vee` already exists.
+Second, a prescribed portal edge for at most four labels either extends to
+a saturating literal matching or a tight Hall witness returns the exact
+smaller boundary
+
+\[
+                       \Omega=(S-U)\cup N_L(U),
+       \qquad |U|=|N_L(U)|\le3.
+\]
+
+In the four-connected branch the new shore is connected, full and strictly
+smaller.  Sources:
+`../results/hc7_exact7_common_portal_core_obstruction.md` and
+`../results/hc7_exact7_prescribed_portal_extension_or_adhesion.md`.
+
+The rest of the thin geometry is now exhausted as a transition.  At a
+three-cut `T`, every lobe meets all three gates and at least four old
+boundary labels.  Support four gives the strict full descent
+`Omega=T union N_S(D)`.  If every lobe has support at least five, the lobes
+and gates partition into two adjacent near-full carriers; the binary-gate
+near-model theorem gives `K_7^vee`.  With no three-cut the shore is
+four-connected.  For each four-label portal family containing two fixed
+neighbours of `c`, either a rooted `K_4` gives a labelled `K_7^vee`, or all
+complete portal sets lie on one face.  The overlapping four-label families
+synchronize those faces.  Disk curvature then gives an off-face vertex of
+total degree at most six, contradicting seven-connectivity.  Sources:
+`../results/hc7_exact7_three_cut_portal_descent.md`,
+`../results/hc7_exact7_cofacial_portal_degree_obstruction.md`, and
+`../results/hc7_exact7_four_connected_portal_exchange.md`.
+
+Thus the paired connected-rich width-two geometry has only two outputs:
+a labelled near model, or a strictly smaller literal full seven-adhesion.
+The **active gap** is no longer portal geometry.  It is exact-state descent
+composition: transport the attained paired duties or a demand-at-most-two
+return across either displayed boundary map, or turn a changed packet vector
+into the global S1/fixed-pair handoff.  No current theorem proves that the
+old equality state or the `(1,2)` packet vector survives the descent.
+
 The frontier has at least fourteen surplus packet contacts, but that count
 cannot be used as a static splitting theorem.  A verified 18-vertex graph
 has exact seven-connectivity, minimum degree seven, packet vector `(1,2)`,
@@ -544,9 +599,9 @@ handle orders one, two, and three.  Sources:
 `../results/hc7_exact7_moser_four_corner_exchange.md` and
 `../results/hc7_exact7_moser_two_component_closure.md`.
 
-This does not close the one-exterior pure-Moser branch, an arbitrary
-connected-rich `(1,2)` adhesion, or the other degree classes.  Those are now
-the live interfaces; no multi-frame crossing-selection problem remains in
+This does not close the one-exterior pure-Moser branch, the descent-
+composition step in an arbitrary connected-rich `(1,2)` adhesion, or the
+other degree classes.  No multi-frame crossing-selection problem remains in
 the exact two-component Moser cell.
 
 In the one-exterior pure-Moser branch, the all-crossless family is already
