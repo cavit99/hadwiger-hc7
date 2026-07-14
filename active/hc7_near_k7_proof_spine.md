@@ -599,6 +599,20 @@ at the strict descendant and a dynamic break of those two-lobe compulsory
 resources.  Source:
 `../results/hc7_exact7_threecut_capacity_transition.md`.
 
+The first adaptive state-selection step is now uniform in `k`.  If one
+shore has `q` disjoint full packets and the other has `q` pairwise adjacent
+connected carriers, it is enough to assign each carrier a nonempty
+independent seed set whose complement on the boundary is a clique.  Contract
+only the carriers with their seeds.  Whatever the proper-minor colouring
+does to the clique reservoir, the exact returned partition has packet demand
+at most `q`; the opposite packets reproduce that actual state and the two
+colourings glue.  No carrier-to-reservoir contact and no prescribed exact
+state are required.  At `q=2` this closes every lobe/gate allocation with a
+clique-reservoir seed partition.  A paired width-two tree shows that the
+static lobe supports need not supply one, so the remaining theorem is now a
+literal interior split/rerouting theorem, not a palette-selection theorem.
+Source: `../results/hc7_uniform_adaptive_clique_reservoir_return.md`.
+
 The frontier has at least fourteen surplus packet contacts, but that count
 cannot be used as a static splitting theorem.  A verified 18-vertex graph
 has exact seven-connectivity, minimum degree seven, packet vector `(1,2)`,

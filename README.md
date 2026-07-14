@@ -282,13 +282,35 @@ apparent gate-centred star is impossible because it gives a five-cut.
 Source: [three-cut capacity transition](results/hc7_exact7_threecut_capacity_transition.md)
 and its [independent audit](results/hc7_exact7_threecut_capacity_transition_audit.md).
 
+A new uniform state-selection theorem removes one of the two remaining
+palette obstacles.  In a strongly `k`-contraction-critical graph, suppose
+one shore has `q` disjoint full packets and the other has `q` pairwise
+adjacent connected carriers.  If the boundary can be partitioned into
+`q` nonempty independent seed sets, each contacted by its carrier, plus a
+clique reservoir, then the graph is `(k-1)`-colourable.  The carriers need
+not contact the reservoir.  After their seed contractions, the *actual*
+returned equality state has packet demand at most `q`; the opposite packets
+reproduce that state exactly and the two colourings glue.
+
+At `(k,q)=(7,2)` this closes every two-lobe gate allocation admitting two
+independent contacted seeds whose complement is a clique.  It is strictly
+more flexible than prescribing a clique-OCT state or requiring
+carrier-to-singleton contacts.  A paired width-two tree shows that static
+four-support data alone need not supply such seeds, so the live obligation
+is now geometric: split or reroute a literal lobe to create the seed
+allocation, or turn its failure into a strict adhesion or labelled near
+model.
+
+Sources: [adaptive clique-reservoir return](results/hc7_uniform_adaptive_clique_reservoir_return.md)
+and its [independent audit](results/hc7_uniform_adaptive_clique_reservoir_return_audit.md).
+
 The terminal-or-recursive theorem still needed is now exact:
 
-> At a strict `(1,2)` descendant `Omega=T union N_S(D)`, legally attain a
-> demand-at-most-two state, transport the three named duties with a strict
-> state measure, or regenerate a labelled near-`K_7`/fixed-pair handoff.
+> At a strict `(1,2)` descendant `Omega=T union N_S(D)`, produce a literal
+> clique-reservoir seed allocation, transport a useful exact state with a
+> strict measure, or regenerate a labelled near-`K_7`/fixed-pair handoff.
 > In the two-lobe branch, the same conclusion must break the compulsory
-> lobe-centred star/triangle resource.
+> lobe-centred star/triangle resource by using its expanded interior.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
 yet proved is that a legally useful equality state survives this map.  In
