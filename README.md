@@ -143,6 +143,18 @@ two-cut case.
 Sources: [complementary-lock handoff](results/hc7_exact7_complementary_lock_near_k7_handoff.md)
 and its [independent audit](results/hc7_exact7_complementary_lock_near_k7_handoff_audit.md).
 
+The first deficiency rotation of that decorated near model is now
+label-rigid.  In the no-`K_7^-` branch a packet donor must transfer exactly
+one of its two literal anchors; moving neither or both is impossible.  The
+rotated seven bags form a literal `K_3 join C_4`, with the two missing
+diagonals named by the moved anchor and the old missing twin.  If the move
+changes the twin to `c`, the three relevant boundary vertices are forced
+into one named bichromatic Kempe component.  This is a state-transition
+invariant, not yet a terminating composition theorem.
+
+Sources: [packet-donor rotation lock](results/hc7_exact7_packet_donor_rotation_lock.md)
+and its [independent audit](results/hc7_exact7_packet_donor_rotation_lock_audit.md).
+
 Combining that handoff with the audited cutvertex, small-component, and
 three-connected closures gives a concise theorem for the **entire
 two-component rich-shore paired-state family**: it either reflects and
@@ -152,6 +164,17 @@ two-lobe enumeration and Kempe trace analysis are not dependencies.
 
 Sources: [two-component paired-state trichotomy](results/hc7_exact7_two_component_paired_trichotomy.md)
 and its [independent audit](results/hc7_exact7_two_component_paired_trichotomy_audit.md).
+
+A new label-free boundary-core theorem supplies a direct `S1` handoff in
+the connected-rich cell.  If a connected boundary set `D` of order one or
+two dominates a disjoint three-set `T` containing an edge, then the thin
+full packet, two adjacent rich full packets, `D`, and the three vertices of
+`T` form a literal labelled `K_7^vee` model.  This closes an unbounded
+family without inspecting packet interiors or portal multiplicities.  Its
+failure is a sparse boundary-web obstruction, not a new packet case.
+
+Sources: [three-packet boundary-core handoff](results/hc7_exact7_three_packet_boundary_core_handoff.md)
+and its [independent audit](results/hc7_exact7_three_packet_boundary_core_handoff_audit.md).
 
 This theorem subsumes the earlier gate-, cross-lobe-, single-missing-, and
 Moser-specific paired-state component closures whenever its component and
@@ -171,11 +194,12 @@ Prove one bridge-stable exchange theorem for a residual `(1,2)` cell:
 
 The immediate paired-state obstruction is no longer any two-component
 pattern.  It is that two full packets can be interlaced inside one connected
-rich component, or can enter the global reversible near-model/adhesion
-system.  The current packet-bridge rotation is a reversible local move; the
-missing theorem must compose a whole stable bridge or rotation component
-without losing literal labels or the attained state.  Arbitrary attained
-demand-three states remain a separate, more general `S3` obligation.
+rich component whose boundary has no boundary-core handoff, or can enter the
+global reversible near-model/adhesion system.  The current packet-bridge
+rotation is a reversible local move; the missing theorem must compose a
+whole stable bridge or rotation component without losing literal labels or
+the attained state.  Arbitrary attained demand-three states remain a
+separate, more general `S3` obligation.
 
 Controlling inputs:
 
@@ -193,8 +217,12 @@ Controlling inputs:
   and [audit](results/hc7_exact7_multishore_state_synchronization_audit.md).
 - [complementary-lock near-model handoff](results/hc7_exact7_complementary_lock_near_k7_handoff.md)
   and [audit](results/hc7_exact7_complementary_lock_near_k7_handoff_audit.md).
+- [packet-donor rotation lock](results/hc7_exact7_packet_donor_rotation_lock.md)
+  and [audit](results/hc7_exact7_packet_donor_rotation_lock_audit.md).
 - [two-component paired-state trichotomy](results/hc7_exact7_two_component_paired_trichotomy.md)
   and [audit](results/hc7_exact7_two_component_paired_trichotomy_audit.md).
+- [three-packet boundary-core handoff](results/hc7_exact7_three_packet_boundary_core_handoff.md)
+  and [audit](results/hc7_exact7_three_packet_boundary_core_handoff_audit.md).
 
 ### S4. Other interfaces — open
 

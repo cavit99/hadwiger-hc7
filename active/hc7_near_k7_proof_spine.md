@@ -459,6 +459,18 @@ Hence the complementary lock is closed as an `S3` transition and must not
 receive further portal casework.  The connected-rich case and the global
 `S1` rotation/adhesion composition remain open.
 
+The first `S1` move from this handoff now preserves more literal state than
+an arbitrary near-model rotation.  In the no-`K_7^-` branch, a rotation
+through either packet donor moves exactly one of its two boundary anchors.
+The resulting seven bags form a literal `K_3 join C_4`; its two independent
+missing diagonals are the moved-anchor row and one old missing twin.  A move
+which changes the missing twin to `c` is locked in a named three-terminal
+Kempe component, since otherwise a swap returns an exact four-block state
+with literal rich-side `K_4` representatives and glues.  This confines the
+local holonomy but does not yet orient or terminate successive one-anchor
+moves.  Source:
+`../results/hc7_exact7_packet_donor_rotation_lock.md`.
+
 The whole two-component paired-state family is now independently audited
 as one concise trichotomy.  A cutvertex or a component of order two or
 three reflects; a three-connected component reflects by uniform curvature;
@@ -467,6 +479,18 @@ has complementary defects which give the spanning `K_7^vee` above.  No
 exact two-lobe, Kempe-trace, or finite-boundary continuation remains in this
 branch.  Source:
 `../results/hc7_exact7_two_component_paired_trichotomy.md`.
+
+The connected-rich branch now also has a label-free static exit.  Make the
+two rich full packets adjacent along a shortest rich-shore path.  If the
+literal boundary has a connected set `D` of order one or two which
+dominates a disjoint three-set `T` containing an edge, the three full
+packets, `D`, and the three singleton vertices of `T` form a labelled
+`K_7^vee`.  This is an unbounded handoff: it ignores all packet interiors
+and portal multiplicities.  A surviving connected-rich boundary must fail
+this small connected-core condition and still requires the dynamic
+packet/state exchange; the theorem does not by itself compose the returned
+near model.  Source:
+`../results/hc7_exact7_three_packet_boundary_core_handoff.md`.
 
 For a nonempty bipartite boundary, an independent cutvertex theorem also
 funds the bipartition state except for one crossed two-lobe geometry:
