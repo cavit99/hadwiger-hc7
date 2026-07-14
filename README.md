@@ -333,6 +333,21 @@ failure.
 Sources: [Hall-descent packet classification](results/hc7_exact7_hall_descent_packet_classification.md)
 and its [independent audit](results/hc7_exact7_hall_descent_packet_classification_audit.md).
 
+The compulsory outcome now has an audited composition theorem.  Over the
+six-set `W=(S-U) union Y`, the old packets split into two `W`-full carriers
+and the new lobe supplies a third; their literal adjacency graph is the path
+`A-B_1-B_2`.  A `K_4` minor in `G[W]` therefore gives seven explicit bags
+forming `K_7^-`.  The twin boundary `W union {u_*}` is a strict shore-order
+descent for `|U|=2,3`.  Only `|U|=1` is nondecreasing.  In that atom the
+six-core is `K_4`-minor-free, has no required portal-rooted triangle, and
+all five bichromatic endpoint chains are locked through `W`.  A saturated
+six-fan roots `K_2 join G[W]`, but a sharp `K_2`-join example proves that
+the canonical bridge ends are not automatically the desired fixed pair.
+
+Sources: [compulsory-portal composition](results/hc7_compulsory_portal_bridge_composition.md),
+its [independent audit](results/hc7_compulsory_portal_bridge_composition_audit.md),
+and the [saturated bridge-fan lemma](results/hc7_compulsory_portal_bridge_fan.md).
+
 The terminal-or-recursive theorem still needed is now exact:
 
 > At a strict `(1,2)` descendant `Omega=T union N_S(D)`, produce a literal
@@ -341,8 +356,9 @@ The terminal-or-recursive theorem still needed is now exact:
 > In the two-lobe branch, the same conclusion is needed only for a
 > proper-row labelled peel or a singleton lobe; the non-singleton full-row
 > branch is closed.  At a
-> prescribed-portal Hall descent, the sole additional output to compose is
-> the canonical compulsory pair `z-u_*`.
+> prescribed-portal Hall descent, `|U|=2,3` already gives a strict twin
+> boundary; the sole nondecreasing output is the atomic bridge `z-u_*`
+> over its locked width-two six-core.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
 yet proved is that a legally useful equality state survives this map.  In
@@ -414,6 +430,9 @@ Controlling inputs:
   and [audit](results/hc7_exact7_hall_descent_packet_classification_audit.md).
 - [literal support-four portal peel](results/hc7_exact7_support_four_literal_portal_peel.md)
   and [audit](results/hc7_exact7_support_four_literal_portal_peel_audit.md).
+- [compulsory-portal composition](results/hc7_compulsory_portal_bridge_composition.md),
+  [audit](results/hc7_compulsory_portal_bridge_composition_audit.md), and
+  [bridge fan](results/hc7_compulsory_portal_bridge_fan.md).
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
   and its dependency-free verifier.
 - [surplus-only barrier](barriers/hc7_exact7_width2_surplus_thin_split_barrier.md)
@@ -437,8 +456,9 @@ support-four gates now yield a labelled near model or a strict `(1,2)`
 descendant, but no theorem transports a legally useful state across that
 descent.  In a two-lobe support-four cell, every non-singleton full-row
 lobe is closed; the labelled proper-row split and singleton lobe remain.
-After
-that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
+Compulsory Hall descents of order two or three now strictly descend; their
+only nondecreasing residue is the atomic width-two bridge/Kempe lock.
+After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
 and S1 rotation components remain.
 
 Finite certificates in this repository prove only the interfaces stated in

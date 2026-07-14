@@ -636,6 +636,19 @@ Hall branch now has only one canonical packet-collapse interface, rather
 than an arbitrary `(1,1)` transition.  Source:
 `../results/hc7_exact7_hall_descent_packet_classification.md`.
 
+That compulsory interface now composes down to one atom.  Minimal Hall
+traces partition `U` so that the old packets and the new lobe form three
+`W`-full carriers with exact adjacency path `A-B_1-B_2`, where `|W|=6`.
+A `K_4` minor in `G[W]` gives a literal `K_7^-`.  The twin boundary
+`W union {u_*}` is an actual exact-seven boundary and strictly decreases
+the active shore for `|U|=2,3`.  Thus only `|U|=1` is nondecreasing.  Its
+surviving six-core is `K_4`-minor-free, has no required portal-rooted
+triangle, and carries five exact Kempe locks for the sole bridge `zu_*`.
+The saturated bridge fan roots `K_2 join G[W]`, but the bridge ends need
+not be the global fixed pair; the composition note includes a sharp
+`K_2`-join falsifier.  Source:
+`../results/hc7_compulsory_portal_bridge_composition.md`.
+
 The frontier has at least fourteen surplus packet contacts, but that count
 cannot be used as a static splitting theorem.  A verified 18-vertex graph
 has exact seven-connectivity, minimum degree seven, packet vector `(1,2)`,
