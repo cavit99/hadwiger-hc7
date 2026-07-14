@@ -398,18 +398,20 @@ force their defect set to meet every boundary triangle.  With two disjoint
 triangles, every non-`K_7` instance is funnelled to two distinct pure defects
 in opposite triangles.  The Moser spindle has no such pure triangle vertex;
 hence a nonsingleton Moser thin shore has no cutvertex and is not of order
-two.  Its singleton case remains live.  Source:
+two.  Its singleton case is terminal by the next theorem.  Source:
 `../results/hc7_exact7_double_triangle_partial_packet_exchange.md`.
 
 For a singleton thin shore `{q}`, the frozen 129-boundary census reduces the
 cell to `M` and `M+13`: Dirac gives `alpha(G[S])<=2`, and these are exactly
-the two alpha-two residual orbits.  In `M+13`, exact `25` and `46` traces
-plus singleton Kempe exchange force complementary bichromatic paths in the
-rich shore.  Either path disjoint from the two full packets gives an
-explicit literal `K_7`; hence the survivor is a packet-entanglement problem,
-not a state-enumeration problem.  The paths may arise from different
-colourings, so no simultaneous routing is asserted.  Source:
-`../results/hc7_exact7_singleton_thin_moser_extension_escape.md`.
+the two alpha-two residual orbits.  Contracting the star `q union {2,5}`
+forces an exact `25` trace and hence a literal bichromatic `4-6` path with
+interior in the rich shore.  If this path avoids both rich full packets,
+seven explicit bags give `K_7`.  Otherwise truncate at its first packet hit:
+the hit packet, the other full packet, and five anchored bags give a literal
+`K_7^-`, hence a labelled `K_7^vee`.  This uses only edges common to `M` and
+`M+13`, assumes no packet-packet edge, and closes the entire singleton-thin
+residual as an `S1` handoff.  Source:
+`../results/hc7_exact7_singleton_thin_near_model_closure.md`.
 
 Thus the named constructive substep in S3 is:
 

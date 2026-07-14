@@ -112,6 +112,18 @@ while a direct two-anchor contraction synchronizes the exact state
 Sources: [singleton-component closure](results/hc7_exact7_two_component_singleton_closure.md)
 and its [independent audit](results/hc7_exact7_two_component_singleton_closure_audit.md).
 
+A stronger packet-path theorem closes the entire **singleton thin shore**
+of that residual as an `S1` handoff, without assuming that the opposite rich
+shore has two components or that its two full packets are adjacent.  The
+forced exact `25` trace supplies a literal bichromatic `4-6` path.  If the
+path avoids both packets it gives a literal `K_7`; at its first packet hit,
+truncation gives seven explicit bags forming `K_7^-`, hence a labelled
+`K_7^vee`.  Only boundary edges common to the pure Moser spindle and `M+13`
+are used.
+
+Sources: [singleton-thin near-model closure](results/hc7_exact7_singleton_thin_near_model_closure.md)
+and its [independent audit](results/hc7_exact7_singleton_thin_near_model_closure_audit.md).
+
 A third audited theorem gives a genuinely multishore exact-state
 synchronization principle.  If one component contains two adjacent labelled
 carriers for independent blocks `I,J`, three boundary vertices remain, and
