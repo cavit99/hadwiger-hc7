@@ -202,6 +202,20 @@ proper-minor state, label-preserving near-`K_7` regeneration, or the
 fixed-pair endgame.  No equality state or global descent measure has yet
 been transported.
 
+The nonplanar part of the first family is now closed uniformly.  If the
+three-connected lobe component contains no two disjoint duty carriers,
+three four-terminal web certificates synchronize to one literal face:
+seven-connectivity excludes every clique cell and Whitney uniqueness joins
+the three pages.  Hall then selects six distinct portals, and nonreflection
+forces their facial duty word to be `A B D A B D`; the component has order
+at least six.  Under a simultaneous side-specific cofacial matching, the
+literal cross-lobe linkage is the reversal
+`a_1-t_3, a_2-t_2, a_3-t_1`.  This is geometry, not state transport: the
+reversed paths do not legally attain the transposed equality partition.
+The immediate target is therefore a proper-minor/Kempe transition from this
+literal alternating page to reflection, a named near-`K_7` handoff, or one
+coherent two-vertex terminal certificate.
+
 Controlling sources:
 
 - [general labelled-carrier reflection](results/hc7_exact7_rich_cutpacket_exchange.md)
@@ -230,6 +244,8 @@ Controlling sources:
   and its [audit](results/hc7_exact7_common_exit_gate_closure_audit.md);
 - [one-sibling Hall-and-duty funnel](results/hc7_exact7_one_sibling_gate_funnel.md)
   and its [audit](results/hc7_exact7_one_sibling_gate_funnel_audit.md);
+- [cross-lobe common-face theorem](results/hc7_exact7_cross_lobe_common_face.md)
+  and its [audit](results/hc7_exact7_cross_lobe_common_face_audit.md);
 - [three-gate prescribed-pullback barrier](barriers/hc7_exact7_three_gate_pullback_matching_barrier.md)
   and its [verifier](barriers/hc7_exact7_three_gate_pullback_matching_barrier_verify.py);
 - [permutation-labelled encoding gap](barriers/hc7_exact7_permutation_path_encoding_gap.md);

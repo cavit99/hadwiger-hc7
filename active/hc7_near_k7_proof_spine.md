@@ -302,6 +302,34 @@ lexicographic measure is currently justified: the descended lobe becomes
 thin, the next rich component need not be nested, and the audited S1
 rotations include involutions.
 
+The first family now has one uniform geometric normalization.  Pairwise
+failure of two original duty carriers lets the generalized Two Paths
+Theorem place each pair of duty stars on a web page.  Seven-connectivity
+removes every clique cell, and nonadjacent opposite-lobe witnesses plus
+Whitney uniqueness force all six literal portal sets onto one common face.
+The component has order at least six; a Hall cut then gives six distinct
+portals, and nonreflection forces their cyclic duty word to be
+
+\[
+                         A\ B\ D\ A\ B\ D.
+\]
+
+With a simultaneous side-specific cofacial matching, three-connectivity
+also gives the literal reversal
+
+\[
+                 a_1t_3,\qquad a_2t_2,\qquad a_3t_1.
+\]
+
+This closes every nonplanar cross-lobe instance and replaces unrelated web
+completions by one actual facial cycle.  It deliberately does not identify
+the reversal with a palette permutation: only the middle original duty is
+fixed, and neither the transposed equality blocks nor their representative
+adjacencies are automatically attained.  The next exact implication is a
+proper-minor/Kempe state transition, a named missing-row near-`K_7` handoff,
+or a fixed-pair terminal certificate from this alternating page.  Source:
+`../results/hc7_exact7_cross_lobe_common_face.md`.
+
 The demand-three residue now has one common exact endgame.  For each of its
 ten boundary types an audited independent block forces every returned state
 to have demand exactly three.  If, after the return is known, the rich shore
