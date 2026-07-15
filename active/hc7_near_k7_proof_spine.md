@@ -145,12 +145,32 @@ states and packet-aligned local handoffs on both boundaries.  The immediate
 theorem must turn their double-lock system into a common state, a literal or
 fixed-pair terminal, or a genuinely ranked receiver.
 
-The unrestricted routing part is now uniform.  In every seven-connected
-host, deleting the two independent named edges leaves a five-connected
-nonplanar graph and hence a `K_4` minor rooted at their four literal ends.
-The live twin-seam step is therefore allocation/confluence: keep enough of
-the two packet duties disjoint from that rooted core, or use the two named
-minor responses to force a common state or a class-ranked exit.
+The unrestricted routing part is now uniform.  In the counterexample host,
+deleting the two independent named edges gives one connected graph `H` with
+`chi(H)=6` and hence a spanning `K_6` model.  The two one-edge restorations
+realize opposite exact edge signatures `(proper,equal)` and
+`(equal,proper)`, while `(proper,proper)` is forbidden.  Contracting both
+edges supplies a simultaneous `(equal,equal)` colouring in the same host.
+The audited `GF(2)` component-switch theorem then gives one shared
+three-/four-lock system and four common-host locks for each edge in its
+own response.  The live twin-seam step is therefore allocation/confluence
+in a common six-row host: make those locks disjoint and label-faithful,
+split or reselect the model, force a common boundary state, or produce a
+class-ranked exit.
+
+Source: [common edge-deletion chromatic fork and `K_6`
+regeneration](../results/hc7_common_edge_deletion_k6_fork.md), with its
+[independent audit](../results/hc7_common_edge_deletion_k6_fork_audit.md).
+The simultaneous response and lock counts are proved in
+[common-host double-contraction lock allocation](../results/hc7_common_host_double_contraction_lock_allocation.md),
+with its [audit](../results/hc7_common_host_double_contraction_lock_allocation_audit.md).
+For an even induced terminal cycle, the stronger
+[whole-cycle parity-lock theorem](../results/hc7_terminal_cycle_contraction_parity_locks.md)
+and its [audit](../results/hc7_terminal_cycle_contraction_parity_locks_audit.md)
+put at least four external parity-crossing locks into one common colouring.
+This removes independent edge-by-edge colour choice from the even-cycle
+branch, but does not make the paths disjoint or identify colours with model
+rows.  Odd cycles still require a different exchange mechanism.
 
 For actual `(1,2)` cells there is one genuine global rank.  Orient every
 such cell toward its packet-one shore and choose that shore globally minimum

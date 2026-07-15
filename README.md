@@ -20,9 +20,11 @@ The warning which now governs the programme is simple: local portal, web,
 and exact-state structure is not progress unless it participates in a
 closed graph-global transition or a strict global rank.  The twin-seam and
 Moser programmes are therefore frozen as possible decoders.  They are not
-the active proof engine.
+the active proof engine.  The one resumed twin-seam target is now phrased
+solely as a common-host coupling of two named global operations; no further
+seam taxonomy is authorized.
 
-Three global facts are proved.
+Six global facts are proved.
 
 1. Every seven-connected graph either has a `K_7` minor or has a pair
    meeting every literal `K_5`.  Thus a target-free host has a pair whose
@@ -42,10 +44,37 @@ Three global facts are proved.
    support six; the first three forms are one-edge `TK_5`s and the fourth is
    literal `hat K_5`.  See the active
    [near-Hajós pair-height note](active/hc7_global_near_hajos_pair_height.md).
+4. Within the counterexample kernel, for any two vertex-disjoint named
+   edges with one missing cross-edge,
+   their common edge-deletion host is exactly six-chromatic and, when
+   connected, contains a spanning `K_6` model.  The two one-edge
+   restorations realize the opposite exact signatures `(proper,equal)` and
+   `(equal,proper)`, while `(proper,proper)` is forbidden.  See the
+   [common-deletion fork](results/hc7_common_edge_deletion_k6_fork.md) and
+   its [audit](results/hc7_common_edge_deletion_k6_fork_audit.md).
+5. Strong minor-criticality supplies the missing simultaneous response:
+   `G/e/f` expands to an `(equal,equal)` colouring of the same common
+   host.  A uniform `GF(2)` Kempe-component argument then puts at least
+   three locks on one named edge in one shared six-colouring, at least four
+   when the two equality colours differ, and four common-host locks on
+   each edge in its own one-restoration response.  This theorem holds for
+   general `q`, not only `HC_7`.  See the [double-contraction lock
+   allocation](results/hc7_common_host_double_contraction_lock_allocation.md)
+   and its [audit](results/hc7_common_host_double_contraction_lock_allocation_audit.md).
+6. The pairwise locks can be synchronized across an entire **even** induced
+   terminal cycle.  Contracting the whole cycle gives one common colouring
+   in which at least four external bichromatic paths join its two literal
+   parity classes.  This is uniform in `q`; the exact lower bound is at
+   least `q-2`.  The paths need not be mutually disjoint, and the argument
+   has no odd-cycle analogue.  See the [terminal-cycle parity-lock
+   theorem](results/hc7_terminal_cycle_contraction_parity_locks.md) and its
+   [audit](results/hc7_terminal_cycle_contraction_parity_locks_audit.md).
 
-The third fact is the cleanest global geometry yet, but it is still only a
-selection coordinate.  Neither it nor the older support height is known to
-increase under pair exchange.
+The third fact is the cleanest global selection geometry yet; the fourth
+through sixth are the cleanest common-host coupling, first for two named
+operations and then for one whole even terminal cycle.  They still yield
+neither a monotone pair exchange, internally disjoint labelled locks, a row
+split, nor a sink classification.
 
 Accordingly, the programme currently satisfies only two of the three
 requirements for a genuine proof invariant:
@@ -86,6 +115,33 @@ two-transversal pullback.  Its non-seven-connected contraction branch now
 preserves the selected six-vertex model in a named actual seven-adhesion,
 but global reselection may still lose that model; its seven-connected branch
 still has both an equal-support case and a split-row case.
+
+The common-deletion fork now refines every sink terminal cycle: for each
+tail edge `e` and each edge `f` of its disjoint terminal cycle, at least one
+of the following holds, and both may hold: the four ends induce a literal
+`K_4`; or the common edge-deletion graph is one connected six-chromatic
+host with a spanning `K_6` model and opposite named edge responses.  Only
+the second branch supplies the six-row host.  This gives a cycle of mixed
+certificates, not yet a well-founded exchange.  The sink theorem must
+compose that entire family; it may not select one more unranked row or
+portal receiver.
+
+The simultaneous contraction sharpens this cycle family without adding a
+new local state space.  Every pair `e,f` has an `(equal,equal)` response in
+its common host, and its Kempe components obey the audited three-/four-lock
+allocation above.  Hence the open composition problem is no longer to find
+a common colouring or enough palette locks; it is to turn those locks into
+literal disjoint carriers or labelled model rows across an entire sink
+cycle.
+
+For an even terminal cycle, whole-cycle contraction now goes further: one
+colouring synchronizes at least four external locks between the same two
+parity classes.  The live even-cycle problem is therefore a literal
+topological composition theorem—make these locks disjoint or label-faithful
+enough to obtain `K_7`, a fixed pair, or a strict sink transition.  Odd
+terminal cycles remain a separate branch requiring a three-colour exchange
+or a label-preserving interval contraction; parity alone gives no
+obstruction there.
 
 If the closed-family exchange cannot be proved from the full
 contraction-critical hypotheses, this transition system must be demoted;
@@ -156,27 +212,24 @@ and its [audit](results/hc7_atomic_twin_seam_packet_transfer_audit.md).
 
 The immediate proof must therefore close the symmetric seam by a
 double-lock exchange.  The unrestricted crossless geometry is no longer a
-possible obstruction.  For any two disjoint named edges `e=zu` and `f=dt`
-in a seven-connected graph, deleting both leaves a five-connected
-nonplanar graph.  Jung's theorem gives simultaneous disjoint bypasses, and
-the Fabila-Monroy--Wood theorem gives a literal `K_4` model rooted at
-`z,u,d,t`.  This is a uniform rooted-model principle, independent of the
-Moser and portal reductions.
+possible obstruction.  More strongly, the two disjoint named edges
+`e=zu,f=dt` live in one connected six-chromatic common edge-deletion host
+with a spanning `K_6` model and the opposite response signatures recorded
+above.  This is a uniform common-host principle, independent of the Moser
+and portal reductions.
 
-The rooted bags are not yet duty carriers: they may consume both lobes,
-both old packets, and rows of the regenerated `K_6` model.  The exact live
-operation is now a **rooted-core allocation/confluence theorem**.  It must
-combine the forced three-bag incidence on a twin boundary with the two
-proper-minor responses to produce a fourth duty contact, a common exact
-state, a literal/fixed-pair terminal, or a receiver ranked on a whole
+The six rows are not yet duty carriers: the four named endpoints may occupy
+uncontrolled rows, and a restored edge may meet only one unsplittable row.
+The exact live operation is now a **labelled common-model
+allocation/confluence theorem**.  It must combine the opposite edge states
+with the twin boundary duties to split or reselect a row, produce a common
+exact state, a literal/fixed-pair terminal, or a receiver ranked on a whole
 neutral class.  Further labelled portal enumeration is frozen.
 
-Sources: [separating response bundle](results/hc7_atomic_twin_seam_separating_response_bundle.md)
+Sources: [common edge-deletion fork](results/hc7_common_edge_deletion_k6_fork.md),
+its [audit](results/hc7_common_edge_deletion_k6_fork_audit.md), the
+[separating response bundle](results/hc7_atomic_twin_seam_separating_response_bundle.md),
 and its [audit](results/hc7_atomic_twin_seam_separating_response_bundle_audit.md).
-
-The global rooted substrate is
-[two named-edge disjoint cycles and the rooted four-pole core](results/hc7_atomic_two_named_edge_disjoint_cycles.md),
-with its [independent audit](results/hc7_atomic_two_named_edge_disjoint_cycles_audit.md).
 
 The compulsory edge itself is now proved not double-critical.  In fact
 `chi(G-{z,u})=6`: a hypothetical five-colouring would put five distinct

@@ -74,6 +74,67 @@ It is reversible and therefore is not a strict scalar descent.  Moreover
 `|Sigma|>=4`: each edge state has a vertex-disjoint cycle of at least three
 further edge states inside `Sigma`.
 
+### 3.1 Common-host refinement of every sink arc
+
+Let the tail itself be an edge `e=xy`, let `C` be a terminal cycle for
+`e`, and let `f=uv` be any edge of `C`.  The edges `e,f` are
+vertex-disjoint.  Put
+
+\[
+                         H_f=G-\{e,f\},                \tag{3.3}
+\]
+
+where (3.3) means edge deletion.  Seven-connectivity makes every `H_f`
+connected.  The audited common edge-deletion fork gives at least one of the
+following usable substrates:
+
+1. the four endpoints of `e,f` induce a literal `K_4` in `G`; or
+2. `chi(H_f)=6` and `H_f` contains a spanning `K_6` model.
+
+In the second case, every six-colouring of `G-f=H_f+e` restricts to the
+edge signature `(e proper,f equal)`, every six-colouring of
+`G-e=H_f+f` restricts to `(e equal,f proper)`, and no six-colouring of
+`H_f` makes both edges proper.  Identifying the equal pair gives the two
+named contraction responses.
+
+Independently of which fork branch is used, strong minor-criticality also
+colours the simultaneous contraction
+`G/e/f`.  Expanding it gives an `(equal,equal)` colouring in `H_f`.  The
+audited whole-component switching theorem implies that, in this one shared
+colouring, one of `e,f` has at least three bichromatic locks, or at least
+four when the two equality colours differ.  Separately, each of the two
+one-edge responses gives four common-host locks for its equal pair.  These
+lock paths are literal; different palettes may still share vertices of the
+common equality colour.
+
+Thus a sink terminal cycle carries a whole **cycle of common state/lock
+certificates**.  Every edge has the endpoint-`K_4` or common-six-row fork,
+and every edge has the simultaneous state and lock allocation; the two fork
+outcomes may coexist.  This is a graph-global strengthening of
+terminal-cycle closure, but still not a row allocation or a monotone
+transition.
+
+### 3.2 Whole-cycle synchronization on an even terminal cycle
+
+The preceding certificates choose one cycle edge at a time.  When `C` is
+even, the audited whole-cycle contraction theorem removes that choice.
+Contract `C` to one vertex and expand a six-colouring of `G/C` to
+`G-E(C)`.  If `C_0,C_1` are the two cyclic parity classes, then for every
+alternate colour a bichromatic component meets both classes; after also
+deleting the sink edge `e`, at least four of those components survive in
+one common colouring.  Shortest paths in them have their interiors outside
+`C`.
+
+Source: [terminal-cycle contraction and synchronized parity
+locks](../results/hc7_terminal_cycle_contraction_parity_locks.md), with its
+[audit](../results/hc7_terminal_cycle_contraction_parity_locks_audit.md).
+
+This is the first certificate attached to the whole terminal cycle rather
+than to independently coloured arcs.  It still does not give disjoint
+paths: different palettes may share vertices of the common cycle colour.
+It also gives no conclusion for an odd cycle, where a two-colour
+alternation around `C` is impossible for parity reasons.
+
 ## 4. The chromatic stratum and the next theorem
 
 For an edge `e=xy`, vertex-criticality gives
@@ -103,24 +164,27 @@ Part 1 would make the chromatic stratum closed.  Part 2 is the class-level
 composition theorem.  Together they contradict the existence of `G`.
 Neither part is currently proved.
 
-The first constructive subproblem is deliberately global and unlabelled:
-take a shortest directed cycle in a sink and its sequence of dominating
-frames.  In the first nontrivial composition case, a two-cycle `e <-> f`,
-link the three early bags of the `e`-avoiding frame to the three early bags
-of the `f`-avoiding frame in three label-distinct carriers.  This would give
-the seven branch sets
+The first constructive subproblem is now one whole terminal cycle, not two
+locally chosen frames.  Fix a sink edge `e` and a shortest terminal cycle
+`C`.  For every `f in E(C)`, use the literal endpoint-`K_4` branch or the
+spanning common model in `H_f`.  The required composition theorem must
+either:
 
-\[
-                  e\text{'s endpoints},\quad
-                  f\text{'s endpoints},\quad
-                  \text{three linked carriers},         \tag{4.2}
-\]
+1. decode one endpoint `K_4` together with the dominating frame into a
+   literal `K_7` or fixed pair;
+2. split or reselect one common `K_6` model label-faithfully under the
+   opposite edge signatures; or
+3. use the cyclic family of failed splits to produce a six-residual
+   successor with a verified strict near-Hajós height increase.
 
-or turn failure of that linkage into one pair meeting every near-Hajós
-carrier.  For a longer directed cycle, the required theorem must either
-shortcut it or compose all frames cyclically; two merely consecutive frames
-do not have the four required terminal poles.  A further portal normal form
-is not an admissible output.
+Two consecutive models, an unranked row rotation, or another portal normal
+form is not an admissible output.
+
+For even `C`, the first attack must use the synchronized parity-lock family
+of Section 3.2 and prove a disjoint/labelled composition or identify its
+common obstruction.  For odd `C`, the first attack is a three-colour or
+interval-contraction lift.  Repeating the pairwise lock theorem around the
+cycle is no longer an adequate next step in either branch.
 
 There are two sharp guardrails.  An all-double-critical sink does not make
 `G` double-critical: the published complete-minor theorem requires every
@@ -129,6 +193,14 @@ regenerates an unrooted `K_6` in its deletion, but an arc supplies only an
 existence witness in the old deleted graph; it does not exclude small
 near-Hajós carriers after deleting the new edge.  Thus neither branch is
 closed by existing literature.
+
+Source for Section 3.1: [common edge-deletion chromatic fork and `K_6`
+regeneration](../results/hc7_common_edge_deletion_k6_fork.md), with its
+[independent audit](../results/hc7_common_edge_deletion_k6_fork_audit.md),
+and [common-host double-contraction lock allocation](../results/hc7_common_host_double_contraction_lock_allocation.md),
+with its [audit](../results/hc7_common_host_double_contraction_lock_allocation_audit.md),
+and [terminal-cycle contraction and synchronized parity locks](../results/hc7_terminal_cycle_contraction_parity_locks.md),
+with its [audit](../results/hc7_terminal_cycle_contraction_parity_locks_audit.md).
 
 ## 5. Relation to the pair-height programme
 

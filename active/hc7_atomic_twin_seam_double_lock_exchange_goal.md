@@ -1,9 +1,11 @@
-# Frozen subgoal: atomic twin-seam double-lock exchange
+# Atomic twin-seam double-lock exchange
 
-**Status:** not proved and no longer the primary proof engine.  Resume only
-if the exchange supplies a literal transition or terminal classification in
-the graph-global dominating-edge sink.  Further seam normalization is
-frozen.
+**Status:** resumed only in the globally oriented form stated below; not
+proved.  The earlier generic “declared nonreversible rank” was not a
+mathematical predicate.  The independent
+[target audit](hc7_atomic_twin_seam_double_lock_exchange_audit.md) replaces
+it by the one audited rank which is actually available.  Further seam
+normalization remains frozen.
 
 ## 1. Strategic decision
 
@@ -28,12 +30,24 @@ seven-boundaries.  The change need not be confined to their common
 five-set.  The missing mathematics is therefore a double-lock exchange,
 not another equality-partition census.
 
-The unrestricted linkage obstruction is now eliminated uniformly.  The
-[two-named-edge theorem](../results/hc7_atomic_two_named_edge_disjoint_cycles.md)
-shows that deleting `e,f` leaves a five-connected nonplanar graph and hence
-a literal `K_4` model rooted at `z,u,d,t`.  The remaining problem is to
-allocate that rooted core relative to the twin boundaries and exact response
-states; another Two-Paths/web analysis in the whole host is unnecessary.
+The unrestricted linkage obstruction is now eliminated uniformly.  More
+strongly, the audited
+[common edge-deletion theorem](../results/hc7_common_edge_deletion_k6_fork.md)
+puts both operations in the same connected six-chromatic host
+`H=G-{e,f}` and supplies a spanning `K_6` model there.  The one-edge
+restorations realize the opposite exact signatures `(proper,equal)` and
+`(equal,proper)`, while `(proper,proper)` is forbidden.  The remaining
+problem is to allocate those named edge states to rows or twin-boundary
+duties; another Two-Paths/web analysis in the whole host is unnecessary.
+
+The audited
+[double-contraction lock allocation](../results/hc7_common_host_double_contraction_lock_allocation.md)
+now supplies the simultaneous `(equal,equal)` state which the two one-edge
+responses alone could not force.  In that one common-host colouring one
+edge has at least three bichromatic locks, or at least four when the two
+equality colours differ; each edge separately has four common-host locks
+in its own one-restoration response.  These paths are literal but need not
+be internally disjoint or aligned with model rows.
 
 The audited
 [packet-transfer theorem](../results/hc7_atomic_twin_seam_packet_transfer.md)
@@ -85,6 +99,18 @@ strong seven-contraction-criticality, `K_7`-minor-freeness, the unique edge
 `zu`, the two old `S`-full rich packets, and the connected bipartite old
 boundary.
 
+For the strict-handoff alternative, the old separation is oriented as
+
+\[
+             (A,S,R)\in\mathcal F_{12}(G),
+             \qquad (\nu_A^S,\nu_R^S)=(1,2),          \tag{2.4}
+\]
+
+and `A` is chosen with minimum order among the packet-one shores of **all**
+members of `mathcal F_12(G)`.  This global choice is not implied merely by
+minimizing in the paired, connected-bipartite, or twin-seam subclass; the
+upstream normalization must preserve it.
+
 Choose a six-colouring `phi` of `G/e`, expanded to `G-e`.  For each literal
 gate edge `f=dt`, choose a six-colouring `c_f` of `G/f`, expanded to `G-f`.
 The proved crossed-state theorem supplies:
@@ -93,7 +119,9 @@ The proved crossed-state theorem supplies:
 2. four correctly oriented strict packet-demand inequalities; and
 3. a named local handoff after the actual packet-one shore is identified.
 
-The handoff is not yet recursive: no noncycling global rank is known.
+The local handoff is not recursive on its own: no noncycling rank is known
+for an unranked `(1,1)` receiver or a near-model rotation.  The only rank
+used below is the global `mathcal F_12(G)` shore-order rank fixed in (2.4).
 
 ## 3. Target theorem
 
@@ -108,14 +136,25 @@ outcomes.
 2. **Terminal model.**  The two lock systems and the two lobes produce a
    literal `K_7` model, or a fixed pair `{a,b}` for which
    `G-{a,b}` is `K_5`-minor-free.
-3. **Strict state handoff.**  A named contraction produces an actual
-   exact-seven receiver with its literal boundary map, actual packet vector,
-   exact state and intact opposite shore, together with a declared
-   nonreversible rank which is strictly smaller than the present twin seam.
+3. **Strict exact-seven handoff.**  A named contraction produces an actual
+   oriented receiver
 
-No naked state mismatch, unranked `(1,1)` receiver, completion edge, or
-unlabelled linkage is an outcome.  Proving this theorem closes the entire
-symmetric two-/three-gate family.  It does not by itself prove `HC_7`.
+   \[
+              (L',S',R')\in\mathcal F_{12}(G),
+              \qquad |L'|<|A|,                         \tag{3.1}
+   \]
+
+   together with its literal boundary map and actual packet vector.  Its
+   equality state may change.  The strict inequality is measured by the
+   one fixed global rank on `mathcal F_12(G)`, not by a representative-local
+   lobe, centre, model, or portal order.
+
+No naked state mismatch, unranked `(1,1)` receiver, near-model rotation,
+completion edge, or unlabelled linkage is an outcome.  Under the global
+choice in (2.4), outcome 3 is itself contradictory; displaying it remains
+useful because it is a literal independently checkable transition.
+Proving this theorem closes the entire symmetric two-/three-gate family.
+It does not by itself prove `HC_7`.
 
 ## 4. Constructive split
 
@@ -229,20 +268,23 @@ For a fixed response `c_f`, palette-align `c_f(z)` with the common
 `phi`-colour of `z,u`; the colour of `c_f(u)` selects one response-matched
 `e`-lock.  If its eligible gate edge is not separating, use its literal
 bypass jointly with the corresponding `f`-lock.  Independently of the
-palette layers, the common deletion `G-{e,f}` already contains four
-pairwise adjacent connected bags rooted at `z,u,d,t`.  Separator allocation
-forces at least three of those bags to meet one twin boundary.  The target
-is:
+palette layers, the common edge-deletion host `H=G-{e,f}` is exactly
+six-chromatic and has a spanning `K_6` model.  Its two one-edge restorations
+realize opposite response signatures, its double contraction supplies an
+`(equal,equal)` response, and no six-colouring of `H` makes both restored
+edges proper.  The resulting three-/four-lock allocation is already
+audited in this same host.  The target is:
 
 > **Nonseparable double-lock decoder.**  A response-matched
 > gate-edge-nonseparable `e`-lock and its crossed `f`-response force a common
 > exact state on one twin boundary, a literal terminal model, or a strictly
 > ranked receiver.
 
-This branch must promote the guaranteed three-bag boundary incidence to a
-fourth duty contact, or couple it to the exact response states.  The rooted
-core itself is not a `K_7`: its bags may consume both old packets and both
-lobes.  Edge-nonseparability alone still does not turn palette colours into
+This branch must split or reselect the spanning model in a way faithful to
+one of those two edge states, or couple the state to an exact twin-boundary
+return.  The common model itself is not a `K_7`: its endpoint incidences are
+uncontrolled and one restored edge may meet only one unsplittable row.
+Edge-nonseparability alone still does not turn palette colours into
 branch-set labels.
 
 Together the two decoders prove the target theorem.
