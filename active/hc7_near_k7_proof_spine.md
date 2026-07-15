@@ -18,11 +18,11 @@ needed.
 
 ## Current research goal
 
-The active dependency-level target is the atomic fully crossed
-carrier-or-rooted-model theorem stated in
-`hc7_atomic_fully_crossed_goal.md`.  It is the separating-edge base case of
-the broader support-four programme.  The theorem must find either two
-literal adjacent carriers whose named contractions manufacture a fresh
+The active dependency-level target is the atomic four-root linkage/disk
+decoder stated in `hc7_atomic_four_root_decoder_goal.md`.  It is the
+separating-edge base case of the broader support-four programme.  The
+theorem must turn the audited literal four-root certificate into either two
+adjacent seed carriers whose named contractions manufacture a fresh
 reflectable state, or an `S`-rooted `K_5` which the two rich packets lift to
 `K_7`.
 
@@ -734,12 +734,16 @@ branch no longer needs a state pullback.  Two further audited lemmas close
 all connected-bipartite atoms with `d_{G[A]}(z)<=2` and every bare cycle
 shore `C_n`, `n>=4`.
 
-Thus the next theorem is a fully crossed rooted-model exchange: allocate
-the literal bridge/ear structure to two adjacent carriers satisfying the
-frontier list/duty criterion, or decode failure as an `S`-rooted `K_5`.
-The first milestone is an alternating four-portal decoder.  A generalized
-web may organize the crossless branch, but completion edges are not host
-edges and no palette colour may be promoted to a branch label.  Sources:
+The list-theoretic part of the next theorem is now closed.  At the canonical
+split `{z}|(A-z)`, failure of every adaptive empty/singleton reservoir gives
+two vertex-disjoint parity-bad boundary paths by set-Menger.  Their four
+endpoints are distinct literal roots, and seven-connectivity supplies a
+four-portal matching.  The audited four-port theorem returns literal
+disjoint linkage paths through `A` or a literal rural disk.  The remaining
+theorem must decode both outcomes into adjacent seed carriers or an
+`S`-rooted `K_5`.  A generalized web may organize the rural branch, but
+completion edges are not host edges and no palette colour may be promoted
+to a branch label.  Sources:
 `hc7_atomic_blocking_path_packet_escape.md`,
 `../results/hc7_atomic_double_contraction_state_split.md`, and
 `../results/hc7_atomic_bichromatic_bridge_state_localization.md`,
@@ -747,6 +751,7 @@ edges and no palette colour may be promoted to a branch label.  Sources:
 `../results/hc7_atomic_near_full_two_carrier_exchange.md`,
 `../results/hc7_atomic_low_root_degree_closure.md`,
 `../results/hc7_atomic_cycle_shore_closure.md`,
+`../results/hc7_two_list_reservoir_menger_dichotomy.md`,
 `hc7_atomic_connector_tree_bridge_audit.md`.
 
 In the separate two-lobe proper-row branch, an exact bounded falsifier found

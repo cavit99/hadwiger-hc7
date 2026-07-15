@@ -17,10 +17,10 @@ dependency chain.
 ## Active research goal
 
 The active dependency-level target is the
-[atomic fully crossed carrier-or-rooted-model theorem](active/hc7_atomic_fully_crossed_goal.md).
+[atomic four-root linkage/disk decoder](active/hc7_atomic_four_root_decoder_goal.md).
 It concerns the normalized separating-edge atom of the connected-rich
-width-two `(1,2)` cell.  It must produce either two literal adjacent
-carriers whose named contractions manufacture a reflectable exact state, or
+width-two `(1,2)` cell.  It must turn one literal four-root
+linkage-or-rural-disk certificate into either two adjacent seed carriers or
 five literal boundary-rooted bags which the two rich packets complete to a
 `K_7` model.
 
@@ -32,13 +32,21 @@ an old equality state: the correct carriers create a fresh
 packet-demand-at-most-two state by a proper-minor contraction.  Hence the
 only live geometric branch is a genuinely fully crossed path/`Y` hull.
 
-The first falsifiable milestone is an **alternating four-portal decoder**
-for the connected bipartite frontier.  Failure of an adaptive carrier
-return must expose four distinct portal labels; literal crossings or a
-host-side web composition must then give the carriers or an `S`-rooted
-`K_5`.  Completion edges are never host edges.  The low-root-degree atom
-and every bare cyclic shore of order at least four are already closed by
-independently audited uniform lemmas.
+The former list-theoretic milestone is now proved and independently
+audited.  Failure of the canonical adaptive carrier return gives two
+vertex-disjoint parity-bad boundary paths by set-Menger, hence four distinct
+literal roots; seven-connectivity also gives distinct portal witnesses.
+The existing four-port theorem then returns a literal linkage or a literal
+disk.  Decoding those two outcomes is the exact remaining geometric step.
+Completion edges are never host edges.  The low-root-degree atom and every
+bare cyclic shore of order at least four are already closed by independently
+audited uniform lemmas.
+
+Exact bounded falsification is green for all 84 rooted connected-bipartite
+frontiers against every biconnected atlas shore through order six (5,880
+instances), using strict `st`-numberings whose endpoints are adjacent.  This
+does not prove the unbounded decoder or encode the full minor-critical
+response.
 
 Current primary literature confirms the boundary of the target:
 generalized webs and rooted four-terminal subdivisions supply uncoloured
@@ -484,6 +492,14 @@ every nonsingleton atomic shore is two-connected.  Two further audited
 consequences close all connected-bipartite atoms with internal root degree
 at most two and every bare cyclic shore `C_n`, `n>=4`.
 
+The canonical root split now has an exact list-obstruction theorem.  If no
+empty/singleton adaptive reservoir works, set-Menger supplies two
+vertex-disjoint parity-bad boundary paths.  The only abstract exception is
+a uniformly singleton-listed star, which compulsory `u` and `W`-fullness
+exclude.  Their four endpoints also have distinct literal `A`-portals by a
+six-cut Hall argument.  The signs are orientation demands, not carrier
+labels.
+
 Sources: [atomic blocking-path checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
 [double-contraction state split](results/hc7_atomic_double_contraction_state_split.md),
 and [bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md),
@@ -495,6 +511,8 @@ the [low-root-degree closure](results/hc7_atomic_low_root_degree_closure.md)
 and its [audit](results/hc7_atomic_low_root_degree_closure_audit.md),
 the [cycle-shore closure](results/hc7_atomic_cycle_shore_closure.md)
 and its [audit](results/hc7_atomic_cycle_shore_closure_audit.md),
+the [two-list Menger dichotomy](results/hc7_two_list_reservoir_menger_dichotomy.md)
+and its [audit](results/hc7_two_list_reservoir_menger_dichotomy_audit.md),
 and the [connector-tree bridge audit](active/hc7_atomic_connector_tree_bridge_audit.md).
 
 The terminal theorem still needed in the atomic separating-edge branch is
@@ -630,14 +648,15 @@ only nondecreasing residue is the atomic width-two bridge/Kempe lock, and
 its compressible states are closed.  The exact atom now has a canonical
 double-contraction saturation fork.  In the separating-edge trace branch it
 also has, in one proper-minor colouring, the compressed state, five locks,
-and an opposite-shore duty connector.  No audited theorem yet allocates the
-fully crossed normalized rooted path/`Y` hull into two literal carriers
-with the correct frontier lists/duties, or decodes it as an `S`-rooted
-`K_5`.  Every clean tree edge, every root-degree-at-most-two
+and an opposite-shore duty connector.  The canonical frontier obstruction
+now yields two disjoint parity-bad boundary paths and a literal four-root
+linkage-or-disk certificate.  No audited theorem yet decodes both its
+linkage and rural-disk outcomes into two adjacent adaptive seed carriers or
+an `S`-rooted `K_5`.  Every clean tree edge, every root-degree-at-most-two
 connected-bipartite atom, and every bare cycle shore of order at least four
 are now closed.  Thus the live atom is two-connected, has a genuinely
 noncyclic crossed bridge/ear structure, and must be handled by the
-alternating four-portal decoder in the active goal.  The four-vertex packet
+four-root decoder in the active goal.  The four-vertex packet
 path is classified but not fully terminal under the strict outcome list;
 generic `K_7^vee` triggers still require a normalized near-model handoff.
 After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,

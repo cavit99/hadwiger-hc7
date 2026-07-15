@@ -323,22 +323,24 @@ certificate is written explicitly.
    `K_{2,3}^+`, or partially rooted `K_5^-` subdivision is not the five-bag
    `S`-rooted `K_5` terminal of Section 2.
 
-## 8. Audited research decision
+## 8. Updated audited research decision
 
-The next constructive proof should target the atomic fully crossed
-carrier-or-rooted-model lemma, not a broader state-preserving three-gate
-pullback.  Clean edges are exhausted, so the proof should spend one
-mechanism on the literal crossed hull:
+The adjacent audited Menger theorem now completes the former steps 1--2 at
+the canonical split `{z}|(A-z)`: failure of every singleton-reservoir return
+gives two disjoint parity-bad boundary paths, four distinct literal roots,
+and a four-portal matching.  The existing four-port theorem then returns a
+literal linkage or a literal rural disk.
 
-1. use two-connectivity and an `st`-ordering or ear step to expose a
-   prefix/suffix carrier cut;
-2. reduce failure of every singleton-reservoir return to two disjoint
-   parity-bad boundary paths, hence four distinct literal portal labels;
-3. prove a literal carrier/rooted-bag decoder for that alternating
-   four-portal certificate;
-4. in the crossless outcome, use web composition only to locate a literal
-   host-side split; the carrier contractions, not the web, manufacture the
-   exact state.
+The next constructive proof is therefore exactly steps 3--4:
+
+1. decode the literal linkage as adjacent seed carriers or five rooted
+   bags, using the fully crossed hull for the necessary second rung; and
+2. decode the rural disk by the three extra boundary labels and the full
+   relative seven-cut inequalities.
+
+In the rural outcome, use web composition only to locate a literal
+host-side split; the carrier contractions, not the web, manufacture the
+exact state.
 
 The route must be terminated if the crossless recursion generates an
 unbounded family of labels or if the only output is an unlabelled web/near
