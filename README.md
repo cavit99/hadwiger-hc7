@@ -21,9 +21,9 @@ The parent dependency-level target remains the
 through the
 [atomic four-root linkage/disk decoder](active/hc7_atomic_four_root_decoder_goal.md).
 The immediate constructive child is now the
-[literal first `C`-reduction lift](active/hc7_literal_first_c_reduction_lift_goal.md).
-It is the narrowest unbounded theorem that closes a named branch of the
-parent target rather than merely refining its portal cases.
+[atomic twin-seam double-lock exchange](active/hc7_atomic_twin_seam_double_lock_exchange_goal.md).
+It is the first point at which two named proper-minor colourings are coupled
+simultaneously across overlapping actual seven-boundaries.
 
 In the compulsory-portal atom, every clean core edge, every thin shore of
 order at most five, every low-root-degree connected-bipartite shore, and
@@ -38,22 +38,29 @@ two literal disjoint paths or one literal rural disk.  The decoder must turn
 2. five pairwise adjacent boundary-rooted bags, which the two rich packets
    complete to a literal `K_7`.
 
-The rural outcome has advanced materially.  A new audited asymmetric
-carrier theorem closes every connected `(5,6)` support split.  It implies
-that the atomic shore has minimum internal degree at least three and rules
-out the entire outerplanar rural family.  A nonroot degree-three peel either
-closes by the same return or exposes a literal order-seven boundary with a
-named contraction and an exact state on the intact receiver side.  The
-latter is deliberately only a one-sided certificate: no packet orientation,
-reflection, or recursive rank follows automatically.
+The rural outcome has advanced materially.  The audited unordered `(5,6)`
+carrier theorem closes every asymmetric connected split and rules out the
+entire outerplanar rural family.  Literal two-gates now either close or form
+one twin exact-seven seam: two five-contact lobes whose supports overlap in
+three old labels.  Literal three-gates either expose an actual support-four
+receiver, reduce to that same twin seam, or form its three-gate
+`K_{2,3}` version.  This eliminates an unbounded family of gate geometries
+without using completion edges.
 
-Consequently the next proof must lift the first literal lobe behind a
-two-/three-vertex `C`-reduction gate.  It must produce an asymmetric return,
-five rooted bags, or a normalized exact receiver carrying its packet vector
-and a strict `(1,2)` descent/accepted `(1,1)` handoff.  Clique-completion
-edges from the reduction are not host edges.  The linkage outcome remains
-open separately at the exact symmetric `(5,5)` two-rung seam and is frozen
-while this rural lift is pursued.
+On a twin seam, the compulsory contraction `e=zu` and every lobe-gate
+contraction `f=dt` return different exact states on **both** overlapping
+seven-boundaries; four strict demand inequalities orient the corresponding
+packet reflection.  The actual packet-one shore also selects a named local
+handoff of demand at least three in `(1,2)` and at least two in `(1,1)`.
+This is not yet a recursive descent: the two states may already differ on
+the common five-set and no global noncycling rank is known.
+
+The immediate proof must therefore close the symmetric seam by a
+double-lock exchange.  If a gate edge separates a compulsory Kempe lock,
+an audited bridge swap supplies two simultaneous literal gate-rooted
+mismatch paths.  The remaining work is to turn those paths into carriers or
+a terminal model, and to resolve the complementary gate-edge-bypass branch.
+Further labelled portal enumeration is frozen.
 
 Preserving the original demand-three trace is not required.  The compulsory
 bridge transition and the canonical reverse trace arise from different
@@ -91,16 +98,16 @@ separating-entry Kempe toggle are insufficient; a proof must explicitly use
 `K_7`-minor-freeness or universal contraction-critical response.
 
 Fresh primary-source research through 15 July 2026 found no automatic
-lift.  The classical Two Paths theorem and Humeau--Pous organize failed
-routing by order-at-most-three reductions/web composition, but complete
-the gates with nonliteral edges and transport no equality state.  Tutte
-paths bound bridge attachments by three, but likewise carry neither the
-seven labels nor the receiver state.  Planar-quilt deficiency and stable-
-bridge theorems require degree, deficiency, or torso-connectivity hypotheses
-not yet available in the literal shore.  The corrected flat-wall literature
-also rules out importing stronger flatness conclusions casually.  Thus the
-new mathematics must be a label-faithful lift of the *first literal gate*
-under the full seven-cut, `K_7`-minor-free, and minor-critical kernel.
+exchange theorem.  Humeau--Pous organizes failed routing by recursive web
+composition, but transports no exact state and may use nonliteral completion
+edges.  Dvorak--Swart shows that abstract boundary extension languages can
+be arbitrarily prescribed even under relevant rooted-minor exclusions, so
+state language alone cannot align the common five-set.  Kriesell--Mohr can
+package certain literal five-root Kempe skeletons after they exist, but
+generic bichromatic connectivity does not manufacture the required
+disjoint skeleton.  The new mathematics must therefore use the two named
+contractions and their lock geometry, with web/folio tools only after a
+literal failure certificate is exposed.
 
 Adversarial research also found the correct hypothesis boundary.  A
 ten-vertex seven-connected `(2,1)` shell has the canonical maximum-independent
@@ -778,19 +785,20 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the rural child's literal first-`C`-reduction lift.  The four literal
-roots and the linkage-or-rural-disk dichotomy are already proved.  In the
-rural branch, asymmetric `(5,6)` carrier splits and every outerplanar shore
-are now closed uniformly.  What is not proved is that the first literal
-two-/three-gate interior lobe yields an asymmetric split, five
-boundary-rooted pairwise adjacent bags, or an actual seven-boundary with a
-fully normalized receiving state and packet orientation.  A naked gate,
-one-sided state, or clique-completion edge is not enough.
+is the atomic twin-seam double-lock exchange.  The two-/three-gate geometry
+is now proved: every nonterminal gate is a symmetric seam with two
+five-contact lobes and a common five-vertex interface.  The compulsory and
+gate-edge contractions give crossed exact states, named local handoffs and,
+when a gate edge separates a compulsory lock, simultaneous literal
+gate-rooted mismatch paths.
 
-Closing this decoder eliminates the entire connected-bipartite atomic
-separating-edge family, an unbounded family.  It does **not** by itself prove
-`HC_7`: arbitrary demand-three states, packet vector `(1,1)`, larger
-adhesions, and near-model rotation components remain in `S1/S4`.
+What is not proved is that these coupled paths yield disjoint carriers or a
+terminal model, or that the complementary gate-edge-bypass branch forces a
+common exact state.  Nor is there a global noncycling rank for the locally
+normalized `(1,1)`/`(1,2)` handoff.  Closing the twin exchange eliminates
+the entire symmetric gate family, an unbounded family.  It does **not** by
+itself prove `HC_7`: arbitrary demand-three states, packet vector `(1,1)`,
+larger adhesions, and near-model rotation components remain in `S1/S4`.
 
 Multi-lobe support-four gates yield a labelled near model or a strict
 `(1,2)` descendant, but no theorem transports a legally useful state across

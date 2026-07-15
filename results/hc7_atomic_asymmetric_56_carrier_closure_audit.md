@@ -11,8 +11,16 @@ exact state.
 
 Because `X,Y` partition the `S`-full shore `A`, no boundary vertex can miss
 both carriers.  Thus `D_X cap D_Y` is empty.  The unique edge `zu` and
-`z in Y` correctly force `u in D_X-D_Y`.  The support bounds then give
-exactly `|D_X|<=2` and `|D_Y|<=1`.
+`z in Y` correctly force `u in D_X-D_Y`.  The unordered support bounds
+give one of
+
+\[
+ (|D_X|,|D_Y|)\le(2,1)
+ \quad\hbox{or}\quad
+ (|D_X|,|D_Y|)\le(1,2).
+\]
+
+In the second orientation `D_X={u}`.
 
 ## List-colouring audit
 
@@ -49,6 +57,18 @@ two-degree-vertices property of two-connected outerplanar graphs then
 excludes the whole outerplanar family.
 
 ## Scope audit
+
+For the reverse orientation, fix the bipartition class containing `u`.
+When the at-most-two members of `D_Y` lie in the opposite class, no deletion
+is needed.  When they occupy both classes, delete the one in `u`'s class.
+When they all lie in `u`'s class, delete `u` and orient each surviving
+component independently.  This exhausts the new case, including a
+disconnected `H-U`.
+
+If an edge survives it supplies both labels.  If no edge survives, the six
+remaining vertices include a flexible vertex, so the otherwise absent label
+can be assigned explicitly.  Hence the seed classes required by the adaptive
+return are nonempty.
 
 The proof does not claim the symmetric `(5,5)` case.  The displayed tree
 really is a list-level obstruction to deleting one clique vertex, so the

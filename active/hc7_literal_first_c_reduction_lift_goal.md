@@ -1,12 +1,15 @@
 # Active goal: literal first `C`-reduction lift
 
-**Status:** immediate research target, not a proved theorem.
+**Status:** geometric portion discharged; state composition transferred to
+the twin-seam exchange goal.
 
 ## Strategic decision
 
-Keep the atomic four-root decoder as the current `HC_7` milestone, but
-replace further portal enumeration by one literal lift theorem for the first
-interior reduction of the rural disk.
+Keep the atomic four-root decoder as the current `HC_7` milestone.  The
+literal gate analysis proposed here has now been completed through the
+audited two-gate and three-gate normal forms.  Its only nonterminal geometric
+output is the symmetric twin seam.  The active successor is
+[the double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
 
 This choice follows two audited advances.
 
@@ -82,7 +85,11 @@ literal gate
 
 and completes `Z` to a clique in the reduced graph.  Choose the first such
 reduction after exposing all literal two- and three-separations of the
-clean disk, or equivalently choose an inclusion-minimal off-frame lobe.
+clean disk.  When a canonical lobe is needed, take the complement of the
+frame-containing component of `A-Z`; equivalently, saturate the off-frame
+side.  An inclusion-minimal off-frame lobe is **not** equivalent: its
+complement need not be connected, so it cannot be used silently as the
+second carrier.
 
 The separation is literal; the clique completion is not.  Relative
 seven-connectivity gives

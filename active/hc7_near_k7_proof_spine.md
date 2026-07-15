@@ -42,12 +42,13 @@ well-founded `S4` rank.  In particular, the reversed vector
 `(nu_D,nu_B)=(2,1)` leaves the actual packet-one shore outside the strict
 lobe.
 
-The first milestone is therefore to close that reversed tight-lobe
-orientation using `K_7`-minor-freeness and universal proper-minor/model
-regeneration.  A local seven-connected shell realizes every weaker datum,
-including the named separating-entry toggle and exhaustion of the rich
-shore by two packets, while containing a literal `K_7`; it is the mandatory
-falsifier for any proposed proof.
+The first milestone is therefore to close the symmetric atomic twin seam
+now exposed inside that reversed orientation.  Literal two-/three-gate
+analysis leaves two five-contact lobes with overlapping actual
+seven-boundaries.  The operations `e=zu` and `f=dt` produce crossed exact
+states and packet-aligned local handoffs on both boundaries.  The immediate
+theorem must turn their double-lock system into a common state, a literal or
+fixed-pair terminal, or a genuinely ranked receiver.
 
 Sources:
 `../results/hc7_shortest_thin_lock_tight_bypass_transition.md`,
@@ -55,13 +56,12 @@ Sources:
 `../barriers/hc7_tight_gate_local_orientation_shell.md`.
 
 The online literature review through 15 July 2026 found no automatic
-lift.  Humeau--Pous gives the relevant constructive crossing/web
-decomposition and Perfect's lemma can preserve endpoints after a literal
-relative-separation hypothesis is proved.  Neither transports an exact
-state.  Colorful-minor and rooted-folio theorems preserve finite rooted
-geometry rather than extension languages, and Dvořák--Swart shows why an
-abstract extension language alone cannot be the engine.  The current
-knitted threshold is also far above this exact-seven interface.
+exchange.  Humeau--Pous gives the relevant constructive crossing/web
+decomposition but transports no exact state.  Dvorak--Swart rules out an
+abstract extension-language engine, while Kriesell--Mohr can package only a
+literal Kempe skeleton after the required connectivity/disjointness has
+been proved.  The current knitted threshold is also far above this
+exact-seven interface.
 
 ## Frozen kernel
 
@@ -854,12 +854,26 @@ and the named contraction `qv`, whose minor colouring induces an exact
 state on the intact closed `A-v` side.  This is only a one-sided receiver:
 it supplies no packet vector, reflection, or global descent rank.
 
-The immediate rural child is therefore the literal first `C`-reduction
-lift.  It must turn the first two-/three-vertex lobe gate into a `(5,6)`
-split, five rooted bags, or a normalized receiver with its actual packet
-vector and strict orientation.  Completion edges are not host edges.  The
-linkage half remains open at the exact symmetric `(5,5)` two-rung seam and
-is frozen during this lift.
+The literal gate geometry is now uniform.  Every two-gate either closes by
+the unordered `(5,6)` theorem or yields a twin seam with two five-contact
+lobes and support intersection three.  Every three-gate either exposes an
+actual support-four receiver, reduces to that twin seam, or gives its
+three-gate `K_{2,3}` version.  Completion edges are not used.
+
+On the twin seam, `e=zu` and each lobe-gate contraction `f=dt` return
+different exact states on both overlapping actual seven-boundaries.  The
+four strict demand inequalities give a packet-aligned named local handoff.
+If `f` separates a compulsory Kempe lock, one swap gives two simultaneous
+literal `t`-rooted mismatch paths through the same edge.  The paths need not
+otherwise be disjoint.
+
+The immediate rural child is therefore the
+[twin-seam double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
+It must decode the separating-edge paths into carriers/model/ranked state
+and resolve the complementary gate-edge-bypass branch.  Bare alignment on
+the common five-set is false even for a `K_7`-minor-free, `K`-clean shell;
+that shell has the permitted rooted `K_5`, so the correct target is
+alignment **or terminal model**.
 Completion edges are not host edges and no palette colour may be promoted
 to a branch label.  Sources:
 `hc7_atomic_blocking_path_packet_escape.md`,
@@ -876,7 +890,11 @@ to a branch label.  Sources:
 `../results/hc7_direct_reserve_rooted_k4_obstruction.md`, and
 `../results/hc7_atomic_asymmetric_56_carrier_closure.md`,
 `../results/hc7_atomic_degree_three_receiver_peel.md`, and
-`hc7_literal_first_c_reduction_lift_goal.md`, and
+`../results/hc7_atomic_literal_two_gate_transition.md`,
+`../results/hc7_atomic_literal_three_gate_normal_form.md`,
+`../results/hc7_atomic_twin_seam_crossed_states.md`,
+`../results/hc7_atomic_twin_seam_separating_gate_bridge.md`,
+`hc7_atomic_twin_seam_double_lock_exchange_goal.md`, and
 `hc7_atomic_connector_tree_bridge_audit.md`.
 
 In the separate two-lobe proper-row branch, an exact bounded falsifier found

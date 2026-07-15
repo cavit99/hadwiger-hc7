@@ -1,7 +1,9 @@
 # Parent target: direct-reserve substituted-web decoder
 
-**Status:** open parent target.  Its immediate child is now the
-[literal first `C`-reduction lift](hc7_literal_first_c_reduction_lift_goal.md).
+**Status:** open parent target.  Its gate geometry is discharged to the
+[literal normal-form programme](hc7_literal_first_c_reduction_lift_goal.md);
+the immediate child is the
+[twin-seam double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
 
 ## Strategic decision
 
@@ -10,9 +12,9 @@ atomic four-root decoder.  It is now a clean rooted-web exchange problem,
 not a general equality-state pullback and not a static portal census.
 
 The linkage child of the parent decoder remains open but is frozen during
-this attempt.  Proving the child lift theorem closes one unbounded rural family
-and returns it either terminally or through a named near-`K_7`/exact-seven
-interface.  It does not by itself prove `HC_7`.
+this attempt.  Proving the double-lock theorem closes the symmetric rural
+gate family and returns it either terminally or through a genuinely ranked
+near-`K_7`/exact-seven interface.  It does not by itself prove `HC_7`.
 
 ## Frozen direct-reserve frame
 

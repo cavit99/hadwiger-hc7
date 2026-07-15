@@ -26,7 +26,7 @@ deleting an empty or singleton clique reservoir.
 
 ## 2. The asymmetric carrier theorem
 
-### Theorem 2.1
+### Theorem 2.1 (unordered asymmetric support)
 
 Suppose
 
@@ -37,7 +37,9 @@ Suppose
 where `X,Y` are nonempty connected adjacent sets, `z in Y`, and
 
 \[
-                    |N_S(X)|\ge5,\qquad |N_S(Y)|\ge6.       \tag{2.1}
+ \min\{|N_S(X)|,|N_S(Y)|\}\ge5,
+ \qquad
+ \max\{|N_S(X)|,|N_S(Y)|\}\ge6.                           \tag{2.1}
 \]
 
 Then `G` is six-colourable.
@@ -62,7 +64,7 @@ The unique `A-u` edge is `zu`, and `z in Y`.  Hence
  u\in D_X,\qquad u\notin D_Y.                              \tag{2.3}
 \]
 
-By (2.1)--(2.3),
+First suppose
 
 \[
  D_X=\{u\}\text{ or }\{u,p\},
@@ -83,11 +85,28 @@ vertex opposite `q`, delete the other member of `D_X` as `U`, and orient the
 retained member's class to `Y`.  If `D_Y` is empty, delete either member of
 `D_X` and use the orientation prescribed by the other.
 
+This completes the construction when (2.4) holds.  If (2.4) does not hold,
+the other orientation of (2.1) gives
+
+\[
+                         D_X=\{u\},\qquad |D_Y|\le2.       \tag{2.5}
+\]
+
+Let `C_0,C_1` be the bipartition classes of `H`, with `u in C_0`.  If
+`D_Y subseteq C_1`, orient `C_0` to `Y` and `C_1` to `X`, deleting
+nothing and put `U=emptyset`.  If `D_Y` has one member in each class,
+delete its member in `C_0` as `U` and use the same orientation.  If
+`D_Y subseteq C_0` and is nonempty, put `U={u}`; in every component of
+`H-u` containing a member of
+`D_Y`, orient that member's bipartition side to `X`, and orient every
+remaining component arbitrarily.  All surviving prescriptions are
+respected.  The empty `D_Y` case was already covered by the first choice.
+
 Thus in every case `U` is empty or a singleton, and `H-U` has a proper list
-colouring.  If `H-U` has an edge, both carrier labels occur automatically.
-If `H-U` is independent, then `U` is a singleton and at least three of the
-six surviving vertices have the flexible list `{X,Y}`; assign one of them
-the otherwise missing label.  Both colour classes are therefore nonempty.
+colouring.  If `H-U` has an edge, both carrier labels occur automatically
+in any component containing an edge.  If `H-U` is independent, six vertices
+survive and at most two have singleton lists; assign a flexible vertex the
+otherwise missing label.  Both colour classes are therefore nonempty.
 
 The two classes are independent seed sets contacted by their named
 carriers, and `U` is a clique.  The audited adaptive clique-reservoir return,
@@ -132,7 +151,8 @@ closed uniformly; any surviving rural disk has a genuine interior torso.
 
 ## 4. Exact boundary of the theorem
 
-The symmetric support vector `(5,5)` is not a list-theoretic corollary.
+The symmetric support vector `(5,5)` is the first profile not covered by
+Theorem 2.1 and is not a list-theoretic corollary.
 For example, on the tree with edges
 
 \[

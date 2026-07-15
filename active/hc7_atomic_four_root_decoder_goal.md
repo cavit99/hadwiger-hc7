@@ -79,8 +79,10 @@ repairing it leaves a reserved connector.  Every nontrivial reserve already
 gives a labelled `K_7^vee`, so the sole rural residue has one nontrivial bad
 path consumed by the repair and one direct bad edge left over.
 
+The rural gate geometry has been discharged to one symmetric normal form by
+the [literal first `C`-reduction programme](hc7_literal_first_c_reduction_lift_goal.md).
 The active child is now the
-[literal first `C`-reduction lift](hc7_literal_first_c_reduction_lift_goal.md),
+[twin-seam double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md),
 inside the broader
 [direct-reserve substituted-web decoder](hc7_direct_reserve_substituted_web_goal.md).
 An independently audited substitution theorem replaces one old root by the
@@ -91,12 +93,12 @@ decode that web into an anchored five-bag certificate, adaptive carriers,
 or an actual seven-adhesion with a receiving certificate.  A naked descent
 or a static fifth-bag contact count is not sufficient.
 
-Two new audited entry lemmas close every asymmetric `(5,6)` carrier split,
-exclude the entire outerplanar rural family, and turn every remaining
-nonroot degree-three peel into either an adaptive return or a named
-one-sided exact-seven receiver.  The child must now lift the first literal
-two-/three-gate interior reduction into carriers, five rooted bags, or a
-fully normalized receiver; a one-sided state is not enough.
+Audited two-/three-gate normal forms now close every asymmetric `(5,6)`
+split and leave only a twin five-contact seam (with two or three gates) or
+an actual support-four receiver.  The compulsory and gate-edge contractions
+produce crossed states on both twin boundaries and a packet-aligned named
+local handoff.  The child must convert their double-lock geometry into a
+common state, terminal model, or genuinely ranked receiver.
 
 The linkage half of the present parent theorem remains open.  Its exact
 residue is a symmetric `(5,5)` two-rung seam, and is frozen while the rural
