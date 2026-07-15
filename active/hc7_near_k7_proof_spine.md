@@ -837,7 +837,29 @@ in the last cell a reoriented seven-separation regenerates a rooted
 theorem eliminates five obstruction classes and every hidden fill clique:
 failure of the upgrade is a literal clean cofacial web.  The active child
 must decode that web into an anchored five-bag certificate, adaptive
-carriers, or an exact receiving adhesion.  The linkage half remains open.
+carriers, or an exact receiving adhesion.
+
+The adaptive carrier half has advanced uniformly.  Any connected split
+`A=X dotunion Y` with `z` on the six-contact side and support at least
+`(5,6)` six-colours `G`.  Since the shore is already two-connected, this
+forces `delta(G[A])>=3` and eliminates the entire outerplanar rural family.
+For a nonroot degree-three vertex, the same argument either closes or gives
+the literal receiver boundary
+
+\[
+                  \Omega_v=\{v\}\cup(S-\{q\})=N_G(A-v)
+\]
+
+and the named contraction `qv`, whose minor colouring induces an exact
+state on the intact closed `A-v` side.  This is only a one-sided receiver:
+it supplies no packet vector, reflection, or global descent rank.
+
+The immediate rural child is therefore the literal first `C`-reduction
+lift.  It must turn the first two-/three-vertex lobe gate into a `(5,6)`
+split, five rooted bags, or a normalized receiver with its actual packet
+vector and strict orientation.  Completion edges are not host edges.  The
+linkage half remains open at the exact symmetric `(5,5)` two-rung seam and
+is frozen during this lift.
 Completion edges are not host edges and no palette colour may be promoted
 to a branch label.  Sources:
 `hc7_atomic_blocking_path_packet_escape.md`,
@@ -852,6 +874,9 @@ to a branch label.  Sources:
 `../results/hc7_rural_reserved_connector_near_k7.md`,
 `../results/hc7_direct_reserve_one_root_substitution.md`,
 `../results/hc7_direct_reserve_rooted_k4_obstruction.md`, and
+`../results/hc7_atomic_asymmetric_56_carrier_closure.md`,
+`../results/hc7_atomic_degree_three_receiver_peel.md`, and
+`hc7_literal_first_c_reduction_lift_goal.md`, and
 `hc7_atomic_connector_tree_bridge_audit.md`.
 
 In the separate two-lobe proper-row branch, an exact bounded falsifier found

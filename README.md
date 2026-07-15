@@ -18,10 +18,12 @@ dependency chain.
 
 The parent dependency-level target remains the
 [single-trace reverse tight-lobe carrier-or-rooted-five theorem](active/hc7_reverse_tight_carrier_or_rooted_five_goal.md),
-but the immediate constructive goal is now the
+through the
 [atomic four-root linkage/disk decoder](active/hc7_atomic_four_root_decoder_goal.md).
-This is the narrowest unbounded theorem that closes a named branch of the
-parent target rather than merely refining its cases.
+The immediate constructive child is now the
+[literal first `C`-reduction lift](active/hc7_literal_first_c_reduction_lift_goal.md).
+It is the narrowest unbounded theorem that closes a named branch of the
+parent target rather than merely refining its portal cases.
 
 In the compulsory-portal atom, every clean core edge, every thin shore of
 order at most five, every low-root-degree connected-bipartite shore, and
@@ -35,6 +37,23 @@ two literal disjoint paths or one literal rural disk.  The decoder must turn
    common exact state and hence a six-colouring; or
 2. five pairwise adjacent boundary-rooted bags, which the two rich packets
    complete to a literal `K_7`.
+
+The rural outcome has advanced materially.  A new audited asymmetric
+carrier theorem closes every connected `(5,6)` support split.  It implies
+that the atomic shore has minimum internal degree at least three and rules
+out the entire outerplanar rural family.  A nonroot degree-three peel either
+closes by the same return or exposes a literal order-seven boundary with a
+named contraction and an exact state on the intact receiver side.  The
+latter is deliberately only a one-sided certificate: no packet orientation,
+reflection, or recursive rank follows automatically.
+
+Consequently the next proof must lift the first literal lobe behind a
+two-/three-vertex `C`-reduction gate.  It must produce an asymmetric return,
+five rooted bags, or a normalized exact receiver carrying its packet vector
+and a strict `(1,2)` descent/accepted `(1,1)` handoff.  Clique-completion
+edges from the reduction are not host edges.  The linkage outcome remains
+open separately at the exact symmetric `(5,5)` two-rung seam and is frozen
+while this rural lift is pursued.
 
 Preserving the original demand-three trace is not required.  The compulsory
 bridge transition and the canonical reverse trace arise from different
@@ -72,16 +91,16 @@ separating-entry Kempe toggle are insufficient; a proof must explicitly use
 `K_7`-minor-freeness or universal contraction-critical response.
 
 Fresh primary-source research through 15 July 2026 found no automatic
-lift.  Humeau--Pous is the best organizer of failed four-root routing, but
-its web completion and parallel composition do not make added edges literal
-or transport equality states.  Dvořák--Swart rules out arguments based only
-on abstract extension languages.  Current knitted thresholds are far above
-connectivity seven, while colorful-minor and rooted-folio machinery preserve
-static rooted geometry rather than exact colouring compatibility.  The
-recent rooted-subdivision trichotomy also has unverified internal-separation
-hypotheses here and does not preserve the named duty pairing.  Thus the new
-mathematics must be a label-faithful host-side decoder under the full
-seven-cut, `K_7`-minor-free, and minor-critical kernel.
+lift.  The classical Two Paths theorem and Humeau--Pous organize failed
+routing by order-at-most-three reductions/web composition, but complete
+the gates with nonliteral edges and transport no equality state.  Tutte
+paths bound bridge attachments by three, but likewise carry neither the
+seven labels nor the receiver state.  Planar-quilt deficiency and stable-
+bridge theorems require degree, deficiency, or torso-connectivity hypotheses
+not yet available in the literal shore.  The corrected flat-wall literature
+also rules out importing stronger flatness conclusions casually.  Thus the
+new mathematics must be a label-faithful lift of the *first literal gate*
+under the full seven-cut, `K_7`-minor-free, and minor-critical kernel.
 
 Adversarial research also found the correct hypothesis boundary.  A
 ten-vertex seven-connected `(2,1)` shell has the canonical maximum-independent
@@ -614,14 +633,16 @@ the [two-list Menger dichotomy](results/hc7_two_list_reservoir_menger_dichotomy.
 and its [audit](results/hc7_two_list_reservoir_menger_dichotomy_audit.md),
 and the [connector-tree bridge audit](active/hc7_atomic_connector_tree_bridge_audit.md).
 
-The terminal theorem now needed in the atomic branch is the fixed-state
-five-lock decoder.  It must use the thin/rich quotient alternatives from
+The dependency-level theorem still needed in the atomic branch is the
+fixed-state five-lock decoder.  It must use the thin/rich quotient alternatives from
 one `G-zu` colouring and produce two literal duty-faithful carriers, five
 pairwise adjacent boundary-rooted bags, a strict state-carrying
 exact-seven descent, or a ranked `S1/S4` handoff.  The fully crossed
-path/`Y` hull is one child of this theorem, not the complete target.  A
-crossless web is useful only if its first composition seam carries a state
-attained by a named proper-minor operation.
+path/`Y` hull is one child of this theorem, not the complete target.  Its
+immediate rural subgoal is now the literal first-`C`-reduction lift.  A
+crossless web or completed torso is useful only if its first literal gate
+returns carriers, rooted bags, or a state attained by a named proper-minor
+operation.
 
 Every new boundary vertex literally meets the smaller lobe.  What is not
 yet proved is that a legally useful equality state survives this map.  In
@@ -729,6 +750,11 @@ Controlling inputs:
   and [audit](results/hc7_direct_reserve_one_root_substitution_audit.md).
 - [substituted-host rooted-`K_4` obstruction theorem](results/hc7_direct_reserve_rooted_k4_obstruction.md)
   and [audit](results/hc7_direct_reserve_rooted_k4_obstruction_audit.md).
+- [asymmetric `(5,6)` carrier closure](results/hc7_atomic_asymmetric_56_carrier_closure.md)
+  and [audit](results/hc7_atomic_asymmetric_56_carrier_closure_audit.md).
+- [degree-three receiver peel](results/hc7_atomic_degree_three_receiver_peel.md)
+  and [audit](results/hc7_atomic_degree_three_receiver_peel_audit.md).
+- [literal first `C`-reduction lift goal](active/hc7_literal_first_c_reduction_lift_goal.md).
 - [connector-tree bridge audit and next exact lemma](active/hc7_atomic_connector_tree_bridge_audit.md).
 - [bounded adaptive peel-or-six-cut probe](active/hc7_two_lobe_peel_or_six_cut_probe.md)
   and its exact verifier; this is evidence, not a theorem.
@@ -752,13 +778,14 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the atomic four-root linkage/disk decoder above.  In its normalized
-fully crossed branch, the four literal roots and the linkage-or-rural-disk
-dichotomy are already proved.  What is not proved is that the full
-counterexample kernel forces either a contact-list-compatible pair of
-adjacent carriers or five boundary-rooted pairwise adjacent bags.  A proof
-may manufacture a fresh common exact state; it need not pull back the
-canonical reverse trace.
+is the rural child's literal first-`C`-reduction lift.  The four literal
+roots and the linkage-or-rural-disk dichotomy are already proved.  In the
+rural branch, asymmetric `(5,6)` carrier splits and every outerplanar shore
+are now closed uniformly.  What is not proved is that the first literal
+two-/three-gate interior lobe yields an asymmetric split, five
+boundary-rooted pairwise adjacent bags, or an actual seven-boundary with a
+fully normalized receiving state and packet orientation.  A naked gate,
+one-sided state, or clique-completion edge is not enough.
 
 Closing this decoder eliminates the entire connected-bipartite atomic
 separating-edge family, an unbounded family.  It does **not** by itself prove
@@ -776,12 +803,12 @@ linkage-or-disk certificate.  Its rural outcome has been reduced uniformly
 to one direct-reserve exchange: every nontrivial reserved connector already
 gives a labelled `K_7^vee`, while the last cell admits an audited one-root
 substitution regenerating a rooted diamond.  The complete rooted-`K_4`
-obstruction theorem now shows that this substituted host either has the
-rooted `K_4` or is itself a clean cofacial planar web.  What is not proved is
-the crossing-or-return exchange which supplies both an `S`-anchor for the
-substituted `z`-bag and a separate two-contact connector, manufactures
-adaptive carriers, or returns an actual seven-adhesion with an exact
-receiving certificate.  The linkage outcome remains open separately.
+obstruction theorem shows that this substituted host either has the rooted
+`K_4` or is a clean cofacial planar web.  The new `(5,6)` theorem then
+removes its outerplanar realization, and the degree-three peel names the
+only local receiver it can expose.  What remains is the literal interior
+gate lift just stated.  The linkage outcome remains open separately at the
+symmetric `(5,5)` seam.
 
 Every clean tree edge, every root-degree-at-most-two connected-bipartite
 atom, and every bare cycle shore of order at least four are closed.  The

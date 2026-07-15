@@ -1,15 +1,16 @@
-# Active goal: direct-reserve substituted-web decoder
+# Parent target: direct-reserve substituted-web decoder
 
-**Status:** research target, not a proved theorem.
+**Status:** open parent target.  Its immediate child is now the
+[literal first `C`-reduction lift](hc7_literal_first_c_reduction_lift_goal.md).
 
 ## Strategic decision
 
-The immediate target is the sole surviving **rural-disk** child of the
+This file records the sole surviving **rural-disk** parent of the
 atomic four-root decoder.  It is now a clean rooted-web exchange problem,
 not a general equality-state pullback and not a static portal census.
 
 The linkage child of the parent decoder remains open but is frozen during
-this attempt.  Proving the theorem below closes one unbounded rural family
+this attempt.  Proving the child lift theorem closes one unbounded rural family
 and returns it either terminally or through a named near-`K_7`/exact-seven
 interface.  It does not by itself prove `HC_7`.
 

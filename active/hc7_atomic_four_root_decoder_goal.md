@@ -79,7 +79,9 @@ repairing it leaves a reserved connector.  Every nontrivial reserve already
 gives a labelled `K_7^vee`, so the sole rural residue has one nontrivial bad
 path consumed by the repair and one direct bad edge left over.
 
-The active child is the
+The active child is now the
+[literal first `C`-reduction lift](hc7_literal_first_c_reduction_lift_goal.md),
+inside the broader
 [direct-reserve substituted-web decoder](hc7_direct_reserve_substituted_web_goal.md).
 An independently audited substitution theorem replaces one old root by the
 compulsory portal `z` and regenerates a rooted `K_4^-` while avoiding the
@@ -89,8 +91,16 @@ decode that web into an anchored five-bag certificate, adaptive carriers,
 or an actual seven-adhesion with a receiving certificate.  A naked descent
 or a static fifth-bag contact count is not sufficient.
 
-The linkage half of the present parent theorem remains open and is frozen
-while this rural child is pursued.
+Two new audited entry lemmas close every asymmetric `(5,6)` carrier split,
+exclude the entire outerplanar rural family, and turn every remaining
+nonroot degree-three peel into either an adaptive return or a named
+one-sided exact-seven receiver.  The child must now lift the first literal
+two-/three-gate interior reduction into carriers, five rooted bags, or a
+fully normalized receiver; a one-sided state is not enough.
+
+The linkage half of the present parent theorem remains open.  Its exact
+residue is a symmetric `(5,5)` two-rung seam, and is frozen while the rural
+lift is pursued.
 
 ## Frozen atomic input
 
