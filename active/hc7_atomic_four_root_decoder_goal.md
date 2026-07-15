@@ -17,6 +17,60 @@ edges are never host edges.
 Proving this goal closes the connected-bipartite atomic separating-edge
 family.  It does not by itself prove `HC_7`.
 
+The decoder is now also the immediate milestone of the reverse tight-lobe
+programme.  It may close by manufacturing a **fresh** common exact state
+from its literal carriers.  It is not required to preserve the canonical
+demand-three state obtained by contracting the packet-one shore: that state
+and the compulsory-edge state come from different named proper-minor
+operations, and no proved transition identifies them.
+
+## Research decision, 15 July 2026
+
+A new primary-source search did not reveal a theorem that supplies the
+decoder as a black box.
+
+* Humeau--Pous gives literal crossings for fixed roots and a recursive
+  parallel-composition description of crossless webs, but a same-vertex web
+  completion may add nonliteral edges and carries no equality state.
+* Dvořák--Swart shows that abstract boundary extension languages can be
+  realized with surprising freedom even under rooted-minor exclusions, so
+  state language alone cannot force the bags.
+* Kawarabayashi--Yu's knitted theorem operates at connectivity proportional
+  to eight times the terminal-set order, not at the present connectivity
+  seven.
+* Colorful-minor and rooted-folio theorems retain bounded annotated geometry,
+  not the legal equality-state transition needed here.
+* Hayashi--Kawarabayashi--Yoo's rooted-subdivision trichotomy requires
+  internal separation and terminal hypotheses not supplied by relative
+  seven-connectivity, and its outputs do not preserve both named duties.
+
+Primary sources checked:
+[Humeau--Pous](https://arxiv.org/abs/2505.16431),
+[Dvořák--Swart](https://arxiv.org/abs/2504.07764),
+[Kawarabayashi--Yu](https://arxiv.org/abs/2606.01586),
+[Colorful Minors](https://doi.org/10.4230/LIPIcs.ICALP.2026.149),
+[the current folio/irrelevant-vertex bound](https://arxiv.org/abs/2605.14902),
+and
+[Hayashi--Kawarabayashi--Yoo](https://doi.org/10.1137/23M157082X).
+
+Accordingly, the proof engine remains literal bridge/web geometry plus the
+full counterexample kernel.  Computation is used only to falsify proposed
+decoders and to validate finite bases.
+
+The hypothesis boundary has been tested.  A ten-vertex seven-connected
+packet shell with the canonical demand-three trace has neither the desired
+third carrier nor any reserved rooted `K_5`; it is excluded only because it
+contains `K_7`, is six-colourable, and violates Dirac's neighbourhood
+inequality.  Thus the proof must retain `K_7`-minor-freeness and genuine
+criticality/Dirac input.  No strengthened counter-shell was found through
+order eleven.  The exact four-root CEGAR check also reran green on all 1,176
+symbolic cells obtained from the 84 rooted width-two frontiers and all
+biconnected thin shapes of orders three through five.  This is guardrail
+evidence, not an induction.
+
+The explicit excluded shell is documented with an executable certificate in
+[`../barriers/hc7_reverse_canonical_first_seam_barrier.md`](../barriers/hc7_reverse_canonical_first_seam_barrier.md).
+
 ## Current child milestone
 
 The rural-disk half has advanced beyond the generic three-extra-label

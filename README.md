@@ -16,11 +16,35 @@ dependency chain.
 
 ## Active research goal
 
-The active dependency-level target is the
-[single-trace reverse tight-lobe carrier-or-rooted-five theorem](active/hc7_reverse_tight_carrier_or_rooted_five_goal.md).
-It replaces the previous universal low-demand target, which was too strong:
-seven connected-rich residual boundary types have absolute packet demand
-three and therefore admit no demand-at-most-two partition.
+The parent dependency-level target remains the
+[single-trace reverse tight-lobe carrier-or-rooted-five theorem](active/hc7_reverse_tight_carrier_or_rooted_five_goal.md),
+but the immediate constructive goal is now the
+[atomic four-root linkage/disk decoder](active/hc7_atomic_four_root_decoder_goal.md).
+This is the narrowest unbounded theorem that closes a named branch of the
+parent target rather than merely refining its cases.
+
+In the compulsory-portal atom, every clean core edge, every thin shore of
+order at most five, every low-root-degree connected-bipartite shore, and
+every bare cycle shore is already closed.  A surviving normalized path/`Y`
+core is fully crossed.  The audited two-list Menger theorem then produces
+four literal boundary roots and the audited four-port theorem returns either
+two literal disjoint paths or one literal rural disk.  The decoder must turn
+**both** outcomes into either:
+
+1. two adjacent connected carriers whose contact lists manufacture a fresh
+   common exact state and hence a six-colouring; or
+2. five pairwise adjacent boundary-rooted bags, which the two rich packets
+   complete to a literal `K_7`.
+
+Preserving the original demand-three trace is not required.  The compulsory
+bridge transition and the canonical reverse trace arise from different
+proper-minor operations, and no audited theorem identifies them.  Requiring
+same-trace pullback would therefore add an unnecessary and currently
+unsupported condition; a legally manufactured common state is sufficient.
+
+The former universal low-demand target remains rejected: seven
+connected-rich residual boundary types have absolute packet demand three
+and therefore admit no demand-at-most-two partition.
 
 In the reversed tight-lobe orientation `(nu_D,nu_B)=(2,1)`, the packet-one
 shore is contracted together with a maximum independent boundary set.  Fix
@@ -47,13 +71,30 @@ shows that one colouring, high demand, seven-connectivity, and even the
 separating-entry Kempe toggle are insufficient; a proof must explicitly use
 `K_7`-minor-freeness or universal contraction-critical response.
 
-Online research through 15 July 2026 found no automatic lift.  The
-Humeau--Pous generalized web theorem is the best organizer of failed
-routing, but does not transport exact colour states.  Dvořák--Swart rules
-out abstract extension-language arguments; current knitted thresholds are
-too high; and colorful-minor/rooted-folio machinery preserves static rooted
-geometry rather than exact equality-state compatibility.  The detailed
-goal records the primary-source links and exact trust boundary.
+Fresh primary-source research through 15 July 2026 found no automatic
+lift.  Humeau--Pous is the best organizer of failed four-root routing, but
+its web completion and parallel composition do not make added edges literal
+or transport equality states.  Dvořák--Swart rules out arguments based only
+on abstract extension languages.  Current knitted thresholds are far above
+connectivity seven, while colorful-minor and rooted-folio machinery preserve
+static rooted geometry rather than exact colouring compatibility.  The
+recent rooted-subdivision trichotomy also has unverified internal-separation
+hypotheses here and does not preserve the named duty pairing.  Thus the new
+mathematics must be a label-faithful host-side decoder under the full
+seven-cut, `K_7`-minor-free, and minor-critical kernel.
+
+Adversarial research also found the correct hypothesis boundary.  A
+ten-vertex seven-connected `(2,1)` shell has the canonical maximum-independent
+demand-three trace but neither a third carrier nor a reserved rooted `K_5`.
+It contains a literal `K_7`, is six-colourable, and violates Dirac's
+neighbourhood inequality.  Hence canonical trace plus connectivity is not
+enough.  Conversely, bounded exact searches found no strengthened shell
+through order eleven, and the four-root decoder survived all 1,176 symbolic
+cells formed from the 84 rooted width-two frontiers and all biconnected
+thin shapes of orders three through five.  These computations are
+falsification evidence only; they do not replace the unbounded theorem.
+The explicit shell and checker are recorded in the
+[canonical first-seam barrier](barriers/hc7_reverse_canonical_first_seam_barrier.md).
 
 ## Frozen kernel
 
@@ -711,12 +752,18 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the single-trace carrier/model extraction theorem above.  For the
-reversed `(2,1)` tight cell, one canonical proper-minor operation now
-reduces the semantic problem to an attained demand-three state.  What is
-not proved is that `K_7`-minor-freeness and universal minor-critical
-response force its third duty carrier, the reserved-anchor rooted `K_5`,
-or a genuinely ranked state-preserving descent.
+is the atomic four-root linkage/disk decoder above.  In its normalized
+fully crossed branch, the four literal roots and the linkage-or-rural-disk
+dichotomy are already proved.  What is not proved is that the full
+counterexample kernel forces either a contact-list-compatible pair of
+adjacent carriers or five boundary-rooted pairwise adjacent bags.  A proof
+may manufacture a fresh common exact state; it need not pull back the
+canonical reverse trace.
+
+Closing this decoder eliminates the entire connected-bipartite atomic
+separating-edge family, an unbounded family.  It does **not** by itself prove
+`HC_7`: arbitrary demand-three states, packet vector `(1,1)`, larger
+adhesions, and near-model rotation components remain in `S1/S4`.
 
 Multi-lobe support-four gates yield a labelled near model or a strict
 `(1,2)` descendant, but no theorem transports a legally useful state across
