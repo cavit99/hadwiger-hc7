@@ -2,7 +2,8 @@
 
 ## Verdict and target
 
-`HC_7` is not proved.  The active target is
+`HC_7` is not proved.  For the frozen hypothetical minor-minimal `HC_7`
+counterexample `G`, the active target is
 
 \[
  \boxed{
@@ -18,13 +19,20 @@ needed.
 
 ## Current research goal
 
-The active dependency-level target is the exact-seven one-packet
-state-selection theorem stated in `hc7_exact7_state_selection_goal.md`.
-In an actual `(1,2)` seven-adhesion, the complete family of named
-proper-minor responses on the packet-one shore must contain a state of
-demand at most two, or construct a literal `K_7`/fixed-pair terminal.
-This is the uniform rooted-model principle needed by `S3`; it is not a
-boundary census.
+The active dependency-level target is the single-trace reverse tight-lobe
+carrier-or-rooted-five theorem stated in
+`hc7_reverse_tight_carrier_or_rooted_five_goal.md`.  The former universal
+low-demand target was overstrong: seven connected-rich residual boundaries
+have absolute packet demand three.
+
+In the reverse actual `(1,2)` cell, contract the packet-one shore together
+with a maximum independent boundary set and fix any exact returned state
+`Pi`.  Existing audited counting gives `d_H(Pi)<=3`; demand at most two
+closes, so the live case for this trace has demand three.  The new theorem
+must extract duty-correct carriers reflecting `Pi`, a five-rooted `K_5`
+with two reserved packet anchors, a literal/fixed-pair terminal, or a
+strictly ranked state-preserving descent.  This is the uniform rooted-model
+principle needed by `S3`; it is not a boundary census.
 
 The audited tight-lobe transition supplies the first test cell.  Its
 packet analysis is now split-audited: packet-one regeneration and the
@@ -37,8 +45,9 @@ lobe.
 The first milestone is therefore to close that reversed tight-lobe
 orientation using `K_7`-minor-freeness and universal proper-minor/model
 regeneration.  A local seven-connected shell realizes every weaker datum,
-including the named separating-entry toggle, while containing a literal
-`K_7`; it is the mandatory falsifier for any proposed proof.
+including the named separating-entry toggle and exhaustion of the rich
+shore by two packets, while containing a literal `K_7`; it is the mandatory
+falsifier for any proposed proof.
 
 Sources:
 `../results/hc7_shortest_thin_lock_tight_bypass_transition.md`,
@@ -154,17 +163,20 @@ actual `(1,2)` adhesion whenever either:
 The first alternative makes every state returned after forcing `I`
 reflectable by the two rich packets.  The second gives a literal `K_7` from
 three packet bags and four boundary-model bags.  These two mechanisms close
-556 of the 685 possible `K_4`-free boundary types.  If the rich shore is
+556 of the 685 seven-vertex boundary graphs of clique number at most three.
+If the rich shore is
 connected, its packets can be made adjacent and the one-anchor condition
 `H-x succeq K_4` closes 33 more of the 129 residual types, leaving 96 in
 that branch.  Source:
 `../results/hc7_exact7_adaptive_12_boundary_closure.md`.
 
-The exact constructive target is therefore:
+The exact constructive target is therefore state-specific:
 
-> In an actual `(1,2)` seven-adhesion of a hypothetical counterexample,
-> turn a nonrobust thin-side return into a second partial labelled carrier,
-> a new return of demand at most two, or one fixed `K_5`-killing pair.
+> In the reverse actual `(1,2)` cell, force one canonical thin-side
+> contraction by a maximum independent boundary set.  If its exact return
+> has demand three, turn that same named state into three duty-correct
+> carriers, a reserved-anchor five-rooted `K_5`, a literal/fixed-pair
+> terminal, or a strictly ranked state-preserving descent.
 
 For the attained paired-triangle state in the connected-rich width-two
 frontier, the four-connected thin shore is now closed outright.  For every
@@ -618,12 +630,13 @@ total degree at most six, contradicting seven-connectivity.  Sources:
 
 Thus the paired connected-rich width-two geometry has only two outputs:
 a labelled near model, or a strictly smaller literal full seven-adhesion.
-The **active gap** is no longer portal geometry.  It is exact-state descent
-composition: transport the attained paired duties or a demand-at-most-two
-return across either displayed boundary map, or turn a changed packet vector
-into the global S1/fixed-pair handoff.  No current theorem transports the
-old equality state through the descent, and packet-vector preservation can
-still fail in the two-lobe matching obstruction.
+Within this paired connected-rich width-two subbranch, the remaining gap is
+exact-state descent composition: transport the attained paired duties or a
+demand-at-most-two return across either displayed boundary map, or turn a
+changed packet vector into the global S1/fixed-pair handoff.  No current
+theorem transports the old equality state through the descent, and
+packet-vector preservation can still fail in the two-lobe matching
+obstruction.
 
 The support-four three-cut now has a stronger state-free capacity theorem.
 Give every lobe and gate its literal support in `S`; two disjoint capacity

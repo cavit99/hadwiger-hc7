@@ -17,45 +17,43 @@ dependency chain.
 ## Active research goal
 
 The active dependency-level target is the
-[exact-seven one-packet state-selection theorem](active/hc7_exact7_state_selection_goal.md).
-For an actual `(1,2)` seven-adhesion, a named proper-minor operation on the
-packet-one shore must return a demand-at-most-two exact state, or its full
-response data must produce a literal `K_7` model or the fixed-pair
-terminal.  A low-demand state is terminal because the two opposite full
-packets reproduce it exactly and the closed-shore colourings glue.
+[single-trace reverse tight-lobe carrier-or-rooted-five theorem](active/hc7_reverse_tight_carrier_or_rooted_five_goal.md).
+It replaces the previous universal low-demand target, which was too strong:
+seven connected-rich residual boundary types have absolute packet demand
+three and therefore admit no demand-at-most-two partition.
 
-This target is forced by the latest audited tight-lobe work.  The
-[tight transition](results/hc7_shortest_thin_lock_tight_bypass_transition.md)
-does produce a smaller actual seven-cell and a named one-sided state.  The
-split-audited
-[packet analysis](active/hc7_tight_gate_receiver_normalization.md) then
-proves three useful facts: `(1,3)` closes; every `(1,2)` orientation
-regenerates a named high-demand state on its actual packet-one shore; and
-every `(1,1)` cell has five exact internal-lock/opposite-crossing
-alternatives.  It does **not** prove an accepted `S3` receiver or a ranked
-`S4` handoff.  See its [audit](active/hc7_tight_gate_receiver_normalization_audit.md).
+In the reversed tight-lobe orientation `(nu_D,nu_B)=(2,1)`, the packet-one
+shore is contracted together with a maximum independent boundary set.  Fix
+any exact state `Pi` returned by that named operation.  The audited
+seven-vertex counting argument gives `d_H(Pi)<=3`; demand at most two closes
+by reflection, so the live case for this trace has `d_H(Pi)=3`.  The new
+theorem must force one of four literal objects from this trace:
 
-The exact first milestone is the reversed tight-lobe orientation
-`(nu_D,nu_B)=(2,1)`.  Here the strict lobe contains the two packets and the
-opposite shore is packet-one.  We must use all named proper-minor responses
-on that packet-one shore to force a demand-at-most-two state or a literal
-terminal.  A ten-vertex
-[orientation shell](barriers/hc7_tight_gate_local_orientation_shell.md)
-shows that seven-connectivity, packet fullness, high demand and even the
-separating-entry Kempe toggle are insufficient by themselves; the proof
-must explicitly spend `K_7`-minor-freeness or universal
-contraction-critical response.
+1. three duty-correct carriers reflecting `Pi` by the existing labelled
+   carrier theorem;
+2. a five-rooted `K_5` on the packet-one side with two prescribed anchors
+   reserved for the rich packets, hence a literal `K_7`;
+3. a literal `K_7` or the fixed-pair terminal; or
+4. a strictly smaller actual seven-cell carrying the same named state and
+   duties under an explicit nonreversible rank.
 
-The shortest-lock crossing/web programme remains the geometric organizer
-after this semantic milestone, not the current engine.  The fresh online
-literature review through 15 July 2026 found no automatic lift.
-Humeau--Pous supplies constructive crossing/web decomposition, Perfect
-augmentation preserves endpoints under an additional relative-separation
-hypothesis, and modern rooted-folio/colorful-minor results preserve finite
-rooted geometry.  None preserves an exact six-colour extension state.
-Dvořák--Swart in fact shows that abstract boundary extension languages
-alone are too flexible, while current knitted connectivity thresholds are
-far above this seven-connected interface.
+This is a carrier/model-extraction theorem, not another boundary census.
+The [tight transition](results/hc7_shortest_thin_lock_tight_bypass_transition.md)
+and split-audited
+[packet analysis](active/hc7_tight_gate_receiver_normalization.md) supply
+the cell and its named trace, but do not orient a recursive receiver.  The
+[local orientation shell](barriers/hc7_tight_gate_local_orientation_shell.md)
+shows that one colouring, high demand, seven-connectivity, and even the
+separating-entry Kempe toggle are insufficient; a proof must explicitly use
+`K_7`-minor-freeness or universal contraction-critical response.
+
+Online research through 15 July 2026 found no automatic lift.  The
+Humeau--Pous generalized web theorem is the best organizer of failed
+routing, but does not transport exact colour states.  Dvořák--Swart rules
+out abstract extension-language arguments; current knitted thresholds are
+too high; and colorful-minor/rooted-folio machinery preserves static rooted
+geometry rather than exact equality-state compatibility.  The detailed
+goal records the primary-source links and exact trust boundary.
 
 ## Frozen kernel
 
@@ -713,7 +711,13 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is still the exact-seven state-selection/composition theorem above.
+is the single-trace carrier/model extraction theorem above.  For the
+reversed `(2,1)` tight cell, one canonical proper-minor operation now
+reduces the semantic problem to an attained demand-three state.  What is
+not proved is that `K_7`-minor-freeness and universal minor-critical
+response force its third duty carrier, the reserved-anchor rooted `K_5`,
+or a genuinely ranked state-preserving descent.
+
 Multi-lobe support-four gates yield a labelled near model or a strict
 `(1,2)` descendant, but no theorem transports a legally useful state across
 every such descent.  In a two-lobe support-four cell, every non-singleton

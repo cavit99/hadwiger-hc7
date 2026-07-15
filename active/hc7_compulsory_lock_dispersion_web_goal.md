@@ -2,7 +2,7 @@
 
 **Status:** paused after the tight-lobe transition. The active semantic
 target is now the
-[exact-seven state-selection theorem](hc7_exact7_state_selection_goal.md).
+[reverse tight-lobe carrier-or-rooted-five theorem](hc7_reverse_tight_carrier_or_rooted_five_goal.md).
 
 ## Decision
 
@@ -24,7 +24,7 @@ five-colour lock/crossing localization, but independent audit rejects the
 claimed accepted `S3` and ranked `S4` normalizations. This certificate is
 not yet a descent.
 
-Only after state selection resolves that semantic gap should this
+Only after carrier/model extraction resolves that semantic gap should this
 mechanism handle a
 boundary-excess lobe, a same-lock bypass, or a spine-confined/rich
 excursion by a crossing/web decomposition.  The all-rich articulation
