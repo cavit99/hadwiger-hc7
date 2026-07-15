@@ -148,6 +148,26 @@ multiply hit row splits into two connected pieces which both retain all
 five foreign-row duties.  Merely placing the first hits in distinct
 vertices or distinct palette layers is insufficient.
 
+The last sentence is sharp even after natural extremal normalization.  The
+audited [minimal portal-core theorem](../results/hc7_same_row_minimal_portal_core.md)
+reduces an extremal common row to two protected endpoint bundles and at
+most two root-free lobes.  But the adjacent-two-apex icosahedron
+[barrier](../barriers/hc7_same_row_split_two_apex_icosahedron.md) has a
+balanced contact-maximal model with the named cycle and no such row split.
+It has the permitted coherent fixed-pair terminal and is not
+contraction-critical.  Consequently a proof must detect exactly one of
+those two missing features; portal-tree minimality is not a decoder.
+
+Likewise, the audited
+[four-response trace barrier](../barriers/hc7_twin_seam_four_response_trace_barrier.md)
+shows that the bridge response and all four further Kempe responses may
+remain crossed on both twins while every new trace stays inside `K`.  The
+certificate obeys all packet-one demand inequalities and is compatible
+with a saturated double response.  Thus the separating decoder cannot be
+completed by another exact-partition comparison.  It must use literal
+path localization, a boundary-preserving transition between the two named
+minor responses, or the labelled row/fixed-pair geometry above.
+
 ### 4.2 Response-matched gate-edge bypass
 
 For a fixed response `c_f`, palette-align `c_f(z)` with the common

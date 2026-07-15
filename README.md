@@ -97,6 +97,34 @@ one row whose two sides cannot both retain all five foreign-row duties.
 Sources: [compulsory-edge regeneration](results/hc7_atomic_compulsory_edge_not_double_critical.md)
 and its [audit](results/hc7_atomic_compulsory_edge_not_double_critical_audit.md).
 
+That row obstruction is now sharply delimited.  In a pole-contact-maximal
+model minimizing the common row while retaining the two literal hits, every
+detachable part avoiding both hits monopolizes at least two of the five
+foreign rows.  Hence there are at most two such root-free lobes and the
+row's block tree has at most four leaf blocks.  This does not force the
+split: the seven-connected, `K_7`-minor-free graph `K_2` joined with the
+icosahedron has an absolutely balanced, globally contact-maximal spanning
+`K_6` model and the required named-edge cycle, but its common row still
+does not split.  It exits through the permitted coherent fixed pair and is
+not contraction-critical.  Thus portal minimality and contact maximality
+cannot replace the proper-minor response or fixed-pair branch.
+
+Sources: [minimal portal core](results/hc7_same_row_minimal_portal_core.md),
+its [audit](results/hc7_same_row_minimal_portal_core_audit.md), and the
+[two-apex barrier](barriers/hc7_same_row_split_two_apex_icosahedron.md).
+
+There is also a definitive state-only barrier.  A named separating swap
+and all four response-matched Kempe swaps can remain crossed on both twin
+boundaries while every new component trace lies wholly in the common
+five-set.  The certificate satisfies the simultaneous packet-one demand
+inequalities and is compatible with a separately saturated double response.
+Therefore no further comparison of those exact partitions can create a
+duty label; a successful decoder must localize a literal path, transfer a
+state between the two named operations, or split a labelled model row.
+
+Sources: [four-response trace barrier](barriers/hc7_twin_seam_four_response_trace_barrier.md)
+and its [audit](barriers/hc7_twin_seam_four_response_trace_barrier_audit.md).
+
 Preserving the original demand-three trace is not required.  The compulsory
 bridge transition and the canonical reverse trace arise from different
 proper-minor operations, and no audited theorem identifies them.  Requiring
