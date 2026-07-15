@@ -156,14 +156,41 @@ also verifies the named high-demand handoff.
 
 After contracting the two reserves, Robertson--Seymour--Thomas (2.1)
 reduces existence of that model exactly to two feasible pairings at the
-cyclic roots `p,r_1,q,r_2`.  Thus the remaining allocation theorem must
-force both pairings from the named responses or decode a failed pairing's
-literal web into a terminal or strict ranked outcome.  It may not replace a
-nonzero stem by a singleton gate.  The independently audited
+cyclic roots `p,r_1,q,r_2`.  It may not replace a nonzero stem by a
+singleton gate.  The independently audited
 [stable-stem barrier](../barriers/hc7_twin_seam_stable_stem_barrier.md)
 shows that the full separating bundle or response-matched bypass alone does
 not justify that replacement; its examples exit only through the permitted
 six-colouring and literal-`K_7` branches.
+
+Directly forcing both pairings is now independently falsified as well.  A
+25-vertex shell retains the full packet, crossed-response, equal/equal and
+five-rung data; one local RST pairing fails although both labelled pairings
+exist globally in the common host.  Its proper/proper colouring and literal
+`K_7` show exactly which terminal hypotheses it omits.  Source:
+[RST-feasibility localization barrier](../barriers/hc7_twin_seam_rst_feasibility_barrier.md)
+and its [audit](../barriers/hc7_twin_seam_rst_feasibility_barrier_audit.md).
+
+The failed branch is nevertheless planar in a literal sense.  The
+[failed-RST web planarization](../results/hc7_twin_seam_failed_rst_web_planarization.md)
+uses the three web gates and the three omitted common labels to eliminate
+every clique-cell interior by a six-cut.  Hence the reserve quotient itself
+is planar with the four represented portal classes cofacial.  Its
+[audit](../results/hc7_twin_seam_failed_rst_web_planarization_audit.md)
+also checks the exact active-face splice: absent an off-face attachment,
+Thomassen extension leaves only a nonadjacent heavy pair, at least three
+heavy vertices, or one adjacent common-singleton lock.  The last lock
+localizes to one facial edge when the active cycle has length at least
+four.
+
+This split is sharp.  The audited
+[two-apex failed-web barrier](../barriers/hc7_twin_seam_failed_web_two_apex_barrier.md)
+is `K_2` joined to the icosahedron.  It is seven-connected,
+`K_7`-minor-free and has both a failed four-web and a spanning common-host
+`K_6`, but it exits through the fixed apex pair.  The remaining allocation
+theorem must therefore combine the planar page with strong critical state
+transitions, or detect that coherent pair; an arbitrary spanning model or
+global linkage cannot close it.
 
 The unrestricted routing part is now uniform.  In the counterexample host,
 deleting the two independent named edges gives one connected graph `H` with
@@ -191,6 +218,14 @@ put at least four external parity-crossing locks into one common colouring.
 This removes independent edge-by-edge colour choice from the even-cycle
 branch, but does not make the paths disjoint or identify colours with model
 rows.  Odd cycles still require a different exchange mechanism.
+
+Accordingly the live failed-pair decoder has four named inputs rather than
+another portal census: the literal planar page, the forbidden
+proper/proper corner, the two one-edge responses, and the equal/equal
+response.  It must turn every off-face/heavy-face residual into a common
+exact state, a literal/fixed-pair terminal, or the strict global
+`mathcal F_12(G)` handoff.  A result which only refines the planar portal
+order is not an admissible successor.
 
 For actual `(1,2)` cells there is one genuine global rank.  Orient every
 such cell toward its packet-one shore and choose that shore globally minimum

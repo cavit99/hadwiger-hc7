@@ -91,6 +91,37 @@ Robertson--Seymour--Thomas feasibility tests for the cyclic roots
 `p,r_1,q,r_2`.  A failed test may still be a genuine Two-Paths web; no
 connectivity-only shortcut is being assumed.
 
+The response bundle does **not** force both feasibility tests.  An
+independently audited 25-vertex shell has the full residual packet data,
+crossed one-edge responses, equal/equal state and five-rung response
+bundle, while one reserve-quotient pairing fails even though both pairings
+exist globally.  The shell is six-colourable and has a literal `K_7`, so it
+is a localization barrier rather than a counterexample to the terminal
+theorem.  See the [RST-feasibility barrier](barriers/hc7_twin_seam_rst_feasibility_barrier.md)
+and its [audit](barriers/hc7_twin_seam_rst_feasibility_barrier_audit.md).
+
+The failed branch nevertheless has one uniform structural theorem.  Every
+hidden clique cell of its four-web would lift to a nonempty part of the
+lobe with at most six neighbours: three web gates plus the three omitted
+common labels.  Seven-connectivity therefore removes all cells.  The
+failed pairing is a **literal planar four-root quotient** with the four
+represented portal classes on one face.  If all remaining boundary
+attachments lie on one active facial cycle, Thomassen's outer-face theorem
+six-colours the host unless a total-contraction state leaves an off-face
+attachment, two nonadjacent heavy facial vertices, at least three heavy
+vertices, or one adjacent common-singleton lock.  See the
+[failed-pair planarization](results/hc7_twin_seam_failed_rst_web_planarization.md)
+and its [audit](results/hc7_twin_seam_failed_rst_web_planarization_audit.md).
+
+This residue is sharp.  The graph `K_2` joined to the icosahedron is
+seven-connected and `K_7`-minor-free, has a genuine failed pairing and a
+spanning common-host `K_6`, and exits exactly through its two apex
+vertices.  Thus a valid decoder must use contraction-critical state data
+or identify the coherent fixed pair; a web plus an arbitrary spanning
+model is insufficient.  See the
+[two-apex failed-web barrier](barriers/hc7_twin_seam_failed_web_two_apex_barrier.md)
+and its [audit](barriers/hc7_twin_seam_failed_web_two_apex_barrier_audit.md).
+
 An independently audited finite barrier now shows why the named response
 bundle cannot simply be relabelled as two sharp carriers.  Exact
 seven-connectivity, residual packet vector `(1,1,1,1)`, the five-rung
@@ -135,12 +166,13 @@ those data into exactly one of:
    smaller in the fixed global `mathcal F_12(G)` order.
 
 The reserve-rooted exchange above discharges the carrier-allocation step
-once an ordinary rooted `C_4` is present.  Therefore the exact live
-mathematics is now:
+when both RST pairings are feasible.  Directly forcing that condition is
+false.  Therefore the exact live mathematics is now:
 
-> Force both Robertson--Seymour--Thomas feasibility pairings for
-> `p,r_1,q,r_2` from the named response system, or decode a failed pairing's
-> literal web certificate into one of the three ranked terminal outcomes.
+> In the failed-pair planar lobe, use the forbidden proper/proper state and
+> the named contraction responses to turn every off-face or heavy-face
+> residue into a common exact state, a literal `K_7`/coherent fixed pair,
+> or a strict `mathcal F_12(G)` handoff.
 
 The separating response and response-matched bypass are both inputs to
 that implication.  The stable-stem barrier proves that neither may be

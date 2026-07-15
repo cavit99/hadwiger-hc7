@@ -156,6 +156,55 @@ useful because it is a literal independently checkable transition.
 Proving this theorem closes the entire symmetric two-/three-gate family.
 It does not by itself prove `HC_7`.
 
+### 3.1 Current allocation split
+
+Let `C_1,C_2` be the two old reserve carriers and contract them to the
+cyclic roots `r_1,r_2`.  The Robertson--Seymour--Thomas criterion has two
+branches.
+
+1. If both prescribed pairings of `p,r_1,q,r_2` are feasible, their
+   ordinary reserve-rooted `C_4` model invokes the audited
+   [reserve-rooted exchange](../results/hc7_atomic_twin_seam_reserve_rooted_c4_exchange.md).
+   Its [independent audit](../results/hc7_atomic_twin_seam_reserve_rooted_c4_exchange_audit.md)
+   verifies the strict global rank.
+   This branch is terminal or gives the strict handoff (3.1).
+2. If one pairing fails, the response bundle cannot force it locally: the
+   independently audited
+   [RST-feasibility barrier](../barriers/hc7_twin_seam_rst_feasibility_barrier.md)
+   realizes every local bundle hypothesis while the desired pairing exists
+   only by leaving the reserve quotient.  That shell exits through a proper
+   six-colouring and a literal `K_7`, so the target theorem survives.
+   Its [audit](../barriers/hc7_twin_seam_rst_feasibility_barrier_audit.md)
+   independently verifies both global linkages and the literal terminal.
+
+The failed branch is no longer an arbitrary web.  The proved and audited
+[failed-pair planarization](../results/hc7_twin_seam_failed_rst_web_planarization.md)
+eliminates every hidden clique cell by seven-connectivity.  It leaves a
+literal planar lobe with four represented portal classes on one face.  A
+total-contraction colouring then extends across every active-face state
+except for four exact residuals:
+
+1. an attachment outside the proposed active face;
+2. two nonadjacent heavy facial vertices;
+3. at least three heavy facial vertices; or
+4. an adjacent pair forced to the contraction colour, localized to one
+   facial edge when the face has length at least four.
+
+The [planarization audit](../results/hc7_twin_seam_failed_rst_web_planarization_audit.md)
+checks the reserve lift, the nonempty far side and the hypothesis-minimal
+facial-edge localization.
+
+The current child theorem must decode those residuals using the two named
+one-edge responses, the equal/equal response and the forbidden
+proper/proper corner.  It must return one of the three outcomes in Section
+3; merely refining the facial portal order is not progress.  The audited
+[`K_2`-icosahedron barrier](../barriers/hc7_twin_seam_failed_web_two_apex_barrier.md)
+shows why the fixed-pair branch is indispensable: seven-connectivity, a
+failed four-web and a spanning common-host `K_6` can coexist exactly in a
+coherent two-apex graph.  Its
+[audit](../barriers/hc7_twin_seam_failed_web_two_apex_barrier_audit.md)
+verifies the fixed pair and the spanning model.
+
 ## 4. Constructive split
 
 ### 4.1 Separating gate edge
