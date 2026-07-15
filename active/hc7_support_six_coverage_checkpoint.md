@@ -1,0 +1,244 @@
+# Coverage checkpoint for the first support-six rung
+
+**Status:** authoritative proof-coverage map.  This is not a proof of the
+support-six transversal theorem or of `HC_7`.
+
+## 1. Target and standing contradiction
+
+Let `G` be seven-connected, strongly seven-contraction-critical and
+`K_7`-minor-free.  Let `F` be the supports of all `K_5` models using at
+most six vertices.  The active target is
+
+\[
+                              \tau(F)\le2.              \tag{1.1}
+\]
+
+This file records exactly what follows if `tau(F)>2`.  A displayed arrow is
+called **closed** only when a cited theorem covers every object entering
+that arrow.
+
+There is also a parallel audited normalization.  The global literal-`K_5`
+transversal theorem produces a pair whose smallest avoided `K_5` support
+has order at least six.  In the equality case, the support-six contraction
+dichotomy normalizes the unique split edge and returns either a
+seven-connected contraction or an actual exact-seven adhesion.  This
+normalization supplies inputs to the two arrows below; it does not replace
+the exhaustive support-family extraction under `tau(F)>2`.
+
+## 2. Exhaustive first extraction
+
+The small-support separated-triple theorem is proved and independently
+audited.  It gives supports `A_1,A_2,A_3` with
+
+\[
+ |A_i\cap A_j|\le
+ \begin{cases}
+ 3,&|A_i|=|A_j|=5,\\
+ 4,&\text{otherwise}.
+ \end{cases}                                           \tag{2.1}
+\]
+
+Every order-five support is a literal `K_5`; every irredundant order-six
+support is a normalized split model with one edge bag and one singleton
+`K_4` core.
+
+The all-literal branch is closed.  A two-apex pair would meet every `K_5`
+model, contrary to `tau(F)>2`; hence `G` is non-two-apex.  Niu--Zhang then
+applies to the three literal cliques with pairwise intersections at most
+three and gives `K_7`.
+
+Thus every live separated triple contains a split model.  **No proved
+theorem currently says that the triple can be chosen row-compatible,
+contraction-clean, or vertex-disjoint.**
+
+Sources:
+
+* `../results/hc7_support_at_most_six_separated_triple_extraction.md`; and
+* the all-literal consequence recorded in
+  `../results/hc7_one_split_two_clique_composition.md`.
+
+## 3. Terminal composition branches and one exact handoff
+
+The following branches have proved conclusions.  All are terminal except
+for the exact-seven outcome explicitly retained in item 2.
+
+1. If a split-edge contraction `H=G/e` remains seven-connected and `H` is
+   two-apex, the contraction pullback returns a literal two-set meeting
+   every support in `F`.  This uses the exclusion of a support-at-most-five
+   `K_4` model in a five-connected planar graph.
+2. One split model plus two literal `K_5` cliques has a proved trichotomy
+   when the split is row-compatible and the three quotient cliques have
+   pairwise intersection at most three.  The outcomes are `K_7`, a global
+   pair, or a model-preserving exact-seven separation.  The last outcome
+   is an unranked handoff, not a closure of the support-six theorem.
+3. Three disjoint split bags over one common singleton `K_4` core give a
+   `K_7` minor by rooted-triangle composition.
+4. Three contraction-clean models close after simultaneous contraction
+   whenever the quotient is seven-connected and either the three-clique
+   union has order at least twelve, or the quotient is non-two-apex and
+   the three quotient cliques meet pairwise in at most three vertices.
+5. Any high-transversal exact-six support family contained in a nine-set
+   gives `K_7`.  This is computer-assisted and has been independently
+   replayed; the unique local exception is `complement(C_9)`, which
+   seven-connectivity also eliminates.
+6. Two disjoint small models admit a branch-faithful five-cluster, and an
+   exact lifted separator can preserve all three named split models.  These
+   are audited composition inputs, but neither supplies a colouring state,
+   a strict rank, or the reserved carriers required for a `K_7`.
+
+Sources:
+
+* `../results/hc7_five_connected_planar_support_five_exclusion.md`;
+* `../results/hc7_one_split_two_clique_composition.md`;
+* `../results/hc7_global_split_model_composition.md`; and
+* `../results/hc7_nine_vertex_support_six_closure.md`;
+* `../results/hc7_two_model_five_cluster.md`; and
+* `../results/hc7_three_split_exact_separator_handoff.md`.
+
+These branches overlap, but they do not exhaust the mixed separated triple
+from Section 2.  In particular, (2.1) does not imply row compatibility or
+contraction cleanliness.
+
+## 4. Exact disjoint three-split branch
+
+There is one exhaustive subchain after the additional hypothesis that the
+three selected split-model supports are pairwise vertex-disjoint.
+
+Contract all three split edges.  If the quotient remains seven-connected,
+the three disjoint quotient `K_5` cliques have union fifteen and the
+published three-clique theorem gives `K_7`.  Otherwise choose a nonempty
+inclusion-minimal bad contraction set `E`.
+
+* `|E|=1` gives an actual exact-seven separation preserving the contracted
+  named carrier.  It need not preserve every uncontracted carrier, the
+  returned colouring state, the packet vector, or a strict global rank.
+* `|E|=2` or `3` gives a six-connected quotient whose every six-cut
+  contains all contracted images.  Literal expansion has order eight or
+  nine and is pointwise full on every quotient component.
+* Three or more quotient components give a displayed `K_7` model.
+* With exactly two components, the expanded boundary is four-colourable.
+  The order-eight/order-nine classification is computer-assisted and
+  independently replayed.  Its unique five-chromatic exception
+  `K_2 vee C_7` is eliminated by a separate audited universal-pair/core-fan
+  theorem using the three disjoint models.
+
+Sources:
+
+* `../results/hc7_three_split_minimal_bad_contraction.md`;
+* `../results/hc7_two_full_shore_boundary_absorption.md`;
+* `../results/hc7_universal_pair_three_core_elimination.md`;
+* `../results/hc7_leaf_rooted_chromatic_drop.md`; and
+* `../results/hc7_minimal_contraction_forest_saturation.md`.
+
+The exact residue of this subchain is therefore:
+
+\[
+ \boxed{\text{one unranked exact-seven handoff, or a two-full-shore
+ four-colour boundary of order eight or nine}.}          \tag{4.1}
+\]
+
+Four-colourability alone does not supply a common boundary state.  The
+balanced-colour shortcut is false: `K_{3,5}` at order eight and
+`K_3 vee I_6` at order nine satisfy the state-free join exclusion but have
+no colour-class pattern `2+2+2+2` or `3+2+2+2`, respectively.
+
+There is now one uniform replacement for a bare boundary-state search.
+Contract an inclusion-minimal forest in the two open shores until the
+quotient is five-colourable.  Every one-edge predecessor is exactly
+six-chromatic, and every side of every forest edge meets all four non-own
+colour classes in every terminal colouring.  If deletion of one
+contraction image lowers the terminal graph to four colours, Strong
+Hadwiger for four colours gives a `K_6` model with the two forest sides as
+named bags.
+
+This is a simultaneous invariant, but not yet a recursive rank.
+Connectivity alone does not preserve the opposite shore as a seventh bag,
+and a Hajós-join barrier shows that the five-chromatic deletion branch
+cannot be closed by an unrooted regenerated `K_5`.
+
+## 5. Global finite kernel and what it does not yet align
+
+Every counterexample to (1.1) contains a 3-critical support subfamily of at
+most twenty-seven members.  Each member has a private transversal pair.
+For an avoided support `A` and its private pair `{p,q}`, the graph-specific
+V-extraction produces a `p`-arm and a `q`-arm, each meeting `A` in at most
+four vertices.  The corrected cross-arm theorem strengthens this to the
+exact size-sensitive separated bound.  It gives either a genuinely
+separated labelled triple, or unique arms
+
+\[
+                         X\cup\{p\},\qquad X\cup\{q\},
+\]
+
+together with both near-top replacements `(A-a)+p,(A-a)+q` for every
+`a in A cap X`.
+
+There is now one genuine composition consequence.  If `|A|=5`, then
+`A cap X` must be empty.  Indeed, for `a in A cap X`, the literal cliques
+`A`, `(A-a)+p`, and `(A-a)+q` make `a,p,q` complete to the four-clique
+`A-a`; a common cycle through those three roots in the three-connected
+four-vertex deletion, together with that clique, is a `K_7` model.
+
+These are bounded global certificates:
+the witness family has bounded cardinality, and every member carries named
+support-incidence V data.  They do **not** yet supply a branch-set exchange,
+align the split rows of the separated triple, or compose the rigid
+near-top replacement family.
+
+Sources:
+
+* `../results/hc7_support_six_bounded_critical_kernel.md`;
+* `../results/hc7_support_six_private_pair_v_extraction.md`;
+* `../results/hc7_private_pair_cross_arm_dichotomy.md`; and
+* `../results/hc7_private_pair_cross_arm_dichotomy_audit.md`;
+* `../results/hc7_literal_cross_arm_overlap_elimination.md`; and
+* `../results/hc7_literal_cross_arm_overlap_elimination_audit.md`.
+
+## 6. The two live arrows
+
+The support-six rung has not been reduced solely to (4.1).  The remaining
+obligations in this proof spine are grouped into two global arrows.
+
+### G1. Decorated extraction/composition
+
+Starting from the bounded critical kernel and its private-pair V data,
+prove one of:
+
+1. a row-compatible one-split/two-literal-clique composition covered by
+   Section 3, with its unranked exact-seven outcome passed to `G2`;
+2. three vertex-disjoint normalized split models, entering Section 4;
+3. a `K_7` minor or one global support-six transversal pair; or
+4. a model/state-preserving exact-seven handoff with a declared strict
+   rank.
+
+Bare support incidence cannot prove this: explicit affine and
+fifteen-point families falsify the strongest unlabelled extraction
+claims.  A proof must use the actual branch bags, complement star-forest
+constraints on six-supports, or proper-minor transitions.
+
+### G2. State/model transfer in the disjoint branch
+
+Close both residues in (4.1), together with the unranked exact-seven
+handoff from Section 3(2):
+
+1. upgrade every currently produced unranked exact-seven separation
+   (including the one-edge minimal-bad separation and the
+   one-split/two-clique separation) to a ranked state/model-preserving
+   handoff or a terminal; and
+2. across the order-eight/nine four-colour boundary, use the minimal
+   contraction-forest saturation to produce an `S`-meeting labelled
+   `K_6` disjoint from a reserved connected full shore, a `K_7` minor, a
+   global pair, or a strict ranked exact-seven / near-`K_7` handoff.
+
+A bare separator or an arbitrary changed equality partition is not an
+accepted outcome.
+
+## 7. Research priority
+
+`G1` is the coverage bottleneck; `G2` is the sharpest closed laboratory.
+Further boundary or union-size enumeration is prohibited unless it proves
+an invariant used in one of these two arrows.  The immediate constructive
+experiment is the forest-to-carrier problem in `G2`: couple the exact
+`6 -> 5` drop and its named forest sides to the original boundary/model
+attachments.  Any successful labelled exchange must then be tested as a
+row-alignment operation for `G1`.
