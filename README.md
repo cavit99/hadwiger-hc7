@@ -17,12 +17,14 @@ dependency chain.
 ## Active research goal
 
 The active dependency-level target is the
-[fixed-state compulsory-lock dispersion or web decoder](active/hc7_compulsory_lock_dispersion_web_goal.md).
-It works in one colouring of `G-zu` and must turn all five compulsory
-two-colour locks into a common state, a literal terminal model, a strict
-state-carrying exact-seven descent, or a ranked labelled `S1/S4` handoff.
-A naked separator, an unlabelled near model, or a comparison of unrelated
-proper-minor states is not a terminal.
+[shortest-lock state-preserving first-seam receiver](active/hc7_compulsory_lock_dispersion_web_goal.md).
+It works in one colouring of `G-zu`, anchors at one shortest thin lock,
+and couples it to one second lock.  The first genuine crossing or first
+crossless web seam must give a common state, a literal terminal model, an
+accepted oriented exact-seven receiver, or a ranked labelled `S1/S4`
+handoff.  A naked separator, an unlabelled near model, a one-sided
+contracted state, or a comparison of unrelated proper-minor states is not
+a terminal.
 
 The first legal coupling and its receiving handoff are now proved.  If one
 compulsory bichromatic `z-u` lock has a rich-side separating bridge `f`,
@@ -39,24 +41,40 @@ the compulsory lock is rich-internal or boundary--rich.  In one fixed
 state each lock then has either a literal thin `z-u` path or two
 edge-disjoint rich-edge quotient routes; different colour systems use
 disjoint rich edges but may share `alpha`-coloured articulation vertices.
-The next theorem must disperse those articulations or turn their failure
-into a state-carrying web gate.  Thin, rich and mixed lock patterns all
-remain in scope.
+In the branch containing a thin lock, the next theorem must turn the first
+crossing or web seam with one second lock into a recognized receiver.  The
+all-rich articulation-dispersion problem remains a later branch of the
+full decoder.
 
-The first constructive milestone is narrower: anchor at a shortest thin
-lock and couple its full bridge hull to one second colour's thin path or
-two rich routes.  The static all-rich implication is false—off-colour
-bypasses can preserve all five route quotients while destroying every
-host separator—so the all-rich branch must later use a minimal full-host
-lock union and named proper-minor transitions.
+The first constructive milestone is now the **tight-gate receiver**.  For
+a component `D` off a shortest thin spine, seven-connectivity gives
+`|N_A(D)|+|N_S(D)|>=7`.  At equality there is a smaller actual
+seven-cell.  The audited
+[transition theorem](results/hc7_shortest_thin_lock_tight_bypass_transition.md)
+uses any first boundary-entry edge to produce one intact opposite-side
+state and the same named contracted lobe-side state; a separating entry
+couples it to the fixed colouring by a Kempe swap.  It is deliberately not
+called a descent: the new packet orientation and accepted receiving state
+are still missing.  See the [independent audit](results/hc7_shortest_thin_lock_tight_bypass_transition_audit.md).
+
+After that receiver is normalized, the geometric residue is boundary
+excess, a same-lock bypass, or a spine-confined/rich excursion.  Those are
+to be handled by the literal crossing/web decoder.  The static all-rich
+implication remains false—off-colour bypasses can preserve all five route
+quotients while destroying every host separator—so the all-rich branch
+must later use a minimal full-host lock union and named proper-minor
+transitions.
 
 The [direct-reserve substituted-web decoder](active/hc7_direct_reserve_substituted_web_goal.md)
 remains the sharpest independent rural-disk child of the broader
 [atomic four-root decoder](active/hc7_atomic_four_root_decoder_goal.md),
 but it is frozen while this fixed-state decoder is attacked.  The fresh
-literature review found no theorem that performs the label-faithful
-state/branch-set conversion automatically; generalized web composition is
-the closest structural engine.
+literature review through 15 July 2026 found no theorem that performs the
+label-faithful state/branch-set conversion automatically.  Generalized web
+composition is the closest structural engine; colorful-minor and rooted
+folio results preserve annotations but not exact extension languages, and
+current knitted/linkage thresholds are too high for this seven-connected
+interface.
 
 ## Frozen kernel
 

@@ -18,33 +18,44 @@ needed.
 
 ## Current research goal
 
-The active dependency-level target is the fixed-state compulsory-lock
-decoder stated in `hc7_compulsory_lock_dispersion_web_goal.md`.  Fix one
-colouring of `G-zu`.  After the audited rich-separating-bridge branch is
-sent to a labelled `(1,1)` receiver, each of the five compulsory locks has
-either a literal thin `z-u` path or two edge-disjoint rich-edge quotient
-routes.  Different colour systems use disjoint retained rich edges, but
-they may share repeated-colour articulation vertices.
+The active dependency-level target is the shortest-lock
+state-preserving first-seam receiver stated in
+`hc7_compulsory_lock_dispersion_web_goal.md`.  Fix one colouring of
+`G-zu`.  After the audited rich-separating-bridge branch is sent to a
+labelled `(1,1)` receiver, each compulsory lock has either a literal thin
+`z-u` path or two edge-disjoint rich-edge quotient routes.  Different
+colour systems use disjoint retained rich edges, but they may share
+repeated-colour articulation vertices.
 
-The next theorem must use the whole five-lock family to disperse those
-articulations into literal duty-faithful carriers/rooted bags, or turn the
-failure into a strictly smaller state-carrying web gate.  Thin, rich and
-mixed patterns are included.  The direct-reserve substituted-web decoder
-and parent four-root decoder remain frozen independent children.
+The next theorem uses one shortest thin lock and one second lock.  It must
+decode their first genuine crossing or first crossless web seam into a
+literal terminal or a **recognized** exact-seven receiver: an accepted
+oriented `(1,2)` state, a ranked `(1,1)` `S4` handoff, or the already
+closed `(1,3)` branch.  A smaller cut with only a one-sided contracted
+state is not a receiver.  The whole all-rich five-lock family, the
+direct-reserve substituted-web decoder, and the parent four-root decoder
+remain later or frozen obligations.
 
-The first milestone is a shortest thin lock plus one second colour and the
-complete bridge hull.  Static all-rich route data is already falsified by
-a common `alpha` hub with off-colour bypasses, which preserves every
-two-colour quotient while destroying any host separator.  The all-rich
-branch therefore requires a minimal full-host lock union and a named
-proper-minor response; it cannot be proved from the quotient systems alone.
+The first milestone is the tight-gate receiver.  An audited transition
+shows that equality in the off-spine seven-cut budget gives a smaller
+actual seven-cell with a named one-sided contracted state, and that a
+separating first entry couples this state to the fixed colouring.  It does
+not orient the packet vector or supply an accepted state; those are the
+precise missing receiver facts.  Static all-rich route data remains
+falsified by a common `alpha` hub with off-colour bypasses.
 
-The fresh literature review found no automatic lift.  Humeau--Pous gives
+Source:
+`../results/hc7_shortest_thin_lock_tight_bypass_transition.md` and its
+independent audit.
+
+The literature review through 15 July 2026 found no automatic lift.
+Humeau--Pous gives
 the relevant full-tuple crossing/web decomposition, and Perfect's lemma can
 preserve endpoints only after its relative-separation hypothesis has been
 proved in the literal host.  Web completion edges are not host edges, and
 Pap's permutation-labelled theorem remains unavailable until a faithful
-literal-capacity encoding is constructed.
+literal-capacity encoding is constructed.  Colorful-minor and rooted-folio
+theorems preserve finite annotations, not exact colour-extension languages.
 
 ## Frozen kernel
 

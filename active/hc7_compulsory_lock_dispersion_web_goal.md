@@ -1,21 +1,30 @@
-# Active goal: fixed-state compulsory-lock dispersion or stateful web descent
+# Active goal: shortest-lock state-preserving first-seam receiver
 
 **Status:** research target, not a proved theorem.
 
 ## Decision
 
-The immediate target is the first unsupported decoder left by the audited
-compulsory-lock programme.  Work in one fixed colouring and turn its five
-Kempe locks into literal carriers, a terminal model, or a strictly smaller
-state-carrying interface.  Do not compare independently attained final-duty
-states until this fixed-state geometry has been decoded.
+The literature review through 15 July 2026 found no theorem that preserves
+both literal rooted geometry and an exact six-colour boundary state.  The
+immediate target is therefore the first unsupported semantic step left by
+the audited compulsory-lock programme: in one fixed colouring, decode the
+first genuine crossing or first crossless web seam of a shortest thin lock
+and one second lock into a **recognized receiver**.  Do not compare
+independently attained final-duty states.
 
-The first mandatory milestone is the **thin-lock-anchored mixed decoder**:
-choose a shortest thin lock and couple its full bridge hull to one different
-colour's lock.  A second thin lock or two rich quotient routes must then
-give a literal exchange or a named state-carrying gate.  A lone thin path is
-too weak.  The all-rich articulation problem is the next branch, not the
-first proof attempt.
+The first mandatory milestone is the **tight-gate receiver**.  A shortest
+thin lock and a second lock now give, whenever the second first enters a
+tight off-spine lobe, a smaller actual seven-cell with a named one-sided
+contracted state; a separating entry couples that state to the fixed
+colouring by one explicit Kempe swap.  This certificate is not yet a
+descent.  The next theorem must orient its packet vector and normalize its
+state into `S3`, a ranked `(1,1)` `S4` handoff, or the already closed
+`(1,3)` branch.
+
+Only after that receiver is proved should the same mechanism handle a
+boundary-excess lobe, a same-lock bypass, or a spine-confined/rich
+excursion by a crossing/web decomposition.  The all-rich articulation
+problem remains secondary.
 
 This is the constructive engine for the connected-rich paired width-two
 `(1,2)` cell.  The frozen direct-reserve web and further boundary censuses
@@ -65,40 +74,89 @@ certificate, not a rooted model.
 
 ## Target theorem
 
-### Fixed-state compulsory-lock decoder
+### State-preserving first-seam receiver
 
-Under the audited entry, at least one of the following occurs.
+Under the audited entry, choose a shortest thin lock `P` and one second
+lock `Q`, retaining their complete literal bridge hull.  At the first
+off-spine lobe or the first useful parallel-composition seam, at least one
+of the following occurs.
 
 1. **Exact reflection.**  Literal contractions or Kempe switches produce
    one equality partition belonging to both closed-shore extension
    languages, and the two colourings glue to a six-colouring of `G`.
 2. **Literal terminal.**  There is a literal `K_7` model, or a fixed pair
    `{p,q}` for which `G-{p,q}` is `K_5`-minor-free.
-3. **Strict exact-seven descent.**  There is an actual seven-separation
-   with a smaller oriented active shore, an explicit old-to-new boundary
-   map, and a named proper-minor operation attaining the paired-triangle
-   state required to re-enter `S3`.
+3. **Recognized exact-seven receiver.**  There is an actual
+   seven-separation with an explicit old-to-new boundary map and a named
+   proper-minor operation, and it is one of:
+
+   * an oriented `(1,2)` cell with a smaller active shore and an attained
+     accepted `S3` state;
+   * a normalized ranked `(1,1)` `S4` handoff; or
+   * the already closed `(1,3)` branch.
 4. **Ranked near-model receiver.**  There is a normalized labelled `S1`
    or `S4` handoff together with a rank which strictly decreases under the
    receiving transition.  An unlabelled `K_7^vee`, a naked `(1,1)` cell,
    or a reversible root exchange is not an outcome.
 
-The theorem must cover thin, rich and mixed five-lock patterns.  A claim
-about one isolated lock is not the target unless it supplies one of these
-four outcomes.
+For the present goal the theorem need only cover every branch reached from
+one shortest thin lock and one second lock.  The all-rich five-lock branch
+is a later obligation.  A smaller cut with only a one-sided contracted
+state is not outcome 3.
+
+## Current transition certificate
+
+The audited
+[tight bypass-lobe transition](../results/hc7_shortest_thin_lock_tight_bypass_transition.md)
+proves the following local core.
+
+For `D` a component off the shortest thin spine, put
+
+\[
+ Z_D=N_A(D),\qquad T_D=N_S(D).
+\]
+
+Seven-connectivity gives `|Z_D|+|T_D|>=7`.  At equality,
+`Omega_D=Z_D union T_D` is a literal actual seven-boundary.  Contracting
+any `D-Omega_D` edge toward its boundary endpoint supplies one intact
+opposite-side state and the same named contracted lobe-side state, with
+packet demand strictly greater than the opposite packet capacity.  If a
+second lock's first entry edge separates its ends, one Kempe swap produces
+that same state from the fixed colouring.
+
+This is a strict set-size transition only.  The old rich packets need not
+be `Omega_D`-full, the lobe need not be the packet-one shore, and the state
+need not be the paired-triangle state.  Those three facts are exactly the
+receiver obligation.
 
 ## Constructive mechanism
 
-### M1. Thin-lock-anchored mixed decoder
+### M1. Tight-gate receiver
+
+First close the certificate above.  Determine the actual packet vector of
+the new cell and use the separating-entry toggle, the demand inequality,
+and model regeneration to obtain one of the recognized receivers in
+outcome 3.  A proof may not infer that old `S`-full packets are
+`Omega_D`-full, or that `D` is the packet-one shore.  Those facts must be
+proved or bypassed.
+
+### M2. Thin-lock-anchored mixed decoder
 
 Choose a shortest thin `z-u` lock path `P_delta` and retain its complete
-literal bridge hull in `A union S`; no chord or off-path component may be
-discarded.  Couple it to one different colour `epsilon`:
+literal bridge hull in
 
-* if `epsilon` is thin, use the two shortest paths and their first
-  divergent bridge attachments; or
-* if `epsilon` is rich, use both of its quotient routes and lift every
-  retained edge back to the host.
+\[
+                 H=(G-zu)[A\cup S];
+\]
+
+no chord or off-path component may be discarded.  Couple it to one
+different colour `epsilon`:
+
+* if `epsilon` is thin, use the genuine `P_delta`-ears obtained from
+  components of the second path outside `P_delta`; or
+* if `epsilon` is rich, first prove an injective literal lift/terminal
+  lemma, because the two quotient routes may share contracted thin
+  components and repeated-colour vertices.
 
 Apply the generalized two-path theorem only to the resulting fully
 specified terminal tuple.  A crossing must be decoded into disjoint
@@ -110,10 +168,10 @@ named deletion or contraction response must attain the receiving state.
 A thin lock supplies a literal rainbow neighbour `w_delta` of `u`; five
 thin locks force the connected bipartite boundary into the exact `2+5`
 orientation recorded by the quotient theorem, with six equality blocks and
-one repeated independent pair.  This is the terminal base pattern for M1,
+one repeated independent pair.  This is the terminal base pattern for M2,
 not by itself a reflection theorem.
 
-### M2. Repeated-colour articulation dispersion
+### M3. Repeated-colour articulation dispersion
 
 The static all-rich implication is false.  Five edge-disjoint colour
 systems can all pass through one `alpha` hub, and off-colour bypass edges
@@ -137,7 +195,7 @@ Global seven-connectivity cannot be substituted for the relative
 separation hypothesis of an augmentation lemma.  That hypothesis must be
 verified in the literal host or its failure must itself supply the gate.
 
-### M3. Stateful web pullback
+### M4. Stateful web pullback
 
 At the first useful parallel-composition seam, use one named deletion or
 contraction response to attain the new seven-boundary state.  The boundary
