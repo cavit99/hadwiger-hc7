@@ -14,144 +14,93 @@ This file is the sole authoritative status statement.  The
 [proof spine](active/hc7_near_k7_proof_spine.md) records the detailed
 dependency chain.
 
-## Global progress measure and its boundary
+## Current strategic position
 
-The programme is now governed by one graph-global quantity.  Let
-`tau_5^{<=r}(G)` be the minimum order of a set meeting every `K_5` model
-whose support has at most `r` vertices, and let `h_5(G)` be the largest
-`r` for which `tau_5^{<=r}(G)<=2`.  The new literal-clique theorem proves
-`h_5(G)>=5`; a terminal pair is exactly `h_5(G)=|G|`.  No theorem yet
-forces `h_5` to increase.  The primary proof obligation is the uniform
-extension `r -> r+1`, beginning at support six.
+The warning which now governs the programme is simple: local portal, web,
+and exact-state structure is not progress unless it participates in a
+closed graph-global transition or a strict global rank.  The twin-seam and
+Moser programmes are therefore frozen as possible decoders.  They are not
+the active proof engine.
 
-The exact-seven part has a second, more restricted well-founded invariant.
-Among
-**all** actual oriented `(1,2)` seven-separations, orient the packet vector
-as `(nu_L,nu_R)=(1,2)` and minimize `|L|`.  Any later actual `(1,2)`
-receiver with a smaller packet-one shore is then impossible, irrespective
-of its boundary graph or returned colouring state.  Thus strict
-packet-one-lobe descent does not need to preserve the old paired state.
+Three global facts are proved.
 
-This does not yet apply automatically to the current atomic chain: an
-arbitrary global minimum has not been shown to satisfy the paired-triangle,
-connected-bipartite, or twin-seam hypotheses.  The upstream theorem must be
-made state-uniform, or the selected subclass must be proved closed under
-handoff.
+1. Every seven-connected graph either has a `K_7` minor or has a pair
+   meeting every literal `K_5`.  Thus a target-free host has a pair whose
+   smallest `K_5` model has support at least six.  See the
+   [literal `K_5` transversal](results/hc7_global_literal_k5_transversal.md)
+   and its [audit](results/hc7_global_literal_k5_transversal_audit.md).
+2. The support-six obstruction has exactly four split-edge forms, and
+   contracting the split edge either preserves seven-connectivity or lifts
+   a six-cut to an actual seven-adhesion.  See the
+   [support-six contraction dichotomy](results/hc7_global_support_six_contraction_dichotomy.md)
+   and its [audit](results/hc7_global_support_six_contraction_dichotomy_audit.md).
+3. A May 2026 theorem of Girão et al. says that every non-four-colourable
+   graph contains a subdivision of `K_5` or of the unique six-vertex split
+   graph `hat K_5`.  Applied to every `G-P`, it gives one uniform path-system
+   language for all pairs.  Our elementary normalization proves that its
+   pair height agrees exactly with ordinary `K_5`-model support through
+   support six; the first three forms are one-edge `TK_5`s and the fourth is
+   literal `hat K_5`.  See the active
+   [near-Hajós pair-height note](active/hc7_global_near_hajos_pair_height.md).
 
-No analogous local potential exists for `S1` rotations or `(1,1)` cells.
-An audited two-apex tube contains a reduced three-rotation cycle on one
-fixed five-row frame and one fixed coarse carrier.  Consequently strict
-handoffs are globally ranked only when they decrease an invariant defined
-on the **whole neutral rotation class**.  Otherwise the remaining task is
-to prove that every sink component has a common exact state, a `K_7`, or
-one coherent fixed pair.
+The third fact is the cleanest global geometry yet, but it is still only a
+selection coordinate.  Neither it nor the older support height is known to
+increase under pair exchange.
 
-Two further tests sharpen this warning.  Rooted-`K_4` reselection admits an
-exact involutive two-cycle preserving its roots, model union, bag sizes and
-boundary-contact vector.  Likewise the global adjacent-pair/`K_5` contact
-profile has a sharp maximum on `K_2` joined with the icosahedron; that
-maximum is exactly a one-hole `K_7^-` state, while the valid fixed pair is
-not identified by the numerical profile.  Thus neither local rooted-core
-improvement nor global contact maximization is the missing invariant.  Both
-must be quotiented, and their maximal component still requires a terminal
-classification using the proper-minor response.
+Accordingly, the programme currently satisfies only two of the three
+requirements for a genuine proof invariant:
 
-Sources: [global thin-shore minimality](results/hc7_exact7_global_thin_shore_minimality.md),
-its [audit](results/hc7_exact7_global_thin_shore_minimality_audit.md), the
-[rotation-triangle barrier](barriers/hc7_global_invariant_rotation_triangle.md),
-its [audit](barriers/hc7_global_invariant_rotation_triangle_audit.md), and
-the [conditional quotient framework](active/hc7_global_rotation_quotient_rewrite.md).
-The two new guardrails are the
-[rooted-core reselection cycle](barriers/hc7_rooted_core_reselection_cycle.md)
-with its [audit](barriers/hc7_rooted_core_reselection_cycle_audit.md), and
-the [global pair--`K_5` contact-rank sink](barriers/hc7_global_pair_k5_contact_rank_barrier.md).
-The positive first-hit normalization is recorded in the
-[global pair--`K_5` contact note](active/hc7_global_pair_k5_contact_rank.md)
-and its [audit](active/hc7_global_pair_k5_contact_rank_audit.md).
+1. the state language is finite and intrinsic to `G`;
+2. every state has a certified successor and terminal-cycle rotations stay
+   inside a closed sink; but
+3. **no theorem yet forces a sink to terminate in a `K_7` or fixed pair.**
 
-Packet capacity does now have one uniform, label-preserving structural
-consequence.  If a closed shore contains `q` disjoint boundary-full packets
-and its literal boundary has rooted connectivity `r`, then the closed shore
-has rooted connectivity at least `q+r` (capped at `|S|-1`).  Hence two full
-packets behind a connected seven-boundary give a three-connected topological
-`S`-minor, and behind a two-connected boundary they give a four-connected
-`S`-minor.  This compresses an unbounded packet-rich shore to an existential
-labelled core.  It is deliberately **not** called a global invariant: the
-core is noncanonical, may consume the packets, and need not carry the named
-attained state.  Sources: [packet-to-root-connectivity](results/hc7_packet_root_connectivity.md)
-and its [audit](results/hc7_packet_root_connectivity_audit.md).
-
-There is also a new **global** first rung.  Every seven-connected graph
-either has a `K_7` minor or has a set of at most two vertices meeting every
-literal `K_5` subgraph.  The proof is uniform: an elementary five-clique
-family lemma reduces failure of a two-vertex transversal to three
-five-cliques with pairwise overlaps at most three, and Niu--Zhang's
-published non-two-apex theorem then gives `K_7`.  Consequently every
-seven-connected `K_7`-minor-free graph has a pair `P` for which every
-`K_5` model in `G-P` has support at least six.  This is genuine progress
-on the global support potential, but it does **not** hit nonliteral `K_5`
-models.  Sources: [literal `K_5` transversal](results/hc7_global_literal_k5_transversal.md)
-and its [audit](results/hc7_global_literal_k5_transversal_audit.md).
+The third item is now the sole admissible measure of progress.  Producing
+more portal types, adhesions, or local receivers without proving that sink
+classification will not be added to the active spine.
 
 ## Active research goal
 
-The proof-spine priority is now the
-[global `K_5`-model transversal endgame](active/hc7_global_k5_transversal_goal.md),
-not further local normalization.  Its clean statement is
+The primary mechanism is now the
+[dominating-edge sink programme](active/hc7_global_dominating_edge_sink_goal.md).
+Its states are literal two-sets.  A published dominating `K_5` model in
+`G-P` supplies a successor edge, and its induced terminal cycle makes every
+cycle edge a legal successor.  Hence a hypothetical counterexample has a
+closed sink strongly connected component consisting of literal edges; each
+edge in the sink has a vertex-disjoint induced cycle entirely inside the
+same sink.  This is a proved, graph-global closure statement with a fixed
+state language.  See the [programme note](active/hc7_global_dominating_edge_sink_goal.md)
+and its [independent audit](active/hc7_global_dominating_edge_sink_audit.md).
+
+It is **not yet a well-founded proof invariant**.  The exact next theorem is:
+
+> Every closed terminal-cycle family in a seven-connected, strongly
+> seven-contraction-critical, `K_7`-minor-free graph either couples its
+> double-critical Kempe systems into a literal `K_7`, or contains a
+> six-residual edge transition to a pair meeting every near-Hajós carrier
+> below the current global height.
+
+This theorem would classify the neutral sink rather than add a new local
+configuration.  The independent backup remains the stateful support-six
+two-transversal pullback.  Its non-seven-connected contraction branch now
+preserves the selected six-vertex model in a named actual seven-adhesion,
+but global reselection may still lose that model; its seven-connected branch
+still has both an equal-support case and a split-row case.
+
+If the closed-family exchange cannot be proved from the full
+contraction-critical hypotheses, this transition system must be demoted;
+finiteness and strong connectivity alone are not evidence of termination.
+
+The complete target remains
 
 \[
   \text{seven-connected}+\text{strongly 7-contraction-critical}+K_7^\vee
-     \Longrightarrow K_7\text{ or }\tau_5(G)\le2,
+     \Longrightarrow K_7\text{ or }\tau_5(G)\le2.
 \]
 
-where `tau_5(G)` is the minimum number of vertices meeting every `K_5`
-model.  This is an `HC_7`-strength target, not a claimed intermediate
-theorem.
+No current theorem proves this implication.
 
-One possible proof mechanism is **global sink coherence**.  It would form
-a transition system whose vertices are whole neutral classes of normalized
-near-`K_7` models and actual exact-seven states, and whose directed edges
-are legal proper-minor response transitions or genuinely ranked
-actual-shore handoffs.  The theorem to prove would say that every sink
-component has one of:
-
-1. a common exact boundary state and a six-colouring;
-2. a literal `K_7`; or
-3. one fixed pair meeting every `K_5` model of `G`.
-
-The third outcome is exactly the valid fixed-pair terminal.  In a
-hypothetical counterexample it is excluded globally because every
-`G-{p,q}` is at least five-chromatic and hence contains a `K_5` minor.
-The response-enriched state language has not yet been proved closed, so
-the existence of a finite sink is currently a tautology rather than a
-well-founded proof invariant.  The atomic twin-seam exchange is retained
-only as a possible constructive decoder: a new atomic lemma enters the
-spine only if it supplies an edge in a closed transition system, a strict
-class-invariant descent, or a terminal sink classification.  A further
-portal normal form is not progress.
-
-The immediate constructive frontier is therefore no longer support five.
-For each `r`, let `tau_5^{<=r}` be the minimum order of a set meeting every
-`K_5` model supported on at most `r` vertices.  The new theorem proves
-`tau_5^{<=5}<=2`; the terminal pair is exactly
-`tau_5^{<=|G|}<=2`.  The global theorem to discover is the uniform
-extension
-
-\[
-       \tau_5^{\le r}\le2\Longrightarrow\tau_5^{\le r+1}\le2.
-\]
-
-At the first step, an order-six model is one two-vertex edge-bag plus four
-singletons.  The audited contraction dichotomy sends its split edge either
-to a seven-connected proper minor or to an actual exact-seven adhesion;
-every six-colouring of the contraction saturates both split endpoints in
-the other five colours.  The next admissible result is a stateful
-two-transversal pullback proving `tau_5^{<=6}<=2`, with a mechanism that
-extends beyond this one support order.  A support-six portal taxonomy
-without that global pullback is not the objective.  Source:
-[support-six contraction dichotomy](results/hc7_global_support_six_contraction_dichotomy.md).
-Its independent [audit](results/hc7_global_support_six_contraction_dichotomy_audit.md)
-is green.
+## Frozen local dependency ledger
 
 The retained local decoder target is the
 [single-trace reverse tight-lobe carrier-or-rooted-five theorem](active/hc7_reverse_tight_carrier_or_rooted_five_goal.md),
@@ -1049,73 +998,33 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 ## Exact remaining gap
 
 No audited implication yet turns every hypothetical counterexample into a
-literal `K_7` or a valid global six-colouring.  The primary precise gap is
-the **uniform support-extension theorem**
+literal `K_7` or a valid global six-colouring.
+
+The primary gap is the **closed-family exchange theorem** for the
+dominating-edge sink.  A sink is now a literal, globally closed family of
+edges, and every state carries a vertex-disjoint induced terminal cycle in
+the same family.  What is not proved is either of the two necessary exits:
+
+1. an all-double-critical closed family yields a labelled `K_7` model; or
+2. a six-residual state yields a successor pair which meets every
+   near-Hajós carrier below the current global height.
+
+The independent equivalent first-rung formulation is
 
 \[
-  \tau_5^{\le r}(G)\le2\Longrightarrow
-  \tau_5^{\le r+1}(G)\le2.
+                         \tau_5^{\le6}(G)\le2.
 \]
 
-Its first open rung is `tau_5^{<=6}(G)<=2`.  The support-six contraction
-dichotomy proves the exact normal form and hands the obstruction either to
-a seven-connected proper minor or to an actual exact-seven adhesion, but
-no audited theorem pulls a two-vertex transversal back through that split.
+The support-six pullback proves useful named contraction and separator
+facts but not this universal hitting conclusion.  The exact-seven
+packet-one rank applies only after entry into a globally selected `(1,2)`
+cell and does not cover `(1,1)` or neutral near-model rotations.
 
-The **sink-coherence theorem** above is one possible mechanism for proving
-the extension.  The two-/three-gate geometry and the four-pole rooted
-`K_4` substrate are proved, but rooted-core reselection is reversible and
-contact maximization can stop at a hidden two-apex sink.  What is not proved
-is that the complete proper-minor response of one neutral component forces
-a common state, a literal model, or the same two-vertex `K_5`-model
-transversal throughout that component.
-
-The atomic rooted-core allocation/confluence theorem is one possible way to
-discharge a transition inside this global statement.  By itself it is no
-longer treated as the proof's progress measure: the rooted bags may consume
-the two packet duties, and a successful local reselection may be undone at
-the next regenerated frame.
-
-There is now a real global rank for strict oriented `(1,2)` receivers, but
-the current atomic hypotheses have not been derived state-uniformly from a
-globally minimum thin shore.  There is no corresponding rank for `(1,1)`
-or near-model rotations; a concrete reduced rotation triangle rules out
-representative-local potentials.  Those branches require a terminal
-classification of a whole neutral component, ideally one coherent fixed
-pair.  Closing the rooted twin exchange eliminates an unbounded family,
-but it does **not** by itself prove `HC_7`: arbitrary demand-three states,
-packet vector `(1,1)`, larger adhesions, and near-model rotation components
-remain in `S1/S4`.
-
-Multi-lobe support-four gates yield a labelled near model or a strict
-`(1,2)` descendant, but no theorem transports a legally useful state across
-every such descent.  In a two-lobe support-four cell, every non-singleton
-full-row lobe is closed; the labelled proper-row split and singleton lobe
-remain.
-
-The atomic connected-bipartite branch now has a canonical four-root
-linkage-or-disk certificate.  Its rural outcome has been reduced uniformly
-to one direct-reserve exchange: every nontrivial reserved connector already
-gives a labelled `K_7^vee`, while the last cell admits an audited one-root
-substitution regenerating a rooted diamond.  The complete rooted-`K_4`
-obstruction theorem shows that this substituted host either has the rooted
-`K_4` or is a clean cofacial planar web.  The new `(5,6)` theorem then
-removes its outerplanar realization, and the degree-three peel names the
-only local receiver it can expose.  What remains is the literal interior
-gate lift just stated.  The linkage outcome remains open separately at the
-symmetric `(5,5)` seam.
-
-Every clean tree edge, every root-degree-at-most-two connected-bipartite
-atom, and every bare cycle shore of order at least four are closed.  The
-four-vertex packet path is classified but not fully terminal under the
-strict outcome list; generic `K_7^vee` triggers still require a normalized
-near-model handoff.  After this atom, arbitrary attained demand-three
-states, packet vector `(1,1)`, larger adhesions, and S1 rotation components
-remain.
-
-Finite certificates in this repository prove only the interfaces stated in
-their accompanying notes.  They do not replace an unbounded exchange
-theorem.
+Accordingly, further labelled case reduction is frozen.  A new lemma enters
+the active spine only if it classifies an entire sink, proves a strict
+pair-height increase, or returns a literal `K_7`/one fixed pair.  Finite
+certificates prove only the interfaces stated in their notes and do not
+replace this unbounded theorem.
 
 ## Repository layout
 

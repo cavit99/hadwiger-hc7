@@ -19,6 +19,39 @@ needed.
 
 ## Current research goal
 
+The active proof engine is the
+[`dominating-edge sink programme`](hc7_global_dominating_edge_sink_goal.md).
+For a literal pair `P`, a dominating `K_5` model in `G-P` returns a literal
+terminal edge.  After normalizing its last three bags to an induced cycle,
+every edge of that cycle is a legal successor.  Thus the transition language
+is closed on literal pairs, and every hypothetical counterexample has a sink
+strongly connected component made of edges.  Every state in that sink has a
+vertex-disjoint induced cycle entirely in the same sink.
+
+The next theorem must classify the **whole closed family**:
+
+> A closed terminal-cycle family in a seven-connected, strongly
+> seven-contraction-critical, `K_7`-minor-free graph yields a literal `K_7`
+> or one fixed pair meeting every `K_5` model.
+
+The first split is chromatic.  A sink edge is either double-critical or its
+two-vertex deletion remains six-chromatic.  Existing double-critical minor
+theorems do not apply to a closed subfamily of edges, and the six-chromatic
+branch regenerates only an unrooted `K_6`; coupling those responses is the
+open global exchange.
+
+The May 2026 near-Hajós theorem gives the accompanying pair height:
+every `G-P` contains a subdivision of `K_5` or `hat K_5`.  Its shortest
+support agrees with ordinary `K_5`-model support through order six, so it
+geometrizes all four support-six types.  It does not itself increase under
+edge rotation.  See [`hc7_global_near_hajos_pair_height.md`](hc7_global_near_hajos_pair_height.md).
+
+The support-six pullback and actual `(1,2)` shore rank remain independent
+backup mechanisms.  The twin-seam target is frozen unless it supplies a
+literal transition or terminal classification in the global edge sink.
+
+## Frozen prior research goal
+
 The global target is the
 [`K_5`-model transversal theorem](hc7_global_k5_transversal_goal.md):
 

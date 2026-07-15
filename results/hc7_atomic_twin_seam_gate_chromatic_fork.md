@@ -139,8 +139,9 @@ Because `gamma` occurs only at `d,t`, every `d-t` path in a `gamma-i`
 layer has length two and uses a common colour-`i` neighbour.  The five selected
 vertices give (2.2), and no internal vertex of colour `gamma` exists which
 could be a common palette gate.  The generalized ordered-path statement
-follows by the standard cyclic Kempe-chain argument: apply to `kappa`
-the colour cycle
+is the edge-local generalized Kempe-chain argument of
+Kawarabayashi--Pedersen--Toft, Proposition 3.3: apply to `kappa` the colour
+cycle
 
 \[
                   (\gamma,i_1,\ldots,i_s).

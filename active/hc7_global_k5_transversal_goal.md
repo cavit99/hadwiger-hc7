@@ -4,6 +4,17 @@
 local near-model and exact-seven machinery is now required to prove.  It is
 not an audited consequence of that machinery.
 
+**Current mechanism (2026-07-15):** the earlier response-enriched state
+graph was too broad to give more than tautological sink existence.  It has
+been replaced by the literal
+[`dominating-edge transition system`](hc7_global_dominating_edge_sink_goal.md).
+The published dominating four-colour theorem makes that system closed on
+two-sets, and terminal-cycle rotation makes every sink a cycle-rich family
+of literal edges.  The active obligation is to classify that whole family,
+not to refine another local portal state.  The
+[`near-Hajós pair height`](hc7_global_near_hajos_pair_height.md) supplies
+the uniform path geometry but is not yet a strict exchange invariant.
+
 ## 1. The global parameter
 
 For a graph `G`, write

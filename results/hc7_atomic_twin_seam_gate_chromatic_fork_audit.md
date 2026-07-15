@@ -13,7 +13,7 @@ exhausted.  The audited source now states this qualification explicitly.
 `results/hc7_atomic_twin_seam_gate_chromatic_fork.md`.
 
 **Source SHA-256:**
-`43633b67baed3e8e06087f6cd2d1f4a74bc45a03ab3a28d7a8a3f7a3535ff48c`.
+`c9fcaa59038e1f664cc76c7846aa9593d451e4e44173aa26ab8651145d690733`.
 
 ## 1. Chromatic dichotomy
 

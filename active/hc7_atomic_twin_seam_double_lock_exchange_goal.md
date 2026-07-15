@@ -1,6 +1,9 @@
-# Active goal: atomic twin-seam double-lock exchange
+# Frozen subgoal: atomic twin-seam double-lock exchange
 
-**Status:** immediate theorem target, not proved.
+**Status:** not proved and no longer the primary proof engine.  Resume only
+if the exchange supplies a literal transition or terminal classification in
+the graph-global dominating-edge sink.  Further seam normalization is
+frozen.
 
 ## 1. Strategic decision
 
