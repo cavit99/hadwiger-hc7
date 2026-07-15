@@ -18,25 +18,33 @@ needed.
 
 ## Current research goal
 
-The active dependency-level target is the direct-reserve substituted-web
-decoder stated in `hc7_direct_reserve_substituted_web_goal.md`.  It is the
-sole surviving rural-disk child of the parent atomic four-root decoder in
-`hc7_atomic_four_root_decoder_goal.md`; the linkage child remains open but
-is frozen during this attempt.
+The active dependency-level target is the fixed-state compulsory-lock
+decoder stated in `hc7_compulsory_lock_dispersion_web_goal.md`.  Fix one
+colouring of `G-zu`.  After the audited rich-separating-bridge branch is
+sent to a labelled `(1,1)` receiver, each of the five compulsory locks has
+either a literal thin `z-u` path or two edge-disjoint rich-edge quotient
+routes.  Different colour systems use disjoint retained rich edges, but
+they may share repeated-colour articulation vertices.
 
-Three new audited inputs make this target materially sharper.  Closed-shore
-connectivity gives a rooted diamond; every nontrivial reserved connector
-gives a labelled `K_7^vee`; and a one-root substitution regenerates a
-diamond after replacing an old root by the compulsory portal `z`.  The full
-Fabila-Monroy--Wood obstruction theorem then leaves only a literal clean
-cofacial web when the substituted host has no rooted `K_4`.
+The next theorem must use the whole five-lock family to disperse those
+articulations into literal duty-faithful carriers/rooted bags, or turn the
+failure into a strictly smaller state-carrying web gate.  Thin, rich and
+mixed patterns are included.  The direct-reserve substituted-web decoder
+and parent four-root decoder remain frozen independent children.
 
-The new theorem must decode that clean web into an anchored five-bag
-near-model, two adjacent duty-faithful carriers, or an exact seven-adhesion
-with named receiving data.  It is deliberately narrower than `HC_7` and
-stronger than another web reduction.  It does not demand transport of an
-old equality state, but it must preserve literal packet anchoring: the rich
-packets do not automatically contact the substituted `z`-bag.
+The first milestone is a shortest thin lock plus one second colour and the
+complete bridge hull.  Static all-rich route data is already falsified by
+a common `alpha` hub with off-colour bypasses, which preserves every
+two-colour quotient while destroying any host separator.  The all-rich
+branch therefore requires a minimal full-host lock union and a named
+proper-minor response; it cannot be proved from the quotient systems alone.
+
+The fresh literature review found no automatic lift.  Humeau--Pous gives
+the relevant full-tuple crossing/web decomposition, and Perfect's lemma can
+preserve endpoints only after its relative-separation hypothesis has been
+proved in the literal host.  Web completion edges are not host edges, and
+Pap's permutation-labelled theorem remains unavailable until a faithful
+literal-capacity encoding is constructed.
 
 ## Frozen kernel
 
@@ -720,6 +728,44 @@ lock necessarily contains a literal connector between the two named duty
 blocks whose internal vertices lie in the thin shore.  If no edge separates
 the blocks, two edge-disjoint rich-side routes exist.
 
+The compulsory edge now has a state-faithful composition whenever one of
+its own five locks has a rich-internal or boundary--rich separating bridge
+`f`.  Swapping the `z`-side of that same lock gives a named colouring of
+`G-f` and `G/f`.  On the twin boundary
+
+\[
+                    \Omega=(S-\{u\})\cup\{z\},
+\]
+
+the shores `A-z` and `R union {u}` are connected and full.  Every full
+packet on the latter contains `u`.  Two full packets on `A-z` would, after
+adjoining `z` to one, be the audited adjacent old-boundary carriers of
+supports seven and six; hence that branch already six-colours `G` or gives
+`K_7`.  The twin packet vector is therefore exactly `(1,1)`.  The named
+`f`-contraction legally attains the literal root-substitution state
+`u -> z`, its demand is at least two, and packet sum drops `3 -> 2`.
+
+This is a normalized labelled entry into `S4`, not a solution of `S4`.
+For each alternate `f`-colour, the receiver additionally has either an
+internal right-shore lock or a literal boundary-to-boundary crossing through
+the left shore; otherwise the exact traces reproduce and glue.  Thus the
+only compulsory-lock residue remaining locally is that every one of the
+five locks, in every `G-zu` colouring, has no rich-internal or
+boundary--rich separating bridge.  No vertex-disjointness is inferred.
+Sources: `../results/hc7_compulsory_edge_lock_state_lift.md` and
+`../results/hc7_compulsory_lock_twin_state_transfer.md`.
+
+In one fixed residual colouring, contract every component of a lock outside
+the rich shore and retain parallel rich edges.  The audited quotient theorem
+then gives, for each alternate colour, either a literal thin `z-u` path or
+two edge-disjoint rich-edge source--target routes.  Systems for distinct
+colours use disjoint retained rich edges.  They may share arbitrary
+`alpha`-coloured articulation vertices, so edge-Menger does not supply the
+needed vertex-disjoint bags.  A thin lock forces a distinct rainbow
+boundary neighbour of `u`; five thin locks force the exact `2+5`
+bipartition and a six-block trace.  Source:
+`../results/hc7_compulsory_lock_rich_quotient_two_routes.md`.
+
 There is now a uniform root normalization.  In every nonsingleton atom,
 `A-z` is connected and meets all six literals of `W=S-{u}`.  A geometric
 duty connector can therefore avoid `z`; retaining that path and adjoining a
@@ -740,6 +786,21 @@ contractions manufacture a fresh demand-at-most-two state, so the hard
 branch no longer needs a state pullback.  Two further audited lemmas close
 all connected-bipartite atoms with `d_{G[A]}(z)<=2` and every bare cycle
 shore `C_n`, `n>=4`.
+
+At the first uncovered order, exact rooted enumeration is also terminal.
+For `|A|=4`, both possible rooted thin graphs and all 19 rooted paired
+frontiers were tested symbolically against every literal contact map
+satisfying the complete relative seven-cut system.  Negating every adaptive
+carrier return is unsatisfiable in all 38 cells.  This is a bounded audited
+lemma only; no larger-order induction is inferred.  Source:
+`../results/hc7_atomic_order_four_carrier_exhaustion.md`.
+
+The corrected order-five guardrail likewise tests all 14 rooted
+biconnected thin types and 19 rooted paired frontiers, for 266 symbolic
+cells over the full `2^30` contact space.  Every cell is unsatisfiable.
+The first possible atomic obstruction therefore has order at least six.
+This is a bounded falsification certificate only and the census stops
+there.  Source: `../results/hc7_atomic_order_five_carrier_guardrail.md`.
 
 The list-theoretic part of the next theorem is now closed.  At the canonical
 split `{z}|(A-z)`, failure of every adaptive empty/singleton reservoir gives
@@ -1016,6 +1077,15 @@ Even a complete `(1,2)` theorem would leave:
 
 These must feed back into S1.  No existing result turns packet thinness into
 a bounded transversal or an apex pair, and no such inference is permitted.
+
+One normalized `(1,1)` entry is now available.  A rich separating bridge
+of a compulsory lock produces the twin boundary above, an exact state
+attained by one named edge contraction, a literal old-to-new root map, and
+five receiver lock/crossing alternatives.  Its local packet-sum rank drops
+from three to two.  This does not provide a global anti-cycle rank: a
+receiver theorem must prevent an involutive root exchange or a later return
+to packet sum three.  Source:
+`../results/hc7_compulsory_lock_twin_state_transfer.md`.
 
 ## Audited supporting principles
 
