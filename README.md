@@ -85,6 +85,18 @@ Further labelled portal enumeration is frozen.
 Sources: [separating response bundle](results/hc7_atomic_twin_seam_separating_response_bundle.md)
 and its [audit](results/hc7_atomic_twin_seam_separating_response_bundle_audit.md).
 
+The compulsory edge itself is now proved not double-critical.  In fact
+`chi(G-{z,u})=6`: a hypothetical five-colouring would put five distinct
+common neighbours of `z,u` in the old boundary and give an audited `(6,6)`
+carrier split.  Known `HC_6` therefore regenerates a spanning `K_6` model
+avoiding both endpoints.  The pair `{z,u}` must miss a model row, and two
+simple two-pole contact patterns already split to a literal `K_7`.  The
+live obstruction is exact: distinct first-hit vertices may still lie in
+one row whose two sides cannot both retain all five foreign-row duties.
+
+Sources: [compulsory-edge regeneration](results/hc7_atomic_compulsory_edge_not_double_critical.md)
+and its [audit](results/hc7_atomic_compulsory_edge_not_double_critical_audit.md).
+
 Preserving the original demand-three trace is not required.  The compulsory
 bridge transition and the canonical reverse trace arise from different
 proper-minor operations, and no audited theorem identifies them.  Requiring

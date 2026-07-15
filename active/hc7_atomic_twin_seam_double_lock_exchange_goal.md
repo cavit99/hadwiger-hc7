@@ -137,6 +137,17 @@ The proof must track literal vertices through the promotion.  The common
 palette gate is not a graph separator, the bypasses may traverse either
 twin shore or the old packets, and a palette colour is not a model label.
 
+There is now a second exact substrate.  The audited
+[compulsory-edge regeneration theorem](../results/hc7_atomic_compulsory_edge_not_double_critical.md)
+proves `chi(G-{z,u})=6` and supplies a spanning `K_6` model avoiding both
+ends.  The complementary `e,f` cycle meets that model from its two sides at
+distinct vertices, possibly in one row.  The separating decoder may close
+by proving the explicit two-pole row split in that theorem: either the two
+poles already have the audited contact pattern giving `K_7`, or one
+multiply hit row splits into two connected pieces which both retain all
+five foreign-row duties.  Merely placing the first hits in distinct
+vertices or distinct palette layers is insufficient.
+
 ### 4.2 Response-matched gate-edge bypass
 
 For a fixed response `c_f`, palette-align `c_f(z)` with the common
