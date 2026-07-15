@@ -19,7 +19,69 @@ needed.
 
 ## Current research goal
 
-The active dependency-level target is the single-trace reverse tight-lobe
+The global target is the
+[`K_5`-model transversal theorem](hc7_global_k5_transversal_goal.md):
+
+\[
+  \text{seven-connected}+\text{strongly 7-contraction-critical}+K_7^\vee
+    \Longrightarrow K_7\text{ or }\tau_5(G)\le2.
+\]
+
+It is `HC_7`-strength.  The programme does not presently possess a
+well-founded invariant for all near-model rotations; it possesses one
+only for strict actual `(1,2)` packet-one-shore descent.
+
+The global invariant gate precedes every local target below.  Normalize
+near-model reselections and exact rotations by their whole neutral
+components, and regard a local decoder as progress only when it gives a
+legal proper-minor transition between such components, a strict actual
+`(1,2)` packet-one-shore descent, or a terminal outcome.  The missing
+composition theorem is:
+
+> Every sink component of the normalized response transition system has a
+> common exact state, a literal `K_7`, or one fixed pair meeting every
+> `K_5` model of `G`.
+
+Two audited obstructions make this necessary.  Rooted-core reselection has
+an exact involutive cycle preserving all obvious model statistics, while a
+globally maximal adjacent-pair/`K_5` contact profile can be a one-hole
+near-model with a hidden, numerically invisible fixed pair.  Thus neither
+contact order nor local bag improvement is a well-founded invariant.
+
+Finiteness of the response graph only guarantees a sink.  Its state
+language is not yet proved closed and its sinks are not classified, so the
+displayed sink-coherence statement is a target rather than a theorem or a
+constructed rank.
+
+One global rung is now closed.  Every seven-connected graph either has a
+`K_7` minor or a two-vertex transversal of all literal `K_5` subgraphs.
+Therefore, in the target-free branch, the maximum over pairs of the minimum
+support order of a `K_5` model after deleting that pair is at least six.
+The theorem and audit are
+`../results/hc7_global_literal_k5_transversal.md` and its adjacent audit.
+The next support form has one two-vertex bag and four singleton bags.  It
+must be handled by a global pair exchange or a uniform all-orders
+principle, not by another unranked local normalization.
+
+More precisely, let `tau_5^{<=r}(G)` be the transversal number of the
+supports of all `K_5` models of order at most `r`.  The proved theorem gives
+`tau_5^{<=5}(G)<=2`; the terminal is
+`tau_5^{<=|G|}(G)<=2`.  The global invariant programme is the uniform
+extension
+
+\[
+       \tau_5^{\le r}(G)\le2
+          \Longrightarrow \tau_5^{\le r+1}(G)\le2.       \tag{U}
+\]
+
+The support-six contraction dichotomy proves the exact first-step normal
+form and hands a failed contraction to an actual seven-adhesion.  In the
+seven-connected contraction branch, both split endpoints are saturated in
+all five other colours of every proper-minor six-colouring.  What remains
+is a stateful two-transversal pullback proving `tau_5^{<=6}(G)<=2`, ideally
+in a form which proves (U) for an arbitrary minimal branch bag.
+
+The retained exact-seven subroutine is the single-trace reverse tight-lobe
 carrier-or-rooted-five theorem stated in
 `hc7_reverse_tight_carrier_or_rooted_five_goal.md`.  The former universal
 low-demand target was overstrong: seven connected-rich residual boundaries

@@ -16,7 +16,16 @@ dependency chain.
 
 ## Global progress measure and its boundary
 
-The exact-seven part now has one genuine well-founded invariant.  Among
+The programme is now governed by one graph-global quantity.  Let
+`tau_5^{<=r}(G)` be the minimum order of a set meeting every `K_5` model
+whose support has at most `r` vertices, and let `h_5(G)` be the largest
+`r` for which `tau_5^{<=r}(G)<=2`.  The new literal-clique theorem proves
+`h_5(G)>=5`; a terminal pair is exactly `h_5(G)=|G|`.  No theorem yet
+forces `h_5` to increase.  The primary proof obligation is the uniform
+extension `r -> r+1`, beginning at support six.
+
+The exact-seven part has a second, more restricted well-founded invariant.
+Among
 **all** actual oriented `(1,2)` seven-separations, orient the packet vector
 as `(nu_L,nu_R)=(1,2)` and minimize `|L|`.  Any later actual `(1,2)`
 receiver with a smaller packet-one shore is then impossible, irrespective
@@ -37,19 +46,118 @@ on the **whole neutral rotation class**.  Otherwise the remaining task is
 to prove that every sink component has a common exact state, a `K_7`, or
 one coherent fixed pair.
 
+Two further tests sharpen this warning.  Rooted-`K_4` reselection admits an
+exact involutive two-cycle preserving its roots, model union, bag sizes and
+boundary-contact vector.  Likewise the global adjacent-pair/`K_5` contact
+profile has a sharp maximum on `K_2` joined with the icosahedron; that
+maximum is exactly a one-hole `K_7^-` state, while the valid fixed pair is
+not identified by the numerical profile.  Thus neither local rooted-core
+improvement nor global contact maximization is the missing invariant.  Both
+must be quotiented, and their maximal component still requires a terminal
+classification using the proper-minor response.
+
 Sources: [global thin-shore minimality](results/hc7_exact7_global_thin_shore_minimality.md),
 its [audit](results/hc7_exact7_global_thin_shore_minimality_audit.md), the
 [rotation-triangle barrier](barriers/hc7_global_invariant_rotation_triangle.md),
 its [audit](barriers/hc7_global_invariant_rotation_triangle_audit.md), and
 the [conditional quotient framework](active/hc7_global_rotation_quotient_rewrite.md).
+The two new guardrails are the
+[rooted-core reselection cycle](barriers/hc7_rooted_core_reselection_cycle.md)
+with its [audit](barriers/hc7_rooted_core_reselection_cycle_audit.md), and
+the [global pair--`K_5` contact-rank sink](barriers/hc7_global_pair_k5_contact_rank_barrier.md).
+The positive first-hit normalization is recorded in the
+[global pair--`K_5` contact note](active/hc7_global_pair_k5_contact_rank.md)
+and its [audit](active/hc7_global_pair_k5_contact_rank_audit.md).
+
+Packet capacity does now have one uniform, label-preserving structural
+consequence.  If a closed shore contains `q` disjoint boundary-full packets
+and its literal boundary has rooted connectivity `r`, then the closed shore
+has rooted connectivity at least `q+r` (capped at `|S|-1`).  Hence two full
+packets behind a connected seven-boundary give a three-connected topological
+`S`-minor, and behind a two-connected boundary they give a four-connected
+`S`-minor.  This compresses an unbounded packet-rich shore to an existential
+labelled core.  It is deliberately **not** called a global invariant: the
+core is noncanonical, may consume the packets, and need not carry the named
+attained state.  Sources: [packet-to-root-connectivity](results/hc7_packet_root_connectivity.md)
+and its [audit](results/hc7_packet_root_connectivity_audit.md).
+
+There is also a new **global** first rung.  Every seven-connected graph
+either has a `K_7` minor or has a set of at most two vertices meeting every
+literal `K_5` subgraph.  The proof is uniform: an elementary five-clique
+family lemma reduces failure of a two-vertex transversal to three
+five-cliques with pairwise overlaps at most three, and Niu--Zhang's
+published non-two-apex theorem then gives `K_7`.  Consequently every
+seven-connected `K_7`-minor-free graph has a pair `P` for which every
+`K_5` model in `G-P` has support at least six.  This is genuine progress
+on the global support potential, but it does **not** hit nonliteral `K_5`
+models.  Sources: [literal `K_5` transversal](results/hc7_global_literal_k5_transversal.md)
+and its [audit](results/hc7_global_literal_k5_transversal_audit.md).
 
 ## Active research goal
 
-The parent dependency-level target remains the
+The proof-spine priority is now the
+[global `K_5`-model transversal endgame](active/hc7_global_k5_transversal_goal.md),
+not further local normalization.  Its clean statement is
+
+\[
+  \text{seven-connected}+\text{strongly 7-contraction-critical}+K_7^\vee
+     \Longrightarrow K_7\text{ or }\tau_5(G)\le2,
+\]
+
+where `tau_5(G)` is the minimum number of vertices meeting every `K_5`
+model.  This is an `HC_7`-strength target, not a claimed intermediate
+theorem.
+
+One possible proof mechanism is **global sink coherence**.  It would form
+a transition system whose vertices are whole neutral classes of normalized
+near-`K_7` models and actual exact-seven states, and whose directed edges
+are legal proper-minor response transitions or genuinely ranked
+actual-shore handoffs.  The theorem to prove would say that every sink
+component has one of:
+
+1. a common exact boundary state and a six-colouring;
+2. a literal `K_7`; or
+3. one fixed pair meeting every `K_5` model of `G`.
+
+The third outcome is exactly the valid fixed-pair terminal.  In a
+hypothetical counterexample it is excluded globally because every
+`G-{p,q}` is at least five-chromatic and hence contains a `K_5` minor.
+The response-enriched state language has not yet been proved closed, so
+the existence of a finite sink is currently a tautology rather than a
+well-founded proof invariant.  The atomic twin-seam exchange is retained
+only as a possible constructive decoder: a new atomic lemma enters the
+spine only if it supplies an edge in a closed transition system, a strict
+class-invariant descent, or a terminal sink classification.  A further
+portal normal form is not progress.
+
+The immediate constructive frontier is therefore no longer support five.
+For each `r`, let `tau_5^{<=r}` be the minimum order of a set meeting every
+`K_5` model supported on at most `r` vertices.  The new theorem proves
+`tau_5^{<=5}<=2`; the terminal pair is exactly
+`tau_5^{<=|G|}<=2`.  The global theorem to discover is the uniform
+extension
+
+\[
+       \tau_5^{\le r}\le2\Longrightarrow\tau_5^{\le r+1}\le2.
+\]
+
+At the first step, an order-six model is one two-vertex edge-bag plus four
+singletons.  The audited contraction dichotomy sends its split edge either
+to a seven-connected proper minor or to an actual exact-seven adhesion;
+every six-colouring of the contraction saturates both split endpoints in
+the other five colours.  The next admissible result is a stateful
+two-transversal pullback proving `tau_5^{<=6}<=2`, with a mechanism that
+extends beyond this one support order.  A support-six portal taxonomy
+without that global pullback is not the objective.  Source:
+[support-six contraction dichotomy](results/hc7_global_support_six_contraction_dichotomy.md).
+Its independent [audit](results/hc7_global_support_six_contraction_dichotomy_audit.md)
+is green.
+
+The retained local decoder target is the
 [single-trace reverse tight-lobe carrier-or-rooted-five theorem](active/hc7_reverse_tight_carrier_or_rooted_five_goal.md),
 through the
 [atomic four-root linkage/disk decoder](active/hc7_atomic_four_root_decoder_goal.md).
-The immediate constructive child is now the
+Its immediate constructive child is the
 [atomic twin-seam double-lock exchange](active/hc7_atomic_twin_seam_double_lock_exchange_goal.md).
 It is the first point at which two named proper-minor colourings are coupled
 simultaneously across overlapping actual seven-boundaries.
@@ -287,7 +395,7 @@ Sources: [packet packing](results/hc7_exact_seven_packet_packing.md),
 [`(1,3)` reflection](results/hc7_exact7_adaptive_packet_reflection.md), and
 [audit](results/hc7_exact7_adaptive_packet_reflection_audit.md).
 
-### S3. Exact-seven `(1,2)` attained-duty exchange — primary trench
+### S3. Exact-seven `(1,2)` attained-duty exchange — retained local trench
 
 Let `S` be the literal boundary and let the rich shore contain two disjoint
 `S`-full packets.  A thin-shore contraction returns an exact equality state
@@ -899,12 +1007,32 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 ## Exact remaining gap
 
 No audited implication yet turns every hypothetical counterexample into a
-literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the rooted-core allocation/confluence theorem inside the atomic twin
-seam.  The two-/three-gate geometry and the four-pole rooted `K_4` substrate
-are proved.  What is not proved is that the rooted bags can be allocated
-without consuming the two packet duties, or that the two named proper-minor
-responses force a common exact state on one twin boundary.
+literal `K_7` or a valid global six-colouring.  The primary precise gap is
+the **uniform support-extension theorem**
+
+\[
+  \tau_5^{\le r}(G)\le2\Longrightarrow
+  \tau_5^{\le r+1}(G)\le2.
+\]
+
+Its first open rung is `tau_5^{<=6}(G)<=2`.  The support-six contraction
+dichotomy proves the exact normal form and hands the obstruction either to
+a seven-connected proper minor or to an actual exact-seven adhesion, but
+no audited theorem pulls a two-vertex transversal back through that split.
+
+The **sink-coherence theorem** above is one possible mechanism for proving
+the extension.  The two-/three-gate geometry and the four-pole rooted
+`K_4` substrate are proved, but rooted-core reselection is reversible and
+contact maximization can stop at a hidden two-apex sink.  What is not proved
+is that the complete proper-minor response of one neutral component forces
+a common state, a literal model, or the same two-vertex `K_5`-model
+transversal throughout that component.
+
+The atomic rooted-core allocation/confluence theorem is one possible way to
+discharge a transition inside this global statement.  By itself it is no
+longer treated as the proof's progress measure: the rooted bags may consume
+the two packet duties, and a successful local reselection may be undone at
+the next regenerated frame.
 
 There is now a real global rank for strict oriented `(1,2)` receivers, but
 the current atomic hypotheses have not been derived state-uniformly from a
