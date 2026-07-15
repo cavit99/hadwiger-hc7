@@ -115,14 +115,27 @@ then forces simultaneous literal `t`-rooted bichromatic mismatch paths in
 the two twin views: one lies in the `D`-closed side and one in the
 `B_E`-closed side.  Both contain `f`; they need not otherwise be disjoint.
 
+Those two paths are no longer the operative certificate: they may coincide
+completely.  The audited
+[separating response bundle](../results/hc7_atomic_twin_seam_separating_response_bundle.md)
+extracts the stronger exact object from the same response.  It gives a
+literal cycle through `e,f`, four other colour-distinct `d-t` bypasses, and
+either two internally disjoint paths in their full four-layer graph or one
+common `gamma` palette gate with four internally disjoint mixed-colour
+escape channels.  A colouring of `G/e/f` also forces five-colour saturation
+at `z` or `d` without changing either twin boundary state.
+
 The first subtheorem to prove is:
 
-> **Separating-edge decoder.**  These two coupled mismatch paths can be
-> uncrossed into an adaptive two-carrier return, a literal terminal model,
-> or a strictly ranked receiver.
+> **Separating-edge decoder.**  The full response bundle, together with the
+> twin boundary maps and the double-contraction saturation fork, can be
+> promoted label-faithfully into an adaptive two-carrier return, a fifth
+> old-boundary-rooted bag/literal terminal model, or a strictly ranked
+> receiver.
 
-The proof must track literal vertices through the uncrossing.  Merely
-counting two paths or two contacts is insufficient.
+The proof must track literal vertices through the promotion.  The common
+palette gate is not a graph separator, the bypasses may traverse either
+twin shore or the old packets, and a palette colour is not a model label.
 
 ### 4.2 Response-matched gate-edge bypass
 

@@ -69,11 +69,21 @@ Sources: [packet transfer](results/hc7_atomic_twin_seam_packet_transfer.md)
 and its [audit](results/hc7_atomic_twin_seam_packet_transfer_audit.md).
 
 The immediate proof must therefore close the symmetric seam by a
-double-lock exchange.  If a gate edge separates a compulsory Kempe lock,
-an audited bridge swap supplies two simultaneous literal gate-rooted
-mismatch paths.  The remaining work is to turn those paths into carriers or
-a terminal model, and to resolve the complementary gate-edge-bypass branch.
+double-lock exchange.  The separating-edge branch is now sharper than the
+original pair of mismatch paths, which may coincide completely.  One named
+bridge response supplies a literal cycle through `e,f`, four further
+colour-distinct `d-t` bypasses, and an audited dichotomy: either two
+internally disjoint paths in the full four-layer graph, or one common
+palette gate bypassed by four internally disjoint mixed-colour channels.
+Every colouring of the common double contraction additionally saturates
+`z` or `d` in all five alternate colours.  These objects remain
+palette-labelled rather than boundary-duty-labelled.  The next missing
+operation is their labelled promotion to carriers, a fifth rooted bag, or
+a ranked receiver; the complementary gate-edge-bypass branch then remains.
 Further labelled portal enumeration is frozen.
+
+Sources: [separating response bundle](results/hc7_atomic_twin_seam_separating_response_bundle.md)
+and its [audit](results/hc7_atomic_twin_seam_separating_response_bundle_audit.md).
 
 Preserving the original demand-three trace is not required.  The compulsory
 bridge transition and the canonical reverse trace arise from different
