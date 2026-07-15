@@ -212,6 +212,17 @@ two objects separate returns a literal `K_7` in every residue.  The
 computation is confined to the fixed nine-/ten-object interface and places
 no bound on the exterior order.
 
+The normalized order-six-arm, overlap-three cell is also terminal.  After
+deleting the overlap and reserving one of seven exterior terminals, the
+other six terminals lie in a three-connected graph.  Terminal-legal
+contraction yields either one of 142 labelled edge-minimal order-six
+carriers or one of 780 labelled terminal-irreducible order-seven kernels.
+For every noncommon relation state, one reserved terminal works against
+every possible kernel; in the order-seven case the extra bag can be merged
+into a certified adjacent rooted bag.  An independently audited exact
+ten-object decoder turns every such carrier into a literal `K_7`.  This is
+a bounded rooted-kernel computation, not a bound on the exterior order.
+
 This cell uses the standard irredundancy normalization in the correct order:
 first delete every six-support containing a retained literal five-support,
 then choose the critical kernel.  Transversal number is unchanged, and all
@@ -247,8 +258,9 @@ Sources:
 * `../results/hc7_five_terminal_rooted_fan.md`;
 * `../results/hc7_cross_arm_overlap_four_cycle_decoder.md`;
 * `../results/hc7_four_connected_terminal_fan_or_k4.md`; and
-* `../results/hc7_overlap_three_five_good_decoder.md`, all with adjacent
-  independent audits.
+* `../results/hc7_overlap_three_five_good_decoder.md`;
+* `../results/hc7_overlap_three_six_terminal_kernel_closure.md`, all with
+  adjacent independent audits.
 
 ## 6. The two live arrows
 
@@ -270,11 +282,10 @@ prove one of:
 In the rigid branch, the concrete subproblem is now to compose the
 mandatory double-root split orientations into one of these outcomes.  Both
 maximal-overlap geometries, the normalized overlap-four cell, and the
-order-five-arm overlap-three cell are terminal.  For order-five arms the
-live positive overlaps are one and two; for order-six arms they are one,
-two, and three.  The preferred mechanism is terminal-rooted contraction
-followed by a labelled finite-kernel decoder, not an argument that merely
-decreases `|A cap X|`.
+two normalized overlap-three cells are terminal.  For both arm orders the
+live positive overlaps are one and two.  The preferred mechanism is
+terminal-rooted contraction followed by a labelled finite-kernel decoder,
+not an argument that merely decreases `|A cap X|`.
 
 Bare support incidence cannot prove this: explicit affine and
 fifteen-point families falsify the strongest unlabelled extraction
@@ -302,10 +313,11 @@ accepted outcome.
 
 `G1` is the coverage bottleneck; `G2` is the sharpest closed laboratory.
 Further boundary or union-size enumeration is prohibited unless it proves
-an invariant used in one of these two arrows.  The six-terminal overlap-
-three cell is closed.  The immediate constructive experiment is the
-seven-terminal order-six-arm, overlap-three cell, using the four-connected
-rooted clique-or-fan/peripheral-split theorem and terminal-irreducible
-kernels of order at most eight.  The compulsory double-root orientations
-and split-row duties must remain literal labels throughout.  `G2` remains
-the independent laboratory for any resulting labelled carrier exchange.
+an invariant used in one of these two arrows.  Both normalized
+overlap-three cells are closed.  The immediate constructive experiment is
+the order-five-arm, overlap-two cell: delete the two overlap vertices,
+reserve two of the eight exterior terminals, and reuse the full
+six-terminal kernel in the resulting three-connected deletion.  The
+compulsory double-root orientations and split-row duties must remain
+literal labels throughout.  `G2` remains the independent laboratory for
+any resulting labelled carrier exchange.

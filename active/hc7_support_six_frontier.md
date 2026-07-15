@@ -90,6 +90,15 @@ peripheral remainder as a separate full carrier.  This is an unbounded
 four-connected composition theorem with a fixed labelled finite layer, not
 an ambient-order census.
 
+The normalized **order-six-arm, overlap-three** cell is now terminal too.
+Deleting the overlap and reserving one of the seven exterior terminals
+leaves six labelled terminals in a three-connected graph.  Terminal-legal
+contraction reduces them to a rooted kernel of order six or seven.  The
+complete labelled guarantee consists of 142 edge-minimal order-six
+carriers and 780 terminal-irreducible order-seven kernels.  An independently
+audited ten-object decoder composes every one of the 7,878 noncommon
+relation states to a literal `K_7`; the ambient graph remains unbounded.
+
 The rigid/private-pair hypotheses also force a **double-root cover**:
 every two-set of `A` meeting `A cap X` is avoided by another small support
 containing both `p,q`.  When the arms are literal, `pq` is absent and each
@@ -98,11 +107,11 @@ singleton.  This orientation family is the active rigid-cell object.
 
 The remaining theorem must compose the actual five-bag labels on the
 separated triple or the double-root orientation family in the rigid cells.
-For order-five arms the live overlaps are one and two; for order-six arms
-they are one, two, and three.  The next constructive cell is order-six-arm,
-overlap three: apply the four-connected clique-or-fan theorem and the
-terminal-rooted kernel to its seven exterior terminals, then decode without
-contracting a named terminal into the peripheral carrier.
+For both arm orders the live overlaps are now one and two.  The next
+constructive cell is order-five-arm, overlap two.  Deleting the overlap
+leaves a five-connected graph with eight exterior terminals; reserving two
+leaves the same six-terminal three-connected kernel just used above.  The
+finite layer must retain both reserved terminals literally.
 Accepted outcomes are:
 
 1. a row-compatible one-split/two-clique composition;
@@ -138,6 +147,8 @@ Sources:
 * [`../results/hc7_four_connected_five_good_terminal_carrier_audit.md`](../results/hc7_four_connected_five_good_terminal_carrier_audit.md)
 * [`../results/hc7_overlap_three_five_good_decoder.md`](../results/hc7_overlap_three_five_good_decoder.md)
 * [`../results/hc7_overlap_three_five_good_decoder_audit.md`](../results/hc7_overlap_three_five_good_decoder_audit.md)
+* [`../results/hc7_overlap_three_six_terminal_kernel_closure.md`](../results/hc7_overlap_three_six_terminal_kernel_closure.md)
+* [`../results/hc7_overlap_three_six_terminal_kernel_closure_audit.md`](../results/hc7_overlap_three_six_terminal_kernel_closure_audit.md)
 
 ## 3. `G2`: exact two-shore residue
 
@@ -235,11 +246,11 @@ it does not supply the seventh carrier in the original graph.
 ## 5. Research rule
 
 No new Moser taxonomy, raw portal classification, union-size census, or
-unranked separator is admitted to this spine.  The six-terminal,
-order-five-arm overlap-three decoder is now closed.  The immediate `G1`
-experiment is its seven-terminal, order-six-arm analogue; only after that
-should the same rooted-carrier engine be extended to the eight--eleven-
-terminal cells.  A
+unranked separator is admitted to this spine.  Both normalized
+overlap-three cells are now closed.  The immediate `G1` experiment is the
+order-five-arm, overlap-two eight-terminal cell, using two reserved roots
+and the same six-terminal kernel; only after that should the engine be
+extended to the order-six-arm overlap-two and overlap-one cells.  A
 promotion must discharge one of `G1` or `G2` for an infinite family, create
 a genuinely strict handoff, or falsify the stated carrier architecture in
 a way that changes the global target.

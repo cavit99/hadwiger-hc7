@@ -79,21 +79,30 @@ input to `G1/G2`, not a third closed branch.
    entire unbounded normalized cell is closed.  Its global invocation first
    prunes reducible six-supports and only then selects the critical kernel;
    irredundancy is not imposed retroactively.
-6. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
+6. **Full six-terminal kernel composition.**  After deleting a
+   three-vertex overlap and reserving one of the seven exterior terminals,
+   terminal-legal contraction reduces the other six terminals to a
+   three-connected rooted kernel on six or seven bags.  A complete labelled
+   carrier census has 142 edge-minimal order-six carriers and 780
+   terminal-irreducible order-seven kernels.  An independently audited
+   ten-object decoder composes every carrier in every noncommon boundary
+   state to a literal `K_7`.  This closes the entire normalized
+   order-six-arm, overlap-three cell.
+7. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
    every pair of vertices of the avoided support touching that overlap
    forces another small model containing both private roots.  With literal
    arms these compulsory models have a genuine two-state split-bag
    orientation.  This is the current labelled composition invariant.
-7. **Disjoint three-split branch.** Minimal simultaneous contraction of
+8. **Disjoint three-split branch.** Minimal simultaneous contraction of
    two or three split edges either gives `K_7`, an actual exact-seven
    handoff, or a two-component boundary of order eight or nine that is
    pointwise full on both shores.
-8. **Two-shore boundary absorption.** In that two-component residue from
+9. **Two-shore boundary absorption.** In that two-component residue from
    two or three disjoint normalized split models, every surviving
    order-eight/nine boundary is four-colourable.  The sole five-chromatic
    census exception `K_2 vee C_7` is eliminated by a separate branch-set
    theorem.
-9. **Uniform common-neighbour rooted principle.** If
+10. **Uniform common-neighbour rooted principle.** If
 
    \[
    \chi(J)=k+2,\quad uv\in E(J),\quad
@@ -105,7 +114,7 @@ input to `G1/G2`, not a third closed branch.
    with singleton bags `{u},{v}`.  Martinsson--Steiner proves the needed
    strong theorem for `k=4`, so the `HC_7` four-colour branch has a
    label-faithful `K_6` model.
-10. **Minimal contraction-forest saturation.** If a forest contraction is
+11. **Minimal contraction-forest saturation.** If a forest contraction is
    inclusion-minimal for lowering a quotient to `q` colours, then every
    side of every forest edge meets every non-own colour class in every
    terminal colouring.  Each one-edge predecessor has chromatic number
@@ -138,13 +147,14 @@ order five; both maximal-overlap cells are closed for an avoided order-six
 support; and the rooted-fan theorem closes the normalized arm-order-six
 overlap-four cell to a literal `K_7`; and the four-connected clique-or-fan
 decoder closes the normalized order-five-arm, overlap-three cell.  Thus for
-order-five arms only overlaps one and two remain, while for order-six arms
-overlaps one, two, and three remain, alongside the separated-triple branch.
+both arm orders only overlaps one and two remain, alongside the
+separated-triple branch.
 Every two-set in the avoided support meeting the overlap still forces a
-compulsory double-root model.  The next concrete cell is the order-six-arm,
-overlap-three seven-terminal interface, using the new peripheral-split
-principle together with terminal-rooted contraction.  Further portal
-taxonomy is not the target.
+compulsory double-root model.  The next concrete cell is the
+order-five-arm, overlap-two interface: deleting the overlap leaves a
+five-connected graph, and reserving two of its eight exterior terminals
+again exposes the audited six-terminal kernel in a three-connected
+deletion.  Further portal taxonomy is not the target.
 
 ### G2. Forest-to-carrier composition
 
