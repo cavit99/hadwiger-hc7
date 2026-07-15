@@ -84,6 +84,8 @@ def check_pivot(
 ) -> None:
     old_rows = [old_active, *frame]
     old_missing = missing_rows(graph, old_centre, old_rows)
+    assert old_centre.isdisjoint(old_active)
+    assert gate and gate < old_active
     residual = old_active - gate
     assert residual == new_centre
     assert old_centre | gate == new_active

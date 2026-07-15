@@ -142,7 +142,7 @@ rank and erases the three different missing-row duties.  It can be useful
 only if the whole equivalence class receives one terminal/coherence
 certificate.
 
-### 4.3 Fixed-frame carrier unions: false
+### 4.3 Fixed-frame carrier unions: insufficient as a progress measure
 
 The frame and active union are literally identical in all three states,
 yet their missing row cycles through `F_3,F_1,F_2`.  Therefore neither the
