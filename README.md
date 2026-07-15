@@ -14,6 +14,35 @@ This file is the sole authoritative status statement.  The
 [proof spine](active/hc7_near_k7_proof_spine.md) records the detailed
 dependency chain.
 
+## Global progress measure and its boundary
+
+The exact-seven part now has one genuine well-founded invariant.  Among
+**all** actual oriented `(1,2)` seven-separations, orient the packet vector
+as `(nu_L,nu_R)=(1,2)` and minimize `|L|`.  Any later actual `(1,2)`
+receiver with a smaller packet-one shore is then impossible, irrespective
+of its boundary graph or returned colouring state.  Thus strict
+packet-one-lobe descent does not need to preserve the old paired state.
+
+This does not yet apply automatically to the current atomic chain: an
+arbitrary global minimum has not been shown to satisfy the paired-triangle,
+connected-bipartite, or twin-seam hypotheses.  The upstream theorem must be
+made state-uniform, or the selected subclass must be proved closed under
+handoff.
+
+No analogous local potential exists for `S1` rotations or `(1,1)` cells.
+An audited two-apex tube contains a reduced three-rotation cycle on one
+fixed five-row frame and one fixed coarse carrier.  Consequently strict
+handoffs are globally ranked only when they decrease an invariant defined
+on the **whole neutral rotation class**.  Otherwise the remaining task is
+to prove that every sink component has a common exact state, a `K_7`, or
+one coherent fixed pair.
+
+Sources: [global thin-shore minimality](results/hc7_exact7_global_thin_shore_minimality.md),
+its [audit](results/hc7_exact7_global_thin_shore_minimality_audit.md), the
+[rotation-triangle barrier](barriers/hc7_global_invariant_rotation_triangle.md),
+its [audit](barriers/hc7_global_invariant_rotation_triangle_audit.md), and
+the [conditional quotient framework](active/hc7_global_rotation_quotient_rewrite.md).
+
 ## Active research goal
 
 The parent dependency-level target remains the
@@ -69,21 +98,28 @@ Sources: [packet transfer](results/hc7_atomic_twin_seam_packet_transfer.md)
 and its [audit](results/hc7_atomic_twin_seam_packet_transfer_audit.md).
 
 The immediate proof must therefore close the symmetric seam by a
-double-lock exchange.  The separating-edge branch is now sharper than the
-original pair of mismatch paths, which may coincide completely.  One named
-bridge response supplies a literal cycle through `e,f`, four further
-colour-distinct `d-t` bypasses, and an audited dichotomy: either two
-internally disjoint paths in the full four-layer graph, or one common
-palette gate bypassed by four internally disjoint mixed-colour channels.
-Every colouring of the common double contraction additionally saturates
-`z` or `d` in all five alternate colours.  These objects remain
-palette-labelled rather than boundary-duty-labelled.  The next missing
-operation is their labelled promotion to carriers, a fifth rooted bag, or
-a ranked receiver; the complementary gate-edge-bypass branch then remains.
-Further labelled portal enumeration is frozen.
+double-lock exchange.  The unrestricted crossless geometry is no longer a
+possible obstruction.  For any two disjoint named edges `e=zu` and `f=dt`
+in a seven-connected graph, deleting both leaves a five-connected
+nonplanar graph.  Jung's theorem gives simultaneous disjoint bypasses, and
+the Fabila-Monroy--Wood theorem gives a literal `K_4` model rooted at
+`z,u,d,t`.  This is a uniform rooted-model principle, independent of the
+Moser and portal reductions.
+
+The rooted bags are not yet duty carriers: they may consume both lobes,
+both old packets, and rows of the regenerated `K_6` model.  The exact live
+operation is now a **rooted-core allocation/confluence theorem**.  It must
+combine the forced three-bag incidence on a twin boundary with the two
+proper-minor responses to produce a fourth duty contact, a common exact
+state, a literal/fixed-pair terminal, or a receiver ranked on a whole
+neutral class.  Further labelled portal enumeration is frozen.
 
 Sources: [separating response bundle](results/hc7_atomic_twin_seam_separating_response_bundle.md)
 and its [audit](results/hc7_atomic_twin_seam_separating_response_bundle_audit.md).
+
+The global rooted substrate is
+[two named-edge disjoint cycles and the rooted four-pole core](results/hc7_atomic_two_named_edge_disjoint_cycles.md),
+with its [independent audit](results/hc7_atomic_two_named_edge_disjoint_cycles_audit.md).
 
 The compulsory edge itself is now proved not double-critical.  In fact
 `chi(G-{z,u})=6`: a hypothetical five-colouring would put five distinct
@@ -864,20 +900,22 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the atomic twin-seam double-lock exchange.  The two-/three-gate geometry
-is now proved: every nonterminal gate is a symmetric seam with two
-five-contact lobes and a common five-vertex interface.  The compulsory and
-gate-edge contractions give crossed exact states, named local handoffs and,
-when a gate edge separates a compulsory lock, simultaneous literal
-gate-rooted mismatch paths.
+is the rooted-core allocation/confluence theorem inside the atomic twin
+seam.  The two-/three-gate geometry and the four-pole rooted `K_4` substrate
+are proved.  What is not proved is that the rooted bags can be allocated
+without consuming the two packet duties, or that the two named proper-minor
+responses force a common exact state on one twin boundary.
 
-What is not proved is that these coupled paths yield disjoint carriers or a
-terminal model, or that the complementary gate-edge-bypass branch forces a
-common exact state.  Nor is there a global noncycling rank for the locally
-normalized `(1,1)`/`(1,2)` handoff.  Closing the twin exchange eliminates
-the entire symmetric gate family, an unbounded family.  It does **not** by
-itself prove `HC_7`: arbitrary demand-three states, packet vector `(1,1)`,
-larger adhesions, and near-model rotation components remain in `S1/S4`.
+There is now a real global rank for strict oriented `(1,2)` receivers, but
+the current atomic hypotheses have not been derived state-uniformly from a
+globally minimum thin shore.  There is no corresponding rank for `(1,1)`
+or near-model rotations; a concrete reduced rotation triangle rules out
+representative-local potentials.  Those branches require a terminal
+classification of a whole neutral component, ideally one coherent fixed
+pair.  Closing the rooted twin exchange eliminates an unbounded family,
+but it does **not** by itself prove `HC_7`: arbitrary demand-three states,
+packet vector `(1,1)`, larger adhesions, and near-model rotation components
+remain in `S1/S4`.
 
 Multi-lobe support-four gates yield a labelled near model or a strict
 `(1,2)` descendant, but no theorem transports a legally useful state across

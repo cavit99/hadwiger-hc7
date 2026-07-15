@@ -50,6 +50,20 @@ states and packet-aligned local handoffs on both boundaries.  The immediate
 theorem must turn their double-lock system into a common state, a literal or
 fixed-pair terminal, or a genuinely ranked receiver.
 
+The unrestricted routing part is now uniform.  In every seven-connected
+host, deleting the two independent named edges leaves a five-connected
+nonplanar graph and hence a `K_4` minor rooted at their four literal ends.
+The live twin-seam step is therefore allocation/confluence: keep enough of
+the two packet duties disjoint from that rooted core, or use the two named
+minor responses to force a common state or a class-ranked exit.
+
+For actual `(1,2)` cells there is one genuine global rank.  Orient every
+such cell toward its packet-one shore and choose that shore globally minimum
+over all actual order-seven `(1,2)` separations.  A smaller packet-one
+receiver is then impossible regardless of state.  This rank is available
+only if the upstream reductions apply to that unrestricted global minimum;
+it does not extend to `(1,1)` or near-model rotations.
+
 Sources:
 `../results/hc7_shortest_thin_lock_tight_bypass_transition.md`,
 `hc7_tight_gate_receiver_normalization.md`, its adjacent audit, and

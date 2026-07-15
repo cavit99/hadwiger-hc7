@@ -25,6 +25,13 @@ seven-boundaries.  The change need not be confined to their common
 five-set.  The missing mathematics is therefore a double-lock exchange,
 not another equality-partition census.
 
+The unrestricted linkage obstruction is now eliminated uniformly.  The
+[two-named-edge theorem](../results/hc7_atomic_two_named_edge_disjoint_cycles.md)
+shows that deleting `e,f` leaves a five-connected nonplanar graph and hence
+a literal `K_4` model rooted at `z,u,d,t`.  The remaining problem is to
+allocate that rooted core relative to the twin boundaries and exact response
+states; another Two-Paths/web analysis in the whole host is unnecessary.
+
 The audited
 [packet-transfer theorem](../results/hc7_atomic_twin_seam_packet_transfer.md)
 now removes a separate arithmetic ambiguity.  Unless a twin is terminal
@@ -35,6 +42,13 @@ global handoff only after the receiving spine supplies a noncycling rank.
 The local double-lock decoder should therefore be proved first in the
 simultaneous `(1,1)/(1,1)` residue without forgetting that receiver
 qualification.
+
+There is one exact rank boundary.  If the source `A` is chosen globally
+minimum among **all** packet-one shores of actual oriented `(1,2)`
+seven-separations, the strict lobe-oriented `(1,2)` handoff is impossible,
+regardless of its new equality state.  This cannot be assumed after
+minimizing only inside the paired/twin subclass, and it does not rank a
+`(1,1)` receiver or a near-model rotation.
 
 Bare alignment has already been falsified by a `K_7`-minor-free shell in
 which the contraction is clean on the common five-set.  That shell contains
@@ -186,16 +200,22 @@ separator; another contact inequality cannot close it.
 For a fixed response `c_f`, palette-align `c_f(z)` with the common
 `phi`-colour of `z,u`; the colour of `c_f(u)` selects one response-matched
 `e`-lock.  If its eligible gate edge is not separating, use its literal
-bypass jointly with the corresponding `f`-lock.  The target is:
+bypass jointly with the corresponding `f`-lock.  Independently of the
+palette layers, the common deletion `G-{e,f}` already contains four
+pairwise adjacent connected bags rooted at `z,u,d,t`.  Separator allocation
+forces at least three of those bags to meet one twin boundary.  The target
+is:
 
 > **Nonseparable double-lock decoder.**  A response-matched
 > gate-edge-nonseparable `e`-lock and its crossed `f`-response force a common
 > exact state on one twin boundary, a literal terminal model, or a strictly
 > ranked receiver.
 
-This branch must use vertex-disjointness or an explicit carrier split.
-Edge-nonseparability alone does not turn palette colours into branch-set
-labels.
+This branch must promote the guaranteed three-bag boundary incidence to a
+fourth duty contact, or couple it to the exact response states.  The rooted
+core itself is not a `K_7`: its bags may consume both old packets and both
+lobes.  Edge-nonseparability alone still does not turn palette colours into
+branch-set labels.
 
 Together the two decoders prove the target theorem.
 
