@@ -113,6 +113,28 @@ vertices, or one adjacent common-singleton lock.  See the
 [failed-pair planarization](results/hc7_twin_seam_failed_rst_web_planarization.md)
 and its [audit](results/hc7_twin_seam_failed_rst_web_planarization_audit.md).
 
+The low-load active-face branch is now stateful rather than merely planar.
+Starting from the simultaneous equal/equal colouring of `G/e/f`, the
+active page can be list-coloured while the **entire opposite closed shore**
+is held fixed whenever every facial portal sees at most three boundary
+colours.  Thus `f` is repaired without changing the state seen by the
+`e=zu` lock.  For each alternate colour, that literal opposite-shore lock
+then either joins `z` to `u` or supplies two vertex-disjoint paths from
+`z,u` to two distinct literal boundary vertices.  If the lock is unlocked,
+switching either endpoint component produces two disjointly supported
+boundary transitions; each has a different equality partition, packet
+demand at least two in the symmetric `(1,1)` cell, and a noncolourable
+active-page list assignment.  Postle--Thomas reduces the latter exactly to
+an empty list, at least three heavy facial vertices, a directed colouring
+harmonica, or a retained double-singleton pair.  See the
+[equal/equal active-face anchor](results/hc7_twin_seam_equal_equal_active_face_anchor.md)
+and its [audit](results/hc7_twin_seam_equal_equal_active_face_anchor_audit.md).
+
+This is an unbounded rooted state-transition theorem, but not the double-lock
+exchange.  The anchors may repeat duties across colours, different lock
+systems may intersect, and neither a demand-two state nor a harmonica is a
+model row, fixed pair, or strict global handoff.
+
 This residue is sharp.  The graph `K_2` joined to the icosahedron is
 seven-connected and `K_7`-minor-free, has a genuine failed pairing and a
 spanning common-host `K_6`, and exits exactly through its two apex
@@ -170,9 +192,10 @@ when both RST pairings are feasible.  Directly forcing that condition is
 false.  Therefore the exact live mathematics is now:
 
 > In the failed-pair planar lobe, use the forbidden proper/proper state and
-> the named contraction responses to turn every off-face or heavy-face
-> residue into a common exact state, a literal `K_7`/coherent fixed pair,
-> or a strict `mathcal F_12(G)` handoff.
+> the named contraction responses to package the active-face anchor
+> transitions—or decode an off-face/empty-list/heavy/harmonica/
+> double-singleton residue—into a common exact state, a literal
+> `K_7`/coherent fixed pair, or a strict `mathcal F_12(G)` handoff.
 
 The separating response and response-matched bypass are both inputs to
 that implication.  The stable-stem barrier proves that neither may be
@@ -1089,31 +1112,29 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.
 
-The primary gap is the **closed-family exchange theorem** for the
-dominating-edge sink.  A sink is now a literal, globally closed family of
-edges, and every state carries a vertex-disjoint induced terminal cycle in
-the same family.  What is not proved is either of the two necessary exits:
+The primary live gap is the **failed-page state decoder** in the symmetric
+twin seam.  The active-face theorem now freezes one closed shore and turns
+every unlocked equal/equal lock into two literal, disjointly supported,
+demand-at-least-two state transitions.  What is not proved is that the five
+lock alternatives, the two reserve packets and the crossed one-edge
+responses can be packaged into any permitted terminal:
 
-1. an all-double-critical closed family yields a labelled `K_7` model; or
-2. a six-residual state yields a successor pair which meets every
-   near-Hajós carrier below the current global height.
+1. a common exact state and six-colouring;
+2. a literal `K_7` or one fixed pair meeting every `K_5`; or
+3. a strictly smaller actual `(1,2)` packet-one shore in the one global
+   `mathcal F_12(G)` rank.
 
-The independent equivalent first-rung formulation is
+Equivalently, the unresolved planar residues are an off-face attachment or
+one of the sharp list obstructions: a six-colour-saturated portal, at least
+three heavy portals, a directed colouring harmonica, or a double-singleton
+pair.  Merely naming or enumerating those structures is not an outcome.
 
-\[
-                         \tau_5^{\le6}(G)\le2.
-\]
-
-The support-six pullback proves useful named contraction and separator
-facts but not this universal hitting conclusion.  The exact-seven
-packet-one rank applies only after entry into a globally selected `(1,2)`
-cell and does not cover `(1,1)` or neutral near-model rotations.
-
-Accordingly, further labelled case reduction is frozen.  A new lemma enters
-the active spine only if it classifies an entire sink, proves a strict
-pair-height increase, or returns a literal `K_7`/one fixed pair.  Finite
-certificates prove only the interfaces stated in their notes and do not
-replace this unbounded theorem.
+The dominating-edge closed-sink programme and the first-rung target
+`tau_5^{<=6}(G)<=2` remain the independent graph-global backup.  Neither is
+currently proved, and the exact-seven rank does not cover `(1,1)` or neutral
+near-model rotations.  A new lemma enters the active spine only if it
+packages the rooted transitions, classifies a whole sink, proves a strict
+global rank change, or returns a literal `K_7`/one fixed pair.
 
 ## Repository layout
 

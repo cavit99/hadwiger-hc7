@@ -20,37 +20,44 @@ needed.
 ## Current research goal
 
 The active proof engine is the
-[`dominating-edge sink programme`](hc7_global_dominating_edge_sink_goal.md).
-For a literal pair `P`, a dominating `K_5` model in `G-P` returns a literal
-terminal edge.  After normalizing its last three bags to an induced cycle,
-every edge of that cycle is a legal successor.  Thus the transition language
-is closed on literal pairs, and every hypothetical counterexample has a sink
-strongly connected component made of edges.  Every state in that sink has a
-vertex-disjoint induced cycle entirely in the same sink.
+[atomic twin-seam double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
+The reserve-rooted `C_4` theorem closes the branch in which both prescribed
+RST pairings are feasible.  Failure of one pairing now yields a literal
+planar four-root page, not an abstract completed web.
 
-The next theorem must classify the **whole closed family**:
+The first stateful page theorem is proved.  In the simultaneous equal/equal
+response, an active face of load at most three can repair the gate edge
+while fixing the entire opposite closed shore.  Every alternate-colour
+`e=zu` response is therefore either a literal `z-u` lock or two disjoint
+paths from `z,u` to distinct literal boundary vertices.  In the unlocked
+case the two endpoint-component switches have disjoint boundary supports,
+change the exact equality partition, have packet demand at least two in the
+symmetric `(1,1)` cell, and each force a sharp noncolourable planar-list
+state.  Source:
+[`equal/equal active-face anchor`](../results/hc7_twin_seam_equal_equal_active_face_anchor.md)
+and its
+[`independent audit`](../results/hc7_twin_seam_equal_equal_active_face_anchor_audit.md).
 
-> A closed terminal-cycle family in a seven-connected, strongly
-> seven-contraction-critical, `K_7`-minor-free graph yields a literal `K_7`
-> or one fixed pair meeting every `K_5` model.
+The next theorem must package those five rooted lock alternatives, or
+decode an off-face/empty-list/multi-heavy/harmonica/double-singleton page,
+into exactly one of:
 
-The first split is chromatic.  A sink edge is either double-critical or its
-two-vertex deletion remains six-chromatic.  Existing double-critical minor
-theorems do not apply to a closed subfamily of edges, and the six-chromatic
-branch regenerates only an unrooted `K_6`; coupling those responses is the
-open global exchange.
+1. a common exact state and a six-colouring;
+2. a literal `K_7` or a fixed pair meeting every `K_5`; or
+3. a strictly smaller actual `(1,2)` packet-one shore in the fixed global
+   `mathcal F_12(G)` order.
 
-The May 2026 near-Hajós theorem gives the accompanying pair height:
-every `G-P` contains a subdivision of `K_5` or `hat K_5`.  Its shortest
-support agrees with ordinary `K_5`-model support through order six, so it
-geometrizes all four support-six types.  It does not itself increase under
-edge rotation.  See [`hc7_global_near_hajos_pair_height.md`](hc7_global_near_hajos_pair_height.md).
+This is the first admissible unresolved implication.  Repeated boundary
+anchors, intersecting paths, a demand-two state, or another planar portal
+classification are not outcomes.
 
-The support-six pullback and actual `(1,2)` shore rank remain independent
-backup mechanisms.  The twin-seam target is frozen unless it supplies a
-literal transition or terminal classification in the global edge sink.
+The [`dominating-edge sink programme`](hc7_global_dominating_edge_sink_goal.md)
+remains the independent graph-global backup.  It has a closed transition
+language on literal pairs but no theorem classifying a sink.  The May 2026
+near-Hajós theorem and support-six pullback geometrize its first rung; they
+do not make pair height increase under rotations.
 
-## Frozen prior research goal
+## Global target and independent backup
 
 The global target is the
 [`K_5`-model transversal theorem](hc7_global_k5_transversal_goal.md):

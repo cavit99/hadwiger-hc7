@@ -194,10 +194,24 @@ The [planarization audit](../results/hc7_twin_seam_failed_rst_web_planarization_
 checks the reserve lift, the nonempty far side and the hypothesis-minimal
 facial-edge localization.
 
-The current child theorem must decode those residuals using the two named
-one-edge responses, the equal/equal response and the forbidden
-proper/proper corner.  It must return one of the three outcomes in Section
-3; merely refining the facial portal order is not progress.  The audited
+The low-load active-face branch now has a uniform state theorem.  From the
+equal/equal colouring of `G/e/f`, list-colouring the page repairs `f` while
+fixing every vertex of `B_D union Omega_D`.  Each alternate colour on the
+`e=zu` side consequently gives a literal `z-u` lock or two disjoint paths
+from `z,u` to distinct boundary vertices.  Switching either component in an
+unlocked pair gives two disjointly supported, partition-changing states;
+in the symmetric `(1,1)` cell each has packet demand at least two, and each
+forces one sharp planar list obstruction.  This is proved in the
+[equal/equal active-face anchor theorem](../results/hc7_twin_seam_equal_equal_active_face_anchor.md)
+and checked in its
+[independent audit](../results/hc7_twin_seam_equal_equal_active_face_anchor_audit.md).
+
+The current child theorem must package those rooted transitions, or decode
+an off-face, empty-list, multi-heavy, harmonica, or double-singleton
+residual, using the two named one-edge responses, the equal/equal response
+and the forbidden proper/proper corner.  It must return one of the three
+outcomes in Section 3; merely refining the facial portal order or recording
+another demand-two state is not progress.  The audited
 [`K_2`-icosahedron barrier](../barriers/hc7_twin_seam_failed_web_two_apex_barrier.md)
 shows why the fixed-pair branch is indispensable: seven-connectivity, a
 failed four-web and a spanning common-host `K_6` can coexist exactly in a
