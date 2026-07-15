@@ -190,6 +190,16 @@ There are two further terminal consequences for `|A|=6`.
   seven-set.  The full-seven-point lemma gives a small `K_6`, which
   seven-connectivity lifts to `K_7`.
 
+The normalized arm-order-six overlap-four cell is now terminal as well.
+The terminal-rooted contraction theorem says that any `k>=4` labelled
+terminals in a simple three-connected graph have a three-connected rooted
+minor on at most `k+floor(k/4)` vertices.  At `k=5` its residues admit a
+complete hand proof: the five terminals always root
+`F_5=K_1 join P_4`.  The two chords of that triangulated pentagon repair at
+least one of the four fixed gate defects in either crossed order of the
+audited overlap-four cycle decoder.  Thus this entire unbounded cell gives
+a literal `K_7`; it does not merely return an unranked exact-seven handoff.
+
 The rigid structure also returns a global labelled family absent from the
 original three-support certificate.  Every two-set `R subset A` meeting
 `A cap X` is avoided by a support `D_R` containing both `p,q`.  In the
@@ -214,7 +224,9 @@ Sources:
 * `../results/hc7_literal_cross_arm_overlap_elimination_audit.md`;
 * `../results/hc7_k4_two_vertices_one_edge_cycle_composition.md`;
 * `../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md`; and
-* `../results/hc7_rigid_cross_arm_double_root_cover.md`, with adjacent
+* `../results/hc7_rigid_cross_arm_double_root_cover.md`;
+* `../results/hc7_five_terminal_rooted_fan.md`; and
+* `../results/hc7_cross_arm_overlap_four_cycle_decoder.md`, with adjacent
   independent audits.
 
 ## 6. The two live arrows
@@ -236,8 +248,11 @@ prove one of:
 
 In the rigid branch, the concrete subproblem is now to compose the
 mandatory double-root split orientations into one of these outcomes.  Both
-maximal-overlap geometries are already terminal, so an argument that only
-decreases `|A cap X|` is not a new global mechanism.
+maximal-overlap geometries and the normalized overlap-four cell are
+terminal.  The live positive overlaps therefore have size one, two, or
+three.  The preferred mechanism is terminal-rooted contraction followed by
+a labelled finite-kernel decoder, not an argument that merely decreases
+`|A cap X|`.
 
 Bare support incidence cannot prove this: explicit affine and
 fifteen-point families falsify the strongest unlabelled extraction
@@ -266,7 +281,9 @@ accepted outcome.
 `G1` is the coverage bottleneck; `G2` is the sharpest closed laboratory.
 Further boundary or union-size enumeration is prohibited unless it proves
 an invariant used in one of these two arrows.  The immediate constructive
-experiment is the double-root orientation problem in `G1`: combine the
-compulsory both-root models with the split-row duties of `A` and its
-one-root replacements.  `G2` remains the independent laboratory for any
-resulting labelled carrier exchange.
+experiment is a proof-producing decoder for the terminal-irreducible
+three-connected kernels at overlap three (six or seven exterior terminals,
+hence kernels of order at most seven or eight).  The compulsory double-root
+orientations and split-row duties must remain literal labels throughout.
+`G2` remains the independent laboratory for any resulting labelled carrier
+exchange.

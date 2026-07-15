@@ -58,21 +58,30 @@ input to `G1/G2`, not a third closed branch.
    a three-root cycle in the four-vertex deletion give a literal `K_7`
    model.  Two further audited theorems eliminate maximal overlap for an
    avoided order-six support, for either arm order.
-4. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
+4. **Terminal-rooted contraction kernel.** For any `k>=4` prescribed
+   terminals in a simple three-connected graph, terminal-legal contractible
+   edge descent gives a three-connected rooted minor on at most
+   `k+floor(k/4)` vertices.  For five terminals the residue can be classified
+   completely: the terminals root `F_5=K_1 join P_4`, a triangulated
+   pentagon.  Combining its two actual rooted-bag chords with the audited
+   cycle decoder closes the entire normalized arm-order-six overlap-four
+   cross-arm cell to a literal `K_7`.  This is a uniform unbounded theorem,
+   not a bounded-order census.
+5. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
    every pair of vertices of the avoided support touching that overlap
    forces another small model containing both private roots.  With literal
    arms these compulsory models have a genuine two-state split-bag
    orientation.  This is the current labelled composition invariant.
-5. **Disjoint three-split branch.** Minimal simultaneous contraction of
+6. **Disjoint three-split branch.** Minimal simultaneous contraction of
    two or three split edges either gives `K_7`, an actual exact-seven
    handoff, or a two-component boundary of order eight or nine that is
    pointwise full on both shores.
-6. **Two-shore boundary absorption.** In that two-component residue from
+7. **Two-shore boundary absorption.** In that two-component residue from
    two or three disjoint normalized split models, every surviving
    order-eight/nine boundary is four-colourable.  The sole five-chromatic
    census exception `K_2 vee C_7` is eliminated by a separate branch-set
    theorem.
-7. **Uniform common-neighbour rooted principle.** If
+8. **Uniform common-neighbour rooted principle.** If
 
    \[
    \chi(J)=k+2,\quad uv\in E(J),\quad
@@ -84,7 +93,7 @@ input to `G1/G2`, not a third closed branch.
    with singleton bags `{u},{v}`.  Martinsson--Steiner proves the needed
    strong theorem for `k=4`, so the `HC_7` four-colour branch has a
    label-faithful `K_6` model.
-8. **Minimal contraction-forest saturation.** If a forest contraction is
+9. **Minimal contraction-forest saturation.** If a forest contraction is
    inclusion-minimal for lowering a quotient to `q` colours, then every
    side of every forest edge meets every non-own colour class in every
    terminal colouring.  Each one-edge predecessor has chromatic number
@@ -113,13 +122,15 @@ cross-arm dichotomy into one of:
 Bare support incidence is insufficient: explicit affine and fifteen-point
 families falsify the strongest unlabelled alignment claims.  The
 positive-overlap rigid cell is closed whenever the avoided support has
-order five, and both maximal-overlap cells are closed for an avoided
-order-six support.  Thus a live positive-overlap rigid cell has an
-order-six avoided support and a proper, nonempty overlap with the arm core.
-Every two-set in the avoided support meeting that overlap forces a
-compulsory double-root model.  In the literal-arm cell these models orient
-exactly one private root into their split bag.  Composing those orientations,
-not further overlap-size taxonomy, is the live target.
+order five; both maximal-overlap cells are closed for an avoided order-six
+support; and the rooted-fan theorem closes the normalized arm-order-six
+overlap-four cell to a literal `K_7`.  Thus the live rigid
+positive-overlap geometries have overlap one, two, or three, alongside the
+separated-triple branch.  Every two-set in the avoided support meeting the
+overlap still forces a compulsory double-root model, but the next engine is
+now terminal-rooted contraction: reduce the relevant three-connected
+exterior to a bounded labelled kernel and decode it without losing literal
+bag identities.  Further portal taxonomy is not the target.
 
 ### G2. Forest-to-carrier composition
 
