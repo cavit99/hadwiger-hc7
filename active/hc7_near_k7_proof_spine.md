@@ -145,6 +145,26 @@ states and packet-aligned local handoffs on both boundaries.  The immediate
 theorem must turn their double-lock system into a common state, a literal or
 fixed-pair terminal, or a genuinely ranked receiver.
 
+The carrier-allocation part now has one exact audited reduction.  The
+[reserve-rooted `C_4` exchange](../results/hc7_atomic_twin_seam_reserve_rooted_c4_exchange.md)
+shows that an ordinary cyclic model rooted at the two gates and the two old
+reserve carriers already closes: literal hubs contradict the residual
+packet number, while every nonzero hub stem produces a strictly smaller
+actual `(1,2)` seven-separation in the global shore-order rank.  Its
+[audit](../results/hc7_atomic_twin_seam_reserve_rooted_c4_exchange_audit.md)
+also verifies the named high-demand handoff.
+
+After contracting the two reserves, Robertson--Seymour--Thomas (2.1)
+reduces existence of that model exactly to two feasible pairings at the
+cyclic roots `p,r_1,q,r_2`.  Thus the remaining allocation theorem must
+force both pairings from the named responses or decode a failed pairing's
+literal web into a terminal or strict ranked outcome.  It may not replace a
+nonzero stem by a singleton gate.  The independently audited
+[stable-stem barrier](../barriers/hc7_twin_seam_stable_stem_barrier.md)
+shows that the full separating bundle or response-matched bypass alone does
+not justify that replacement; its examples exit only through the permitted
+six-colouring and literal-`K_7` branches.
+
 The unrestricted routing part is now uniform.  In the counterexample host,
 deleting the two independent named edges gives one connected graph `H` with
 `chi(H)=6` and hence a spanning `K_6` model.  The two one-edge restorations

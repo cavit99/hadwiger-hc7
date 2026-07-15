@@ -18,11 +18,10 @@ dependency chain.
 
 The warning which now governs the programme is simple: local portal, web,
 and exact-state structure is not progress unless it participates in a
-closed graph-global transition or a strict global rank.  The twin-seam and
-Moser programmes are therefore frozen as possible decoders.  They are not
-the active proof engine.  The one resumed twin-seam target is now phrased
-solely as a common-host coupling of two named global operations; no further
-seam taxonomy is authorized.
+terminal construction or a strict graph-global rank.  Moser taxonomy and
+unranked seam refinements remain frozen.  The active proof engine is the
+one resumed twin-seam exchange, phrased as a common-host coupling of two
+named global operations rather than another portal classification.
 
 Six global facts are proved.
 
@@ -76,6 +75,32 @@ operations and then for one whole even terminal cycle.  They still yield
 neither a monotone pair exchange, internally disjoint labelled locks, a row
 split, nor a sink classification.
 
+The local allocation problem has nevertheless advanced by one audited
+theorem.  In the residual twin seam, an **ordinary** reserve-rooted `C_4`
+model is sufficient.  After spoke normalization, either both hubs are the
+literal gates and give the forbidden second full packet, or every nonzero
+gate stem cuts off a strictly smaller packet-one shore in the one global
+`mathcal F_12(G)` rank.  The resulting actual seven-separation also has a
+named proper-minor response of packet demand at least three.  See the
+[reserve-rooted `C_4` exchange](results/hc7_atomic_twin_seam_reserve_rooted_c4_exchange.md)
+and its [independent audit](results/hc7_atomic_twin_seam_reserve_rooted_c4_exchange_audit.md).
+
+This removes the earlier singleton-gate/stem obstruction.  Contracting the
+two reserve carriers reduces the remaining premise exactly to the two
+Robertson--Seymour--Thomas feasibility tests for the cyclic roots
+`p,r_1,q,r_2`.  A failed test may still be a genuine Two-Paths web; no
+connectivity-only shortcut is being assumed.
+
+An independently audited finite barrier now shows why the named response
+bundle cannot simply be relabelled as two sharp carriers.  Exact
+seven-connectivity, residual packet vector `(1,1,1,1)`, the five-rung
+separating response, a response-matched bypass, and an equal/equal state can
+all coexist with stable nonzero stems.  The certificate is six-colourable
+and already has a literal `K_7`, so it refutes only bundle-only carrier
+extraction, not the terminal-disjunctive exchange.  See the
+[stable-stem barrier](barriers/hc7_twin_seam_stable_stem_barrier.md) and its
+[audit](barriers/hc7_twin_seam_stable_stem_barrier_audit.md).
+
 Accordingly, the programme currently satisfies only two of the three
 requirements for a genuine proof invariant:
 
@@ -90,62 +115,41 @@ classification will not be added to the active spine.
 
 ## Active research goal
 
-The primary mechanism is now the
-[dominating-edge sink programme](active/hc7_global_dominating_edge_sink_goal.md).
-Its states are literal two-sets.  A published dominating `K_5` model in
-`G-P` supplies a successor edge, and its induced terminal cycle makes every
-cycle edge a legal successor.  Hence a hypothetical counterexample has a
-closed sink strongly connected component consisting of literal edges; each
-edge in the sink has a vertex-disjoint induced cycle entirely inside the
-same sink.  This is a proved, graph-global closure statement with a fixed
-state language.  See the [programme note](active/hc7_global_dominating_edge_sink_goal.md)
-and its [independent audit](active/hc7_global_dominating_edge_sink_audit.md).
+The active target is the
+[atomic twin-seam double-lock exchange](active/hc7_atomic_twin_seam_double_lock_exchange_goal.md).
+In the symmetric residual seam, the two disjoint named edges
 
-It is **not yet a well-founded proof invariant**.  The exact next theorem is:
+```text
+e=zu,  f=dt
+```
 
-> Every closed terminal-cycle family in a seven-connected, strongly
-> seven-contraction-critical, `K_7`-minor-free graph either couples its
-> double-critical Kempe systems into a literal `K_7`, or contains a
-> six-residual edge transition to a pair meeting every near-Hajós carrier
-> below the current global height.
+live in one connected six-chromatic common deletion host with a spanning
+`K_6` model.  Its one-edge restorations have opposite edge states, its
+double contraction has the simultaneous equal/equal state, and the named
+responses carry the audited Kempe-lock bundle.  The theorem must couple
+those data into exactly one of:
 
-This theorem would classify the neutral sink rather than add a new local
-configuration.  The independent backup remains the stateful support-six
-two-transversal pullback.  Its non-seven-connected contraction branch now
-preserves the selected six-vertex model in a named actual seven-adhesion,
-but global reselection may still lose that model; its seven-connected branch
-still has both an equal-support case and a split-row case.
+1. a common exact boundary state and a six-colouring;
+2. a literal `K_7` or a fixed pair meeting every `K_5`; or
+3. an actual `(1,2)` seven-separation whose packet-one shore is strictly
+   smaller in the fixed global `mathcal F_12(G)` order.
 
-The common-deletion fork now refines every sink terminal cycle: for each
-tail edge `e` and each edge `f` of its disjoint terminal cycle, at least one
-of the following holds, and both may hold: the four ends induce a literal
-`K_4`; or the common edge-deletion graph is one connected six-chromatic
-host with a spanning `K_6` model and opposite named edge responses.  Only
-the second branch supplies the six-row host.  This gives a cycle of mixed
-certificates, not yet a well-founded exchange.  The sink theorem must
-compose that entire family; it may not select one more unranked row or
-portal receiver.
+The reserve-rooted exchange above discharges the carrier-allocation step
+once an ordinary rooted `C_4` is present.  Therefore the exact live
+mathematics is now:
 
-The simultaneous contraction sharpens this cycle family without adding a
-new local state space.  Every pair `e,f` has an `(equal,equal)` response in
-its common host, and its Kempe components obey the audited three-/four-lock
-allocation above.  Hence the open composition problem is no longer to find
-a common colouring or enough palette locks; it is to turn those locks into
-literal disjoint carriers or labelled model rows across an entire sink
-cycle.
+> Force both Robertson--Seymour--Thomas feasibility pairings for
+> `p,r_1,q,r_2` from the named response system, or decode a failed pairing's
+> literal web certificate into one of the three ranked terminal outcomes.
 
-For an even terminal cycle, whole-cycle contraction now goes further: one
-colouring synchronizes at least four external locks between the same two
-parity classes.  The live even-cycle problem is therefore a literal
-topological composition theorem—make these locks disjoint or label-faithful
-enough to obtain `K_7`, a fixed pair, or a strict sink transition.  Odd
-terminal cycles remain a separate branch requiring a three-colour exchange
-or a label-preserving interval contraction; parity alone gives no
-obstruction there.
+The separating response and response-matched bypass are both inputs to
+that implication.  The stable-stem barrier proves that neither may be
+promoted to sharp carriers without using the forbidden proper/proper state,
+the spanning model, contraction-criticality, or the terminal branch.
 
-If the closed-family exchange cannot be proved from the full
-contraction-critical hypotheses, this transition system must be demoted;
-finiteness and strong connectivity alone are not evidence of termination.
+The dominating-edge sink programme remains a graph-global backup, not the
+current engine.  It is still not a well-founded invariant because no
+theorem classifies its neutral sink.
 
 The complete target remains
 
