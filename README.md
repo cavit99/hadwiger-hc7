@@ -88,21 +88,30 @@ input to `G1/G2`, not a third closed branch.
    ten-object decoder composes every carrier in every noncommon boundary
    state to a literal `K_7`.  This closes the entire normalized
    order-six-arm, overlap-three cell.
-7. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
+7. **Fixed-pair six-terminal composition.**  In the normalized
+   order-five-arm, overlap-two cell, delete the two overlap vertices and
+   reserve the two private roots.  The remaining six exterior terminals
+   again lie in a three-connected deletion.  The exact joined relation has
+   1,419 states; 1,179 have a common rooted `K_4`, and all 240 remaining
+   states compose with every one of the 142/780 six-terminal kernels to a
+   literal `K_7`.  The same fixed private pair works in every state.  An
+   independent enumerator reproduced the state set, kernel catalogue and
+   minor certificates, including a generic detector cross-check.
+8. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
    every pair of vertices of the avoided support touching that overlap
    forces another small model containing both private roots.  With literal
    arms these compulsory models have a genuine two-state split-bag
    orientation.  This is the current labelled composition invariant.
-8. **Disjoint three-split branch.** Minimal simultaneous contraction of
+9. **Disjoint three-split branch.** Minimal simultaneous contraction of
    two or three split edges either gives `K_7`, an actual exact-seven
    handoff, or a two-component boundary of order eight or nine that is
    pointwise full on both shores.
-9. **Two-shore boundary absorption.** In that two-component residue from
+10. **Two-shore boundary absorption.** In that two-component residue from
    two or three disjoint normalized split models, every surviving
    order-eight/nine boundary is four-colourable.  The sole five-chromatic
    census exception `K_2 vee C_7` is eliminated by a separate branch-set
    theorem.
-10. **Uniform common-neighbour rooted principle.** If
+11. **Uniform common-neighbour rooted principle.** If
 
    \[
    \chi(J)=k+2,\quad uv\in E(J),\quad
@@ -114,7 +123,7 @@ input to `G1/G2`, not a third closed branch.
    with singleton bags `{u},{v}`.  Martinsson--Steiner proves the needed
    strong theorem for `k=4`, so the `HC_7` four-colour branch has a
    label-faithful `K_6` model.
-11. **Minimal contraction-forest saturation.** If a forest contraction is
+12. **Minimal contraction-forest saturation.** If a forest contraction is
    inclusion-minimal for lowering a quotient to `q` colours, then every
    side of every forest edge meets every non-own colour class in every
    terminal colouring.  Each one-edge predecessor has chromatic number
@@ -144,17 +153,19 @@ Bare support incidence is insufficient: explicit affine and fifteen-point
 families falsify the strongest unlabelled alignment claims.  The
 positive-overlap rigid cell is closed whenever the avoided support has
 order five; both maximal-overlap cells are closed for an avoided order-six
-support; and the rooted-fan theorem closes the normalized arm-order-six
-overlap-four cell to a literal `K_7`; and the four-connected clique-or-fan
-decoder closes the normalized order-five-arm, overlap-three cell.  Thus for
-both arm orders only overlaps one and two remain, alongside the
-separated-triple branch.
+support; the rooted-fan theorem closes the normalized arm-order-six
+overlap-four cell; and finite rooted-kernel composition closes both
+normalized overlap-three cells and the order-five-arm, overlap-two cell.
+The live rigid cells are therefore overlap one for order-five arms, and
+overlaps one and two for order-six arms, alongside the separated-triple
+branch.
 Every two-set in the avoided support meeting the overlap still forces a
 compulsory double-root model.  The next concrete cell is the
-order-five-arm, overlap-two interface: deleting the overlap leaves a
-five-connected graph, and reserving two of its eight exterior terminals
-again exposes the audited six-terminal kernel in a three-connected
-deletion.  Further portal taxonomy is not the target.
+order-six-arm, overlap-two interface.  Deleting the overlap and reserving
+the fixed private pair leaves seven labelled terminals in a
+three-connected deletion, so the next test is the complete seven-terminal
+kernel rather than a bare cycle/biclique carrier.  Further portal taxonomy
+is not the target.
 
 ### G2. Forest-to-carrier composition
 

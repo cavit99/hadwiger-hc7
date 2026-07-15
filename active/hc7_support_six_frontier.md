@@ -99,6 +99,15 @@ carriers and 780 terminal-irreducible order-seven kernels.  An independently
 audited ten-object decoder composes every one of the 7,878 noncommon
 relation states to a literal `K_7`; the ambient graph remains unbounded.
 
+The normalized **order-five-arm, overlap-two** cell is now terminal as
+well.  Deleting the two overlap vertices and reserving the fixed private
+pair leaves six labelled terminals in a three-connected deletion.  The
+exact joined relation has 1,419 states.  A common rooted `K_4` closes 1,179
+of them; an independently audited decoder composes all 240 remaining
+states with every order-six carrier and every order-seven irreducible
+kernel from the complete 142/780 catalogue.  The fixed private pair works
+for every literal state, and every certificate lifts to a literal `K_7`.
+
 The rigid/private-pair hypotheses also force a **double-root cover**:
 every two-set of `A` meeting `A cap X` is avoided by another small support
 containing both `p,q`.  When the arms are literal, `pq` is absent and each
@@ -107,11 +116,13 @@ singleton.  This orientation family is the active rigid-cell object.
 
 The remaining theorem must compose the actual five-bag labels on the
 separated triple or the double-root orientation family in the rigid cells.
-For both arm orders the live overlaps are now one and two.  The next
-constructive cell is order-five-arm, overlap two.  Deleting the overlap
-leaves a five-connected graph with eight exterior terminals; reserving two
-leaves the same six-terminal three-connected kernel just used above.  The
-finite layer must retain both reserved terminals literally.
+The live rigid cells are overlap one for order-five arms and overlaps one
+and two for order-six arms.  The next constructive cell is order-six-arm,
+overlap two.  Deleting the overlap and reserving the fixed private pair
+leaves seven exterior terminals in a three-connected graph.  The finite
+layer must therefore use the complete seven-terminal kernel and retain the
+reserved pair literally; the weaker rooted-cycle/biclique guarantee is
+already known to be insufficient.
 Accepted outcomes are:
 
 1. a row-compatible one-split/two-clique composition;
@@ -149,6 +160,8 @@ Sources:
 * [`../results/hc7_overlap_three_five_good_decoder_audit.md`](../results/hc7_overlap_three_five_good_decoder_audit.md)
 * [`../results/hc7_overlap_three_six_terminal_kernel_closure.md`](../results/hc7_overlap_three_six_terminal_kernel_closure.md)
 * [`../results/hc7_overlap_three_six_terminal_kernel_closure_audit.md`](../results/hc7_overlap_three_six_terminal_kernel_closure_audit.md)
+* [`../results/hc7_overlap_two_order_five_six_terminal_kernel_closure.md`](../results/hc7_overlap_two_order_five_six_terminal_kernel_closure.md)
+* [`../results/hc7_overlap_two_order_five_six_terminal_kernel_closure_audit.md`](../results/hc7_overlap_two_order_five_six_terminal_kernel_closure_audit.md)
 
 ## 3. `G2`: exact two-shore residue
 
@@ -247,10 +260,9 @@ it does not supply the seventh carrier in the original graph.
 
 No new Moser taxonomy, raw portal classification, union-size census, or
 unranked separator is admitted to this spine.  Both normalized
-overlap-three cells are now closed.  The immediate `G1` experiment is the
-order-five-arm, overlap-two eight-terminal cell, using two reserved roots
-and the same six-terminal kernel; only after that should the engine be
-extended to the order-six-arm overlap-two and overlap-one cells.  A
-promotion must discharge one of `G1` or `G2` for an infinite family, create
+overlap-three cells and the order-five-arm overlap-two cell are closed.
+The immediate `G1` experiment is the order-six-arm, overlap-two cell using
+the fixed private pair and the full seven-terminal kernel.  A promotion
+must discharge one of `G1` or `G2` for an infinite family, create
 a genuinely strict handoff, or falsify the stated carrier architecture in
 a way that changes the global target.
