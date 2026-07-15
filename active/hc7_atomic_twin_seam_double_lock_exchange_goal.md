@@ -182,6 +182,31 @@ completed by another exact-partition comparison.  It must use literal
 path localization, a boundary-preserving transition between the two named
 minor responses, or the labelled row/fixed-pair geometry above.
 
+The reverse bridge response is now completely understood and is not that
+transition.  The audited
+[bridge-square involution](../results/hc7_atomic_twin_seam_bridge_square_involution.md)
+shows that the forward `f`-swap and reverse `e`-swap form an exact
+four-state involution, fully crossed on both twin boundaries.  No scalar
+rank can decrease around this square.
+
+The first canonical response outside the square is supplied by the audited
+[third-response grid](../results/hc7_atomic_twin_seam_third_response_grid.md).
+An internal edge of `D` and an internal edge of `E` give complementary
+intact-side orientations; equality on either twin boundary would glue.
+Each response also supplies five literal endpoint locks, and its paired
+double contraction forces endpointwise five-colour saturation.  The
+separating decoder must now allocate one of these literal lock/saturation
+systems to an exclusive boundary duty or model row.  Another reverse
+bridge swap or demand comparison cannot close it.
+
+For the gate edge itself, the audited
+[chromatic fork](../results/hc7_atomic_twin_seam_gate_chromatic_fork.md)
+gives a sharper split.  A double-critical gate has a canonical singleton
+`{t}` response and five internally disjoint length-two routes, including a
+literal triangle internal to `D`; the other branch regenerates a second
+spanning `K_6` frame with distinct first hits.  These are allocation inputs,
+not terminal outputs or ranked receivers.
+
 The audited
 [two-pole contact trichotomy](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 exhausts the numerical part of that geometry.  Joint contact six is

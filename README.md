@@ -269,6 +269,48 @@ state between the two named operations, or split a labelled model row.
 Sources: [four-response trace barrier](barriers/hc7_twin_seam_four_response_trace_barrier.md)
 and its [audit](barriers/hc7_twin_seam_four_response_trace_barrier_audit.md).
 
+The separating bridge response has one further exact obstruction.  Its
+forward `f`-swap and reverse `e`-swap form an involutive four-state square,
+and every comparison across its two operation classes remains crossed on
+both twin boundaries.  Thus no scalar rank can decrease around all legal
+bridge swaps, and a reverse lock is not the missing descent.  The decoder
+must use a response outside that square or a literal duty/model allocation.
+
+Sources: [bridge-square involution](results/hc7_atomic_twin_seam_bridge_square_involution.md)
+and its [independent audit](results/hc7_atomic_twin_seam_bridge_square_involution_audit.md).
+
+That third response now exists in a state-labelled form.  Contracting any
+edge internal to `D` returns a state intact on the `B_D` and `E` sides;
+contracting any edge internal to `E` returns the complementary orientation,
+intact on `D` and `B_E`.  Equality of opposite orientations on either twin
+boundary would glue and six-colour `G`, so the two internal-edge families
+are fully crossed.  Every such edge response also has five literal
+bichromatic endpoint locks.  Pairing a `D` edge with `e`, or an `E` edge
+with `f`, through a double contraction gives a boundary-preserving fork:
+the named opposite endpoint is saturated in all five alternate colours, or
+both ends of the internal edge are.  This is the first audited operation
+outside the reversible bridge square.  It still does not turn palette
+colours into old-boundary duties or model rows; the live theorem is now the
+allocation of these literal locks/saturation witnesses in a
+static-return-irreducible seam.
+
+Sources: [third-response grid](results/hc7_atomic_twin_seam_third_response_grid.md)
+and its [independent audit](results/hc7_atomic_twin_seam_third_response_grid_audit.md).
+
+The separating gate edge itself has an audited chromatic fork.  If
+`chi(G-{d,t})=5`, one canonical `G/f` response has `{t}` as a singleton on
+both twins and gives five internally disjoint length-two `d-t` routes,
+one in every other colour; at least one route has its internal vertex in
+`D`.  A double contraction with that literal triangle either saturates a
+named interior endpoint or produces two distinct gate-edge responses with
+literally the same twin states.  If `chi(G-{d,t})=6`, known `HC_6`
+regenerates a second spanning `K_6` frame avoiding `d,t`, and the named
+cycle supplies distinct first hits for its split-or-separator test.  Two
+frames alone do not yet constitute a normalized row-duty lock.
+
+Sources: [gate chromatic fork](results/hc7_atomic_twin_seam_gate_chromatic_fork.md)
+and its [independent audit](results/hc7_atomic_twin_seam_gate_chromatic_fork_audit.md).
+
 The regenerated frame now has an audited contact trichotomy.  Joint pole
 contact with all six rows is `K_7`; contact with five rows gives a
 one-hole centre of order two and forces the global centre floor `mu=1`,
