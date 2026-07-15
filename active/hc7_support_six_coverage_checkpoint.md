@@ -179,6 +179,25 @@ There is now one genuine composition consequence.  If `|A|=5`, then
 `A-a`; a common cycle through those three roots in the three-connected
 four-vertex deletion, together with that clique, is a `K_7` model.
 
+There are two further terminal consequences for `|A|=6`.
+
+* If the arms have order five and `|A cap X|=4`, their common core is a
+  literal `K_4`; the two roots are complete to it, and irredundancy makes
+  `A-X` an edge collectively full to it.  A cycle through that edge and
+  the two roots gives `K_7`.
+* If the arms have order six and `|A cap X|=5`, the original support, one
+  arm, and the five forced replacements are all seven six-subsets of one
+  seven-set.  The full-seven-point lemma gives a small `K_6`, which
+  seven-connectivity lifts to `K_7`.
+
+The rigid structure also returns a global labelled family absent from the
+original three-support certificate.  Every two-set `R subset A` meeting
+`A cap X` is avoided by a support `D_R` containing both `p,q`.  In the
+literal-arm cell, `pq` is absent and every `D_R` is an order-six model with
+exactly one private root in its split bag.  The next rigid-cell theorem
+must compose these two orientations; a further overlap-size reduction is
+not accepted as closure.
+
 These are bounded global certificates:
 the witness family has bounded cardinality, and every member carries named
 support-incidence V data.  They do **not** yet supply a branch-set exchange,
@@ -192,7 +211,11 @@ Sources:
 * `../results/hc7_private_pair_cross_arm_dichotomy.md`; and
 * `../results/hc7_private_pair_cross_arm_dichotomy_audit.md`;
 * `../results/hc7_literal_cross_arm_overlap_elimination.md`; and
-* `../results/hc7_literal_cross_arm_overlap_elimination_audit.md`.
+* `../results/hc7_literal_cross_arm_overlap_elimination_audit.md`;
+* `../results/hc7_k4_two_vertices_one_edge_cycle_composition.md`;
+* `../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md`; and
+* `../results/hc7_rigid_cross_arm_double_root_cover.md`, with adjacent
+  independent audits.
 
 ## 6. The two live arrows
 
@@ -210,6 +233,11 @@ prove one of:
 3. a `K_7` minor or one global support-six transversal pair; or
 4. a model/state-preserving exact-seven handoff with a declared strict
    rank.
+
+In the rigid branch, the concrete subproblem is now to compose the
+mandatory double-root split orientations into one of these outcomes.  Both
+maximal-overlap geometries are already terminal, so an argument that only
+decreases `|A cap X|` is not a new global mechanism.
 
 Bare support incidence cannot prove this: explicit affine and
 fifteen-point families falsify the strongest unlabelled extraction
@@ -238,7 +266,7 @@ accepted outcome.
 `G1` is the coverage bottleneck; `G2` is the sharpest closed laboratory.
 Further boundary or union-size enumeration is prohibited unless it proves
 an invariant used in one of these two arrows.  The immediate constructive
-experiment is the forest-to-carrier problem in `G2`: couple the exact
-`6 -> 5` drop and its named forest sides to the original boundary/model
-attachments.  Any successful labelled exchange must then be tested as a
-row-alignment operation for `G1`.
+experiment is the double-root orientation problem in `G1`: combine the
+compulsory both-root models with the split-row duties of `A` and its
+one-root replacements.  `G2` remains the independent laboratory for any
+resulting labelled carrier exchange.

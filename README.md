@@ -56,17 +56,23 @@ input to `G1/G2`, not a third closed branch.
    composition theorem eliminates every rigid common-core outcome in
    which an avoided literal `K_5` meets `X`: the replacement cliques and
    a three-root cycle in the four-vertex deletion give a literal `K_7`
-   model.
-4. **Disjoint three-split branch.** Minimal simultaneous contraction of
+   model.  Two further audited theorems eliminate maximal overlap for an
+   avoided order-six support, for either arm order.
+4. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
+   every pair of vertices of the avoided support touching that overlap
+   forces another small model containing both private roots.  With literal
+   arms these compulsory models have a genuine two-state split-bag
+   orientation.  This is the current labelled composition invariant.
+5. **Disjoint three-split branch.** Minimal simultaneous contraction of
    two or three split edges either gives `K_7`, an actual exact-seven
    handoff, or a two-component boundary of order eight or nine that is
    pointwise full on both shores.
-5. **Two-shore boundary absorption.** In that two-component residue from
+6. **Two-shore boundary absorption.** In that two-component residue from
    two or three disjoint normalized split models, every surviving
    order-eight/nine boundary is four-colourable.  The sole five-chromatic
    census exception `K_2 vee C_7` is eliminated by a separate branch-set
    theorem.
-6. **Uniform common-neighbour rooted principle.** If
+7. **Uniform common-neighbour rooted principle.** If
 
    \[
    \chi(J)=k+2,\quad uv\in E(J),\quad
@@ -78,7 +84,7 @@ input to `G1/G2`, not a third closed branch.
    with singleton bags `{u},{v}`.  Martinsson--Steiner proves the needed
    strong theorem for `k=4`, so the `HC_7` four-colour branch has a
    label-faithful `K_6` model.
-7. **Minimal contraction-forest saturation.** If a forest contraction is
+8. **Minimal contraction-forest saturation.** If a forest contraction is
    inclusion-minimal for lowering a quotient to `q` colours, then every
    side of every forest edge meets every non-own colour class in every
    terminal colouring.  Each one-edge predecessor has chromatic number
@@ -105,10 +111,15 @@ cross-arm dichotomy into one of:
   rank.
 
 Bare support incidence is insufficient: explicit affine and fifteen-point
-families falsify the strongest unlabelled alignment claims.
-The positive-overlap rigid cell is now closed whenever the avoided support
-has order five.  The live rigid cell therefore has `A cap X=emptyset` for
-literal `A`, or has every avoided support of order six.
+families falsify the strongest unlabelled alignment claims.  The
+positive-overlap rigid cell is closed whenever the avoided support has
+order five, and both maximal-overlap cells are closed for an avoided
+order-six support.  Thus a live positive-overlap rigid cell has an
+order-six avoided support and a proper, nonempty overlap with the arm core.
+Every two-set in the avoided support meeting that overlap forces a
+compulsory double-root model.  In the literal-arm cell these models orient
+exactly one private root into their split bag.  Composing those orientations,
+not further overlap-size taxonomy, is the live target.
 
 ### G2. Forest-to-carrier composition
 

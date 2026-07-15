@@ -55,8 +55,22 @@ four-clique `A-a`, the two literal replacement cliques, and a common cycle
 through `a,p,q` in the four-vertex deletion form a `K_7` model.  Hence a
 literal avoided support is disjoint from the common arm core.
 
-The remaining theorem must use the actual five-bag models on these
-supports.  Accepted outcomes are:
+The maximal-overlap order-six cells are also closed for both arm orders.
+For order-five arms, a prescribed-edge cycle theorem composes a literal
+`K_4`, two complete roots, and the disjoint `K_4`-full edge forced by the
+irredundant avoided support.  For order-six arms, maximal overlap supplies
+all seven six-subsets of one seven-set, forcing a small `K_6` and then
+`K_7`.
+
+The rigid/private-pair hypotheses also force a **double-root cover**:
+every two-set of `A` meeting `A cap X` is avoided by another small support
+containing both `p,q`.  When the arms are literal, `pq` is absent and each
+compulsory support has exactly one root in its split bag and the other as a
+singleton.  This orientation family is the active rigid-cell object.
+
+The remaining theorem must compose the actual five-bag labels on the
+separated triple or the double-root orientation family in the rigid cell.
+Accepted outcomes are:
 
 1. a row-compatible one-split/two-clique composition;
 2. three vertex-disjoint normalized split models;
@@ -75,6 +89,12 @@ Sources:
 * [`../results/hc7_private_pair_cross_arm_dichotomy_audit.md`](../results/hc7_private_pair_cross_arm_dichotomy_audit.md)
 * [`../results/hc7_literal_cross_arm_overlap_elimination.md`](../results/hc7_literal_cross_arm_overlap_elimination.md)
 * [`../results/hc7_literal_cross_arm_overlap_elimination_audit.md`](../results/hc7_literal_cross_arm_overlap_elimination_audit.md)
+* [`../results/hc7_k4_two_vertices_one_edge_cycle_composition.md`](../results/hc7_k4_two_vertices_one_edge_cycle_composition.md)
+* [`../results/hc7_k4_two_vertices_one_edge_cycle_composition_audit.md`](../results/hc7_k4_two_vertices_one_edge_cycle_composition_audit.md)
+* [`../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md`](../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md)
+* [`../results/hc7_cross_arm_maximal_order_six_overlap_elimination_audit.md`](../results/hc7_cross_arm_maximal_order_six_overlap_elimination_audit.md)
+* [`../results/hc7_rigid_cross_arm_double_root_cover.md`](../results/hc7_rigid_cross_arm_double_root_cover.md)
+* [`../results/hc7_rigid_cross_arm_double_root_cover_audit.md`](../results/hc7_rigid_cross_arm_double_root_cover_audit.md)
 
 ## 3. `G2`: exact two-shore residue
 
