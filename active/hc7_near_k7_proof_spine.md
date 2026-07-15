@@ -18,18 +18,25 @@ needed.
 
 ## Current research goal
 
-The active dependency-level target is the atomic four-root linkage/disk
-decoder stated in `hc7_atomic_four_root_decoder_goal.md`.  It is the
-separating-edge base case of the broader support-four programme.  The
-theorem must turn the audited literal four-root certificate into either two
-adjacent seed carriers whose named contractions manufacture a fresh
-reflectable state, or an `S`-rooted `K_5` which the two rich packets lift to
-`K_7`.
+The active dependency-level target is the direct-reserve substituted-web
+decoder stated in `hc7_direct_reserve_substituted_web_goal.md`.  It is the
+sole surviving rural-disk child of the parent atomic four-root decoder in
+`hc7_atomic_four_root_decoder_goal.md`; the linkage child remains open but
+is frozen during this attempt.
 
-This is deliberately narrower than `HC_7` and stronger than another case
-reduction.  The former demand that a web composition preserve an old exact
-state has been dropped: current literature does not supply it, and the
-audited carrier theorem makes it unnecessary.
+Three new audited inputs make this target materially sharper.  Closed-shore
+connectivity gives a rooted diamond; every nontrivial reserved connector
+gives a labelled `K_7^vee`; and a one-root substitution regenerates a
+diamond after replacing an old root by the compulsory portal `z`.  The full
+Fabila-Monroy--Wood obstruction theorem then leaves only a literal clean
+cofacial web when the substituted host has no rooted `K_4`.
+
+The new theorem must decode that clean web into an anchored five-bag
+near-model, two adjacent duty-faithful carriers, or an exact seven-adhesion
+with named receiving data.  It is deliberately narrower than `HC_7` and
+stronger than another web reduction.  It does not demand transport of an
+old equality state, but it must preserve literal packet anchoring: the rich
+packets do not automatically contact the substituted `z`-bag.
 
 ## Frozen kernel
 
@@ -739,10 +746,17 @@ split `{z}|(A-z)`, failure of every adaptive empty/singleton reservoir gives
 two vertex-disjoint parity-bad boundary paths by set-Menger.  Their four
 endpoints are distinct literal roots, and seven-connectivity supplies a
 four-portal matching.  The audited four-port theorem returns literal
-disjoint linkage paths through `A` or a literal rural disk.  The remaining
-theorem must decode both outcomes into adjacent seed carriers or an
-`S`-rooted `K_5`.  A generalized web may organize the rural branch, but
-completion edges are not host edges and no palette colour may be promoted
+disjoint linkage paths through `A` or a literal rural disk.
+
+The rural half is now reduced to one exact direct-reserve cell.  A
+nontrivial leftover boundary connector already gives labelled `K_7^vee`;
+in the last cell a reoriented seven-separation regenerates a rooted
+`K_4^-` with one root replaced by `z`.  The exact rooted-`K_4` obstruction
+theorem eliminates five obstruction classes and every hidden fill clique:
+failure of the upgrade is a literal clean cofacial web.  The active child
+must decode that web into an anchored five-bag certificate, adaptive
+carriers, or an exact receiving adhesion.  The linkage half remains open.
+Completion edges are not host edges and no palette colour may be promoted
 to a branch label.  Sources:
 `hc7_atomic_blocking_path_packet_escape.md`,
 `../results/hc7_atomic_double_contraction_state_split.md`, and
@@ -752,6 +766,10 @@ to a branch label.  Sources:
 `../results/hc7_atomic_low_root_degree_closure.md`,
 `../results/hc7_atomic_cycle_shore_closure.md`,
 `../results/hc7_two_list_reservoir_menger_dichotomy.md`,
+`../results/hc7_closed_shore_rooted_connectivity.md`,
+`../results/hc7_rural_reserved_connector_near_k7.md`,
+`../results/hc7_direct_reserve_one_root_substitution.md`,
+`../results/hc7_direct_reserve_rooted_k4_obstruction.md`, and
 `hc7_atomic_connector_tree_bridge_audit.md`.
 
 In the separate two-lobe proper-row branch, an exact bounded falsifier found

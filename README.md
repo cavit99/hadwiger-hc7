@@ -17,43 +17,38 @@ dependency chain.
 ## Active research goal
 
 The active dependency-level target is the
-[atomic four-root linkage/disk decoder](active/hc7_atomic_four_root_decoder_goal.md).
-It concerns the normalized separating-edge atom of the connected-rich
-width-two `(1,2)` cell.  It must turn one literal four-root
-linkage-or-rural-disk certificate into either two adjacent seed carriers or
-five literal boundary-rooted bags which the two rich packets complete to a
-`K_7` model.
+[direct-reserve substituted-web decoder](active/hc7_direct_reserve_substituted_web_goal.md),
+the sole surviving rural-disk child of the broader
+[atomic four-root decoder](active/hc7_atomic_four_root_decoder_goal.md).
+The linkage child remains open but is frozen while this sharper exchange is
+tested.
 
-This is a deliberate simplification of the earlier stateful support-four
-goal.  The independently audited near-full carrier theorem closes every
-clean core edge and proves that every nonsingleton atomic thin shore is
-two-connected.  It also shows that a web decomposition need not transport
-an old equality state: the correct carriers create a fresh
-packet-demand-at-most-two state by a proper-minor contraction.  Hence the
-only live geometric branch is a genuinely fully crossed path/`Y` hull.
+Four audited steps now replace the former generic rural decoder.  Every
+four-root closed shore is internally four-connected; its rural disk gives a
+literal rooted `K_4` while reserving one bad boundary path.  A nontrivial
+reserved path and the two rich packets form a labelled `K_7^vee`.  In the
+only remaining direct-reserve cell, the literal bad edge avoids the
+compulsory portal, and reorienting the same exact-seven separation
+regenerates a rooted `K_4^-` after replacing one old root by that portal.
 
-The former list-theoretic milestone is now proved and independently
-audited.  Failure of the canonical adaptive carrier return gives two
-vertex-disjoint parity-bad boundary paths by set-Menger, hence four distinct
-literal roots; seven-connectivity also gives distinct portal witnesses.
-The existing four-port theorem then returns a literal linkage or a literal
-disk.  Decoding those two outcomes is the exact remaining geometric step.
-Completion edges are never host edges.  The low-root-degree atom and every
-bare cyclic shore of order at least four are already closed by independently
-audited uniform lemmas.
+The next theorem must compare this family of regenerated diamonds.  It
+must repair the defect, give the `z`-bag a literal `S`-anchor, and retain a
+separate two-contact connector; manufacture two adaptive carriers; or
+expose an actual seven-adhesion with an exact receiving certificate.  A
+static fifth-bag argument is false: the companion quotient probe leaves all
+3,860 tested path-pair assignments open.  A blocked rotation also need not
+yield a cut of order at most six, so a naked separator descent is not an
+allowed outcome.
 
-Exact bounded falsification is green for all 84 rooted connected-bipartite
-frontiers against every biconnected atlas shore through order six (5,880
-instances), using strict `st`-numberings whose endpoints are adjacent.  This
-does not prove the unbounded decoder or encode the full minor-critical
-response.
-
-Current primary literature confirms the boundary of the target:
-generalized webs and rooted four-terminal subdivisions supply uncoloured
-routing, knittedness requires much higher connectivity, and rooted-folio or
-colourful-minor theory does not preserve exact colour-extension languages.
-Near-`K_7` regeneration remains the independent escape route, not a
-substitute for the literal decoder.
+An online primary-literature review found no theorem supplying this last
+label-faithful exchange.  Rooted-`K_4` and nonseparating-subdivision results
+do not preserve the reserved connector; generalized webs organize the
+crossless case but their completion edges are not host edges; generic
+knitted and rooted-`C_5` theorems require substantially higher connectivity.
+The full rooted-`K_4` obstruction theorem now reduces failure to one clean
+cofacial web.  The selected mechanism is therefore simultaneous root
+substitution plus a crossing-or-return bridge exchange, with near-`K_7`
+regeneration as its named exit.
 
 ## Frozen kernel
 
@@ -615,6 +610,14 @@ Controlling inputs:
   and [audit](results/hc7_atomic_bichromatic_bridge_state_localization_audit.md).
 - [atomic root-deletion normalization](results/hc7_atomic_root_deletion_normalization.md)
   and [audit](results/hc7_atomic_root_deletion_normalization_audit.md).
+- [closed-shore rooted connectivity](results/hc7_closed_shore_rooted_connectivity.md)
+  and [audit](results/hc7_closed_shore_rooted_connectivity_audit.md).
+- [rural reserved-connector near-model theorem](results/hc7_rural_reserved_connector_near_k7.md)
+  and [audit](results/hc7_rural_reserved_connector_near_k7_audit.md).
+- [direct-reserve one-root substitution](results/hc7_direct_reserve_one_root_substitution.md)
+  and [audit](results/hc7_direct_reserve_one_root_substitution_audit.md).
+- [substituted-host rooted-`K_4` obstruction theorem](results/hc7_direct_reserve_rooted_k4_obstruction.md)
+  and [audit](results/hc7_direct_reserve_rooted_k4_obstruction_audit.md).
 - [connector-tree bridge audit and next exact lemma](active/hc7_atomic_connector_tree_bridge_audit.md).
 - [bounded adaptive peel-or-six-cut probe](active/hc7_two_lobe_peel_or_six_cut_probe.md)
   and its exact verifier; this is evidence, not a theorem.
@@ -638,29 +641,32 @@ turns packet thinness alone into a bounded transversal or fixed apex pair.
 
 No audited implication yet turns every hypothetical counterexample into a
 literal `K_7` or a valid global six-colouring.  The immediate missing step
-is the exact-seven state-selection/composition theorem above.  Multi-lobe
-support-four gates now yield a labelled near model or a strict `(1,2)`
-descendant, but no theorem transports a legally useful state across that
-descent.  In a two-lobe support-four cell, every non-singleton full-row
-lobe is closed; the labelled proper-row split and singleton lobe remain.
-Compulsory Hall descents of order two or three now strictly descend; their
-only nondecreasing residue is the atomic width-two bridge/Kempe lock, and
-its compressible states are closed.  The exact atom now has a canonical
-double-contraction saturation fork.  In the separating-edge trace branch it
-also has, in one proper-minor colouring, the compressed state, five locks,
-and an opposite-shore duty connector.  The canonical frontier obstruction
-now yields two disjoint parity-bad boundary paths and a literal four-root
-linkage-or-disk certificate.  No audited theorem yet decodes both its
-linkage and rural-disk outcomes into two adjacent adaptive seed carriers or
-an `S`-rooted `K_5`.  Every clean tree edge, every root-degree-at-most-two
-connected-bipartite atom, and every bare cycle shore of order at least four
-are now closed.  Thus the live atom is two-connected, has a genuinely
-noncyclic crossed bridge/ear structure, and must be handled by the
-four-root decoder in the active goal.  The four-vertex packet
-path is classified but not fully terminal under the strict outcome list;
-generic `K_7^vee` triggers still require a normalized near-model handoff.
-After that, arbitrary attained demand-three states, `(1,1)`, larger adhesions,
-and S1 rotation components remain.
+is still the exact-seven state-selection/composition theorem above.
+Multi-lobe support-four gates yield a labelled near model or a strict
+`(1,2)` descendant, but no theorem transports a legally useful state across
+every such descent.  In a two-lobe support-four cell, every non-singleton
+full-row lobe is closed; the labelled proper-row split and singleton lobe
+remain.
+
+The atomic connected-bipartite branch now has a canonical four-root
+linkage-or-disk certificate.  Its rural outcome has been reduced uniformly
+to one direct-reserve exchange: every nontrivial reserved connector already
+gives a labelled `K_7^vee`, while the last cell admits an audited one-root
+substitution regenerating a rooted diamond.  The complete rooted-`K_4`
+obstruction theorem now shows that this substituted host either has the
+rooted `K_4` or is itself a clean cofacial planar web.  What is not proved is
+the crossing-or-return exchange which supplies both an `S`-anchor for the
+substituted `z`-bag and a separate two-contact connector, manufactures
+adaptive carriers, or returns an actual seven-adhesion with an exact
+receiving certificate.  The linkage outcome remains open separately.
+
+Every clean tree edge, every root-degree-at-most-two connected-bipartite
+atom, and every bare cycle shore of order at least four are closed.  The
+four-vertex packet path is classified but not fully terminal under the
+strict outcome list; generic `K_7^vee` triggers still require a normalized
+near-model handoff.  After this atom, arbitrary attained demand-three
+states, packet vector `(1,1)`, larger adhesions, and S1 rotation components
+remain.
 
 Finite certificates in this repository prove only the interfaces stated in
 their accompanying notes.  They do not replace an unbounded exchange

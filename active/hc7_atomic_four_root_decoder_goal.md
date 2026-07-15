@@ -17,6 +17,27 @@ edges are never host edges.
 Proving this goal closes the connected-bipartite atomic separating-edge
 family.  It does not by itself prove `HC_7`.
 
+## Current child milestone
+
+The rural-disk half has advanced beyond the generic three-extra-label
+decoder.  Closed-shore connectivity now gives a literal rooted diamond;
+repairing it leaves a reserved connector.  Every nontrivial reserve already
+gives a labelled `K_7^vee`, so the sole rural residue has one nontrivial bad
+path consumed by the repair and one direct bad edge left over.
+
+The active child is the
+[direct-reserve substituted-web decoder](hc7_direct_reserve_substituted_web_goal.md).
+An independently audited substitution theorem replaces one old root by the
+compulsory portal `z` and regenerates a rooted `K_4^-` while avoiding the
+leftover connector.  The full rooted-`K_4` obstruction theorem then reduces
+every failed upgrade to a literal clean cofacial web.  The child goal must
+decode that web into an anchored five-bag certificate, adaptive carriers,
+or an actual seven-adhesion with a receiving certificate.  A naked descent
+or a static fifth-bag contact count is not sufficient.
+
+The linkage half of the present parent theorem remains open and is frozen
+while this rural child is pursued.
+
 ## Frozen atomic input
 
 Use an actual separation
@@ -133,12 +154,11 @@ Spend the main effort on the rural-disk branch.
    exact actual adhesion have been identified.  Never identify a palette
    colour with a root or branch-set label.
 
-The desired reusable sublemma is a **three-extra-label rural decoder**:
-in a seven-connected four-root disk society with the remaining three
-literal boundary labels attached, either an extra attachment crosses the
-frame, two adjacent seed carriers exist, or the attachment gates form an
-at-most-six cut.  It must be proved with the atomic portal data; an
-unconditional society statement is false.
+The former generic **three-extra-label rural decoder** has been replaced by
+the direct-reserve child above.  A blocked exchange may expose an actual
+seven-interface, so an at-most-six-cut conclusion alone is false.  The new
+lemma must exploit all legal one-root substitutions and return exact
+receiving data at every equality gate.
 
 ## Falsification boundary
 
