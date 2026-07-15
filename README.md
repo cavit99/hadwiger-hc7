@@ -17,64 +17,45 @@ dependency chain.
 ## Active research goal
 
 The active dependency-level target is the
-[shortest-lock state-preserving first-seam receiver](active/hc7_compulsory_lock_dispersion_web_goal.md).
-It works in one colouring of `G-zu`, anchors at one shortest thin lock,
-and couples it to one second lock.  The first genuine crossing or first
-crossless web seam must give a common state, a literal terminal model, an
-accepted oriented exact-seven receiver, or a ranked labelled `S1/S4`
-handoff.  A naked separator, an unlabelled near model, a one-sided
-contracted state, or a comparison of unrelated proper-minor states is not
-a terminal.
+[exact-seven one-packet state-selection theorem](active/hc7_exact7_state_selection_goal.md).
+For an actual `(1,2)` seven-adhesion, a named proper-minor operation on the
+packet-one shore must return a demand-at-most-two exact state, or its full
+response data must produce a literal `K_7` model or the fixed-pair
+terminal.  A low-demand state is terminal because the two opposite full
+packets reproduce it exactly and the closed-shore colourings glue.
 
-The first legal coupling and its receiving handoff are now proved.  If one
-compulsory bichromatic `z-u` lock has a rich-side separating bridge `f`,
-swapping the `z`-side gives an explicitly related colouring of both `G-f`
-and `G/f`.  Replacing old boundary root `u` by `z` then produces an actual
-state-labelled twin seven-cell.  Its two shores have packet vector `(1,1)`,
-the state is attained by the named `f`-contraction and has demand at least
-two, and the packet-sum rank drops `3 -> 2`.  This is a normalized entry to
-the still-open `S4` receiver, not a proof of that receiver.
+This target is forced by the latest audited tight-lobe work.  The
+[tight transition](results/hc7_shortest_thin_lock_tight_bypass_transition.md)
+does produce a smaller actual seven-cell and a named one-sided state.  The
+split-audited
+[packet analysis](active/hc7_tight_gate_receiver_normalization.md) then
+proves three useful facts: `(1,3)` closes; every `(1,2)` orientation
+regenerates a named high-demand state on its actual packet-one shore; and
+every `(1,1)` cell has five exact internal-lock/opposite-crossing
+alternatives.  It does **not** prove an accepted `S3` receiver or a ranked
+`S4` handoff.  See its [audit](active/hc7_tight_gate_receiver_normalization_audit.md).
 
-Consequently the exact local residue is now the branch in which, for every
-legal `G-zu` state and all five alternate colours, no separating edge of
-the compulsory lock is rich-internal or boundary--rich.  In one fixed
-state each lock then has either a literal thin `z-u` path or two
-edge-disjoint rich-edge quotient routes; different colour systems use
-disjoint rich edges but may share `alpha`-coloured articulation vertices.
-In the branch containing a thin lock, the next theorem must turn the first
-crossing or web seam with one second lock into a recognized receiver.  The
-all-rich articulation-dispersion problem remains a later branch of the
-full decoder.
+The exact first milestone is the reversed tight-lobe orientation
+`(nu_D,nu_B)=(2,1)`.  Here the strict lobe contains the two packets and the
+opposite shore is packet-one.  We must use all named proper-minor responses
+on that packet-one shore to force a demand-at-most-two state or a literal
+terminal.  A ten-vertex
+[orientation shell](barriers/hc7_tight_gate_local_orientation_shell.md)
+shows that seven-connectivity, packet fullness, high demand and even the
+separating-entry Kempe toggle are insufficient by themselves; the proof
+must explicitly spend `K_7`-minor-freeness or universal
+contraction-critical response.
 
-The first constructive milestone is now the **tight-gate receiver**.  For
-a component `D` off a shortest thin spine, seven-connectivity gives
-`|N_A(D)|+|N_S(D)|>=7`.  At equality there is a smaller actual
-seven-cell.  The audited
-[transition theorem](results/hc7_shortest_thin_lock_tight_bypass_transition.md)
-uses any first boundary-entry edge to produce one intact opposite-side
-state and the same named contracted lobe-side state; a separating entry
-couples it to the fixed colouring by a Kempe swap.  It is deliberately not
-called a descent: the new packet orientation and accepted receiving state
-are still missing.  See the [independent audit](results/hc7_shortest_thin_lock_tight_bypass_transition_audit.md).
-
-After that receiver is normalized, the geometric residue is boundary
-excess, a same-lock bypass, or a spine-confined/rich excursion.  Those are
-to be handled by the literal crossing/web decoder.  The static all-rich
-implication remains false—off-colour bypasses can preserve all five route
-quotients while destroying every host separator—so the all-rich branch
-must later use a minimal full-host lock union and named proper-minor
-transitions.
-
-The [direct-reserve substituted-web decoder](active/hc7_direct_reserve_substituted_web_goal.md)
-remains the sharpest independent rural-disk child of the broader
-[atomic four-root decoder](active/hc7_atomic_four_root_decoder_goal.md),
-but it is frozen while this fixed-state decoder is attacked.  The fresh
-literature review through 15 July 2026 found no theorem that performs the
-label-faithful state/branch-set conversion automatically.  Generalized web
-composition is the closest structural engine; colorful-minor and rooted
-folio results preserve annotations but not exact extension languages, and
-current knitted/linkage thresholds are too high for this seven-connected
-interface.
+The shortest-lock crossing/web programme remains the geometric organizer
+after this semantic milestone, not the current engine.  The fresh online
+literature review through 15 July 2026 found no automatic lift.
+Humeau--Pous supplies constructive crossing/web decomposition, Perfect
+augmentation preserves endpoints under an additional relative-separation
+hypothesis, and modern rooted-folio/colorful-minor results preserve finite
+rooted geometry.  None preserves an exact six-colour extension state.
+Dvořák--Swart in fact shows that abstract boundary extension languages
+alone are too flexible, while current knitted connectivity thresholds are
+far above this seven-connected interface.
 
 ## Frozen kernel
 

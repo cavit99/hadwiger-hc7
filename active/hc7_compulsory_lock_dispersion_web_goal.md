@@ -1,6 +1,8 @@
-# Active goal: shortest-lock state-preserving first-seam receiver
+# Supporting goal: shortest-lock state-preserving first-seam receiver
 
-**Status:** research target, not a proved theorem.
+**Status:** paused after the tight-lobe transition. The active semantic
+target is now the
+[exact-seven state-selection theorem](hc7_exact7_state_selection_goal.md).
 
 ## Decision
 
@@ -12,16 +14,18 @@ first genuine crossing or first crossless web seam of a shortest thin lock
 and one second lock into a **recognized receiver**.  Do not compare
 independently attained final-duty states.
 
-The first mandatory milestone is the **tight-gate receiver**.  A shortest
+The first mandatory milestone was the **tight-gate receiver**. A shortest
 thin lock and a second lock now give, whenever the second first enters a
 tight off-spine lobe, a smaller actual seven-cell with a named one-sided
 contracted state; a separating entry couples that state to the fixed
-colouring by one explicit Kempe swap.  This certificate is not yet a
-descent.  The next theorem must orient its packet vector and normalize its
-state into `S3`, a ranked `(1,1)` `S4` handoff, or the already closed
-`(1,3)` branch.
+colouring by one explicit Kempe swap. The subsequent packet analysis
+regenerates a high-demand state on the actual packet-one shore and gives a
+five-colour lock/crossing localization, but independent audit rejects the
+claimed accepted `S3` and ranked `S4` normalizations. This certificate is
+not yet a descent.
 
-Only after that receiver is proved should the same mechanism handle a
+Only after state selection resolves that semantic gap should this
+mechanism handle a
 boundary-excess lobe, a same-lock bypass, or a spine-confined/rich
 excursion by a crossing/web decomposition.  The all-rich articulation
 problem remains secondary.
