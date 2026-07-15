@@ -168,6 +168,19 @@ completed by another exact-partition comparison.  It must use literal
 path localization, a boundary-preserving transition between the two named
 minor responses, or the labelled row/fixed-pair geometry above.
 
+The audited
+[two-pole contact trichotomy](../results/hc7_atomic_two_pole_contact_trichotomy.md)
+exhausts the numerical part of that geometry.  Joint contact six is
+`K_7`.  Joint contact five forces `mu=1`, and contact four supplies a
+two-hole centre of order two, but neither is a ranked handoff.  At lower
+contact, a same-row rooted partition gives `K_7` or an actual separator,
+while a literal row transfer strictly increases contact.  The only
+remaining model-relative object is therefore a row-duty lock: every
+pole-rooted peel disconnects its donor, monopolizes a foreign duty, or
+consumes an old pole contact.  The separating decoder must spend the
+proper-minor response precisely on that lock or on the resulting actual
+separator; another contact inequality cannot close it.
+
 ### 4.2 Response-matched gate-edge bypass
 
 For a fixed response `c_f`, palette-align `c_f(z)` with the common

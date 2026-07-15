@@ -125,6 +125,22 @@ state between the two named operations, or split a labelled model row.
 Sources: [four-response trace barrier](barriers/hc7_twin_seam_four_response_trace_barrier.md)
 and its [audit](barriers/hc7_twin_seam_four_response_trace_barrier_audit.md).
 
+The regenerated frame now has an audited contact trichotomy.  Joint pole
+contact with all six rows is `K_7`; contact with five rows gives a
+one-hole centre of order two and forces the global centre floor `mu=1`,
+but does not identify the singleton frame or orient its reversible
+rotations.  Contact with four rows gives an unranked two-hole centre of
+order two.  In the low-contact branch, distinct pole hits in one row give
+either the exact five-duty split and `K_7`, or a literal actual separator
+of order at least seven; a precise row transfer otherwise increases joint
+contact.  Failure of both is the remaining **row-duty lock**.  Thus raw
+contact order is exhausted: the twin responses must unlock that transfer,
+put a common state on the resulting separator, or identify one coherent
+fixed pair.
+
+Sources: [two-pole contact trichotomy](results/hc7_atomic_two_pole_contact_trichotomy.md)
+and its [audit](results/hc7_atomic_two_pole_contact_trichotomy_audit.md).
+
 Preserving the original demand-three trace is not required.  The compulsory
 bridge transition and the canonical reverse trace arise from different
 proper-minor operations, and no audited theorem identifies them.  Requiring
