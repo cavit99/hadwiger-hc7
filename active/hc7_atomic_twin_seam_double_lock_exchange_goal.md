@@ -25,6 +25,17 @@ seven-boundaries.  The change need not be confined to their common
 five-set.  The missing mathematics is therefore a double-lock exchange,
 not another equality-partition census.
 
+The audited
+[packet-transfer theorem](../results/hc7_atomic_twin_seam_packet_transfer.md)
+now removes a separate arithmetic ambiguity.  Unless a twin is terminal
+`(1,3)` or yields a literal, strictly smaller, named high-demand `(1,2)`
+lobe certificate, both twin vectors are `(1,1)`.  The strict certificate
+does not automatically preserve the old paired state, so it is an accepted
+global handoff only after the receiving spine supplies a noncycling rank.
+The local double-lock decoder should therefore be proved first in the
+simultaneous `(1,1)/(1,1)` residue without forgetting that receiver
+qualification.
+
 Bare alignment has already been falsified by a `K_7`-minor-free shell in
 which the contraction is clean on the common five-set.  That shell contains
 the permitted rooted `K_5`.  Consequently the terminal-model alternative

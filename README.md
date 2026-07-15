@@ -55,6 +55,19 @@ handoff of demand at least three in `(1,2)` and at least two in `(1,1)`.
 This is not yet a recursive descent: the two states may already differ on
 the common five-set and no global noncycling rank is known.
 
+An audited cross-lift now couples the two packet vectors.  Two full packets
+inside one lobe, joined through its two exclusive old-boundary labels to the
+two old rich packets, become two full packets on the opposite twin shore.
+Consequently every non-`(1,1)/(1,1)` seam is either terminal `(1,3)` or
+returns a literal, strictly smaller, named high-demand `(1,2)` lobe
+certificate.  This certificate is not automatically the old paired state,
+so a receiving theorem must still accept it under a noncycling rank.  The
+genuinely nondelegated lock residue has all four twin packet numbers equal
+to one.
+
+Sources: [packet transfer](results/hc7_atomic_twin_seam_packet_transfer.md)
+and its [audit](results/hc7_atomic_twin_seam_packet_transfer_audit.md).
+
 The immediate proof must therefore close the symmetric seam by a
 double-lock exchange.  If a gate edge separates a compulsory Kempe lock,
 an audited bridge swap supplies two simultaneous literal gate-rooted
