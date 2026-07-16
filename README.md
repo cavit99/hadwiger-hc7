@@ -31,6 +31,45 @@ The support-six rung is not yet proved.  Its purpose is to discover a
 uniform labelled-model extension principle, not to start another finite
 neighbourhood census.
 
+### Latest structural checkpoint: weighted matching deletion
+
+The separated three-split branch now has a genuine global invariant.  If
+`F` is the three-edge matching formed by the split bags and `K=G-F`, put
+
+\[
+ \lambda_F(A,B)=|A\cap B|+
+ |\{e\in F:e\text{ crosses the open shores of }(A,B)\}|.
+\]
+
+The following statements are proved and independently cold-audited.
+
+* `lambda_F` is submodular, and seven-connectivity gives
+  `lambda_F>=7` on every actual separation of `K`.  Fixed roots and named
+  model sides therefore turn exact weighted cuts into a genuinely
+  well-founded uncrossing rank.
+* Proper-minor colourings realize every nonempty equality signature on
+  `F`.  At exact weighted order seven, if at least two rows cross, a
+  fixed-point-free colour permutation proves that **every** endpoint
+  choice leaves both shores nonempty.  Hence the endpoint choices needed
+  to preserve the named split models lift literally to an exact-seven
+  handoff.
+* Consequently `K` is four-connected, and its entire connectivity-four
+  branch is closed by a ranked, model-preserving exact-seven handoff.  The
+  only label-sensitive weighted-order-seven lift not covered by the
+  derangement is the already isolated one-row singleton lock.
+* If the handoff is absent, `K` is at least five-connected.  Each split
+  model then regenerates label-faithfully in this one common graph as its
+  singleton `K_4` plus an endpoint path avoiding that clique.
+* The same common deletion carries all seven non-all-proper matching
+  signatures and has chromatic number five or six.  The exact new gap is
+  to compose the three possibly overlapping regenerated path bags; no
+  generic Kempe-equivalence or unrooted-model lift is being assumed.
+
+See
+[`hc7_matching_deletion_separator_lift.md`](results/hc7_matching_deletion_separator_lift.md),
+its [audit](results/hc7_matching_deletion_separator_lift_audit.md), and
+the [punctured-cube note](active/hc7_three_split_cross_star_ranked_exchange.md).
+
 ## Audited frontier
 
 The following are the main current results.
@@ -196,26 +235,27 @@ agree.  Thus another single rooted carrier cannot be the next step: the
 proof must couple several regenerated models, retain ambient contraction
 data, or establish a simultaneous split-row/separator exchange.
 
-### G2. Forest-to-carrier composition
+### G2. Five-connected common-deletion composition
 
-In the disjoint branch, the four-colour two-shore residue now gives a
-minimal contraction forest and an exact `6 -> 5` predecessor at every
-forest edge.
+In the separated branch, three pairwise disjoint support-six models have
+split edges `F={e_1,e_2,e_3}` and one common deletion `K=G-F`.
 
-* If a terminal contraction image `z` has `chi(K-z)=4`, the two sides of
-  its forest edge are the named bags of a `K_6` model.  The missing step is
-  to preserve or extract a seventh connected carrier, equivalently to
-  turn this model into an `S`-meeting `K_6` disjoint from a reserved full
-  shore, a global pair, or a ranked exact-seven/near-`K_7` handoff.
-* If `chi(K-z)=5`, every terminal five-colouring has an exact trichotomy:
-  one side sees all five colours, the other side sees all five colours, or
-  both sides omit the same unique colour.  A Hajós-join example realizes
-  the last lock and proves that an unrooted regenerated `K_5` cannot break
-  it.  Ambient seven-connectivity and the original shore/model labels must
-  be used.
+* The branch `kappa(K)=4` is closed by the weighted exact-seven theorem
+  above.  This is a ranked output, not merely another separator.
+* In the residual branch, `kappa(K)>=5` and `chi(K) in {5,6}`.  Every
+  nonempty subset of the three rows occurs as the exact equality set of a
+  six-colouring of `K`, while the all-proper state is absent.
+* For each named model, `K-Q_i` is connected; an `x_i-y_i` path in that
+  deletion regenerates the fifth branch bag beside the literal singleton
+  clique `Q_i`.  These three paths are individually label-faithful but may
+  overlap.
 
-The forest size is currently a local witness size, **not** a proved
-recursive rank.
+The live theorem is now a weighted indivisible-bundle composition theorem:
+in this five-connected punctured-cube kernel, compose the three regenerated
+models into a literal `K_7`, a global two-vertex transversal, or a strict
+anchored weighted cut.  Static endpoint graphs and a single rooted carrier
+are already known to be insufficient; ambient connectivity, exact
+signatures, and the weighted rank must be used together.
 
 ## Decisive guardrails
 
