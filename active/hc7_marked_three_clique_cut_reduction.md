@@ -246,12 +246,16 @@ forms.
   `2(|W|-1)>|W|` vertices of `W`.  Hence no row is tail-free, and two of
   the three tails force all three marks into `W`.
 
-This is the first unresolved equality residue of the marked adaptation.
-It is not the terminal `5+5+5` matrix cell (which is already audited and
-excluded); it is a binary-shore, marked-six-cut composition problem.  A
-proof must compose the crossing six-cuts in (4.2), or return the `K_7`
-directly.  Replacing the resulting independent neighbours by a generic
-"claw-free" contradiction is not available.
+This is the first equality residue of the marked adaptation.  The
+`|W|=2` form is now excluded by the independently audited literal decoder
+in [`hc7_marked_three_clique_w2_closure.md`](hc7_marked_three_clique_w2_closure.md).
+Thus the live balanced range is `3<=|W|<=5`, with all three marks in `W`
+and all three tails nonempty.  It is not the terminal `5+5+5` matrix cell
+(which is already audited and excluded); it is a binary-shore,
+marked-six-cut composition problem.  A proof must compose the crossing
+six-cuts in (4.2), or return the `K_7` directly.  Replacing the resulting
+independent neighbours by a generic "claw-free" contradiction is not
+available.
 
 ## 5. Trust boundary
 
@@ -264,6 +268,7 @@ Proved here:
 
 Not proved here:
 
-* the crossing-cut composition required by (4.1)--(4.2);
+* the crossing-cut composition required by (4.1)--(4.2) for
+  `3<=|W|<=5`;
 * the marked three-clique theorem; or
 * the global support-six theorem.

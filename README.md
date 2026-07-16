@@ -113,18 +113,27 @@ The following statements are proved and independently cold-audited.
 * The first marked replacements in the stronger theorem are now proved
   and cold-audited.  Every six-cut has exactly two open components; the
   `|W|=6` Mader branch is impossible; and the balanced equality branch is
-  impossible for `|W|<=1`.  The live equality residue has `2<=|W|<=5`
-  and a precise binary-shore form.  This advances the published
+  impossible for `|W|<=2`.  The new `|W|=2` decoder is literal: marked
+  minimum cuts force two clique rows to contact both marks, and a full
+  tail component splits a mark-to-mark path into the final two bags of a
+  `K_7` model.  The live balanced residue has `3<=|W|<=5`, all three marks
+  in `W`, and all three rows with tails.  This advances the published
   three-clique proof but does not prove the marked theorem.
 * Independently, a five-colouring of the common matching deletion with
   exactly two equal rows forces their four endpoints to induce `K_4`.
   Its four cross-edges are locally double-critical, two outside colours
   lock both rows simultaneously, and Menger gives either an exact-seven
-  boundary retaining the two named models or a labelled `K_6`.  A
+  boundary retaining the two named models or a labelled `K_6`.  In a
+  complementary formulation, any two opposite cross-edges yield three
+  disjoint connected carriers meeting all four endpoints; their unresolved
+  packaging requirement is pairwise carrier adjacency.  A
   nonmonotone member of the resulting four-linkage splits to a literal
   `K_7`.  A four-connected example shows that a prescribed raw
   nonmonotone path need not augment to such a linkage, even with the two
-  Kempe locks; additional global structure is indispensable.
+  Kempe locks.  The particular near-complete four-gate realization used
+  for that falsification is now itself excluded by one uniform literal
+  `K_7` decoder for all endpoint attachments; arbitrary four-connected
+  residues still require additional global structure.
 
 See
 [`hc7_matching_deletion_separator_lift.md`](results/hc7_matching_deletion_separator_lift.md),
@@ -151,10 +160,24 @@ The marked-cut reduction and its cold audit are
 [`hc7_marked_three_clique_cut_reduction.md`](active/hc7_marked_three_clique_cut_reduction.md)
 and
 [`hc7_marked_three_clique_cut_reduction_audit.md`](active/hc7_marked_three_clique_cut_reduction_audit.md).
+Its first live equality cell is closed in
+[`hc7_marked_three_clique_w2_closure.md`](active/hc7_marked_three_clique_w2_closure.md),
+with a separate
+[`cold audit`](active/hc7_marked_three_clique_w2_closure_audit.md).
 The exact-two-row linkage package and its cold audit are
 [`hc7_five_colour_exact_two_row_linkage.md`](active/hc7_five_colour_exact_two_row_linkage.md)
 and
 [`hc7_five_colour_exact_two_row_linkage_audit.md`](active/hc7_five_colour_exact_two_row_linkage_audit.md).
+The uniform repair of its four-gate example and the independent audit are
+[`hc7_exact_two_four_gate_decoder.md`](results/hc7_exact_two_four_gate_decoder.md)
+and
+[`hc7_exact_two_four_gate_decoder_audit.md`](results/hc7_exact_two_four_gate_decoder_audit.md).
+The edge-local three-carrier theorem, its audit, and the scoped packaging
+barrier are
+[`hc7_four_edge_double_critical_carriers.md`](active/hc7_four_edge_double_critical_carriers.md),
+[`hc7_four_edge_double_critical_carriers_audit.md`](active/hc7_four_edge_double_critical_carriers_audit.md),
+and
+[`hc7_four_edge_double_critical_packaging_barrier.md`](barriers/hc7_four_edge_double_critical_packaging_barrier.md).
 
 ## Audited frontier
 
