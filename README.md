@@ -64,6 +64,15 @@ The following statements are proved and independently cold-audited.
   signatures and has chromatic number five or six.  The exact new gap is
   to compose the three possibly overlapping regenerated path bags; no
   generic Kempe-equivalence or unrooted-model lift is being assumed.
+* A complementary palette-component invariant is also proved and cold
+  audited.  Contracting the components induced by any palette containing
+  all monochromatic deleted rows gives a quotient which cannot be coloured
+  by that palette.  For three rows, every all-equal colouring therefore
+  supplies a literal path for one named row using at most three colours;
+  in the common two-colour cell the sharper outcome is a row path or a
+  triangle of three disjoint labelled carriers.  This is useful carrier
+  geometry, but it does not allocate the three carriers to a common
+  singleton `K_4` and hence does not close `G1` or `G2` by itself.
 * There is now an exact state-level Kempe invariant.  From any nonempty
   equality state `D` and any equal row `e_i`, the unique colour missing
   from the named `K_4` gives either an `x_i-y_i` path in `K-Q_i`, or a
@@ -88,6 +97,10 @@ The state transition and its audit are
 [`hc7_missing_colour_matching_transition.md`](results/hc7_missing_colour_matching_transition.md)
 and
 [`hc7_missing_colour_matching_transition_audit.md`](results/hc7_missing_colour_matching_transition_audit.md).
+The palette-component theorem and its cold audit are
+[`hc7_kempe_component_odd_cycle.md`](results/hc7_kempe_component_odd_cycle.md)
+and
+[`hc7_kempe_component_odd_cycle_audit.md`](results/hc7_kempe_component_odd_cycle_audit.md).
 
 ## Audited frontier
 
