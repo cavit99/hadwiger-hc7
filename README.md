@@ -117,16 +117,17 @@ The following statements are proved and independently cold-audited.
   minimum cuts force two clique rows to contact both marks, and a full
   tail component splits a mark-to-mark path into the final two bags of a
   `K_7` model.
-* The next actual equality cell is now closed as well.  For `|W|=3`, a
-  four-linkage first gives a labelled `K_7^-` whose only missing pair is
-  between a reserved path bag and one marked row packet.  Split the
-  supported contracted mark in its seven-connected one-edge predecessor.
-  Expanding two distinct row cuts forces both literal endpoints of the
-  split edge to meet both required packets.  Putting one endpoint into the
-  reserved bag and the other into its old packet repairs the unique missing
-  pair and gives a literal `K_7`.  Thus the actual minimal-three-contraction
-  branch now has only `|W|=4,5` balanced cells.  The abstract marked theorem
-  can still have a `|W|=3` cell because it need not have such predecessors.
+* The entire actual balanced equality range `3<=|W|<=5` is now closed by
+  one uniform predecessor decoder.  Choose a row clique avoiding the at
+  most two unmarked vertices of `W`.  Four disjoint paths turn its literal
+  `K_4` into five core bags: every unmarked boundary endpoint is retained
+  as a simultaneous contact to both outside row packets, while one marked
+  endpoint is omitted.  The resulting seven bags have exactly one possible
+  missing adjacency.  Splitting that mark in its seven-connected one-edge
+  predecessor assigns one endpoint to the reserved path bag and its mate
+  to the old packet; minimum-cut fullness repairs the missing pair and gives
+  a literal `K_7`.  The unbalanced Mader outcomes remain open, as does the
+  abstract marked theorem without split-predecessor data.
 * Independently, a five-colouring of the common matching deletion with
   exactly two equal rows forces their four endpoints to induce `K_4`.
   Its four cross-edges are locally double-critical, two outside colours
@@ -191,6 +192,10 @@ and their independent audits are
 [`hc7_marked_three_clique_w3_fan_reduction.md`](results/hc7_marked_three_clique_w3_fan_reduction.md),
 [`hc7_marked_three_clique_w3_one_mark_decoder.md`](results/hc7_marked_three_clique_w3_one_mark_decoder.md), and
 [`hc7_marked_three_clique_w3_predecessor_closure.md`](results/hc7_marked_three_clique_w3_predecessor_closure.md).
+The uniform continuation through `|W|=4,5` and its cold audit are
+[`hc7_marked_three_clique_w45_predecessor_closure.md`](results/hc7_marked_three_clique_w45_predecessor_closure.md)
+and
+[`hc7_marked_three_clique_w45_predecessor_closure_audit.md`](results/hc7_marked_three_clique_w45_predecessor_closure_audit.md).
 
 ## Audited frontier
 

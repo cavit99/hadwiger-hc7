@@ -173,21 +173,25 @@ every marked six-cut has exactly two open components.  This eliminates the
 forcing makes the other two literal four-clique rows complete to both
 marks; splitting the path gives an explicit `K_7`.
 
-For `|W|=3`, the balanced cell first supplies two labelled `K_7^-` models.
-In the actual minimal-three-contraction branch, split the supported mark in
-its seven-connected one-edge predecessor.  Minimum-cut fullness at two
-different expanded row cuts makes both split endpoints meet both required
-row packets.  Assigning one endpoint to the reserved path bag and the other
-to its old packet repairs the sole missing adjacency and gives a literal
-`K_7`.  Thus the live balanced residue in that actual branch is `|W|=4,5`.
-The abstract marked theorem still has `|W|=3,4,5`, because predecessor
-connectivity is extra structure.  See
+The whole actual balanced range `3<=|W|<=5` is now closed by one uniform
+decoder.  Choose a row clique avoiding the at most two unmarked members of
+`W`.  A localized four-link uses every such unmarked member as a retained
+two-packet contact and leaves one marked endpoint omitted.  The resulting
+labelled `K_7^-` has a single possible missing pair.  Splitting that mark in
+its seven-connected predecessor transfers one literal endpoint to the
+reserved path bag and leaves the other with the row packet; expanded-cut
+fullness repairs the missing pair.  The abstract marked theorem can still
+have these cells because predecessor connectivity is extra structure, and
+the unbalanced Mader outcomes remain open.  See
 `hc7_marked_three_clique_cut_reduction.md`,
 `hc7_marked_three_clique_w2_closure.md`, and their adjacent cold audits.
 The new balanced-three chain and audits are
 `../results/hc7_marked_three_clique_w3_fan_reduction.md`,
 `../results/hc7_marked_three_clique_w3_one_mark_decoder.md`, and
 `../results/hc7_marked_three_clique_w3_predecessor_closure.md`.
+The uniform `|W|=4,5` continuation and audit are
+`../results/hc7_marked_three_clique_w45_predecessor_closure.md` and
+`../results/hc7_marked_three_clique_w45_predecessor_closure_audit.md`.
 
 There is now one uniform replacement for a bare boundary-state search.
 Contract an inclusion-minimal forest in the two open shores until the
