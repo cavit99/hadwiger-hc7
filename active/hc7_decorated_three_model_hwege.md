@@ -1,8 +1,11 @@
 # Decorated three-model `H`-path composition
 
-**Status:** active global proof attempt.  The packing and obstruction
-lemmas below are proved.  The boxed decoder in Section 4 is the exact
-statement under test; it is not yet proved.
+**Status:** active global proof attempt with one retracted decoder.  The
+packing and obstruction lemmas below are proved.  The boxed decoder in
+Section 4 is false; an exact 15-vertex falsifier is recorded in
+[`../barriers/hc7_decorated_hwege_genuine_cell_falsifier.md`](../barriers/hc7_decorated_hwege_genuine_cell_falsifier.md).
+The stronger minimal-bad quotient condition in Section 5 remains under
+test.
 
 This note treats the separated branch of the support-six programme without
 selecting portals inside a shore.  Its input is three pairwise disjoint
@@ -167,10 +170,10 @@ the other shore, restores the whole support of `M_i` in that same closed
 shore.  Formula (3.3) is the size of the expanded boundary.  Equation
 (1.1) makes a value at most seven equal to seven.  \(\square\)
 
-## 4. Exact live decoder
+## 4. Retracted genuine-cell decoder
 
-The following standard-language statement is sufficient to finish the
-proposed theorem.
+The following standard-language statement would have been sufficient to
+finish the proposed theorem, but it is false.
 
 \[
 \boxed{
@@ -183,22 +186,24 @@ most seven.
 \]
 
 A direct `K_7` decoder for every maximal certificate in which all genuine
-cells have expanded boundary at least eight is an equivalent way to prove
-this sufficient statement.  A model-preserving exact-seven cut might in
-principle exist outside the selected certificate, so (4.1) is not claimed
-to characterize every possible handoff.  This is the only part not proved
-here.
+cells have expanded boundary at least eight would likewise have sufficed.
+However, the barrier cited above consists of three disjoint marked
+`K_5`s covering all fifteen vertices.  It has weighted separator order
+seven and no `K_7` minor.  Since every vertex is a named terminal, every
+Mader cell has `Y_j=X_j`; no genuine cell exists at all.  Thus (4.1) is
+retracted, not merely open.
 
-The already known dense indivisible-bundle example does not refute (4.1):
-its Mader set has ordinary order four, contains all three `z_i`, and
-expands to an order-seven separator.  It therefore lands exactly in
-Lemma 3.2 (and in fact also contains a displayed `K_7`).
+The falsifier has ordinary connectivity five.  Its seven minimum
+five-cuts each contain exactly two marks.  It therefore does **not**
+refute the six-connected marked theorem in Section 5, nor the actual
+minimal-three-contraction setting in which every proper predecessor is
+seven-connected.  Exact search also finds that every minimum two-edge
+augmentation repairing those five-cuts already has a `K_7` minor.  This
+is evidence only, not a proof of the stronger theorem.
 
-The proof attempt should now specialize the published three-clique
-argument to the disjoint-clique case and replace each use of ordinary
-seven-connectivity by either (1.1) or Lemma 3.2.  A route which merely
-classifies the labels inside the `X_j` without proving (4.1) is not a
-proof-spine advance.
+The proof attempt must therefore retain ordinary six-connectivity and the
+all-three-marks property of six-cuts, or the still stronger literal
+split-predecessor data.  Weighted separator order alone is exhausted.
 
 ## 5. Stronger minimal-triple formulation
 

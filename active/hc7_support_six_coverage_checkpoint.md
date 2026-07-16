@@ -153,6 +153,28 @@ prove the marked three-clique theorem.  See
 `hc7_decorated_three_model_hwege.md` and
 `hc7_weighted_klnz_terminal_decoder.md`, with the adjacent cold audit.
 
+The stronger-looking weighted genuine-cell shortcut is false.  A
+15-vertex graph formed from a planar 3-tree and three marked vertices has
+three disjoint marked `K_5`s covering its vertex set, minimum expanded
+separator order seven, no genuine Mader cell, and no `K_7` minor.  Its
+ordinary connectivity is only five, and each minimum five-cut omits one
+mark.  Consequently the live successor must retain ordinary
+six-connectivity plus the condition that every six-cut contains all three
+marks (or the full split-predecessor data); it cannot use weighted cut
+order alone.  See
+`../barriers/hc7_decorated_hwege_genuine_cell_falsifier.md` and its exact
+verifier.
+
+The stronger marked theorem has now been carried through two additional
+steps of the published three-clique proof.  In a `K_7`-minor-free candidate
+every marked six-cut has exactly two open components.  This eliminates the
+`|W|=6` Mader branch and the balanced equality branch for `|W|<=1`.  The
+remaining balanced equality cells have `2<=|W|<=5`: at `|W|=2` there is one
+tail and two literal four-clique rows, while for `3<=|W|<=5` all three rows
+have tails and all three marks lie in `W`.  The crossing-cut composition in
+those cells is open.  See `hc7_marked_three_clique_cut_reduction.md` and its
+adjacent cold audit.
+
 There is now one uniform replacement for a bare boundary-state search.
 Contract an inclusion-minimal forest in the two open shores until the
 quotient is five-colourable.  Every one-edge predecessor is exactly
@@ -373,6 +395,18 @@ state, either a labelled path in `K-Q_i` or an exact legal contraction
 state carried by one literal two-colour component.  From the all-equal
 state the first non-path move strictly lowers the equality-set size from
 three to one or two.
+
+In the five-colour cell, an exact state with precisely two equal rows has a
+second audited description.  The four row endpoints induce `K_4`; every
+cross-edge is edge-locally double-critical; and at least two outside colours
+simultaneously lock both rows.  After deleting the endpoint `K_4`, Menger
+returns either an exact-seven boundary preserving the two named models or
+four disjoint core-to-core paths, which together with the two rows form a
+labelled `K_6`.  Any nonmonotone member splits to `K_7`.  Connectivity and
+the two locks alone cannot force the required augmentation: an explicit
+four-connected gate has a raw nonmonotone prescribed path but every
+four-linkage is monotone.  See `hc7_five_colour_exact_two_row_linkage.md`
+and its adjacent cold audit.
 
 The open composition theorem must use one common all-equal colouring,
 its three complementary colour pairs, and the weighted separator rank to

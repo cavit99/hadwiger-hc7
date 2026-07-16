@@ -101,6 +101,30 @@ The following statements are proved and independently cold-audited.
   earlier fan/cell induction needed to reach it.  The clean theorem still
   under test is: a six-connected graph with three disjoint marked `K_5`s in
   which every six-cut contains all three marks has a `K_7` minor.
+* The tempting weaker decoder based only on weighted separator order is
+  now decisively false.  There is an exact 15-vertex graph with three
+  disjoint marked `K_5`s covering its vertices, weighted separator order
+  seven, no genuine Mader cell, and no `K_7` minor.  Its ordinary
+  connectivity is five: every minimum five-cut omits exactly one mark.
+  Thus ordinary six-connectivity and the all-three-marks condition are
+  essential, not bookkeeping.  Every minimum two-edge augmentation of
+  this graph that repairs all five-cuts already has a `K_7`, but that is
+  finite evidence rather than an unbounded proof.
+* The first marked replacements in the stronger theorem are now proved
+  and cold-audited.  Every six-cut has exactly two open components; the
+  `|W|=6` Mader branch is impossible; and the balanced equality branch is
+  impossible for `|W|<=1`.  The live equality residue has `2<=|W|<=5`
+  and a precise binary-shore form.  This advances the published
+  three-clique proof but does not prove the marked theorem.
+* Independently, a five-colouring of the common matching deletion with
+  exactly two equal rows forces their four endpoints to induce `K_4`.
+  Its four cross-edges are locally double-critical, two outside colours
+  lock both rows simultaneously, and Menger gives either an exact-seven
+  boundary retaining the two named models or a labelled `K_6`.  A
+  nonmonotone member of the resulting four-linkage splits to a literal
+  `K_7`.  A four-connected example shows that a prescribed raw
+  nonmonotone path need not augment to such a linkage, even with the two
+  Kempe locks; additional global structure is indispensable.
 
 See
 [`hc7_matching_deletion_separator_lift.md`](results/hc7_matching_deletion_separator_lift.md),
@@ -119,6 +143,18 @@ The new conditional composition notes and cold audit are
 [`hc7_weighted_klnz_terminal_decoder.md`](active/hc7_weighted_klnz_terminal_decoder.md),
 and
 [`hc7_weighted_klnz_terminal_decoder_audit.md`](active/hc7_weighted_klnz_terminal_decoder_audit.md).
+The exact weighted-decoder falsifier and its verifier are
+[`hc7_decorated_hwege_genuine_cell_falsifier.md`](barriers/hc7_decorated_hwege_genuine_cell_falsifier.md)
+and
+[`hc7_decorated_hwege_genuine_cell_falsifier_verify.py`](barriers/hc7_decorated_hwege_genuine_cell_falsifier_verify.py).
+The marked-cut reduction and its cold audit are
+[`hc7_marked_three_clique_cut_reduction.md`](active/hc7_marked_three_clique_cut_reduction.md)
+and
+[`hc7_marked_three_clique_cut_reduction_audit.md`](active/hc7_marked_three_clique_cut_reduction_audit.md).
+The exact-two-row linkage package and its cold audit are
+[`hc7_five_colour_exact_two_row_linkage.md`](active/hc7_five_colour_exact_two_row_linkage.md)
+and
+[`hc7_five_colour_exact_two_row_linkage_audit.md`](active/hc7_five_colour_exact_two_row_linkage_audit.md).
 
 ## Audited frontier
 
