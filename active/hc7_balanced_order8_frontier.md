@@ -32,6 +32,33 @@ with the following audited properties.
    `R`; for either edge its two endpoint nonneighbour sets in `R` are
    nonempty and disjoint.
 
+The remaining branch has additional audited structure.  Write
+
+\[
+                      L=R\cup\{\ell_e,\ell_f\},
+\]
+
+where `L` is the original five-clique and `C` is the open component
+containing its two displayed vertices.  After contracting `e,f` and
+deleting `R`, the resulting graph is a spanning subgraph of an
+`(ell_e,ell_f,z_e,z_f)`-web.  The missing two-path linkage is precisely
+the same-index pairing `ell_e-z_e,ell_f-z_f`.  The image of the second
+five-clique is contained in `T union X_T` for the unique facial triangle
+`T` on the virtual edge `z_e z_f`, and its vertices outside `T` lie in the
+opposite open component.
+
+Moreover, after excluding a `K_7` minor and an actual order-seven
+separation, the graph
+
+\[
+                         C-\{\ell_e,\ell_f\}
+\]
+
+is connected.  It is met by `x` and by both clique vertices, contacts both
+`V(e)` and `V(f)`, and misses one or two boundary vertices, including a
+vertex of `R`.  Thus the live obstruction is no longer an arbitrary web or
+an arbitrary collection of exterior components.
+
 Put
 
 \[
@@ -71,7 +98,110 @@ five-leaf-star reduction.  It would not orient the earlier order-seven
 outputs, close the other private-pair kernels, or prove the full
 support-six transversal theorem.
 
-## 3. Constructive mechanism under test
+## 3. Proved structural exits
+
+Two label-preserving branch-set constructions now close infinite
+subfamilies.
+
+1. The [asymmetric shore split](../results/hc7_star_order_eight_asymmetric_shore_split.md)
+   gives a `K_7` minor from two disjoint connected subgraphs having its
+   stated boundary contacts.
+2. The [split-edge completion](../results/hc7_star_order_eight_split_edge_completion.md)
+   needs an `ell_f`--`x` connected subgraph and a disjoint
+   `ell_e`--`V(e)` connected subgraph; it uses the endpoints of `f` in two
+   different branch sets.
+
+The [disconnected leaf-side theorem](../results/hc7_star_order_eight_disconnected_leaf_side_completion.md)
+combines the second construction with seven-connectivity.  It proves that
+deleting `ell_e,ell_f` cannot disconnect `C`, and also excludes the case in
+which every `x`--`C` edge ends at those two vertices.  This is an unbounded
+closure, not a finite boundary census.
+
+The canonical web explains why the last two-path problem cannot be solved
+from planar routing alone: the required terminal pairs alternate on its
+outer frame.  The next step must use contraction-critical colouring data
+or a different minor model.
+
+## 4. Host-level colouring invariant
+
+Let
+
+\[
+                         g=\ell_e\ell_f
+\]
+
+and choose an edge `h` of the second five-clique with both ends in `D`.
+Such an edge exists as follows.  The clique is disjoint from `R`; because
+`e,f` are anticomplete it meets endpoints of at most one of them, and it
+may additionally meet `x`.  It therefore has at most three vertices on
+`S`.  Rooted-web localization puts all its other vertices in `D`, so at
+least two adjacent clique vertices lie there.  The two edge deletions are
+operations in opposite open shores.
+The audited
+[opposite-shore incompatibility theorem](../results/hc_opposite_shore_minor_response_incompatibility.md)
+therefore gives the following global facts.
+
+- Every six-colouring of `G-g` induces a boundary partition different
+  from every partition induced by a six-colouring of `G-h`.
+- In a colouring of `G-g`, the ends of `g` have one colour and are joined
+  in every corresponding two-colour subgraph.  The symmetric five Kempe
+  connections hold for `h` in every colouring of `G-h`.
+- More generally, the boundary-partition response languages of all
+  proper minor operations internal to the two opposite shores are
+  disjoint.
+
+This is the correct global invariant, but it is an elementary gluing
+constraint rather than a completion theorem.  Abstract disjoint response
+languages can exist.
+
+Put `H=G-{g,h}`, with both operations interpreted as edge deletions.  The
+edges `g,h` are disjoint and there is no cross-edge between their endpoint
+sets because they lie in distinct components of `G-S`.  Seven-connectivity
+also implies that deleting these two edges leaves a connected graph.  The
+audited [common-deletion theorem](../results/hc7_common_edge_deletion_k6_fork.md)
+gives `chi(H)=6`, a spanning `K_6` model, and the response signatures
+
+\[
+                  (\mathrm{equal},\mathrm{proper}),\qquad
+                  (\mathrm{proper},\mathrm{equal}),
+\]
+
+while `(proper,proper)` is impossible.  The separately audited
+[double-contraction theorem](../results/hc7_common_host_double_contraction_lock_allocation.md)
+supplies `(equal,equal)`.
+
+The immediate proof obligation is to close the following exhaustive
+transition alternatives in the six-colouring Kempe graph of `H`:
+
+1. some `(equal,proper)` colouring is adjacent by one Kempe interchange to
+   some `(proper,equal)` colouring;
+2. no such adjacency exists, but some Kempe component contains a colouring
+   of each type, in which case every path between the two types in that
+   component meets an `(equal,equal)` colouring; or
+3. no Kempe component contains both response types.
+
+The audited
+[opposite critical-edge transition theorem](../results/hc7_opposite_critical_edge_transition.md)
+handles the first alternative.  Write `g=ab` and start from the colouring in
+which `a,b` have colour `alpha`.  A direct switch uses an
+`alpha`--`beta` component containing exactly one of `a,b` and exactly one
+end of `h`.  In `G-g=H+h`, edge-criticality puts `a,b` in one
+`alpha`--`beta` component.  They lie in distinct such components in `H`,
+and `h` is the only restored edge, so `h` joins those two components.
+Thus two disjoint bichromatic components each contain one end of `g` and
+one end of `h`.  What remains is a
+label-preserving absorption of those components into a `K_7` model.  In
+the second alternative the double-contraction response must be coupled to
+the spanning `K_6` model.  In the third, the separation of the two
+whole-host response types must yield an actual order-seven separation or
+a two-vertex set of support height at least seven.
+
+No known general Kempe-equivalence theorem applies to `H`: it need not be
+five-degenerate, regular, planar, or `K_5`-minor-free.  Connectivity of the
+colouring graph must therefore be proved from the exact host hypotheses or
+retained as a genuine alternative.
+
+## 5. Exact matched-pair traces
 
 Fix a perfect matching `M` of `F`.  For every pair `{a,b} in M` and either
 shore, the connected set consisting of the opposite shore together with
@@ -95,7 +225,7 @@ is the preferred branch-set endpoint: once a compact labelled
 component plus a universal boundary vertex remain, it constructs the
 `K_k` minor directly.
 
-## 4. Guardrails
+## 6. Guardrails
 
 - Four-colourability of `G[S]`, or the perfect matching in `F`, does not
   synchronize the two shore extensions.  The state-free counterexamples
@@ -107,11 +237,25 @@ component plus a universal boundary vertex remain, it constructs the
 - Simultaneous singletonization gives a spanning `K_7`-minus-one-edge
   model, but an unranked near-complete-model rotation or a separator of
   order greater than seven is not a terminal outcome.
+- In the planar skeleton of the canonical web the two naive split-edge
+  demands join alternating terminal pairs.  Planar routing alone cannot
+  supply them, and connectivity alone does not force either linkage.
+- Two missing-colour paths or a static family of edge-deletion signatures
+  do not by themselves align branch-set labels.  A successful transition
+  must display the `K_7` branch sets, a common boundary partition, or the
+  exact separator/support output.
+- Even Kempe connectivity between the two response families is
+  insufficient: the audited
+  [opposite-response barrier](../barriers/hc7_opposite_response_kempe_bridge_barrier.md)
+  is eight-connected and has a shortest transition through
+  `(equal,equal)` but no direct switch or common restorable boundary
+  response.  It contains a `K_7` minor and is not minor-minimal, so those
+  global hypotheses must perform the remaining decoding.
 - Do not restart a census of eight-vertex boundary graphs.  The matching
   is already known; the missing information is how its exact traces are
   realized inside the two shores.
 
-## 5. Immediate dependencies
+## 7. Immediate dependencies
 
 Read each promoted theorem with its adjacent audit:
 
@@ -119,6 +263,14 @@ Read each promoted theorem with its adjacent audit:
 - [rooted-four reduction and exact order-eight output](../results/hc7_star_kernel_rooted_four_contraction.md)
 - [endpoint-contact rigidity](../results/hc7_star_order_eight_endpoint_contacts.md)
 - [elimination of the no-perfect-matching shifted residue](../results/hc7_shifted_boundary_completion.md)
+- [canonical rooted-web localization](../results/hc7_star_order_eight_rooted_web.md)
+- [asymmetric shore split](../results/hc7_star_order_eight_asymmetric_shore_split.md)
+- [split-edge completion](../results/hc7_star_order_eight_split_edge_completion.md)
+- [completion after deleting the two clique vertices disconnects their shore](../results/hc7_star_order_eight_disconnected_leaf_side_completion.md)
+- [opposite-shore proper-minor incompatibility](../results/hc_opposite_shore_minor_response_incompatibility.md)
+- [direct Kempe transition between the opposite critical edges](../results/hc7_opposite_critical_edge_transition.md)
+- [common two-edge-deletion `K_6` fork](../results/hc7_common_edge_deletion_k6_fork.md)
+- [common double-contraction response](../results/hc7_common_host_double_contraction_lock_allocation.md)
 - [uniform compact-model boundary completion](../results/hc_uniform_boundary_repair_completion.md)
 
 The broader dependency chain and the still-open branches are recorded in

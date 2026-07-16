@@ -57,6 +57,28 @@ model and is independently audited.  Its boundary order now matches an
 actual minimum cut at parameter `k`, but no claim is made that every earlier
 order-seven output has the required compact-model placement.
 
+The balanced branch has also acquired an audited rooted structure.  The
+quotient obtained after deleting the common three-clique and contracting
+the two defect edges is a spanning subgraph of the canonical four-root web;
+the missing linkage is the same-index crossing pairing.  The image of the
+second disjoint five-clique is contained in the unique facial triangle on
+the virtual outer edge together with that triangle's permitted attachment
+clique; its vertices outside the triangle lie in the opposite component.
+Lifting the triangle gives the exact order-eight boundary with two
+boundary-full components.
+
+Two explicit branch-set constructions close infinite subfamilies of this
+web obstruction.  Most importantly, deleting the two leaf vertices of the
+original five-clique cannot disconnect their open shore unless a `K_7`
+minor or an actual order-seven separation already exists.  The same theorem
+excludes the case in which all contacts from the distinguished boundary
+vertex to that shore end at the two leaves.  Consequently the remaining
+leaf-side interior is one connected near-full graph, met by both leaves and
+the distinguished boundary vertex, contacting both defect edges and
+missing one or two boundary vertices including a vertex of the common
+three-clique.  This is an unbounded hand closure; it does not eliminate the
+last connected web obstruction.
+
 ### Exact open theorem
 
 The closure above applies when the complement of the eight-vertex boundary
@@ -69,14 +91,52 @@ This balanced boundary partition does not by itself extend compatibly
 through both shores.  State-free examples show that four-colourability,
 full boundary contact, and the join-minor exclusion are insufficient.
 
-The new target is therefore a **label-preserving balanced order-eight
-completion theorem**.  It must combine:
+The target remains a **label-preserving balanced order-eight completion
+theorem**.  Its new host-level formulation combines:
 
 - exact matched-pair traces obtained by contracting either full shore with
   one matched nonedge;
 - the original five-clique and its labelled defect edges;
 - the second disjoint five-clique; and
-- proper-minor six-colourings.
+- proper-minor six-colourings of two edges in opposite shores.
+
+Let `g` be the edge between the two leaf vertices and let `h` be an edge of
+the second five-clique internal to the opposite shore.  Boundary partitions
+returned by all six-colourings of `G-g` are disjoint from those returned by
+all six-colourings of `G-h`; otherwise the unmodified halves cross-glue to
+a six-colouring of `G`.  This opposite-shore incompatibility is an audited
+uniform separator-gluing fact.  It is useful consolidation, not a novel
+deep theorem.
+
+For the common deletion `H=G-{g,h}`, the two one-edge restorations give the
+opposite signatures `(equal,proper)` and `(proper,equal)`, the signature
+`(proper,proper)` is forbidden, and double contraction supplies
+`(equal,equal)`.  The graph `H` also has a spanning `K_6` model.  The
+immediate transition problem is therefore exhaustive:
+
+1. some colouring of one response type is adjacent by one Kempe
+   interchange to a colouring of the other type;
+2. no such adjacency exists, but one Kempe component contains both types,
+   so every path between them in that component passes through an
+   `(equal,equal)` colouring; or
+3. no Kempe component contains both types.
+
+A direct switch forces two disjoint bichromatic components pairing the
+ends of `g` with the ends of `h`, but those paths have not yet been absorbed
+label-faithfully into a `K_7` model.  The second branch still needs a split
+of the spanning `K_6` model, and the third needs an actual order-seven
+separator or a pair of support height at least seven.  No general
+Kempe-equivalence theorem presently justifies discarding the third branch.
+
+An audited sixteen-vertex barrier shows that the second branch is genuine
+under all the tempting local hypotheses: it is eight-connected, has a full
+order-eight separation, realizes all three allowed signatures, contains a
+literal `K_6` in the common deletion, and has a shortest response path of
+length two through `(equal,equal)`.  It nevertheless has no direct switch
+and no common restorable boundary response.  The example contains a `K_7`
+minor and is not minor-minimal, so it identifies exactly where the true
+host hypotheses still have to enter; it is not a counterexample to the
+target theorem.
 
 The required output is an explicit `K_7` model, a common boundary partition
 which glues the two shore colourings, a pair of support height at least
@@ -94,6 +154,12 @@ Principal new audited results:
 
 - [`hc7_shifted_boundary_completion.md`](results/hc7_shifted_boundary_completion.md)
 - [`hc_uniform_boundary_repair_completion.md`](results/hc_uniform_boundary_repair_completion.md)
+- [`hc7_star_order_eight_rooted_web.md`](results/hc7_star_order_eight_rooted_web.md)
+- [`hc7_star_order_eight_split_edge_completion.md`](results/hc7_star_order_eight_split_edge_completion.md)
+- [`hc7_star_order_eight_disconnected_leaf_side_completion.md`](results/hc7_star_order_eight_disconnected_leaf_side_completion.md)
+- [`hc_opposite_shore_minor_response_incompatibility.md`](results/hc_opposite_shore_minor_response_incompatibility.md)
+- [`hc7_opposite_critical_edge_transition.md`](results/hc7_opposite_critical_edge_transition.md)
+- [`hc7_common_host_double_contraction_lock_allocation.md`](results/hc7_common_host_double_contraction_lock_allocation.md)
 - [`hc7_theta_two_defect_exchange.md`](results/hc7_theta_two_defect_exchange.md)
 - [`hc7_mixed_shore_two_component_exchange.md`](results/hc7_mixed_shore_two_component_exchange.md)
 - [`hc7_boundary_anchored_model_completion.md`](results/hc7_boundary_anchored_model_completion.md)
