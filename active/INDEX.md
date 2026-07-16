@@ -5,37 +5,42 @@
 
 ## Primary target
 
-[Critical completion of a singleton-root `K_7`-minus-one-edge model](hc7_two_root_colouring_space_frontier.md)
+[Endpoint-rigid order-eight mixed-shore exchange](hc7_endpoint_rigid_mixed_shore_frontier.md)
 
 Immediate proved inputs, each to be read with its adjacent audit:
 
-- [common host and universal two-root colouring cover](../results/hc7_two_singleton_common_host.md)
-- [direct orientation-changing Kempe transition](../results/hc7_two_root_kempe_orientation_transition.md)
-- [root-contact Kempe fan](../results/hc7_root_contact_kempe_fan.md)
-- [dominating-`K_5` regeneration after deleting two vertices](../results/hc7_dominating_k5_regeneration.md)
-- [low-colour connected-subgraph alignment or normalized separation](../results/hc7_chromatic_subgraph_capture_or_avoid.md)
-- [uniform complete-factor join dichotomy](../results/hc7_join_near_clique_dichotomy.md)
-- [two-vertex dominating-model transversal gives an order-seven separation](../results/hc7_k5_transversal_order_seven_separation.md)
+- [named-edge Gallai--Edmonds reduction](../results/hc7_eight_boundary_named_edge_gallai_reduction.md)
+- [endpoint-contact rigidity](../results/hc7_star_order_eight_endpoint_contacts.md)
+- [endpoint-rigid Gallai--Edmonds collapse](../results/hc7_endpoint_rigid_gallai_exchange.md)
+- [boundary-anchor completion and the exact mixed model](../results/hc7_boundary_anchored_model_completion.md)
+- [uniform common-neighbour completion](../results/hc7_common_neighbour_model_completion.md)
+- [component-contact trichotomy](../results/hc7_mixed_shore_component_contacts.md)
+- [component exchange and three-row label alignment](../results/hc7_mixed_shore_two_component_exchange.md)
+- [two-row defect exchange and shifted order-eight separator](../results/hc7_theta_two_defect_exchange.md)
 
 Immediate guardrails:
 
-- [opposite root orientations may lie in different Kempe classes](../barriers/hc7_two_root_kempe_class_icosahedron_barrier.md)
-- [commuting Kempe transitions need not create an uncovered colouring](../barriers/hc7_two_root_kempe_causal_support.md)
-- [near-`K_7` branch-set rotation can be an involution](../barriers/hc7_near_k7_rotation_involution_barrier.md)
-- [normalized domination reaches the sharp `(7,0)` separator without criticality](../barriers/hc7_normalized_separator_icosahedron_barrier.md)
+- the legal split/contracted slices of the Mader representation do not obey
+  ordinary symmetric exchange;
+- the Gallai--Edmonds set of a static boundary need not meet every small
+  regenerated model; and
+- boundary-contact counting is exhausted once each residual component has
+  exactly one missed contact.
 
-The immediate open theorem is the high-connectivity compression of the
-normalized dominating-model separator stated in Section 4 of the primary
-target. Its aligned-path branch requires a label-preserving exchange with
-the pre-existing five branch sets.
+The immediate open theorem is the shifted order-eight exchange stated in
+Section 3 of the primary target: transfer a proper-minor colouring or a
+regenerated labelled model across the new boundary while strictly decreasing
+the open-side order, or obtain a `K_7` minor, a height-seven pair, or an
+actual model-preserving order-seven separation.
 
 ## Frozen prior programme
 
-The support-six transversal programme remains a developed dependency chain,
-but it is not the current research engine:
+The broader support-six and two-root colouring programmes remain developed
+dependency chains, but neither is the current research engine:
 
 - [technical frontier](hc7_support_six_frontier.md)
 - [claim-by-claim coverage checkpoint](hc7_support_six_coverage_checkpoint.md)
+- [two-root colouring-space frontier](hc7_two_root_colouring_space_frontier.md)
 
 Revive a result from that programme only when it supplies an explicit
 minor-model construction, separator, or proper-minor transition required by

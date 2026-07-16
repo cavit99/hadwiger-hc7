@@ -6,12 +6,102 @@
 This file records the current mathematical dependency chain. The concise
 list of live files is [`active/INDEX.md`](active/INDEX.md), and the current
 technical statement is
-[`active/hc7_two_root_colouring_space_frontier.md`](active/hc7_two_root_colouring_space_frontier.md).
+[`active/hc7_endpoint_rigid_mixed_shore_frontier.md`](active/hc7_endpoint_rigid_mixed_shore_frontier.md).
 If an archived note conflicts with this ledger, this ledger governs the
-current programme. Sections 1--6 below retain the developed support-six
-programme as a frozen dependency chain; it is no longer the primary engine.
+current programme. The later two-root and support-six sections retain
+developed dependency chains but are not the current engine.
 
-## Current strategic frontier
+## Current strategic frontier: endpoint-rigid order-eight exchange
+
+The active goal is still the maximal-pair support-height exchange at level
+six.  The labelled Mader/delta-matroid route has been decisively falsified
+at the required legal-slice level: its ordinary symmetric exchange does not
+preserve the split-versus-contracted branch-set data, and its endpoint
+signature does not determine support height.  The live proof therefore uses
+the canonical Gallai--Edmonds decomposition in the remaining two-edge,
+order-eight branch.
+
+### Audited structural collapse
+
+In the endpoint-rigid no-perfect-matching branch, the current audited chain
+gives an eight-vertex separator `S` with two connected open components
+`U,V`, each adjacent to every vertex of `S`.  There are distinct
+`s,x in S` such that `s` is universal in `G[S]`, and
+`G[S-{s,x}]` is the theta graph formed by an edge and two internally
+disjoint length-three paths with the same ends.  The quotient obtained by
+contracting `U,V` in `G-{s,x}` has no `K_5` model supported on at most six
+vertices.
+
+Every minimum support-six `K_5` model in `G-{s,x}` consequently has, after
+orienting the two sides, branch sets
+
+`{u_1},...,{u_h}, {w_1},...,{w_{4-h}}, {v,t}`,
+
+where `h` is two or three, the `u_i` lie in `U`, `v` lies in `V`, and
+`t,w_j` lie on the boundary.  This is no longer an arbitrary model-meeting
+claim: it is an exact two-side normal form with three possible endpoint
+nonadjacency patterns.
+
+Three uniform linkage theorems now sharpen that form.
+
+1. A general common-neighbour completion theorem says that in a
+   `k`-connected graph, adjacent vertices with at least `k` common
+   neighbours complete every `K_{k-2}` model of support at most `k-1`, or
+   expose an actual order-`k` separation.  It eliminates `V={v}` here.
+2. Every component of `V-v` either completes the model to `K_7`, exposes an
+   actual order-seven separation, or has exactly one missed contact in
+   `S`, belonging to `s,t,w_1,...,w_{4-h}`.
+3. A component missing only `t` gives an explicit `K_7` model.  When
+   `h=3`, components with different remaining missed labels also give an
+   explicit `K_7`; hence all components then miss the same one of `s,w_1`.
+4. When `h=2`, a two-path anchoring and a two-element Hall argument shows
+   that components with different missed labels among `s,w_1,w_2` also
+   give an explicit `K_7` model.  This is a hand theorem, not a finite
+   theta census.
+
+These are hand proofs with adjacent GREEN internal audits.  They eliminate
+infinite families and do not rely on finite boundary enumeration.
+
+### Exact open theorem
+
+All components of `V-v` now have one common missed boundary vertex
+`y in {s,w_1,...,w_{4-h}}`.  Therefore
+
+`N_G(V-v)={v} union (S-{y})`
+
+is an actual order-eight separator.  Every component on the `V-v` side is
+adjacent to all eight vertices of this shifted boundary, while the old
+support-six `K_5` model is contained in the opposite closed side.
+
+The genuinely unbounded residue is state transfer across this shifted
+separator.  The required theorem must use a deletion or contraction inside
+`V-v` to regenerate a small `K_5` model or a boundary colouring and obtain
+one of:
+
+1. an explicit `K_7`-minor model;
+2. a pair `P'` with `mu_G(P')>=7`;
+3. an actual order-seven separation preserving the named branch sets and
+   strictly decreasing the chosen open-side order; or
+4. a regenerated model with a strict decrease in a stated intersection
+   parameter.
+
+Static Gallai--Edmonds transversals, contact counts, and relabelling cycles
+are insufficient.  Open-side order can become a well-founded rank only
+after the exact colouring partition and named model are shown to survive
+the shift.  The current statement, dependencies, and guardrails are in
+[`active/hc7_endpoint_rigid_mixed_shore_frontier.md`](active/hc7_endpoint_rigid_mixed_shore_frontier.md).
+
+Principal new audited results:
+
+- [`hc7_eight_boundary_named_edge_gallai_reduction.md`](results/hc7_eight_boundary_named_edge_gallai_reduction.md)
+- [`hc7_endpoint_rigid_gallai_exchange.md`](results/hc7_endpoint_rigid_gallai_exchange.md)
+- [`hc7_boundary_anchored_model_completion.md`](results/hc7_boundary_anchored_model_completion.md)
+- [`hc7_common_neighbour_model_completion.md`](results/hc7_common_neighbour_model_completion.md)
+- [`hc7_mixed_shore_component_contacts.md`](results/hc7_mixed_shore_component_contacts.md)
+- [`hc7_mixed_shore_two_component_exchange.md`](results/hc7_mixed_shore_two_component_exchange.md)
+- [`hc7_theta_two_defect_exchange.md`](results/hc7_theta_two_defect_exchange.md)
+
+## Previous two-root frontier (frozen)
 
 ### Clean target
 
