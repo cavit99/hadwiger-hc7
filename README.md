@@ -66,7 +66,10 @@ input to `G1/G2`, not a third closed branch.
    pentagon.  Combining its two actual rooted-bag chords with the audited
    cycle decoder closes the entire normalized arm-order-six overlap-four
    cross-arm cell to a literal `K_7`.  This is a uniform unbounded theorem,
-   not a bounded-order census.
+   not a bounded-order census.  At eight terminals there is now a second
+   uniform theorem: the terminals root `C_8`, `K_{3,5}`, or one explicit
+   twisted `K_{3,5}` carrier.  Its hand proof and independent audit are
+   complete.
 5. **Four-connected rooted clique-or-fan composition.**  Given at least
    five prescribed terminals in a four-connected graph and a fixed anchor
    triple, either one anchored four-set roots `K_4`, or all terminals lie on
@@ -184,11 +187,14 @@ order-five arms is terminal.  The only live positive-overlap rigid cell is
 order-six arms at overlap one, alongside the separated-triple branch.
 Every two-set in the avoided support meeting the overlap still forces a
 compulsory double-root model.  The next concrete cell is the
-order-six-arm, overlap-one interface.  Deleting its single overlap vertex
-leaves a six-connected graph with eleven exterior terminals.  The next
-structural choice is a labelled four-connected carrier after two reserved
-vertices, or an exact eight-terminal kernel after three; raw state
-enumeration without such a carrier theorem is not the target.
+order-six-arm, overlap-one interface.  A complete exact eight-terminal
+kernel bundle was derived and tested here, but it does **not** close this
+interface.  The first of 142 minimal state orbits defeats every one of the
+165 overlap-plus-triple reserves and, more strongly, every one of all 495
+arbitrary four-vertex reserves.  Independent exact and SMT minor checks
+agree.  Thus another single rooted carrier cannot be the next step: the
+proof must couple several regenerated models, retain ambient contraction
+data, or establish a simultaneous split-row/separator exchange.
 
 ### G2. Forest-to-carrier composition
 
@@ -224,6 +230,10 @@ Do not retry the following without a materially new hypothesis.
 * Four-colourability, two-shore join exclusion, and every private-block
   query do not force a common boundary state.  The two parity languages on
   `K_4 dotcup K_4` are disjoint.
+* The exact eight-terminal kernel bundle does not universally compose the
+  remaining order-six-arm overlap-one cell, even when any four boundary
+  vertices may be reserved.  See
+  [`barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md`](barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md).
 * Unrooted quotient regeneration supplies no labelled carrier by itself.
 * No further union-size or Moser census is active.
 

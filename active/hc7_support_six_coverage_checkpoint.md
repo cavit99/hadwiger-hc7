@@ -260,6 +260,17 @@ literal-lift audits:
 * `../results/hc7_overlap_two_order_six_seven_terminal_kernel_closure.md`;
 * `../results/hc7_overlap_one_order_five_seven_terminal_kernel_closure.md`.
 
+The corresponding eight-terminal layer is now understood as well.  Every
+eight prescribed vertices in a simple three-connected graph root `C_8`,
+`K_{3,5}`, or one explicit twisted `K_{3,5}`; an exact catalogue keeps the
+one- and two-nonterminal contacts.  This does **not** close the next cell.
+For order-six arms at overlap one, the relation has 132,000 inclusion minima
+in 142 symmetry orbits.  Its first orbit defeats all 165 reserves containing
+the overlap and all 495 arbitrary four-vertex reserves, already against an
+order-eight kernel.  Exact branch-set enumeration and an independent SMT
+encoding agree.  This is a barrier to single-kernel composition, not to the
+rooted-carrier theorem or to `HC_7`.
+
 The rigid structure also returns a global labelled family absent from the
 original three-support certificate.  Every two-set `R subset A` meeting
 `A cap X` is avoided by a support `D_R` containing both `p,q`.  In the
@@ -286,6 +297,9 @@ Sources:
 * `../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md`; and
 * `../results/hc7_rigid_cross_arm_double_root_cover.md`;
 * `../results/hc7_five_terminal_rooted_fan.md`;
+* `../results/hc7_eight_terminal_rooted_carrier_trichotomy.md`, with its
+  adjacent independent audit;
+* `../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md`;
 * `../results/hc7_cross_arm_overlap_four_cycle_decoder.md`;
 * `../results/hc7_four_connected_terminal_fan_or_k4.md`; and
 * `../results/hc7_overlap_three_five_good_decoder.md`;
@@ -322,8 +336,9 @@ maximal-overlap geometries, the normalized overlap-four cell, both
 normalized overlap-three cells, both overlap-two cells, and the
 order-five-arm overlap-one cell are terminal.  The only live positive
 overlap is order-six arms at overlap one.  The preferred mechanism is
-terminal-rooted contraction followed by a labelled finite-kernel decoder,
-not an argument that merely decreases `|A cap X|`.
+now a simultaneous split-row contraction/exchange or coupled model
+regeneration.  A single labelled finite-kernel decoder is insufficient by
+the exact barrier above.
 
 Bare support incidence cannot prove this: explicit affine and
 fifteen-point families falsify the strongest unlabelled extraction
@@ -354,11 +369,8 @@ Further boundary or union-size enumeration is prohibited unless it proves
 an invariant used in one of these two arrows.  Both normalized
 overlap-three cells, both overlap-two cells and the order-five-arm
 overlap-one cell are closed.  The immediate constructive experiment is the
-order-six-arm, overlap-one cell.  Deleting its overlap leaves a
-six-connected graph with eleven exterior terminals; the next input must be
-a labelled four-connected carrier after two reserves or an exact
-eight-terminal kernel after three.  The reserve must be fixed before the
-actual carrier is exposed.  The
-compulsory double-root orientations and split-row duties must remain
-literal labels throughout.  `G2` remains the independent laboratory for
-any resulting labelled carrier exchange.
+simultaneous composition of the separated triple and the remaining
+order-six-arm, overlap-one cell.  The compulsory double-root orientations
+and split-row duties must remain literal labels throughout.  Any separator
+handoff must carry all named models and strictly decrease a declared global
+rank.  `G2` remains the independent laboratory for such an exchange.

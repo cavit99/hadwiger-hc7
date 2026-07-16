@@ -77,6 +77,14 @@ repair every crossed order left by the audited cycle decoder.  Consequently
 the entire normalized arm-order-six overlap-four cell is closed to a
 literal `K_7`, with no separator handoff left over.
 
+At eight terminals the same descent now yields a uniform rooted-carrier
+trichotomy: every eight prescribed vertices in a simple three-connected
+graph root `C_8`, `K_{3,5}`, or one explicit twisted `K_{3,5}`.  The proof
+uses Wu, Chvatal--Erdos and Moon--Moser and has passed an independent
+line audit.  The stronger exact order-eight/order-nine catalogue and the
+analytic order-ten `AABBAABB` residue retain the contacts needed for a
+labelled decoder.
+
 There is now a second uniform rooted carrier.  In a four-connected graph,
 fix an anchor triple among at least five labelled terminals.  Either an
 anchored four-set roots `K_4`, or all terminals lie on one facial cycle and
@@ -145,12 +153,13 @@ singleton.  This orientation family is the active rigid-cell object.
 The remaining theorem must compose the actual five-bag labels on the
 separated triple or the double-root orientation family in the rigid cells.
 The only live positive-overlap rigid cell is order-six arms at overlap one.
-Deleting the overlap leaves a six-connected graph with eleven exterior
-terminals.  Reserving two retains four-connectivity and nine terminals;
-reserving three leaves a three-connected eight-terminal problem.  The next
-step must choose between a labelled four-connected carrier and a new exact
-eight-terminal kernel bundle, while keeping the reserve fixed before the
-carrier is exposed.
+The exact eight-terminal route has been tested and terminated: the full
+relation factors to 142 minimal symmetry orbits, and its first orbit defeats
+every overlap-plus-triple reserve and every arbitrary four-vertex reserve,
+already at kernel order eight.  An independent SMT encoding confirms every
+negative quotient.  Thus the next step must retain information shared by
+several regenerated models or by the ambient split-contraction sequence; a
+single terminal carrier cannot close this cell.
 Accepted outcomes are:
 
 1. a row-compatible one-split/two-clique composition;
@@ -178,6 +187,9 @@ Sources:
 * [`../results/hc7_rigid_cross_arm_double_root_cover_audit.md`](../results/hc7_rigid_cross_arm_double_root_cover_audit.md)
 * [`../results/hc7_five_terminal_rooted_fan.md`](../results/hc7_five_terminal_rooted_fan.md)
 * [`../results/hc7_five_terminal_rooted_fan_audit.md`](../results/hc7_five_terminal_rooted_fan_audit.md)
+* [`../results/hc7_eight_terminal_rooted_carrier_trichotomy.md`](../results/hc7_eight_terminal_rooted_carrier_trichotomy.md)
+* [`../results/hc7_eight_terminal_rooted_carrier_trichotomy_audit.md`](../results/hc7_eight_terminal_rooted_carrier_trichotomy_audit.md)
+* [`../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md`](../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md)
 * [`../results/hc7_cross_arm_overlap_four_cycle_decoder.md`](../results/hc7_cross_arm_overlap_four_cycle_decoder.md)
 * [`../results/hc7_cross_arm_overlap_four_cycle_decoder_audit.md`](../results/hc7_cross_arm_overlap_four_cycle_decoder_audit.md)
 * [`../results/hc7_four_connected_terminal_fan_or_k4.md`](../results/hc7_four_connected_terminal_fan_or_k4.md)
@@ -296,9 +308,9 @@ No new Moser taxonomy, raw portal classification, union-size census, or
 unranked separator is admitted to this spine.  Both normalized
 overlap-three cells, both overlap-two cells and the order-five-arm
 overlap-one cell are closed.  The immediate `G1` experiment is the sole
-remaining positive-overlap cell, order-six arms at overlap one.  It must
-produce either a labelled four-connected carrier or an exact
-eight-terminal kernel bundle before another finite composition layer.  A promotion
-must discharge one of `G1` or `G2` for an infinite family, create
-a genuinely strict handoff, or falsify the stated carrier architecture in
-a way that changes the global target.
+remaining positive-overlap cell, order-six arms at overlap one, together
+with the separated-triple branch.  The single-kernel architecture is now a
+proved barrier.  Work therefore targets a simultaneous split-row exchange,
+multi-model regeneration, or a model-preserving exact-seven handoff with a
+genuinely strict rank.  A promotion must discharge one of `G1` or `G2` for
+an infinite family or create that strict handoff.
