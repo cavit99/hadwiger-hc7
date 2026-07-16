@@ -240,6 +240,15 @@ same private pair works in every state.  The result and its independent
 generic-minor-detector audit are recorded in
 `../results/hc7_overlap_two_order_five_six_terminal_kernel_closure.md`.
 
+The next carrier layer is now classified independently of this cell.  For
+seven terminals in a simple three-connected graph, terminal-legal
+contraction gives either one of 5,495 labelled edge-minimal order-seven
+carriers or an order-eight irreducible kernel.  The order-eight kernels are
+exactly the wheel, one distance-three chord family, and one two-chord
+family, giving 30,600 labelled templates with their complete legal owner
+bundles.  The theorem is
+`../results/hc7_seven_terminal_irreducible_kernel_classification.md`.
+
 The rigid structure also returns a global labelled family absent from the
 original three-support certificate.  Every two-set `R subset A` meeting
 `A cap X` is avoided by a support `D_R` containing both `p,q`.  In the
@@ -272,6 +281,8 @@ Sources:
 * `../results/hc7_overlap_three_six_terminal_kernel_closure.md`, all with
   adjacent independent audits; and
 * `../results/hc7_overlap_two_order_five_six_terminal_kernel_closure.md`,
+  with its adjacent independent audit; and
+* `../results/hc7_seven_terminal_irreducible_kernel_classification.md`,
   with its adjacent independent audit.
 
 ## 6. The two live arrows
@@ -329,8 +340,9 @@ Further boundary or union-size enumeration is prohibited unless it proves
 an invariant used in one of these two arrows.  Both normalized
 overlap-three cells and the order-five-arm overlap-two cell are closed.  The
 immediate constructive experiment is the order-six-arm, overlap-two cell:
-delete the overlap, reserve the fixed private pair, and classify the full
-seven-terminal kernel in the resulting three-connected deletion.  The
+delete the overlap, select a state-dependent reserved pair, and compose the
+now-classified full seven-terminal kernel in the resulting three-connected
+deletion.  The pair must be fixed before the actual kernel is exposed.  The
 compulsory double-root orientations and split-row duties must remain
 literal labels throughout.  `G2` remains the independent laboratory for
 any resulting labelled carrier exchange.

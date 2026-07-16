@@ -97,21 +97,30 @@ input to `G1/G2`, not a third closed branch.
    literal `K_7`.  The same fixed private pair works in every state.  An
    independent enumerator reproduced the state set, kernel catalogue and
    minor certificates, including a generic detector cross-check.
-8. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
+8. **Exact seven-terminal kernel bundle.**  For seven prescribed vertices
+   in a simple three-connected graph, terminal-legal contraction leaves
+   either one of 5,495 labelled edge-minimal order-seven carriers or an
+   order-eight irreducible kernel.  The latter has exactly three structural
+   forms: a wheel, a distance-three one-chord rim, or one specific
+   two-chord rim.  These give 30,600 labelled templates, each with its full
+   legal owner-absorption bundle.  The classification and its exact
+   universal/existential quantifiers are independently audited.  This is a
+   general rooted-carrier theorem, not yet a composition closure.
+9. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
    every pair of vertices of the avoided support touching that overlap
    forces another small model containing both private roots.  With literal
    arms these compulsory models have a genuine two-state split-bag
    orientation.  This is the current labelled composition invariant.
-9. **Disjoint three-split branch.** Minimal simultaneous contraction of
+10. **Disjoint three-split branch.** Minimal simultaneous contraction of
    two or three split edges either gives `K_7`, an actual exact-seven
    handoff, or a two-component boundary of order eight or nine that is
    pointwise full on both shores.
-10. **Two-shore boundary absorption.** In that two-component residue from
+11. **Two-shore boundary absorption.** In that two-component residue from
    two or three disjoint normalized split models, every surviving
    order-eight/nine boundary is four-colourable.  The sole five-chromatic
    census exception `K_2 vee C_7` is eliminated by a separate branch-set
    theorem.
-11. **Uniform common-neighbour rooted principle.** If
+12. **Uniform common-neighbour rooted principle.** If
 
    \[
    \chi(J)=k+2,\quad uv\in E(J),\quad
@@ -123,7 +132,7 @@ input to `G1/G2`, not a third closed branch.
    with singleton bags `{u},{v}`.  Martinsson--Steiner proves the needed
    strong theorem for `k=4`, so the `HC_7` four-colour branch has a
    label-faithful `K_6` model.
-12. **Minimal contraction-forest saturation.** If a forest contraction is
+13. **Minimal contraction-forest saturation.** If a forest contraction is
    inclusion-minimal for lowering a quotient to `q` colours, then every
    side of every forest edge meets every non-own colour class in every
    terminal colouring.  Each one-edge predecessor has chromatic number
@@ -163,8 +172,10 @@ Every two-set in the avoided support meeting the overlap still forces a
 compulsory double-root model.  The next concrete cell is the
 order-six-arm, overlap-two interface.  Deleting the overlap and reserving
 the fixed private pair leaves seven labelled terminals in a
-three-connected deletion, so the next test is the complete seven-terminal
-kernel rather than a bare cycle/biclique carrier.  Further portal taxonomy
+three-connected deletion.  The complete seven-terminal kernel is now
+classified; the active test is whether a state-dependent reserved pair
+composes against every exact carrier bundle.  A bare cycle/biclique carrier
+and a fixed reserved pair are both insufficient.  Further portal taxonomy
 is not the target.
 
 ### G2. Forest-to-carrier composition
