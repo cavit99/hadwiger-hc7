@@ -19,20 +19,30 @@ Immediate files (read each theorem with its adjacent audit):
 - [additional models through a private transversal pair](../results/hc7_support_six_private_pair_v_extraction.md)
 - [dichotomy for models through a private pair](../results/hc7_private_pair_cross_arm_dichotomy.md)
 - [replacement models sharing a prescribed vertex set](../results/hc7_rigid_cross_arm_double_root_cover.md)
+- [canonical one-vertex exchange core for exact six-vertex supports](../results/hc7_one_vertex_support_exchange.md)
 - [barrier to a single eight-terminal rooted-minor reduction](../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md)
 - [barrier to replacing six linking paths by their endpoint matching](../barriers/hc7_disjoint_k6minus_support6_six_link_barrier.md)
 
 ### Exceptional disjoint-model configuration
 
-**Live target:** compose or exclude the two four-terminal web certificates
-sharing one linkage path in the canonical `3+1` contact form; then reduce
-the `2+2` contact form to the same exchange or prove its analogue.
+**Live target:** close the three repaired-contact outcomes in the canonical
+`3+1` contact form by coupling the fixed support-exchange core to the
+labelled linkage.  A successful step must give an explicit `K_7`-minor
+model, the proved exact-seven separation with both full-subgraph packing
+numbers one, or a strictly ranked support/linkage replacement.  Independently,
+compress the two web certificates in the `2+2` form into one label-faithful
+six-terminal theorem.
 
 - [exact label-preserving matching and one-bridge classification](../results/hc7_disjoint_k6minus_support6_linkage_classifier.md)
 - [clean augmentation, crossed-bridge construction, and two-web residue](../results/hc7_disjoint_k6minus_support6_bridge_augmentation.md)
+- [six-terminal crossing decoder and the three repaired-contact residues](../results/hc7_disjoint_k6minus_six_terminal_crossing_decoder.md)
+- [minor-critical support repair and simultaneous edge bypass](../results/hc7_repaired_contact_exchange.md)
+- [intersection closure and the exact-seven packing-number-one separation](../results/hc7_repaired_contact_intersection.md)
+- [`2+2` bridge augmentation and two rooted-web certificates](../results/hc7_disjoint_k6minus_support6_two_two_bridge_augmentation.md)
 - [colouring and minor regeneration after deleting the private pair](../results/hc7_nonadjacent_pair_colouring_regeneration.md)
 - [exclusion of a fixed two-vertex terminal in the disjoint-model configuration](../results/hc7_disjoint_k6minus_k5model_two_apex_exclusion.md)
 - [barrier to a single contracted external bridge](../barriers/hc7_disjoint_k6minus_external_bridge_barrier.md)
+- [barrier to composing two web certificates without seven-connectivity](../barriers/hc7_two_web_static_compatibility_barrier.md)
 
 ## Composition of three six-vertex $K_5$ models
 

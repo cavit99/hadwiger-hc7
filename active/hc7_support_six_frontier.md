@@ -111,6 +111,18 @@ vertices held outside that reduction.  The next proof must therefore retain
 information shared by models constructed after several different
 contractions, or by the ambient contraction sequence.
 
+One class of replacements now has a fixed invariant.  With `A` deleted
+from the minimal critical family, let `H` be the remaining exact-six
+supports together with all literal `K_5` subgraphs, and let `Z_H` be the
+complement of the union of all two-vertex transversals of `H`.  Then
+`A subseteq Z_H`, the graph `G[Z_H]` has no literal `K_5`, and every exact
+six-vertex support contained in `Z_H` may replace `A` while preserving the
+entire family of private transversal pairs.  Every vertex outside `Z_H`
+already belongs to a globally support-maximal private pair.  This prevents
+uncontrolled private-pair drift, but a strict rank or a labelled
+regeneration theorem is still needed when replacements cycle inside
+`Z_H` or leave it.
+
 Principal inputs:
 
 - [global maximal-pair/private-pair bridge](../results/hc7_maximal_support_pair_private_pair_bridge.md)
@@ -118,6 +130,7 @@ Principal inputs:
 - [private-pair extraction](../results/hc7_support_six_private_pair_v_extraction.md)
 - [dichotomy for models through a private pair](../results/hc7_private_pair_cross_arm_dichotomy.md)
 - [replacement models sharing a prescribed vertex set](../results/hc7_rigid_cross_arm_double_root_cover.md)
+- [canonical one-vertex exchange core](../results/hc7_one_vertex_support_exchange.md)
 - [exclusion of nonempty $A\cap X$ when $|A|=5$](../results/hc7_literal_cross_arm_overlap_elimination.md)
 - [closure for five-vertex additional models with $|A\cap X|=4$](../results/hc7_k4_two_vertices_one_edge_cycle_composition.md)
 - [maximal intersection for six-vertex additional models](../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md)
@@ -231,19 +244,39 @@ endpoint permutation.
 For the canonical `3+1` contact form, a clean external path to any of the
 three nonexceptional linkage paths produces an explicit `K_7` model. Two
 external paths with crossed attachment order on either exceptional linkage
-path do the same. If neither construction occurs, two cleaned host graphs
-have Humeau--Pous four-web completions whose frames share the remaining
-linkage path. The completion edges are auxiliary and need not agree between
-the two webs.
+path do the same.  The former pair of independent four-web certificates can
+now be replaced by one six-terminal test with cyclic order
 
-The immediate constructive target is therefore a **two-web composition
-theorem**: prove that the two certificates either force a genuine crossing
-in one host graph or expose an order-seven separation preserving the named
-models and decreasing a strict parameter. The `2+2` contact form must be
-reduced to this theorem or supplied with an analogous bridge construction.
-Counting attachments or contracting an external component is insufficient;
-the retained first-hit vertices and their order along the linkage paths are
-essential.
+```text
+(a3,y,x,q,r,p).
+```
+
+Twelve of its fifteen crossing types give explicit `K_7` models. The exact
+survivors are an `a3`--`x` path paired with a `y`--`p`, `y`--`q`, or
+`y`--`r` path. If the tuple is crossless, it has one same-vertex web
+completion; its completion edges are auxiliary.
+
+When the `a3`--`x` path has one internal vertex, it produces a legal
+one-vertex replacement of the exact-six support. Edge-critical colourings
+after deleting its two edges force another `a3`--`x` path avoiding both
+edges and every other original support vertex. An off-skeleton intersection
+of that bypass with the `p`- or `q`-path gives an explicit `K_7` model. The
+exceptional `r`-intersection gives an actual order-seven separation whose
+two shores each have full-subgraph packing number one.
+
+The immediate constructive target is therefore a **core-preserving
+repaired-contact exchange theorem**: a bypass which meets the linkage
+skeleton or avoids the second residual path must yield an explicit `K_7`
+model, the normalized packing-number-one separation, or a replacement that
+strictly decreases a host-defined rank inside the canonical exchange core.
+Counting paths without their colour labels or contracting an exterior
+component is insufficient.
+
+The `2+2` contact form is genuinely different. Three clean augmenting-path
+classes and both crossed-linkage classes are closed, and two four-terminal
+web certificates are proved. Its immediate open step is a label-faithful
+six-terminal compression; a contracted quotient calculation does not yet
+lift through arbitrary intersections with the three shared linkage paths.
 
 Criticality supplies additional, deliberately secondary data. For the
 nonadjacent private pair `P={p,q}`, the graph `G-P` is exactly
@@ -272,6 +305,11 @@ Principal inputs:
 - [barrier to arbitrary six-path composition](../barriers/hc7_disjoint_k6minus_support6_six_link_barrier.md)
 - [exact label-preserving linkage classification](../results/hc7_disjoint_k6minus_support6_linkage_classifier.md)
 - [bridge augmentation and two-web residue](../results/hc7_disjoint_k6minus_support6_bridge_augmentation.md)
+- [six-terminal crossing decoder](../results/hc7_disjoint_k6minus_six_terminal_crossing_decoder.md)
+- [minor-critical repaired-contact exchange](../results/hc7_repaired_contact_exchange.md)
+- [intersection closure and normalized exact-seven separation](../results/hc7_repaired_contact_intersection.md)
+- [`2+2` bridge augmentation and web certificates](../results/hc7_disjoint_k6minus_support6_two_two_bridge_augmentation.md)
+- [static two-web compatibility barrier](../barriers/hc7_two_web_static_compatibility_barrier.md)
 - [colouring and minor regeneration](../results/hc7_nonadjacent_pair_colouring_regeneration.md)
 - [fixed-pair exclusion in the disjoint-model configuration](../results/hc7_disjoint_k6minus_k5model_two_apex_exclusion.md)
 - [barrier to a single contracted external bridge](../barriers/hc7_disjoint_k6minus_external_bridge_barrier.md)
@@ -308,8 +346,9 @@ either:
 On the current zero-overlap branch, a linkage theorem is admissible only if
 it retains the actual bridge attachments of an extremal linkage. A theorem
 about its endpoint matching alone is false. The declared live measure for a
-two-web reduction must count a host object—such as the interior of a named
-linkage interval or a model-preserving side of an actual separation—not
+repaired-contact exchange must count a host object—such as the number of
+exchange-core vertices used by a named bypass, the interior of a named
+linkage interval, or a model-preserving side of an actual separation—not
 auxiliary web-completion edges.
 
 Historical theorem filenames retain some former project shorthand for

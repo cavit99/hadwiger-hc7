@@ -222,6 +222,97 @@ classification or computation as well as a written reduction.
     both are constraints on the two-web composition problem rather than a
     solution of it.
 
+16. **One six-terminal test replaces the first two-web compatibility
+    problem.**  In the canonical `3+1` form, apply the Generalised Two
+    Paths Theorem to the ordered tuple
+
+    $$
+                         (a_3,y,x,q,r,p).
+    $$
+
+    Of the fifteen possible crossing types, twelve give explicit
+    `K_7`-minor models.  The exact three survivors are
+
+    $$
+              (a_3x,yq),\qquad(a_3x,yr),\qquad(a_3x,yp).
+    $$
+
+    All three endpoint quotients, and the graphs obtained by subdividing
+    both crossing edges once, are `K_7`-minor-free; thus these are genuine
+    repaired-contact residues rather than omissions in the decoder.  If
+    the six-terminal tuple is crossless, it has one same-vertex web
+    completion.  The completion edges remain auxiliary, but the earlier
+    pair of unrelated four-web completions is no longer the active
+    obstruction.
+
+    An endpoint-preserving stable rerouting of the six linkage paths makes
+    every nontrivial bridge attach to at least two paths.  Every exterior
+    bridge component then has at least seven skeleton attachments; exactly
+    seven give an actual order-seven separation.  In a `K_7`-minor-free
+    host no such component can attach both to the `y`--`r` path away from
+    `y` and to one of the first three linkage paths away from its right
+    endpoint.
+
+    The distinct `2+2` contact form has also been advanced without
+    identifying it with `3+1`: three clean augmenting-path classes and
+    both crossed-linkage classes give explicit `K_7` models, the latter
+    using a rooted-`K_4` cycle-linkage theorem.  Its remaining residue is
+    two four-terminal web certificates sharing one linkage path.  A
+    label-faithful six-terminal lift for this form is still open.
+
+17. **A fixed support-exchange core.**  Delete one support `A` from a
+    minimal exact-six critical family and let `H` be the remaining family
+    together with all literal `K_5` subgraphs.  Then `tau(H)=2`.  If
+    `T(H)` is the family of all two-vertex transversals of `H`, define
+
+    $$
+       Z_H=V(G)-\bigcup_{R\in T(H)}R.
+    $$
+
+    The support `A` lies in `Z_H`, and `G[Z_H]` contains no literal
+    `K_5`.  Every exact six-vertex `K_5`-model support contained in `Z_H`
+    may replace `A` while preserving **every** pair in `T(H)` as a private
+    transversal.  Conversely, every vertex outside `Z_H` already belongs
+    to a globally support-maximal private pair.  This is the first fixed
+    global invariant for repeated one-vertex support replacements: private
+    pairs can no longer drift arbitrarily.  It does not yet make the
+    replacement graph acyclic or preserve a chosen six-linkage.
+
+18. **Minor-critical repair and the exceptional intersection.**  A
+    one-internal-vertex `a_3`--`x` repair replaces one vertex of the
+    six-vertex support and admits two labelled `K_5` decompositions.
+    Colourings after deleting its two edges force a second `a_3`--`x`
+    path which avoids both edges and all other vertices of the original
+    support.  This is a genuine palette-to-labelled-interface statement,
+    although the new path may meet the linkage skeleton.
+
+    If this simultaneous bypass meets the residual `y`--`p` or
+    `y`--`q` path in one exterior component, an explicit `K_7` model
+    results.  In the exceptional `y`--`r` case, all additional normalized
+    endpoint contacts and all interior linkage-path contacts except those
+    on the `y`--`r` path are likewise closed by explicit models.  The
+    remaining component produces the actual order-seven boundary
+
+    $$
+                 X_7=\{a_3,x,y,r,b_0,b_1,b_2\}.
+    $$
+
+    Since `X_7` contains the clique
+    `\{r,b_0,b_1,b_2\}`, the exact-seven packing theorem forces both open
+    shores to have full-subgraph packing number exactly one.  Thus the
+    unbounded attachment-order residue on the `y`--`r` path has been
+    replaced by a normalized `(1,1)` exact-seven separation.  The still
+    open cases are a bypass which meets the linkage skeleton before the
+    residual path, a bypass disjoint from that path, or a sequence of
+    support replacements inside `Z_H` with no strict rank.
+
+    A sharp static barrier confirms that two web certificates and one
+    bridge in each exceptional class do not suffice without high
+    connectivity.  The examples have connectivity three.  Conversely, an
+    exhaustive direct-link quotient search finds no `K_7`-free completion
+    of minimum degree seven, supporting the use of seven-connectivity as
+    the missing host-level input rather than further endpoint casework.
+
 The most recent end-to-end composition theorem in item 11 is
 [`hc7_three_split_marked_mader_branch_closure.md`](results/hc7_three_split_marked_mader_branch_closure.md),
 with its adjacent audit.  The weighted separation and Kempe-component inputs
@@ -246,6 +337,15 @@ are
 and
 [`hc7_disjoint_k6minus_support6_bridge_augmentation.md`](results/hc7_disjoint_k6minus_support6_bridge_augmentation.md),
 again with adjacent audits.
+The six-terminal compression, fixed support-exchange core, repaired-contact
+colouring theorem, exceptional-intersection theorem, and the independent
+`2+2` bridge theorem are respectively
+[`hc7_disjoint_k6minus_six_terminal_crossing_decoder.md`](results/hc7_disjoint_k6minus_six_terminal_crossing_decoder.md),
+[`hc7_one_vertex_support_exchange.md`](results/hc7_one_vertex_support_exchange.md),
+[`hc7_repaired_contact_exchange.md`](results/hc7_repaired_contact_exchange.md),
+[`hc7_repaired_contact_intersection.md`](results/hc7_repaired_contact_intersection.md),
+and
+[`hc7_disjoint_k6minus_support6_two_two_bridge_augmentation.md`](results/hc7_disjoint_k6minus_support6_two_two_bridge_augmentation.md).
 The two secondary criticality constraints are
 [`hc7_nonadjacent_pair_colouring_regeneration.md`](results/hc7_nonadjacent_pair_colouring_regeneration.md)
 and
@@ -276,6 +376,15 @@ latter: one finite boundary pattern defeats every choice of four vertices
 held outside the rooted reduction.  A successful proof must therefore use
 several compatible models constructed after different contractions, or
 retain additional information from the contraction sequence.
+
+For one-vertex replacements there is now a canonical region `Z_H` in
+which all replacements preserve the same complete family of private
+transversal pairs.  The extraction problem should therefore be attacked
+with the following fixed alternative: either a replacement remains in
+`Z_H`, where a declared linkage/model rank must decrease, or its first
+outside vertex already identifies another globally maximal private pair.
+What is missing is a label-preserving regeneration theorem at that outside
+pair, not another support-only extraction.
 
 ### 3.2 Simultaneous composition in the common edge-deletion graph
 
@@ -315,12 +424,21 @@ the linkage by its endpoint matching loses essential information.
 
 The new alignment theorem identifies exactly what that retained information
 must repair. In the canonical $3+1$ ownership form, clean augmentation and
-crossed bridge order are closed by explicit models. The remaining geometric
-obligation is to compose or exclude two four-web certificates that share one
-linkage path, or to turn their incompatibility into a model-preserving
-order-seven separation with a strict parameter. The other minimal ownership
-form must either be reduced to the same theorem or given an analogous
-labelled bridge decoder.
+crossed bridge order are closed by explicit models.  A six-terminal decoder
+now closes twelve of all fifteen crossing types and turns the other three
+into a repaired `a_3`--`x` contact paired with one of three labelled
+`y`-paths.  For a one-vertex repair, minor-critical colourings give a second
+contact path avoiding both repair edges.  An intersection with the `p`- or
+`q`-path closes by an explicit model; the exceptional `r`-intersection
+returns an actual exact-seven separation whose two full-subgraph packing
+numbers are both one.  The remaining obligation is to control a bypass that
+meets the linkage skeleton or avoids the second residual path, and to attach
+a strict rank to support replacements inside the fixed exchange core.
+
+The other minimal ownership form, `2+2`, now has its clean augmentations,
+both crossed-linkage types, and two web certificates proved.  Its remaining
+obligation is a label-faithful six-terminal compression; a quotient crossing
+calculation alone does not lift through the three linkage paths involved.
 
 The detailed formulations and all immediate dependencies are in
 [`active/INDEX.md`](active/INDEX.md) and
@@ -354,6 +472,13 @@ hypotheses:
   also need not suffice. Seven host attachments may collapse under linkage
   contractions, so the quotient's two exceptional eight-frames cannot be
   promoted to a host separation without a first-hit argument.
+- Two crossless four-terminal web certificates, with one external bridge
+  in each exceptional class, can coexist without a `K_7` minor at
+  connectivity three.  Their static compatibility is therefore false;
+  seven-connectivity or minor-critical colouring must enter the composition.
+- Replacing one vertex of an exact six-vertex support can preserve every
+  private transversal pair and still cycle inside the fixed exchange core.
+  The core prevents transversal drift but does not supply a descending rank.
 - Finite neighbourhood or Moser-spindle enumeration cannot replace an
   unbounded structural theorem.
 
@@ -396,9 +521,17 @@ should use standard graph-theoretic descriptions; see [`AGENTS.md`](AGENTS.md).
   linear representation of Mader endpoint systems. The terminal-edge
   projection in item 13 is a new deduction in this repository.
 - S. Humeau and D. Pous, [*On the Two Paths Theorem and the Two Disjoint
-  Paths Problem*](https://arxiv.org/abs/2505.16431), Theorem 1.3 and the
+  Paths Problem*](https://arxiv.org/abs/2505.16431), Theorem 1.5 and the
   equivalent web-completion formulation in Section 5: the structural input
-  used in item 15.
+  used in items 15--16.
+- P. Wollan, [*Bridges in Highly Connected
+  Graphs*](https://doi.org/10.1137/070710214), SIAM J. Discrete Math. 24
+  (2010), 1731--1741, Theorem 1.1: endpoint-preserving stable rerouting of
+  the six-path system in item 16.
+- R. Fabila-Monroy and D. R. Wood, [*Rooted
+  $K_4$-Minors*](https://doi.org/10.37236/3476), Electron. J. Combin. 20(2)
+  (2013), P64, Lemma 7: the cycle-linkage rooted model used in the `2+2`
+  branch of item 16.
 - A. Girão et al., [*The Dominating 4-Colour
   Theorem*](https://arxiv.org/abs/2605.10112), Theorem 1.1: the regeneration
   input after deleting the nonadjacent private pair.

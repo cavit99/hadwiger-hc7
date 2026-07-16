@@ -355,6 +355,20 @@ branch sets, or proper-minor colouring transitions. The verified
 eight-terminal barrier shows that one isolated rooted-minor classification
 cannot suffice.
 
+One-vertex replacements now preserve a canonical invariant.  After deleting
+the chosen support `A`, let `H` consist of the remaining critical supports
+and all literal `K_5` subgraphs.  The complement `Z_H` of the union of all
+two-vertex transversals of `H` contains `A`, contains no literal `K_5`, and
+contains every support onto which `A` may be rebased while preserving the
+same complete family of private pairs.  Every first vertex outside `Z_H`
+already belongs to a globally support-maximal private pair.  The missing
+step is therefore label-preserving regeneration or a strict rank, not
+another unnormalized one-vertex exchange.
+
+Source:
+
+- [canonical one-vertex exchange core](../results/hc7_one_vertex_support_exchange.md)
+
 ### 6.2 Simultaneous composition after deleting three matching edges
 
 Suppose three pairwise disjoint six-vertex models have been obtained. Let
@@ -441,11 +455,36 @@ The endpoint labels are now classified exactly. The bare matching quotient
 contains a $K_7$ minor unless the missing edge of the $K_6^-$ is paired with
 a missing singleton--split-end edge of the six-vertex model. In the
 canonical `3+1` form, clean augmentation and crossed attachment order both
-give written explicit $K_7$ models. If they fail, the two exceptional
-four-terminal systems are crossless and therefore have Humeau--Pous web
-completions sharing one linkage path. This eliminates an infinite family of
-bridge systems but leaves the simultaneous compatibility of the two web
-certificates open. Their completion edges are not host edges.
+give written explicit $K_7$ models. A single six-terminal test now replaces
+the earlier pair of web certificates: twelve of its fifteen crossings give
+explicit models, and the other three are exactly an `a3`--`x` repaired
+contact paired with a `y`--`p`, `y`--`q`, or `y`--`r` path. A crossless
+tuple has one auxiliary same-vertex web completion.
+
+For a one-internal-vertex repaired contact, two proper-edge-deletion
+colourings force a second `a3`--`x` path avoiding both repair edges and all
+other original support vertices. If its off-skeleton interior meets the
+`p`- or `q`-path, an explicit $K_7$ model results. The exceptional
+`r`-intersection yields the actual boundary
+
+$$
+                  \{a_3,x,y,r,b_0,b_1,b_2\}.
+$$
+
+Both shores of this order-seven separation have full-subgraph packing number
+one, because its boundary contains a literal `K_4`. Thus arbitrary return
+order along the `y`--`r` path is no longer open. What remains is a bypass
+which meets the linkage skeleton or avoids the second residual path, and
+possible cycling of support replacements inside the canonical exchange
+core.
+
+The distinct `2+2` form has three clean augmenting classes and both crossed
+linkage classes closed, together with two four-terminal web certificates.
+A label-faithful six-terminal compression is still missing. Static
+composition of two web certificates is false at connectivity three; a
+direct-link quotient census finds no minimum-degree-seven counterexample,
+so the next theorem must use host seven-connectivity rather than more
+endpoint matching data.
 
 After deleting the nonadjacent private pair, criticality also gives exact
 six-chromaticity, separately attained colour-dominating modes for the two
@@ -470,6 +509,11 @@ Sources:
 - [barrier to arbitrary six-path composition](../barriers/hc7_disjoint_k6minus_support6_six_link_barrier.md)
 - [exact label-preserving linkage classification](../results/hc7_disjoint_k6minus_support6_linkage_classifier.md)
 - [clean augmentation and the two-web residue](../results/hc7_disjoint_k6minus_support6_bridge_augmentation.md)
+- [six-terminal crossing decoder](../results/hc7_disjoint_k6minus_six_terminal_crossing_decoder.md)
+- [minor-critical repaired-contact exchange](../results/hc7_repaired_contact_exchange.md)
+- [exceptional intersection and normalized exact-seven separation](../results/hc7_repaired_contact_intersection.md)
+- [`2+2` bridge augmentation and web certificates](../results/hc7_disjoint_k6minus_support6_two_two_bridge_augmentation.md)
+- [static two-web compatibility barrier](../barriers/hc7_two_web_static_compatibility_barrier.md)
 - [colouring and minor regeneration after deleting the private pair](../results/hc7_nonadjacent_pair_colouring_regeneration.md)
 - [fixed-pair exclusion for the disjoint models](../results/hc7_disjoint_k6minus_k5model_two_apex_exclusion.md)
 - [single-bridge quotient barrier](../barriers/hc7_disjoint_k6minus_external_bridge_barrier.md)
@@ -484,7 +528,9 @@ The following remain conjectural targets:
 
 - the two-vertex transversal theorem (1.1);
 - the label-preserving extraction theorem in Section 6.1; and
-- the simultaneous-composition theorem in Section 6.2.
+- the core-preserving repaired-contact exchange in Section 6.2;
+- a label-faithful six-terminal compression of the `2+2` form; and
+- the rest of the simultaneous-composition theorem in Section 6.2.
 
 Finite catalogues do not prove any of these unbounded statements. A new
 result should either eliminate an infinite family in Section 6, construct
