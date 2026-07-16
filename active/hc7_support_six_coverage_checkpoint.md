@@ -173,16 +173,21 @@ every marked six-cut has exactly two open components.  This eliminates the
 forcing makes the other two literal four-clique rows complete to both
 marks; splitting the path gives an explicit `K_7`.
 
-The whole actual balanced range `3<=|W|<=5` is now closed by one uniform
-decoder.  Choose a row clique avoiding the at most two unmarked members of
-`W`.  A localized four-link uses every such unmarked member as a retained
-two-packet contact and leaves one marked endpoint omitted.  The resulting
-labelled `K_7^-` has a single possible missing pair.  Splitting that mark in
-its seven-connected predecessor transfers one literal endpoint to the
-reserved path bag and leaves the other with the row packet; expanded-cut
-fullness repairs the missing pair.  The abstract marked theorem can still
-have these cells because predecessor connectivity is extra structure, and
-the unbalanced Mader outcomes remain open.  See
+The whole actual range `2<=|W|<=5` is now closed.  A uniform
+separator/counting lemma first proves that every certificate in this range
+is balanced.  If one row were one below equality, it would be tail-free and
+would contain its named clique outside `W`, forcing all of `W` into that
+clique.  The two other rows then exceed the global Mader budget in every
+possible tail pattern.  The `|W|=2` balanced decoder was already audited.
+For `3<=|W|<=5`, a localized four-link uses every unmarked member of `W` as
+a retained two-packet contact and leaves one marked endpoint omitted.  The
+resulting labelled `K_7^-` has a single possible missing pair.  Splitting
+that mark in its seven-connected predecessor repairs the pair.  Together
+with the `|W|=6` exclusion and balanced `|W|<=1` closure, this leaves only
+the unbalanced `|W|=0,1` outcomes in the actual minimal-three-contraction
+route.  The abstract marked theorem can still have the higher cells because
+predecessor connectivity is extra structure, and the low-`W` unbalanced
+outcomes remain open.  See
 `hc7_marked_three_clique_cut_reduction.md`,
 `hc7_marked_three_clique_w2_closure.md`, and their adjacent cold audits.
 The new balanced-three chain and audits are
@@ -192,6 +197,9 @@ The new balanced-three chain and audits are
 The uniform `|W|=4,5` continuation and audit are
 `../results/hc7_marked_three_clique_w45_predecessor_closure.md` and
 `../results/hc7_marked_three_clique_w45_predecessor_closure_audit.md`.
+The row-collapse proof and audit are
+`../results/hc7_marked_three_clique_unbalanced_collapse.md` and
+`../results/hc7_marked_three_clique_unbalanced_collapse_audit.md`.
 
 There is now one uniform replacement for a bare boundary-state search.
 Contract an inclusion-minimal forest in the two open shores until the

@@ -117,17 +117,19 @@ The following statements are proved and independently cold-audited.
   minimum cuts force two clique rows to contact both marks, and a full
   tail component splits a mark-to-mark path into the final two bags of a
   `K_7` model.
-* The entire actual balanced equality range `3<=|W|<=5` is now closed by
-  one uniform predecessor decoder.  Choose a row clique avoiding the at
-  most two unmarked vertices of `W`.  Four disjoint paths turn its literal
-  `K_4` into five core bags: every unmarked boundary endpoint is retained
-  as a simultaneous contact to both outside row packets, while one marked
-  endpoint is omitted.  The resulting seven bags have exactly one possible
-  missing adjacency.  Splitting that mark in its seven-connected one-edge
-  predecessor assigns one endpoint to the reserved path bag and its mate
-  to the old packet; minimum-cut fullness repairs the missing pair and gives
-  a literal `K_7`.  The unbalanced Mader outcomes remain open, as does the
-  abstract marked theorem without split-predecessor data.
+* The entire actual range `2<=|W|<=5` is now closed.  First, one uniform
+  separator/counting lemma shows that every certificate in this range is
+  automatically balanced: a row one below equality is tail-free, forces
+  all of `W` into its named clique, and makes each of the other two rows
+  too large for the Mader budget.  The `|W|=2` balanced cell was already
+  decoded.  For `3<=|W|<=5`, a four-link through a row clique produces a
+  labelled `K_7^-`; splitting one marked edge in its seven-connected
+  predecessor repairs the unique possible defect and gives a literal
+  `K_7`.  Together with the earlier `|W|=6` exclusion and balanced
+  `|W|<=1` closure, this leaves only the **unbalanced** `|W|=0,1` outcomes
+  in the actual minimal-three-contraction Mader route.  Those low-`W`
+  outcomes, the abstract marked theorem without split-predecessor data,
+  and the other support-six branches remain open.
 * Independently, a five-colouring of the common matching deletion with
   exactly two equal rows forces their four endpoints to induce `K_4`.
   Its four cross-edges are locally double-critical, two outside colours
