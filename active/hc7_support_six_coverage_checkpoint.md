@@ -68,6 +68,24 @@ The following facts are proved and internally audited.
    Theorem 1.10 of Niu--Zhang then gives a $K_7$ minor. Hence every
    unresolved triple contains at least one six-vertex model.
 
+The private-pair and global support-height normalizations can now be made
+simultaneously.  More precisely, one may choose a nonempty inclusion-minimal
+family $\mathcal C\subseteq\mathcal F_6(G)-\mathcal F_5(G)$ whose addition
+to the full family of $K_5$ subgraphs raises the transversal number above
+two.  Every member of $\mathcal C$ has order six and has a private pair
+$P$ which meets every $K_5$ subgraph and satisfies
+
+$$
+             \mu_G(P)=6=\max_{|R|=2}\mu_G(R),
+$$
+
+where $\mu_G(R)$ is the least support order of a $K_5$ model in $G-R$.
+The elementary set-pairs argument bounds $|\mathcal C|$ by twenty-eight;
+the audited nine-vertex finite closure sharpens this to twenty-seven.  Thus
+the avoided support in the live private-pair branch may always be taken to
+have order six.  This does not make the associated matching edges or
+additional models compatible.
+
 There is also a parallel normalization. Every seven-connected graph either
 has a $K_7$ minor or has a two-vertex set meeting every $K_5$ subgraph.
 If the smallest $K_5$-minor model avoiding such a pair has order six, its
@@ -85,6 +103,7 @@ Sources:
 - [three-support extraction](../results/hc7_support_at_most_six_separated_triple_extraction.md)
 - [bounded critical support family](../results/hc7_support_six_bounded_critical_kernel.md)
 - [private-pair extraction](../results/hc7_support_six_private_pair_v_extraction.md)
+- [global maximal-pair/private-pair bridge](../results/hc7_maximal_support_pair_private_pair_bridge.md)
 - [the all-$K_5$-subgraph case](../results/hc7_one_split_two_clique_composition.md)
 - [two-vertex transversal for $K_5$ subgraphs](../results/hc7_global_literal_k5_transversal.md)
 - [normalization after contracting one matching edge](../results/hc7_global_support_six_contraction_dichotomy.md)
@@ -254,10 +273,13 @@ separate internal audits.
   supports of order five with $|A\cap X|=1$, using the complete catalogue
   of rooted reductions on seven terminals.
 
-No theorem in this list eliminates $A\cap X=\varnothing$. Those cases
-remain open when $|A|=5$ (for either order of the two additional models)
-and when $|A|=6$ (again for either order). Among positive intersections,
-the sole residue has all three models of order six and $|A\cap X|=1$.
+No theorem in this list eliminates $A\cap X=\varnothing$.  In the raw
+catalogue those cases occur for either order of $A$.  In the globally
+maximal private-pair normalization of Section 2, however, the avoided
+support $A$ always has order six.  The live zero-intersection cases have
+both additional models of order five or both of order six.  Among positive
+intersections, the sole residue has all three models of order six and
+$|A\cap X|=1$.
 
 The six-terminal catalogue consists of 142 labelled minimal graphs on six
 vertices and 780 irreducible graphs on seven vertices. The seven-terminal
@@ -314,8 +336,8 @@ contraction alternatives in (4.1). Two independent obligations remain.
 
 ### 6.1 Label-preserving extraction and composition
 
-Starting with the bounded critical subfamily and its private pairs, prove
-one of the following:
+Starting with the bounded exact-six family and its globally maximal private
+pairs from Section 2, prove one of the following:
 
 1. an explicit $K_7$-minor model in $G$;
 2. two vertices meeting every member of $\mathcal F_6(G)$;
@@ -324,9 +346,10 @@ one of the following:
 4. an order-seven separation preserving the specified models and boundary
    colouring partition and strictly decreasing a named induction parameter.
 
-The unresolved shared-set configurations are all cases with
-$A\cap X=\varnothing$, and the all-six-vertex case with
-$|A\cap X|=1$. The separated triple from Section 2 is also unresolved. The
+The unresolved shared-set configurations have $|A|=6$ and
+$A\cap X=\varnothing$, with both additional models of order five or both
+of order six, together with the all-six-vertex case $|A\cap X|=1$. The
+separated triple from Section 2 is also unresolved. The
 next argument must use several additional models simultaneously, their actual
 branch sets, or proper-minor colouring transitions. The verified
 eight-terminal barrier shows that one isolated rooted-minor classification
@@ -397,6 +420,41 @@ specific four-connected test graph arising here is closed by a
 patterns. This verifies that test graph only; connectivity and the local
 double-critical conditions do not settle the arbitrary residue.
 
+Two common descriptions of the order-two residue have also been audited.
+Terminal-edge contractions are principal restrictions of one represented
+Mader delta-matroid, but ordinary symmetric exchange can leave every
+restriction corresponding to an actual graph, and the endpoint system is
+blind to same-model terminal edges.  Independently, Gallai--Edmonds theory
+canonically reduces a deficient eight-vertex boundary complement to a set
+of order at most two and at most four factor-critical components.  A static
+state-realization example shows that this canonical matching data still
+does not synchronize the two shore colourings.
+
+Finally, a width-five quotient contains a disjoint six-vertex $K_5$ model,
+a $K_6^-$, and six independent linking edges.  Hence the endpoint matching
+of an arbitrary six-path linkage is insufficient.  Any positive linkage
+theorem for the zero-intersection branch must choose the linkage extremally
+and retain its bridges, producing either a label-preserving augmentation or
+a separator of order at most six.
+
+The endpoint labels are now classified exactly. The bare matching quotient
+contains a $K_7$ minor unless the missing edge of the $K_6^-$ is paired with
+a missing singleton--split-end edge of the six-vertex model. In the
+canonical `3+1` form, clean augmentation and crossed attachment order both
+give written explicit $K_7$ models. If they fail, the two exceptional
+four-terminal systems are crossless and therefore have Humeau--Pous web
+completions sharing one linkage path. This eliminates an infinite family of
+bridge systems but leaves the simultaneous compatibility of the two web
+certificates open. Their completion edges are not host edges.
+
+After deleting the nonadjacent private pair, criticality also gives exact
+six-chromaticity, separately attained colour-dominating modes for the two
+endpoints, a dominating $K_5$ model avoiding any prescribed remaining
+vertex, and an unlabelled $K_6$ minor. A separate theorem excludes a fixed
+pair whose deletion is $K_5$-minor-free when the disjoint $K_6^-$ and
+$K_5$ supports are present. These facts constrain the branch but do not
+align a regenerated model with the six linkage labels.
+
 Sources:
 
 - [weighted separation after deleting three edges](../results/hc7_matching_deletion_separator_lift.md)
@@ -407,6 +465,14 @@ Sources:
 - [two monochromatic matching edges](hc7_five_colour_exact_two_row_linkage.md)
 - [finite construction for the four-connected test graph](../results/hc7_exact_two_four_gate_decoder.md)
 - [barrier to composition from adjacency data alone](../barriers/hc7_four_edge_double_critical_packaging_barrier.md)
+- [terminal-edge contraction projection](../results/hc7_mader_terminal_contraction_projection.md)
+- [canonical Gallai--Edmonds boundary obstruction](../results/hc7_eight_boundary_gallai_edmonds.md)
+- [barrier to arbitrary six-path composition](../barriers/hc7_disjoint_k6minus_support6_six_link_barrier.md)
+- [exact label-preserving linkage classification](../results/hc7_disjoint_k6minus_support6_linkage_classifier.md)
+- [clean augmentation and the two-web residue](../results/hc7_disjoint_k6minus_support6_bridge_augmentation.md)
+- [colouring and minor regeneration after deleting the private pair](../results/hc7_nonadjacent_pair_colouring_regeneration.md)
+- [fixed-pair exclusion for the disjoint models](../results/hc7_disjoint_k6minus_k5model_two_apex_exclusion.md)
+- [single-bridge quotient barrier](../barriers/hc7_disjoint_k6minus_external_bridge_barrier.md)
 
 ## 7. What is and is not established
 

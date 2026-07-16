@@ -141,7 +141,88 @@ classification or computation as well as a written reduction.
     seven-connectivity.  This is an infinite-family result, not merely a
     finite enumeration.
 
-The most recent end-to-end theorem in item 11 is
+12. **Global maximal-pair/private-pair bridge.** Under the contradictory
+    assumption $\tau(\mathcal F_6(G))>2$, there is an inclusion-minimal family of at
+    most twenty-seven exact six-vertex supports over the full family of
+    literal $K_5$ subgraphs. Every support $A_i$ in this family has a
+    private pair $P_i$ which meets every literal $K_5$, avoids $A_i$, and
+    satisfies
+
+    $$
+          \mu_G(P_i)=6=\max_{|P|=2}\mu_G(P).
+    $$
+
+    Thus the global support-height normalization and labelled private-pair
+    extraction can be imposed simultaneously. Equivalently,
+    $\tau(\mathcal F_6(G))>2$ if and only if the maximum support height is six.
+    Producing a pair of height at least seven is already the intermediate
+    transversal theorem, not a smaller monotone step.
+
+13. **Common representation for terminal-edge contractions.** If an edge
+    joins two terminals in one part of a Mader network, contracting it is
+    represented by replacing the two terminal columns of a skew matrix by
+    one generic linear combination. Pairwise disjoint contractions admit
+    one master representation whose legal principal restrictions give all
+    predecessor endpoint delta-matroids. Ordinary symmetric exchange need
+    not stay in those legal restrictions. More decisively, the endpoint
+    system is invariant under every change to terminal--terminal edges
+    within one part, so it cannot record the designated $K_4$, split edge,
+    same-model paths, or deletion-colouring data.
+
+14. **Canonical order-eight matching obstruction.** For an eight-vertex
+    boundary $J$, put $F=\overline J$. If $I_2\vee J$ has no $K_7$ minor and
+    $F$ has no perfect matching, the Gallai--Edmonds set $A(F)$ has order at
+    most two and $F[D]$ has at most four factor-critical components. The
+    possible pairs $(|A|,o(F-A))$ are $(0,2),(0,4),(1,3),(2,4)$. This
+    canonicalizes the earlier Tutte witness but does not align the two
+    shore colouring languages. An exact state-realization barrier shows
+    that the canonical decomposition, two named edge transitions,
+    independent-block responses, seven-connectivity, and the target-free
+    quotient remain insufficient without global minor exclusion or further
+    labelled branch-set data.
+
+15. **Exact six-linkage alignment and a bridge/web dichotomy.** In the
+    zero-intersection branch with a six-vertex $K_5$ model and a disjoint
+    $K_6^-$, contract six disjoint linking paths to a perfect matching.
+    A complete finite classification proves that the resulting
+    twelve-vertex quotient has a $K_7$ minor unless the missing edge of
+    the $K_6^-$ is matched to a missing singleton--split-end edge of the
+    six-vertex model. Thus every surviving matching aligns two labelled
+    nonedges; arbitrary endpoint permutations are no longer a residue.
+
+    For the canonical $3+1$ contact form, a clean path from the remaining
+    split-end linkage path to any of three specified linkage paths gives
+    seven explicit branch sets. Seven-connectivity therefore forces either
+    a $K_7$ minor or a separator relation through the two exceptional
+    linkage paths after deleting six named vertices. A one-vertex minimum
+    separator in that relation lifts to an actual order-seven separation.
+    Two crossed bridges on either exceptional cycle transpose the aligned
+    endpoints and again give an explicit $K_7$ model. Finally, the
+    Generalised Two Paths Theorem gives a precise structural residue: in a
+    $K_7$-minor-free host, two cleaned graphs have four-web completions with
+    frames sharing the remaining linkage path.
+
+    The two completion edge sets are not host edges and need not agree.
+    Their compatibility or exclusion is the live unbounded problem on this
+    branch. A separate exact quotient calculation also shows why attachment
+    count alone cannot replace it: one connected contracted bridge with
+    seven or eight quotient neighbours can remain nonrepairing in two
+    labelled eight-vertex frames. This quotient statement does not lift
+    through nontrivial linkage paths without preserving distinct first-hit
+    vertices.
+
+    Minor-criticality supplies two further constraints on this branch. If
+    the private pair is nonadjacent, its deletion is exactly six-chromatic;
+    each endpoint is colour-dominating in a separately attained
+    six-colouring; a dominating $K_5$ model can be regenerated while
+    avoiding any prescribed remaining vertex; and the deletion contains an
+    unlabelled $K_6$ minor. Conversely, seven-connectivity and the disjoint
+    $K_6^-$ and $K_5$ supports exclude any fixed pair whose deletion is
+    $K_5$-minor-free. Neither statement preserves the linkage labels, so
+    both are constraints on the two-web composition problem rather than a
+    solution of it.
+
+The most recent end-to-end composition theorem in item 11 is
 [`hc7_three_split_marked_mader_branch_closure.md`](results/hc7_three_split_marked_mader_branch_closure.md),
 with its adjacent audit.  The weighted separation and Kempe-component inputs
 are recorded in
@@ -152,13 +233,30 @@ The direct source for the common-deletion chromatic statement and all seven
 nonempty matching-edge equality patterns is Sections 7--8 of
 [`hc7_three_split_cross_star_ranked_exchange.md`](active/hc7_three_split_cross_star_ranked_exchange.md),
 with its [separate internal audit](active/hc7_three_split_cross_star_ranked_exchange_audit.md).
+The new global normalization is
+[`hc7_maximal_support_pair_private_pair_bridge.md`](results/hc7_maximal_support_pair_private_pair_bridge.md).
+The algebraic projection and canonical boundary obstruction are respectively
+[`hc7_mader_terminal_contraction_projection.md`](results/hc7_mader_terminal_contraction_projection.md)
+and
+[`hc7_eight_boundary_gallai_edmonds.md`](results/hc7_eight_boundary_gallai_edmonds.md),
+each with an adjacent audit.
+The exact linkage classification and the constructive bridge/web theorem
+are
+[`hc7_disjoint_k6minus_support6_linkage_classifier.md`](results/hc7_disjoint_k6minus_support6_linkage_classifier.md)
+and
+[`hc7_disjoint_k6minus_support6_bridge_augmentation.md`](results/hc7_disjoint_k6minus_support6_bridge_augmentation.md),
+again with adjacent audits.
+The two secondary criticality constraints are
+[`hc7_nonadjacent_pair_colouring_regeneration.md`](results/hc7_nonadjacent_pair_colouring_regeneration.md)
+and
+[`hc7_disjoint_k6minus_k5model_two_apex_exclusion.md`](results/hc7_disjoint_k6minus_k5model_two_apex_exclusion.md).
 
 ## 3. Exact open problems
 
 ### 3.1 Label-preserving extraction of compatible $K_5$ models
 
-Starting with the bounded critical family and its private pairs, prove one of
-the following:
+Starting with the bounded exact-six family and its globally maximal private
+pairs from item 12, prove one of the following:
 
 - an explicit $K_7$-minor model in $G$;
 - two vertices meeting every member of $\mathcal F_6(G)$;
@@ -168,10 +266,11 @@ the following:
   and colouring data, together with a strictly decreasing induction
   parameter.
 
-The unresolved cases are a genuinely separated labelled triple and the
-following shared-set configurations: $A\cap X=\varnothing$ (for either
-order of $A$ and either order of the two additional models), and the case
-in which all three models have six vertices and $|A\cap X|=1$. A complete
+In this normalization the avoided support $A$ always has order six. The
+unresolved cases are a genuinely separated labelled triple and the
+following shared-set configurations: $A\cap X=\varnothing$ (with the two
+additional models both of order five or both of order six), and the case in
+which all three models have six vertices and $|A\cap X|=1$. A complete
 eight-terminal rooted-minor classification does not by itself resolve the
 latter: one finite boundary pattern defeats every choice of four vertices
 held outside the rooted reduction.  A successful proof must therefore use
@@ -199,8 +298,29 @@ contraction is not seven-connected.  In the order-two case, expansion gives
 a boundary of order eight; both open sides
 contain a connected subgraph adjacent to every boundary vertex, and the
 boundary graph is four-colourable.  The last fact is computer-assisted, with
-retained verification code and an independent replay.  Four-colourability
-alone does not align the two boundary colourings.
+retained verification code and an independent replay. Four-colourability
+alone does not align the two boundary colourings. The canonical
+Gallai--Edmonds decomposition removes arbitrary Tutte-witness choice but
+still does not transfer a colouring state. Likewise, the common Mader
+delta-matroid representation preserves endpoint feasibility across the two
+contractions but is blind to the same-model branch adjacencies and paths
+needed for composition.
+
+An explicit quotient also shows that six arbitrary vertex-disjoint paths
+between a disjoint six-vertex $K_5$ model and a $K_6^-$ need not yield a
+$K_7$ minor: the quotient has a width-five tree decomposition. A positive
+continuation must retain the bridges of an extremally chosen linkage and
+prove an augmenting rerouting or an order-at-most-six separator; replacing
+the linkage by its endpoint matching loses essential information.
+
+The new alignment theorem identifies exactly what that retained information
+must repair. In the canonical $3+1$ ownership form, clean augmentation and
+crossed bridge order are closed by explicit models. The remaining geometric
+obligation is to compose or exclude two four-web certificates that share one
+linkage path, or to turn their incompatibility into a model-preserving
+order-seven separation with a strict parameter. The other minimal ownership
+form must either be reduced to the same theorem or given an analogous
+labelled bridge decoder.
 
 The detailed formulations and all immediate dependencies are in
 [`active/INDEX.md`](active/INDEX.md) and
@@ -223,6 +343,17 @@ hypotheses:
   cycle.
 - A single bounded rooted-minor classification does not compose the final
   one-vertex-intersection configuration.
+- The Mader endpoint delta-matroid does not record terminal--terminal edges
+  inside one model part, and its symmetric exchanges can leave every graph-
+  realizable contraction slice.
+- The canonical Gallai--Edmonds barrier and all static exact-block responses
+  do not synchronize two shore colouring languages.
+- Six arbitrary disjoint linking paths between the zero-overlap models do
+  not suffice; an explicit quotient of treewidth five excludes $K_7$.
+- One contracted external component with seven distinct quotient contacts
+  also need not suffice. Seven host attachments may collapse under linkage
+  contractions, so the quotient's two exceptional eight-frames cannot be
+  promoted to a host separation without a first-hit argument.
 - Finite neighbourhood or Moser-spindle enumeration cannot replace an
   unbounded structural theorem.
 
@@ -260,3 +391,14 @@ should use standard graph-theoretic descriptions; see [`AGENTS.md`](AGENTS.md).
   graphs*](https://doi.org/10.1016/j.jctb.2023.08.009), J. Combin. Theory
   Ser. B 164 (2024), 1--16: Strong Hadwiger for four colours, used in the
   rooted argument described in the technical frontier.
+- M. Wahlström, [*Representative set statements for delta-matroids and the
+  Mader delta-matroid*](https://arxiv.org/abs/2306.03605), especially the
+  linear representation of Mader endpoint systems. The terminal-edge
+  projection in item 13 is a new deduction in this repository.
+- S. Humeau and D. Pous, [*On the Two Paths Theorem and the Two Disjoint
+  Paths Problem*](https://arxiv.org/abs/2505.16431), Theorem 1.3 and the
+  equivalent web-completion formulation in Section 5: the structural input
+  used in item 15.
+- A. Girão et al., [*The Dominating 4-Colour
+  Theorem*](https://arxiv.org/abs/2605.10112), Theorem 1.1: the regeneration
+  input after deleting the nonadjacent private pair.

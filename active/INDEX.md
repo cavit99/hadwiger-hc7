@@ -13,12 +13,26 @@ of the [technical frontier](hc7_support_six_frontier.md).
 
 Immediate files (read each theorem with its adjacent audit):
 
+- [globally maximal private pairs for a bounded exact-six family](../results/hc7_maximal_support_pair_private_pair_bridge.md)
 - [three small-support extraction](../results/hc7_support_at_most_six_separated_triple_extraction.md)
 - [bounded critical support family](../results/hc7_support_six_bounded_critical_kernel.md)
 - [additional models through a private transversal pair](../results/hc7_support_six_private_pair_v_extraction.md)
 - [dichotomy for models through a private pair](../results/hc7_private_pair_cross_arm_dichotomy.md)
 - [replacement models sharing a prescribed vertex set](../results/hc7_rigid_cross_arm_double_root_cover.md)
 - [barrier to a single eight-terminal rooted-minor reduction](../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md)
+- [barrier to replacing six linking paths by their endpoint matching](../barriers/hc7_disjoint_k6minus_support6_six_link_barrier.md)
+
+### Exceptional disjoint-model configuration
+
+**Live target:** compose or exclude the two four-terminal web certificates
+sharing one linkage path in the canonical `3+1` contact form; then reduce
+the `2+2` contact form to the same exchange or prove its analogue.
+
+- [exact label-preserving matching and one-bridge classification](../results/hc7_disjoint_k6minus_support6_linkage_classifier.md)
+- [clean augmentation, crossed-bridge construction, and two-web residue](../results/hc7_disjoint_k6minus_support6_bridge_augmentation.md)
+- [colouring and minor regeneration after deleting the private pair](../results/hc7_nonadjacent_pair_colouring_regeneration.md)
+- [exclusion of a fixed two-vertex terminal in the disjoint-model configuration](../results/hc7_disjoint_k6minus_k5model_two_apex_exclusion.md)
+- [barrier to a single contracted external bridge](../barriers/hc7_disjoint_k6minus_external_bridge_barrier.md)
 
 ## Composition of three six-vertex $K_5$ models
 
@@ -38,3 +52,7 @@ Immediate files:
 - [two monochromatic matching edges](hc7_five_colour_exact_two_row_linkage.md)
 - [connected subgraphs forced by four double-critical edges](hc7_four_edge_double_critical_carriers.md)
 - [barrier to composing those subgraphs using adjacency alone](../barriers/hc7_four_edge_double_critical_packaging_barrier.md)
+- [common representation for terminal-edge contractions](../results/hc7_mader_terminal_contraction_projection.md)
+- [canonical matching obstruction on an eight-vertex boundary](../results/hc7_eight_boundary_gallai_edmonds.md)
+- [barrier to endpoint-only delta-matroid exchange](../barriers/hc7_mader_delta_legal_slice_exchange_barrier.md)
+- [barrier to static matching-based state transfer](../barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md)
