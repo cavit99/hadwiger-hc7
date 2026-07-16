@@ -6,100 +6,92 @@
 This file records the current mathematical dependency chain. The concise
 list of live files is [`active/INDEX.md`](active/INDEX.md), and the current
 technical statement is
-[`active/hc7_endpoint_rigid_mixed_shore_frontier.md`](active/hc7_endpoint_rigid_mixed_shore_frontier.md).
+[`active/hc7_balanced_order8_frontier.md`](active/hc7_balanced_order8_frontier.md).
 If an archived note conflicts with this ledger, this ledger governs the
 current programme. The later two-root and support-six sections retain
 developed dependency chains but are not the current engine.
 
-## Current strategic frontier: endpoint-rigid order-eight exchange
+## Current strategic frontier: balanced order-eight completion
 
-The active goal is still the maximal-pair support-height exchange at level
-six.  The labelled Mader/delta-matroid route has been decisively falsified
-at the required legal-slice level: its ordinary symmetric exchange does not
-preserve the split-versus-contracted branch-set data, and its endpoint
-signature does not determine support height.  The live proof therefore uses
-the canonical Gallai--Edmonds decomposition in the remaining two-edge,
-order-eight branch.
+The global intermediate target remains the maximal-pair support-height
+exchange at level six, equivalently the two-vertex transversal theorem for
+compact `K_5` models.  The current local engine is the exact order-eight
+outcome of the five-leaf star in the graph of globally support-maximal
+private pairs.
 
-### Audited structural collapse
+### New audited closure
 
-In the endpoint-rigid no-perfect-matching branch, the current audited chain
-gives an eight-vertex separator `S` with two connected open components
-`U,V`, each adjacent to every vertex of `S`.  There are distinct
-`s,x in S` such that `s` is universal in `G[S]`, and
-`G[S-{s,x}]` is the theta graph formed by an edge and two internally
-disjoint length-three paths with the same ends.  The quotient obtained by
-contracting `U,V` in `G-{s,x}` has no `K_5` model supported on at most six
-vertices.
+The endpoint-rigid, no-perfect-matching arm has reached a genuine terminal
+construction.  Its audited chain produces a compact `K_5` model and a
+shifted order-eight separator.  Component exchanges force all residual
+components to miss the same boundary vertex `y`.  The final anchoring
+argument now handles both possibilities:
 
-Every minimum support-six `K_5` model in `G-{s,x}` consequently has, after
-orienting the two sides, branch sets
+1. if `y` is not the universal boundary vertex `s`, anchor the five model
+   branch sets on `S-{s,y}` and use the residual component together with
+   `{s}`;
+2. if `y=s`, anchor the five model branch sets on five distinct vertices
+   of `S-{s}`, absorb one unused boundary vertex into the residual
+   component, and take `{s}` as the seventh branch set.
 
-`{u_1},...,{u_h}, {w_1},...,{w_{4-h}}, {v,t}`,
+In the second case the seven branch sets are explicitly
 
-where `h` is two or three, the `u_i` lie in `U`, `v` lies in `V`, and
-`t,w_j` lie on the boundary.  This is no longer an arbitrary model-meeting
-claim: it is an exact two-side normal form with three possible endpoint
-nonadjacency patterns.
+`M'_1,...,M'_5, C union {z}, {s}`.
 
-Three uniform linkage theorems now sharpen that form.
+The failed anchoring linkage would expose a cut of order at most six, so
+seven-connectivity supplies the required paths.  All branch-set
+adjacencies are written and separately audited.  Thus the terminal shifted
+residue is eliminated by a `K_7` minor, modulo any order-seven-separation
+exit already returned upstream.  This is an unbounded hand proof, not a
+finite boundary census.
 
-1. A general common-neighbour completion theorem says that in a
-   `k`-connected graph, adjacent vertices with at least `k` common
-   neighbours complete every `K_{k-2}` model of support at most `k-1`, or
-   expose an actual order-`k` separation.  It eliminates `V={v}` here.
-2. Every component of `V-v` either completes the model to `K_7`, exposes an
-   actual order-seven separation, or has exactly one missed contact in
-   `S`, belonging to `s,t,w_1,...,w_{4-h}`.
-3. A component missing only `t` gives an explicit `K_7` model.  When
-   `h=3`, components with different remaining missed labels also give an
-   explicit `K_7`; hence all components then miss the same one of `s,w_1`.
-4. When `h=2`, a two-path anchoring and a two-element Hall argument shows
-   that components with different missed labels among `s,w_1,w_2` also
-   give an explicit `K_7` model.  This is a hand theorem, not a finite
-   theta census.
-
-These are hand proofs with adjacent GREEN internal audits.  They eliminate
-infinite families and do not rely on finite boundary enumeration.
+The same mechanism has been extracted as an all-parameter theorem.  In a
+`k`-connected graph, a support-at-most-`k-1` `K_{k-2}` model positioned
+across an order-`k+1` boundary can be completed by one boundary-full
+component and one universal boundary vertex, under the precise
+one-support-vertex and first-hit hypotheses in the theorem.  It gives an
+explicit `K_k` model and is independently audited.
 
 ### Exact open theorem
 
-All components of `V-v` now have one common missed boundary vertex
-`y in {s,w_1,...,w_{4-h}}`.  Therefore
+The closure above applies when the complement of the eight-vertex boundary
+has no perfect matching.  The complementary branch remains:
 
-`N_G(V-v)={v} union (S-{y})`
+`overline{G[S]}` has a perfect matching,
 
-is an actual order-eight separator.  Every component on the `V-v` side is
-adjacent to all eight vertices of this shifted boundary, while the old
-support-six `K_5` model is contained in the opposite closed side.
+or equivalently `S` has a proper partition into four independent pairs.
+This balanced boundary partition does not by itself extend compatibly
+through both shores.  State-free examples show that four-colourability,
+full boundary contact, and the join-minor exclusion are insufficient.
 
-The genuinely unbounded residue is state transfer across this shifted
-separator.  The required theorem must use a deletion or contraction inside
-`V-v` to regenerate a small `K_5` model or a boundary colouring and obtain
-one of:
+The new target is therefore a **label-preserving balanced order-eight
+completion theorem**.  It must combine:
 
-1. an explicit `K_7`-minor model;
-2. a pair `P'` with `mu_G(P')>=7`;
-3. an actual order-seven separation preserving the named branch sets and
-   strictly decreasing the chosen open-side order; or
-4. a regenerated model with a strict decrease in a stated intersection
-   parameter.
+- exact matched-pair traces obtained by contracting either full shore with
+  one matched nonedge;
+- the original five-clique and its labelled defect edges;
+- the second disjoint five-clique; and
+- proper-minor six-colourings.
 
-Static Gallai--Edmonds transversals, contact counts, and relabelling cycles
-are insufficient.  Open-side order can become a well-founded rank only
-after the exact colouring partition and named model are shown to survive
-the shift.  The current statement, dependencies, and guardrails are in
-[`active/hc7_endpoint_rigid_mixed_shore_frontier.md`](active/hc7_endpoint_rigid_mixed_shore_frontier.md).
+The required output is an explicit `K_7` model, a common boundary partition
+which glues the two shore colourings, a pair of support height at least
+seven, or an actual order-seven separation preserving the named data and
+strictly decreasing a host rank.  A transition among abstract boundary
+partitions or an unranked near-complete-model rotation is not progress.
+The exact statement and guardrails are in
+[`active/hc7_balanced_order8_frontier.md`](active/hc7_balanced_order8_frontier.md).
+
+This target closes neither the earlier order-seven exits nor the other
+private-pair kernels.  Even its success would not by itself prove the full
+support-six transversal theorem or `HC_7`.
 
 Principal new audited results:
 
-- [`hc7_eight_boundary_named_edge_gallai_reduction.md`](results/hc7_eight_boundary_named_edge_gallai_reduction.md)
-- [`hc7_endpoint_rigid_gallai_exchange.md`](results/hc7_endpoint_rigid_gallai_exchange.md)
-- [`hc7_boundary_anchored_model_completion.md`](results/hc7_boundary_anchored_model_completion.md)
-- [`hc7_common_neighbour_model_completion.md`](results/hc7_common_neighbour_model_completion.md)
-- [`hc7_mixed_shore_component_contacts.md`](results/hc7_mixed_shore_component_contacts.md)
-- [`hc7_mixed_shore_two_component_exchange.md`](results/hc7_mixed_shore_two_component_exchange.md)
+- [`hc7_shifted_boundary_completion.md`](results/hc7_shifted_boundary_completion.md)
+- [`hc_uniform_boundary_repair_completion.md`](results/hc_uniform_boundary_repair_completion.md)
 - [`hc7_theta_two_defect_exchange.md`](results/hc7_theta_two_defect_exchange.md)
+- [`hc7_mixed_shore_two_component_exchange.md`](results/hc7_mixed_shore_two_component_exchange.md)
+- [`hc7_boundary_anchored_model_completion.md`](results/hc7_boundary_anchored_model_completion.md)
 
 ## Previous two-root frontier (frozen)
 

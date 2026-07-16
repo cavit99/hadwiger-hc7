@@ -1,9 +1,11 @@
 # Endpoint-rigid order-eight frontier
 
-**Status:** current conjectural target.  This file records the live
-dependency chain and the exact remaining exchange problem.  It is not a
-proof of `HC_7`; claim status is governed by the linked theorem and audit
-files and by [`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md).
+**Status:** superseded frontier, archived after the terminal shifted
+order-eight residue was eliminated by
+[`../results/hc7_shifted_boundary_completion.md`](../results/hc7_shifted_boundary_completion.md).
+Earlier order-seven-separation exits and the complementary
+perfect-matching arm remain global obligations; this file is retained for
+provenance only.
 
 ## 1. Global normalization
 

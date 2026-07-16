@@ -5,33 +5,30 @@
 
 ## Primary target
 
-[Endpoint-rigid order-eight mixed-shore exchange](hc7_endpoint_rigid_mixed_shore_frontier.md)
+[Balanced order-eight completion](hc7_balanced_order8_frontier.md)
 
 Immediate proved inputs, each to be read with its adjacent audit:
 
-- [named-edge Gallai--Edmonds reduction](../results/hc7_eight_boundary_named_edge_gallai_reduction.md)
+- [five-leaf star structure](../results/hc7_star_private_transversal_large_kernel.md)
+- [rooted-four reduction and exact order-eight output](../results/hc7_star_kernel_rooted_four_contraction.md)
 - [endpoint-contact rigidity](../results/hc7_star_order_eight_endpoint_contacts.md)
-- [endpoint-rigid Gallai--Edmonds collapse](../results/hc7_endpoint_rigid_gallai_exchange.md)
-- [boundary-anchor completion and the exact mixed model](../results/hc7_boundary_anchored_model_completion.md)
-- [uniform common-neighbour completion](../results/hc7_common_neighbour_model_completion.md)
-- [component-contact trichotomy](../results/hc7_mixed_shore_component_contacts.md)
-- [component exchange and three-row label alignment](../results/hc7_mixed_shore_two_component_exchange.md)
-- [two-row defect exchange and shifted order-eight separator](../results/hc7_theta_two_defect_exchange.md)
+- [elimination of the no-perfect-matching shifted residue](../results/hc7_shifted_boundary_completion.md)
+- [uniform compact-model boundary completion](../results/hc_uniform_boundary_repair_completion.md)
 
 Immediate guardrails:
 
-- the legal split/contracted slices of the Mader representation do not obey
-  ordinary symmetric exchange;
-- the Gallai--Edmonds set of a static boundary need not meet every small
-  regenerated model; and
-- boundary-contact counting is exhausted once each residual component has
-  exactly one missed contact.
+- a perfect matching in the complement of the boundary does not by itself
+  synchronize the two shore colourings;
+- abstract boundary-extension languages are too flexible without the old
+  clique and defect-edge labels; and
+- simultaneous singletonization is not terminal unless its separator or
+  near-complete-model output carries a strict host rank.
 
-The immediate open theorem is the shifted order-eight exchange stated in
-Section 3 of the primary target: transfer a proper-minor colouring or a
-regenerated labelled model across the new boundary while strictly decreasing
-the open-side order, or obtain a `K_7` minor, a height-seven pair, or an
-actual model-preserving order-seven separation.
+The immediate open theorem is the balanced order-eight completion stated in
+Section 2 of the primary target.  It must combine the exact matched-pair
+traces realized from both shores with the original labelled cliques and
+defect edges, yielding a `K_7` model, a common boundary colouring, a
+height-seven pair, or a strict model-preserving order-seven separation.
 
 ## Frozen prior programme
 
