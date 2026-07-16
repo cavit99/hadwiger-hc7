@@ -112,15 +112,16 @@ inclusion-minimal bad contraction set `E`.
 * `|E|=1` gives an actual exact-seven separation preserving the contracted
   named carrier.  It need not preserve every uncontracted carrier, the
   returned colouring state, the packet vector, or a strict global rank.
-* `|E|=2` or `3` gives a six-connected quotient whose every six-cut
-  contains all contracted images.  Literal expansion has order eight or
-  nine and is pointwise full on every quotient component.
+* `|E|=2` gives a six-connected quotient whose every six-cut contains both
+  contracted images.  Literal expansion has order eight and is pointwise
+  full on every quotient component.  The formally possible `|E|=3`
+  branch is now excluded by the marked Mader closure below.
 * Three or more quotient components give a displayed `K_7` model.
-* With exactly two components, the expanded boundary is four-colourable.
-  The order-eight/order-nine classification is computer-assisted and
-  independently replayed.  Its unique five-chromatic exception
-  `K_2 vee C_7` is eliminated by a separate audited universal-pair/core-fan
-  theorem using the three disjoint models.
+* With exactly two components in the order-two branch, the expanded
+  order-eight boundary is four-colourable.  The classification is
+  computer-assisted and independently replayed.  The unique cyclic
+  five-chromatic exception occurs only at order nine, which the new
+  size-three closure removes from the live branch.
 
 Sources:
 
@@ -128,30 +129,20 @@ Sources:
 * `../results/hc7_two_full_shore_boundary_absorption.md`;
 * `../results/hc7_universal_pair_three_core_elimination.md`;
 * `../results/hc7_leaf_rooted_chromatic_drop.md`; and
-* `../results/hc7_minimal_contraction_forest_saturation.md`.
+* `../results/hc7_minimal_contraction_forest_saturation.md`; and
+* `../results/hc7_three_split_marked_mader_branch_closure.md`.
 
 The exact residue of this subchain is therefore:
 
 \[
- \boxed{\text{one unranked exact-seven handoff, or a two-full-shore
- four-colour boundary of order eight or nine}.}          \tag{4.1}
+ \boxed{\text{one unranked exact-seven handoff, or a size-two
+ minimal contraction with a two-full-shore four-colour boundary of
+ order eight}.}                                           \tag{4.1}
 \]
 
 Four-colourability alone does not supply a common boundary state.  The
-balanced-colour shortcut is false: `K_{3,5}` at order eight and
-`K_3 vee I_6` at order nine satisfy the state-free join exclusion but have
-no colour-class pattern `2+2+2+2` or `3+2+2+2`, respectively.
-
-There is a new audited terminal decoder for the `|E|=3` Mader path
-obstruction.  If the published disjoint-three-clique argument reaches its
-terminal `5+5+5` equality cell, each canonical six-cut contains only one
-or two of the three contracted images.  This contradicts minimality of
-`E`, which forces every six-cut to contain all three.  Thus that terminal
-cell is closed.  The preceding weighted fan/cell induction has not been
-established, so this does not remove the two-full-shore residue above or
-prove the marked three-clique theorem.  See
-`hc7_decorated_three_model_hwege.md` and
-`hc7_weighted_klnz_terminal_decoder.md`, with the adjacent cold audit.
+balanced-colour shortcut is false: `K_{3,5}` at order eight satisfies the
+state-free join exclusion but has no colour-class pattern `2+2+2+2`.
 
 The stronger-looking weighted genuine-cell shortcut is false.  A
 15-vertex graph formed from a planar 3-tree and three marked vertices has
@@ -165,29 +156,20 @@ order alone.  See
 `../barriers/hc7_decorated_hwege_genuine_cell_falsifier.md` and its exact
 verifier.
 
-The stronger marked theorem has now been carried through three additional
-steps of the published three-clique proof.  In a `K_7`-minor-free candidate
-every marked six-cut has exactly two open components.  This eliminates the
-`|W|=6` Mader branch and the balanced equality branch for `|W|<=2`.  At
-`|W|=2`, the one tail supplies a mark-to-mark path and marked minimum-degree
-forcing makes the other two literal four-clique rows complete to both
-marks; splitting the path gives an explicit `K_7`.
-
-The whole actual range `2<=|W|<=5` is now closed.  A uniform
-separator/counting lemma first proves that every certificate in this range
-is balanced.  If one row were one below equality, it would be tail-free and
-would contain its named clique outside `W`, forcing all of `W` into that
-clique.  The two other rows then exceed the global Mader budget in every
-possible tail pattern.  The `|W|=2` balanced decoder was already audited.
-For `3<=|W|<=5`, a localized four-link uses every unmarked member of `W` as
-a retained two-packet contact and leaves one marked endpoint omitted.  The
-resulting labelled `K_7^-` has a single possible missing pair.  Splitting
-that mark in its seven-connected predecessor repairs the pair.  Together
-with the `|W|=6` exclusion and balanced `|W|<=1` closure, this leaves only
-the unbalanced `|W|=0,1` outcomes in the actual minimal-three-contraction
-route.  The abstract marked theorem can still have the higher cells because
-predecessor connectivity is extra structure, and the low-`W` unbalanced
-outcomes remain open.  See
+The marked Mader route is now closed throughout the actual size-three
+minimal-contraction branch.  Every marked six-cut is binary and `|W|=6`
+is impossible.  For `2<=|W|<=5`, a deficient row would force all of `W`
+into one named clique and make the companion rows exceed the Mader budget;
+hence those cells are balanced.  For `|W|<=1`, a deficient row has at most
+one unit of capacity slack across the large cells.  Every tight cell is a
+marked six-cut and contains the same two outside marks, so at most two
+large cells exist, fewer than the disjoint rows require.  The audited
+balanced decoders then cover every remaining value of `|W|`; at
+`3<=|W|<=5` one split mark in a seven-connected predecessor repairs the
+unique defect of a labelled `K_7^-`.  Therefore an inclusion-minimal bad
+set cannot have order three.  This does not prove the abstract marked
+three-clique theorem without predecessor data, and it leaves the order-two
+composition obligation in (4.1).  See
 `hc7_marked_three_clique_cut_reduction.md`,
 `hc7_marked_three_clique_w2_closure.md`, and their adjacent cold audits.
 The new balanced-three chain and audits are
@@ -200,6 +182,11 @@ The uniform `|W|=4,5` continuation and audit are
 The row-collapse proof and audit are
 `../results/hc7_marked_three_clique_unbalanced_collapse.md` and
 `../results/hc7_marked_three_clique_unbalanced_collapse_audit.md`.
+The low-`W` capacity closure and final composition audit are
+`../results/hc7_marked_three_clique_low_w_unbalanced_closure.md`,
+`../results/hc7_marked_three_clique_low_w_unbalanced_closure_audit.md`,
+`../results/hc7_three_split_marked_mader_branch_closure.md`, and
+`../results/hc7_three_split_marked_mader_branch_closure_audit.md`.
 
 There is now one uniform replacement for a bare boundary-state search.
 Contract an inclusion-minimal forest in the two open shores until the

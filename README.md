@@ -88,19 +88,18 @@ The following statements are proved and independently cold-audited.
   from the all-equal state this is a strict `3 -> 1/2` first descent.
   It is not a global rank: explicit highly connected examples realize a
   double output and a directed singleton cycle.
-* A second, model-side composition route now has an audited terminal
-  decoder.  Contracting the three split edges gives three disjoint marked
-  `K_5` cliques.  Seven disjoint Mader good paths give a literal `K_7`;
-  otherwise the Robertson--Seymour--Thomas certificate has an exact parity
-  and coverage count.  In the terminal disjoint `5+5+5` equality cell,
-  every canonical six-cut either contains one marked contraction image or
-  belongs to one unique diagonal pattern and contains two.  Hence the
-  entire terminal cell is impossible when the three-edge contraction set
-  is inclusion-minimal, because every six-cut of that quotient must contain
-  all three marked images.  This closes the last equality matrix, not the
-  earlier fan/cell induction needed to reach it.  The clean theorem still
-  under test is: a six-connected graph with three disjoint marked `K_5`s in
-  which every six-cut contains all three marks has a `K_7` minor.
+* The model-side composition route now closes the **entire size-three
+  minimal-contraction branch**.  Contracting the three split edges gives
+  three disjoint marked `K_5` cliques.  Seven disjoint Mader good paths give
+  a literal `K_7`; otherwise the obstruction has `0<=|W|<=6`.  Marked-cut
+  decoders close every balanced row vector.  For unbalanced vectors, a
+  deficient row is tail-free; when `|W|>=2` its two companion rows exceed
+  the Mader budget, while for `|W|<=1` a symmetric-difference capacity
+  argument leaves at most two large cells, too few to hold all three rows.
+  Hence all three split edges can never be an inclusion-minimal bad
+  contraction set.  This is a full infinite-family closure, but it does
+  not settle a minimal bad set of order two or the abstract marked theorem
+  without split-predecessor data.
 * The tempting weaker decoder based only on weighted separator order is
   now decisively false.  There is an exact 15-vertex graph with three
   disjoint marked `K_5`s covering its vertices, weighted separator order
@@ -117,19 +116,17 @@ The following statements are proved and independently cold-audited.
   minimum cuts force two clique rows to contact both marks, and a full
   tail component splits a mark-to-mark path into the final two bags of a
   `K_7` model.
-* The entire actual range `2<=|W|<=5` is now closed.  First, one uniform
+* The entire actual range `0<=|W|<=6` is now closed.  First, one uniform
   separator/counting lemma shows that every certificate in this range is
-  automatically balanced: a row one below equality is tail-free, forces
-  all of `W` into its named clique, and makes each of the other two rows
-  too large for the Mader budget.  The `|W|=2` balanced cell was already
-  decoded.  For `3<=|W|<=5`, a four-link through a row clique produces a
-  labelled `K_7^-`; splitting one marked edge in its seven-connected
-  predecessor repairs the unique possible defect and gives a literal
-  `K_7`.  Together with the earlier `|W|=6` exclusion and balanced
-  `|W|<=1` closure, this leaves only the **unbalanced** `|W|=0,1` outcomes
-  in the actual minimal-three-contraction Mader route.  Those low-`W`
-  outcomes, the abstract marked theorem without split-predecessor data,
-  and the other support-six branches remain open.
+  automatically balanced for `2<=|W|<=5`: a row one below equality is
+  tail-free, forces all of `W` into its named clique, and makes each of the
+  other two rows too large for the Mader budget.  At `|W|<=1`, the same
+  tail-free row meets each large cell in at most its half-capacity; two
+  tight cells would both contain the same two outside marks, so at most two
+  large cells exist, contradicting the row count.  The balanced cells and
+  `|W|=6` were already decoded.  Thus no Mader certificate survives in the
+  actual minimal-three-contraction route.  The exact disjoint-model residue
+  is now an order-one exact-seven handoff or a minimal bad set of order two.
 * Independently, a five-colouring of the common matching deletion with
   exactly two equal rows forces their four endpoints to induce `K_4`.
   Its four cross-edges are locally double-critical, two outside colours
@@ -198,6 +195,10 @@ The uniform continuation through `|W|=4,5` and its cold audit are
 [`hc7_marked_three_clique_w45_predecessor_closure.md`](results/hc7_marked_three_clique_w45_predecessor_closure.md)
 and
 [`hc7_marked_three_clique_w45_predecessor_closure_audit.md`](results/hc7_marked_three_clique_w45_predecessor_closure_audit.md).
+The low-`W` capacity closure and the end-to-end size-three theorem, with
+their cold audits, are
+[`hc7_marked_three_clique_low_w_unbalanced_closure.md`](results/hc7_marked_three_clique_low_w_unbalanced_closure.md) and
+[`hc7_three_split_marked_mader_branch_closure.md`](results/hc7_three_split_marked_mader_branch_closure.md).
 
 ## Audited frontier
 
@@ -296,15 +297,16 @@ input to `G1/G2`, not a third closed branch.
    forces another small model containing both private roots.  With literal
    arms these compulsory models have a genuine two-state split-bag
    orientation.  This is the current labelled composition invariant.
-12. **Disjoint three-split branch.** Minimal simultaneous contraction of
-   two or three split edges either gives `K_7`, an actual exact-seven
-   handoff, or a two-component boundary of order eight or nine that is
+12. **Disjoint three-split branch.** The three split edges cannot themselves
+   be an inclusion-minimal bad contraction set: the complete marked Mader
+   obstruction is now closed.  Thus minimal simultaneous contraction of
+   the three models leaves only an order-one exact-seven handoff or an
+   order-two bad set whose expanded boundary has order eight and is
    pointwise full on both shores.
-13. **Two-shore boundary absorption.** In that two-component residue from
-   two or three disjoint normalized split models, every surviving
-   order-eight/nine boundary is four-colourable.  The sole five-chromatic
-   census exception `K_2 vee C_7` is eliminated by a separate branch-set
-   theorem.
+13. **Two-shore boundary absorption.** In that live order-two residue, the
+   two-component order-eight boundary is four-colourable.  The former
+   order-nine cyclic exception belonged only to the now-excluded
+   size-three branch.
 14. **Uniform common-neighbour rooted principle.** If
 
    \[

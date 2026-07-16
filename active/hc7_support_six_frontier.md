@@ -211,20 +211,23 @@ Sources:
 
 ## 3. `G2`: exact two-shore residue
 
-For three vertex-disjoint normalized split models, a minimal bad
-simultaneous contraction has one of the following proved outcomes:
+For three vertex-disjoint normalized split models, the size-three
+minimal-bad-contraction branch is now excluded by the complete marked
+Mader closure.  A minimal bad simultaneous contraction therefore has one
+of the following proved outcomes:
 
 * `K_7`;
 * an unranked actual exact-seven handoff; or
-* exactly two full open shores across a boundary of order eight or nine.
+* a size-two bad contraction with exactly two full open shores across an
+  expanded boundary of order eight.
 
-In the last case the boundary is four-colourable.  The computer-assisted
-order-nine exception `K_2 vee C_7` is eliminated by a separate audited
-branch-set theorem.
+In the last case the boundary is four-colourable.  The former order-nine
+exception belonged only to the now-excluded size-three branch.
 
 Sources:
 
 * [`../results/hc7_three_split_minimal_bad_contraction.md`](../results/hc7_three_split_minimal_bad_contraction.md)
+* [`../results/hc7_three_split_marked_mader_branch_closure.md`](../results/hc7_three_split_marked_mader_branch_closure.md)
 * [`../results/hc7_two_full_shore_boundary_absorption.md`](../results/hc7_two_full_shore_boundary_absorption.md)
 * [`../results/hc7_universal_pair_three_core_elimination.md`](../results/hc7_universal_pair_three_core_elimination.md)
 
