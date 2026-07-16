@@ -34,33 +34,26 @@ no $K_7$ minor. Then every proper minor of $G$ is six-colourable, so $G$ is
 7-contraction-critical; [Mader's theorem](https://eudml.org/doc/161665)
 implies that $G$ is seven-connected.
 
-For a minor model, its **support** is the union of its branch sets. Let
-$\mathcal F_6(G)$ be the family of supports of all $K_5$-minor models using
-at most six vertices. The current intermediate target is
+The current programme studies a clean, unbounded completion problem. Assume
+that $G$ already has a spanning $K_7$-minus-one-edge minor model in which
+the two branch sets incident with the missing edge are nonadjacent singleton
+vertices. The immediate target is to prove that $G$ has a $K_7$ minor or an
+actual separation of order seven.
 
-$$
-\tau(\mathcal F_6(G))\le2,
-$$
+A new general input converts any low-chromatic connected subgraph into one
+of two standard structures: it is contained in the first branch set of a
+dominating $K_5$ model, or the final four ordered branch sets form a
+separator. In the current $HC_7$ application that separator has the form
+$T_2\cup C$, where $C$ is an induced cycle, $T_1$ dominates every separator
+vertex, and $T_2$ dominates $C$. The sharp order-five case lifts to an
+order-seven separation in $G$; more generally the correct quantity is the
+separator order plus the number of roots adjacent to its far side.
 
-where $\tau$ is the transversal number. In plain terms: find two vertices
-meeting every $K_5$ model on at most six vertices. This statement alone is
-not $HC_7$; the pair must ultimately be shown to meet every $K_5$-minor
-model. Such a global pair would finish the proof, because deleting it leaves
-a $K_5$-minor-free graph, which is four-colourable by the known $t=5$ case.
-
-The two current technical problems are:
-
-1. Extract several compatible, prescribed $K_5$-minor models from a bounded
-   critical family, or obtain an explicit $K_7$-minor model, a global
-   two-vertex transversal, or an order-seven separation preserving the
-   prescribed branch sets together with a strictly decreasing induction
-   parameter.
-2. Given three disjoint six-vertex $K_5$ models, delete their three
-   two-vertex branch-set edges. Connectivity four yields an audited
-   order-seven separation with a strict rank. In the remaining
-   at-least-five-connected graph, each prescribed $K_4$ extends separately
-   to a $K_5$-minor model by a path, but the three paths may overlap and
-   colouring information alone does not make their branch sets compatible.
+The remaining problem is label-preserving composition: compress a larger
+ordered separator, or exchange the new dominating model with the five
+branch sets of the pre-existing near-$K_7$ model, using the colourings of
+proper minors. The earlier support-six transversal programme is retained as
+a frozen dependency chain rather than the active engine.
 
 ## Start here
 
@@ -68,8 +61,8 @@ The two current technical problems are:
 |---|---|
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Authoritative current status, proved dependency chain, exact open problems, and known obstructions |
 | [`active/INDEX.md`](active/INDEX.md) | Short list of current proof work and immediate dependencies |
-| [Technical formulation of the two active problems](active/hc7_support_six_frontier.md) | Precise hypotheses and target conclusions |
-| [Claim-by-claim coverage map](active/hc7_support_six_coverage_checkpoint.md) | Detailed dependency and evidence record |
+| [Current singleton-root completion frontier](active/hc7_two_root_colouring_space_frontier.md) | Precise hypotheses, proved inputs, barriers, and immediate open theorem |
+| [Frozen support-six technical frontier](active/hc7_support_six_frontier.md) | Earlier developed dependency chain retained for reuse |
 
 For a specific claim, read the theorem note in [`results/`](results/) together
 with its adjacent `_audit.md` file when one exists. Failed intermediate

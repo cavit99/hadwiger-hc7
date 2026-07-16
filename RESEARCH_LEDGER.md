@@ -3,14 +3,108 @@
 **Last updated:** 16 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
-This file records the current mathematical dependency chain.  The more
-detailed claim-by-claim map is
-[`active/hc7_support_six_coverage_checkpoint.md`](active/hc7_support_six_coverage_checkpoint.md),
-and the concise list of live files is [`active/INDEX.md`](active/INDEX.md).
+This file records the current mathematical dependency chain. The concise
+list of live files is [`active/INDEX.md`](active/INDEX.md), and the current
+technical statement is
+[`active/hc7_two_root_colouring_space_frontier.md`](active/hc7_two_root_colouring_space_frontier.md).
 If an archived note conflicts with this ledger, this ledger governs the
-current programme.
+current programme. Sections 1--6 below retain the developed support-six
+programme as a frozen dependency chain; it is no longer the primary engine.
 
-## 1. Counterexample framework
+## Current strategic frontier
+
+### Clean target
+
+The present target is the following strict subproblem of `HC_7`.
+
+> Let `G` be seven-connected and strongly seven-contraction-critical. If
+> `G` has a spanning `K_7`-minus-one-edge minor model whose two deficient
+> branch sets are nonadjacent singleton vertices, then `G` contains a
+> `K_7` minor or has an actual separation of order seven.
+
+Write the two singleton roots as `a,b`, put `J=G-{a,b}`, and write the other
+five branch sets as `B_1,...,B_5`. Then `chi(J)=6`. Every six-colouring of
+`J` makes at least one root adjacent to every colour class, and both
+exclusive root orientations occur. A direct orientation-changing Kempe
+interchange already yields an actual order-seven separation at the sharp
+boundary size. The stronger claims that all witnesses lie in one Kempe
+class or that two transitions produce an uncovered colouring are false.
+
+### New uniform rooted-model input
+
+The ordered-clique form of the Dominating 4-Colour Theorem yields the
+following written result in this repository.
+
+> If `H` has chromatic number at least `r+4` and `X` is a nonempty connected
+> induced `r`-colourable subgraph, then `H` has a normalized dominating
+> `K_5` model `(T_1,T_2,T_3,{v},{w})` such that either `X subseteq T_1`, or
+> the model avoids `X` and `T_2 union T_3 union {v,w}` separates `X` from
+> `T_1`. Here `T_3 union {v,w}` induces a cycle. A marked version avoids
+> `X` together with any prescribed neighbour, and a two-subgraph version
+> aligns a pointwise adjacent pair with the first two ordered branch sets.
+
+For the clean target, take `H=J` and let `X` be the internal path of a
+shortest `a`--`b` route through one named branch set `B_i`. The result gives
+either a named first-branch alignment or a separator
+
+`S=T_2 union C`,
+
+where `C` is an induced cycle, `T_1` dominates every vertex of `S`, and
+`T_2` dominates every vertex of `C`. Let `E` be the `T_1`-side component of
+`J-S` and let `R_E` be the roots adjacent to `E`. Then `S union R_E`
+separates `G`, so `|S|+|R_E|>=7`; equality is an actual order-seven
+separation. This weighted boundary order is sharper than `|S|` alone.
+
+This is a genuine uniform rooted-model principle rather than a finite
+boundary classification. It does not finish the clean target: the aligned
+model remains unaligned with the other four old branch sets, while the
+structured separator can have unbounded order.
+
+### New general complete-factor theorem
+
+For every `r>=0`, the following is proved and separately audited:
+
+> If `K_r join F` is `(r+5)`-connected, then it contains a `K_{r+5}` minor
+> or has an actual separation of order `r+5`. Every `K_{r+5}`-minor-free
+> graph of this join form is `(r+4)`-colourable.
+
+This eliminates the coherent complete-factor join family for all relevant
+Hadwiger parameters and explains the sharp `K_2`-plus-planar order-seven
+obstruction. It is independent progress, but it does not cover arbitrary
+near-complete minor models.
+
+### Immediate open theorem
+
+Choose an absorption-or-separator outcome minimizing the lexicographic
+signature consisting of the weighted boundary order, the order of the
+`T_1`-side component, and the order of the component containing the
+prescribed path. The next theorem must show that strong
+contraction-criticality and the old five-bag model give one of:
+
+1. an explicit `K_7`-minor model;
+2. weighted boundary order seven, hence an actual order-seven separation;
+   or
+3. another normalized outcome with a strict decrease of the displayed
+   pair.
+
+The aligned-path branch requires the corresponding label-preserving
+exchange with `B_1,...,B_5`. Connectivity alone, minimum model size, Kempe
+class connectivity, branch-set rotations, and abstract boundary colouring
+languages have all been shown insufficient. The required new mechanism is
+high-connectivity compression of the ordered separator together with a
+proper-minor transition; further Moser or attachment-pattern enumeration is
+frozen.
+
+Principal current files:
+
+- [`hc7_two_root_colouring_space_frontier.md`](active/hc7_two_root_colouring_space_frontier.md)
+- [`hc7_chromatic_subgraph_capture_or_avoid.md`](results/hc7_chromatic_subgraph_capture_or_avoid.md)
+- [`hc7_join_near_clique_dichotomy.md`](results/hc7_join_near_clique_dichotomy.md)
+- [`hc7_two_root_kempe_class_icosahedron_barrier.md`](barriers/hc7_two_root_kempe_class_icosahedron_barrier.md)
+- [`hc7_two_root_kempe_causal_support.md`](barriers/hc7_two_root_kempe_causal_support.md)
+- [`hc7_normalized_separator_icosahedron_barrier.md`](barriers/hc7_normalized_separator_icosahedron_barrier.md)
+
+## 1. Frozen support-six counterexample framework
 
 Suppose that $G$ is a minor-minimal counterexample to $HC_7$.  The programme
 uses the following standard consequences:
@@ -42,7 +136,7 @@ two vertices meeting the support of every $K_5$-minor model in $G$.  Deleting
 such a pair leaves a $K_5$-minor-free graph; the known $t=5$ case then gives
 a four-colouring, and two additional colours finish $G$.
 
-## 2. Established dependency chain
+## 2. Established dependency chain of the frozen programme
 
 The following statements have written proofs in the repository.  Many have
 separate internal audit notes; those audits are not external peer review.
@@ -257,8 +351,13 @@ classification or computation as well as a written reduction.
     identifying it with `3+1`: three clean augmenting-path classes and
     both crossed-linkage classes give explicit `K_7` models, the latter
     using a rooted-`K_4` cycle-linkage theorem.  Its remaining residue is
-    two four-terminal web certificates sharing one linkage path.  A
-    label-faithful six-terminal lift for this form is still open.
+    two four-terminal web certificates sharing one linkage path.  A path
+    between the two unmatched linkage paths, internally disjoint from all
+    six named paths, is now another explicit unbounded `K_7` construction.
+    A verified counterexample shows that the three resulting clean-path
+    patterns do not extract from every terminal crossing, so a
+    label-faithful six-terminal lift retaining the full bridge structure is
+    still open.
 
 17. **A fixed support-exchange core.**  Delete one support `A` from a
     minimal exact-six critical family and let `H` be the remaining family
@@ -313,6 +412,122 @@ classification or computation as well as a written reduction.
     of minimum degree seven, supporting the use of seven-connectivity as
     the missing host-level input rather than further endpoint casework.
 
+19. **Canonical private-transversal structure and endpoint saturation.**
+    Hold the deleted-family hypergraph `H` of item 17 fixed, and make a
+    graph whose edges are all two-vertex transversals of `H`.  Exactly one
+    of the following holds:
+
+    - it has two disjoint edges, which are two disjoint globally
+      support-maximal private pairs for every exact six-vertex support in
+      the fixed exchange core;
+    - all edges have one common endpoint and every vertex outside the core
+      lies in a fixed set of order at most seven; or
+    - the graph is a triangle and the outside set has order three.
+
+    In either bounded-locus case, deleting that locus leaves the residual
+    connectivity forced by seven-connectivity.  If the locus has order
+    seven and disconnects the graph, it is an actual order-seven boundary
+    and every component on the other side is adjacent to all seven boundary
+    vertices.
+
+    There is a complementary global version.  Choose one private pair for
+    every member of the minimal exact-six critical family.  These pairs
+    are distinct.  Either two are disjoint, or the whole critical family
+    has at most six members in an explicit star pattern, or it has exactly
+    three members in an explicit triangle pattern.  In the star case,
+    every two leaves force a literal `K_5` subgraph through the common
+    centre and avoiding those leaves.  Thus the previous bound of
+    twenty-seven supports is needed only in the branch that already
+    supplies two disjoint maximal private pairs.
+
+    On the labelled `3+1` linkage, a **computer-assisted finite interface**
+    verifies all 252 required endpoint quotients. This supports an
+    unbounded contraction argument: every connected off-linkage subgraph
+    adjacent to `a_3,x` and five further normalized endpoints yields a
+    `K_7` minor. The same conclusion holds when the five further contacts
+    occur in five distinct linkage paths. The
+    sharp six-endpoint and once-subdivided catalogues show that every
+    negative pattern concentrates its contacts on very few paths.  Hence
+    arbitrary support-pair drift and broadly distributed attachment are no
+    longer live obstructions.  What remains is the label-preserving
+    composition from two disjoint maximal pairs, or the ordered geometry of
+    contacts concentrated on at most four linkage paths.
+
+    That geometry now has a uniform two-sector form. An exterior component
+    adjacent to the repaired-contact ends `a_3,x` cannot meet the interiors
+    of the `a_3`--`p` or `x`--`q` linkage paths. Its other contacts lie
+    either on the `y`--`r` path together with five named endpoints, or on
+    the first three linkage paths together with `a_3,x,y`. With at least
+    eight linkage neighbours, a nontrivial first--last interval exists on
+    one named path.
+
+    A uniform block--cutvertex lemma now controls one part of that ordered
+    residue. For any fixed six-path linkage in a seven-connected graph,
+    every leaf-block interior of an off-linkage component has at least six
+    neighbours on the linkage; equality gives an actual order-seven
+    separation preserving all six named paths. A cutvertex-free component
+    has at least seven linkage neighbours, with the same separation at
+    equality. The strict-inequality branch still needs the endpoint labels
+    or minor-critical colouring data.
+
+    An independently checked infinite two-fan construction fixes the trust
+    boundary of this conclusion. Two distinct repaired-contact components
+    may each have arbitrarily many first hits, and may each meet several
+    linkage paths, while the extracted graph remains `K_7`-minor-free.
+    These examples are triangle clique-sums and are not seven-connected or
+    contraction-critical. Thus attachment count, first/last hit selection,
+    and stable-bridge incidence cannot supply the strict rank alone; the
+    next theorem must use the extra edges or colouring transitions forced
+    by the full counterexample hypotheses, or return the global fixed-pair
+    conclusion.
+
+    Restoring the local minimum-degree and Dirac neighbourhood bounds does
+    not by itself break that barrier. In the literal atomic fan, all
+    degree-seven negative completions violate Dirac, and degree at least
+    nine forces a `K_7` minor, but two exact degree-eight neighbourhoods
+    remain. Every Rolek--Song equality-case disjoint-path demand for those
+    neighbourhoods is already realizable inside the old quotient. Thus the
+    missing step is genuinely global seven-connectivity or a stronger
+    proper-minor colouring transition, not another local equality-path
+    invocation.
+
+20. **The two largest star kernels have explicit graph structure.**  In
+    the star alternative of item 19, write the private pairs as
+    `\{p,\ell_i\}`.  If there are six leaves, every literal `K_5` contains
+    `p`; compatible clique witnesses after contracting a two-vertex branch
+    set feed the promoted one-split/two-clique composition theorem.
+
+    If there are five leaves and a literal `K_5` avoids `p`, it is exactly
+    the leaf clique `L`.  Each critical six-vertex support is then
+
+    $$
+       (L-\{\ell_i\})\cup e_i,
+    $$
+
+    where `e_i` is an edge outside `L`, is collectively adjacent to
+    `L-\{\ell_i\}`, and is anticomplete to `\ell_i`.  The five edges are
+    distinct and contain two vertex-disjoint edges.  The graph also contains
+    a second literal `K_5` disjoint from `L`, and `G-L` is three-connected.
+    Two disjoint connected subgraphs that contain a disjoint pair
+    `e_i,e_j` and respectively meet `N(\ell_i),N(\ell_j)` would give an
+    explicit `K_7` model.  A wheel construction shows that
+    three-connectivity alone does not force this paired linkage.
+
+    This five-member subcase now has a stronger rooted-minor reduction.
+    Contracting a disjoint pair makes any rooted `K_4` lift to an explicit
+    `K_7` model.  The rooted-`K_4` theorem otherwise gives a small cut or a
+    four-connected planar cofacial quotient.  Coordinating all five
+    distinguished edges and the second disjoint `K_5` eliminates the planar
+    outcome simultaneously.  Therefore this branch returns either an actual
+    order-seven separation, or an eight-vertex boundary `S` for which `G-S`
+    has exactly two components, each adjacent to every vertex of `S`, while
+    `G[S]` is four-colourable and the two distinguished edge branch sets are
+    anticomplete.  The precise remaining step is to orient the order-seven
+    separation with a strict model-preserving rank or synchronize the two
+    shore colourings across this exact order-eight boundary.  The cases in
+    which every literal `K_5` contains `p`, and the smaller star and triangle
+    kernels, remain open.
+
 The most recent end-to-end composition theorem in item 11 is
 [`hc7_three_split_marked_mader_branch_closure.md`](results/hc7_three_split_marked_mader_branch_closure.md),
 with its adjacent audit.  The weighted separation and Kempe-component inputs
@@ -346,6 +561,36 @@ colouring theorem, exceptional-intersection theorem, and the independent
 [`hc7_repaired_contact_intersection.md`](results/hc7_repaired_contact_intersection.md),
 and
 [`hc7_disjoint_k6minus_support6_two_two_bridge_augmentation.md`](results/hc7_disjoint_k6minus_support6_two_two_bridge_augmentation.md).
+The additional clean connector in the `2+2` form is
+[`hc7_disjoint_k6minus_support6_two_two_connector.md`](results/hc7_disjoint_k6minus_support6_two_two_connector.md),
+with its adjacent audit; its exact extraction barrier is
+[`hc7_two_two_three_pattern_extraction_barrier.md`](barriers/hc7_two_two_three_pattern_extraction_barrier.md).
+The new transversal-graph compression and endpoint-saturation theorem are
+[`hc7_exchange_core_transversal_graph.md`](results/hc7_exchange_core_transversal_graph.md),
+[`hc7_private_transversal_graph_kernel.md`](results/hc7_private_transversal_graph_kernel.md),
+and
+[`hc7_disjoint_k6minus_seven_attachment_decoder.md`](results/hc7_disjoint_k6minus_seven_attachment_decoder.md),
+each with its adjacent audit.
+The exact two-sector theorem is
+[`hc7_repaired_component_attachment_concentration.md`](results/hc7_repaired_component_attachment_concentration.md),
+with its adjacent audit.
+The linkage leaf-block separation is
+[`hc7_linkage_bridge_leaf_block_separation.md`](results/hc7_linkage_bridge_leaf_block_separation.md),
+again with its adjacent audit.
+The explicit five- and six-support star-kernel structure is
+[`hc7_star_private_transversal_large_kernel.md`](results/hc7_star_private_transversal_large_kernel.md),
+with its adjacent audit.  Its rooted-four separator reduction is
+[`hc7_star_kernel_rooted_four_contraction.md`](results/hc7_star_kernel_rooted_four_contraction.md),
+again with an adjacent audit.  The exact three-connectivity limitation is
+[`hc7_five_defect_edges_three_connected_linkage_barrier.md`](barriers/hc7_five_defect_edges_three_connected_linkage_barrier.md).
+The necessity of coordinating all five edges, rather than one planar
+quotient, is recorded in
+[`hc7_star_kernel_contracted_root_planar_barrier.md`](barriers/hc7_star_kernel_contracted_root_planar_barrier.md);
+the smaller connectivity-only failure is
+[`hc7_four_connected_edge_rooted_pair_barrier.md`](barriers/hc7_four_connected_edge_rooted_pair_barrier.md).
+The exact local limitation of the Dirac and Rolek--Song inputs is
+[`hc7_atomic_fan_dirac_rolek_barrier.md`](barriers/hc7_atomic_fan_dirac_rolek_barrier.md),
+with its adjacent audit.
 The two secondary criticality constraints are
 [`hc7_nonadjacent_pair_colouring_regeneration.md`](results/hc7_nonadjacent_pair_colouring_regeneration.md)
 and
@@ -379,12 +624,27 @@ retain additional information from the contraction sequence.
 
 For one-vertex replacements there is now a canonical region `Z_H` in
 which all replacements preserve the same complete family of private
-transversal pairs.  The extraction problem should therefore be attacked
-with the following fixed alternative: either a replacement remains in
-`Z_H`, where a declared linkage/model rank must decrease, or its first
-outside vertex already identifies another globally maximal private pair.
-What is missing is a label-preserving regeneration theorem at that outside
-pair, not another support-only extraction.
+transversal pairs.  The graph of those pairs sharpens the exit alternative:
+either it supplies two disjoint globally maximal private pairs, or every
+outside vertex lies in one fixed set of order at most seven.  In the latter
+case seven-connectivity either gives the corresponding residual
+connectivity or makes that set an actual full order-seven boundary.  Across
+the whole critical family, failure to obtain two disjoint pairs reduces the
+family from at most twenty-seven supports to at most six in an explicit
+star or triangle pattern.  The two live constructive branches are therefore
+label-preserving composition at two disjoint pairs and rooted linkage around
+the fixed bounded locus.  Another support-only extraction is not enough.
+
+For the five- and six-member star kernels, the bounded-locus branch is no
+longer purely set-theoretic.  In the five-member case with a literal clique
+avoiding the centre, the former paired-linkage obstruction now has a complete
+rooted-four reduction.  The simultaneous five-edge argument rules out every
+four-connected planar quotient and leaves only an actual order-seven
+separation or a two-shore order-eight boundary with the exact properties in
+item 20.  The remaining obligation is state-preserving separator
+composition, not another local linkage classification.  In the six-member
+case, the remaining task is to choose two row-compatible literal cliques for
+the existing one-split composition theorem.
 
 ### 3.2 Simultaneous composition in the common edge-deletion graph
 
@@ -435,10 +695,38 @@ numbers are both one.  The remaining obligation is to control a bypass that
 meets the linkage skeleton or avoids the second residual path, and to attach
 a strict rank to support replacements inside the fixed exchange core.
 
+Broad attachment is now closed.  A connected off-linkage subgraph meeting
+`a_3,x` and any five other normalized endpoints yields an explicit `K_7`
+minor, as does one with contacts in five distinct linkage paths.  Exact
+finite negatives show that the surviving bridge attachments must be
+concentrated on at most four named paths. Thus the next theorem must use
+the actual block/bridge geometry together with minor-critical data;
+increasing the endpoint-contact count alone is no longer the right target.
+
+The block--cutvertex equality cases are now uniform: a leaf-block interior
+has at least six linkage neighbours and equality is an actual order-seven
+separation preserving the complete linkage; a cutvertex-free component has
+the corresponding threshold seven. The live residue has strict excess over
+these thresholds.
+
+The two-fan barrier shows that even arbitrarily large strict excess can be
+hidden in ordered fans behind triangle adhesions. It rules out a descent
+based only on first-hit count, first/last order, or the number of linkage
+paths met. The missing exchange must break those triangle adhesions using
+seven-connectivity or the proper-minor colouring witnesses.
+
+A sharper finite guardrail has two components with eight contacts each in
+nested intervals of the `y`--`r` path and still has treewidth five. Its
+connectivity is exactly three. Thus the sector and interval theorems have
+reduced the live mechanism to using seven-connectivity to force a path
+across the nested intervals, or to return an actual order-seven boundary.
+
 The other minimal ownership form, `2+2`, now has its clean augmentations,
-both crossed-linkage types, and two web certificates proved.  Its remaining
-obligation is a label-faithful six-terminal compression; a quotient crossing
-calculation alone does not lift through the three linkage paths involved.
+both crossed-linkage types, a clean connector between the two unmatched
+paths, and two web certificates proved.  Its remaining obligation is a
+label-faithful six-terminal compression; a verified crossing example shows
+that these three clean patterns do not exhaust the full six-path bridge
+geometry.
 
 The detailed formulations and all immediate dependencies are in
 [`active/INDEX.md`](active/INDEX.md) and
@@ -479,6 +767,21 @@ hypotheses:
 - Replacing one vertex of an exact six-vertex support can preserve every
   private transversal pair and still cycle inside the fixed exchange core.
   The core prevents transversal drift but does not supply a descending rank.
+- Two distinct repaired-contact components can each have arbitrarily many
+  linkage attachments, including attachments to several linkage paths,
+  without forcing a `K_7` minor in the extracted graph. The examples are
+  triangle clique-sums rather than seven-connected critical hosts, so they
+  show exactly where those global hypotheses must enter.
+- Even two eight-contact components in the proved attachment sectors may
+  occupy nested intervals in a graph of treewidth five. The verified
+  example has connectivity three, so interval order without the host
+  connectivity still does not compose the two components.
+- A strict portal-tree reduction in a quotient obtained by contracting an
+  exterior component need not lift to a smaller branch tree in the host;
+  the internal connector cost can be arbitrarily large. The guaranteed
+  near-`K_7` model is also not automatically aligned with a prescribed
+  private pair. Any revival of that route needs a weighted connector bound
+  and pair-compatible model data.
 - Finite neighbourhood or Moser-spindle enumeration cannot replace an
   unbounded structural theorem.
 
@@ -533,5 +836,8 @@ should use standard graph-theoretic descriptions; see [`AGENTS.md`](AGENTS.md).
   (2013), P64, Lemma 7: the cycle-linkage rooted model used in the `2+2`
   branch of item 16.
 - A. Girão et al., [*The Dominating 4-Colour
-  Theorem*](https://arxiv.org/abs/2605.10112), Theorem 1.1: the regeneration
-  input after deleting the nonadjacent private pair.
+  Theorem*](https://arxiv.org/abs/2605.10112), Theorem 1.1 and Lemmas 2.1--2.2:
+  regeneration after deleting a nonadjacent pair and ordered-clique-compatible
+  dominating models through contractions. The low-colour
+  absorption-or-separator theorem at the current frontier is a new deduction
+  in this repository.

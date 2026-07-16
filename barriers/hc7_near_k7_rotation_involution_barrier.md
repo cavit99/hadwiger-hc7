@@ -265,6 +265,70 @@ inverse without appealing merely to symmetry.
 Both centres have order one and both donors have order two.  Thus
 `a=w=z=1`, and the pivot is balanced in the sense of Lemma 2. \(\square\)
 
+### Proposition 5 (spanning singleton model and the missing criticality)
+
+The first model in Proposition 4 can be made spanning while retaining its
+two singleton nonadjacent branch sets.  Namely, replace `P={p}` by
+
+\[
+                   P^+=\{p,u_4,w_1,w_3,w_4\}.             \tag{2.10}
+\]
+
+Then
+
+\[
+ A,\ B,\ D,\ R,\ E,\ P^+,\ Q                         \tag{2.11}
+\]
+
+partition `V(G)` and form a spanning `K_7^-` model whose unique missing
+pair is still `A B`.
+
+Put `a=u_3`, `b=u_1`, and `J=G-{a,b}`.  The common host `J` has chromatic
+number six, but it does **not** satisfy the colour-dominating-root property
+forced by strong contraction-criticality.  There is a proper six-colouring
+of `J` in which both omitted roots miss the same colour on their
+neighbourhoods.
+
+#### Proof
+
+The set `P^+` is connected because it contains the universal vertex `p`.
+It contains exactly the vertices omitted by the six other bags in (2.3),
+so (2.11) is a partition.  Enlarging `P` loses no branch-set adjacency,
+and it introduces no edge between `A` and `B`.  Proposition 4 therefore
+gives the asserted spanning model.
+
+The graph induced in the icosahedron by
+
+\[
+                         \{b,w_0,w_1,w_2,w_3,w_4\}
+\]
+
+is an odd wheel.  It remains after deleting `u_1,u_3`, so
+`chi(I-{u_1,u_3})>=4`.  Since `p,q` are adjacent and complete to the
+icosahedron, `chi(J)>=6`.
+
+For the matching upper bound, four-colour `I` by
+
+\[
+\begin{array}{c|l}
+0&t,w_1,w_3\\
+1&b,u_0,u_2\\
+2&u_1,u_3,w_4\\
+3&u_4,w_0,w_2,
+\end{array}                                               \tag{2.12}
+\]
+
+and give `p,q` fresh colours `4,5`.  The displayed classes are independent
+under (2.1), so this is a proper six-colouring of `G`; restrict it to `J`.
+Both omitted vertices have neighbourhood-colour set
+
+\[
+                   \{0,1,3,4,5\}                       \tag{2.13}
+\]
+
+in `J`: the missing colour is `2`.  Hence `chi(J)=6`, but neither root is
+colour-dominating in this colouring. \(\square\)
+
 ## 3. Consequence for the `HC_7` spine
 
 The example is six-colourable (four-colour `I` and give `p,q` two fresh
@@ -293,3 +357,19 @@ The explicit cycle proves why the coherent two-apex output in the proof
 spine is necessary rather than cosmetic.  It does not prove that every
 rotation component in a contraction-critical graph is coherent, which is
 the exact remaining termination gap.
+
+Proposition 5 sharpens the guardrail.  Even the conjunction
+
+\[
+ \text{seven-connectivity}+
+ \text{`K_7`-minor-freeness}+
+ \text{a spanning singleton `K_7^-` model}+
+ \chi(G-\{a,b\})=6
+\]
+
+does not orient the exchange or repair the missing branch-set adjacency.
+The indispensable additional input in a hypothetical counterexample is
+that **every** six-colouring of the common host makes at least one omitted
+root colour-dominating, together with the two oppositely attained
+proper-minor witnesses.  This is the exact hypothesis used by the
+root-contact Kempe results in the current order-eight branch.
