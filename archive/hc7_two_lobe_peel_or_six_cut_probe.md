@@ -92,7 +92,7 @@ theorem in this star cell.
 ## 3. Exact search model
 
 The verifier is
-`active/hc7_two_lobe_peel_or_cut_probe.py`.  It uses a finite Boolean
+`archive/hc7_two_lobe_peel_or_cut_probe.py`.  It uses a finite Boolean
 portal-edge encoding and checks every connected bipartition of the thin
 shore.  For each split it forbids every legal independent-seed/clique-
 reservoir state, not merely the old fixed bipartition duty.
@@ -187,15 +187,15 @@ Run each mode in a fresh process (the exact Boolean formulas are large):
 
 ```text
 PYTHONPATH=active/runtime/deps python3 \
-  active/hc7_two_lobe_peel_or_cut_probe.py dense-star
+  archive/hc7_two_lobe_peel_or_cut_probe.py dense-star
 PYTHONPATH=active/runtime/deps python3 \
-  active/hc7_two_lobe_peel_or_cut_probe.py dense-cross
+  archive/hc7_two_lobe_peel_or_cut_probe.py dense-cross
 PYTHONPATH=active/runtime/deps python3 \
-  active/hc7_two_lobe_peel_or_cut_probe.py star-atlas
+  archive/hc7_two_lobe_peel_or_cut_probe.py star-atlas
 PYTHONPATH=active/runtime/deps python3 \
-  active/hc7_two_lobe_peel_or_cut_probe.py triangle-atlas
+  archive/hc7_two_lobe_peel_or_cut_probe.py triangle-atlas
 PYTHONPATH=active/runtime/deps python3 \
-  active/hc7_two_lobe_peel_or_cut_probe.py packet
+  archive/hc7_two_lobe_peel_or_cut_probe.py packet
 ```
 
 The cut-clause count can vary with the SAT model order; the UNSAT/SAT

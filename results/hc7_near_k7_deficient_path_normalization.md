@@ -2,7 +2,8 @@
 
 ## Status
 
-This is a direct attempt on P1 of `hc7_near_k7_proof_spine.md`.
+This is a direct attempt on P1 of the archived
+[`hc7_near_k7_proof_spine_20260715.md`](../archive/hc7_near_k7_proof_spine_20260715.md).
 
 It proves a stronger lexicographic normalization for the deficient bag
 `A`: because `A` has only four required model neighbours, applying

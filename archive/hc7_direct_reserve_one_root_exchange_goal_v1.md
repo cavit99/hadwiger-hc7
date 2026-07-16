@@ -3,7 +3,7 @@
 **Status:** retracted draft.  Its proposed near-model lift omitted the fact
 that the rich packets need not contact the substituted `z`-bag.  Retained
 only to prevent reuse; the active replacement is
-`../active/hc7_direct_reserve_substituted_web_goal.md`.
+[`hc7_direct_reserve_substituted_web_goal.md`](hc7_direct_reserve_substituted_web_goal.md).
 
 ## Decision
 

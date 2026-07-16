@@ -1,5 +1,9 @@
 # `HC_7` proof spine
 
+**Archived 15 July 2026.**  This predecessor spine was superseded by the
+[support-six frontier](../active/hc7_support_six_frontier.md).  It is kept
+for provenance and is not a current status document.
+
 ## Verdict and target
 
 `HC_7` is not proved.  For the frozen hypothetical minor-minimal `HC_7`
@@ -19,7 +23,7 @@ needed.
 
 ## Current research goal
 
-The active proof engine is the
+The active proof engine at the time of this archived snapshot was the
 [atomic twin-seam double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
 The reserve-rooted `C_4` theorem closes the branch in which both prescribed
 RST pairings are feasible.  Failure of one pairing now yields a literal

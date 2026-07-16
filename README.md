@@ -11,6 +11,8 @@ strongly seven-contraction-critical, and `K_7`-minor-free.
 
 This is the sole authoritative status file.  The exact proof coverage is
 in [the support-six checkpoint](active/hc7_support_six_coverage_checkpoint.md).
+The short navigation list for live work is
+[`active/INDEX.md`](active/INDEX.md).
 The previous long-form status is preserved in
 [`archive/`](archive/README_2026-07-15_before_support_six_checkpoint.md).
 

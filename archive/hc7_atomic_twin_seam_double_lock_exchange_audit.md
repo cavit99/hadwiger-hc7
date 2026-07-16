@@ -23,7 +23,7 @@ Consequently the repaired target still does **not** follow from the
 current audited inputs.
 
 **Audited source:**
-`active/hc7_atomic_twin_seam_double_lock_exchange_goal.md`.
+[`hc7_atomic_twin_seam_double_lock_exchange_goal.md`](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
 
 **Source SHA-256:**
 `4b4e25c21ab5a93fbda378f62b841e741db600d354892cb3a03ff2a6d180ff8d`.

@@ -10,9 +10,8 @@ A sufficient terminal outcome is either a literal `K_7` model or a fixed
 pair `{p,q}` such that `G-{p,q}` is `K_5`-minor-free: known `HC_5` then
 four-colours the remainder, and two fresh colours finish.
 
-This file is the sole authoritative status statement.  The
-[proof spine](active/hc7_near_k7_proof_spine.md) records the detailed
-dependency chain.
+This file was the sole authoritative status statement at the time.  Its
+[proof spine](hc7_near_k7_proof_spine_20260715.md) is preserved beside it.
 
 ## Current strategic position
 
@@ -42,7 +41,7 @@ Six global facts are proved.
    pair height agrees exactly with ordinary `K_5`-model support through
    support six; the first three forms are one-edge `TK_5`s and the fourth is
    literal `hat K_5`.  See the active
-   [near-Hajós pair-height note](active/hc7_global_near_hajos_pair_height.md).
+   [near-Hajós pair-height note](hc7_global_near_hajos_pair_height.md).
 4. Within the counterexample kernel, for any two vertex-disjoint named
    edges with one missing cross-edge,
    their common edge-deletion host is exactly six-chromatic and, when
@@ -169,7 +168,7 @@ classification will not be added to the active spine.
 ## Active research goal
 
 The active target is the
-[atomic twin-seam double-lock exchange](active/hc7_atomic_twin_seam_double_lock_exchange_goal.md).
+[atomic twin-seam double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
 In the symmetric residual seam, the two disjoint named edges
 
 ```text
@@ -218,11 +217,11 @@ No current theorem proves this implication.
 ## Frozen local dependency ledger
 
 The retained local decoder target is the
-[single-trace reverse tight-lobe carrier-or-rooted-five theorem](active/hc7_reverse_tight_carrier_or_rooted_five_goal.md),
+[single-trace reverse tight-lobe carrier-or-rooted-five theorem](hc7_reverse_tight_carrier_or_rooted_five_goal.md),
 through the
-[atomic four-root linkage/disk decoder](active/hc7_atomic_four_root_decoder_goal.md).
+[atomic four-root linkage/disk decoder](hc7_atomic_four_root_decoder_goal.md).
 Its immediate constructive child is the
-[atomic twin-seam double-lock exchange](active/hc7_atomic_twin_seam_double_lock_exchange_goal.md).
+[atomic twin-seam double-lock exchange](hc7_atomic_twin_seam_double_lock_exchange_goal.md).
 It is the first point at which two named proper-minor colourings are coupled
 simultaneously across overlapping actual seven-boundaries.
 
@@ -941,7 +940,7 @@ is unsatisfiable.  Thus an atomic obstruction has at least six thin-shore
 vertices.  The computation stops there and is not an induction or a census
 strategy.
 
-Sources: [atomic blocking-path checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
+Sources: [atomic blocking-path checkpoint](hc7_atomic_blocking_path_packet_escape.md),
 [double-contraction state split](results/hc7_atomic_double_contraction_state_split.md),
 and [bichromatic-bridge state localization](results/hc7_atomic_bichromatic_bridge_state_localization.md),
 [compulsory-edge lock-state lift](results/hc7_compulsory_edge_lock_state_lift.md)
@@ -964,7 +963,7 @@ the [cycle-shore closure](results/hc7_atomic_cycle_shore_closure.md)
 and its [audit](results/hc7_atomic_cycle_shore_closure_audit.md),
 the [two-list Menger dichotomy](results/hc7_two_list_reservoir_menger_dichotomy.md)
 and its [audit](results/hc7_two_list_reservoir_menger_dichotomy_audit.md),
-and the [connector-tree bridge audit](active/hc7_atomic_connector_tree_bridge_audit.md).
+and the [connector-tree bridge audit](hc7_atomic_connector_tree_bridge_audit.md).
 
 The dependency-level theorem still needed in the atomic branch is the
 fixed-state five-lock decoder.  It must use the thin/rich quotient alternatives from
@@ -1063,7 +1062,7 @@ Controlling inputs:
 - [four-vertex packet-path classification](results/hc7_atomic_four_vertex_packet_path_classification.md),
   [audit](results/hc7_atomic_four_vertex_packet_path_classification_audit.md),
   and exact verifier.
-- [atomic blocking-path constructive checkpoint](active/hc7_atomic_blocking_path_packet_escape.md),
+- [atomic blocking-path constructive checkpoint](hc7_atomic_blocking_path_packet_escape.md),
   which is partial and not a closure.
 - [atomic double-contraction state split](results/hc7_atomic_double_contraction_state_split.md)
   and [audit](results/hc7_atomic_double_contraction_state_split_audit.md).
@@ -1087,9 +1086,9 @@ Controlling inputs:
   and [audit](results/hc7_atomic_asymmetric_56_carrier_closure_audit.md).
 - [degree-three receiver peel](results/hc7_atomic_degree_three_receiver_peel.md)
   and [audit](results/hc7_atomic_degree_three_receiver_peel_audit.md).
-- [literal first `C`-reduction lift goal](active/hc7_literal_first_c_reduction_lift_goal.md).
-- [connector-tree bridge audit and next exact lemma](active/hc7_atomic_connector_tree_bridge_audit.md).
-- [bounded adaptive peel-or-six-cut probe](active/hc7_two_lobe_peel_or_six_cut_probe.md)
+- [literal first `C`-reduction lift goal](hc7_literal_first_c_reduction_lift_goal.md).
+- [connector-tree bridge audit and next exact lemma](hc7_atomic_connector_tree_bridge_audit.md).
+- [bounded adaptive peel-or-six-cut probe](hc7_two_lobe_peel_or_six_cut_probe.md)
   and its exact verifier; this is evidence, not a theorem.
 - [three-cut state-collapse barrier](barriers/hc7_exact7_threecut_descent_packet_collapse_barrier.md)
   and its dependency-free verifier.

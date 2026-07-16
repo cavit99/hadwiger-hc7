@@ -22,7 +22,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-DEPS = Path(__file__).resolve().parent / "runtime" / "deps"
+DEPS = Path(__file__).resolve().parents[1] / "active" / "runtime" / "deps"
 if DEPS.exists():
     sys.path.insert(0, str(DEPS))
 

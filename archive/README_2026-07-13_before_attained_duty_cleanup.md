@@ -20,7 +20,8 @@ all active work targets one implication,
 The latter outcome is enough by `HC_5`; a planar two-apex remainder is a
 stronger special case.
 
-The exact dependency chain is [active/hc7_near_k7_proof_spine.md](active/hc7_near_k7_proof_spine.md).
+The exact dependency chain is preserved in
+[`hc7_near_k7_proof_spine_20260715.md`](hc7_near_k7_proof_spine_20260715.md).
 
 ## Exact remaining gap
 
@@ -902,7 +903,7 @@ the singleton/bipartite hypotheses are not a general normalization theorem.
 
 ## Active work
 
-- [Proof spine](active/hc7_near_k7_proof_spine.md)
+- [Proof spine](hc7_near_k7_proof_spine_20260715.md)
 - [Exact-six rural bilateral endgame](active/hc7_exact7_rural_bilateral_endgame.md)
 - [Both-missing constant-owner corridor](active/hc7_near_k7_constant_owner_corridor.md)
 - [Port-labelled split versus 2-apex](active/hc7_near_k7_port_labeled_split_2apex.md)
