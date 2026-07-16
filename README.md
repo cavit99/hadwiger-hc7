@@ -106,21 +106,35 @@ input to `G1/G2`, not a third closed branch.
    legal owner-absorption bundle.  The classification and its exact
    universal/existential quantifiers are independently audited.  This is a
    general rooted-carrier theorem, not yet a composition closure.
-9. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
+9. **Adaptive seven-terminal composition.**  In the normalized
+   order-six-arm, overlap-two cell, a fixed reserve pair is false but a
+   state-dependent pair selected before kernel exposure succeeds.  The
+   148,488 noncommon states reduce monotonically to 8,220 masks in 67
+   symmetry orbits.  All 67 close against all 5,495 order-seven carriers
+   and all 30,600 order-eight owner bundles.  An independent contraction
+   search agreed with the exact detector on all 176,081 queried quotients.
+10. **Reserve-triple seven-terminal composition.**  In the normalized
+   order-five-arm, overlap-one cell, deleting the overlap and reserving
+   three terminals again exposes the exact seven-terminal kernel.  The
+   5,410 noncommon states reduce to 400 masks in six orbits, all of which
+   close.  Two independent verifiers agree on every relation count,
+   catalogue quantifier and branch-set certificate.  Thus every positive
+   overlap cell with order-five arms is now terminal.
+11. **Rigid double-root cover.** If the rigid outcome has nonempty overlap,
    every pair of vertices of the avoided support touching that overlap
    forces another small model containing both private roots.  With literal
    arms these compulsory models have a genuine two-state split-bag
    orientation.  This is the current labelled composition invariant.
-10. **Disjoint three-split branch.** Minimal simultaneous contraction of
+12. **Disjoint three-split branch.** Minimal simultaneous contraction of
    two or three split edges either gives `K_7`, an actual exact-seven
    handoff, or a two-component boundary of order eight or nine that is
    pointwise full on both shores.
-11. **Two-shore boundary absorption.** In that two-component residue from
+13. **Two-shore boundary absorption.** In that two-component residue from
    two or three disjoint normalized split models, every surviving
    order-eight/nine boundary is four-colourable.  The sole five-chromatic
    census exception `K_2 vee C_7` is eliminated by a separate branch-set
    theorem.
-12. **Uniform common-neighbour rooted principle.** If
+14. **Uniform common-neighbour rooted principle.** If
 
    \[
    \chi(J)=k+2,\quad uv\in E(J),\quad
@@ -132,7 +146,7 @@ input to `G1/G2`, not a third closed branch.
    with singleton bags `{u},{v}`.  Martinsson--Steiner proves the needed
    strong theorem for `k=4`, so the `HC_7` four-colour branch has a
    label-faithful `K_6` model.
-13. **Minimal contraction-forest saturation.** If a forest contraction is
+15. **Minimal contraction-forest saturation.** If a forest contraction is
    inclusion-minimal for lowering a quotient to `q` colours, then every
    side of every forest edge meets every non-own colour class in every
    terminal colouring.  Each one-edge predecessor has chromatic number
@@ -164,19 +178,17 @@ positive-overlap rigid cell is closed whenever the avoided support has
 order five; both maximal-overlap cells are closed for an avoided order-six
 support; the rooted-fan theorem closes the normalized arm-order-six
 overlap-four cell; and finite rooted-kernel composition closes both
-normalized overlap-three cells and the order-five-arm, overlap-two cell.
-The live rigid cells are therefore overlap one for order-five arms, and
-overlaps one and two for order-six arms, alongside the separated-triple
-branch.
+normalized overlap-three cells, both overlap-two cells, and the
+order-five-arm overlap-one cell.  Hence every positive-overlap cell with
+order-five arms is terminal.  The only live positive-overlap rigid cell is
+order-six arms at overlap one, alongside the separated-triple branch.
 Every two-set in the avoided support meeting the overlap still forces a
 compulsory double-root model.  The next concrete cell is the
-order-six-arm, overlap-two interface.  Deleting the overlap and reserving
-the fixed private pair leaves seven labelled terminals in a
-three-connected deletion.  The complete seven-terminal kernel is now
-classified; the active test is whether a state-dependent reserved pair
-composes against every exact carrier bundle.  A bare cycle/biclique carrier
-and a fixed reserved pair are both insufficient.  Further portal taxonomy
-is not the target.
+order-six-arm, overlap-one interface.  Deleting its single overlap vertex
+leaves a six-connected graph with eleven exterior terminals.  The next
+structural choice is a labelled four-connected carrier after two reserved
+vertices, or an exact eight-terminal kernel after three; raw state
+enumeration without such a carrier theorem is not the target.
 
 ### G2. Forest-to-carrier composition
 
