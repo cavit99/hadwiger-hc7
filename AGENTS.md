@@ -24,7 +24,10 @@ and no larger than the mathematical task requires.
 
 - `README.md` is the stable public overview.
 - `RESEARCH_LEDGER.md` is the sole authoritative current research status.
-- `active/INDEX.md` lists only live proof work and immediate dependencies.
+- `active/INDEX.md` is a navigation map only: it names each live proof
+  target, links to its exact statement, and lists immediate dependencies.
+  It does not restate the research status, proof history, or residual case
+  analysis owned by the ledger and technical frontier.
 - `results/` contains written proofs and adjacent audit notes.
 - `barriers/` contains counterexamples to intermediate claims.
 - `archive/` preserves superseded work; do not delete it.
@@ -33,8 +36,9 @@ Do not add new status ledgers or competing proof spines.  Update the existing
 authoritative document instead.
 
 When the mathematical frontier changes, update `RESEARCH_LEDGER.md` and
-`active/INDEX.md` in the same commit.  Also update whichever technical
-frontier and coverage files `active/INDEX.md` currently designates.
+whichever technical frontier or coverage files `active/INDEX.md` currently
+designates.  Update `active/INDEX.md` only when the set of live targets or
+their immediate dependencies changes.
 
 Keep the README stable.  Change it only when the project scope, navigation,
 headline result, claim policy, or repository structure changes.
