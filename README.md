@@ -116,9 +116,17 @@ The following statements are proved and independently cold-audited.
   impossible for `|W|<=2`.  The new `|W|=2` decoder is literal: marked
   minimum cuts force two clique rows to contact both marks, and a full
   tail component splits a mark-to-mark path into the final two bags of a
-  `K_7` model.  The live balanced residue has `3<=|W|<=5`, all three marks
-  in `W`, and all three rows with tails.  This advances the published
-  three-clique proof but does not prove the marked theorem.
+  `K_7` model.
+* The next actual equality cell is now closed as well.  For `|W|=3`, a
+  four-linkage first gives a labelled `K_7^-` whose only missing pair is
+  between a reserved path bag and one marked row packet.  Split the
+  supported contracted mark in its seven-connected one-edge predecessor.
+  Expanding two distinct row cuts forces both literal endpoints of the
+  split edge to meet both required packets.  Putting one endpoint into the
+  reserved bag and the other into its old packet repairs the unique missing
+  pair and gives a literal `K_7`.  Thus the actual minimal-three-contraction
+  branch now has only `|W|=4,5` balanced cells.  The abstract marked theorem
+  can still have a `|W|=3` cell because it need not have such predecessors.
 * Independently, a five-colouring of the common matching deletion with
   exactly two equal rows forces their four endpoints to induce `K_4`.
   Its four cross-edges are locally double-critical, two outside colours
@@ -178,6 +186,11 @@ barrier are
 [`hc7_four_edge_double_critical_carriers_audit.md`](active/hc7_four_edge_double_critical_carriers_audit.md),
 and
 [`hc7_four_edge_double_critical_packaging_barrier.md`](barriers/hc7_four_edge_double_critical_packaging_barrier.md).
+The balanced-three fan reduction, one-mark decoder, predecessor closure,
+and their independent audits are
+[`hc7_marked_three_clique_w3_fan_reduction.md`](results/hc7_marked_three_clique_w3_fan_reduction.md),
+[`hc7_marked_three_clique_w3_one_mark_decoder.md`](results/hc7_marked_three_clique_w3_one_mark_decoder.md), and
+[`hc7_marked_three_clique_w3_predecessor_closure.md`](results/hc7_marked_three_clique_w3_predecessor_closure.md).
 
 ## Audited frontier
 

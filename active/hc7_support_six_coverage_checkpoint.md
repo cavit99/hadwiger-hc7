@@ -165,17 +165,29 @@ order alone.  See
 `../barriers/hc7_decorated_hwege_genuine_cell_falsifier.md` and its exact
 verifier.
 
-The stronger marked theorem has now been carried through two additional
+The stronger marked theorem has now been carried through three additional
 steps of the published three-clique proof.  In a `K_7`-minor-free candidate
 every marked six-cut has exactly two open components.  This eliminates the
 `|W|=6` Mader branch and the balanced equality branch for `|W|<=2`.  At
 `|W|=2`, the one tail supplies a mark-to-mark path and marked minimum-degree
 forcing makes the other two literal four-clique rows complete to both
-marks; splitting the path gives an explicit `K_7`.  The remaining balanced
-cells have `3<=|W|<=5`, all three rows have tails, and all three marks lie in
-`W`.  Their crossing-cut composition is open.  See
+marks; splitting the path gives an explicit `K_7`.
+
+For `|W|=3`, the balanced cell first supplies two labelled `K_7^-` models.
+In the actual minimal-three-contraction branch, split the supported mark in
+its seven-connected one-edge predecessor.  Minimum-cut fullness at two
+different expanded row cuts makes both split endpoints meet both required
+row packets.  Assigning one endpoint to the reserved path bag and the other
+to its old packet repairs the sole missing adjacency and gives a literal
+`K_7`.  Thus the live balanced residue in that actual branch is `|W|=4,5`.
+The abstract marked theorem still has `|W|=3,4,5`, because predecessor
+connectivity is extra structure.  See
 `hc7_marked_three_clique_cut_reduction.md`,
 `hc7_marked_three_clique_w2_closure.md`, and their adjacent cold audits.
+The new balanced-three chain and audits are
+`../results/hc7_marked_three_clique_w3_fan_reduction.md`,
+`../results/hc7_marked_three_clique_w3_one_mark_decoder.md`, and
+`../results/hc7_marked_three_clique_w3_predecessor_closure.md`.
 
 There is now one uniform replacement for a bare boundary-state search.
 Contract an inclusion-minimal forest in the two open shores until the
