@@ -88,6 +88,19 @@ The following statements are proved and independently cold-audited.
   from the all-equal state this is a strict `3 -> 1/2` first descent.
   It is not a global rank: explicit highly connected examples realize a
   double output and a directed singleton cycle.
+* A second, model-side composition route now has an audited terminal
+  decoder.  Contracting the three split edges gives three disjoint marked
+  `K_5` cliques.  Seven disjoint Mader good paths give a literal `K_7`;
+  otherwise the Robertson--Seymour--Thomas certificate has an exact parity
+  and coverage count.  In the terminal disjoint `5+5+5` equality cell,
+  every canonical six-cut either contains one marked contraction image or
+  belongs to one unique diagonal pattern and contains two.  Hence the
+  entire terminal cell is impossible when the three-edge contraction set
+  is inclusion-minimal, because every six-cut of that quotient must contain
+  all three marked images.  This closes the last equality matrix, not the
+  earlier fan/cell induction needed to reach it.  The clean theorem still
+  under test is: a six-connected graph with three disjoint marked `K_5`s in
+  which every six-cut contains all three marks has a `K_7` minor.
 
 See
 [`hc7_matching_deletion_separator_lift.md`](results/hc7_matching_deletion_separator_lift.md),
@@ -101,6 +114,11 @@ The palette-component theorem and its cold audit are
 [`hc7_kempe_component_odd_cycle.md`](results/hc7_kempe_component_odd_cycle.md)
 and
 [`hc7_kempe_component_odd_cycle_audit.md`](results/hc7_kempe_component_odd_cycle_audit.md).
+The new conditional composition notes and cold audit are
+[`hc7_decorated_three_model_hwege.md`](active/hc7_decorated_three_model_hwege.md),
+[`hc7_weighted_klnz_terminal_decoder.md`](active/hc7_weighted_klnz_terminal_decoder.md),
+and
+[`hc7_weighted_klnz_terminal_decoder_audit.md`](active/hc7_weighted_klnz_terminal_decoder_audit.md).
 
 ## Audited frontier
 

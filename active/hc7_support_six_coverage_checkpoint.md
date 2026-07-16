@@ -142,6 +142,17 @@ balanced-colour shortcut is false: `K_{3,5}` at order eight and
 `K_3 vee I_6` at order nine satisfy the state-free join exclusion but have
 no colour-class pattern `2+2+2+2` or `3+2+2+2`, respectively.
 
+There is a new audited terminal decoder for the `|E|=3` Mader path
+obstruction.  If the published disjoint-three-clique argument reaches its
+terminal `5+5+5` equality cell, each canonical six-cut contains only one
+or two of the three contracted images.  This contradicts minimality of
+`E`, which forces every six-cut to contain all three.  Thus that terminal
+cell is closed.  The preceding weighted fan/cell induction has not been
+established, so this does not remove the two-full-shore residue above or
+prove the marked three-clique theorem.  See
+`hc7_decorated_three_model_hwege.md` and
+`hc7_weighted_klnz_terminal_decoder.md`, with the adjacent cold audit.
+
 There is now one uniform replacement for a bare boundary-state search.
 Contract an inclusion-minimal forest in the two open shores until the
 quotient is five-colourable.  Every one-edge predecessor is exactly
