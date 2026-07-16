@@ -1,11 +1,11 @@
 # Exact two-row states in the five-colour matching deletion
 
 **Status:** The recolouring, local double-criticality, Kempe, Menger, and
-branch-set statements in Sections 2--5 are proved here.  They have not yet had
-an independent cold audit.  The prescribed-path input in Section 6 is a
-published theorem of Li--Ning--Zhang.  Section 7 is a sharp guardrail: the raw
-path obtained in Section 6 need not extend to the four-linkage used in Section
-5.  This note does not prove `HC_7`.
+branch-set statements in Sections 2--5 are proved here and have a separate
+GREEN internal audit. The prescribed-path input in Section 6 is a published
+theorem of Li--Ning--Zhang. Section 7 records a barrier: the path obtained in
+Section 6 need not extend to the four-linkage used in Section 5. This note
+does not prove $HC_7$.
 
 The point of the note is to isolate the full content of the `chi(G-F)=5`
 branch without introducing local seam terminology.  It leaves one standard

@@ -1,4 +1,4 @@
-# Cold audit: exact two-row five-colour linkage package
+# Internal audit: two monochromatic matching edges in a five-colouring
 
 **Verdict:** **GREEN.**  The recolouring, exact-signature, local
 double-criticality, simultaneous Kempe-lock, Menger, branch-set, prescribed
@@ -9,7 +9,11 @@ package: it does not augment the raw nonmonotone path to a member of a
 four-linkage and therefore does not close the five-colour branch or `HC_7`.
 
 **Audited source SHA-256:**
-`83551a1447d072dd3d7a82ec59c60ea8cc565245efac9bba54a89308e8e52418`.
+`efb9c25d34e83882bb886f31d6bbe8fdbac1875a1ccde5ee9668664120c001ae`.
+
+The post-audit change only updated the source note's status paragraph to
+record this GREEN verdict; no theorem, hypothesis, proof, or barrier text was
+changed.
 
 ## 1. Exact two-row rigidity
 

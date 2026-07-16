@@ -1,319 +1,234 @@
-# Active frontier: support-six extension for `HC_7`
+# Technical frontier: a two-vertex transversal for small $K_5$ models
 
-**Status:** active proof spine.  `HC_7` and the support-six transversal
-theorem are not proved.
+**Status:** active technical proof spine. Neither $HC_7$ nor the
+intermediate transversal theorem below is proved.  See
+[`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md) for the authoritative
+status and
+[`hc7_support_six_coverage_checkpoint.md`](hc7_support_six_coverage_checkpoint.md)
+for the full dependency record.
 
-## 1. Target
+## 1. Setup and intermediate target
 
-Let `G` be seven-connected, strongly seven-contraction-critical and
-`K_7`-minor-free.  Let `F` be the supports of all `K_5` models using at
-most six vertices.  The active target is
+Let $G$ be a seven-connected graph with $\chi(G)=7$, no $K_7$ minor, and
+every proper minor six-colourable. For a minor model $M$, write $V(M)$ for
+the union of its branch sets, and define
 
-\[
-                              \tau(F)\le2.             \tag{1.1}
-\]
+$$
+ \mathcal F_6(G)=\{V(M):M\text{ is a }K_5\text{-minor model and }
+ |V(M)|\le6\}.
+$$
 
-The exhaustive dependency map is
-[`hc7_support_six_coverage_checkpoint.md`](hc7_support_six_coverage_checkpoint.md).
-The two live arrows are decorated extraction (`G1`) and forest-to-carrier
-composition (`G2`).
+The current intermediate target is
 
-The earlier audited literal-transversal and support-six contraction
-dichotomy supply a parallel normalization: choose a pair whose smallest
-avoided `K_5` support has order six, normalize its split edge, and obtain
-either a seven-connected contracted host or an actual exact-seven
-adhesion.  This feeds the two arrows below; it does not close either one.
+$$
+                            \tau(\mathcal F_6(G))\le2.       \tag{1.1}
+$$
 
-Sources:
+A six-vertex $K_5$ model has four singleton branch sets forming a $K_4$
+and one two-vertex branch set. We write that branch set as $\{x_i,y_i\}$
+and its edge as $e_i=x_i y_i$.
 
-* [`../results/hc7_global_literal_k5_transversal.md`](../results/hc7_global_literal_k5_transversal.md)
-* [`../results/hc7_global_support_six_contraction_dichotomy.md`](../results/hc7_global_support_six_contraction_dichotomy.md)
+A successful recursive reduction must return a separation of the original
+graph $G$ of order seven, preserve every specified branch set and boundary
+colouring partition, and strictly decrease an explicitly named induction
+parameter.  Merely finding another order-seven separator is not sufficient.
 
-## 2. `G1`: global decorated extraction
+Two problems remain.
 
-The proved starting data are:
+## 2. Label-preserving extraction of compatible $K_5$ models
 
-* a 3-critical high-transversal subfamily of at most twenty-seven
-  supports;
-* one private transversal pair for every member;
-* a graph-specific arm on each endpoint of every private pair; and
-* the corrected cross-arm dichotomy.
+Assume for contradiction that $\tau(\mathcal F_6(G))>2$.  The proved extraction
+theorems give:
 
-The dichotomy returns either a genuinely separated labelled triple or a
-rigid certificate
+- an inclusion-minimal subfamily of at most twenty-seven supports with
+  transversal number three;
+- for each support $A$, a **private pair** $\{p,q\}$ meeting every other
+  member of the subfamily but not $A$;
+- one prescribed $K_5$ model containing $p$ and another containing
+  $q$; and
+- three supports $A_1,A_2,A_3$ satisfying
 
-\[
-                      X\cup\{p\},\qquad X\cup\{q\},   \tag{2.1}
-\]
+  $$
+  |A_i\cap A_j|\le
+  \begin{cases}
+  3,&|A_i|=|A_j|=5,\\
+  4,&\text{otherwise}.
+  \end{cases}                                           \tag{2.1}
+  $$
 
-together with every forced replacement `(A-a)+p,(A-a)+q` for
-`a in A cap X`.
+If all three supports have order five, they are $K_5$ subgraphs.  Moreover,
+$\tau(\mathcal F_6(G))>2$ implies that $G$ is not two-apex, since an
+apex pair would meet every $K_5$-minor support.  Theorem 1.10 of
+Niu--Zhang then gives a $K_7$ minor.  Thus an unresolved triple contains
+at least one six-vertex model.
 
-The audited literal-support composition theorem closes the rigid cell
-whenever `|A|=5` and `A cap X` is nonempty.  For `a in A cap X`, the
-four-clique `A-a`, the two literal replacement cliques, and a common cycle
-through `a,p,q` in the four-vertex deletion form a `K_7` model.  Hence a
-literal avoided support is disjoint from the common arm core.
+The additional-model dichotomy has two outcomes:
 
-The maximal-overlap order-six cells are also closed for both arm orders.
-For order-five arms, a prescribed-edge cycle theorem composes a literal
-`K_4`, two complete roots, and the disjoint `K_4`-full edge forced by the
-irredundant avoided support.  For order-six arms, maximal overlap supplies
-all seven six-subsets of one seven-set, forcing a small `K_6` and then
-`K_7`.
+1. three labelled models are sufficiently separated; or
+2. the models containing $p$ and $q$ share a prescribed vertex set
+   $X$,
+   and criticality forces further replacement models obtained by replacing
+   a vertex of $A\cap X$ with $p$ or $q$.
 
-There is now a uniform replacement for the first unbounded exterior step.
-Given `k>=4` labelled terminals in a simple three-connected graph,
-terminal-legal contractible-edge descent produces a three-connected rooted
-minor on at most
+In the shared-set outcome, $A\cap X$ must be empty if $|A|=5$; this does
+not eliminate the disjoint case. If $|A|=6$ and the two additional models
+have five vertices, explicit minor constructions and bounded rooted-minor
+reductions eliminate every positive value of $|A\cap X|$. If all three
+models have six vertices, they eliminate $2\le |A\cap X|\le5$. The
+unresolved configurations are:
 
-\[
-                         k+\lfloor k/4\rfloor
-\]
+- the separated labelled triple;
+- every shared-set outcome with $A\cap X=\varnothing$; and
+- the shared-set outcome in which all three models have six vertices and
+  $|A\cap X|=1$.
 
-vertices.  For five terminals the proof classifies every residue: the
-terminals always root `F_5=K_1 join P_4`.  Its two actual rooted-bag chords
-repair every crossed order left by the audited cycle decoder.  Consequently
-the entire normalized arm-order-six overlap-four cell is closed to a
-literal `K_7`, with no separator handoff left over.
+For either configuration, the required conclusion is one of:
 
-At eight terminals the same descent now yields a uniform rooted-carrier
-trichotomy: every eight prescribed vertices in a simple three-connected
-graph root `C_8`, `K_{3,5}`, or one explicit twisted `K_{3,5}`.  The proof
-uses Wu, Chvatal--Erdos and Moon--Moser and has passed an independent
-line audit.  The stronger exact order-eight/order-nine catalogue and the
-analytic order-ten `AABBAABB` residue retain the contacts needed for a
-labelled decoder.
+- an explicit $K_7$-minor model in $G$;
+- two vertices meeting every support in $\mathcal F_6(G)$;
+- three vertex-disjoint six-vertex $K_5$ models with all prescribed branch
+  sets retained; or
+- a model-preserving order-seven separation with a strict induction
+  parameter.
 
-There is now a second uniform rooted carrier.  In a four-connected graph,
-fix an anchor triple among at least five labelled terminals.  Either an
-anchored four-set roots `K_4`, or all terminals lie on one facial cycle and
-root `K_1 join P` with any prescribed terminal bag made universal.  Applying
-this to the five terminals complete to the three-vertex overlap closes the
-entire normalized **order-five-arm, overlap-three** cell.  The fixed decoder
-has 6,960 original completions; after common rooted-`K_4` and direct-`K_7`
-outcomes, all 72 residues close.  In the off-face branch the proof preserves
-the exceptional terminal as a singleton and uses the nonempty connected
-peripheral remainder as a separate full carrier.  This is an unbounded
-four-connected composition theorem with a fixed labelled finite layer, not
-an ambient-order census.
+A complete classification of one eight-terminal rooted-minor interface is
+not enough: a verified finite boundary pattern defeats every choice of four
+vertices held outside that reduction.  The next proof must therefore retain
+information shared by models constructed after several different
+contractions, or by the ambient contraction sequence.
 
-The normalized **order-six-arm, overlap-three** cell is now terminal too.
-Deleting the overlap and reserving one of the seven exterior terminals
-leaves six labelled terminals in a three-connected graph.  Terminal-legal
-contraction reduces them to a rooted kernel of order six or seven.  The
-complete labelled guarantee consists of 142 edge-minimal order-six
-carriers and 780 terminal-irreducible order-seven kernels.  An independently
-audited ten-object decoder composes every one of the 7,878 noncommon
-relation states to a literal `K_7`; the ambient graph remains unbounded.
+Principal inputs:
 
-The normalized **order-five-arm, overlap-two** cell is now terminal as
-well.  Deleting the two overlap vertices and reserving the fixed private
-pair leaves six labelled terminals in a three-connected deletion.  The
-exact joined relation has 1,419 states.  A common rooted `K_4` closes 1,179
-of them; an independently audited decoder composes all 240 remaining
-states with every order-six carrier and every order-seven irreducible
-kernel from the complete 142/780 catalogue.  The fixed private pair works
-for every literal state, and every certificate lifts to a literal `K_7`.
+- [bounded critical support family](../results/hc7_support_six_bounded_critical_kernel.md)
+- [private-pair extraction](../results/hc7_support_six_private_pair_v_extraction.md)
+- [dichotomy for models through a private pair](../results/hc7_private_pair_cross_arm_dichotomy.md)
+- [replacement models sharing a prescribed vertex set](../results/hc7_rigid_cross_arm_double_root_cover.md)
+- [exclusion of nonempty $A\cap X$ when $|A|=5$](../results/hc7_literal_cross_arm_overlap_elimination.md)
+- [closure for five-vertex additional models with $|A\cap X|=4$](../results/hc7_k4_two_vertices_one_edge_cycle_composition.md)
+- [maximal intersection for six-vertex additional models](../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md)
+- [rooted five-terminal theorem](../results/hc7_five_terminal_rooted_fan.md)
+- [rooted eight-terminal theorem](../results/hc7_eight_terminal_rooted_carrier_trichotomy.md)
+- [barrier to a single eight-terminal reduction](../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md)
 
-There is now also a complete **seven-terminal kernel bundle**.  Seven
-prescribed vertices in a simple three-connected graph reduce to one of
-5,495 labelled edge-minimal order-seven carriers or to an order-eight
-irreducible kernel.  The order-eight branch has exactly three structural
-forms and 30,600 labelled templates.  For each actual template, every
-neighbour of the extra bag is a legal adaptive owner.  The independently
-audited decoder quantifier is therefore universal over templates and
-existential over the actual owners.  This is the exact carrier input needed
-for the next cell; it does not itself compose the surrounding labels.
+## 3. Simultaneous composition after deleting three branch-set edges
 
-The normalized **order-six-arm, overlap-two** cell is now terminal.  Its
-148,488 noncommon states reduce monotonically to 8,220 forced-edge masks in
-67 category orbits.  A fixed reserve pair is genuinely false, but a pair
-selected from the state before kernel exposure closes every orbit against
-all 5,495 order-seven carriers and all 30,600 exact order-eight owner
-families.  Twenty-one orbits already contain `K_7`; 45 use one reserve-pair
-type and one uses a second.  All 176,081 queried quotient masks were
-independently checked by exact contraction search.
+Suppose the extraction problem yields three vertex-disjoint six-vertex
+$K_5$ models.  For $i=1,2,3$, let $Q_i$ be the set of four singleton
+vertices inducing the model's $K_4$, let $e_i=x_i y_i$ be the edge in the
+two-vertex branch set, and put
 
-The normalized **order-five-arm, overlap-one** cell is terminal as well.
-Deleting its single overlap vertex and reserving three of the ten exterior
-terminals leaves the same seven-terminal kernel in a three-connected
-deletion.  The exact relation has 5,410 noncommon states, 400 minimal masks
-and six symmetry orbits.  Every orbit closes against the complete kernel
-catalogue; an independent natural join and witness-return detector
-reproduce the result.  Consequently all positive overlaps with order-five
-arms are closed.
+$$
+                         F=\{e_1,e_2,e_3\},\qquad K=G-F.
+$$
 
-The rigid/private-pair hypotheses also force a **double-root cover**:
-every two-set of `A` meeting `A cap X` is avoided by another small support
-containing both `p,q`.  When the arms are literal, `pq` is absent and each
-compulsory support has exactly one root in its split bag and the other as a
-singleton.  This orientation family is the active rigid-cell object.
+For a separation $(A,B)$ of $K$, define
 
-The remaining theorem must compose the actual five-bag labels on the
-separated triple or the double-root orientation family in the rigid cells.
-The only live positive-overlap rigid cell is order-six arms at overlap one.
-The exact eight-terminal route has been tested and terminated: the full
-relation factors to 142 minimal symmetry orbits, and its first orbit defeats
-every overlap-plus-triple reserve and every arbitrary four-vertex reserve,
-already at kernel order eight.  An independent SMT encoding confirms every
-negative quotient.  Thus the next step must retain information shared by
-several regenerated models or by the ambient split-contraction sequence; a
-single terminal carrier cannot close this cell.
-Accepted outcomes are:
+$$
+ \lambda_F(A,B)=|A\cap B|+
+ |\{e\in F:e\text{ has endpoints in opposite open sides of }(A,B)\}|.
+                                                               \tag{3.1}
+$$
 
-1. a row-compatible one-split/two-clique composition;
-2. three vertex-disjoint normalized split models;
-3. a literal `K_7` or one global support-six transversal pair; or
-4. a state/model-preserving exact-seven handoff with a strict declared
-   rank.
+The following are proved.
 
-Unlabelled support incidence cannot prove this.  The affine and
-fifteen-point barriers remain decisive.
+1. $\lambda_F$ is submodular, and seven-connectivity of $G$ gives
+   $\lambda_F(A,B)\ge7$ whenever both open sides are nonempty.
+2. If $K$ has connectivity four, endpoint choices for the matching edges
+   lift to a separation of $G$ of order seven preserving all three named
+   models.  At exact weighted order seven, after fixing two roots and the
+   side assignment of every prescribed model, the cardinality of the
+   anchored open side is a strict uncrossing parameter; this eliminates the
+   case recursively.
+3. Otherwise $K$ is at least five-connected and $\chi(K)$ is five or six.
+4. For every nonempty $D\subseteq F$, there is a six-colouring $c$ of $K$
+   such that
 
-Sources:
+   $$
+                 D=\{x_i y_i\in F:c(x_i)=c(y_i)\}.       \tag{3.2}
+   $$
 
-* [`../results/hc7_support_six_bounded_critical_kernel.md`](../results/hc7_support_six_bounded_critical_kernel.md)
-* [`../results/hc7_support_six_private_pair_v_extraction.md`](../results/hc7_support_six_private_pair_v_extraction.md)
-* [`../results/hc7_private_pair_cross_arm_dichotomy.md`](../results/hc7_private_pair_cross_arm_dichotomy.md)
-* [`../results/hc7_private_pair_cross_arm_dichotomy_audit.md`](../results/hc7_private_pair_cross_arm_dichotomy_audit.md)
-* [`../results/hc7_literal_cross_arm_overlap_elimination.md`](../results/hc7_literal_cross_arm_overlap_elimination.md)
-* [`../results/hc7_literal_cross_arm_overlap_elimination_audit.md`](../results/hc7_literal_cross_arm_overlap_elimination_audit.md)
-* [`../results/hc7_k4_two_vertices_one_edge_cycle_composition.md`](../results/hc7_k4_two_vertices_one_edge_cycle_composition.md)
-* [`../results/hc7_k4_two_vertices_one_edge_cycle_composition_audit.md`](../results/hc7_k4_two_vertices_one_edge_cycle_composition_audit.md)
-* [`../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md`](../results/hc7_cross_arm_maximal_order_six_overlap_elimination.md)
-* [`../results/hc7_cross_arm_maximal_order_six_overlap_elimination_audit.md`](../results/hc7_cross_arm_maximal_order_six_overlap_elimination_audit.md)
-* [`../results/hc7_rigid_cross_arm_double_root_cover.md`](../results/hc7_rigid_cross_arm_double_root_cover.md)
-* [`../results/hc7_rigid_cross_arm_double_root_cover_audit.md`](../results/hc7_rigid_cross_arm_double_root_cover_audit.md)
-* [`../results/hc7_five_terminal_rooted_fan.md`](../results/hc7_five_terminal_rooted_fan.md)
-* [`../results/hc7_five_terminal_rooted_fan_audit.md`](../results/hc7_five_terminal_rooted_fan_audit.md)
-* [`../results/hc7_eight_terminal_rooted_carrier_trichotomy.md`](../results/hc7_eight_terminal_rooted_carrier_trichotomy.md)
-* [`../results/hc7_eight_terminal_rooted_carrier_trichotomy_audit.md`](../results/hc7_eight_terminal_rooted_carrier_trichotomy_audit.md)
-* [`../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md`](../barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md)
-* [`../results/hc7_cross_arm_overlap_four_cycle_decoder.md`](../results/hc7_cross_arm_overlap_four_cycle_decoder.md)
-* [`../results/hc7_cross_arm_overlap_four_cycle_decoder_audit.md`](../results/hc7_cross_arm_overlap_four_cycle_decoder_audit.md)
-* [`../results/hc7_four_connected_terminal_fan_or_k4.md`](../results/hc7_four_connected_terminal_fan_or_k4.md)
-* [`../results/hc7_four_connected_terminal_fan_or_k4_audit.md`](../results/hc7_four_connected_terminal_fan_or_k4_audit.md)
-* [`../results/hc7_four_connected_five_good_terminal_carrier.md`](../results/hc7_four_connected_five_good_terminal_carrier.md)
-* [`../results/hc7_four_connected_five_good_terminal_carrier_audit.md`](../results/hc7_four_connected_five_good_terminal_carrier_audit.md)
-* [`../results/hc7_overlap_three_five_good_decoder.md`](../results/hc7_overlap_three_five_good_decoder.md)
-* [`../results/hc7_overlap_three_five_good_decoder_audit.md`](../results/hc7_overlap_three_five_good_decoder_audit.md)
-* [`../results/hc7_overlap_three_six_terminal_kernel_closure.md`](../results/hc7_overlap_three_six_terminal_kernel_closure.md)
-* [`../results/hc7_overlap_three_six_terminal_kernel_closure_audit.md`](../results/hc7_overlap_three_six_terminal_kernel_closure_audit.md)
-* [`../results/hc7_overlap_two_order_five_six_terminal_kernel_closure.md`](../results/hc7_overlap_two_order_five_six_terminal_kernel_closure.md)
-* [`../results/hc7_overlap_two_order_five_six_terminal_kernel_closure_audit.md`](../results/hc7_overlap_two_order_five_six_terminal_kernel_closure_audit.md)
-* [`../results/hc7_seven_terminal_irreducible_kernel_classification.md`](../results/hc7_seven_terminal_irreducible_kernel_classification.md)
-* [`../results/hc7_seven_terminal_irreducible_kernel_classification_audit.md`](../results/hc7_seven_terminal_irreducible_kernel_classification_audit.md)
-* [`../results/hc7_overlap_two_order_six_seven_terminal_kernel_closure.md`](../results/hc7_overlap_two_order_six_seven_terminal_kernel_closure.md)
-* [`../results/hc7_overlap_two_order_six_seven_terminal_kernel_closure_audit.md`](../results/hc7_overlap_two_order_six_seven_terminal_kernel_closure_audit.md)
-* [`../results/hc7_overlap_one_order_five_seven_terminal_kernel_closure.md`](../results/hc7_overlap_one_order_five_seven_terminal_kernel_closure.md)
-* [`../results/hc7_overlap_one_order_five_seven_terminal_kernel_closure_audit.md`](../results/hc7_overlap_one_order_five_seven_terminal_kernel_closure_audit.md)
+   No six-colouring makes all three matching edges bichromatic.
+5. For each $i$, connectivity gives an $x_i$-$y_i$ path in
+   $K-Q_i$.  The singleton branch sets $\{q\}$ for $q\in Q_i$, together
+   with this path as the fifth branch set, form the prescribed $K_5$ model
+   in $K$.  The three paths may intersect.
+6. From a colouring satisfying (3.2) and a monochromatic edge $e_i$, the
+   colour missing from $Q_i$ gives either the required $x_i$--$y_i$ path or a
+   two-colour component whose Kempe exchange produces another equality set
+   arising from a proper minor. The first such move from $D=F$ decreases
+   $|D|$, but later moves may branch or cycle.
 
-## 3. `G2`: exact two-shore residue
+The open theorem must combine the three paths constructing the prescribed
+models and the
+two-colour components into one of:
 
-For three vertex-disjoint normalized split models, the size-three
-minimal-bad-contraction branch is now excluded by the complete marked
-Mader closure.  A minimal bad simultaneous contraction therefore has one
-of the following proved outcomes:
+- an explicit $K_7$-minor model;
+- two vertices meeting every $K_5$-model support in $G$; or
+- a model-preserving order-seven separation with a strict induction
+  parameter.
 
-* `K_7`;
-* an unranked actual exact-seven handoff; or
-* a size-two bad contraction with exactly two full open shores across an
-  expanded boundary of order eight.
+Colouring patterns alone cannot prove this: their transition graph need not
+be acyclic, and reconstructing an unrooted minor after contraction does not
+preserve the four specified singleton branch sets.
 
-In the last case the boundary is four-colourable.  The former order-nine
-exception belonged only to the now-excluded size-three branch.
+There is a complementary contraction formulation.  A nonempty
+inclusion-minimal subset of the three edges whose simultaneous contraction
+is not seven-connected cannot have order three; that entire case is
+eliminated by a Mader-type disjoint-path argument and labelled separator
+constructions.  What remains is either:
 
-Sources:
+- an order-seven separation not yet equipped with a strict parameter; or
+- an inclusion-minimal two-edge set whose simultaneous contraction is not
+  seven-connected and whose expansion has an eight-vertex boundary.  On
+  each side of that boundary is a connected
+  subgraph adjacent to every boundary vertex, and the boundary graph is
+  four-colourable. The four-colourability assertion is a computer-assisted
+  finite result with retained verification code and an independent replay.
 
-* [`../results/hc7_three_split_minimal_bad_contraction.md`](../results/hc7_three_split_minimal_bad_contraction.md)
-* [`../results/hc7_three_split_marked_mader_branch_closure.md`](../results/hc7_three_split_marked_mader_branch_closure.md)
-* [`../results/hc7_two_full_shore_boundary_absorption.md`](../results/hc7_two_full_shore_boundary_absorption.md)
-* [`../results/hc7_universal_pair_three_core_elimination.md`](../results/hc7_universal_pair_three_core_elimination.md)
+Four-colourability does not ensure that colourings of the two sides induce
+the same boundary partition.  This compatibility problem is part of the
+same simultaneous-composition theorem.
 
-### 3.1 The new contraction-forest invariant
+Principal inputs:
 
-Choose spanning trees in the two shores and an inclusion-minimal forest
-`F_0` whose contraction makes the graph five-colourable.  Put
+- [weighted separation theorem](../results/hc7_matching_deletion_separator_lift.md)
+- [Kempe transition theorem](../results/hc7_missing_colour_matching_transition.md)
+- [two-colour component alternative](../results/hc7_kempe_component_odd_cycle.md)
+- [matching-edge equality patterns and proved ranked-exchange sections](hc7_three_split_cross_star_ranked_exchange.md)
+- [audit of the proved ranked-exchange sections](hc7_three_split_cross_star_ranked_exchange_audit.md)
+- [minimal contraction alternatives](../results/hc7_three_split_minimal_bad_contraction.md)
+- [closure of the three-edge contraction case](../results/hc7_three_split_marked_mader_branch_closure.md)
+- [eight-vertex boundary absorption](../results/hc7_two_full_shore_boundary_absorption.md)
 
-\[
-                            K=G/F_0.
-\]
+## 4. Strong Hadwiger for four colours in the order-two case
 
-For every edge `e in F_0`, let `H_e=G/(F_0-e)` and let `x_e,y_e` be the
-two sides of the split contraction image `z_e`.  The audited forest
-saturation theorem gives, simultaneously for every edge,
+Let $J$ be a graph with an edge $uv$ such that
 
-\[
-                    \chi(K)=5,\qquad\chi(H_e)=6,       \tag{3.1}
-\]
+$$
+               \chi(J)=k+2,\qquad \chi(J-\{u,v\})\le k.
+$$
 
-and in every five-colouring of `K`, each side meets every colour other
-than the colour of `z_e`.
+Set $H=J-\{u,v\}$ and $X=N_J(u)\cap N_J(v)$. Then $\chi(H)=k$, and every
+proper $k$-colouring of $H$ uses all $k$ colours on $X$. Strong Hadwiger's
+Conjecture says that if $\chi(H)=k$ and $X$ receives all $k$ colours in
+every proper $k$-colouring of $H$, then $H$ has a $K_k$-minor model in
+which every branch set meets $X$. Martinsson--Steiner prove this statement
+for $k=4$. Applying it here gives a $K_6$-minor model with singleton branch
+sets $\{u\}$ and $\{v\}$ in the relevant contracted graph, but it does not
+by itself produce a seventh branch set in $G$.
 
-If `chi(K-z_e)=4`, the uniform common-neighbour rooted theorem and Strong
-Hadwiger for four colours give a `K_6` model in `H_e` with singleton bags
-`{x_e},{y_e}`.  On expansion these are the two literal connected sides of
-the forest cut.
+## 5. Admission rule for new work
 
-Sources:
+Do not add another finite neighbourhood classification, attachment
+catalogue, or unranked separator to the active spine.  A new result should
+either:
 
-* [`../results/hc7_leaf_rooted_chromatic_drop.md`](../results/hc7_leaf_rooted_chromatic_drop.md)
-* [`../results/hc7_leaf_rooted_chromatic_drop_audit.md`](../results/hc7_leaf_rooted_chromatic_drop_audit.md)
-* [`../results/hc7_minimal_contraction_forest_saturation.md`](../results/hc7_minimal_contraction_forest_saturation.md)
-* [`../results/hc7_minimal_contraction_forest_saturation_audit.md`](../results/hc7_minimal_contraction_forest_saturation_audit.md)
+- eliminate an infinite family in one of Sections 2 or 3;
+- construct an explicit $K_7$-minor model or global two-vertex transversal;
+  or
+- produce a model-preserving order-seven separation with a named strict
+  parameter.
 
-### 3.2 Exact remaining carrier problem
-
-The next theorem must use the original shore/model attachments, not just
-the six-chromatic kernel.
-
-**Critical-image branch.**  Starting from the singleton-sided `K_6`,
-produce an `S`-meeting `K_6` disjoint from a reserved connected full shore,
-a literal `K_7`, one global pair, or a ranked exact-seven/labelled
-near-`K_7` handoff.  Connectivity alone is false: `I_2 vee` the
-icosahedron supplies a seven-connected, `K_7`-free, two-full-shore
-counterarchitecture with such a `K_6`.
-
-**Noncritical-image branch.**  If `chi(K-z_e)=5`, every five-colouring has
-the exact availability trichotomy: one side sees all five colours, or both
-sides have one common missing colour.  A Hajós join realizes the common
-lock and has no `K_7`.  Thus the regenerated unrooted `K_5` is not enough;
-ambient attachments must break the lock or expose a labelled separator.
-
-Sources:
-
-* [`../results/hc7_leaf_drop_five_colour_lock.md`](../results/hc7_leaf_drop_five_colour_lock.md)
-* [`../barriers/hc7_leaf_drop_hajos_barrier.md`](../barriers/hc7_leaf_drop_hajos_barrier.md)
-* [`../barriers/hc7_same_shore_singleton_k6_connectivity_barrier.md`](../barriers/hc7_same_shore_singleton_k6_connectivity_barrier.md)
-* [`../barriers/hc7_four_colour_parity_language_barrier.md`](../barriers/hc7_four_colour_parity_language_barrier.md)
-
-## 4. Uniform rooted principle extracted from `G2`
-
-The following theorem is independent of the `HC_7` notation.  If
-
-\[
- \chi(J)=k+2,\quad uv\in E(J),\quad
- \chi(J-\{u,v\})\le k,
-\]
-
-then `N_J(u) cap N_J(v)` is colourful in the `k`-chromatic deletion.
-Therefore Strong Hadwiger for `k` produces a `K_{k+2}` model with
-singleton branch bags `{u},{v}`.
-
-For `k=4` this is unconditional by Martinsson--Steiner.  This closes the
-palette-to-labelled-carrier gap **inside** the four-chromatic leaf kernel;
-it does not supply the seventh carrier in the original graph.
-
-## 5. Research rule
-
-No new Moser taxonomy, raw portal classification, union-size census, or
-unranked separator is admitted to this spine.  Both normalized
-overlap-three cells, both overlap-two cells and the order-five-arm
-overlap-one cell are closed.  The immediate `G1` experiment is the sole
-remaining positive-overlap cell, order-six arms at overlap one, together
-with the separated-triple branch.  The single-kernel architecture is now a
-proved barrier.  Work therefore targets a simultaneous split-row exchange,
-multi-model regeneration, or a model-preserving exact-seven handoff with a
-genuinely strict rank.  A promotion must discharge one of `G1` or `G2` for
-an infinite family or create that strict handoff.
+Historical theorem filenames retain some former project shorthand for
+provenance.  New statements and link descriptions should follow the
+standard-language policy in [`../AGENTS.md`](../AGENTS.md).

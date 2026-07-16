@@ -49,7 +49,7 @@ the full-palette alignment conclusion used before the Rado step.
 Nevertheless (H) has no (N)-rooted (K_5)-model.  The exhaustive
 certificate
 
-[`verify_icosahedron_haven_cleaning_counterexample.py`](verify_icosahedron_haven_cleaning_counterexample.py)
+[`verify_icosahedron_haven_cleaning_counterexample.py`](../archive/verify_icosahedron_haven_cleaning_counterexample.py)
 
 checks the edge list, colouring, all vertex cuts of order at most four,
 the model (1), the linkage (2), and all (6^7=279936) assignments of
