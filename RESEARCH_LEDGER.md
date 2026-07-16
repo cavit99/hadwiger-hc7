@@ -47,10 +47,15 @@ finite boundary census.
 
 The same mechanism has been extracted as an all-parameter theorem.  In a
 `k`-connected graph, a support-at-most-`k-1` `K_{k-2}` model positioned
-across an order-`k+1` boundary can be completed by one boundary-full
-component and one universal boundary vertex, under the precise
-one-support-vertex and first-hit hypotheses in the theorem.  It gives an
-explicit `K_k` model and is independently audited.
+across an order-`k` boundary can be completed by one boundary-full component
+and one universal boundary vertex, under the precise one-support-vertex and
+first-hit hypotheses in the theorem.  The sharper count uses the unique
+model vertex in the opposite exterior component in addition to the
+unanchored model rows; after anchoring, one of the `k-1` nonuniversal
+boundary vertices remains unused.  The theorem gives an explicit `K_k`
+model and is independently audited.  Its boundary order now matches an
+actual minimum cut at parameter `k`, but no claim is made that every earlier
+order-seven output has the required compact-model placement.
 
 ### Exact open theorem
 
