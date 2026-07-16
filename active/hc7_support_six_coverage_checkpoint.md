@@ -345,22 +345,31 @@ fifteen-point families falsify the strongest unlabelled extraction
 claims.  A proof must use the actual branch bags, complement star-forest
 constraints on six-supports, or proper-minor transitions.
 
-### G2. State/model transfer in the disjoint branch
+### G2. Five-connected punctured-cube composition
 
-Close both residues in (4.1), together with the unranked exact-seven
-handoff from Section 3(2):
+For three pairwise disjoint split supports, delete their matching `F` and
+put `K=G-F`.  The weighted matching-deletion theorem closes
+`kappa(K)=4` by a model-preserving exact-seven handoff.  In the residual
+branch
 
-1. upgrade every currently produced unranked exact-seven separation
-   (including the one-edge minimal-bad separation and the
-   one-split/two-clique separation) to a ranked state/model-preserving
-   handoff or a terminal; and
-2. across the order-eight/nine four-colour boundary, use the minimal
-   contraction-forest saturation to produce an `S`-meeting labelled
-   `K_6` disjoint from a reserved connected full shore, a `K_7` minor, a
-   global pair, or a strict ranked exact-seven / near-`K_7` handoff.
+\[
+       \kappa(K)\ge5,\qquad \chi(K)\in\{5,6\},
+\]
 
-A bare separator or an arbitrary changed equality partition is not an
-accepted outcome.
+and every nonempty equality state on `F` is realized exactly.  The
+missing-colour theorem now gives, from every equal row in every such
+state, either a labelled path in `K-Q_i` or an exact legal contraction
+state carried by one literal two-colour component.  From the all-equal
+state the first non-path move strictly lowers the equality-set size from
+three to one or two.
+
+The open composition theorem must use one common all-equal colouring,
+its three complementary colour pairs, and the weighted separator rank to
+produce `K_7`, one global pair, or a strict anchored exact-seven handoff.
+Abstract signature iteration is insufficient: explicit highly connected
+examples realize both double outputs and transition cycles.  A bare
+separator or an arbitrary changed equality partition is not an accepted
+outcome.
 
 ## 7. Research priority
 

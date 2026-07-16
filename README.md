@@ -64,11 +64,30 @@ The following statements are proved and independently cold-audited.
   signatures and has chromatic number five or six.  The exact new gap is
   to compose the three possibly overlapping regenerated path bags; no
   generic Kempe-equivalence or unrooted-model lift is being assumed.
+* There is now an exact state-level Kempe invariant.  From any nonempty
+  equality state `D` and any equal row `e_i`, the unique colour missing
+  from the named `K_4` gives either an `x_i-y_i` path in `K-Q_i`, or a
+  literal two-colour component whose swap realizes
+
+  \[
+       D_i'=D\mathbin\triangle
+       \partial_F^{\alpha,\gamma}(C_i),
+       \qquad \varnothing\ne D_i'\subseteq F-\{e_i\}.
+  \]
+
+  The new state descends to the actual proper minor `G/D_i'`.  Starting
+  from the all-equal state this is a strict `3 -> 1/2` first descent.
+  It is not a global rank: explicit highly connected examples realize a
+  double output and a directed singleton cycle.
 
 See
 [`hc7_matching_deletion_separator_lift.md`](results/hc7_matching_deletion_separator_lift.md),
 its [audit](results/hc7_matching_deletion_separator_lift_audit.md), and
 the [punctured-cube note](active/hc7_three_split_cross_star_ranked_exchange.md).
+The state transition and its audit are
+[`hc7_missing_colour_matching_transition.md`](results/hc7_missing_colour_matching_transition.md)
+and
+[`hc7_missing_colour_matching_transition_audit.md`](results/hc7_missing_colour_matching_transition_audit.md).
 
 ## Audited frontier
 
@@ -249,13 +268,24 @@ split edges `F={e_1,e_2,e_3}` and one common deletion `K=G-F`.
   deletion regenerates the fifth branch bag beside the literal singleton
   clique `Q_i`.  These three paths are individually label-faithful but may
   overlap.
+* The missing-colour theorem upgrades bare path existence to an exact
+  alternative at every punctured-cube state: a named path, or a legal
+  contraction-state transition carried by a literal two-colour component.
+  At the all-equal state the first transition strictly removes the chosen
+  row.  Lower-state cycling remains possible and is explicitly guarded
+  against.
 
 The live theorem is now a weighted indivisible-bundle composition theorem:
 in this five-connected punctured-cube kernel, compose the three regenerated
-models into a literal `K_7`, a global two-vertex transversal, or a strict
-anchored weighted cut.  Static endpoint graphs and a single rooted carrier
-are already known to be insufficient; ambient connectivity, exact
-signatures, and the weighted rank must be used together.
+models or the coherent transition carriers into a literal `K_7`, a global
+two-vertex transversal, or a strict anchored weighted cut.  The immediate
+constructive experiment starts from one common all-equal colouring and
+retains the complementary colour pair of every named `K_4`; three
+independently selected singleton colourings are no longer the proof
+object.  Static endpoint graphs, abstract signature iteration, and a
+single rooted carrier are already known to be insufficient; ambient
+connectivity, literal colour components, and the weighted rank must be
+used together.
 
 ## Decisive guardrails
 
@@ -275,6 +305,10 @@ Do not retry the following without a materially new hypothesis.
   vertices may be reserved.  See
   [`barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md`](barriers/hc7_overlap_one_exact_eight_kernel_bundle_barrier.md).
 * Unrooted quotient regeneration supplies no labelled carrier by itself.
+* Missing-colour transitions have no signature-only rank.  One singleton
+  can transition to both other rows, and singleton transitions can cycle;
+  see
+  [`hc7_missing_colour_transition_sharpness.md`](barriers/hc7_missing_colour_transition_sharpness.md).
 * No further union-size or Moser census is active.
 
 These barriers are in [`barriers/`](barriers/); they are guardrails, not
