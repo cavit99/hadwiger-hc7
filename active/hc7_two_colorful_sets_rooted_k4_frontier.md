@@ -96,9 +96,11 @@ following.
 2. `G` has an actual order-seven separation whose boundary colouring is
    induced by proper-minor six-colourings on both sides.
 
-The former two-vertex `K_5`-model-transversal outcome is subsumed by item
-2: in the present host it forces a degree-seven vertex and an actual
-order-seven separation.
+The former two-vertex `K_5`-model-transversal outcome feeds into item 2 only
+at the level of raw separation existence: in the present host it
+forces a degree-seven vertex and an actual order-seven separation, but it
+does not supply compatible shore colourings and therefore does not close
+item 2.
 
 The statement is intentionally tied to the lifted host `G`.  It is false
 for arbitrary four-chromatic `R` with two colourful sets, even when `R` is
@@ -160,7 +162,8 @@ The constructive programme is therefore:
 3. use distributed attachments in `X` and the other three branch sets to
    reroute the deficient branch set or construct `K_7`; and
 4. if this is impossible, reduce (4.2) to an order-seven boundary carrying
-   compatible proper-minor colourings, or obtain the fixed-pair conclusion.
+   compatible proper-minor colourings; if a global two-vertex transversal
+   is obtained, invoke the promoted theorem to obtain that separation.
 
 In the unique-deficiency case, `C_j,u,z,X` and the other three branch sets
 already form a `K_7`-minus-one-edge model, missing only the adjacency
@@ -188,14 +191,50 @@ where `c` counts connected components.  A component-contraction density
 argument gives `K_7` whenever \(\delta\le0\); the initial
 `K_7`-minus-one-edge model has \(\delta=1\).  At one path cut, any `K_4` minor
 in the contact graph of residual components adjacent to `z` and both path
-sides lifts to `K_7`.  The defect-one extremal contact graph is a 2-tree.
-The next theorem must use the proper-minor six-colourings at a simplicial
-degree-two component to destroy that last unit of defect or expose the
-order-seven boundary.  An elementary minor operation in the
-five-chromatic core leaves a four- or five-chromatic core.  In the
-four-chromatic branch the common attachment set is colourful and already
-roots the required two-sided `K_4` model; the unresolved five-chromatic
-branch obeys only the exact common-hole law.  Merely alternating between independently generated
+sides lifts to `K_7`.  In the unique-deficiency branch, for a fixed
+admissible cut and a selection representing all four protected classes,
+every selected residual component is also required to lie in its valid-cut
+interval—so it is adjacent to both path-side anchor sets—and to be adjacent
+to `z`.  A
+`K_4`-minor-free contact graph then has defect one exactly when it is a
+two-tree.  Those hypotheses are not known to be exhaustive.  The next
+theorem in this conditional branch must use the proper-minor six-colourings
+at a lifted simplicial degree-two component to destroy that last unit of
+defect, expose a colour-compatible order-seven boundary, or produce a new
+valid instance of the same eligible defect-one setup with a lifted
+simplicial component `L'` satisfying `|V(L')|<|V(L)|`.  Choose `L` with
+minimum order over all eligible simplicial lifted components in every valid
+configuration in the fixed host `G`.  This is the sole proposed rank;
+noncanonical path length and the selected contact-graph order are excluded.
+
+A **valid defect-one configuration** comprises the complete adjacent-pair
+connected-dominating frame, the uniquely deficient rooted model, the
+colour-matched path `P` and admissible cut `q`, four nonempty labelled
+selections of residual components, eligibility of every selected component
+at `q`, and a `K_4`-minor-free component-contact graph `J` of defect one.
+The subgraph `L` is the literal component represented by a simplicial
+degree-two vertex of `J`.  A smaller `L'` must occur in another full valid
+configuration in the original `G`, not only as an image in a proper minor.
+
+Adjacent maximal triangles of the two-tree determine local `K_6` models
+sharing five named branch sets, but their colour patterns can be globally
+coherent without a `K_7` minor.  A transition must therefore preserve the
+label of each component by its protected branch-set class, the orientation
+of `P` and interval endpoints, and chosen host edges and endpoints witnessing
+every required contact.  A transition must retain those witnesses or give
+explicit replacements, identify the bipartition-side or pole source of each
+colour response, preserve named root traces, and carry the exact boundary
+equality partition.  Failure returns `N_G(Y)` for a named connected residual
+piece `Y` with both shores nonempty.  A proper-minor operation inside `L` is
+only a probe; its conclusion must lift back to `G`.
+
+An elementary minor operation in the five-chromatic core leaves a four- or
+five-chromatic core.  In the four-chromatic branch, the common attachment
+set for the two bipartition classes of `X` is colourful and roots a `K_4`
+model meeting both sets.  These are not the pole sets `S,T`, and the two
+bipartition classes need not be connected branch sets, so this is not yet
+the required paired-root model.  The five-chromatic branch obeys only the
+exact common-hole law.  Merely alternating between independently generated
 models, rereading the repeated quotient colour, or optimizing a shortest
 locked subpath gives no descent.
 

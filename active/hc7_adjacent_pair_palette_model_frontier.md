@@ -126,9 +126,11 @@ For the edge and colouring in Section 1, prove one of the following.
 
 Two vertices meeting every `K_5`-minor model need not be retained as a
 third outcome: the promoted transversal theorem turns that condition into
-an actual order-seven separation, already covered by item 1.
+an actual order-seven separation.  It supplies no compatible shore
+colourings, so it enters rather than closes item 1.
 
-The second outcome has an equivalent four-chromatic formulation.  Write
+The following is a sufficient four-chromatic formulation and the chosen
+constructive milestone for the second outcome.  Write
 
 \[
  X=V_\alpha\cup V_\beta,\qquad
@@ -189,9 +191,10 @@ to do one of the following:
 2. identify an actual order-seven separation with compatible boundary
    colourings.
 
-A fixed two-vertex transversal of all `K_5` models is subsumed by the
-second outcome: the promoted transversal lemma forces a degree-seven
-vertex and hence an actual order-seven separation.
+A fixed two-vertex transversal of all `K_5` models supplies a raw exact
+order-seven separation: the promoted transversal lemma forces a
+degree-seven vertex.  It does not supply compatible shore colourings and
+therefore enters, rather than closes, the second outcome.
 
 When exactly one branch set is deficient, `C_j,u,z,X` and the other three
 bags already form a `K_7`-minus-one-edge model.  Thus the first milestone is
@@ -220,23 +223,61 @@ component and applying Mader's exact edge bound gives a `K_7` minor whenever
 \(\delta(\mathcal B)=1\).  Thus branch-set repair is a strict decrease of one scalar
 component defect, not a collection of unrelated labelled cases.
 
-At a fixed path cut, form the contact graph whose vertices are residual
-components adjacent to `z` and to both repaired path sides.  Any `K_4`
-minor in this contact graph lifts, together with the two path sides and
-`z`, to a `K_7` model.  The extremal defect-one residue is therefore a
-maximal `K_4`-minor-free contact graph, equivalently a 2-tree.  The current
-constructive target is to use the compulsory proper-minor colourings at a
-simplicial degree-two component of that 2-tree to obtain a third independent
-contact, an order-seven separation, or a strict defect decrease.
+Within the unique-deficiency branch, fix an admissible path cut and select
+nonempty collections from all four protected component classes.  Every
+selected residual component is additionally required to lie in the
+valid-cut interval, equivalently to be adjacent to both path-side anchor
+sets at this cut, and to be adjacent to `z`.  Any `K_4` minor in their
+component-contact graph
+lifts, together with the two path sides and `z`, to a `K_7` model.  If that
+selected graph is `K_4`-minor-free, defect one is equivalent to its being a
+two-tree.  The current chain does not prove unique deficiency, four
+represented eligible classes, or defect one for every connected-dominating
+residue.  In the conditional two-tree branch, the constructive target is to
+use the compulsory proper-minor colourings at a lifted simplicial
+degree-two component to obtain an explicit `K_7` model, a colour-compatible
+order-seven separation, or a new valid instance of the same eligible
+defect-one setup with a lifted simplicial component `L'` satisfying
+`|V(L')|<|V(L)|`.  Here `L` is chosen globally with minimum order over every
+eligible simplicial lifted component in every valid configuration in the
+fixed host `G`; noncanonical connector length and the order of the selected
+contact graph are not rank coordinates.
+
+For this target, a **valid defect-one configuration** is the full tuple
+consisting of the adjacent pair and connected-dominating colouring frame;
+the uniquely deficient rooted `K_4` model; its colour-matched path `P` and
+an admissible cut `q`; four nonempty labelled selections of residual
+components; eligibility of each selected component at `q`, including
+adjacency to `z` and both path-side anchor sets; and a `K_4`-minor-free
+component-contact graph `J` of defect one.  The subgraph `L` is the literal
+component represented by a simplicial degree-two vertex of `J`.  A smaller
+`L'` must belong to another full valid configuration in the original fixed
+graph `G`, possibly after reselecting the model, path, cut, and components;
+an image existing only in a proper minor does not count.
+
+The clique-tree structure of the two-tree gives overlapping local `K_6`
+models, but their six-colour patterns alone are not an exchange invariant.
+A legal transition carries a label map from `V(J)` to the four protected
+branch-set classes, the oriented path and valid-cut interval endpoints, and
+chosen host edges and endpoints witnessing every `J`-edge and every contact
+with `z` and the path-side anchor sets.  It must retain those witnesses under
+lifting or provide explicit replacements, record the bipartition-side or
+pole source of each colour response, preserve named root traces, and carry
+the exact boundary equality partition.  Failure must return `N_G(Y)` for a
+named connected residual piece `Y` with both shores nonempty.  Deleting or
+contracting inside `L` is only a proper-minor probe; every output must lift
+to the original `G`.
 
 The proper-minor response now has a matching chromatic dichotomy.  For any
 elementary minor operation wholly inside the five-chromatic core, the new
 core has chromatic number four or five.  In the four-chromatic branch the
-intersection of the two pole-attachment sets is colourful and roots a
-`K_4` model meeting both sets in every branch set.  Thus the remaining
-two-tree exchange may be restricted to the five-chromatic branch, where
+intersection of the attachment sets of the two bipartition classes of `X`
+is colourful and roots a `K_4` model meeting both sets.  These are not the
+pole-neighbourhoods `S,T`, and the bipartition classes need not be connected
+branch sets, so this branch is not terminal.  In the five-chromatic branch,
 every five-colouring satisfies the exact common-hole law but need not
-preserve full saturation.
+preserve full saturation.  Both branches still require a label-preserving
+host-level exchange or colour-gluing argument.
 
 The old five-support/spanning-`K_6` packaging remains a falsification suite
 and label-rich source of candidate reroutings, but it is no longer the
