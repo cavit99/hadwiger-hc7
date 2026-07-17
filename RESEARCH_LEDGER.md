@@ -77,6 +77,27 @@ neighbours in the connected leaf-side interior.  This does not yet align
 the regenerated model with those neighbours, so it is a secondary input to
 aligned-trace lifting rather than a completion theorem.
 
+In the canonical web branch, the five-chromatic half of that endpoint
+dichotomy is now eliminated.  The unique leaf--endpoint edge becomes an
+actual outer edge of the planar web skeleton.  Two common neighbours in
+the leaf-side interior would give two distinct bounded facial triangles on
+that one outer edge, which is impossible.  Hence, after excluding the
+already permitted `K_7` and order-seven outputs, deleting the adjacent
+leaf--endpoint pair is six-chromatic and regenerates a spanning `K_6`
+model.  The remaining issue is label-preserving allocation of that model,
+not existence of an unrooted clique minor.
+
+An independently audited realization barrier fixes the other side of the
+trust boundary.  There is a seven-connected, seven-chromatic host with the
+same aligned boundary and two full shores in which **every** independent
+boundary set is realized as an exact colour class by an actual proper-minor
+shore contraction, yet the two closed-shore extension languages are
+disjoint.  Simultaneously contracting two shore--pair sets is also
+informationless: it leaves a six-vertex quotient.  The example is neither
+`K_7`-minor-free nor fully contraction-critical, so it proves that one of
+those global hypotheses must enter the next theorem; it does not refute the
+aligned-trace target.
+
 ### New audited closure
 
 The endpoint-rigid, no-perfect-matching arm has reached a genuine terminal
@@ -294,10 +315,12 @@ Principal new audited results:
 - [`hc7_balanced_endpoint_allocation.md`](results/hc7_balanced_endpoint_allocation.md)
 - [`hc7_balanced_endpoint_mate_exchange.md`](results/hc7_balanced_endpoint_mate_exchange.md)
 - [`hc7_unique_leaf_endpoint_chromatic_dichotomy.md`](results/hc7_unique_leaf_endpoint_chromatic_dichotomy.md)
+- [`hc7_outer_edge_common_neighbour_completion.md`](results/hc7_outer_edge_common_neighbour_completion.md)
 
 Principal new audited barrier:
 
 - [`hc7_labelled_mader_delta_enrichment_barrier.md`](barriers/hc7_labelled_mader_delta_enrichment_barrier.md)
+- [`hc7_aligned_matching_exact_trace_parity_barrier.md`](barriers/hc7_aligned_matching_exact_trace_parity_barrier.md)
 
 Earlier audited dependencies retained by this frontier:
 

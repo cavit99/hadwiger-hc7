@@ -19,6 +19,7 @@ Immediate proved inputs, each to be read with its adjacent audit:
 - [endpoint allocation at the balanced boundary](../results/hc7_balanced_endpoint_allocation.md)
 - [endpoint-mate exchange refinement](../results/hc7_balanced_endpoint_mate_exchange.md)
 - [unique leaf--endpoint chromatic dichotomy](../results/hc7_unique_leaf_endpoint_chromatic_dichotomy.md)
+- [canonical outer-edge common-neighbour completion](../results/hc7_outer_edge_common_neighbour_completion.md)
 - [canonical four-root web and localization of the second five-clique](../results/hc7_star_order_eight_rooted_web.md)
 - [four-connectivity of the canonical planar web skeleton](../results/hc7_canonical_web_skeleton_four_connected.md)
 - [split-edge `K_7`-minor construction](../results/hc7_star_order_eight_split_edge_completion.md)
@@ -63,6 +64,9 @@ Immediate guardrails:
 - endpoint-only Mader delta-matroid exchange is not label-preserving, even
   after fixed twists or static enrichment; see the
   [audited delta-matroid barrier](../barriers/hc7_labelled_mader_delta_enrichment_barrier.md).
+- all exact independent-set traces from both shore contractions may still
+  have disjoint extension languages; see the
+  [audited aligned-trace parity barrier](../barriers/hc7_aligned_matching_exact_trace_parity_barrier.md).
 
 The immediate open theorem is **aligned-trace lifting**, stated in Section
 2 of the primary target.  In the complement of the eight-vertex boundary,
@@ -77,6 +81,12 @@ The earlier Kempe, planar critical-core, and facial-triangle results remain
 available as secondary mechanisms.  They are not the current theorem by
 themselves: static aligned boundary data can still fail to determine how a
 colouring or clique-minor model passes through the two shores.
+
+In the unique leaf--endpoint equality residue, the five-chromatic deletion
+branch is closed by the canonical outer-edge geometry.  The surviving
+six-chromatic deletion supplies a spanning `K_6` model; aligning that model
+with the deleted adjacent pair is an additional concrete route into the
+same host-level lifting problem.
 
 ## Frozen prior programme
 

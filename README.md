@@ -54,6 +54,9 @@ realizes each of the four matched nonedges as an exact boundary colour
 class from either side.  What remains is to combine these host-realized
 traces into a common six-colouring, a label-preserving `K_7`-minor model, a
 larger global support pair, or a strictly ranked order-seven separation.
+In one endpoint-rigid residue, canonical planar geometry now also forces a
+spanning `K_6` model after deleting a specified adjacent pair, giving a
+second, model-theoretic entry to the same lifting problem.
 Earlier Kempe-chain, planar-web, and list-critical-core results remain
 available as secondary mechanisms, but static boundary data alone is known
 to be insufficient.  This is substantive progress on one infinite family,

@@ -344,6 +344,16 @@ is the preferred branch-set endpoint: once a compact labelled
 component plus a universal boundary vertex remain, it constructs the
 `K_k` minor directly.
 
+There is also one new model-regeneration entry point.  In the unique
+leaf--endpoint equality case, deleting that adjacent pair cannot be
+five-chromatic in the canonical web branch: two common neighbours would
+make two bounded facial triangles share one outer skeleton edge.  Thus the
+deletion is six-chromatic and has a spanning `K_6` model.  The applicable
+[outer-edge theorem](../results/hc7_outer_edge_common_neighbour_completion.md)
+uses actual quotient edges only.  Its unresolved continuation is to align
+the six regenerated branch sets with the deleted pair or with the four
+matched boundary traces.
+
 ## 6. Guardrails
 
 - Four-colourability of `G[S]`, or the perfect matching in `F`, does not
@@ -400,6 +410,13 @@ component plus a universal boundary vertex remain, it constructs the
   [audited counterexample](../barriers/hc7_labelled_mader_delta_enrichment_barrier.md)
   also survives fixed twists and static auxiliary direct sums.  A viable
   algebraic exchange must encode the actual host paths, not endpoints only.
+- Even all actual star-contraction traces are insufficient.  The
+  [aligned exact-trace barrier](../barriers/hc7_aligned_matching_exact_trace_parity_barrier.md)
+  realizes every independent boundary block from both orientations in a
+  seven-connected, seven-chromatic host, while the two shore languages
+  remain disjoint.  That host lacks `K_7`-minor exclusion and full
+  contraction-criticality, so the next positive theorem must visibly use
+  one of those hypotheses.
 
 ## 7. Immediate dependencies
 
@@ -432,6 +449,7 @@ Read each promoted theorem with its adjacent audit:
 - [endpoint-allocation construction and exact obstruction](../results/hc7_balanced_endpoint_allocation.md)
 - [endpoint-mate refinement](../results/hc7_balanced_endpoint_mate_exchange.md)
 - [unique leaf--endpoint chromatic dichotomy](../results/hc7_unique_leaf_endpoint_chromatic_dichotomy.md)
+- [canonical outer-edge common-neighbour completion](../results/hc7_outer_edge_common_neighbour_completion.md)
 
 The broader dependency chain and the still-open branches are recorded in
 [`hc7_support_six_frontier.md`](hc7_support_six_frontier.md).
