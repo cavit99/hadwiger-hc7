@@ -237,9 +237,36 @@ residue.  In the conditional two-tree branch, the constructive target is to
 use the compulsory proper-minor colourings at a lifted simplicial
 degree-two component to obtain an explicit `K_7` model, a colour-compatible
 order-seven separation, or a new valid instance of the same eligible
-defect-one setup with a declared host-level parameter strictly smaller.
-Choosing and proving such a well-founded parameter is part of the open
-theorem.
+defect-one setup with a lifted simplicial component `L'` satisfying
+`|V(L')|<|V(L)|`.  Here `L` is chosen globally with minimum order over every
+eligible simplicial lifted component in every valid configuration in the
+fixed host `G`; noncanonical connector length and the order of the selected
+contact graph are not rank coordinates.
+
+For this target, a **valid defect-one configuration** is the full tuple
+consisting of the adjacent pair and connected-dominating colouring frame;
+the uniquely deficient rooted `K_4` model; its colour-matched path `P` and
+an admissible cut `q`; four nonempty labelled selections of residual
+components; eligibility of each selected component at `q`, including
+adjacency to `z` and both path-side anchor sets; and a `K_4`-minor-free
+component-contact graph `J` of defect one.  The subgraph `L` is the literal
+component represented by a simplicial degree-two vertex of `J`.  A smaller
+`L'` must belong to another full valid configuration in the original fixed
+graph `G`, possibly after reselecting the model, path, cut, and components;
+an image existing only in a proper minor does not count.
+
+The clique-tree structure of the two-tree gives overlapping local `K_6`
+models, but their six-colour patterns alone are not an exchange invariant.
+A legal transition carries a label map from `V(J)` to the four protected
+branch-set classes, the oriented path and valid-cut interval endpoints, and
+chosen host edges and endpoints witnessing every `J`-edge and every contact
+with `z` and the path-side anchor sets.  It must retain those witnesses under
+lifting or provide explicit replacements, record the bipartition-side or
+pole source of each colour response, preserve named root traces, and carry
+the exact boundary equality partition.  Failure must return `N_G(Y)` for a
+named connected residual piece `Y` with both shores nonempty.  Deleting or
+contracting inside `L` is only a proper-minor probe; every output must lift
+to the original `G`.
 
 The proper-minor response now has a matching chromatic dichotomy.  For any
 elementary minor operation wholly inside the five-chromatic core, the new

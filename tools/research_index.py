@@ -29,7 +29,24 @@ from typing import Sequence
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST_PATH = ROOT / "tools" / "research_manifest.toml"
 DEFAULT_DATABASE = ROOT / ".cache" / "research" / "index.sqlite"
-TEXT_SUFFIXES = {".md", ".py", ".toml", ".yml", ".yaml", ".json", ".txt", ".tex"}
+TEXT_SUFFIXES = {
+    ".md",
+    ".py",
+    ".sh",
+    ".bash",
+    ".zsh",
+    ".fish",
+    ".ps1",
+    ".toml",
+    ".yml",
+    ".yaml",
+    ".json",
+    ".txt",
+    ".tex",
+    ".rst",
+    ".ini",
+    ".cfg",
+}
 EXTERNAL_SCHEMES = {"http", "https", "mailto", "ftp", "data"}
 PROOF_RELATIONS = {"uses"}
 ALLOWED_RELATIONS = PROOF_RELATIONS | {
@@ -54,7 +71,6 @@ ALLOWED_STATUSES = {
     "superseded",
     "refuted",
 }
-BAD_DEPENDENCY_STATUSES = {"written-unaudited", "superseded", "refuted"}
 CLAIM_KEYS = {
     "id",
     "title",
@@ -429,8 +445,10 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
             errors.append(f"self relation is not allowed: {source} -[{kind}]-> itself")
         if kind not in ALLOWED_RELATIONS:
             errors.append(f"relation {source}->{target} has invalid kind {kind!r}")
-        if kind in PROOF_RELATIONS and claims[target]["status"] in BAD_DEPENDENCY_STATUSES:
-            errors.append(f"active proof dependency {target} has unusable status {claims[target]['status']}")
+        if kind == "uses" and claims[target]["status"] != "audited-green":
+            errors.append(
+                f"proved dependency {target} must be audited-green, not {claims[target]['status']}"
+            )
     cycle = _proof_cycle(claims, relations)
     if cycle:
         errors.append(f"proof-dependency cycle among: {', '.join(cycle)}")

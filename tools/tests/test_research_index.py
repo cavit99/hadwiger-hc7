@@ -171,11 +171,22 @@ class IntegrityTests(unittest.TestCase):
         self.repo.write_manifest(digest, extra)
         self.assertIn("proof-dependency cycle", "\n".join(self.errors()))
 
+    def test_uses_dependency_must_be_audited_green(self) -> None:
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        manifest = manifest.replace('status = "audited-green"', 'status = "active-target"', 1)
+        self.repo.manifest.write_text(manifest, encoding="utf-8")
+        self.assertIn("must be audited-green", "\n".join(self.errors()))
+
     def test_authoritative_document_paths_cannot_be_redirected(self) -> None:
         manifest = self.repo.manifest.read_text(encoding="utf-8")
         manifest = manifest.replace('navigation_root = "active/INDEX.md"', 'navigation_root = "archive/history.md"')
         self.repo.manifest.write_text(manifest, encoding="utf-8")
         self.assertIn("navigation_root must remain active/INDEX.md", "\n".join(self.errors()))
+
+    def test_device_path_in_tracked_shell_script_fails(self) -> None:
+        self.repo.write("tools/check.sh", "#!/bin/sh\ncd /" + "home/example/project\n")
+        subprocess.run(["git", "add", "tools/check.sh"], cwd=self.repo.root, check=True)
+        self.assertIn("device-specific path", "\n".join(self.errors()))
 
     def test_index_includes_archive_and_searches_sections(self) -> None:
         database = self.repo.root / "index.sqlite"

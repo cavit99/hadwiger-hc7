@@ -53,26 +53,36 @@ scope = "conditional unique-deficiency branch in the host graph"
 label_fidelity = "literal lifted residual components and named path-side anchors"
 separator_order = "at least seven; exact seven is an allowed exit"
 colour_compatibility = "open"
-strict_parameter = "not yet proved; the theorem must declare and decrease a host-level well-founded parameter"
+strict_parameter = "minimum |V(L)| over all eligible simplicial lifted components in every valid defect-one configuration in the fixed host G"
 hypotheses = [
-  "the complete adjacent-pair connected-dominating setup in the current frontier",
+  "a valid defect-one configuration in the original fixed G: the complete adjacent-pair connected-dominating frame, uniquely deficient rooted model, repair path P, admissible cut q, four labelled eligible component selections and the resulting contact graph J",
   "unique deficient branch set",
   "fixed admissible repair-path cut",
   "four represented eligible component classes",
   "every selected component is adjacent to both path-side anchor sets and to z",
   "K4-minor-free component-contact graph of defect one, hence a two-tree",
+  "L chosen globally with minimum order among eligible simplicial lifted components in the fixed host",
 ]
 allowed_exits = [
   "explicit K7-minor model",
-  "exact order-seven separation with compatible closed-shore boundary colourings",
-  "new valid instance of the same eligible defect-one setup with a declared host-level parameter strictly smaller",
+  "exact order-seven separation whose closed-shore six-colourings induce the same equality partition of the seven literal boundary vertices after a colour permutation",
+  "new full valid defect-one configuration in the original fixed G with an eligible lifted simplicial component L' satisfying |V(L')|<|V(L)|",
 ]
 does_not_prove = [
   "exhaustiveness of unique deficiency",
   "existence of an eligible four-part component selection in every residue",
   "defect one in every connected-dominating residue",
   "a split of a lifted simplicial component",
-  "a well-founded strict descent parameter",
+  "the exchange that produces a smaller eligible lifted simplicial component",
+]
+preserves = [
+  "label map from contact-graph vertices to protected branch-set classes",
+  "oriented repair path and valid-cut interval endpoints",
+  "literal host edges and endpoints witnessing every contact-graph edge and every contact with z and both path-side anchor sets, retained under lifting or explicitly replaced",
+  "bipartition-side or pole source of each colouring response",
+  "named root traces under lifting to G",
+  "exact boundary equality partition from proper-minor colourings",
+  "the full boundary N_G(Y) of a named connected residual piece Y with both shores nonempty when a transition fails",
 ]
 keywords = ["component defect", "two-tree", "simplicial component", "common-hole law"]
 

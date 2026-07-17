@@ -69,8 +69,14 @@ adjacent to both path-side anchor sets at the chosen cut.  Those hypotheses
 are not yet exhaustive.  Within that branch, the immediate target is to turn a
 lifted simplicial degree-two component into an explicit `K_7` model, a
 colour-compatible order-seven separation, or a new valid instance of the
-same eligible defect-one setup with a declared host-level parameter strictly
-smaller.  No such well-founded parameter is currently proved.
+same eligible defect-one setup with a strictly smaller lifted simplicial
+component.  Choose `L` globally with minimum `|V(L)|` over all valid
+defect-one configurations in the fixed host.  Such a configuration includes
+the complete adjacent-pair, rooted-model, repair-path, admissible-cut, and
+eligible labelled-component data.  Any transition must retain or explicitly
+replace the literal contact witnesses and preserve the boundary equality
+partition needed for gluing; triangle colours alone are not a sufficient
+state.
 
 ## Label-rich laboratory
 

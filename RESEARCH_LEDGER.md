@@ -113,10 +113,12 @@ interface or synchronizing two rooted models.
 The primary open theorem is to turn this dichotomy into one of:
 
 1. an explicit `K_7`-minor model;
-2. an actual order-seven separation carrying a named boundary colouring
-   from both sides;
-3. a new valid instance of the same eligible setup with a declared
-   host-level parameter strictly smaller.
+2. an actual order-seven separation for which six-colourings of the two
+   closed shores induce the same equality partition of the seven literal
+   boundary vertices after a colour permutation;
+3. another full valid defect-one configuration in the original fixed `G`
+   whose chosen lifted simplicial component `L'` satisfies
+   `|V(L')|<|V(L)|`.
 
 The former two-vertex terminal is no longer independent.  An audited
 lemma proves that, in the hypothetical counterexample, two vertices meeting
@@ -187,7 +189,42 @@ those hypotheses, defect one is equivalent to the contact graph being a
 two-tree.  The present chain does not prove that unique deficiency, such an
 eligible four-part selection, or defect one occurs in every
 connected-dominating residue.  It also does not yet supply a well-founded
-host-level parameter for iterating a defect-preserving exchange.
+host-level exchange.  For the conditional target, choose `L` with minimum
+order over every eligible simplicial lifted component in every valid
+defect-one configuration in the fixed graph `G`.  The recursive outcome
+must produce another full valid defect-one configuration in `G` with a
+component `L'` of smaller order (preferably `L'\subsetneq L`).
+Noncanonical connector length and the order of the selected contact graph
+are not rank coordinates.
+
+A **valid defect-one configuration** means the complete tuple used in this
+conditional branch: the adjacent pair and its connected-dominating
+colouring frame; a uniquely deficient rooted `K_4` model; its
+colour-matched path `P` and an admissible cut `q`; four nonempty labelled
+selections of residual components; eligibility of every selected component
+at `q`, including adjacency to `z` and both path-side anchor sets; and a
+`K_4`-minor-free component-contact graph `J` with defect one.  The component
+`L` is the literal connected subgraph represented by a simplicial
+degree-two vertex of `J`.  An outcome with smaller `L'` must be another full
+valid configuration in the original fixed graph `G`, although its rooted
+model, path, cut, and selected components may change; a component produced
+only in a proper minor is not an eligible outcome.
+
+The two-tree supplies a clique tree: adjacent maximal triangles share an
+edge, and their corresponding local `K_6` models share the three anchors and
+two named contact components.  Colour propagation on those shared `K_5`
+sets is insufficient by itself, since `K_3` joined with a two-tree supports
+such a coherent pattern without a `K_7` minor.  Every transition must also
+record a label map from every vertex of `J` to its protected branch-set
+class, the orientation of `P` and the valid-cut interval endpoints, and
+chosen literal host edges and endpoints witnessing every edge of `J` and
+every contact with `z` and the two path-side anchor sets.  A transition must
+retain those witnesses under lifting or provide explicit replacements.  It
+must also record the source of each colouring response, preservation of
+named root traces, and the exact boundary equality partition.  Failure must
+return `N_G(Y)` for a named connected residual piece `Y`, with both shores
+nonempty.  A deletion or contraction inside `L` is only a probe; every
+terminal conclusion must lift back to the original `G`.
 
 Independently, contracting a shortest admissible path produces a canonical
 list-colouring obstruction: an odd subpath has singleton endpoint lists and

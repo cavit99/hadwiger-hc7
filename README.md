@@ -91,8 +91,15 @@ not been proved for every connected-dominating residue.  The next target is
 to use proper-minor colourings at a lifted simplicial degree-two component
 to construct `K_7`, obtain a colour-compatible order-seven separation, or
 produce a new valid instance of the same eligible defect-one setup with a
-declared host-level parameter strictly smaller.  Finding and proving such a
-well-founded parameter is part of the open theorem.
+strictly smaller lifted simplicial component.  The extremal scaffold is the
+minimum of `|V(L)|` over all eligible simplicial lifted components in all
+valid configurations in the fixed host `G`; no path length or auxiliary
+contact-graph order is part of the proposed rank.  A proof must preserve the
+literal branch-set ownership, valid-cut data, and host edges witnessing all
+required contacts, retaining those witnesses under lifting or supplying
+explicit replacements.  It must also preserve the boundary equality
+partition needed for colour gluing—not only the six colours on adjacent
+two-tree triangles.
 
 The previously developed balanced order-eight boundary remains the main
 label-rich laboratory.  There the canonical regenerated `K_6` model is

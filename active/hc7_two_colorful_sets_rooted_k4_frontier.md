@@ -201,9 +201,32 @@ two-tree.  Those hypotheses are not known to be exhaustive.  The next
 theorem in this conditional branch must use the proper-minor six-colourings
 at a lifted simplicial degree-two component to destroy that last unit of
 defect, expose a colour-compatible order-seven boundary, or produce a new
-valid instance of the same eligible defect-one setup with a declared
-host-level parameter strictly smaller.  No such well-founded parameter is
-currently proved.
+valid instance of the same eligible defect-one setup with a lifted
+simplicial component `L'` satisfying `|V(L')|<|V(L)|`.  Choose `L` with
+minimum order over all eligible simplicial lifted components in every valid
+configuration in the fixed host `G`.  This is the sole proposed rank;
+noncanonical path length and the selected contact-graph order are excluded.
+
+A **valid defect-one configuration** comprises the complete adjacent-pair
+connected-dominating frame, the uniquely deficient rooted model, the
+colour-matched path `P` and admissible cut `q`, four nonempty labelled
+selections of residual components, eligibility of every selected component
+at `q`, and a `K_4`-minor-free component-contact graph `J` of defect one.
+The subgraph `L` is the literal component represented by a simplicial
+degree-two vertex of `J`.  A smaller `L'` must occur in another full valid
+configuration in the original `G`, not only as an image in a proper minor.
+
+Adjacent maximal triangles of the two-tree determine local `K_6` models
+sharing five named branch sets, but their colour patterns can be globally
+coherent without a `K_7` minor.  A transition must therefore preserve the
+label of each component by its protected branch-set class, the orientation
+of `P` and interval endpoints, and chosen host edges and endpoints witnessing
+every required contact.  A transition must retain those witnesses or give
+explicit replacements, identify the bipartition-side or pole source of each
+colour response, preserve named root traces, and carry the exact boundary
+equality partition.  Failure returns `N_G(Y)` for a named connected residual
+piece `Y` with both shores nonempty.  A proper-minor operation inside `L` is
+only a probe; its conclusion must lift back to `G`.
 
 An elementary minor operation in the five-chromatic core leaves a four- or
 five-chromatic core.  In the four-chromatic branch, the common attachment

@@ -41,7 +41,9 @@ Run the infrastructure tests with
 python3 -m unittest discover -s tools/tests -p 'test_*.py' -v
 ```
 
-The integrity check fails on audit/source hash drift, broken current-spine
-links, invalid dependencies, device-specific tracked paths, and verifier
-hash or output drift.  Broken historical links remain searchable metadata
-but do not fail the current-spine check.
+The integrity check fails on audit/source hash drift, broken inline Markdown
+links in current-spine documents, non-GREEN `uses` dependencies,
+device-specific paths in the selected tracked prose, source, configuration,
+and script formats, and verifier hash or output drift.  Reference-style and
+HTML links are not currently validated.  Broken historical links remain
+searchable metadata but do not fail the current-spine check.
