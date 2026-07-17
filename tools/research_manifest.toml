@@ -33,6 +33,7 @@ hypotheses = [
 allowed_exits = [
   "explicit K7-minor model",
   "exact order-seven separation with one boundary equality partition realised on both closed shores",
+  "two-vertex transversal of all K5-minor models, which directly contradicts seven-chromaticity",
 ]
 does_not_prove = [
   "HC7",
@@ -67,6 +68,7 @@ allowed_exits = [
   "explicit K7-minor model",
   "exact order-seven separation whose closed-shore six-colourings induce the same equality partition of the seven literal boundary vertices after a colour permutation",
   "new full valid defect-one configuration in the original fixed G with an eligible lifted simplicial component L' satisfying |V(L')|<|V(L)|",
+  "two-vertex transversal of all K5-minor models, which directly contradicts seven-chromaticity",
 ]
 does_not_prove = [
   "exhaustiveness of unique deficiency",
@@ -257,6 +259,395 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.defect_one_simplicial_normalization"
+title = "Normal form around a lifted simplicial component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_defect_one_simplicial_normalization.md"
+active = true
+scope = "conditional inclusion-maximal defect-one selection at one fixed path cut"
+label_fidelity = "literal selected components and three named path-cut anchors"
+separator_order = "at least seven only"
+audit = "results/hc7_defect_one_simplicial_normalization_audit.md"
+expected_source_sha256 = "a6c954234ec2121b0150959f4ce9cff18e78045932a4d331343094db2bf88b05"
+conclusions = [
+  "omitted eligible components have at most one selected-component neighbour",
+  "outside connected subgraphs attach to clique sets of quotient labels",
+  "a simplicial lift and five named neighbours form a K6-minor model",
+  "the full neighbourhood of the saturated simplicial side is contained in five named branch sets",
+]
+does_not_prove = [
+  "an upper bound of seven on the literal separator",
+  "compatible closed-shore colourings",
+  "strict descent to a smaller valid configuration",
+]
+
+[[claims]]
+id = "hc7.minimal_sixth_branch_set_path"
+title = "Path normal form for one branch set of a K6-minor model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_minimal_sixth_branch_set_path.md"
+active = true
+scope = "local K6-minor model"
+label_fidelity = "five named branch sets, preserved under deletion or enlargement"
+audit = "results/hc7_minimal_sixth_branch_set_path_audit.md"
+expected_source_sha256 = "655b7a40b56ce39709753499715b2dfda5a0715f404e34adfe80f939c0746ee1"
+conclusions = [
+  "the distinguished sixth branch set can be reselected as a singleton or induced path",
+  "both path endpoints uniquely support at least two disjoint sets of named branch-set labels",
+]
+does_not_prove = [
+  "preservation of a valid defect-one configuration",
+  "a K7-minor model",
+  "an exact order-seven separator",
+]
+
+[[claims]]
+id = "hc7.edge_response_attachment_forcing"
+title = "Attachment forcing from proper-minor colourings"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_edge_response_attachment_forcing.md"
+active = true
+scope = "one edge or vertex operation outside an induced bipartite subgraph"
+label_fidelity = "literal endpoint contacts with the two bipartition classes"
+audit = "results/hc7_edge_response_attachment_forcing_audit.md"
+expected_source_sha256 = "b51e6653200f54d4fb0bb950ddd98f49c7be46a0b8ff9d696ad2b241c4267862"
+conclusions = [
+  "a missing attachment colour forces both operated endpoints to meet the opposite bipartition class",
+  "a common missing colour forces both endpoints to be two-sided",
+  "cross-type or one-sided edges force the corresponding full attachment palettes",
+]
+does_not_prove = [
+  "alignment of colours with fixed minor branch sets",
+  "internally disjoint two-pole Kempe paths",
+  "strict host-level descent",
+]
+
+[[claims]]
+id = "hc7.defect_one_near_k7_edge_fork"
+title = "Labelled near-K7 model and internal-edge colouring fork"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_defect_one_near_k7_edge_fork.md"
+active = true
+scope = "conditional defect-one two-tree branch"
+label_fidelity = "five named common branch sets and two named deficient branch sets"
+audit = "results/hc7_defect_one_near_k7_edge_fork_audit.md"
+expected_source_sha256 = "41682f92a0bbab28652e439e472e48ba61b59012d46f5d808db59c0dd20435d1"
+conclusions = [
+  "every simplicial lift lies in a labelled K7-minus-one-edge minor model",
+  "every internal edge has an exact five-or-six chromatic response",
+  "the five-colour response gives ordered generalized Kempe paths and all five common-neighbour colours",
+  "common-neighbour contact with all five named common branch sets gives an explicit K7-minor model",
+]
+does_not_prove = [
+  "colour-to-branch-set alignment",
+  "a compatible exact order-seven separation",
+  "strict descent to a smaller valid configuration",
+]
+
+[[claims]]
+id = "hc7.defect_one_rainbow_diamond_separator"
+title = "Rainbow-diamond separation in a four-labelled two-tree"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_defect_one_rainbow_diamond_separator.md"
+active = true
+scope = "conditional host realization of the defect-one four-labelled two-tree"
+label_fidelity = "one represented connected subgraph of each protected label and five named common branch sets"
+separator_order = "at least seven only"
+audit = "results/hc7_defect_one_rainbow_diamond_separator_audit.md"
+expected_source_sha256 = "2af6cd527cb3ca13cb624a2f0e452c84debf1acbebe2997ce2f826693133b246"
+conclusions = [
+  "every proper four-labelled two-tree using all labels contains a rainbow induced K4-minus-one-edge",
+  "the shared edge separates the two nonadjacent vertices in the contact graph",
+  "the host lift is a labelled K7-minus-one-edge model",
+  "after simultaneous absorption, one open shore has full neighbourhood contained in the five common branch sets and the other deficient branch set lies on the far side",
+]
+does_not_prove = [
+  "an upper bound of seven on the literal separator",
+  "compatible closed-shore colourings",
+  "strict descent to a smaller valid defect-one configuration",
+]
+
+[[claims]]
+id = "hc7.double_critical_edge_rooted_fan"
+title = "Common-neighbour-rooted fan at a double-critical edge"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_double_critical_edge_rooted_fan.md"
+active = true
+scope = "one edge xy with chi(G-{x,y})=5 in a seven-connected seven-chromatic graph"
+label_fidelity = "literal singleton endpoints and a rainbow transversal of their common-neighbour set"
+audit = "results/hc7_double_critical_edge_rooted_fan_audit.md"
+expected_source_sha256 = "2d9d009b3a1eab4ee38c3b4f75eb4767328feb335ebcc439c1811b7e0e96a3c1"
+conclusions = [
+  "every five-colouring uses all colours on the common-neighbour set",
+  "every colour pair has one bichromatic component meeting both corresponding common-neighbour colour classes",
+  "every rainbow transversal roots F5=K1-join-P4 and hence yields a K2-join-F5 minor with singleton endpoints",
+  "common-neighbour witnesses avoid endpoint-private named branch sets",
+]
+does_not_prove = [
+  "a common-neighbour-rooted K5 model",
+  "a K7-minor model",
+  "a compatible exact order-seven separation",
+  "strict descent",
+]
+
+[[claims]]
+id = "hc7.connected_one_hole_trichotomy"
+title = "Connected deficient-branch-set trichotomy"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_connected_one_hole_trichotomy.md"
+active = true
+scope = "seven-connected graph with one connected branch set missing one clique-model adjacency"
+label_fidelity = "six fixed branch-set labels and the literal connected donor split"
+separator_order = "at least seven; full at equality"
+audit = "results/hc7_connected_one_hole_trichotomy_audit.md"
+expected_source_sha256 = "41661424adfca51a5a1bacece72a0d98366bb5f3b6031e58e70e7b951f00303e"
+conclusions = [
+  "explicit K7-minor model",
+  "actual nested separation",
+  "labelled K7-minus-one-edge or K7-minus-two-incident-edges model with a proper connected deficient subbag",
+]
+does_not_prove = [
+  "strict descent under repeated rotations",
+  "preservation of a full valid defect-one configuration",
+  "a colour-compatible order-seven boundary",
+]
+
+[[claims]]
+id = "hc7.near_k7_minimal_path_fan_collision"
+title = "Fan collision at a globally minimum deficient branch set"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_near_k7_minimal_path_fan_collision.md"
+active = true
+scope = "globally minimum oriented K7-minus-one-edge minor model"
+label_fidelity = "five named common branch sets and the oriented deficient pair"
+separator_order = "exact seven only when the collision branch set contributes exactly five boundary vertices"
+audit = "results/hc7_near_k7_minimal_path_fan_collision_audit.md"
+expected_source_sha256 = "367dcc0da0cb245730dd1f8a9a1c33bd6d3791df228019b277ab648ce788b696"
+conclusions = [
+  "minimum deficient branch set is a singleton or induced path",
+  "endpoint-private labels have pattern 2+2 or 2+3",
+  "every internal five-fan collides first in one named branch set",
+  "the balanced case yields a full-neighbourhood separation",
+]
+does_not_prove = [
+  "an upper bound on the collision branch set's boundary contribution",
+  "preservation of the full defect-one path-cut data",
+  "strict descent among valid defect-one configurations",
+]
+
+[[claims]]
+id = "hc7.rotation_opposite_boundary_responses"
+title = "Oppositely oriented boundary responses at a reversible rotation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_rotation_opposite_boundary_responses.md"
+active = true
+scope = "mutually unavoidable branch of the connected deficient-branch-set trichotomy"
+label_fidelity = "literal donor-interface edge and named lost-branch-set contact edge"
+colour_compatibility = "a common response partition is terminal but not forced"
+audit = "results/hc7_rotation_opposite_boundary_responses_audit.md"
+expected_source_sha256 = "ce7c762b58ca4e109d31d8baa07b11ac73b5349439f4dd9b7f60d8f26ec0af0c"
+conclusions = [
+  "one actual full-neighbourhood separation",
+  "oppositely oriented boundary extension differences from named edges on the two closed sides",
+  "deletion and contraction give the same response language for either named edge",
+  "a common response partition six-colours the host",
+]
+does_not_prove = [
+  "intersection of the two response languages",
+  "an exact order-seven separator",
+  "strict valid defect-one descent",
+]
+
+[[claims]]
+id = "hc7.two_vertex_k5_transversal_chromatic_obstruction"
+title = "A two-vertex K5-model transversal contradicts seven-chromaticity"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_vertex_k5_transversal_chromatic_obstruction.md"
+active = true
+scope = "every finite seven-chromatic graph"
+audit = "results/hc7_two_vertex_k5_transversal_chromatic_obstruction_audit.md"
+expected_source_sha256 = "4c3c4283c0fa1c74a8711467a49b946bf056d2df53f6edce15f7c765d6fed1f9"
+conclusions = [
+  "every two-vertex deletion contains a K5 minor",
+  "a two-vertex transversal of all K5-minor models is a terminal contradiction",
+]
+
+[[claims]]
+id = "hc7.connected_transfer_extremal_normalization"
+title = "Connected transfer and extremal normalization in a supported near-K7 model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_response_collision_quasi_transfer.md"
+active = true
+scope = "supported one-missing-adjacency minor models in a seven-connected host"
+label_fidelity = "named fixed branch sets, literal residual components and external attachments"
+separator_order = "at least seven; exact order not forced"
+audit = "results/hc7_response_collision_quasi_transfer_audit.md"
+expected_source_sha256 = "684c6f1c9dcabc47a098a4e0e8d8d68f476f977c0d679137fda1adb5b104ed0e"
+conclusions = [
+  "pairwise-connected unions of seven disjoint nonempty sets force a K7 minor",
+  "every failed connected transfer exposes the full neighbourhood of a named residual component",
+  "minimum model order followed by maximum deficient-centre order reduces every reversible residue to a vertex-minimal connector spanning all required portals and external-attachment vertices",
+]
+does_not_prove = [
+  "an exact order-seven separator",
+  "a common boundary equality partition",
+  "a new full valid defect-one configuration with smaller simplicial component",
+]
+
+[[claims]]
+id = "hc7.shared_interface_bichromatic_bypass"
+title = "Bichromatic saturation or a bypass at two incident critical edges"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_shared_interface_bichromatic_bypass.md"
+active = true
+scope = "uniform non-q-colourable graph; specialized to a shared endpoint in a reversible rotation"
+label_fidelity = "two named incident host edges and their coupled Kempe components"
+audit = "results/hc7_shared_interface_bichromatic_bypass_audit.md"
+expected_source_sha256 = "5d5a5eda08701262a1bf6b821194aacd7192a41f0ecf997134764b5b59c80961"
+conclusions = [
+  "one incident edge is bichromatically linked for every alternate colour, or a path bypasses the common endpoint",
+  "both opposite one-edge response colourings arise from one simultaneous-contraction colouring",
+]
+does_not_prove = [
+  "that the bypass first enters the named lost branch set",
+  "an exact order-seven separator",
+  "a K7 minor",
+]
+
+[[claims]]
+id = "hc7.portal_cone_hall_alternative"
+title = "Hall saturation or a leaf-to-leaf bypass at a contracted portal cone"
+kind = "theorem"
+status = "audited-green"
+source = "active/hc7_contracted_portal_path_palette_obstruction.md"
+source_heading = "4. A common-colouring Kempe allocation"
+active = true
+scope = "Theorem 4.3 only: a connected contracted cone in a non-q-colourable graph"
+label_fidelity = "the literal centre and named leaf endpoints"
+audit = "active/hc7_contracted_portal_path_palette_obstruction_theorem43_audit.md"
+expected_source_sha256 = "db54125365f34361b1fe0fddb1bcf0b743aef99fd08d7aa339fdef3b7c1167ac"
+conclusions = [
+  "a leaf-to-leaf path avoiding the centre or a deficient Hall set of alternate-colour nonconnections",
+  "for q=6 and three named leaves: saturation levels 5 on one leaf, 4 on two leaves, or 3 on all three leaves",
+]
+does_not_prove = [
+  "alignment of colours with five fixed minor-model branch sets",
+  "an exact order-seven separator",
+  "a K7 minor",
+]
+
+[[claims]]
+id = "hc7.exact7_boundary_classification"
+title = "Exact seven-vertex boundary classification and no-rigid-trace theorem"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_no_rigid_trace.md"
+active = true
+scope = "actual order-seven separation in a seven-connected K7-minor-free graph, with stronger conclusions under minor-criticality"
+label_fidelity = "seven literal boundary vertices and the five cycle roots in the exceptional boundary"
+separator_order = "exact seven"
+colour_compatibility = "rigid traces excluded; a common shore partition is not forced"
+audit = "results/hc7_exact7_no_rigid_trace_audit.md"
+expected_source_sha256 = "cd4b7fcf03242e41434522ac2eedd83425c418b83917d2ba1e94dd6740b3a568"
+conclusions = [
+  "every component of either open shore is adjacent to every boundary vertex",
+  "deleting any boundary vertex leaves a K5-minor-free boundary graph",
+  "the boundary is at most five-colourable and equality forces K2-join-C5",
+  "in the five-chromatic minor-critical case both shores are connected and have full-packet vector 1,1",
+  "off the universal boundary pair there is an unrooted K5 minor but no K5 model rooted at the five cycle vertices",
+  "no nonempty uniquely five-colourable boundary trace survives",
+]
+does_not_prove = [
+  "a common equality partition on the two closed shores",
+  "a C5-rooted K5 model",
+  "closure of the at-most-four-colourable boundary branch",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.cycle_boundary_completion"
+title = "Completion of two full shores behind an induced cycle"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_cycle_boundary_completion.md"
+active = true
+scope = "seven-connected host; induced cycle of arbitrary length at least four with two connected full shores and two adjacent universal vertices"
+label_fidelity = "the cycle roots, two universal vertices and the two literal shores"
+audit = "results/hc7_cycle_boundary_completion_audit.md"
+expected_source_sha256 = "f87ddcf7e4bd33b0fc107033033d9a8ebb2f6e32533b1b9c4538c0bf4bd137db"
+conclusions = [
+  "a K5 minor after deleting the universal pair forces an explicit K7 minor",
+  "the conclusion is uniform in the length of the induced boundary cycle",
+]
+does_not_prove = [
+  "full boundary attachment when the displayed boundary has more than seven vertices",
+  "closure of arbitrary exact-seven boundaries of chromatic number at most four",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.pentagonal_separation_completion"
+title = "Pentagonal order-seven separation corollary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_pentagonal_separation_completion.md"
+active = true
+scope = "seven-connected host with a K2-join-C5 boundary and exactly two connected open shores"
+label_fidelity = "the five cycle roots, two universal boundary vertices and the two literal shores"
+separator_order = "exact seven"
+audit = "results/hc7_pentagonal_separation_completion_audit.md"
+expected_source_sha256 = "c627b4bc8222a674a13c7e4dc6e7d33f876becb163b24617764afedc7ee8c0da"
+conclusions = [
+  "a K5 minor after deleting the universal pair forces an explicit K7 minor",
+  "the five-chromatic exact-seven boundary cannot occur in a minimal HC7 counterexample",
+]
+does_not_prove = [
+  "closure of exact-seven boundaries of chromatic number at most four",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.exact7_universal_edge_kempe_normalization"
+title = "Universal-edge Kempe normalization at the pentagonal boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_universal_edge_kempe_normalization.md"
+active = true
+scope = "canonical K2-join-C5 exact-seven separation"
+audit = "results/hc7_exact7_universal_edge_kempe_normalization_audit.md"
+expected_source_sha256 = "f2ae7f267ad2026c532b55d29189f4ba097b1c51ed31a702c4b66b4e63c4fb1c"
+does_not_prove = ["the final missing adjacency of its labelled near-K7 model"]
+
+[[claims]]
+id = "hc7.exact7_exposed_sigma_paths"
+title = "Exposed six-block boundary partition and same-shore Kempe paths"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_exposed_sigma_kempe_paths.md"
+active = true
+scope = "canonical K2-join-C5 exact-seven separation"
+audit = "results/hc7_exact7_exposed_sigma_kempe_paths_audit.md"
+expected_source_sha256 = "e8495a4f1bbcc7009379af72d94a807b9ac301fae9a5bde9ae86e098f9397a07"
+conclusions = [
+  "one shore realizes an exposed six-block boundary partition",
+  "two consecutive missing-chord Kempe paths lie in that same shore and one colouring",
+  "the canonical residue has a labelled K7-minus-one-edge model",
+]
+does_not_prove = ["the final K7 adjacency"]
+
+[[claims]]
 id = "hc7.one_step_minor_dynamics"
 title = "One-step minor dynamics and the common-hole law"
 kind = "theorem"
@@ -297,6 +688,58 @@ colour_compatibility = "not supplied"
 audit = "results/hc7_k5_transversal_order7_separator_audit.md"
 expected_source_sha256 = "069bfa0dd96211d44e762cc49aaa2476a4e655f52ba45e63e492bb6445411023"
 does_not_prove = ["compatible shore colourings"]
+
+[[claims]]
+id = "hc7.barrier.five_bag_separator_excess"
+title = "Five-branch-set separator excess is unbounded under geometry alone"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_five_bag_separator_excess_barrier.md"
+active = true
+audit = "barriers/hc7_five_bag_separator_excess_barrier_audit.md"
+expected_source_sha256 = "0613bfb720df55cccc63182fcbf7187b5f882be0e6eb5224356e4a7f16fdd05c"
+refutes = [
+  "an upper bound on five-branch-set-supported separator order from connectivity and K7-minor exclusion alone",
+  "a geometry-only monotone rank for reversible near-K7 rotations",
+]
+lacks = [
+  "seven-chromaticity",
+  "contraction-critical colouring provenance",
+]
+
+[[claims]]
+id = "hc7.barrier.k35_no_common_state_or_pair"
+title = "Static boundary responses force neither a common partition nor a two-vertex transversal"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k35_no_common_state_or_two_vertex_transversal.md"
+active = true
+audit = "barriers/hc7_k35_no_common_state_or_two_vertex_transversal_audit.md"
+expected_source_sha256 = "a2ae9052b307cccae5a9499729fe8a5a2f7330c81c501910c28ca075542bf4dc"
+refutes = [
+  "common boundary partition or global pair from static extension languages, fullness and seven-connectivity",
+]
+lacks = [
+  "global K7-minor exclusion",
+  "all-operation contraction-criticality",
+  "specified five labelled branch sets supporting the boundary",
+]
+
+[[claims]]
+id = "hc7.barrier.two_upgrade_no_go"
+title = "The two sharp barrier architectures fail on complementary critical hypotheses"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_two_barrier_upgrade_no_go.md"
+active = true
+audit = "barriers/hc7_two_barrier_upgrade_no_go_audit.md"
+expected_source_sha256 = "0206c365fbd761648080e758c60a75bd8188d1f1f07d3a632f9cad9052e4e1cd"
+refutes = [
+  "directly upgrading either the capped-antiprism pair barrier or false-twin boundary amplifier to the actual HC7 host",
+]
+lacks = [
+  "a counterexample to the full label-faithful exchange theorem",
+]
 
 [[claims]]
 id = "hc7.barrier.labelled_delta_exchange"
@@ -453,15 +896,102 @@ target = "hc7.all_cut_interval_exchange"
 kind = "uses"
 
 [[relations]]
+source = "hc7.defect_one_simplicial_normalization"
+target = "hc7.component_contact_defect"
+kind = "uses"
+
+[[relations]]
+source = "hc7.minimal_sixth_branch_set_path"
+target = "hc7.defect_one_simplicial_normalization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.defect_one_near_k7_edge_fork"
+target = "hc7.component_contact_defect"
+kind = "uses"
+
+[[relations]]
+source = "hc7.defect_one_near_k7_edge_fork"
+target = "hc7.defect_one_simplicial_normalization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.defect_one_rainbow_diamond_separator"
+target = "hc7.component_contact_defect"
+kind = "uses"
+
+[[relations]]
+source = "hc7.defect_one_rainbow_diamond_separator"
+target = "hc7.defect_one_simplicial_normalization"
+kind = "uses"
+
+[[relations]]
 source = "hc7.target.adjacent_pair_model_or_separator"
 target = "hc7.separator_or_five_core"
 kind = "uses"
 
 [[relations]]
 source = "hc7.target.adjacent_pair_model_or_separator"
-target = "hc7.k5_transversal_order7"
+target = "hc7.two_vertex_k5_transversal_chromatic_obstruction"
 kind = "uses"
-note = "Only as a route to a raw exact-seven separation; no colour compatibility is inferred."
+note = "A global two-vertex K5-model transversal is a direct six-colouring contradiction."
+
+[[relations]]
+source = "hc7.target.adjacent_pair_model_or_separator"
+target = "hc7.exact7_boundary_classification"
+kind = "uses"
+note = "Classifies the exact-seven exit and rules out rigid-trace closure."
+
+[[relations]]
+source = "hc7.target.adjacent_pair_model_or_separator"
+target = "hc7.cycle_boundary_completion"
+kind = "uses"
+note = "Eliminates the five-chromatic exact-seven boundary and any later full induced-cycle separation of this form."
+
+[[relations]]
+source = "hc7.cycle_boundary_completion"
+target = "hc7.pentagonal_separation_completion"
+kind = "strengthens"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.connected_transfer_extremal_normalization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.portal_cone_hall_alternative"
+kind = "uses"
+
+[[relations]]
+source = "hc7.connected_transfer_extremal_normalization"
+target = "hc7.connected_one_hole_trichotomy"
+kind = "uses"
+
+[[relations]]
+source = "hc7.connected_transfer_extremal_normalization"
+target = "hc7.component_contact_defect"
+kind = "uses"
+
+[[relations]]
+source = "hc7.connected_one_hole_trichotomy"
+target = "hc7.defect_one_rainbow_diamond_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.near_k7_minimal_path_fan_collision"
+target = "hc7.minimal_sixth_branch_set_path"
+kind = "strengthens"
+
+[[relations]]
+source = "hc7.rotation_opposite_boundary_responses"
+target = "hc7.connected_one_hole_trichotomy"
+kind = "uses"
 
 [[relations]]
 source = "hc7.target.defect_one_exchange"
@@ -471,6 +1001,61 @@ kind = "subproblem_of"
 [[relations]]
 source = "hc7.target.defect_one_exchange"
 target = "hc7.component_contact_defect"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.defect_one_simplicial_normalization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.minimal_sixth_branch_set_path"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.edge_response_attachment_forcing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.defect_one_near_k7_edge_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.defect_one_rainbow_diamond_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.double_critical_edge_rooted_fan"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.connected_one_hole_trichotomy"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.near_k7_minimal_path_fan_collision"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.rotation_opposite_boundary_responses"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.two_vertex_k5_transversal_chromatic_obstruction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.exact7_boundary_classification"
 kind = "uses"
 
 [[relations]]
@@ -502,6 +1087,21 @@ kind = "guarded_by"
 [[relations]]
 source = "hc7.target.defect_one_exchange"
 target = "hc7.barrier.connectivity_only_augmentation"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.barrier.five_bag_separator_excess"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.barrier.k35_no_common_state_or_pair"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.barrier.two_upgrade_no_go"
 kind = "guarded_by"
 
 [[relations]]

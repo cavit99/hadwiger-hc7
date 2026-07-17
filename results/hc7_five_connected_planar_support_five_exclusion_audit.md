@@ -4,6 +4,18 @@
 argument, and both branches of the contraction pullback are correct as
 stated.  No mathematical correction is required.
 
+**Current source SHA-256:**
+`52a1f8b89345c30df6ad2628d1c2d309b16f4e1673807267d231b164008132c2`
+
+**Original audited source SHA-256:**
+`cb77d22239b0cd9e75eef4ff4b6ff852ef196cb8ab0a368a0816973b4567ba38`
+
+The current source differs from the audited source only by replacing two
+links to the terminal-contraction reduction in `active/` with their new
+same-directory paths after that reduction was promoted to `results/`.  No
+theorem statement, proof, corollary, or scope claim changed, so the GREEN
+verdict rebinds to the current source hash.
+
 ## 1. Connectivity and planarity checks
 
 Lemma 1.1 uses the correct deletion count.  If the contracted vertex is

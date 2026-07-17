@@ -1,7 +1,9 @@
 # Final independent audit: spanning rural quotient
 
-Audited file: `active/hc7_exact7_spanning_rural_quotient.md`, after the
-outcome, root-containment, exposure, and side-terminal repairs.
+The pre-promotion source is now retained as
+[`../results/hc7_exact7_spanning_rural_quotient.md`](../results/hc7_exact7_spanning_rural_quotient.md).
+This audit followed the outcome, root-containment, exposure, and
+side-terminal repairs.
 
 ## Final verdict
 

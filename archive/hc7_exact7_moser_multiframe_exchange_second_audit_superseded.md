@@ -1,6 +1,7 @@
 # Superseded second audit: pure-Moser four-corner exchange
 
-Audited file: `active/hc7_exact7_moser_multiframe_exchange.md`.
+The superseded audited source is not retained.  Its former working filename
+was `hc7_exact7_moser_multiframe_exchange.md`.
 
 **Verdict:** **GREEN in the intended exact two-component, seven-connected
 HC7 setting, subject to the two hypothesis clarifications in Section 1.**

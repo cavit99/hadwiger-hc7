@@ -3,8 +3,8 @@
 **Archive note:** superseded by the standard-terminology theorem and audit
 in `results/`; retained as the detailed audit of the preceding content hash.
 
-**Audited file:**
-[`hc_bipartite_contraction_cross_lock.md`](hc_bipartite_contraction_cross_lock.md)
+**Audited file:** the superseded source is not retained.  Its former working
+filename was `hc_bipartite_contraction_cross_lock.md`.
 
 **Audited source SHA-256:**
 `b9661505caf7c2479d6ae5874f950ed2a57fe86ae353398cc66269272c643921`

@@ -256,7 +256,7 @@ boundary degrees, an exact proper-minor equality-state transition, global
 itself cannot reserve the connector.
 
 Barrier: [essential-portal reserved-connector counterarchitecture](barriers/hc7_sole_exterior_reserved_connector_barrier.md)
-— [verifier](active/hc7_sole_exterior_reserved_connector_barrier_verify.py).
+— [verifier](barriers/hc7_sole_exterior_reserved_connector_barrier_verify.py).
 
 The exact trace now gives a second, genuinely uniform sole-exterior
 dichotomy.  Build the rooted `K_5` on the five unique roots.  If the repeated
@@ -823,14 +823,14 @@ that link.
 - [Uniform clique-apex lifting and the three-apex `HC_7` theorem](results/hc7_three_apex_planar_endgame.md) — [audit](results/hc7_three_apex_planar_endgame_audit.md)
 - [Lex-minimal carrier block rigidity and three-arm collapse](results/hc7_lexminimal_carrier_block_rigidity.md) — [audit](results/hc7_lexminimal_carrier_block_rigidity_audit.md)
 - [Exact-seven full-packet packing](results/hc7_exact_seven_packet_packing.md) — [audit](results/hc7_exact_seven_packet_packing_audit.md)
-- [Adaptive exact-seven `(1,3)` packet reflection](results/hc7_exact7_adaptive_packet_reflection.md) — [audit](results/hc7_exact7_adaptive_packet_reflection_audit.md); [finite demand verifier](active/hc7_exact7_adaptive_packet_reflection_verify.py)
-- [Adaptive exact-seven `(1,2)` robust-state and anchored-model closure](results/hc7_exact7_adaptive_12_boundary_closure.md) — [audit](results/hc7_exact7_adaptive_12_boundary_closure_audit.md); [boundary/model verifier](active/hc7_exact7_adaptive_12_packet_quotient_probe.py)
+- [Adaptive exact-seven `(1,3)` packet reflection](results/hc7_exact7_adaptive_packet_reflection.md) — [audit](results/hc7_exact7_adaptive_packet_reflection_audit.md); [finite demand verifier](results/hc7_exact7_adaptive_packet_reflection_verify.py)
+- [Adaptive exact-seven `(1,2)` robust-state and anchored-model closure](results/hc7_exact7_adaptive_12_boundary_closure.md) — [audit](results/hc7_exact7_adaptive_12_boundary_closure_audit.md); [boundary/model verifier](results/hc7_exact7_adaptive_12_packet_quotient_probe.py)
 - [Packet demand as clique-deletion chromatic number](results/hc7_exact7_packet_demand_identity.md) — [audit](results/hc7_exact7_packet_demand_identity_audit.md)
 - [Exact singleton-block Kempe exchange](results/hc7_exact7_singleton_block_kempe_exchange.md) — [audit](results/hc7_exact7_singleton_block_kempe_exchange_audit.md)
 - [Singleton-thin reduction and `M+13` packet escape](results/hc7_exact7_singleton_thin_moser_extension_escape.md) — [audit](results/hc7_exact7_singleton_thin_moser_extension_escape_audit.md)
-- [Exact three-packet quotient characterization](results/hc7_exact7_three_packet_quotient_characterization.md) — [audit](results/hc7_exact7_three_packet_quotient_characterization_audit.md); [exact minor verifier](active/hc7_exact7_three_packet_quotient_verify.py)
-- [Double-triangle partial-packet exchange in exact `(1,2)`](results/hc7_exact7_double_triangle_partial_packet_exchange.md) — [audit](results/hc7_exact7_double_triangle_partial_packet_exchange_audit.md); [crossed-pure verifier](active/hc7_exact7_double_triangle_four_carrier_probe.py)
-- [Adaptive three-carrier reflection and rich cut-packet closure](results/hc7_exact7_rich_cutpacket_exchange.md) — [audit](results/hc7_exact7_rich_cutpacket_exchange_audit.md); [state verifier](active/hc7_exact7_three_carrier_state_probe.py)
+- [Exact three-packet quotient characterization](results/hc7_exact7_three_packet_quotient_characterization.md) — [audit](results/hc7_exact7_three_packet_quotient_characterization_audit.md); [exact minor verifier](results/hc7_exact7_three_packet_quotient_verify.py)
+- [Double-triangle partial-packet exchange in exact `(1,2)`](results/hc7_exact7_double_triangle_partial_packet_exchange.md) — [audit](results/hc7_exact7_double_triangle_partial_packet_exchange_audit.md); [crossed-pure verifier](results/hc7_exact7_double_triangle_four_carrier_probe.py)
+- [Adaptive three-carrier reflection and rich cut-packet closure](results/hc7_exact7_rich_cutpacket_exchange.md) — [audit](results/hc7_exact7_rich_cutpacket_exchange_audit.md); [state verifier](results/hc7_exact7_three_carrier_state_probe.py)
 - [Bipartite thin-shore cutvertex exchange](results/hc7_exact7_bipartite_cutvertex_exchange.md) — [audit](results/hc7_exact7_bipartite_cutvertex_exchange_audit.md); [crossed-frame barrier](barriers/hc7_exact7_bipartite_carrier_connectivity_dirac_barrier.md)
 - [Pure-Moser two-component cutvertex/two-cut closure](results/hc7_exact7_moser_rich_twocut_exchange.md) — [audit](results/hc7_exact7_moser_rich_twocut_exchange_audit.md); [exact quotient verifier](archive/moser_global_2cut_verify.py)
 - [Pure-Moser four-corner exact-state exchange](results/hc7_exact7_moser_four_corner_exchange.md) — [audit](results/hc7_exact7_moser_four_corner_exchange_audit.md)
@@ -851,8 +851,8 @@ that link.
 - [Terminal-free state-or-rural normalization](results/hc7_exact7_terminal_free_state_or_rural.md) — [audit](results/hc7_exact7_terminal_free_state_or_rural_audit.md)
 - [Terminal-free low-cut gate descent](results/hc7_exact7_terminal_free_lowcut_descent.md) — [audit](results/hc7_exact7_terminal_free_lowcut_descent_audit.md)
 - [Terminal-free bilateral planar endgame](results/hc7_exact7_terminal_free_bilateral_endgame.md) — [audit](results/hc7_exact7_terminal_free_bilateral_endgame_audit.md)
-- [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](active/hc7_exact7_moser_triangle_shore_verify.py)
-- [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](active/hc7_exact7_single_defect2_probe.py)
+- [Pure-Moser triangular exterior-shore closure under the favourable crossing](results/hc7_exact7_moser_triangle_shore.md) — [audit](results/hc7_exact7_moser_triangle_shore_audit.md); [certificate](results/hc7_exact7_moser_triangle_shore_verify.py)
+- [Connected-rich defect-two carrier and three-attachment exchange](results/hc7_exact7_connected_rich_cutvertex_exchange.md) — [audit](results/hc7_exact7_connected_rich_cutvertex_exchange_audit.md); [defect-two verifier](results/hc7_exact7_single_defect2_probe.py)
 - [Portal-preserving packet-bridge rotation](results/hc7_exact7_packet_bridge_rotation.md) — [audit](results/hc7_exact7_packet_bridge_rotation_audit.md)
 - [Portal matching and Tutte-stable skeleton in a 3-connected shore](results/hc7_exact7_portal_matching_stable_skeleton.md) — [audit](results/hc7_exact7_portal_matching_stable_skeleton_audit.md); [one-segment barrier](barriers/hc7_exact7_tutte_single_segment_barrier.md)
 - [Exact-seven thin-shore near-full exchange](results/hc7_exact7_thin_shore_exchange.md) — [audit](results/hc7_exact7_thin_shore_exchange_audit.md)
@@ -867,11 +867,11 @@ that link.
 - [Portal-rooted triangle peels, cross-lobe star split, and crossed-order certificate](results/hc7_exact7_portal_rooted_triangle_exchange.md) — [audit](results/hc7_exact7_portal_rooted_triangle_exchange_audit.md)
 - [Spanning-triangle boundary list-state gluing](results/hc7_exact7_triangle_list_state.md) — [audit](results/hc7_exact7_triangle_list_state_audit.md)
 - [Uniform carrier-list state synchronization](results/hc7_uniform_carrier_list_state_gluing.md) — [audit](results/hc7_uniform_carrier_list_state_gluing_audit.md)
-- [Triangle-free seven-boundary critical list cores and implication bicycles](results/hc7_exact7_triangle_list_critical.md) — [audit](results/hc7_exact7_triangle_list_critical_audit.md); [verifier](active/hc7_exact7_triangle_list_critical_verify.py)
+- [Triangle-free seven-boundary critical list cores and implication bicycles](results/hc7_exact7_triangle_list_critical.md) — [audit](results/hc7_exact7_triangle_list_critical_audit.md); [verifier](results/hc7_exact7_triangle_list_critical_verify.py)
 - [Canonical crossed block-chain list sweep](results/hc7_exact7_block_chain_list_exchange.md) — [audit](results/hc7_exact7_block_chain_list_exchange_audit.md)
-- [Exact-seven pair-bicycle and full-list completion](results/hc7_exact7_pair_bicycle_completion.md) — [audit](results/hc7_exact7_pair_bicycle_completion_audit.md); [verifier](active/hc7_exact7_pair_bicycle_completion_verify.py)
+- [Exact-seven pair-bicycle and full-list completion](results/hc7_exact7_pair_bicycle_completion.md) — [audit](results/hc7_exact7_pair_bicycle_completion_audit.md); [verifier](results/hc7_exact7_pair_bicycle_completion_verify.py)
 - [Exact-seven forced-path completion and five cut-switch types](results/hc7_exact7_forced_path_completion.md) — [audit](results/hc7_exact7_forced_path_completion_audit.md)
-- [Exact-seven boundary colour/model/one-block trichotomy](results/hc7_exact7_boundary_rooted_trichotomy.md) — [audit](results/hc7_exact7_boundary_rooted_trichotomy_audit.md); [direct verifier](active/hc7_exact7_raw_list_no_k4_verify.py)
+- [Exact-seven boundary colour/model/one-block trichotomy](results/hc7_exact7_boundary_rooted_trichotomy.md) — [audit](results/hc7_exact7_boundary_rooted_trichotomy_audit.md); [direct verifier](results/hc7_exact7_raw_list_no_k4_verify.py)
 - [Rank-free double-two-gate cut closure](results/hc7_exact7_double_two_gate_cut_closure.md) — [audit](results/hc7_exact7_double_two_gate_cut_closure_audit.md)
 - [Pure-Moser crossing carrier and packet-thin rural blocker](results/hc7_moser_crossing_carrier.md) — [audit](results/hc7_moser_crossing_carrier_audit.md)
 - [Pure-Moser near-full rural split and cycle/cactus closure](results/hc7_moser_thin_rural_exchange.md) — [audit](results/hc7_moser_thin_rural_exchange_audit.md)
@@ -904,12 +904,12 @@ the singleton/bipartite hypotheses are not a general normalization theorem.
 ## Active work
 
 - [Proof spine](hc7_near_k7_proof_spine_20260715.md)
-- [Exact-six rural bilateral endgame](active/hc7_exact7_rural_bilateral_endgame.md)
-- [Both-missing constant-owner corridor](active/hc7_near_k7_constant_owner_corridor.md)
-- [Port-labelled split versus 2-apex](active/hc7_near_k7_port_labeled_split_2apex.md)
-- [Multiply-hit neutral exchange](active/hc7_near_k7_multiply_hit_neutral_exchange.md)
-- [Three-connected rural transfer](active/hc7_near_k7_three_connected_rural_transfer.md)
-- [Three-anchor capacity/web composition](active/hc7_three_anchor_capacity_web.md)
+- [Exact-six rural bilateral endgame](archive/hc7_exact7_rural_bilateral_endgame.md)
+- [Both-missing constant-owner corridor](archive/hc7_near_k7_constant_owner_corridor.md)
+- [Port-labelled split versus 2-apex](archive/hc7_near_k7_port_labeled_split_2apex.md)
+- [Multiply-hit neutral exchange](archive/hc7_near_k7_multiply_hit_neutral_exchange.md)
+- [Three-connected rural transfer](archive/hc7_near_k7_three_connected_rural_transfer.md)
+- [Three-anchor capacity/web composition](archive/hc7_three_anchor_capacity_web.md)
 
 ## Repository layout
 

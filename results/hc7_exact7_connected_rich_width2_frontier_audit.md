@@ -1,7 +1,7 @@
 # Independent audit: connected-rich width-two frontier
 
-Audited file before promotion:
-`active/hc7_connected_rich_width2_frontier_draft.md`.
+The pre-promotion working file is not separately retained.  Its content is
+preserved in the promoted file below.
 
 Promoted file:
 `results/hc7_exact7_connected_rich_width2_frontier.md`.

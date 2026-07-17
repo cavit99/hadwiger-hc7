@@ -10,10 +10,10 @@
 
 The preceding revision had SHA-256
 `753d4b31154a7a06917f1c31639ec50dbe2d1178f98dc2e7ceb9c72c5bb542ca`.
-The current revision changes only one relative link in Remark 2.2, from
-`../active/hc7_nine_vertex_support_six_closure.md` to
-`../results/hc7_nine_vertex_support_six_closure.md`, after that dependency
-was promoted.  The theorem statements, hypotheses, proofs, corollaries,
+The current revision changes only one relative link in Remark 2.2, from its
+former active location to the promoted
+[`hc7_nine_vertex_support_six_closure.md`](hc7_nine_vertex_support_six_closure.md).
+The theorem statements, hypotheses, proofs, corollaries,
 and mathematical dependencies are byte-for-byte unchanged.  This link-only
 diff was checked before rebinding the audit to the current hash.
 

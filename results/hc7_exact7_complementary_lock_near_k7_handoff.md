@@ -98,7 +98,9 @@ edges in (1.5), which share the deficient bag `{s}`.  Extra adjacency
 ## 2. Application to the exact complementary lock
 
 Use the setup and notation of
-`../active/hc7_exact7_two_component_paired_exchange.md`.  The old open
+the archived Section 3 of
+[`../archive/hc7_exact7_two_component_paired_exchange_long_draft.md`](../archive/hc7_exact7_two_component_paired_exchange_long_draft.md).
+The old open
 thin shore `L` is connected: every component of `G[L]` is `S`-full by
 seven-connectivity, while its packet number is one.  The second rich
 component `Q` is connected and `S`-full.  For the two lobes `D,E` of the

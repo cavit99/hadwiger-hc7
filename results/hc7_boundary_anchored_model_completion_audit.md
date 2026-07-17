@@ -10,8 +10,8 @@ at exact SHA-256
 cb88b01817071fde612db88aeca094c273242be615ca00f3b22ef3ddacb66e2f
 ```
 
-The pre-promotion mathematical revision at
-`active/hc7_boundary_anchored_model_completion.md` had SHA-256
+The pre-promotion mathematical revision, now retained at the promoted source
+linked above, had SHA-256
 
 ```text
 5a7ead9ecec2ef99f6e464ac6ccccd72bcbc6edab166cf8c87e543f9ceb0e811

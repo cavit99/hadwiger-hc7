@@ -153,7 +153,7 @@ standalone promoted version, they should be listed explicitly in the
 relevant corollary hypotheses.
 
 The older audited
-[`hc7_balanced_endpoint_allocation.md`](../archive/hc7_balanced_endpoint_allocation.md)
+[`hc7_balanced_endpoint_allocation.md`](hc7_balanced_endpoint_allocation.md)
 (SHA-256
 `85a575e9103b0f8d1440d64d8ae2322cf089cafe958225cbcf7e4f4649e920c8`)
 must not be discarded as superseded.  Its row-cover theorem permits every

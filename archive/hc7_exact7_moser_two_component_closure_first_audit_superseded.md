@@ -1,6 +1,7 @@
 # Superseded first audit: complete pure-Moser two-component closure
 
-Audited file: `active/hc7_exact7_moser_multiframe_exchange.md`  
+The superseded audited source is not retained.  Its former working filename
+was `hc7_exact7_moser_multiframe_exchange.md`.
 Verdict: **GREEN**, subject only to the editorial clarifications in Section 6
 below.
 
@@ -12,8 +13,8 @@ compose paths selected in different trace frames.
 
 ## 1. Exact-state exchange
 
-The Section 3 exchange was checked independently in
-`active/hc7_exact7_moser_multiframe_exchange_audit.md`.  For either cross
+The Section 3 exchange was checked independently in an earlier audit which
+was not retained.  For either cross
 perfect matching
 
 \[

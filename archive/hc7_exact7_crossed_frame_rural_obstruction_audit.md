@@ -1,6 +1,7 @@
 # Independent audit: crossed-frame rural obstruction
 
-Audited file: `active/hc7_exact7_crossed_frame_rural_obstruction.md`.
+Audited file: [`hc7_exact7_crossed_frame_rural_obstruction.md`](hc7_exact7_crossed_frame_rural_obstruction.md),
+now retained beside this audit in the archive.
 
 ## Verdict
 
