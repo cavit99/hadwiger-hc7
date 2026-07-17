@@ -67,6 +67,14 @@ clique; its vertices outside the triangle lie in the opposite component.
 Lifting the triangle gives the exact order-eight boundary with two
 boundary-full components.
 
+The planar skeleton of this canonical web is four-connected, and adding
+either outer diagonal gives a four-connected plane triangulation.  This
+new structural fact is independently audited.  It does not make the
+missing linkage available: the demanded terminal pairs alternate on the
+outer face, while Hamilton paths in the completion may use edges absent
+from the literal quotient.  Hamiltonian-connectedness is therefore a
+guardrail and a structural normalization here, not the composition engine.
+
 Two explicit branch-set constructions close infinite subfamilies of this
 web obstruction.  Most importantly, deleting the two leaf vertices of the
 original five-clique cannot disconnect their open shore unless a `K_7`
@@ -138,6 +146,76 @@ minor and is not minor-minimal, so it identifies exactly where the true
 host hypotheses still have to enter; it is not a counterexample to the
 target theorem.
 
+The simultaneous-equality branch now has a more useful global normal form.
+The generalized two-edge Kempe fork works for every number of colours and
+every prescribed cyclic palette: it either produces the appropriate
+one-edge-restoration colouring or a fixed-end cyclic path.  Maximizing the
+reachable set makes this process well founded; unless a response occurs,
+the reachable set is the whole induced three-colour component, and paths
+in both cyclic orders put the named edge ends in its unique source strong
+component.  With two disjoint natural palettes, two response rotations
+would commute to the forbidden `(proper,proper)` signature.  Consequently
+one of the two named clique edges has fixed-end paths in both cyclic
+orders.  All three statements are written and independently audited.
+
+This colouring progress has been coupled to the literal separator.  For a
+fixed simultaneous-equality boundary partition, the two opposite closed
+shores cannot both repair their deleted edge while preserving that
+partition.  A nonrepairable side contains, for every alternate colour,
+either a literal endpoint path or two disjoint first-hit paths to distinct
+boundary vertices.  It also contains a minimal induced fixed-boundary
+list-critical core.  On the planar leaf side, the tight vertices of that
+core form a Gallai forest and its exact Euler/list identity is
+
+`sum c(v) = 6|K|-2|E(K)|+sum epsilon(v) >= 12+sum epsilon(v)`.
+
+The equality case is now genuinely reduced, not merely enumerated: a
+zero-slack four-clique core always gives an explicit `K_7`-minor model.
+The two-vertex core is also closed.  A boundary-endpoint selection lemma
+chooses at most one endpoint of each defect edge to repair every
+three-clique vertex missed by the connected leaf-side remainder.  Together
+with the opposite boundary-full shore, the two leaf singletons, and the
+three clique singletons, those choices form seven explicit branch sets.
+The exact remaining core forms are:
+
+1. the leaf edge plus the unique third vertex of the bounded facial
+   triangle at the opposite outer edge, with one common two-element list;
+   or
+2. positive Euler/list slack, in which the total boundary-colour incidence
+   is at least thirteen and the tight subgraph is a Gallai forest.
+
+The facial-triangle case now has an unbounded path normalization.  The
+removable-path theorem of Du--Li--Xie--Yu gives a path from the third
+triangle vertex to a first vertex of `R`, avoiding the two leaves and the
+other two vertices of `R`, whose deletion leaves the host connected.  If
+that path can be split so that its triangle-side subpath retains the two
+other `R` adjacencies and its complement retains one connected subgraph
+adjacent to all six reserved branch sets, the seven sets are an explicit
+`K_7` model.  The exact unresolved condition is this labelled split, not
+path existence.
+
+This closes an infinite host family, but not the balanced order-eight
+configuration.  Four audited barriers fix the new trust boundary.  A
+`K_7`-minor-free canonical-web quotient can realize both opposite cyclic
+paths in a strongly connected three-colour component; two disjoint
+five-cliques can realize all four disjoint-palette paths in a graph of
+treewidth five; and an eight-connected seven-chromatic graph can realize
+the full boundary locks and a planar list-critical core while still
+containing a `K_7` minor and failing minor-minimality.  Thus ordered paths,
+palette disjointness, planarity, and local criticality are not separate
+completion mechanisms.  The next theorem must use the canonical missing
+linkage jointly with `K_7`-minor exclusion and proper-minor boundary
+responses.
+
+A [verified sixteen-vertex barrier](barriers/hc7_facial_triangle_static_completion_barrier.md)
+makes this last qualification exact.  It has the balanced boundary, two
+boundary-full shores, both five-cliques,
+endpoint rigidity, the common-two-list facial triangle, and the canonical
+missing linkage, but no `K_7` minor.  Its host connectivity is only three,
+its quotient has noncanonical three-cuts, and it is six-colourable.
+Therefore static triangle/web data cannot replace seven-connectivity or
+the proper-minor response constraints.
+
 The required output is an explicit `K_7` model, a common boundary partition
 which glues the two shore colourings, a pair of support height at least
 seven, or an actual order-seven separation preserving the named data and
@@ -155,11 +233,19 @@ Principal new audited results:
 - [`hc7_shifted_boundary_completion.md`](results/hc7_shifted_boundary_completion.md)
 - [`hc_uniform_boundary_repair_completion.md`](results/hc_uniform_boundary_repair_completion.md)
 - [`hc7_star_order_eight_rooted_web.md`](results/hc7_star_order_eight_rooted_web.md)
+- [`hc7_canonical_web_skeleton_four_connected.md`](results/hc7_canonical_web_skeleton_four_connected.md)
 - [`hc7_star_order_eight_split_edge_completion.md`](results/hc7_star_order_eight_split_edge_completion.md)
 - [`hc7_star_order_eight_disconnected_leaf_side_completion.md`](results/hc7_star_order_eight_disconnected_leaf_side_completion.md)
 - [`hc_opposite_shore_minor_response_incompatibility.md`](results/hc_opposite_shore_minor_response_incompatibility.md)
 - [`hc7_opposite_critical_edge_transition.md`](results/hc7_opposite_critical_edge_transition.md)
 - [`hc7_common_host_double_contraction_lock_allocation.md`](results/hc7_common_host_double_contraction_lock_allocation.md)
+- [`hc7_two_deleted_edge_generalized_kempe_fork.md`](results/hc7_two_deleted_edge_generalized_kempe_fork.md)
+- [`hc7_reachability_maximal_kempe_normal_form.md`](results/hc7_reachability_maximal_kempe_normal_form.md)
+- [`hc7_disjoint_palette_two_edge_coupling.md`](results/hc7_disjoint_palette_two_edge_coupling.md)
+- [`hc7_double_equality_boundary_criticality.md`](results/hc7_double_equality_boundary_criticality.md)
+- [`hc7_planar_boundary_critical_core_tight_case.md`](results/hc7_planar_boundary_critical_core_tight_case.md)
+- [`hc7_two_vertex_fixed_boundary_core_completion.md`](results/hc7_two_vertex_fixed_boundary_core_completion.md)
+- [`hc7_facial_triangle_removable_path_normalization.md`](results/hc7_facial_triangle_removable_path_normalization.md)
 - [`hc7_theta_two_defect_exchange.md`](results/hc7_theta_two_defect_exchange.md)
 - [`hc7_mixed_shore_two_component_exchange.md`](results/hc7_mixed_shore_two_component_exchange.md)
 - [`hc7_boundary_anchored_model_completion.md`](results/hc7_boundary_anchored_model_completion.md)

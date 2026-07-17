@@ -122,6 +122,14 @@ from planar routing alone: the required terminal pairs alternate on its
 outer frame.  The next step must use contraction-critical colouring data
 or a different minor model.
 
+The planar skeleton of that canonical web is now known to be
+[four-connected](../results/hc7_canonical_web_skeleton_four_connected.md),
+as is either maximal-planar augmentation by an outer diagonal.  This is a
+uniform structural strengthening.  Thomassen's Hamiltonian-connectedness
+theorem nevertheless does not lift a labelled solution: the skeleton is a
+completion supergraph of the literal quotient, and the required pairing is
+the alternating outer-face linkage excluded by planarity.
+
 ## 4. Host-level colouring invariant
 
 Let
@@ -201,6 +209,67 @@ five-degenerate, regular, planar, or `K_5`-minor-free.  Connectivity of the
 colouring graph must therefore be proved from the exact host hypotheses or
 retained as a genuine alternative.
 
+Three audited uniform colouring results now sharpen the double-equality
+branch without assuming Kempe connectivity.
+
+1. The [generalized two-edge Kempe fork](../results/hc7_two_deleted_edge_generalized_kempe_fork.md)
+   either returns one of the one-edge-restoration responses or gives a
+   fixed-end path whose colours follow a prescribed cyclic permutation.
+2. Maximizing its reachable set gives the
+   [reachability-maximal normal form](../results/hc7_reachability_maximal_kempe_normal_form.md):
+   unless a response appears, the reachable set is the entire relevant
+   three-colour component; opposite cyclic paths put the edge ends in its
+   unique source strong component.
+3. For disjoint natural three-colour supports, the
+   [two-edge palette coupling](../results/hc7_disjoint_palette_two_edge_coupling.md)
+   forbids two simultaneous response rotations and forces one named edge
+   to have fixed-end paths in both cyclic orders.  This is a genuine
+   coupling, but its paths may still meet the other five-clique's three
+   reserved vertices.
+
+The fixed-boundary obstruction has also been made structural.  A
+simultaneous-equality boundary partition is repairable on at most one
+closed shore.  On a nonrepairable shore, each alternate colour gives an
+endpoint path or two disjoint first-hit paths to the literal boundary, and
+a minimal induced list-critical core contains the restored edge.  On the
+planar leaf side, the tight vertices of this core induce a Gallai forest
+and
+
+\[
+ \sum_v c(v)=6|K|-2|E(K)|+\sum_v\varepsilon(v)
+             \ge 12+\sum_v\varepsilon(v),
+\]
+
+where `c(v)` counts distinct boundary colours seen and `epsilon(v)` is
+list-degree excess.  The audited
+[tight-core theorem](../results/hc7_planar_boundary_critical_core_tight_case.md)
+eliminates the entire zero-slack `K_4` family by an explicit `K_7` model.
+The independently audited
+[two-vertex completion](../results/hc7_two_vertex_fixed_boundary_core_completion.md)
+also eliminates the crossed-frame edge by a boundary-endpoint selection
+and seven explicit branch sets.  Its exact residue is therefore the facial
+triangle at the opposite outer edge or positive slack at least thirteen.
+
+The facial-triangle branch has a further unbounded normalization.  By the
+[removable-path theorem](../results/hc7_facial_triangle_removable_path_normalization.md),
+there is a path from the third facial vertex to a first vertex of `R`
+which avoids both leaves and the other two vertices of `R`, and whose
+deletion leaves `G` connected.  Splitting this path into its facial and
+`R` sides gives six of the seven required branch sets.  The exact missing
+step is to choose the split so that the facial side retains both remaining
+`R` adjacencies and the connected complement retains one subgraph adjacent
+to all six reserved sets.
+
+None of these conclusions alone supplies the missing labelled linkage.
+The audited barriers show this sharply: opposite cyclic paths may remain
+inside the planar web even when their whole three-colour component is
+strongly connected; two disjoint five-cliques can realize both cyclic
+paths on complementary palettes at treewidth five; and even an
+eight-connected seven-chromatic local lock example can fail every
+trace-preserving repair while containing a `K_7` minor.  The next theorem
+must therefore combine the critical core or reachability normal form with
+the canonical missing linkage and the true host hypotheses.
+
 ## 5. Exact matched-pair traces
 
 Fix a perfect matching `M` of `F`.  For every pair `{a,b} in M` and either
@@ -244,6 +313,24 @@ component plus a universal boundary vertex remain, it constructs the
   do not by themselves align branch-set labels.  A successful transition
   must display the `K_7` branch sets, a common boundary partition, or the
   exact separator/support output.
+- Oppositely ordered generalized-Kempe paths, even when their entire
+  three-colour component is strongly connected, do not force the missing
+  rooted linkage in a five-connected quotient; see the
+  [canonical-web barrier](../barriers/hc7_balanced_order8_two_missing_colour_paths.md).
+- Disjoint natural palettes and four fixed-end replacement paths across two
+  disjoint five-cliques do not force a `K_7` minor; see the
+  [width-five barrier](../barriers/hc7_disjoint_palette_two_edge_decoder_barrier.md).
+- Planarity of the leaf side, exact boundary locks, and local
+  list-criticality do not force a repair: the
+  [eight-connected lock barrier](../barriers/hc7_balanced_order8_double_equality_lock_barrier.md)
+  contains a `K_7` minor and is nonminimal, so the canonical web,
+  `K_7`-minor exclusion, and minor-minimality remain essential.
+- The common-two-list facial triangle is not a static completion theorem.
+  The [verified facial-triangle barrier](../barriers/hc7_facial_triangle_static_completion_barrier.md)
+  has the balanced boundary, both full shores and five-cliques, and the
+  canonical missing linkage, but has no `K_7` minor.  Its noncanonical
+  three-cuts and six-colourability identify precisely where cut rigidity
+  or proper-minor response data must enter.
 - Even Kempe connectivity between the two response families is
   insufficient: the audited
   [opposite-response barrier](../barriers/hc7_opposite_response_kempe_bridge_barrier.md)
@@ -264,6 +351,7 @@ Read each promoted theorem with its adjacent audit:
 - [endpoint-contact rigidity](../results/hc7_star_order_eight_endpoint_contacts.md)
 - [elimination of the no-perfect-matching shifted residue](../results/hc7_shifted_boundary_completion.md)
 - [canonical rooted-web localization](../results/hc7_star_order_eight_rooted_web.md)
+- [four-connectivity of the canonical web skeleton](../results/hc7_canonical_web_skeleton_four_connected.md)
 - [asymmetric shore split](../results/hc7_star_order_eight_asymmetric_shore_split.md)
 - [split-edge completion](../results/hc7_star_order_eight_split_edge_completion.md)
 - [completion after deleting the two clique vertices disconnects their shore](../results/hc7_star_order_eight_disconnected_leaf_side_completion.md)
@@ -271,6 +359,13 @@ Read each promoted theorem with its adjacent audit:
 - [direct Kempe transition between the opposite critical edges](../results/hc7_opposite_critical_edge_transition.md)
 - [common two-edge-deletion `K_6` fork](../results/hc7_common_edge_deletion_k6_fork.md)
 - [common double-contraction response](../results/hc7_common_host_double_contraction_lock_allocation.md)
+- [generalized two-edge Kempe fork](../results/hc7_two_deleted_edge_generalized_kempe_fork.md)
+- [reachability-maximal cyclic normal form](../results/hc7_reachability_maximal_kempe_normal_form.md)
+- [disjoint-palette two-edge coupling](../results/hc7_disjoint_palette_two_edge_coupling.md)
+- [boundary-preserving double-equality criticality](../results/hc7_double_equality_boundary_criticality.md)
+- [planar tight-core structure and zero-slack `K_4` closure](../results/hc7_planar_boundary_critical_core_tight_case.md)
+- [explicit completion of the two-vertex critical core](../results/hc7_two_vertex_fixed_boundary_core_completion.md)
+- [removable-path normalization of the facial-triangle core](../results/hc7_facial_triangle_removable_path_normalization.md)
 - [uniform compact-model boundary completion](../results/hc_uniform_boundary_repair_completion.md)
 
 The broader dependency chain and the still-open branches are recorded in
