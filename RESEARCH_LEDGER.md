@@ -6,13 +6,77 @@
 This file records the current mathematical dependency chain. The concise
 list of live files is [`active/INDEX.md`](active/INDEX.md), and the current
 technical statement is
-[`active/hc7_adjacent_pair_palette_model_frontier.md`](active/hc7_adjacent_pair_palette_model_frontier.md).
+[`active/hc7_bounded_interface_synchronization_frontier.md`](active/hc7_bounded_interface_synchronization_frontier.md).
 If an archived note conflicts with this ledger, this ledger governs the
 current programme. The balanced order-eight, two-root, and support-six
 sections retain developed dependency chains but are not by themselves the
 current engine.
 
-## Current strategic frontier: adjacent-pair colouring and rooted models
+## Current strategic frontier: bounded full separators and pole-free bridges
+
+The present entry theorem is global.  Every hypothetical minor-minimal
+counterexample contains a vertex `u` of degree seven, eight, or nine and a
+component `C` of `G-N[u]` whose full boundary `S=N(C)` has order seven,
+eight, or nine.  The boundary is four-colourable, has independence number
+at most four, and both closed shores realize every nonempty independent
+subset of `S` as an exact boundary colour block.  Contracting `C` also
+shows that `overline(K_2) join G[S]` is a `K_7`-minor-free minor.
+
+The adjacent-pair colouring can be aligned with this same interface.  At
+least seven neighbours of `u` meet the exterior.  If all those incident
+edges were double-critical, those neighbours would have at least five
+neighbours in `G[N(u)]`; every remaining neighbour has at least six there
+because it has no exterior neighbour.  The audited degree-seven/eight/nine
+local completion then gives a `K_7` minor.  Hence one may choose
+
+\[
+ z\in S,\qquad \chi(G-\{u,z\})=6.
+\]
+
+Every six-colouring of the edge deletion `G-uz` makes `u,z`
+monochromatic.  On the `C`-shore it gives an exact singleton boundary
+block `{z}`; its complete equality partition cannot extend through the
+opposite original shore.  At degree seven this normalizes to one boundary
+nonedge of the other six vertices and four further singletons.
+
+Two unbounded branches are now closed.  If `G[S]` is split, exact-block
+attainability forces both shores to realize the unique partition consisting
+of the independent part and singleton clique vertices, so they glue.  This
+is sharp at the static level: every nonsplit four-colourable boundary has
+an abstract even/odd partition-language obstruction.  Separately, if the
+boundary has an adjacent pair complete to a two-connected remainder and
+the two open shores are connected and full, Martinsson--Steiner's rooted
+`K_4` planarity lemma gives either an explicit `K_7` model or a planar
+embedding after deleting the pair, contradicting the required `K_5`
+minor.  This strictly generalizes the earlier induced-cycle completion
+theorem.
+
+The remaining nonsplit case now carries literal paths rather than only
+abstract colour responses.  For every `x in S`, the exact-singleton
+boundary cylinder is Kempe-connected: after deleting `x`, the boundary is
+four-degenerate by Mader's density bound, and Las Vergnas--Meyniel applies
+with five colours.  Starting from a six-colouring of the edge deletion
+`G-ux` and lifting a boundary Kempe sequence toward an opposite-shore
+colouring, the first failed lift gives a bichromatic path avoiding `u,x`.
+Its interior lies wholly in one open shore.  On the `u`-side it traverses
+at most three other components of `G-N[u]`, each adjacent to all but at
+most two vertices of `S`.
+
+The exact open theorem is the **pole-free bridge composition theorem**.
+The paths forced for the boundary vertices must yield an explicit
+`K_7`-minor model, a common boundary equality partition, or another valid
+bounded full separation with a strictly smaller literal anti-neighbourhood
+component and the named edge-deletion response preserved.  The immediate
+milestone is to make two failed Kempe lifts compatible at their literal
+first-hit vertices.  Equality partitions alone cannot do this; the parity
+barrier proves that the host paths or labelled branch sets are essential.
+
+This reduction does not prove `HC_7`.  The bridge-composition theorem is
+theorem-strength and remains open.  The older component-defect programme
+below is retained as a secondary source of explicit labelled branch-set
+splits, not as a competing primary spine.
+
+## Secondary structural laboratory: adjacent-pair colouring and rooted models
 
 A new audited reduction supplies a uniform entry point in every hypothetical
 minor-minimal counterexample.  Kawarabayashi--Pedersen--Toft's theorem for
