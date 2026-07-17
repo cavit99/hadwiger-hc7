@@ -96,11 +96,10 @@ following.
 2. `G` has an actual order-seven separation whose boundary colouring is
    induced by proper-minor six-colourings on both sides.
 
-The former two-vertex `K_5`-model-transversal outcome feeds into item 2 only
-at the level of raw separation existence: in the present host it
-forces a degree-seven vertex and an actual order-seven separation, but it
-does not supply compatible shore colourings and therefore does not close
-item 2.
+A two-vertex `K_5`-model transversal is separately terminal: deleting it
+leaves a four-colourable `K_5`-minor-free graph, so two fresh colours
+six-colour `G`.  It need not first be converted into a colour-compatible
+separation.
 
 The statement is intentionally tied to the lifted host `G`.  It is false
 for arbitrary four-chromatic `R` with two colourful sets, even when `R` is
@@ -162,8 +161,8 @@ The constructive programme is therefore:
 3. use distributed attachments in `X` and the other three branch sets to
    reroute the deficient branch set or construct `K_7`; and
 4. if this is impossible, reduce (4.2) to an order-seven boundary carrying
-   compatible proper-minor colourings; if a global two-vertex transversal
-   is obtained, invoke the promoted theorem to obtain that separation.
+   compatible proper-minor colourings; a global two-vertex transversal is
+   already a direct six-colouring contradiction.
 
 In the unique-deficiency case, `C_j,u,z,X` and the other three branch sets
 already form a `K_7`-minus-one-edge model, missing only the adjacency
@@ -228,6 +227,31 @@ equality partition.  Failure returns `N_G(Y)` for a named connected residual
 piece `Y` with both shores nonempty.  A proper-minor operation inside `L` is
 only a probe; its conclusion must lift back to `G`.
 
+The conditional two-tree branch now supplies a fixed labelled
+`K_7^-`-minor model.  The five common branch sets and a second deficient
+branch set survive every operation inside `L`.  For an internal edge
+`xy`, either `G-{x,y}` is five-chromatic and the common neighbourhood of
+`x,y` meets all five colour classes, or it is six-chromatic and obeys the
+exact two-pole missing-colour cover.  Meeting all five *named* common branch
+sets in the first branch gives `K_7` immediately.  The unresolved issue is
+the alignment of those colour witnesses with the named branch sets; an
+unrooted regenerated model does not address it.
+
+The entire labelled two-tree also admits a uniform host compression.  It
+contains a rainbow induced `K_4^-`, and the shared edge separates its two
+nonadjacent vertices in the contact graph.  After lifting and absorbing
+adjacent outside components, one obtains an actual separation whose
+connected near shore has full neighbourhood contained in the five common
+branch sets of the resulting labelled `K_7^-` model; the other deficient
+branch set lies on the far side.  The order is at least seven.  No upper
+bound or common boundary colouring follows from this geometry alone.
+
+When `G-{x,y}` is five-chromatic, every five-colouring uses all colours on
+the common-neighbour set, and any rainbow transversal roots
+`F_5=K_1\vee P_4`.  Together with `{x},{y}` this gives an explicit
+`K_2\vee F_5` minor.  Three path-completion chords remain unsupported, and
+the common-neighbour witnesses avoid endpoint-private named branch sets.
+
 An elementary minor operation in the five-chromatic core leaves a four- or
 five-chromatic core.  In the four-chromatic branch, the common attachment
 set for the two bipartition classes of `X` is colourful and roots a `K_4`
@@ -238,6 +262,29 @@ exact common-hole law.  Merely alternating between independently generated
 models, rereading the repeated quotient colour, or optimizing a shortest
 locked subpath gives no descent.
 
+For an oriented `K_7^-` model chosen globally with a minimum deficient
+branch set, that branch set is a singleton or an induced path.  In the
+non-atomic path case, five-connectivity forces a five-fan collision in one
+named branch set; in the balanced endpoint pattern this returns an actual
+full-neighbourhood separation.  The missing upper bound on its boundary
+contribution is genuinely chromatic rather than geometric.
+
+Every reversible connected-subgraph rotation also returns two named
+critical edges on opposite sides of the same full-neighbourhood separation.
+Their deletion and contraction response languages are oppositely oriented,
+and any common boundary equality partition six-colours `G`.  This is the
+current label-faithful colouring interface.  What is not proved is the
+response collision itself, an exact order-seven boundary, or preservation
+of a strictly smaller full defect-one configuration.
+
+At exact order seven, every boundary-vertex deletion is
+`K_5`-minor-free.  The only five-chromatic boundary is `K_2\vee C_5`; its
+two open shores are connected, and deleting the universal pair leaves an
+unrooted `K_5` minor but no model rooted at the five cycle vertices.  A
+nonempty uniquely five-colourable trace cannot occur.  Accordingly the
+exact-seven continuation is label-preserving rooted-model rerouting or an
+opposite-shore response collision, rather than a rigid-trace splice.
+
 ## 5. Immediate dependencies and barrier
 
 - [deficient-component separator theorem](../results/hc7_maximal_rooted_k4_deficient_component_separator.md)
@@ -246,6 +293,17 @@ locked subpath gives no descent.
 - [fixed-path exchange or separation](../results/hc7_colour_matched_path_exchange_or_separator.md)
 - [all-cut interval and component-defect criterion](../results/hc7_colour_matched_path_all_cut_interval_exchange.md)
 - [component-contact defect theorem and two-tree equality structure](../results/hc7_component_contact_defect_theorem.md)
+- [normal form around a lifted simplicial component](../results/hc7_defect_one_simplicial_normalization.md)
+- [path normal form for a distinguished sixth branch set](../results/hc7_minimal_sixth_branch_set_path.md)
+- [attachment forcing from proper-minor colourings](../results/hc7_edge_response_attachment_forcing.md)
+- [labelled near-`K_7` model and internal-edge colouring fork](../results/hc7_defect_one_near_k7_edge_fork.md)
+- [rainbow-diamond separation in the four-labelled two-tree](../results/hc7_defect_one_rainbow_diamond_separator.md)
+- [connected deficient-branch-set trichotomy](../results/hc7_connected_one_hole_trichotomy.md)
+- [common-neighbour-rooted fan at a double-critical edge](../results/hc7_double_critical_edge_rooted_fan.md)
+- [fan collision at a globally minimum deficient branch set](../results/hc7_near_k7_minimal_path_fan_collision.md)
+- [oppositely oriented boundary responses at a reversible rotation](../results/hc7_rotation_opposite_boundary_responses.md)
+- [two-vertex `K_5`-model transversals contradict seven-chromaticity](../results/hc7_two_vertex_k5_transversal_chromatic_obstruction.md)
+- [classification and no-rigid-trace theorem for exact seven-vertex boundaries](../results/hc7_exact7_no_rigid_trace.md)
 - [one-step minor dynamics and the exact common-hole law](../results/hc7_star_core_one_step_minor_dynamics.md)
 - [contracted-path list obstruction](../results/hc_contracted_path_list_lock.md)
 - [two-vertex transversal implies an order-seven separation](../results/hc7_k5_transversal_order7_separator.md)
@@ -253,6 +311,7 @@ locked subpath gives no descent.
 - [planar four-connected paired-root barrier](../barriers/hc7_paired_colourful_planar_core_barrier.md)
 - [connectivity-only near-`K_7` augmentation hardness](../barriers/hc7_eight_connected_near_k7_augmentation_hardness.md)
 - [shortest-lock orbit barrier](../barriers/hc7_contracted_path_shortest_lock_orbit_barrier.md)
+- [`K_{3,5}` boundary-language obstruction without a two-vertex transversal](../barriers/hc7_k35_no_common_state_or_two_vertex_transversal.md)
 
 ## 6. Established external input
 

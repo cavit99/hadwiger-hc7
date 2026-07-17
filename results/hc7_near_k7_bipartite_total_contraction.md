@@ -424,7 +424,7 @@ and a clique model.
 ### Theorem 3.1 (balanced palette-carrier completion)
 
 Retain Theorem 2.2.  Suppose there are pairwise disjoint connected
-subgraphs
+subgraphs contained in `G-X`
 
 \[
                          D_\beta\quad(\beta\in Q-\{a\})       \tag{3.1}
