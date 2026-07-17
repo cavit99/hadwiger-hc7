@@ -51,6 +51,37 @@ exclusive branch sets.  The theorem does not bound a returned separator
 from above and does not identify colour classes with prescribed minor-model
 branch sets.
 
+An audited barrier fixes the exact scope of this improvement.  A
+seven-connected `K_7`-minor-free planar-join construction realizes the
+entire static three-common-singleton profile, including an exactly
+six-chromatic adjacent-pair deletion, all five buffer-colour Kempe
+connections, and the two disjoint exclusive-to-exclusive paths.  No
+contact-increasing model change is possible.  The construction instead has
+an order-seven separator and a fixed two-vertex planarizing set, and the
+host itself is only six-chromatic.  Thus the next theorem must use the
+nonextendability forced by `chi(G)=7`, while retaining both structural exits.
+
+The colouring mechanism has also been extracted in a uniform,
+label-preserving form.  Let `Q` be any nontrivial connected induced
+bipartite subgraph of a minor-minimal `k`-chromatic graph.  After contracting
+`Q`, both bipartition sides see every other colour, and every such colour
+has a common two-colour component adjacent to both sides.  Concentrated
+support rotates the contracted colour exactly and has contacts in every
+untouched colour; diffuse or one-sided support exposes the full literal
+separator of a support component.  Choosing `Q` inside one branch set of a
+clique-minor model preserves that model label and all pre-existing row
+adjacencies.  The theorem does not yet make the two bipartition sides
+connected branch sets or align the five support components with five named
+external model rows.
+
+The exact rotation normal form prevents a false global invariant.  Once a
+concentrated pole transition is normalized back to the original buffer
+name, it swaps only inactive two-colour components.  Every such component
+is anticomplete to the poles and lies behind a four-coloured-boundary
+separator of order at least seven.  If no inactive component occurs
+anywhere in the orbit, all rotations are merely global colour relabellings
+and leave every coordinate of the fixed model/path score unchanged.
+
 The primary open theorem is to choose the eligible edge, colouring, five
 paths, and spanning model jointly and turn them into one of:
 
@@ -61,18 +92,22 @@ paths, and spanning model jointly and turn them into one of:
 4. a strict improvement in the joint path/model invariant.
 
 The first concrete milestone is the exact three-common-branch-set case:
-compose its two or more exact missing-colour rotations with the spanning
-model to transfer a connected part into the uncontacted branch set, split
-an exclusive branch set into a `K_7` model, or turn the exposed separator
-into a five-vertex separator in `H` and hence an order-seven separator in
-`G`.  Colour contacts alone remain insufficient; actual intersections with
-the six branch sets must be retained.
+choose a connected induced bipartite split candidate inside a named row,
+then package its five common support components against the five external
+model labels.  Success gives a contact-increasing transfer or a `K_7`
+model; failure must yield a five-vertex separator in `H`, hence an
+order-seven colour-compatible separator in `G`, or the same global
+two-vertex `K_5`-minor transversal.  Colour contacts alone remain
+insufficient; actual intersections with the six branch sets must be
+retained.
 
-Four results are now promoted with separate GREEN audits:
+Six results are now promoted with separate GREEN audits:
 
 - [`hc7_global_adjacent_pair_palette_frame.md`](results/hc7_global_adjacent_pair_palette_frame.md)
 - [`hc7_adjacent_pair_palette_linkage.md`](results/hc7_adjacent_pair_palette_linkage.md)
 - [`hc7_adjacent_pair_bichromatic_support_dichotomy.md`](results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
+- [`hc_bipartite_contraction_palette_dichotomy.md`](results/hc_bipartite_contraction_palette_dichotomy.md)
+- [`hc7_concentrated_rotation_normalization.md`](results/hc7_concentrated_rotation_normalization.md)
 - [`hc7_outer_edge_canonical_k6_rotation.md`](results/hc7_outer_edge_canonical_k6_rotation.md)
 
 The last result locates the balanced order-eight laboratory within this

@@ -65,6 +65,24 @@ root-facing side of that component has a neighbour in each of the other four
 colour classes.  Equality in the separator lower bound gives order seven;
 no upper bound is known.
 
+The audited bipartite-contraction theorem extends this mechanism from the
+two poles to any nontrivial connected induced bipartite subgraph `Q` of a
+minor-minimal chromatic graph.  In every colouring after contracting `Q`,
+both bipartition sides see all five other colours, and each colour supplies
+a common bichromatic component adjacent to both sides.  Concentrated
+support rotates the contracted colour; diffuse or one-sided support gives
+the exact literal separator of a support component.  If `Q` is chosen
+inside one model branch set, its contraction preserves that branch-set
+label and all old model adjacencies.
+
+There is also an exact limit on the rotation mechanism.  After normalizing
+a concentrated pole rotation back to the old buffer-colour name, it swaps
+precisely the inactive two-colour components.  Each inactive component is
+anticomplete to both poles and lies behind a separator contained in `H`
+whose boundary uses only the other four colours.  If there is no inactive
+component anywhere in the transition orbit, every rotation is merely a
+global colour relabelling and cannot improve a fixed model/linkage score.
+
 ## 3. Primary open theorem
 
 ### Palette-linked `K_6` exchange theorem
@@ -103,10 +121,10 @@ invariants.
 
 The first proof obligation is the exact three-common-branch-set case.
 Let `F_z,F_u` be the two exclusive branch sets and `F_0` the branch set
-contacted by neither pole.  At least two colours absent from the three
-common singleton portals now each give an actual separator or a
-concentrated reversible two-colour component joining `F_z` to `F_u`.
-Use these components together with the spanning model to prove one of:
+contacted by neither pole.  Choose a nontrivial induced bipartite subgraph
+`Q` inside one of these named rows as a proposed split and apply the
+contraction palette theorem.  Its five common support components must be
+packaged against the five other model labels to prove one of:
 
 1. a connected part can be transferred from `F_z` or `F_u` into `F_0`
    while preserving all five old branch-set adjacencies, increasing
@@ -114,9 +132,9 @@ Use these components together with the spanning model to prove one of:
 2. one exclusive branch set can be split into two connected parts which,
    after absorbing `z,u` appropriately, give a `K_7` model; or
 3. every such transfer is blocked by one actual separator, and the
-   five-connectivity of `H`, minor-critical colourings, and the exact
-   missing-colour rotations reduce that separator to order five in `H`,
-   hence order seven in `G`.
+   five-connectivity of `H` plus the two proper-minor colourings reduce
+   that separator to order five in `H`, hence order seven in `G`; or
+4. the same two vertices meet every `K_5`-minor model in `G`.
 
 A proof must track actual vertices and branch-set adjacencies.  It is not
 enough to contract each branch set to one quotient vertex or to retain only
@@ -141,6 +159,12 @@ or explicitly identified as using additional balanced-boundary data.
 - The join of `K_2` with the icosahedron shows that connectivity, a
   spanning `K_6` model, and large pole contact can end in a genuine
   separator or coherent two-vertex obstruction rather than a `K_7` model.
+- A sharper audited planar-join construction realizes the exact
+  three-common-singleton profile, buffer-colour saturation, all five Kempe
+  connections, and the two exclusive-to-exclusive paths while forbidding
+  every contact increase.  Its valid outputs are an order-seven separator
+  and the universal two-vertex planarizing set; the host is six- rather
+  than seven-chromatic.
 - Five disjoint paths retain a palette permutation, not the individual
   colour pairing along each path.
 - Static exact traces on a boundary can have disjoint extension languages.
@@ -157,11 +181,14 @@ or explicitly identified as using additional balanced-boundary data.
 - [global adjacent-pair palette frame](../results/hc7_global_adjacent_pair_palette_frame.md)
 - [palette-permutation linkage and contact consequences](../results/hc7_adjacent_pair_palette_linkage.md)
 - [bichromatic support and exact missing-colour rotation](../results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
+- [palette dichotomy for contracted induced bipartite subgraphs](../results/hc_bipartite_contraction_palette_dichotomy.md)
+- [concentrated-rotation normalization and separator](../results/hc7_concentrated_rotation_normalization.md)
 - [two-pole contact and branch-set split](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 - [canonical balanced deletion model and reversible exchange](../results/hc7_outer_edge_canonical_k6_rotation.md)
 - [balanced order-eight technical laboratory](hc7_balanced_order8_frontier.md)
 - [endpoint-only delta-matroid barrier](../barriers/hc7_labelled_mader_delta_enrichment_barrier.md)
 - [static exact-trace parity barrier](../barriers/hc7_aligned_matching_exact_trace_parity_barrier.md)
+- [exact three-common-branch-set two-apex barrier](../barriers/hc7_three_common_geodesic_two_apex_barrier.md)
 
 ## 8. Primary external inputs
 

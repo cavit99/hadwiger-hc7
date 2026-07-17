@@ -21,15 +21,19 @@ Immediate proved inputs, each with its adjacent audit:
 - [global adjacent-pair palette frame](../results/hc7_global_adjacent_pair_palette_frame.md)
 - [palette-permutation linkage and contact consequences](../results/hc7_adjacent_pair_palette_linkage.md)
 - [bichromatic support and exact missing-colour rotation](../results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
+- [palette dichotomy for a contracted induced bipartite subgraph](../results/hc_bipartite_contraction_palette_dichotomy.md)
+- [normal form and separator for concentrated colour rotations](../results/hc7_concentrated_rotation_normalization.md)
 - [two-pole contact and branch-set split](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 
 The first concrete milestone is the exact three-common-branch-set profile.
-For at least two colours, the two exclusive branch sets are joined by a
-concentrated bichromatic component giving an exact reversible change of the
-common missing colour, unless an actual separator is already exposed.  The
-task is to compose those rotations with the spanning model into a
-contact-increasing branch-set transfer, an explicit `K_7` model, or an
-order-seven separation carrying compatible proper-minor colourings.
+Choose an induced bipartite split candidate inside a named branch set and
+contract it.  Five common bichromatic components then join its two sides.
+The task is to package those components against the five external model
+labels, or to turn the returned literal separator into an order-seven
+colour-compatible separation or fixed two-vertex transversal.  Exact
+missing-colour rotations alone cannot improve the fixed model score: after
+normalization they only swap inactive components, each already lying behind
+a four-coloured separator.
 
 ## Label-rich laboratory
 
@@ -56,6 +60,9 @@ use the six-colouring response.
 
 - [endpoint-only delta-matroid exchange is not label-preserving](../barriers/hc7_labelled_mader_delta_enrichment_barrier.md)
 - [static exact boundary traces need not synchronize](../barriers/hc7_aligned_matching_exact_trace_parity_barrier.md)
+- [the full static three-common-branch-set profile can terminate at an
+  order-seven separator and a fixed two-vertex planarizing
+  set](../barriers/hc7_three_common_geodesic_two_apex_barrier.md)
 - five disjoint palette paths preserve endpoint colours only up to a
   permutation and need not be bichromatic;
 - an actual separator returned by a branch-set split is not automatically

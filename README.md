@@ -56,6 +56,15 @@ forcing contacts with all four untouched colour classes.  The separator
 need not yet have order seven, and these colour contacts are not yet aligned
 with specified branch sets of the spanning `K_6` model.
 
+This has now been extended uniformly.  In any minor-minimal `k`-chromatic
+graph, contracting a nontrivial connected induced bipartite subgraph forces
+both bipartition sides to see every other colour and supplies a common
+bichromatic component for each colour.  Concentrated support rotates the
+contracted colour exactly; diffuse support exposes the full literal
+separator.  Because the bipartite subgraph can be chosen inside one named
+minor branch set, this preserves more model information than the original
+two-vertex argument.
+
 Separately, an audited hand proof shows that every eight-connected
 `K_7`-minor-free graph has at least 17 vertices.  Its new elementary step
 rules out a seven-regular graph on 16 vertices in which every nonadjacent
@@ -63,13 +72,14 @@ pair has four common neighbours.  This is a global order bound, not a proof
 of the palette-to-model exchange.
 
 The immediate target is a **palette-to-model exchange theorem**: choose the
-edge, colouring, five paths, and spanning `K_6` model jointly, then reroute
-them into an explicit `K_7` model, a colour-compatible order-seven
-separation, or a global two-vertex transversal for all `K_5` minors.  The
-first exact unresolved profile has three branch sets contacted by both
-edge endpoints, one branch set contacted exclusively by each endpoint,
-and one contacted by neither; two disjoint palette paths join the exclusive
-branch sets.
+edge, colouring, common bichromatic components, and spanning `K_6` model
+jointly, then reroute them into an explicit `K_7` model, a colour-compatible
+order-seven separation, or a global two-vertex transversal for all `K_5`
+minors.  The first exact unresolved profile has three branch sets contacted
+by both edge endpoints, one branch set contacted exclusively by each
+endpoint, and one contacted by neither.  The new task is to package the
+five common support components created by a label-preserving bipartite
+contraction against those five named external branch sets.
 
 The previously developed balanced order-eight boundary remains the main
 label-rich laboratory.  There the canonical regenerated `K_6` model is
