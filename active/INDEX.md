@@ -46,8 +46,15 @@ Immediate proved inputs, each with its adjacent audit:
 - [common-neighbour-rooted fan at a double-critical edge](../results/hc7_double_critical_edge_rooted_fan.md)
 - [fan collision at a globally minimum deficient branch set](../results/hc7_near_k7_minimal_path_fan_collision.md)
 - [oppositely oriented boundary responses at a reversible rotation](../results/hc7_rotation_opposite_boundary_responses.md)
+- [connected transfer and extremal normalization of a supported near-complete model](../results/hc7_response_collision_quasi_transfer.md)
+- [bichromatic saturation or a shared-interface bypass](../results/hc7_shared_interface_bichromatic_bypass.md)
+- [Hall saturation or a leaf-to-leaf bypass at a contracted portal cone (Theorem 4.3; scoped audit)](hc7_contracted_portal_path_palette_obstruction.md#theorem-43-hall-saturation-or-a-leaf-to-leaf-bypass)
 - [two-vertex `K_5`-model transversals contradict seven-chromaticity](../results/hc7_two_vertex_k5_transversal_chromatic_obstruction.md)
 - [classification and no-rigid-trace theorem for exact seven-vertex boundaries](../results/hc7_exact7_no_rigid_trace.md)
+- [completion theorem for two full shores behind an induced cycle](../results/hc7_cycle_boundary_completion.md)
+- [completion of the pentagonal order-seven separation](../results/hc7_pentagonal_separation_completion.md)
+- [universal-edge Kempe normalization at the pentagonal boundary](../results/hc7_exact7_universal_edge_kempe_normalization.md)
+- [exposed six-block partition and same-shore Kempe paths](../results/hc7_exact7_exposed_sigma_kempe_paths.md)
 - [one-step minor dynamics and the exact common-hole law](../results/hc7_star_core_one_step_minor_dynamics.md)
 - [list-colouring obstruction on a contracted induced path](../results/hc_contracted_path_list_lock.md)
 - [two-vertex `K_5`-model transversal implies an order-seven separation](../results/hc7_k5_transversal_order7_separator.md)
@@ -133,19 +140,31 @@ The reversible rotation itself now carries a named colouring interface.
 Its unique donor-side edge and a contact edge to each newly missed branch
 set lie on opposite sides of one actual separation; their deletion and
 contraction response languages are oppositely oriented, and any common
-boundary equality partition six-colours the host.  The current theorem-level
-gap is to force that collision, an explicit `K_7` model, or a valid strict
-defect-one descent using the five named branch sets.
+boundary equality partition six-colours the host.  A new connected-transfer
+theorem supplies the first well-founded normalization in this route.  Among
+supported one-missing-adjacency models, minimize total branch-set order and
+then maximize the deficient branch set.  Every reversible outcome either
+gives a `K_7` or a smaller model, or its transferred subgraph is a
+vertex-minimal connected subgraph spanning the unique donor attachment, at
+most two selected lost-contact portals, and all vertices with neighbours
+outside the seven old branch sets.  The current theorem-level gap is now to
+eliminate this atomic connected subgraph, synchronize its opposite response
+languages, or turn its full-neighbourhood separation into an exact
+colour-compatible order-seven separation.
 
 If such a failure reaches an actual order-seven separation, the boundary
 is no longer arbitrary.  Deleting any boundary vertex leaves a
-`K_5`-minor-free graph, so the boundary is at most five-colourable; the
+`K_5`-minor-free graph, so the boundary is at most five-colourable.  The
 five-chromatic case is exactly `K_2\vee C_5`, with two connected open
-shores.  Off its two universal vertices there is an unrooted `K_5` minor
-but no model rooted at the five cycle vertices.  Unique five-colourability
-of a nonempty boundary trace is impossible.  The exact-seven closure target
-is therefore a label-preserving rerouting to that rooted model or a common
-opposite-shore boundary partition, not rigid-trace splicing.
+shores, and is now completely eliminated by a theorem valid for every
+induced cycle of length at least four.  Martinsson--Steiner's rooted `K_4`
+planarity lemma implies that either one shore supplies four rooted branch
+sets, which together with the opposite shore and the two universal
+vertices form a `K_7` model, or both shores embed in discs bounded by the
+cycle, making the graph off the universal pair planar.  Thus the remaining
+exact-seven colour-gluing problem has boundary chromatic number at most
+four.  The separate Kempe-normalization results record sharper geometry in
+the now-closed pentagonal case but are no longer needed to close it.
 
 Every internal edge of `L` has an audited five-or-six chromatic response.
 In the five-colour branch it is double-critical: ordered generalized Kempe

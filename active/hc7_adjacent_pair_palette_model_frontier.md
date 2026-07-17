@@ -340,20 +340,36 @@ newly missed named branch set lie on opposite sides of one actual
 separation.  Edge deletion and contraction induce the same labelled
 boundary response language for each edge, and the two languages lie in
 opposite extension differences.  A common equality partition is terminal.
-The exact remaining theorem is therefore an intersection of these two
-labelled response languages—or an explicit `K_7`, a direct two-vertex
-`K_5`-model transversal contradiction, or a valid strict defect-one
-descent—not another unlabelled path construction.
+
+A connected-transfer theorem now adds a genuine extremal invariant.  Among
+all supported one-missing-adjacency models in the fixed host, minimize the
+sum of the seven branch-set orders and, subject to that, maximize the order
+of the deficient branch set.  Any reversible transfer either gives a
+`K_7`, strictly lowers the first coordinate, or forces the transferred
+subgraph to be a vertex-minimal connected subgraph spanning the unique
+donor attachment, at most two selected lost-contact portals, and every
+vertex with a neighbour outside the seven old branch sets.  In the
+shared-endpoint subcase, a simultaneous-contraction colouring gives either
+five-colour bichromatic saturation at one named edge or a three-colour
+bypass of the donor attachment.  The exact remaining theorem is therefore
+to eliminate this atomic connected subgraph, collide its two labelled
+response languages, or convert its full-neighbourhood separation into an
+exact colour-compatible order-seven separation—not another unlabelled path
+construction.
 
 An actual order-seven output is now canonical enough to be a separate
 rooted-model problem.  Every boundary-vertex deletion is `K_5`-minor-free,
-so the boundary is at most five-colourable.  Equality gives precisely
-`K_2\vee C_5`, two connected open shores, and an unrooted `K_5` model off
-the two universal vertices; that model cannot be rooted at the five cycle
-vertices.  No nonempty uniquely five-colourable boundary trace survives.
-Thus the sharp exact-seven task is to reroute that unrooted model to the
-five named roots or force a common shore partition, not to search for a
-rigid boundary trace.
+so the boundary is at most five-colourable.  The equality case
+`K_2\vee C_5` is now closed completely by a theorem valid for every induced
+cycle of length at least four with two connected full shores.  Each shore
+together with the cycle is three-connected and the cycle is spread out.
+By Martinsson--Steiner, either one shore has a cycle-rooted `K_4`, which
+with the opposite shore and the two universal singleton vertices is an
+explicit `K_7` model, or both shores have planar apex completions and glue
+to a planar graph after deleting the universal pair.  The latter
+contradicts the forced `K_5` minor there.  Hence any unresolved exact
+order-seven colour-gluing output has boundary chromatic number at most
+four.
 
 The old five-support/spanning-`K_6` packaging remains a falsification suite
 and label-rich source of candidate reroutings, but it is no longer the
@@ -437,8 +453,14 @@ or explicitly identified as using additional balanced-boundary data.
 - [common-neighbour-rooted fan at a double-critical edge](../results/hc7_double_critical_edge_rooted_fan.md)
 - [fan collision at a globally minimum deficient branch set](../results/hc7_near_k7_minimal_path_fan_collision.md)
 - [oppositely oriented boundary responses at a reversible rotation](../results/hc7_rotation_opposite_boundary_responses.md)
+- [connected transfer and extremal normalization](../results/hc7_response_collision_quasi_transfer.md)
+- [shared-interface bichromatic bypass](../results/hc7_shared_interface_bichromatic_bypass.md)
 - [two-vertex `K_5`-model transversals contradict seven-chromaticity](../results/hc7_two_vertex_k5_transversal_chromatic_obstruction.md)
 - [classification and no-rigid-trace theorem for exact seven-vertex boundaries](../results/hc7_exact7_no_rigid_trace.md)
+- [completion theorem for two full shores behind an induced cycle](../results/hc7_cycle_boundary_completion.md)
+- [pentagonal order-seven separation completion](../results/hc7_pentagonal_separation_completion.md)
+- [universal-edge Kempe normalization at the pentagonal boundary](../results/hc7_exact7_universal_edge_kempe_normalization.md)
+- [exposed six-block boundary partition and same-shore Kempe paths](../results/hc7_exact7_exposed_sigma_kempe_paths.md)
 - [one-step minor dynamics and the exact common-hole law](../results/hc7_star_core_one_step_minor_dynamics.md)
 - [contracted-path list obstruction](../results/hc_contracted_path_list_lock.md)
 - [two-vertex transversal implies an order-seven separation](../results/hc7_k5_transversal_order7_separator.md)

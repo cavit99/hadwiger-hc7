@@ -210,7 +210,7 @@ valid configuration in the original fixed graph `G`, although its rooted
 model, path, cut, and selected components may change; a component produced
 only in a proper minor is not an eligible outcome.
 
-Eleven audited results sharpen this conditional branch without claiming
+A sequence of audited results sharpens this conditional branch without claiming
 that its hypotheses are exhaustive.  First, after making the defect-one
 selection inclusion-maximal at the fixed path and cut, every omitted
 eligible component has at most one selected-component neighbour.  The
@@ -317,6 +317,38 @@ Any common equality partition therefore six-colours `G`.  This converts a
 reversible geometric rotation into a label-faithful host-level interface,
 but does not yet force the collision.
 
+The same rotation now has a genuine host-level extremal normalization.
+For seven disjoint sets, pairwise connected induced unions already force a
+`K_7` minor by the component-count density theorem.  Applying this to every
+component left after a connected transfer shows that each component either
+completes the `K_7` model or misses a named fixed branch set and exposes its
+full neighbourhood as an actual separation.  More importantly, choose a
+supported one-missing-adjacency model by minimum total branch-set order and
+then maximum deficient-centre order.  In every reversible outcome, strict
+decrease is forced unless the transferred subgraph is itself a
+vertex-minimal connected subgraph spanning the unique donor attachment, at
+most two selected lost-contact portals, and every vertex with a neighbour
+outside the seven old branch sets.  Thus the arbitrary rotation orbit has
+been reduced to one atomic connected-subgraph equality case under a
+well-founded invariant.  The theorem does not yet bound the returned
+separator by seven or synchronize the two boundary response languages.
+
+At a shared donor/contact endpoint, one simultaneous-contraction colouring
+gives a complementary refinement: either one of the two named incident
+edges is linked through a bichromatic component for every alternate colour,
+or two explicitly coupled Kempe switches create a three-colour path bypassing
+the unique donor-internal attachment.  This is label-faithful but the bypass
+may first enter the wrong fixed branch set.
+
+A scoped audited Hall extension handles any number of named edges incident
+with one contracted centre, even when their other endpoints have edges among
+themselves.  In one common six-colouring, either two named endpoints are
+joined off the centre, or three named endpoints have a deficient Hall set:
+one is bichromatically joined to the centre in all five alternate colours,
+two are each joined in at least four, or all three are each joined in at
+least three.  This retains literal endpoint names but still does not identify
+the colour components with the five protected branch sets.
+
 Tenth, a two-vertex `K_5`-model transversal cannot occur in any
 seven-chromatic graph.  This restores the coherent global-pair alternative
 as a direct proof-closing outcome, rather than a precursor to the unresolved
@@ -328,14 +360,28 @@ boundary vertices, and deleting any one boundary vertex leaves a
 `K_5`-minor-free graph.  Consequently the boundary is at most
 five-colourable; equality forces the canonical graph `K_2\vee C_5`.  In
 that equality case strong contraction-criticality forces both open shores
-to be connected (the full-packet vector is `(1,1)`).  Deleting the two
-universal boundary vertices leaves an unrooted `K_5` minor, but no `K_5`
-model rooted at the five cycle vertices, since such a rooted model together
-with the two singleton universal vertices would be an explicit `K_7`
-model.  A nonempty uniquely five-colourable boundary trace is impossible.
-Thus rigid-trace splicing is not the exact-seven closure mechanism: the
-remaining problem is a label-preserving rooted-model rerouting or an
-opposite-shore boundary-response collision.
+to be connected (the full-packet vector is `(1,1)`).
+
+That five-chromatic equality case is now eliminated completely by a
+parameter-uniform host-level theorem.  More generally, let `C` be any
+induced cycle of length at least four, let adjacent vertices `p,q` be
+complete to `C`, and suppose the remainder consists of two connected open
+shores that are each adjacent to every displayed boundary vertex.  If
+`G-\{p,q\}` has a `K_5` minor, then `G` has a `K_7` minor.  Indeed, in
+`G-\{p,q\}`, each graph
+induced by `C` and one shore is three-connected, and `C` is spread out
+across every order-three separation.  If either shore contains a
+`C`-rooted `K_4` minor, its four branch sets, the opposite shore, and the
+singletons `p,q` give an explicit `K_7` model.  Otherwise
+Martinsson--Steiner's rooted-minor planarity lemma makes both shores planar
+after adding a universal apex.  The wheel on that apex and `C` forces each
+shore into a disc bounded by `C`; gluing the two discs makes
+`G-\{p,q\}` planar, contradicting its `K_5` minor.  For the exact-seven
+boundary `K_2\vee C_5`, that minor follows from minor-criticality and
+`HC_5`.  Therefore any still-unresolved exact order-seven colour-gluing
+output has boundary chromatic number at most four.  The separately audited
+pentagonal Kempe normalizations are retained as structural tools but are
+no longer needed to close the five-chromatic boundary.
 
 The audited capped-antiprism family
 `K_2\vee H_n` is a sharp barrier to strengthening this geometry alone.  It
@@ -418,8 +464,14 @@ The current chain uses the following results with separate GREEN audits:
 - [`hc7_double_critical_edge_rooted_fan.md`](results/hc7_double_critical_edge_rooted_fan.md)
 - [`hc7_near_k7_minimal_path_fan_collision.md`](results/hc7_near_k7_minimal_path_fan_collision.md)
 - [`hc7_rotation_opposite_boundary_responses.md`](results/hc7_rotation_opposite_boundary_responses.md)
+- [`hc7_response_collision_quasi_transfer.md`](results/hc7_response_collision_quasi_transfer.md)
+- [`hc7_shared_interface_bichromatic_bypass.md`](results/hc7_shared_interface_bichromatic_bypass.md)
 - [`hc7_two_vertex_k5_transversal_chromatic_obstruction.md`](results/hc7_two_vertex_k5_transversal_chromatic_obstruction.md)
 - [`hc7_exact7_no_rigid_trace.md`](results/hc7_exact7_no_rigid_trace.md)
+- [`hc7_cycle_boundary_completion.md`](results/hc7_cycle_boundary_completion.md)
+- [`hc7_pentagonal_separation_completion.md`](results/hc7_pentagonal_separation_completion.md)
+- [`hc7_exact7_universal_edge_kempe_normalization.md`](results/hc7_exact7_universal_edge_kempe_normalization.md)
+- [`hc7_exact7_exposed_sigma_kempe_paths.md`](results/hc7_exact7_exposed_sigma_kempe_paths.md)
 - [`hc7_star_core_one_step_minor_dynamics.md`](results/hc7_star_core_one_step_minor_dynamics.md)
 - [`hc_contracted_path_list_lock.md`](results/hc_contracted_path_list_lock.md)
 - [`hc7_k5_transversal_order7_separator.md`](results/hc7_k5_transversal_order7_separator.md)
