@@ -56,6 +56,12 @@ forcing contacts with all four untouched colour classes.  The separator
 need not yet have order seven, and these colour contacts are not yet aligned
 with specified branch sets of the spanning `K_6` model.
 
+Separately, an audited hand proof shows that every eight-connected
+`K_7`-minor-free graph has at least 17 vertices.  Its new elementary step
+rules out a seven-regular graph on 16 vertices in which every nonadjacent
+pair has four common neighbours.  This is a global order bound, not a proof
+of the palette-to-model exchange.
+
 The immediate target is a **palette-to-model exchange theorem**: choose the
 edge, colouring, five paths, and spanning `K_6` model jointly, then reroute
 them into an explicit `K_7` model, a colour-compatible order-seven

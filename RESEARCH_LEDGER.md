@@ -82,6 +82,15 @@ near-complete model.  Thus model regeneration and contact maximization add
 no strict rank there; the six-colouring response is the genuinely new
 information.
 
+An independent audited consequence also rules out the smallest possible
+eight-connected host: every eight-connected `K_7`-minor-free graph has at
+least 17 vertices.  The proof combines the exact Mader--Jorgensen extremal
+case with a new elementary complement obstruction at order 16; it uses no
+finite search.  See
+[`hc7_eight_connected_order_bound.md`](results/hc7_eight_connected_order_bound.md).
+This order bound is not an additional step in the palette-to-model
+dependency chain.
+
 The exact current formulation and trust boundary are in
 [`active/hc7_adjacent_pair_palette_model_frontier.md`](active/hc7_adjacent_pair_palette_model_frontier.md).
 
