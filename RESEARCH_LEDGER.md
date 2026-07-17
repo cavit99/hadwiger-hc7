@@ -39,6 +39,18 @@ and one branch set contacted by neither pole.  The two exclusive branch
 sets contain at least two required palette colours each and are joined by
 two disjoint selected paths.
 
+A new audited theorem replaces each relevant arbitrary path by a sharper
+colouring-space fork.  For every nonbuffer colour, either its pole support
+is diffuse and the full neighbourhood of a two-colour component, together
+with one or both poles, is an actual separator, or the support is
+concentrated in one component.  In the concentrated case one Kempe
+interchange rotates the common missing colour exactly, and the root-facing
+side meets every other four colour classes.  In the three-common-branch-set
+profile this fork is available for at least two colours joining the two
+exclusive branch sets.  The theorem does not bound a returned separator
+from above and does not identify colour classes with prescribed minor-model
+branch sets.
+
 The primary open theorem is to choose the eligible edge, colouring, five
 paths, and spanning model jointly and turn them into one of:
 
@@ -49,16 +61,18 @@ paths, and spanning model jointly and turn them into one of:
 4. a strict improvement in the joint path/model invariant.
 
 The first concrete milestone is the exact three-common-branch-set case:
-use its two exclusive-to-exclusive paths to transfer a connected part into
-the uncontacted branch set, split an exclusive branch set into a `K_7`
-model, or expose a five-vertex separator in `H` and hence an order-seven
-separator in `G`.  The endpoint permutation alone is insufficient; actual
-path intersections with the six branch sets must be retained.
+compose its two or more exact missing-colour rotations with the spanning
+model to transfer a connected part into the uncontacted branch set, split
+an exclusive branch set into a `K_7` model, or turn the exposed separator
+into a five-vertex separator in `H` and hence an order-seven separator in
+`G`.  Colour contacts alone remain insufficient; actual intersections with
+the six branch sets must be retained.
 
-Three results are now promoted with separate GREEN audits:
+Four results are now promoted with separate GREEN audits:
 
 - [`hc7_global_adjacent_pair_palette_frame.md`](results/hc7_global_adjacent_pair_palette_frame.md)
 - [`hc7_adjacent_pair_palette_linkage.md`](results/hc7_adjacent_pair_palette_linkage.md)
+- [`hc7_adjacent_pair_bichromatic_support_dichotomy.md`](results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
 - [`hc7_outer_edge_canonical_k6_rotation.md`](results/hc7_outer_edge_canonical_k6_rotation.md)
 
 The last result locates the balanced order-eight laboratory within this

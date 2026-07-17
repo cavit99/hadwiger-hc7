@@ -20,13 +20,16 @@ Immediate proved inputs, each with its adjacent audit:
 
 - [global adjacent-pair palette frame](../results/hc7_global_adjacent_pair_palette_frame.md)
 - [palette-permutation linkage and contact consequences](../results/hc7_adjacent_pair_palette_linkage.md)
+- [bichromatic support and exact missing-colour rotation](../results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
 - [two-pole contact and branch-set split](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 
-The first concrete milestone is the exact three-common-branch-set profile:
-two disjoint paths join the two exclusive branch sets, while one branch set
-is contacted by neither pole.  The task is to convert those paths into a
+The first concrete milestone is the exact three-common-branch-set profile.
+For at least two colours, the two exclusive branch sets are joined by a
+concentrated bichromatic component giving an exact reversible change of the
+common missing colour, unless an actual separator is already exposed.  The
+task is to compose those rotations with the spanning model into a
 contact-increasing branch-set transfer, an explicit `K_7` model, or an
-order-seven separation carrying a named proper-minor colouring.
+order-seven separation carrying compatible proper-minor colourings.
 
 ## Label-rich laboratory
 

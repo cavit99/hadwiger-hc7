@@ -55,6 +55,16 @@ The separator in the second item has no proved upper bound.  The disjoint
 paths in the last item preserve their two endpoint palettes only up to a
 permutation and may traverse the other branch sets.
 
+The audited bichromatic-support theorem gives a further model-independent
+fork for every nonbuffer colour.  Either its pole support is split between
+more than one two-colour component, in which case the full neighbourhood of
+a support component together with one or both poles is an actual separator,
+or all pole support lies in one two-colour component.  In the latter case a
+Kempe interchange changes the common missing colour exactly, and the
+root-facing side of that component has a neighbour in each of the other four
+colour classes.  Equality in the separator lower bound gives order seven;
+no upper bound is known.
+
 ## 3. Primary open theorem
 
 ### Palette-linked `K_6` exchange theorem
@@ -93,8 +103,10 @@ invariants.
 
 The first proof obligation is the exact three-common-branch-set case.
 Let `F_z,F_u` be the two exclusive branch sets and `F_0` the branch set
-contacted by neither pole.  Use the two disjoint palette paths between
-`F_z` and `F_u` to prove one of:
+contacted by neither pole.  At least two colours absent from the three
+common singleton portals now each give an actual separator or a
+concentrated reversible two-colour component joining `F_z` to `F_u`.
+Use these components together with the spanning model to prove one of:
 
 1. a connected part can be transferred from `F_z` or `F_u` into `F_0`
    while preserving all five old branch-set adjacencies, increasing
@@ -102,8 +114,9 @@ contacted by neither pole.  Use the two disjoint palette paths between
 2. one exclusive branch set can be split into two connected parts which,
    after absorbing `z,u` appropriately, give a `K_7` model; or
 3. every such transfer is blocked by one actual separator, and the
-   five-connectivity of `H` plus the buffer-colour components reduce that
-   separator to order five in `H`, hence order seven in `G`.
+   five-connectivity of `H`, minor-critical colourings, and the exact
+   missing-colour rotations reduce that separator to order five in `H`,
+   hence order seven in `G`.
 
 A proof must track actual vertices and branch-set adjacencies.  It is not
 enough to contract each branch set to one quotient vertex or to retain only
@@ -143,6 +156,7 @@ or explicitly identified as using additional balanced-boundary data.
 
 - [global adjacent-pair palette frame](../results/hc7_global_adjacent_pair_palette_frame.md)
 - [palette-permutation linkage and contact consequences](../results/hc7_adjacent_pair_palette_linkage.md)
+- [bichromatic support and exact missing-colour rotation](../results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
 - [two-pole contact and branch-set split](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 - [canonical balanced deletion model and reversible exchange](../results/hc7_outer_edge_canonical_k6_rotation.md)
 - [balanced order-eight technical laboratory](hc7_balanced_order8_frontier.md)

@@ -49,6 +49,13 @@ vertex-disjoint paths whose endpoint colours form the two complete
 five-colour palettes.  This structure exists in every hypothetical
 minor-minimal counterexample, not only in one finite boundary case.
 
+An additional audited theorem now controls each relevant two-colour
+support.  It either exposes an actual graph separator, or gives an exact
+Kempe interchange that changes the colour missed by both endpoints while
+forcing contacts with all four untouched colour classes.  The separator
+need not yet have order seven, and these colour contacts are not yet aligned
+with specified branch sets of the spanning `K_6` model.
+
 The immediate target is a **palette-to-model exchange theorem**: choose the
 edge, colouring, five paths, and spanning `K_6` model jointly, then reroute
 them into an explicit `K_7` model, a colour-compatible order-seven
