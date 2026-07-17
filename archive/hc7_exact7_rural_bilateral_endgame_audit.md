@@ -1,6 +1,7 @@
 # Independent audit: rural bilateral endgame
 
-Audited file: `active/hc7_exact7_rural_bilateral_endgame.md`.
+Audited file: [`hc7_exact7_rural_bilateral_endgame.md`](hc7_exact7_rural_bilateral_endgame.md),
+now retained beside this audit in the archive.
 
 This audit supersedes the earlier audit of the pre-repair version of
 Lemma 4.1.  The source now states a genuinely local disk-substitution

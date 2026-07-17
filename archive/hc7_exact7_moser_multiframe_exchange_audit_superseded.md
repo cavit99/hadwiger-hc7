@@ -1,6 +1,7 @@
 # Superseded audit: HC7 exact-seven Moser four-corner exchange
 
-Audited file: `active/hc7_exact7_moser_multiframe_exchange.md`  
+The superseded audited source is not retained.  Its former working filename
+was `hc7_exact7_moser_multiframe_exchange.md`.
 Verdict on Lemma 2.1, the exact-state theorem, and new Theorem 4.1:
 **GREEN**.
 
