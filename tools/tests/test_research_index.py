@@ -40,7 +40,7 @@ class MiniRepository:
             "active/INDEX.md",
             "# Index\n\n[Target](target.md)\n\n[Theorem](../results/theorem.md)\n",
         )
-        self.write("archive/history.md", "# History\n\nA unique archival helicoid phrase.\n\n[Broken](missing.md)\n")
+        self.write("archive/history.md", "# History\n\nA unique archival helicoid phrase.\n")
         self.write_manifest(digest)
         self.commit()
 
@@ -122,7 +122,7 @@ class IntegrityTests(unittest.TestCase):
     def errors(self) -> list[str]:
         return index.validate_repository(self.repo.root, self.repo.manifest)
 
-    def test_valid_fixture_and_broken_archive_link(self) -> None:
+    def test_valid_fixture(self) -> None:
         self.assertEqual([], self.errors())
 
     def test_changed_theorem_fails_hash_and_audit(self) -> None:
@@ -151,6 +151,64 @@ class IntegrityTests(unittest.TestCase):
         database = self.repo.root / "index.sqlite"
         index.build_index(self.repo.root, self.repo.manifest, database)
         self.assertEqual([], index.search_index(database, '"Untracked quasar"', None, 10))
+
+    def test_authored_artifact_link_in_historical_document_must_be_tracked(self) -> None:
+        self.repo.write("barriers/untracked.md", "# Untracked barrier\n")
+        self.repo.write(
+            "archive/history.md",
+            "# History\n\n[Barrier](../barriers/untracked.md)\n",
+        )
+        errors = "\n".join(self.errors())
+        self.assertIn("archive/history.md:3: authored artifact reference", errors)
+        self.assertIn("barriers/untracked.md", errors)
+        self.assertIn("missing or untracked", errors)
+
+    def test_inline_code_and_plain_authored_paths_must_be_tracked(self) -> None:
+        self.repo.write(
+            "archive/history.md",
+            "# History\n\nUse `barriers/inline.md`.\n\nSee results/plain.md for details.\n",
+        )
+        errors = "\n".join(self.errors())
+        self.assertIn("barriers/inline.md", errors)
+        self.assertIn("results/plain.md", errors)
+
+    def test_reference_style_authored_link_must_be_tracked(self) -> None:
+        self.repo.write(
+            "archive/history.md",
+            "# History\n\nSee [the missing note][note].\n\n[note]: ../active/missing.md\n",
+        )
+        errors = "\n".join(self.errors())
+        self.assertIn("archive/history.md:5: authored artifact reference", errors)
+        self.assertIn("active/missing.md", errors)
+
+    def test_fenced_code_math_and_external_urls_do_not_create_artifact_references(self) -> None:
+        self.repo.write(
+            "archive/history.md",
+            textwrap.dedent(
+                r"""
+                # History
+
+                ```text
+                barriers/fenced-example.md
+                ```
+
+                $results/inline-math.md$
+
+                $$barriers/same-line-display.md$$
+
+                \[tools/same-line-tex.md\]
+
+                $$
+                archive/display-math.md
+                $$
+
+                https://example.invalid/results/external.md
+
+                The tracked file is `results/theorem.md`.
+                """
+            ).lstrip(),
+        )
+        self.assertEqual([], self.errors())
 
     def test_device_specific_path_anywhere_in_tracked_corpus_fails(self) -> None:
         device_path = "/" + "Users/example/private/file.md"

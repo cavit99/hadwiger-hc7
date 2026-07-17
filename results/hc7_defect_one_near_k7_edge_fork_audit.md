@@ -9,8 +9,8 @@ conditional defect-one configuration.
 
 ## Audited revision
 
-The audited file is
-`active/hc7_defect_one_near_k7_edge_fork.md`.
+The audited file is the promoted
+[`hc7_defect_one_near_k7_edge_fork.md`](hc7_defect_one_near_k7_edge_fork.md).
 
 **Source SHA-256:**
 `41682f92a0bbab28652e439e472e48ba61b59012d46f5d808db59c0dd20435d1`.

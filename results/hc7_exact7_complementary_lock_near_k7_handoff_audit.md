@@ -6,15 +6,18 @@ supply every abstract assumption, and the standardized trichotomy uses the
 spanning and portal hypotheses correctly.  The result is a near-model
 handoff, not a `K_7` minor or a proof that rotations terminate.
 
-Audited theorem SHA-256:
+Current theorem SHA-256:
 
 ```text
-c5e05a59aeaad6f2325b7da5f59ba877f5c28bc4788ff5ab3dd0e24758b5cfe9
+21f3fca037fd946a523eccd7beeb717189c1a7cb3e245707daef0a16bbd03db6
 ```
 
-The hash changed after the audit only because the theorem status line was
-promoted from “awaiting independent audit” to “proved and independently
-audited”; the mathematical statement and proof are unchanged.
+The mathematical revision originally audited had SHA-256
+`c5e05a59aeaad6f2325b7da5f59ba877f5c28bc4788ff5ab3dd0e24758b5cfe9`.
+The current revision changes only the stale path of the Section 3 input to
+its retained archive location.  The theorem statement, hypotheses, proof,
+and mathematical dependency are unchanged, so the GREEN verdict rebinds to
+the current hash above.
 
 ## 1. Abstract branch-set check
 

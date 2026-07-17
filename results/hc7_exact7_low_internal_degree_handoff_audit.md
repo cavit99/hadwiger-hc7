@@ -2,8 +2,8 @@
 
 **Verdict:** GREEN.
 
-**Frozen source before promotion:**
-`active/hc7_exact7_low_internal_degree_handoff.md`
+**Source before promotion:** the former active copy is not separately
+retained; its content is preserved in the promoted source below.
 
 **Promoted source:**
 `results/hc7_exact7_low_internal_degree_handoff.md`

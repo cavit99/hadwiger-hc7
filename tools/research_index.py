@@ -114,8 +114,45 @@ DEVICE_PATH_PATTERNS = (
     re.compile(r"(?i)\bfile:" + r"//"),
 )
 LINK_RE = re.compile(r"(?<!!)\[([^\]]+)\]\((<[^>]+>|[^)\s]+(?:\s+['\"][^'\"]*['\"])?)[)]")
+REFERENCE_LINK_RE = re.compile(
+    r"(?m)^\s{0,3}\[[^\]]+\]:\s*(<[^>]+>|\S+)(?:\s+['\"(].*)?$"
+)
 FENCE_RE = re.compile(r"^\s*(```+|~~~+)")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*#*\s*$")
+AUTHORED_ROOTS = {"active", "results", "barriers", "archive", "tools"}
+AUTHORED_SUFFIXES = {
+    ".md",
+    ".py",
+    ".sh",
+    ".bash",
+    ".zsh",
+    ".fish",
+    ".ps1",
+    ".toml",
+    ".yml",
+    ".yaml",
+    ".json",
+    ".txt",
+    ".tex",
+    ".rst",
+    ".ini",
+    ".cfg",
+}
+AUTHORED_PATH_RE = re.compile(
+    r"(?<![\w./-])"
+    r"(?P<path>(?:(?:\.\.?/)+)?(?:active|results|barriers|archive|tools)/"
+    r"[A-Za-z0-9_.@+%/-]+?"
+    r"(?:\.md|\.py|\.sh|\.bash|\.zsh|\.fish|\.ps1|\.toml|\.ya?ml|"
+    r"\.json|\.txt|\.tex|\.rst|\.ini|\.cfg))"
+    r"(?:#[A-Za-z0-9_.%-]+)?"
+)
+INLINE_MATH_RE = re.compile(
+    r"(?<!\\)\$\$.*?(?<!\\)\$\$|"
+    r"\\\[.*?\\\]|"
+    r"(?<!\\)\$(?!\$).*?(?<!\\)\$|"
+    r"\\\(.*?\\\)"
+)
+MATH_FENCE_RE = re.compile(r"^\s*(\$\$|\\\[|\\\])\s*$")
 
 
 class IntegrityError(RuntimeError):
@@ -141,6 +178,15 @@ class MarkdownLink:
     resolved_path: str | None
     fragment: str
     kind: str
+    valid: bool
+    error: str
+
+
+@dataclass(frozen=True)
+class AuthoredArtifactReference:
+    line: int
+    raw_target: str
+    resolved_path: str | None
     valid: bool
     error: str
 
@@ -211,6 +257,49 @@ def mask_fences(text: str) -> list[str]:
             masked.append(line)
         else:
             masked.append("")
+    return masked
+
+
+def mask_fences_and_math(text: str) -> list[str]:
+    """Mask fenced code and TeX-style math while preserving line numbers.
+
+    Inline code is deliberately retained because repository paths written in
+    backticks are authored-artifact references.  Conventional Markdown links
+    are retained for the same reason.
+    """
+    masked: list[str] = []
+    code_fence: str | None = None
+    math_fence: str | None = None
+    for line in text.splitlines():
+        code_match = FENCE_RE.match(line)
+        if code_match and math_fence is None:
+            marker = code_match.group(1)[0]
+            if code_fence is None:
+                code_fence = marker
+            elif marker == code_fence:
+                code_fence = None
+            masked.append("")
+            continue
+        if code_fence is not None:
+            masked.append("")
+            continue
+
+        math_match = MATH_FENCE_RE.match(line)
+        if math_match:
+            marker = math_match.group(1)
+            if math_fence is None and marker in {"$$", r"\["}:
+                math_fence = marker
+            elif math_fence == "$$" and marker == "$$":
+                math_fence = None
+            elif math_fence == r"\[" and marker == r"\]":
+                math_fence = None
+            masked.append("")
+            continue
+        if math_fence is not None:
+            masked.append("")
+            continue
+
+        masked.append(INLINE_MATH_RE.sub("", line))
     return masked
 
 
@@ -309,6 +398,106 @@ def extract_links(
                 error = f"unknown fragment #{fragment}"
         links.append(MarkdownLink(line_number, label, target, resolved, fragment, "local", valid, error))
     return links
+
+
+def _resolve_authored_artifact(
+    root: Path,
+    source_relative: str,
+    raw_target: str,
+    tracked: set[str],
+) -> AuthoredArtifactReference | None:
+    """Resolve a path which names one of the repository's authored areas."""
+    target = urllib.parse.unquote(raw_target).split("#", 1)[0]
+    path = PurePosixPath(target)
+    if not path.parts:
+        return None
+
+    if path.parts[0] in AUTHORED_ROOTS:
+        candidate = root / path
+    else:
+        candidate = root / PurePosixPath(source_relative).parent / path
+    if not _inside_repo(root, candidate):
+        return AuthoredArtifactReference(
+            0, raw_target, None, False, "target escapes repository"
+        )
+
+    resolved = candidate.resolve().relative_to(root.resolve()).as_posix()
+    resolved_parts = PurePosixPath(resolved).parts
+    if not resolved_parts or resolved_parts[0] not in AUTHORED_ROOTS:
+        return None
+    if PurePosixPath(resolved).suffix.lower() not in AUTHORED_SUFFIXES:
+        return None
+    if resolved in tracked:
+        return AuthoredArtifactReference(0, raw_target, resolved, True, "")
+    return AuthoredArtifactReference(
+        0,
+        raw_target,
+        resolved,
+        False,
+        "authored artifact is missing or untracked",
+    )
+
+
+def extract_authored_artifact_references(
+    root: Path,
+    source_relative: str,
+    text: str,
+    tracked: set[str],
+) -> list[AuthoredArtifactReference]:
+    """Extract authored-artifact paths from links, inline code, and prose.
+
+    Conventional Markdown links may use same-directory paths.  Plain prose
+    and inline-code references must name an authored root explicitly (for
+    example ``barriers/example.md`` or ``../results/theorem.md``).
+    Fenced code and TeX-style math are excluded from both scans.
+    """
+    masked_text = "\n".join(mask_fences_and_math(text))
+    found: dict[tuple[int, str], AuthoredArtifactReference] = {}
+
+    if source_relative.endswith(".md"):
+        for pattern, target_group in ((LINK_RE, 2), (REFERENCE_LINK_RE, 1)):
+            for match in pattern.finditer(masked_text):
+                target = _clean_link_target(match.group(target_group))
+                parsed = urllib.parse.urlsplit(target)
+                if parsed.scheme or target.startswith("//") or not parsed.path:
+                    continue
+                reference = _resolve_authored_artifact(
+                    root, source_relative, parsed.path, tracked
+                )
+                if reference is None:
+                    continue
+                line = masked_text.count("\n", 0, match.start()) + 1
+                found[(line, reference.resolved_path or reference.raw_target)] = (
+                    AuthoredArtifactReference(
+                        line,
+                        target,
+                        reference.resolved_path,
+                        reference.valid,
+                        reference.error,
+                    )
+                )
+
+    for match in AUTHORED_PATH_RE.finditer(masked_text):
+        raw_target = match.group("path")
+        reference = _resolve_authored_artifact(
+            root, source_relative, raw_target, tracked
+        )
+        if reference is None:
+            continue
+        line = masked_text.count("\n", 0, match.start()) + 1
+        key = (line, reference.resolved_path or reference.raw_target)
+        found.setdefault(
+            key,
+            AuthoredArtifactReference(
+                line,
+                raw_target,
+                reference.resolved_path,
+                reference.valid,
+                reference.error,
+            ),
+        )
+
+    return sorted(found.values(), key=lambda item: (item.line, item.raw_target))
 
 
 def _relative_path(value: str, field: str) -> None:
@@ -517,6 +706,15 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
         if (root / path).suffix.lower() not in TEXT_SUFFIXES:
             continue
         text = (root / path).read_text(encoding="utf-8", errors="replace")
+        if path.endswith(".md"):
+            for reference in extract_authored_artifact_references(
+                root, path, text, tracked
+            ):
+                if not reference.valid:
+                    errors.append(
+                        f"{path}:{reference.line}: authored artifact reference "
+                        f"{reference.raw_target!r}: {reference.error}"
+                    )
         for pattern in DEVICE_PATH_PATTERNS:
             match = pattern.search(text)
             if match:
