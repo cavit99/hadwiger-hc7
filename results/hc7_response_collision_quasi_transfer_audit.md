@@ -122,9 +122,11 @@ orders differ by
 All fixed and `W` vertices cancel; `A union Z` is partitioned by `T` and
 the displayed components.  Hence a globally minimum-order old model
 forces `k=1`, provided that old model belongs to the declared globally
-normalized class.  With equal order, secondary minimization of the number
-of missing adjacencies forces the old model to have one missing adjacency:
-zero would already be a `K_7`, while the replacement has exactly one.
+normalized class.  No tie-break by the number of missing adjacencies is
+used: both the old and replacement models already belong to the supported
+one-missing-adjacency class.  The actual secondary extremization, used only
+after Proposition 4.2 verifies preservation of that class, is to maximize
+the order of the deficient centre among minimum-model-order configurations.
 
 For Proposition 4.2, let `O` be the vertices outside the old seven branch
 sets and put all vertices of `Z` which have a neighbour in `O` into `T`.

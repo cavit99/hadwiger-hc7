@@ -599,7 +599,7 @@ does_not_prove = [
 
 [[claims]]
 id = "hc7.pentagonal_separation_completion"
-title = "Pentagonal order-seven separation completion"
+title = "Pentagonal order-seven separation corollary"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_pentagonal_separation_completion.md"
@@ -608,7 +608,7 @@ scope = "seven-connected host with a K2-join-C5 boundary and exactly two connect
 label_fidelity = "the five cycle roots, two universal boundary vertices and the two literal shores"
 separator_order = "exact seven"
 audit = "results/hc7_pentagonal_separation_completion_audit.md"
-expected_source_sha256 = "f0398670a072af6c325a34ae959168af00edf1b5363d1298129327f16d094a59"
+expected_source_sha256 = "c627b4bc8222a674a13c7e4dc6e7d33f876becb163b24617764afedc7ee8c0da"
 conclusions = [
   "a K5 minor after deleting the universal pair forces an explicit K7 minor",
   "the five-chromatic exact-seven boundary cannot occur in a minimal HC7 counterexample",
