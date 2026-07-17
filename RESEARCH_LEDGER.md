@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 16 July 2026
+**Last updated:** 17 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
 This file records the current mathematical dependency chain. The concise
@@ -18,6 +18,64 @@ exchange at level six, equivalently the two-vertex transversal theorem for
 compact `K_5` models.  The current local engine is the exact order-eight
 outcome of the five-leaf star in the graph of globally support-maximal
 private pairs.
+
+### Current checkpoint: the matching is aligned
+
+The balanced branch has now been reduced by three audited, unbounded
+arguments rather than by another census of boundary graphs.
+
+First, if the complement of the eight-vertex boundary has a perfect
+matching, then either the host already contains an explicit `K_7`-minor
+model or some perfect matching contains an edge joining the two specified
+anticomplete defect edges.  The remaining three matching edges pair the
+distinguished boundary vertex and the two unused defect endpoints with the
+three vertices of the common clique.  The same branch-set construction
+also proves that some clique vertex `r` is missed both by the distinguished
+boundary vertex `x` and by the connected leaf-side interior.
+
+Second, a Hall-type matching argument gives an exact dichotomy relative to
+that prescribed nonedge `xr`.  Either the cross-pair matching can be chosen
+to contain `xr`, or a different clique vertex `p` is nonadjacent only to
+`x` in the boundary complement.  In host language, `p` is adjacent to
+every boundary vertex except `x`, and deleting `{p,x}` leaves a labelled
+six-vertex theta graph.
+
+Third, the latter Hall alternative is now eliminated, conditional on the
+standing support-at-most-six response.  The key new theorem is uniform in
+`k`: across a boundary of order `k+1`, a support-at-most-`k-1`
+`K_{k-2}` model which uses exactly one vertex of one open component, in a
+branch set also containing a safe boundary vertex, can be anchored to an
+almost-universal boundary vertex.  One Menger linkage then gives a `K_k`
+minor; failure gives an actual order-`k` separation.  A separate
+common-neighbour version handles a singleton open component.  This theorem
+does not use the theta graph, Moser labels, or a finite list of component
+contact patterns.
+
+Consequently, in the absence of a `K_7` minor or an actual order-seven
+separation, the complement has a perfect matching containing both the
+prescribed edge `xr` and a cross edge between the two defect edges.  This
+is the **aligned four-pair boundary partition**.  The exact remaining
+local problem is to lift that host-realized partition through the two
+closed shores: obtain compatible six-colourings, the already promoted
+split-edge linkage, or a ranked order-seven separation.
+
+The attempted shortcut through a labelled Mader-path delta-matroid has
+also been resolved.  A written, audited counterexample shows that the
+split and contracted endpoint systems need not admit a graph-realizable
+symmetric exchange, and that fixed twists or static auxiliary direct sums
+do not repair this.  This blocks endpoint-only algebraic enrichments, not
+a representation which couples feasible sets to the actual host paths.
+
+The endpoint geometry has also been compressed into two audited allocation
+theorems.  They give an explicit seven-branch-set model whenever the
+leaf-side connected subgraph and the two defect edges can jointly cover the
+clique contacts it misses, and classify equality in the failed cover.  In
+the unique leaf--endpoint equality case, minor-criticality gives a further
+chromatic dichotomy: deleting that adjacent pair leaves either a spanning
+`K_6` model, or a five-colouring with two distinctly coloured common
+neighbours in the connected leaf-side interior.  This does not yet align
+the regenerated model with those neighbours, so it is a secondary input to
+aligned-trace lifting rather than a completion theorem.
 
 ### New audited closure
 
@@ -89,20 +147,20 @@ last connected web obstruction.
 
 ### Exact open theorem
 
-The closure above applies when the complement of the eight-vertex boundary
-has no perfect matching.  The complementary branch remains:
-
-`overline{G[S]}` has a perfect matching,
-
-or equivalently `S` has a proper partition into four independent pairs.
-This balanced boundary partition does not by itself extend compatibly
+The no-perfect-matching branch is closed, and the perfect matching is now
+normalized to the aligned form described above.  Equivalently, `S` has a
+proper partition into four independent pairs in which one pair is the
+prescribed common miss `xr` and one pair crosses the two specified defect
+edges.  This boundary partition still does not by itself extend compatibly
 through both shores.  State-free examples show that four-colourability,
-full boundary contact, and the join-minor exclusion are insufficient.
+full boundary contact, the join-minor exclusion, and even the aligned
+matching are insufficient without the host's proper-minor transitions.
 
-The target remains a **label-preserving balanced order-eight completion
-theorem**.  Its new host-level formulation combines:
+The target is now an **aligned-trace lifting theorem** inside the
+label-preserving balanced order-eight completion.  It combines:
 
-- exact matched-pair traces obtained by contracting either full shore with
+- the exact four-pair matching, including `xr` and the cross-defect pair;
+- exact single-pair traces obtained by contracting either full shore with
   one matched nonedge;
 - the original five-clique and its labelled defect edges;
 - the second disjoint five-clique; and
@@ -216,7 +274,7 @@ its quotient has noncanonical three-cuts, and it is six-colourable.
 Therefore static triangle/web data cannot replace seven-connectivity or
 the proper-minor response constraints.
 
-The required output is an explicit `K_7` model, a common boundary partition
+The required output remains an explicit `K_7` model, a common boundary partition
 which glues the two shore colourings, a pair of support height at least
 seven, or an actual order-seven separation preserving the named data and
 strictly decreasing a host rank.  A transition among abstract boundary
@@ -229,6 +287,19 @@ private-pair kernels.  Even its success would not by itself prove the full
 support-six transversal theorem or `HC_7`.
 
 Principal new audited results:
+
+- [`hc7_balanced_cross_matching_normalization.md`](results/hc7_balanced_cross_matching_normalization.md)
+- [`hc7_balanced_aligned_matching_dichotomy.md`](results/hc7_balanced_aligned_matching_dichotomy.md)
+- [`hc_almost_universal_straddling_completion.md`](results/hc_almost_universal_straddling_completion.md)
+- [`hc7_balanced_endpoint_allocation.md`](results/hc7_balanced_endpoint_allocation.md)
+- [`hc7_balanced_endpoint_mate_exchange.md`](results/hc7_balanced_endpoint_mate_exchange.md)
+- [`hc7_unique_leaf_endpoint_chromatic_dichotomy.md`](results/hc7_unique_leaf_endpoint_chromatic_dichotomy.md)
+
+Principal new audited barrier:
+
+- [`hc7_labelled_mader_delta_enrichment_barrier.md`](barriers/hc7_labelled_mader_delta_enrichment_barrier.md)
+
+Earlier audited dependencies retained by this frontier:
 
 - [`hc7_shifted_boundary_completion.md`](results/hc7_shifted_boundary_completion.md)
 - [`hc_uniform_boundary_repair_completion.md`](results/hc_uniform_boundary_repair_completion.md)

@@ -38,28 +38,26 @@ The current programme studies one exact, unbounded branch of a global
 two-vertex-transversal reduction.  It has an eight-vertex separator, two
 connected sides adjacent to every separator vertex, two labelled
 five-cliques on opposite sides, and a canonical four-root planar web after
-two specified edge contractions.  The complement of the separator graph
-has a perfect matching.  The immediate target is a label-preserving
-completion: construct a `K_7` minor, glue two six-colourings across the
-separator, increase the global support parameter, or obtain an actual
-order-seven separation with a strict induction parameter.
+two specified edge contractions.
 
-Current work couples three kinds of data which are insufficient in
-isolation: colourings after deleting or contracting two opposite clique
-edges, the missing rooted linkage in the planar web, and a minimal planar
-list-critical subgraph for a boundary colouring that cannot be repaired.
-The zero-slack four-clique core and the two-vertex critical core are now
-eliminated for hosts of arbitrary order by explicit `K_7`-minor models.
-The remaining critical cores are one facial triangle or a positive-slack
-Gallai-forest configuration.  In the triangular case, a removable-path
-theorem produces a path from the facial vertex to the three-clique whose
-deletion leaves the host connected; the unresolved step is to split that
-path and its complement while preserving six named branch-set
-adjacencies.  A verified finite barrier shows that the static web,
-boundary, and triangle data alone do not force this split.
-This is substantive progress on one infinite family, not a proof of
-$HC_7$.  The broader support-six and singleton-root programmes remain
-frozen dependency chains available for a justified handoff.
+The complement of the separator graph has now been normalized beyond the
+existence of a perfect matching.  In every surviving case, some perfect
+matching contains both a prescribed nonedge missed by one connected side
+and an edge crossing the two specified anticomplete defect edges.  The sole
+Hall-deficient alternative is eliminated by an audited theorem valid for
+all `k`: a compact `K_{k-2}` model which straddles an almost-universal
+order-`k+1` boundary can be completed by one Menger linkage to a `K_k`
+minor, unless an actual order-`k` separation occurs.
+
+The immediate target is **aligned-trace lifting**.  Minor-criticality
+realizes each of the four matched nonedges as an exact boundary colour
+class from either side.  What remains is to combine these host-realized
+traces into a common six-colouring, a label-preserving `K_7`-minor model, a
+larger global support pair, or a strictly ranked order-seven separation.
+Earlier Kempe-chain, planar-web, and list-critical-core results remain
+available as secondary mechanisms, but static boundary data alone is known
+to be insufficient.  This is substantive progress on one infinite family,
+not a proof of $HC_7$.
 
 ## Start here
 

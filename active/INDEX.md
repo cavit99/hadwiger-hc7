@@ -13,6 +13,12 @@ Immediate proved inputs, each to be read with its adjacent audit:
 - [rooted-four reduction and exact order-eight output](../results/hc7_star_kernel_rooted_four_contraction.md)
 - [endpoint-contact rigidity](../results/hc7_star_order_eight_endpoint_contacts.md)
 - [elimination of the no-perfect-matching shifted residue](../results/hc7_shifted_boundary_completion.md)
+- [cross-pair perfect-matching normalization](../results/hc7_balanced_cross_matching_normalization.md)
+- [alignment dichotomy and Hall-obstruction closure](../results/hc7_balanced_aligned_matching_dichotomy.md)
+- [all-parameter almost-universal boundary completion](../results/hc_almost_universal_straddling_completion.md)
+- [endpoint allocation at the balanced boundary](../results/hc7_balanced_endpoint_allocation.md)
+- [endpoint-mate exchange refinement](../results/hc7_balanced_endpoint_mate_exchange.md)
+- [unique leaf--endpoint chromatic dichotomy](../results/hc7_unique_leaf_endpoint_chromatic_dichotomy.md)
 - [canonical four-root web and localization of the second five-clique](../results/hc7_star_order_eight_rooted_web.md)
 - [four-connectivity of the canonical planar web skeleton](../results/hc7_canonical_web_skeleton_four_connected.md)
 - [split-edge `K_7`-minor construction](../results/hc7_star_order_eight_split_edge_completion.md)
@@ -54,22 +60,23 @@ Immediate guardrails:
   boundary data do not force completion without cut rigidity and
   proper-minor transitions; see the
   [facial-triangle barrier](../barriers/hc7_facial_triangle_static_completion_barrier.md).
+- endpoint-only Mader delta-matroid exchange is not label-preserving, even
+  after fixed twists or static enrichment; see the
+  [audited delta-matroid barrier](../barriers/hc7_labelled_mader_delta_enrichment_barrier.md).
 
-The immediate open theorem is the balanced order-eight completion stated in
-Section 2 of the primary target.  Its current engine is the interaction
-between a reachability-maximal simultaneous-equality colouring, the planar
-fixed-boundary critical core, and the canonical missing rooted linkage.
-The zero-slack four-clique and two-vertex cores are closed.  The exact live
-core forms are the bounded facial triangle at the opposite outer edge and
-the positive-slack case.  A completion must yield a `K_7` model,
-a common boundary colouring, a height-seven pair, or a strict
-model-preserving order-seven separation.
+The immediate open theorem is **aligned-trace lifting**, stated in Section
+2 of the primary target.  In the complement of the eight-vertex boundary,
+the live perfect matching contains both the prescribed common miss `xr`
+and an edge crossing the two defect edges.  Every one of its four pairs is
+realized as an exact boundary colour class from either shore.  The task is
+to combine those host-realized traces into a common boundary partition, a
+label-preserving `K_7`-minor model, a height-seven pair, or a strictly ranked
+order-seven separation.
 
-For the facial triangle, path existence is now normalized: a removable
-path reaches the three-clique while avoiding the two leaves and the other
-two clique vertices.  The immediate local obligation is to split that
-path and its connected complement without losing the six named
-adjacencies in the displayed seven-branch-set construction.
+The earlier Kempe, planar critical-core, and facial-triangle results remain
+available as secondary mechanisms.  They are not the current theorem by
+themselves: static aligned boundary data can still fail to determine how a
+colouring or clique-minor model passes through the two shores.
 
 ## Frozen prior programme
 

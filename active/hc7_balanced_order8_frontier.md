@@ -77,12 +77,45 @@ Equivalently, `S` has a proper partition into four independent pairs.
 This equivalence is only boundary data; it is not yet a common extension
 through `C` and `D`.
 
+The matching is now normalized further by audited, unbounded arguments.
+Let
+
+\[
+                     H=C-\{\ell_e,\ell_f\}.
+\]
+
+Unless an explicit `K_7`-minor model or an actual order-seven separation
+has already occurred, there are vertices
+
+\[
+ R=\{r,p,q\},\qquad V(e)=\{a,a'\},\qquad V(f)=\{b,b'\}
+\]
+
+such that
+
+\[
+       xr,\quad ab,\quad a'p,\quad b'q                 \tag{1.3}
+\]
+
+is a perfect matching of `F`, and `r` has no neighbour in
+`H union {x}`.  Thus one matching edge is the prescribed common miss
+`xr`, and one joins the two anticomplete defect edges.  We call (1.3) an
+**aligned matching**.
+
+The only Hall obstruction to (1.3) makes a different vertex of `R`
+adjacent in `G[S]` to every boundary vertex except `x`; deleting those two
+vertices leaves an exact six-vertex theta graph.  That whole obstruction
+is eliminated, conditional on the standing support-at-most-six response,
+by the all-parameter almost-universal-boundary completion theorem.  The
+proof uses one Menger linkage and applies to shores of arbitrary order; it
+is not a boundary census.
+
 ## 2. Exact theorem sought
 
-Prove the following label-preserving completion statement.
+Prove the following host-level lifting statement.
 
-> **Balanced order-eight completion.**  Under (1.1)--(1.2) and the full
-> host hypotheses above, at least one of the following occurs:
+> **Aligned-trace lifting.**  Under (1.1)--(1.3) and the full host
+> hypotheses above, at least one of the following occurs:
 >
 > 1. `G` contains an explicit `K_7`-minor model;
 > 2. the two closed shores have six-colourings inducing the same partition
@@ -93,10 +126,15 @@ Prove the following label-preserving completion statement.
 >    clique and defect-edge data and strictly decreases a declared
 >    open-side rank.
 
+The exact unresolved implication is not the existence of the four pairs:
+minor-criticality realizes each pair as an exact boundary colour class
+from either orientation.  It is to combine these host-realized traces into
+a common full boundary partition or a label-preserving minor construction.
+
 This would eliminate the entire honest order-eight outcome of the
-five-leaf-star reduction.  It would not orient the earlier order-seven
-outputs, close the other private-pair kernels, or prove the full
-support-six transversal theorem.
+five-leaf-star reduction.  It would not orient every earlier order-seven
+output, close the other private-pair kernels, or prove the full support-six
+transversal theorem.
 
 ## 3. Proved structural exits
 
@@ -130,7 +168,12 @@ theorem nevertheless does not lift a labelled solution: the skeleton is a
 completion supergraph of the literal quotient, and the required pairing is
 the alternating outer-face linkage excluded by planarity.
 
-## 4. Host-level colouring invariant
+## 4. A secondary host-level colouring invariant
+
+The following opposite-edge deletion framework remains a possible engine
+for aligned-trace lifting.  The matching normalization, rather than the
+facial-triangle critical core alone, is now the primary interface it must
+respect.
 
 Let
 
@@ -270,20 +313,27 @@ trace-preserving repair while containing a `K_7` minor.  The next theorem
 must therefore combine the critical core or reachability normal form with
 the canonical missing linkage and the true host hypotheses.
 
-## 5. Exact matched-pair traces
+## 5. Exact aligned-pair traces
 
-Fix a perfect matching `M` of `F`.  For every pair `{a,b} in M` and either
-shore, the connected set consisting of the opposite shore together with
-`a,b` may be contracted in a proper minor.  A six-colouring of that minor
+Fix the aligned perfect matching
+
+\[
+                         M=\{xr,ab,a'p,b'q\}
+\]
+
+from (1.3).  For every pair `{u,v} in M` and either shore, the connected
+set consisting of the opposite shore together with `u,v` may be contracted
+in a proper minor.  A six-colouring of that minor
 restricts to the retained closed shore and has this exact boundary trace:
 
-- `a,b` receive one common colour; and
+- `u,v` receive one common colour; and
 - no other vertex of `S` receives that colour.
 
 Thus each matched nonedge can be selected as an exact colour class from
-both orientations.  The live exchange problem is to combine these eight
-host-realized traces using the two original five-cliques and the labelled
-defect edges.  A successful transition must yield a common full boundary
+both orientations.  The distinguished pair `xr` is simultaneously missed
+by the connected leaf-side interior, while `ab` crosses the two defect
+edges.  These geometrically different traces are the current source of
+leverage.  A successful transition must yield a common full boundary
 partition, a branch-set construction, or a strict separator.  It is not
 enough to move between abstract boundary partitions.
 
@@ -341,6 +391,15 @@ component plus a universal boundary vertex remain, it constructs the
 - Do not restart a census of eight-vertex boundary graphs.  The matching
   is already known; the missing information is how its exact traces are
   realized inside the two shores.
+- The complement induced on the boundary may have large independent sets
+  even under the aligned matching and the static boundary restrictions.
+  No proof may assume `alpha(G[S])<=2` without deriving it from additional
+  host-level transitions.
+- The feasible endpoint sets of a labelled Mader-path system do not retain
+  enough information for a static delta-matroid exchange.  The
+  [audited counterexample](../barriers/hc7_labelled_mader_delta_enrichment_barrier.md)
+  also survives fixed twists and static auxiliary direct sums.  A viable
+  algebraic exchange must encode the actual host paths, not endpoints only.
 
 ## 7. Immediate dependencies
 
@@ -367,6 +426,12 @@ Read each promoted theorem with its adjacent audit:
 - [explicit completion of the two-vertex critical core](../results/hc7_two_vertex_fixed_boundary_core_completion.md)
 - [removable-path normalization of the facial-triangle core](../results/hc7_facial_triangle_removable_path_normalization.md)
 - [uniform compact-model boundary completion](../results/hc_uniform_boundary_repair_completion.md)
+- [cross-pair perfect-matching normalization](../results/hc7_balanced_cross_matching_normalization.md)
+- [alignment dichotomy and elimination of its Hall obstruction](../results/hc7_balanced_aligned_matching_dichotomy.md)
+- [all-parameter almost-universal straddling completion](../results/hc_almost_universal_straddling_completion.md)
+- [endpoint-allocation construction and exact obstruction](../results/hc7_balanced_endpoint_allocation.md)
+- [endpoint-mate refinement](../results/hc7_balanced_endpoint_mate_exchange.md)
+- [unique leaf--endpoint chromatic dichotomy](../results/hc7_unique_leaf_endpoint_chromatic_dichotomy.md)
 
 The broader dependency chain and the still-open branches are recorded in
 [`hc7_support_six_frontier.md`](hc7_support_six_frontier.md).
