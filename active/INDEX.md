@@ -17,7 +17,9 @@ singleton-rooted near-`K_7` models.  The active theorem is to reduce the
 separator to an order-seven colour-gluing interface or synchronize the two
 rooted models into an explicit `K_7` model.  A global two-vertex
 `K_5`-model transversal is no longer a separate exit: it already forces an
-order-seven separation.
+order-seven separation.  That separation is raw—it does not by itself
+supply compatible shore colourings—so it enters rather than closes the
+order-seven colour-gluing branch.
 
 Immediate proved inputs, each with its adjacent audit:
 
@@ -60,6 +62,16 @@ vanish or show that a defect-preserving exchange yields the order-seven
 interface.  The lift to the seven-contraction-critical host must remain
 explicit.
 
+The two-tree equality classification is conditional: it applies in the
+unique-deficiency path-cut branch, for a selection representing all four
+protected component classes by eligible components adjacent to `z` and
+adjacent to both path-side anchor sets at the chosen cut.  Those hypotheses
+are not yet exhaustive.  Within that branch, the immediate target is to turn a
+lifted simplicial degree-two component into an explicit `K_7` model, a
+colour-compatible order-seven separation, or a new valid instance of the
+same eligible defect-one setup with a declared host-level parameter strictly
+smaller.  No such well-founded parameter is currently proved.
+
 ## Label-rich laboratory
 
 [Balanced order-eight completion](hc7_balanced_order8_frontier.md)
@@ -100,6 +112,8 @@ use the six-colouring response.
   permutation and need not be bichromatic;
 - an actual separator returned by a branch-set split is not automatically
   of order seven; and
+- even an exact order-seven separation is nonterminal until compatible
+  boundary equality partitions are realized on both closed shores;
 - an unrooted regenerated `K_6` model need not align with any previously
   fixed near-`K_7` labels.
 

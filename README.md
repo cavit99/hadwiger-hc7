@@ -80,20 +80,19 @@ rules out a seven-regular graph on 16 vertices in which every nonadjacent
 pair has four common neighbours.  This is a global order bound, not a proof
 of the palette-to-model exchange.
 
-The immediate target is now a smaller rooted-model exchange.  In the
-connected-dominating branch, deleting the two endpoints leaves a
-four-chromatic graph, and each endpoint neighbourhood is colourful in it.
-If one `K_4`-minor model has every branch set meet both neighbourhoods, its
-four branch sets together with the endpoints and `X` give an explicit
-`K_7` minor.  For a contact-maximal model rooted at one neighbourhood, each
-missed branch set now yields a genuine separator: its full boundary consists
-of contacts in the other three bags, contacts in `X`, and one endpoint.
-The boundary has order at least seven.  A sharp `K_6`-minor-free example
-shows that the forced repeated colour in the contracted quotient does not
-by itself reroute the model.  The open theorem is therefore to use the
-literal attachment distribution to split a branch set and repair the
-one-edge-deficient model, or reduce the full boundary to a
-colour-compatible order-seven separation or fixed two-vertex transversal.
+The immediate constructive target lies in the unique-deficiency branch.
+A colour-matched repair path and a component-defect theorem give an
+explicit `K_7` minor whenever that defect is nonpositive.  At a fixed
+admissible path cut, if all four protected component classes are represented
+by eligible components—each adjacent to `z` and to both path-side anchor
+sets—and the component-contact graph is `K_4`-minor-free, defect one is
+equivalent to the contact graph being a two-tree.  These hypotheses have
+not been proved for every connected-dominating residue.  The next target is
+to use proper-minor colourings at a lifted simplicial degree-two component
+to construct `K_7`, obtain a colour-compatible order-seven separation, or
+produce a new valid instance of the same eligible defect-one setup with a
+declared host-level parameter strictly smaller.  Finding and proving such a
+well-founded parameter is part of the open theorem.
 
 The previously developed balanced order-eight boundary remains the main
 label-rich laboratory.  There the canonical regenerated `K_6` model is
@@ -113,6 +112,7 @@ not a proof of $HC_7$.
 | [Paired colourful-set `K_4` frontier](active/hc7_two_colorful_sets_rooted_k4_frontier.md) | Exact four-chromatic reduction and the current constructive milestone |
 | [Balanced order-eight laboratory](active/hc7_balanced_order8_frontier.md) | Label-rich special branch retained to test the uniform exchange |
 | [Frozen support-six technical frontier](active/hc7_support_six_frontier.md) | Earlier developed dependency chain retained for reuse |
+| [Research integrity tools](tools/README.md) | Tracked-document search, current-spine dependency graph, audit checks, and deterministic verifier CI |
 
 For a specific claim, read the theorem note in [`results/`](results/) together
 with its adjacent `_audit.md` file when one exists. Failed intermediate
@@ -134,6 +134,22 @@ claims and concrete counterexamples are kept in [`barriers/`](barriers/).
 Computer searches are used to test conjectured lemmas and settle explicitly
 finite interfaces. They are not treated as proofs of unbounded statements.
 
+## Finding prior work
+
+Every tracked Markdown document, including superseded work in `archive/`, can
+be searched through the disposable SQLite/FTS index:
+
+```bash
+python3 tools/research_index.py build
+python3 tools/research_index.py search '"component defect"'
+python3 tools/research_index.py context hc7.target.defect_one_exchange
+```
+
+The curated manifest records only the current proof spine and typed barrier
+relationships.  Search results are discovery leads, not inferred
+mathematical dependencies, and `RESEARCH_LEDGER.md` remains the sole status
+authority.
+
 ## Repository layout
 
 ```text
@@ -141,6 +157,7 @@ finite interfaces. They are not treated as proofs of unbounded statements.
 ├── README.md            # stable project overview
 ├── RESEARCH_LEDGER.md   # authoritative research status
 ├── AGENTS.md            # workflow and mathematical-writing rules
+├── tools/               # generated research index and integrity checks
 ├── results/             # proved lemmas and adjacent audit notes
 ├── active/              # current proof work and finite verification code
 ├── barriers/            # counterexamples to intermediate claims

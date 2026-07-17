@@ -115,12 +115,15 @@ The primary open theorem is to turn this dichotomy into one of:
 1. an explicit `K_7`-minor model;
 2. an actual order-seven separation carrying a named boundary colouring
    from both sides;
-3. a strict improvement in a rooted-model contact invariant.
+3. a new valid instance of the same eligible setup with a declared
+   host-level parameter strictly smaller.
 
 The former two-vertex terminal is no longer independent.  An audited
 lemma proves that, in the hypothetical counterexample, two vertices meeting
 every `K_5` model force a vertex of degree seven and hence an actual
-order-seven separation.  It is therefore subsumed by item 2.
+order-seven separation.  This supplies a raw exact separation, but not the
+compatible shore colourings required by item 2; it enters rather than
+closes the order-seven colour-gluing branch.
 
 The first concrete milestone is now four-chromatic.  In the
 connected-dominating branch put `R=Q-{z,u}` and
@@ -175,6 +178,17 @@ pair of branch sets.  The live task is to use the compulsory proper-minor
 colourings to make the defect vanish or show that every defect-preserving
 move concentrates behind an order-seven separator.
 
+The exact two-tree classification has a narrower scope.  It assumes the
+unique-deficiency setup, a fixed admissible cut of the colour-matched path,
+nonempty selected collections from all four protected branch sets, every
+selected residual component adjacent to `z` and adjacent to both path-side
+anchor sets at that cut, and a `K_4`-minor-free component-contact graph.  Under
+those hypotheses, defect one is equivalent to the contact graph being a
+two-tree.  The present chain does not prove that unique deficiency, such an
+eligible four-part selection, or defect one occurs in every
+connected-dominating residue.  It also does not yet supply a well-founded
+host-level parameter for iterating a defect-preserving exchange.
+
 Independently, contracting a shortest admissible path produces a canonical
 list-colouring obstruction: an odd subpath has singleton endpoint lists and
 paired two-element internal lists.  This statement is uniform in the
@@ -193,12 +207,13 @@ used here must retain the minor-critical colouring hypotheses.
 Those hypotheses now give an exact one-step dichotomy.  After any vertex
 deletion, edge deletion, or edge contraction wholly inside the
 five-chromatic core, the new core is four- or five-chromatic.  In the
-four-chromatic branch the intersection of the two pole-attachment sets is
-colourful, so the established strong four-colour theorem supplies a
-`K_4` model meeting both sets in every branch set.  The only unresolved
-branch remains five-chromatic; there the uniform conclusion is the exact
-common-hole law for the two attachment sets, not preservation of full
-colour saturation.
+four-chromatic branch, the intersection of the attachment sets of the two
+bipartition classes of `X` is colourful and roots a `K_4` model meeting
+both attachment sets.  This does not split the bipartition classes into
+connected branch sets, does not align them with the pole-neighbourhoods
+`S=N_R(z)` and `T=N_R(u)`, and therefore does not yet construct `K_7`.
+The five-chromatic branch supplies only the exact common-hole law.  Both
+branches still require a host-level exchange or colour-gluing step.
 
 The current chain uses the following results with separate GREEN audits:
 
@@ -211,7 +226,7 @@ The current chain uses the following results with separate GREEN audits:
 - [`hc7_star_kempe_five_core_compression.md`](results/hc7_star_kempe_five_core_compression.md)
 - [`hc7_adjacent_pair_separator_or_five_core.md`](results/hc7_adjacent_pair_separator_or_five_core.md)
 - [`hc7_maximal_rooted_k4_deficient_component_separator.md`](results/hc7_maximal_rooted_k4_deficient_component_separator.md)
-- [`hc7_outer_edge_canonical_k6_rotation.md`](results/hc7_outer_edge_canonical_k6_rotation.md)
+- [`hc7_atomic_two_pole_contact_trichotomy.md`](results/hc7_atomic_two_pole_contact_trichotomy.md)
 - [`hc7_colour_matched_repair_path.md`](results/hc7_colour_matched_repair_path.md)
 - [`hc7_colour_matched_path_component_exchange.md`](results/hc7_colour_matched_path_component_exchange.md)
 - [`hc7_colour_matched_path_exchange_or_separator.md`](results/hc7_colour_matched_path_exchange_or_separator.md)
@@ -1046,8 +1061,8 @@ classification or computation as well as a written reduction.
     contraction-critical. Thus attachment count, first/last hit selection,
     and stable-bridge incidence cannot supply the strict rank alone; the
     next theorem must use the extra edges or colouring transitions forced
-    by the full counterexample hypotheses, or return the global fixed-pair
-    conclusion.
+    by the full counterexample hypotheses, or return the corresponding
+    order-seven separation via the promoted transversal lemma.
 
     Restoring the local minimum-degree and Dirac neighbourhood bounds does
     not by itself break that barrier. In the literal atomic fan, all
@@ -1223,7 +1238,8 @@ remaining theorem must combine these paths and the Kempe-component
 alternatives into one of:
 
 - an explicit $K_7$-minor model;
-- a global two-vertex transversal for all $K_5$ models; or
+- an actual order-seven separation, including one obtained from a global
+  two-vertex transversal for all $K_5$ models; or
 - a model-preserving order-seven separation with a strict induction
   parameter.
 

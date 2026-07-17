@@ -3,6 +3,9 @@
 **Audited source:**
 [`hc7_atomic_two_pole_contact_trichotomy.md`](hc7_atomic_two_pole_contact_trichotomy.md)
 
+**Source SHA-256:**
+`6bce1f570c12a93a7d1830f53905cb1e033bd2e40abed948a70a21ce5100c03d`
+
 ## Verdict
 
 **GREEN after the precision corrections incorporated in the source.**
@@ -144,6 +147,8 @@ contact-maximal model admits no such transfer.
 
 The dependency-free checker
 [`../active/hc7_atomic_two_pole_contact_trichotomy_verify.py`](../active/hc7_atomic_two_pole_contact_trichotomy_verify.py)
+whose SHA-256 is
+`4a81379c2ae4dc5cb127d2c2192b50f4296ed581a9d54f12622bf17d4dfda71b`,
 verifies that the six displayed rows partition the host minus the two
 poles, are connected and pairwise adjacent, and have contact sets
 

@@ -1,0 +1,545 @@
+schema_version = 1
+
+[project]
+status_authority = "RESEARCH_LEDGER.md"
+navigation_root = "active/INDEX.md"
+public_overview = "README.md"
+database = ".cache/research/index.sqlite"
+
+[[required_text]]
+file = "README.md"
+pattern = "HC_7.{0,20}not proved"
+
+[[required_text]]
+file = "RESEARCH_LEDGER.md"
+pattern = "HC_7.{0,20}not proved"
+
+[[claims]]
+id = "hc7.target.adjacent_pair_model_or_separator"
+title = "Adjacent-pair model synchronization or colour-compatible separation"
+kind = "target"
+status = "active-target"
+source = "active/hc7_adjacent_pair_palette_model_frontier.md"
+source_heading = "3. Primary open theorem"
+active = true
+scope = "unbounded host graph"
+label_fidelity = "literal host vertices and named branch sets"
+separator_order = "exact seven required"
+colour_compatibility = "open"
+hypotheses = [
+  "hypothetical minor-minimal seven-chromatic graph with no K7 minor",
+  "selected adjacent pair and the audited separator-or-five-core dichotomy",
+]
+allowed_exits = [
+  "explicit K7-minor model",
+  "exact order-seven separation with one boundary equality partition realised on both closed shores",
+]
+does_not_prove = [
+  "HC7",
+  "an upper bound on every separator returned by a disconnected two-colour graph",
+  "compatible shore colourings from a raw exact order-seven separation",
+]
+keywords = ["adjacent pair", "component defect", "colour-compatible separation", "rooted K4"]
+
+[[claims]]
+id = "hc7.target.defect_one_exchange"
+title = "Defect-one two-tree exchange or colour-gluing theorem"
+kind = "target"
+status = "active-target"
+source = "active/hc7_two_colorful_sets_rooted_k4_frontier.md"
+source_heading = "4. The deficient component and its expanded boundary"
+active = true
+scope = "conditional unique-deficiency branch in the host graph"
+label_fidelity = "literal lifted residual components and named path-side anchors"
+separator_order = "at least seven; exact seven is an allowed exit"
+colour_compatibility = "open"
+strict_parameter = "not yet proved; the theorem must declare and decrease a host-level well-founded parameter"
+hypotheses = [
+  "the complete adjacent-pair connected-dominating setup in the current frontier",
+  "unique deficient branch set",
+  "fixed admissible repair-path cut",
+  "four represented eligible component classes",
+  "every selected component is adjacent to both path-side anchor sets and to z",
+  "K4-minor-free component-contact graph of defect one, hence a two-tree",
+]
+allowed_exits = [
+  "explicit K7-minor model",
+  "exact order-seven separation with compatible closed-shore boundary colourings",
+  "new valid instance of the same eligible defect-one setup with a declared host-level parameter strictly smaller",
+]
+does_not_prove = [
+  "exhaustiveness of unique deficiency",
+  "existence of an eligible four-part component selection in every residue",
+  "defect one in every connected-dominating residue",
+  "a split of a lifted simplicial component",
+  "a well-founded strict descent parameter",
+]
+keywords = ["component defect", "two-tree", "simplicial component", "common-hole law"]
+
+[[claims]]
+id = "hc7.global_adjacent_pair_palette_frame"
+title = "Global adjacent-pair palette frame"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_global_adjacent_pair_palette_frame.md"
+active = true
+audit = "results/hc7_global_adjacent_pair_palette_frame_audit.md"
+expected_source_sha256 = "e4f99a43d6f45d3c1e7d93bbf854185e0009ecdc143c733d25449c2956aead98"
+
+[[claims]]
+id = "hc7.adjacent_pair_palette_linkage"
+title = "Palette-permutation linkage and contact consequences"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_adjacent_pair_palette_linkage.md"
+active = true
+audit = "results/hc7_adjacent_pair_palette_linkage_audit.md"
+expected_source_sha256 = "2b0c30b9d8566f6da4959df145bf0f527249bf887dfa844d19a98e524080a9f2"
+
+[[claims]]
+id = "hc7.adjacent_pair_bichromatic_support"
+title = "Bichromatic support and exact missing-colour rotation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_adjacent_pair_bichromatic_support_dichotomy.md"
+active = true
+audit = "results/hc7_adjacent_pair_bichromatic_support_dichotomy_audit.md"
+expected_source_sha256 = "cbceda7fd8f6323d7b78a23e47cb7d8a0650b634ddd3decddf7e27367e9d2bcb"
+
+[[claims]]
+id = "hc.bipartite_contraction_palette"
+title = "Palette dichotomy after contracting an induced bipartite subgraph"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc_bipartite_contraction_palette_dichotomy.md"
+active = true
+audit = "results/hc_bipartite_contraction_palette_dichotomy_audit.md"
+expected_source_sha256 = "9856ce9908d2a2d6a3e36177d32ec4aa0d9f389b1e2fcd6632829db9ce08dbc6"
+
+[[claims]]
+id = "hc.bipartite_contraction_components"
+title = "Bichromatic components after a bipartite contraction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc_bipartite_contraction_bichromatic_components.md"
+active = true
+audit = "results/hc_bipartite_contraction_bichromatic_components_audit.md"
+expected_source_sha256 = "ca1d5ba0defb2af5c5db6c10c96e3279c68fb64fa0ffb07543a44a1db93b7eae"
+
+[[claims]]
+id = "hc7.concentrated_rotation_normalization"
+title = "Normal form for concentrated colour rotations"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_concentrated_rotation_normalization.md"
+active = true
+audit = "results/hc7_concentrated_rotation_normalization_audit.md"
+expected_source_sha256 = "c60dd0c95f38bb39cf6922987861be83c66e6f85dc9cbf7a452df307d2eef37f"
+
+[[claims]]
+id = "hc7.five_core_compression"
+title = "Connected two-colour compression to a five-chromatic core"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_star_kempe_five_core_compression.md"
+active = true
+audit = "results/hc7_star_kempe_five_core_compression_audit.md"
+expected_source_sha256 = "45e3d2e1a8aab16690c3941e5013c0f5bdc296ab257cea042dab1ceec7cb5557"
+
+[[claims]]
+id = "hc7.separator_or_five_core"
+title = "Adjacent-pair separator-or-five-core theorem"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_adjacent_pair_separator_or_five_core.md"
+active = true
+audit = "results/hc7_adjacent_pair_separator_or_five_core_audit.md"
+expected_source_sha256 = "e8ac71370bbefbd9bd7bd717b335a8e9179499fdbbe554a1c61d37a4e0701f93"
+
+[[claims]]
+id = "hc7.deficient_component_separator"
+title = "Deficient-component separator in a contact-maximal rooted K4 model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_maximal_rooted_k4_deficient_component_separator.md"
+active = true
+audit = "results/hc7_maximal_rooted_k4_deficient_component_separator_audit.md"
+expected_source_sha256 = "fe5bff7d881faeda5c259750e8f634d8b0f59892cf76dd461e40489d26629c59"
+
+[[claims]]
+id = "hc7.two_pole_contact_trichotomy"
+title = "Two-pole contact and branch-set split"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_two_pole_contact_trichotomy.md"
+active = true
+audit = "results/hc7_atomic_two_pole_contact_trichotomy_audit.md"
+expected_source_sha256 = "6bce1f570c12a93a7d1830f53905cb1e033bd2e40abed948a70a21ce5100c03d"
+
+[[claims]]
+id = "hc7.colour_matched_repair_path"
+title = "Colour-matched path to the missed pole"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_colour_matched_repair_path.md"
+active = true
+audit = "results/hc7_colour_matched_repair_path_audit.md"
+expected_source_sha256 = "ff04ccf580a4ebe8b0f2d3be3e8710d48cfae5717d3f91eb48a118148ba90efc"
+
+[[claims]]
+id = "hc7.path_component_exchange"
+title = "Component criterion for absorbing the repair path"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_colour_matched_path_component_exchange.md"
+active = true
+audit = "results/hc7_colour_matched_path_component_exchange_audit.md"
+expected_source_sha256 = "eb024c94213b993bccc3b7c116117831ee898cb8eaf94535e7dd1b7fe622257c"
+
+[[claims]]
+id = "hc7.path_exchange_or_separator"
+title = "Fixed-path K7-model-or-separation theorem"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_colour_matched_path_exchange_or_separator.md"
+active = true
+audit = "results/hc7_colour_matched_path_exchange_or_separator_audit.md"
+expected_source_sha256 = "9f22f7f8828ed5d64b269c18e31aae82deb10fc5c57c6d1b89cdccf47af5cc6b"
+
+[[claims]]
+id = "hc7.all_cut_interval_exchange"
+title = "All-cut interval and component-defect criterion"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_colour_matched_path_all_cut_interval_exchange.md"
+active = true
+audit = "results/hc7_colour_matched_path_all_cut_interval_exchange_audit.md"
+expected_source_sha256 = "719e034ea81221c4fbddd77ea4cdd661ce1b04b1f84b007a69e73a89de4f2057"
+
+[[claims]]
+id = "hc7.component_contact_defect"
+title = "Component-contact defect and two-tree equality structure"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_component_contact_defect_theorem.md"
+active = true
+scope = "conditional fixed repair-path cut"
+label_fidelity = "literal eligible residual components and three anchor sets"
+audit = "results/hc7_component_contact_defect_theorem_audit.md"
+expected_source_sha256 = "247de0124f0fadf2000aa2984e77c709fece88d2daf9515fae9cd8ed4e1b44a5"
+hypotheses = [
+  "unique deficiency",
+  "fixed admissible path cut",
+  "an eligible residual component selected from each of four protected branch sets",
+  "every selected component is adjacent to both path-side anchor sets and to z",
+]
+conclusions = [
+  "K7 if the component-contact graph has a K4 minor",
+  "K7 if component defect is nonpositive",
+  "under K4-minor exclusion, defect one is equivalent to the contact graph being a two-tree",
+]
+does_not_prove = [
+  "unique deficiency",
+  "an eligible residual component in each of the four protected branch sets",
+  "a split of a lifted simplicial component",
+  "an upper bound on a literal separator",
+  "strict host-level descent",
+]
+
+[[claims]]
+id = "hc7.one_step_minor_dynamics"
+title = "One-step minor dynamics and the common-hole law"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_star_core_one_step_minor_dynamics.md"
+active = true
+audit = "results/hc7_star_core_one_step_minor_dynamics_audit.md"
+expected_source_sha256 = "f1e976266afb7b4e2daeb9ee36c0da13518d59540ae6c5244fd82cd3cb37e3b8"
+conclusions = [
+  "four-chromatic branch roots K4 at the common attachment set of the two bipartition classes of X",
+  "five-chromatic branch has the exact common-hole law",
+]
+does_not_prove = [
+  "connected bipartition-side branch sets",
+  "alignment with the two pole-neighbourhoods S and T",
+  "K7 in the four-chromatic branch",
+]
+
+[[claims]]
+id = "hc.contracted_path_list_lock"
+title = "List-colouring obstruction on a contracted induced path"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc_contracted_path_list_lock.md"
+active = true
+audit = "results/hc_contracted_path_list_lock_audit.md"
+expected_source_sha256 = "804550a76c1566f6867d21d3254a67b881bac9370556c9b9d84fe6eabce5c634"
+
+[[claims]]
+id = "hc7.k5_transversal_order7"
+title = "Two-vertex K5-model transversal implies a raw order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_k5_transversal_order7_separator.md"
+active = true
+separator_order = "exact seven"
+colour_compatibility = "not supplied"
+audit = "results/hc7_k5_transversal_order7_separator_audit.md"
+expected_source_sha256 = "069bfa0dd96211d44e762cc49aaa2476a4e655f52ba45e63e492bb6445411023"
+does_not_prove = ["compatible shore colourings"]
+
+[[claims]]
+id = "hc7.barrier.labelled_delta_exchange"
+title = "Endpoint-only delta-matroid exchange is not label-preserving"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_labelled_mader_delta_enrichment_barrier.md"
+active = true
+audit = "barriers/hc7_labelled_mader_delta_enrichment_barrier_audit.md"
+expected_source_sha256 = "27bc1eea766fcbe91f5c6e44016296d0f0f6d2c601cbb2cafae443209455fd2c"
+refutes = ["endpoint-only delta-matroid exchange as a label-preserving rerouting principle"]
+lacks = ["the full contraction-critical host hypotheses"]
+
+[[claims]]
+id = "hc7.barrier.static_trace_alignment"
+title = "Static exact boundary traces need not synchronize"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_aligned_matching_exact_trace_parity_barrier.md"
+active = true
+audit = "barriers/hc7_aligned_matching_exact_trace_parity_barrier_audit.md"
+expected_source_sha256 = "137a06460e9b448ee661222b3d84c185b1200884a307b65558524f69457ea26a"
+refutes = ["state synchronization from static exact boundary traces alone"]
+lacks = ["proper-minor transition dynamics"]
+
+[[claims]]
+id = "hc7.barrier.three_common_profile"
+title = "Three-common-branch-set profile can stop at an order-seven separator"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_three_common_geodesic_two_apex_barrier.md"
+active = true
+audit = "barriers/hc7_three_common_geodesic_two_apex_barrier_audit.md"
+expected_source_sha256 = "4de8c7a1081d1e04b6f676e905afc9727ca9ef25c75e8d0d4b05973fb07083c1"
+refutes = ["a model-local strict rank from three common branch sets alone"]
+lacks = ["seven-chromaticity and the proper-minor nonextendability constraints"]
+
+[[claims]]
+id = "hc7.barrier.two_colourful_sets"
+title = "Two colourful sets need not share a rooted K4 model"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_two_colorful_sets_paired_k4_barrier.md"
+active = true
+audit = "barriers/hc7_two_colorful_sets_paired_k4_barrier_audit.md"
+expected_source_sha256 = "f9d41fdffb6ca5a7bbc54cd67a5491aae7e6fdf12d03c8725403b7a4abfb8e6f"
+refutes = ["paired rooted K4 from colourful sets and connectivity alone"]
+lacks = ["K6-minor exclusion in the four-chromatic core"]
+
+[[claims]]
+id = "hc7.barrier.repeated_colour_exchange"
+title = "A repeated colour does not force rooted-model rerouting"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_repeated_colour_rooted_k4_exchange_barrier.md"
+active = true
+audit = "barriers/hc7_repeated_colour_rooted_k4_exchange_barrier_audit.md"
+expected_source_sha256 = "8c30b47253d63cbf98e5c8ee5901bbe81abc6b3eb3b20c8a5c6e0c5aad38df09"
+refutes = ["rooted branch-set exchange from the repeated quotient colour alone"]
+lacks = ["distributed literal host attachments forced by contraction-criticality"]
+
+[[claims]]
+id = "hc7.barrier.planar_core_synchronization"
+title = "A planar four-connected core need not synchronize two colourful sets"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_paired_colourful_planar_core_barrier.md"
+active = true
+audit = "barriers/hc7_paired_colourful_planar_core_barrier_audit.md"
+expected_source_sha256 = "25d436688ed47f624fafc465249165ac889c43839e1c3a83d4930a90f1118630"
+refutes = ["paired rooted K4 from planarity, four-connectivity and colourful sets alone"]
+lacks = ["the complete lifted seven-contraction-critical host structure"]
+
+[[claims]]
+id = "hc7.barrier.connectivity_only_augmentation"
+title = "Connectivity-only near-K7 augmentation is open-problem strength"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_eight_connected_near_k7_augmentation_hardness.md"
+active = true
+audit = "barriers/hc7_eight_connected_near_k7_augmentation_hardness_audit.md"
+expected_source_sha256 = "f165b53691bc24afbad933d4f334ab9c1ce02fb10f79cad42b1e9f266b7542b6"
+refutes = ["completion of a K7-minus-one-edge model from connectivity alone"]
+lacks = ["proper-minor colouring responses"]
+
+[[relations]]
+source = "hc7.adjacent_pair_palette_linkage"
+target = "hc7.two_pole_contact_trichotomy"
+kind = "uses"
+
+[[relations]]
+source = "hc.bipartite_contraction_components"
+target = "hc.bipartite_contraction_palette"
+kind = "uses"
+
+[[relations]]
+source = "hc7.concentrated_rotation_normalization"
+target = "hc7.adjacent_pair_bichromatic_support"
+kind = "uses"
+
+[[relations]]
+source = "hc7.separator_or_five_core"
+target = "hc7.global_adjacent_pair_palette_frame"
+kind = "uses"
+
+[[relations]]
+source = "hc7.separator_or_five_core"
+target = "hc7.adjacent_pair_bichromatic_support"
+kind = "uses"
+
+[[relations]]
+source = "hc7.separator_or_five_core"
+target = "hc7.concentrated_rotation_normalization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.separator_or_five_core"
+target = "hc7.five_core_compression"
+kind = "uses"
+
+[[relations]]
+source = "hc7.deficient_component_separator"
+target = "hc7.five_core_compression"
+kind = "uses"
+
+[[relations]]
+source = "hc7.colour_matched_repair_path"
+target = "hc7.five_core_compression"
+kind = "uses"
+
+[[relations]]
+source = "hc7.colour_matched_repair_path"
+target = "hc7.deficient_component_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.path_component_exchange"
+target = "hc7.colour_matched_repair_path"
+kind = "uses"
+
+[[relations]]
+source = "hc7.path_exchange_or_separator"
+target = "hc7.path_component_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.all_cut_interval_exchange"
+target = "hc7.path_exchange_or_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.component_contact_defect"
+target = "hc7.all_cut_interval_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.adjacent_pair_model_or_separator"
+target = "hc7.separator_or_five_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.adjacent_pair_model_or_separator"
+target = "hc7.k5_transversal_order7"
+kind = "uses"
+note = "Only as a route to a raw exact-seven separation; no colour compatibility is inferred."
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.target.adjacent_pair_model_or_separator"
+kind = "subproblem_of"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.component_contact_defect"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.one_step_minor_dynamics"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc.contracted_path_list_lock"
+kind = "related_to"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.barrier.two_colourful_sets"
+kind = "guarded_by"
+note = "Refutes the connectivity-only shortcut, not the full host-level target."
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.barrier.repeated_colour_exchange"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.barrier.planar_core_synchronization"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.defect_one_exchange"
+target = "hc7.barrier.connectivity_only_augmentation"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.adjacent_pair_model_or_separator"
+target = "hc7.barrier.labelled_delta_exchange"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.adjacent_pair_model_or_separator"
+target = "hc7.barrier.static_trace_alignment"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.adjacent_pair_model_or_separator"
+target = "hc7.barrier.three_common_profile"
+kind = "guarded_by"
+
+[[verifiers]]
+id = "atomic-two-pole-contact"
+path = "active/hc7_atomic_two_pole_contact_trichotomy_verify.py"
+sha256 = "4a81379c2ae4dc5cb127d2c2192b50f4296ed581a9d54f12622bf17d4dfda71b"
+timeout = 20
+expected_stdout = [
+  "GREEN: spanning K6 rows are connected and pairwise adjacent",
+  "contacts {'u3': {1, 3, 4, 5, 6}, 'u4': {1, 4, 5, 6}}",
+  "joint_contact 5",
+]
+
+[[verifiers]]
+id = "one-step-minor-dynamics"
+path = "results/hc7_star_core_one_step_minor_dynamics_verify.py"
+sha256 = "a6830f490ad5aa2896b52d160ca2b52316c548c027396dc8ec8cb29fc743224f"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "PASS HEhutxm full-root saturation",
+  "PASS vertex deletion, edge deletion and edge contraction witnesses",
+]
+
+[[verifiers]]
+id = "paired-colourful-planar-barrier"
+path = "barriers/hc7_paired_colourful_planar_core_barrier_verify.py"
+sha256 = "5266dd8700ee72ec3105df39104a9a4b1a772eb729153bf8155af7ba694543bc"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "PASS graph6=HEhutxm",
+  "PASS R: planar, kappa=4, chi=4, labelled_4_colourings=48",
+  "PASS S,T: colourful; no paired K4 minor",
+  "PASS Q: chi=5; no K6 minor (two exact exhaustive encodings)",
+]
