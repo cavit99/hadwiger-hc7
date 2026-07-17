@@ -5,16 +5,18 @@
 
 ## Primary target
 
-[Couple a five-colour linkage to a spanning `K_6` model](hc7_adjacent_pair_palette_model_frontier.md)
+[Adjacent-pair colouring and rooted-model frontier](hc7_adjacent_pair_palette_model_frontier.md)
 
 Every hypothetical minor-minimal `HC_7` counterexample has an adjacent pair
-whose deletion is six-chromatic.  It also has, on the common five-connected
-remainder, a spanning `K_6` model and five disjoint paths whose two endpoint
-sets realize the complete five-colour palettes.  The active theorem is to
-choose and reroute the paths and model jointly until they give an explicit
-`K_7` model, a colour-compatible order-seven separation, a global
-two-vertex `K_5`-minor transversal, or a strict improvement of the declared
-joint invariant.
+whose deletion is six-chromatic.  Its two-colour components give an exact
+dichotomy.  A disconnected component exposes an actual separator.  If all
+five two-colour graphs through the missed colour are connected, any one of
+them is a connected dominating induced bipartite subgraph; deleting it
+leaves a tight five-chromatic, `K_6`-minor-free core with two opposite
+singleton-rooted near-`K_7` models.  The active theorem is to reduce the
+separator to an order-seven colour-gluing interface or synchronize the two
+rooted models into an explicit `K_7` model, with a global two-vertex
+`K_5`-minor transversal as the permitted structural exit.
 
 Immediate proved inputs, each with its adjacent audit:
 
@@ -22,18 +24,26 @@ Immediate proved inputs, each with its adjacent audit:
 - [palette-permutation linkage and contact consequences](../results/hc7_adjacent_pair_palette_linkage.md)
 - [bichromatic support and exact missing-colour rotation](../results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
 - [palette dichotomy for a contracted induced bipartite subgraph](../results/hc_bipartite_contraction_palette_dichotomy.md)
+- [diagonal bichromatic components after a bipartite contraction](../results/hc_bipartite_contraction_bichromatic_components.md)
 - [normal form and separator for concentrated colour rotations](../results/hc7_concentrated_rotation_normalization.md)
+- [connected two-colour compression to a five-chromatic core](../results/hc7_star_kempe_five_core_compression.md)
+- [exhaustive adjacent-pair separator-or-core theorem](../results/hc7_adjacent_pair_separator_or_five_core.md)
+- [deficient-component separator in a contact-maximal rooted model](../results/hc7_maximal_rooted_k4_deficient_component_separator.md)
 - [two-pole contact and branch-set split](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 
-The first concrete milestone is the exact three-common-branch-set profile.
-Choose an induced bipartite split candidate inside a named branch set and
-contract it.  Five common bichromatic components then join its two sides.
-The task is to package those components against the five external model
-labels, or to turn the returned literal separator into an order-seven
-colour-compatible separation or fixed two-vertex transversal.  Exact
-missing-colour rotations alone cannot improve the fixed model score: after
-normalization they only swap inactive components, each already lying behind
-a four-coloured separator.
+The first constructive milestone is the
+[paired colourful-set `K_4` frontier](hc7_two_colorful_sets_rooted_k4_frontier.md).
+In the connected-dominating branch, deleting the poles leaves a
+four-chromatic graph with two colourful pole-neighbourhoods.  A `K_4`
+model whose four branch sets meet both neighbourhoods gives `K_7`
+immediately.  For a contact-maximal model rooted at one neighbourhood, a
+missed branch set lies in a component whose full neighbourhood is an
+actual separator of order at least seven.  The contracted repeated-colour
+response does not bound this expanded boundary and cannot force an exchange
+by itself.  The active task is to use the literal attachments to split a
+branch set and repair the one-edge-deficient model, or reduce the boundary
+to an order-seven colour-gluing interface.  The lift to the
+seven-contraction-critical host must remain explicit.
 
 ## Label-rich laboratory
 
@@ -63,6 +73,10 @@ use the six-colouring response.
 - [the full static three-common-branch-set profile can terminate at an
   order-seven separator and a fixed two-vertex planarizing
   set](../barriers/hc7_three_common_geodesic_two_apex_barrier.md)
+- [two colourful sets need not share one rooted `K_4` model, even in a
+  five-connected graph](../barriers/hc7_two_colorful_sets_paired_k4_barrier.md)
+- [a unique forced repeated colour does not reroute a deficient rooted
+  branch set](../barriers/hc7_repeated_colour_rooted_k4_exchange_barrier.md)
 - five disjoint palette paths preserve endpoint colours only up to a
   permutation and need not be bichromatic;
 - an actual separator returned by a branch-set split is not automatically

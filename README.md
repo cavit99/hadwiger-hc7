@@ -49,21 +49,30 @@ vertex-disjoint paths whose endpoint colours form the two complete
 five-colour palettes.  This structure exists in every hypothetical
 minor-minimal counterexample, not only in one finite boundary case.
 
-An additional audited theorem now controls each relevant two-colour
-support.  It either exposes an actual graph separator, or gives an exact
-Kempe interchange that changes the colour missed by both endpoints while
-forcing contacts with all four untouched colour classes.  The separator
-need not yet have order seven, and these colour contacts are not yet aligned
-with specified branch sets of the spanning `K_6` model.
+Audited colouring theorems now control every pair of colours around such a
+contraction.  For a connected induced bipartite subgraph, both sides see
+every other colour.  Each colour supplies a common bichromatic component,
+and every pair of other colours supplies a diagonal component forced by
+nonextendability.  Matchings of colour pairs therefore give simultaneous
+vertex-disjoint connected witnesses.  Whenever the relevant boundary
+contacts occupy more than one component, the full neighbourhood of a
+component is an actual graph separator.  These separators need not yet
+have order seven.
 
-This has now been extended uniformly.  In any minor-minimal `k`-chromatic
-graph, contracting a nontrivial connected induced bipartite subgraph forces
-both bipartition sides to see every other colour and supplies a common
-bichromatic component for each colour.  Concentrated support rotates the
-contracted colour exactly; diffuse support exposes the full literal
-separator.  Because the bipartite subgraph can be chosen inside one named
-minor branch set, this preserves more model information than the original
-two-vertex argument.
+If all five full two-colour graphs through the missed colour are connected,
+the structure compresses further.  The union of any one other colour with
+the missed colour is a connected dominating induced bipartite subgraph
+`X`.  The graph `G-X` is five-chromatic and `K_6`-minor-free, and deleting
+either endpoint of the selected edge leaves a five-chromatic graph.
+Martinsson--Steiner's prescribed-singleton theorem then produces two
+oppositely rooted near-`K_7` models.  This compression no longer depends on
+preserving the original spanning `K_6` model.
+
+These alternatives have been combined into one audited exhaustive theorem
+for the selected adjacent-pair colouring: a disconnected two-colour graph
+returns a genuine separator, while the separator-free case returns all
+five connected-dominating cores.  The theorem supplies no upper bound on a
+returned separator and does not yet synchronize the two rooted models.
 
 Separately, an audited hand proof shows that every eight-connected
 `K_7`-minor-free graph has at least 17 vertices.  Its new elementary step
@@ -71,15 +80,20 @@ rules out a seven-regular graph on 16 vertices in which every nonadjacent
 pair has four common neighbours.  This is a global order bound, not a proof
 of the palette-to-model exchange.
 
-The immediate target is a **palette-to-model exchange theorem**: choose the
-edge, colouring, common bichromatic components, and spanning `K_6` model
-jointly, then reroute them into an explicit `K_7` model, a colour-compatible
-order-seven separation, or a global two-vertex transversal for all `K_5`
-minors.  The first exact unresolved profile has three branch sets contacted
-by both edge endpoints, one branch set contacted exclusively by each
-endpoint, and one contacted by neither.  The new task is to package the
-five common support components created by a label-preserving bipartite
-contraction against those five named external branch sets.
+The immediate target is now a smaller rooted-model exchange.  In the
+connected-dominating branch, deleting the two endpoints leaves a
+four-chromatic graph, and each endpoint neighbourhood is colourful in it.
+If one `K_4`-minor model has every branch set meet both neighbourhoods, its
+four branch sets together with the endpoints and `X` give an explicit
+`K_7` minor.  For a contact-maximal model rooted at one neighbourhood, each
+missed branch set now yields a genuine separator: its full boundary consists
+of contacts in the other three bags, contacts in `X`, and one endpoint.
+The boundary has order at least seven.  A sharp `K_6`-minor-free example
+shows that the forced repeated colour in the contracted quotient does not
+by itself reroute the model.  The open theorem is therefore to use the
+literal attachment distribution to split a branch set and repair the
+one-edge-deficient model, or reduce the full boundary to a
+colour-compatible order-seven separation or fixed two-vertex transversal.
 
 The previously developed balanced order-eight boundary remains the main
 label-rich laboratory.  There the canonical regenerated `K_6` model is
@@ -95,7 +109,8 @@ not a proof of $HC_7$.
 |---|---|
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Authoritative current status, proved dependency chain, exact open problems, and known obstructions |
 | [`active/INDEX.md`](active/INDEX.md) | Short list of current proof work and immediate dependencies |
-| [Current palette-to-model frontier](active/hc7_adjacent_pair_palette_model_frontier.md) | Uniform adjacent-pair setup, proved inputs, guardrails, and immediate open theorem |
+| [Current adjacent-pair frontier](active/hc7_adjacent_pair_palette_model_frontier.md) | Colour-component dichotomy, connected-dominating compression, and immediate rooted-model theorem |
+| [Paired colourful-set `K_4` frontier](active/hc7_two_colorful_sets_rooted_k4_frontier.md) | Exact four-chromatic reduction and the current constructive milestone |
 | [Balanced order-eight laboratory](active/hc7_balanced_order8_frontier.md) | Label-rich special branch retained to test the uniform exchange |
 | [Frozen support-six technical frontier](active/hc7_support_six_frontier.md) | Earlier developed dependency chain retained for reuse |
 

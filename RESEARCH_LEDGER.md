@@ -12,7 +12,7 @@ current programme. The balanced order-eight, two-root, and support-six
 sections retain developed dependency chains but are not by themselves the
 current engine.
 
-## Current strategic frontier: palette-to-model exchange
+## Current strategic frontier: adjacent-pair colouring and rooted models
 
 A new audited reduction supplies a uniform entry point in every hypothetical
 minor-minimal counterexample.  Kawarabayashi--Pedersen--Toft's theorem for
@@ -82,32 +82,79 @@ separator of order at least seven.  If no inactive component occurs
 anywhere in the orbit, all rotations are merely global colour relabellings
 and leave every coordinate of the fixed model/path score unchanged.
 
-The primary open theorem is to choose the eligible edge, colouring, five
-paths, and spanning model jointly and turn them into one of:
+A second uniform theorem couples the colours different from the contracted
+colour.  For every pair of them, nonextendability forces one diagonal
+bichromatic component.  Components selected for the two edges of a colour
+matching are automatically vertex-disjoint.  At `k=7`, together with the
+common component for the fifth colour this gives three disjoint connected
+subgraphs adjacent to the two bipartition sides.  If the boundary contacts
+for one colour pair occupy more than one component, each such component
+lies behind an actual separator.  This removes the shared-contracted-colour
+overlap, but the planar-join barrier shows that set-theoretic coverage of
+all five model labels still does not produce a label-preserving split.
+
+The separator-free colouring residue now has a sharper compression.  If
+all five full two-colour graphs through the missed colour are connected,
+then for every other colour their union `X` is a connected dominating
+induced bipartite subgraph.  The graph `Q=G-X` is five-chromatic and
+`K_6`-minor-free; deleting either pole leaves a five-chromatic graph.
+Martinsson--Steiner's prescribed-singleton `K_5` theorem therefore gives
+two oppositely rooted near-`K_7` models.  This result is independent of the
+original spanning `K_6` model.
+
+At a fixed adjacent-pair colouring, this gives an exhaustive top-level
+dichotomy.  If a full two-colour graph is disconnected, the diffuse,
+one-sided, or inactive-component argument exposes an actual separator.  If
+all five are connected, the connected-dominating compression applies.  The
+remaining difficulty is no longer existence of five colour contacts; it is
+either reducing the returned separator to a colour-compatible order-seven
+interface or synchronizing two rooted models.
+
+The primary open theorem is to turn this dichotomy into one of:
 
 1. an explicit `K_7`-minor model;
 2. an actual order-seven separation carrying a named boundary colouring
    from both sides;
 3. two vertices meeting every `K_5`-minor model; or
-4. a strict improvement in the joint path/model invariant.
+4. a strict improvement in a rooted-model contact invariant.
 
-The first concrete milestone is the exact three-common-branch-set case:
-choose a connected induced bipartite split candidate inside a named row,
-then package its five common support components against the five external
-model labels.  Success gives a contact-increasing transfer or a `K_7`
-model; failure must yield a five-vertex separator in `H`, hence an
-order-seven colour-compatible separator in `G`, or the same global
-two-vertex `K_5`-minor transversal.  Colour contacts alone remain
-insufficient; actual intersections with the six branch sets must be
-retained.
+The first concrete milestone is now four-chromatic.  In the
+connected-dominating branch put `R=Q-{z,u}` and
 
-Six results are now promoted with separate GREEN audits:
+\[
+                       S=N_R(z),\qquad T=N_R(u).
+\]
+
+The graph `R` is four-chromatic and each of `S,T` is colourful.  A `K_4`
+model whose every branch set meets both sets, together with `z,u,X`, gives
+an explicit `K_7` model.  In a contact-maximal `S`-rooted model, every
+missed branch set lies in a component `C` disjoint from `T` whose full
+neighbourhood is
+
+\[
+             N_R(C)\mathbin{\dot\cup}N_X(C)
+                         \mathbin{\dot\cup}\{z\}.
+\]
+
+This is an actual separator of order at least seven.  Contraction collapses
+that boundary to a few model labels and forces `u` to repeat a missed
+label, but a sharp `K_6`-minor-free example proves that this repeated colour
+does not itself reroute the model, even with a unique deficiency.  The
+immediate theorem must instead use the literal attachment distribution to
+split a branch set or construct `K_7`, or reduce the full boundary to an
+order-seven colour-compatible separation/fixed-pair exit.
+
+Ten results are now promoted with separate GREEN audits:
 
 - [`hc7_global_adjacent_pair_palette_frame.md`](results/hc7_global_adjacent_pair_palette_frame.md)
 - [`hc7_adjacent_pair_palette_linkage.md`](results/hc7_adjacent_pair_palette_linkage.md)
 - [`hc7_adjacent_pair_bichromatic_support_dichotomy.md`](results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
 - [`hc_bipartite_contraction_palette_dichotomy.md`](results/hc_bipartite_contraction_palette_dichotomy.md)
+- [`hc_bipartite_contraction_bichromatic_components.md`](results/hc_bipartite_contraction_bichromatic_components.md)
 - [`hc7_concentrated_rotation_normalization.md`](results/hc7_concentrated_rotation_normalization.md)
+- [`hc7_star_kempe_five_core_compression.md`](results/hc7_star_kempe_five_core_compression.md)
+- [`hc7_adjacent_pair_separator_or_five_core.md`](results/hc7_adjacent_pair_separator_or_five_core.md)
+- [`hc7_maximal_rooted_k4_deficient_component_separator.md`](results/hc7_maximal_rooted_k4_deficient_component_separator.md)
 - [`hc7_outer_edge_canonical_k6_rotation.md`](results/hc7_outer_edge_canonical_k6_rotation.md)
 
 The last result locates the balanced order-eight laboratory within this
@@ -127,7 +174,9 @@ This order bound is not an additional step in the palette-to-model
 dependency chain.
 
 The exact current formulation and trust boundary are in
-[`active/hc7_adjacent_pair_palette_model_frontier.md`](active/hc7_adjacent_pair_palette_model_frontier.md).
+[`active/hc7_adjacent_pair_palette_model_frontier.md`](active/hc7_adjacent_pair_palette_model_frontier.md),
+with the immediate four-chromatic reduction in
+[`active/hc7_two_colorful_sets_rooted_k4_frontier.md`](active/hc7_two_colorful_sets_rooted_k4_frontier.md).
 
 ## Developed laboratory: balanced order-eight completion
 
@@ -136,7 +185,7 @@ exchange at level six, equivalently the two-vertex transversal theorem for
 compact `K_5` models.  Its most developed labelled branch is the exact
 order-eight outcome of the five-leaf star in the graph of globally
 support-maximal private pairs.  It remains the principal label-rich
-laboratory for the uniform palette-to-model theorem above.
+laboratory for the adjacent-pair rooted-model theorem above.
 
 ### Current checkpoint: the matching is aligned
 

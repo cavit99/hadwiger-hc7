@@ -1,0 +1,184 @@
+# Technical frontier: a `K_4` minor rooted at two colourful sets
+
+**Status:** active reduction and conjectural target.  The reduction below
+uses the GREEN-audited star-Kempe compression theorem.  The paired-root
+theorem in Section 3 is open.  Nothing here proves `HC_7`.
+
+## 1. Compressed setup
+
+Let `G` be a hypothetical minor-minimal counterexample to `HC_7`.  In the
+star-Kempe branch of the adjacent-pair construction, the vertex set has a
+partition
+
+\[
+                    V(G)=X\mathbin{\dot\cup}V(Q),
+\]
+
+with the following properties.
+
+1. `X` is a connected induced bipartite subgraph and dominates `Q`.
+2. The graph `Q` is five-chromatic and has no `K_6` minor.
+3. There are adjacent vertices `z,u in V(Q)` such that, on putting
+
+   \[
+                         R=Q-\{z,u\},                  \tag{1.1}
+   \]
+
+   one has
+
+   \[
+      \chi(R)=4,qquad \chi(R+z)=\chi(R+u)=5.          \tag{1.2}
+   \]
+
+4. Both `z` and `u` have a neighbour in `X`.
+
+Write
+
+\[
+                 S=N_R(z),\qquad T=N_R(u).             \tag{1.3}
+\]
+
+## 2. Exact reduction to two colourful sets
+
+### Lemma 2.1
+
+Both `S` and `T` are colourful in the four-chromatic graph `R`: every
+proper four-colouring of `R` uses all four colours on each of `S,T`.
+
+#### Proof
+
+Let `c` be a proper four-colouring of `R`.  If some colour were absent
+from `S`, assigning that colour to `z` would four-colour `R+z`, contrary
+to (1.2).  Thus `S` contains all four colours under `c`.  The proof for
+`T` is symmetric. \(\square\)
+
+### Lemma 2.2
+
+If `R` has a `K_4`-minor model `(D_1,D_2,D_3,D_4)` such that
+
+\[
+       D_i\cap S\ne\varnothing
+       \quad\hbox{and}\quad
+       D_i\cap T\ne\varnothing
+       \qquad(i=1,2,3,4),                              \tag{2.1}
+\]
+
+then `G` contains a `K_7` minor.
+
+#### Proof
+
+The seven branch sets
+
+\[
+                 \{z\},\ \{u\},\ X,\ D_1,D_2,D_3,D_4
+\]
+
+are pairwise disjoint and connected.  The first two are adjacent because
+`zu` is an edge.  Both are adjacent to `X`, and domination makes `X`
+adjacent to every `D_i`.  Condition (2.1) makes both singletons adjacent
+to every `D_i`, while the four `D_i` are pairwise adjacent by definition.
+These are the branch sets of a `K_7` minor. \(\square\)
+
+Martinsson--Steiner's Strong Hadwiger theorem for four colours, applied
+separately to `S` and `T`, produces an `S`-rooted `K_4` model and a
+`T`-rooted `K_4` model.  The missing operation is to synchronize those two
+models so that every branch set satisfies both conditions in (2.1).
+
+## 3. Primary open theorem
+
+### Paired colourful-set alternative
+
+Under the complete setup of Section 1, prove at least one of the
+following.
+
+1. `R` has a `K_4` model satisfying (2.1), and Lemma 2.2 gives a `K_7`
+   minor.
+2. `G` has an actual order-seven separation whose boundary colouring is
+   induced by proper-minor six-colourings on both sides.
+3. There are two vertices of `G` meeting every `K_5`-minor model.
+
+The statement is intentionally tied to the lifted host `G`.  It is false
+for arbitrary four-chromatic `R` with two colourful sets, even when `R` is
+five-connected; see the
+[explicit join-of-two-paths barrier](../barriers/hc7_two_colorful_sets_paired_k4_barrier.md).
+That example contains a `K_6` minor and therefore cannot occur as the
+present core.  The connected dominating subgraph `X`, the `K_6`-minor
+exclusion, seven-connectivity, and the proper-minor colouring responses
+must all remain available in a proof.
+
+## 4. The deficient component and its expanded boundary
+
+Fix an `S`-rooted `K_4` model `(D_1,...,D_4)`.  The six branch sets
+
+\[
+                         X,\ \{z\},\ D_1,\ldots,D_4    \tag{4.1}
+\]
+
+form a `K_6` model.  The remaining pole `u` is adjacent to `X` and `z`,
+and it is adjacent to `D_i` exactly when that branch set contains a member
+of `T`.  Contracting the sets in (4.1) therefore gives a proper minor
+containing a named `K_6` plus one vertex whose missing adjacencies are
+precisely the `T`-deficient branch sets.
+
+Because every proper minor of `G` is six-colourable, the six clique
+vertices receive distinct colours and `u` must repeat the colour of one
+of the branch sets it misses.  This makes the paired-root failure visible
+as an exact proper-minor colouring response, rather than merely as an
+unlabelled failure of two rooted models to coincide.
+
+The repeated colour is not itself a rerouting certificate.  Even with a
+`K_6`-minor-free five-chromatic core and a unique missed branch set, the
+quotient response may be forced while no improving rooted model exists;
+see the explicit barrier linked below.
+
+There is, however, a host-level separator attached to every missed branch
+set.  Choose the `S`-rooted model to maximize the number of branch sets
+meeting `T`.  For a missed branch set `D_j`, delete the other three branch
+sets from `R`, and let `C_j` be the component containing `D_j`.  The
+promoted deficient-component theorem proves
+
+\[
+ C_j\cap T=\varnothing,
+ \qquad
+ N_G(C_j)=N_R(C_j)\mathbin{\dot\cup}N_X(C_j)
+              \mathbin{\dot\cup}\{z\},               \tag{4.2}
+\]
+
+with `N_R(C_j)` contained in the other three branch sets.  This is the
+boundary of an actual separation and has order at least seven.  Contraction
+collapses its possibly many vertices to at most five labels, which explains
+why the quotient colouring gives no upper bound.
+
+The constructive programme is therefore:
+
+1. choose an `S`-rooted model maximizing the number of branch sets meeting
+   `T`;
+2. work with the literal boundary (4.2), not only its contracted labels;
+3. use distributed attachments in `X` and the other three branch sets to
+   reroute the deficient branch set or construct `K_7`; and
+4. if this is impossible, reduce (4.2) to an order-seven boundary carrying
+   compatible proper-minor colourings, or obtain the fixed-pair conclusion.
+
+In the unique-deficiency case, `C_j,u,z,X` and the other three branch sets
+already form a `K_7`-minus-one-edge model, missing only the adjacency
+between `C_j` and `u`.  The immediate host theorem is therefore a
+label-preserving split-or-separator theorem for this actual near-complete
+model.  Any proof must use a host-measured strict improvement or the full
+literal separation; merely alternating between independently generated
+models, or rereading the repeated quotient colour, gives no descent.
+
+## 5. Immediate dependencies and barrier
+
+- [deficient-component separator theorem](../results/hc7_maximal_rooted_k4_deficient_component_separator.md)
+- [repeated quotient colour does not force an exchange](../barriers/hc7_repeated_colour_rooted_k4_exchange_barrier.md)
+
+## 6. Established external input
+
+A. Martinsson and R. Steiner,
+[*Strengthening Hadwiger's conjecture for 4- and 5-chromatic graphs*](https://doi.org/10.1016/j.jctb.2023.08.009),
+Journal of Combinatorial Theory, Series B 164 (2024), 1--16, Theorem 1.3
+and Corollary 1.4.
+
+Theorem 1.3 says that a colourful set in a four-chromatic graph roots a
+`K_4` minor.  It is applied separately to `S` and `T`; the paired version
+in Section 3 is not claimed by that paper.

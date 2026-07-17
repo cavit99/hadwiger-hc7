@@ -1,8 +1,8 @@
-# Technical frontier: coupling a five-colour linkage to a spanning `K_6` model
+# Technical frontier: adjacent-pair colourings and rooted minor models
 
 **Status:** active research target.  The inputs labelled as proved below
 have written proofs and separate internal audits.  The exchange theorem in
-Section 3 is open.  Nothing here proves `HC_7`.
+Sections 3 and 4 are open.  Nothing here proves `HC_7`.
 
 ## 1. Uniform setup
 
@@ -83,62 +83,117 @@ whose boundary uses only the other four colours.  If there is no inactive
 component anywhere in the transition orbit, every rotation is merely a
 global colour relabelling and cannot improve a fixed model/linkage score.
 
+Two further audited theorems now reorganize the residue.
+
+First, after contracting any connected induced bipartite subgraph, every
+pair of colours different from the contracted colour has a diagonal
+bichromatic component forced by nonextendability.  A matching of two
+colour pairs therefore gives two vertex-disjoint such components; together
+with the common component for the fifth colour, this gives three disjoint
+connected subgraphs adjacent to the two sides.  If the boundary contacts
+for one colour pair occupy more than one bichromatic component, the full
+neighbourhood of each such component is an actual separator.  These
+components carry colours, not prescribed clique-minor labels.
+
+Second, suppose all five full two-colour graphs consisting of the missed
+colour and one other colour are connected.  For any one of the other
+colours, their union `X` is then a connected induced bipartite subgraph
+dominating the rest of `G`.  The graph `Q=G-X` is five-chromatic and
+`K_6`-minor-free, while deleting either pole from `Q` leaves a
+five-chromatic graph.  Martinsson--Steiner's prescribed-singleton theorem
+then gives two oppositely rooted near-`K_7` models.  This conclusion no
+longer depends on retaining the original spanning `K_6` model.
+
+The alternatives are exhaustive at a fixed adjacent-pair colouring.  If
+one of the five full two-colour graphs is disconnected, the diffuse,
+one-sided, or inactive-component analysis gives an actual separator.  If
+none is disconnected, the connected-dominating compression applies.  The
+separator has order at least seven but currently has no proved upper bound.
+This exhaustive implication is now recorded as a separate GREEN-audited
+theorem rather than only as a programme-level summary.
+
 ## 3. Primary open theorem
 
-### Palette-linked `K_6` exchange theorem
+### Adjacent-pair colouring-space alternative
 
-Under the setup in Section 1, choose jointly
+For the edge and colouring in Section 1, prove one of the following.
 
-- an eligible edge `zu`;
-- a buffer-colour six-colouring of `G-zu`;
-- one neighbour of each of the five nonbuffer colours at each pole;
-- five disjoint paths joining the selected neighbour sets; and
-- a spanning `K_6` model of `H`;
+1. A separator returned by a disconnected two-colour graph can be replaced
+   by an actual order-seven separation whose boundary partition is induced
+   by compatible proper-minor six-colourings on both sides.
+2. The separator yields two vertices meeting every `K_5`-minor model.
+3. In the connected-dominating branch, the two oppositely rooted
+   near-`K_7` models can be synchronized to give an explicit `K_7` minor.
 
-so as to maximize, in order,
+The third outcome has an equivalent four-chromatic formulation.  Write
 
 \[
-  \bigl(c(M),\ r(M),\
-  -\text{number of path--branch-set interval changes},\
-  -\text{total path length}\bigr).
-\tag{3.1}
+ X=V_\alpha\cup V_\beta,\qquad
+ Q=G-X,\qquad R=Q-\{z,u\},
 \]
 
-Prove that at least one of the following occurs:
+in the connected-dominating branch, and put
 
-1. the data give an explicit `K_7`-minor model in `G`;
-2. they give an actual order-seven separation whose boundary partition is
-   induced by a named proper-minor six-colouring on both sides;
-3. they identify two vertices meeting every `K_5`-minor model in `G`; or
-4. a label-preserving rerouting strictly improves (3.1).
+\[
+                    S=N_R(z),\qquad T=N_R(u).          \tag{3.1}
+\]
 
-The theorem is deliberately stated with the paths and the model chosen
-together.  Endpoint matchings alone, an arbitrary regenerated model, and
-static boundary colouring languages have all been falsified as sufficient
-invariants.
+Then `R` is four-chromatic and both `S,T` are colourful in `R`.  A
+`K_4`-minor model whose every branch set meets both `S` and `T`, together
+with `z,u,X`, is an explicit `K_7` model.  The open theorem is therefore a
+paired colourful-set alternative in this lifted host: produce that rooted
+`K_4` model, or one of the two structural outcomes above.
+
+The paired statement is false even for a five-connected four-chromatic
+graph.  The known example already has a `K_6` minor, so it does not satisfy
+the present core hypothesis.  A proof must use the `K_6`-minor exclusion,
+the connected dominating lift, seven-connectivity, and exact proper-minor
+colouring responses; applying Strong Hadwiger for four colours separately
+to `S` and `T` does not synchronize the two models.
 
 ## 4. First concrete milestone
 
-The first proof obligation is the exact three-common-branch-set case.
-Let `F_z,F_u` be the two exclusive branch sets and `F_0` the branch set
-contacted by neither pole.  Choose a nontrivial induced bipartite subgraph
-`Q` inside one of these named rows as a proposed split and apply the
-contraction palette theorem.  Its five common support components must be
-packaged against the five other model labels to prove one of:
+Fix an `S`-rooted `K_4` model `(D_1,...,D_4)` in `R`, supplied by
+Martinsson--Steiner, maximizing the number of branch sets meeting `T`.
+The six sets
 
-1. a connected part can be transferred from `F_z` or `F_u` into `F_0`
-   while preserving all five old branch-set adjacencies, increasing
-   `r(M)`;
-2. one exclusive branch set can be split into two connected parts which,
-   after absorbing `z,u` appropriately, give a `K_7` model; or
-3. every such transfer is blocked by one actual separator, and the
-   five-connectivity of `H` plus the two proper-minor colourings reduce
-   that separator to order five in `H`, hence order seven in `G`; or
-4. the same two vertices meet every `K_5`-minor model in `G`.
+\[
+                         X,\ \{z\},\ D_1,\ldots,D_4    \tag{4.1}
+\]
 
-A proof must track actual vertices and branch-set adjacencies.  It is not
-enough to contract each branch set to one quotient vertex or to retain only
-the endpoint permutation of the five paths.
+form a `K_6` model.  Contract them in `G`.  In every six-colouring of this
+proper minor, the remaining pole `u` must repeat the colour of a branch set
+`D_i` which it misses.  A promoted maximality lemma now identifies the
+literal obstruction hidden by that contraction.  For every missed `D_j`,
+the component `C_j` of `R` minus the other three bags that contains `D_j`
+is disjoint from `T`, and
+
+\[
+ N_G(C_j)=N_R(C_j)\mathbin{\dot\cup}N_X(C_j)
+                 \mathbin{\dot\cup}\{z\}.            \tag{4.2}
+\]
+
+This is the boundary of an actual separation of order at least seven.
+The repeated quotient colour alone cannot improve the model: an explicit
+`K_6`-minor-free core with a unique missed label realizes that response and
+has no improving rooted model.
+
+The immediate host-level theorem must use the expanded boundary in (4.2)
+to do one of the following:
+
+1. reroute a deficient `D_i` so that it also meets `T`, strictly improving
+   the chosen rooted model, or directly construct `K_7`;
+2. identify an actual order-seven separation with compatible boundary
+   colourings; or
+3. identify a fixed two-vertex `K_5`-minor transversal.
+
+When exactly one branch set is deficient, `C_j,u,z,X` and the other three
+bags already form a `K_7`-minus-one-edge model.  Thus the first milestone is
+a label-preserving split of an actual branch set that repairs that missing
+adjacency, or an exact separator produced by the failure of every such
+split.  The old five-support/spanning-`K_6` packaging remains a
+falsification suite and label-rich source of candidate reroutings, but it
+is no longer the primary induction object.
 
 ## 5. Relation to the balanced order-eight branch
 
@@ -147,8 +202,8 @@ laboratory.  There the eligible adjacent pair has an explicit spanning
 `K_6` model with `r=5`, and that model is reversibly coupled to a spanning
 `K_7`-minus-one-edge model with nonadjacent singleton deficient branch
 sets.  This proves that contact maximization alone cycles; it also offers
-additional fixed labels with which to test any proposed exchange in
-Section 3.
+additional fixed labels with which to test the rooted-model exchange in
+Section 4.
 
 The balanced branch is no longer the definition of the main theorem.
 Any mechanism discovered there must be restated in the uniform setup above
@@ -167,6 +222,14 @@ or explicitly identified as using additional balanced-boundary data.
   than seven-chromatic.
 - Five disjoint paths retain a palette permutation, not the individual
   colour pairing along each path.
+- Even two disjoint diagonal bichromatic components plus the remaining
+  common support component can cover all five model labels without
+  admitting a label-preserving branch-set split.  In the audited planar
+  join, the valid exits are instead a different order-seven separator and
+  the fixed two-vertex planarizing set.
+- Two colourful sets in a four-chromatic graph need not admit one `K_4`
+  model meeting both sets in every branch set, even under substantial
+  internal connectivity.  The lifted host hypotheses are essential.
 - Static exact traces on a boundary can have disjoint extension languages.
 - The endpoint feasibility relation of a Mader delta-matroid does not
   preserve same-branch-set adjacencies or the internal paths needed for a
@@ -182,19 +245,30 @@ or explicitly identified as using additional balanced-boundary data.
 - [palette-permutation linkage and contact consequences](../results/hc7_adjacent_pair_palette_linkage.md)
 - [bichromatic support and exact missing-colour rotation](../results/hc7_adjacent_pair_bichromatic_support_dichotomy.md)
 - [palette dichotomy for contracted induced bipartite subgraphs](../results/hc_bipartite_contraction_palette_dichotomy.md)
+- [diagonal bichromatic components after a bipartite contraction](../results/hc_bipartite_contraction_bichromatic_components.md)
 - [concentrated-rotation normalization and separator](../results/hc7_concentrated_rotation_normalization.md)
+- [connected two-colour compression to a five-chromatic core](../results/hc7_star_kempe_five_core_compression.md)
+- [exhaustive adjacent-pair separator-or-core theorem](../results/hc7_adjacent_pair_separator_or_five_core.md)
+- [deficient-component separator in a contact-maximal rooted model](../results/hc7_maximal_rooted_k4_deficient_component_separator.md)
+- [paired colourful-set `K_4` frontier](hc7_two_colorful_sets_rooted_k4_frontier.md)
 - [two-pole contact and branch-set split](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 - [canonical balanced deletion model and reversible exchange](../results/hc7_outer_edge_canonical_k6_rotation.md)
 - [balanced order-eight technical laboratory](hc7_balanced_order8_frontier.md)
 - [endpoint-only delta-matroid barrier](../barriers/hc7_labelled_mader_delta_enrichment_barrier.md)
 - [static exact-trace parity barrier](../barriers/hc7_aligned_matching_exact_trace_parity_barrier.md)
 - [exact three-common-branch-set two-apex barrier](../barriers/hc7_three_common_geodesic_two_apex_barrier.md)
+- [five-connected two-colourful-set rooted-`K_4` barrier](../barriers/hc7_two_colorful_sets_paired_k4_barrier.md)
+- [forced repeated colour without a rooted-model exchange](../barriers/hc7_repeated_colour_rooted_k4_exchange_barrier.md)
 
 ## 8. Primary external inputs
 
 - K. Kawarabayashi, A. S. Pedersen and B. Toft,
   [*Double-critical graphs and complete minors*](https://doi.org/10.37236/359),
   Electronic Journal of Combinatorics 17 (2010), R87, Theorem 7.1.
+- A. Martinsson and R. Steiner,
+  [*Strengthening Hadwiger's conjecture for 4- and 5-chromatic graphs*](https://doi.org/10.1016/j.jctb.2023.08.009),
+  Journal of Combinatorial Theory, Series B 164 (2024), 1--16,
+  Theorem 1.3 and Corollary 1.4.
 - E. Protopapas, D. M. Thilikos and S. Wiederrecht,
   [*Colorful Minors*](https://doi.org/10.4230/LIPIcs.ICALP.2026.149),
   ICALP 2026.  This is a conceptual comparison, not an invoked theorem at
