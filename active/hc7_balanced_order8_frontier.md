@@ -1,9 +1,10 @@
 # Balanced order-eight completion frontier
 
-**Status:** current conjectural target.  This file records one live
-dependency chain inside the support-six programme.  It is not a proof of
-`HC_7`; claim status is governed by the linked theorem and audit files and
-by [`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md).
+**Status:** developed label-rich laboratory for the current uniform
+palette-to-model target.  Its aligned-trace completion remains conjectural.
+This file is not a proof of `HC_7`; claim status is governed by the linked
+theorem and audit files and by
+[`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md).
 
 ## 1. Exact host configuration
 
@@ -350,9 +351,10 @@ five-chromatic in the canonical web branch: two common neighbours would
 make two bounded facial triangles share one outer skeleton edge.  Thus the
 deletion is six-chromatic and has a spanning `K_6` model.  The applicable
 [outer-edge theorem](../results/hc7_outer_edge_common_neighbour_completion.md)
-uses actual quotient edges only.  Its unresolved continuation is to align
-the six regenerated branch sets with the deleted pair or with the four
-matched boundary traces.
+uses actual quotient edges only.  The spanning model may be the canonical
+one already implicit in the near-complete frame, so its unresolved
+continuation must use the six-colouring response to obtain a genuinely new
+labelled exchange, rather than invoke `HC_6` a second time.
 
 ## 6. Guardrails
 
@@ -450,6 +452,11 @@ Read each promoted theorem with its adjacent audit:
 - [endpoint-mate refinement](../results/hc7_balanced_endpoint_mate_exchange.md)
 - [unique leaf--endpoint chromatic dichotomy](../results/hc7_unique_leaf_endpoint_chromatic_dichotomy.md)
 - [canonical outer-edge common-neighbour completion](../results/hc7_outer_edge_common_neighbour_completion.md)
+- [canonical adjacent-pair deletion model and reversible exchange](../results/hc7_outer_edge_canonical_k6_rotation.md)
+- [uniform adjacent-pair palette frame](../results/hc7_global_adjacent_pair_palette_frame.md)
+- [five-path palette linkage](../results/hc7_adjacent_pair_palette_linkage.md)
 
-The broader dependency chain and the still-open branches are recorded in
+The current uniform target is
+[`hc7_adjacent_pair_palette_model_frontier.md`](hc7_adjacent_pair_palette_model_frontier.md).
+The broader historical dependency chain remains in
 [`hc7_support_six_frontier.md`](hc7_support_six_frontier.md).

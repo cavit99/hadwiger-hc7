@@ -6,18 +6,79 @@
 This file records the current mathematical dependency chain. The concise
 list of live files is [`active/INDEX.md`](active/INDEX.md), and the current
 technical statement is
-[`active/hc7_balanced_order8_frontier.md`](active/hc7_balanced_order8_frontier.md).
+[`active/hc7_adjacent_pair_palette_model_frontier.md`](active/hc7_adjacent_pair_palette_model_frontier.md).
 If an archived note conflicts with this ledger, this ledger governs the
-current programme. The later two-root and support-six sections retain
-developed dependency chains but are not the current engine.
+current programme. The balanced order-eight, two-root, and support-six
+sections retain developed dependency chains but are not by themselves the
+current engine.
 
-## Current strategic frontier: balanced order-eight completion
+## Current strategic frontier: palette-to-model exchange
 
-The global intermediate target remains the maximal-pair support-height
+A new audited reduction supplies a uniform entry point in every hypothetical
+minor-minimal counterexample.  Kawarabayashi--Pedersen--Toft's theorem for
+double-critical seven-chromatic graphs implies that some edge `zu` has
+
+\[
+                         \chi(G-\{z,u\})=6.
+\]
+
+For `H=G-{z,u}`, the proved case `HC_6` and five-connectivity give a
+spanning `K_6` model.  A six-colouring of the edge deletion `G-zu` has one
+common pole colour whose nonempty colour class in `H` is anticomplete to
+both poles, while both poles see each of the other five colours.  Choosing
+one neighbour of every such colour at each pole and applying Menger's
+theorem yields five simultaneous vertex-disjoint paths.  Their endpoint
+colours form the two complete five-colour palettes, paired by a
+permutation.  This is a uniform theorem, not a balanced-boundary case.
+
+Relative to any spanning `K_6` model, four common pole-contact branch sets
+now give an explicit `K_7` model or an actual separator.  After excluding
+that separator mechanism, the three-common-branch-set profile is exact:
+three common singleton pole portals, one exclusive branch set per pole,
+and one branch set contacted by neither pole.  The two exclusive branch
+sets contain at least two required palette colours each and are joined by
+two disjoint selected paths.
+
+The primary open theorem is to choose the eligible edge, colouring, five
+paths, and spanning model jointly and turn them into one of:
+
+1. an explicit `K_7`-minor model;
+2. an actual order-seven separation carrying a named boundary colouring
+   from both sides;
+3. two vertices meeting every `K_5`-minor model; or
+4. a strict improvement in the joint path/model invariant.
+
+The first concrete milestone is the exact three-common-branch-set case:
+use its two exclusive-to-exclusive paths to transfer a connected part into
+the uncontacted branch set, split an exclusive branch set into a `K_7`
+model, or expose a five-vertex separator in `H` and hence an order-seven
+separator in `G`.  The endpoint permutation alone is insufficient; actual
+path intersections with the six branch sets must be retained.
+
+Three results are now promoted with separate GREEN audits:
+
+- [`hc7_global_adjacent_pair_palette_frame.md`](results/hc7_global_adjacent_pair_palette_frame.md)
+- [`hc7_adjacent_pair_palette_linkage.md`](results/hc7_adjacent_pair_palette_linkage.md)
+- [`hc7_outer_edge_canonical_k6_rotation.md`](results/hc7_outer_edge_canonical_k6_rotation.md)
+
+The last result locates the balanced order-eight laboratory within this
+uniform problem.  Its canonical deletion model has exact joint contact five
+but is reversibly coupled to the pre-existing singleton-centred
+near-complete model.  Thus model regeneration and contact maximization add
+no strict rank there; the six-colouring response is the genuinely new
+information.
+
+The exact current formulation and trust boundary are in
+[`active/hc7_adjacent_pair_palette_model_frontier.md`](active/hc7_adjacent_pair_palette_model_frontier.md).
+
+## Developed laboratory: balanced order-eight completion
+
+The earlier global intermediate target was the maximal-pair support-height
 exchange at level six, equivalently the two-vertex transversal theorem for
-compact `K_5` models.  The current local engine is the exact order-eight
-outcome of the five-leaf star in the graph of globally support-maximal
-private pairs.
+compact `K_5` models.  Its most developed labelled branch is the exact
+order-eight outcome of the five-leaf star in the graph of globally
+support-maximal private pairs.  It remains the principal label-rich
+laboratory for the uniform palette-to-model theorem above.
 
 ### Current checkpoint: the matching is aligned
 
@@ -84,8 +145,11 @@ the leaf-side interior would give two distinct bounded facial triangles on
 that one outer edge, which is impossible.  Hence, after excluding the
 already permitted `K_7` and order-seven outputs, deleting the adjacent
 leaf--endpoint pair is six-chromatic and regenerates a spanning `K_6`
-model.  The remaining issue is label-preserving allocation of that model,
-not existence of an unrooted clique minor.
+model.  That unrooted model may be the canonical model already obtained by
+discarding one deficient row of the spanning near-`K_7` frame and absorbing
+it into an adjacent row.  The substantive new information is therefore the
+six-chromatic proper-minor response; the remaining issue is to couple that
+response to a noncanonical labelled model exchange.
 
 An independently audited realization barrier fixes the other side of the
 trust boundary.  There is a seven-connected, seven-chromatic host with the
