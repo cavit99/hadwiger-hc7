@@ -101,6 +101,15 @@ explicit replacements.  It must also preserve the boundary equality
 partition needed for colour gluing—not only the six colours on adjacent
 two-tree triangles.
 
+One infinite separator family is now closed by a reusable rooted-model
+theorem.  If two adjacent vertices are complete to an induced cycle of
+length at least four, the remainder has exactly two connected shores fully
+adjacent to that boundary, and deleting the adjacent pair leaves a `K_5`
+minor, then the graph has a `K_7` minor.  The theorem eliminates the
+five-chromatic exact order-seven boundary `K_2\vee C_5` in a hypothetical
+counterexample.  It does not close exact order-seven boundaries of
+chromatic number at most four or the conditional defect-one branch.
+
 The previously developed balanced order-eight boundary remains the main
 label-rich laboratory.  There the canonical regenerated `K_6` model is
 reversibly coupled to the old near-complete model, proving that contact
