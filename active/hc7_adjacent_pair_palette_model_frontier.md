@@ -121,11 +121,14 @@ For the edge and colouring in Section 1, prove one of the following.
 1. A separator returned by a disconnected two-colour graph can be replaced
    by an actual order-seven separation whose boundary partition is induced
    by compatible proper-minor six-colourings on both sides.
-2. The separator yields two vertices meeting every `K_5`-minor model.
-3. In the connected-dominating branch, the two oppositely rooted
+2. In the connected-dominating branch, the two oppositely rooted
    near-`K_7` models can be synchronized to give an explicit `K_7` minor.
 
-The third outcome has an equivalent four-chromatic formulation.  Write
+Two vertices meeting every `K_5`-minor model need not be retained as a
+third outcome: the promoted transversal theorem turns that condition into
+an actual order-seven separation, already covered by item 1.
+
+The second outcome has an equivalent four-chromatic formulation.  Write
 
 \[
  X=V_\alpha\cup V_\beta,\qquad
@@ -142,7 +145,7 @@ Then `R` is four-chromatic and both `S,T` are colourful in `R`.  A
 `K_4`-minor model whose every branch set meets both `S` and `T`, together
 with `z,u,X`, is an explicit `K_7` model.  The open theorem is therefore a
 paired colourful-set alternative in this lifted host: produce that rooted
-`K_4` model, or one of the two structural outcomes above.
+`K_4` model, or the order-seven separation above.
 
 The paired statement is false even for a five-connected four-chromatic
 graph.  The known example already has a `K_6` minor, so it does not satisfy
@@ -184,16 +187,60 @@ to do one of the following:
 1. reroute a deficient `D_i` so that it also meets `T`, strictly improving
    the chosen rooted model, or directly construct `K_7`;
 2. identify an actual order-seven separation with compatible boundary
-   colourings; or
-3. identify a fixed two-vertex `K_5`-minor transversal.
+   colourings.
+
+A fixed two-vertex transversal of all `K_5` models is subsumed by the
+second outcome: the promoted transversal lemma forces a degree-seven
+vertex and hence an actual order-seven separation.
 
 When exactly one branch set is deficient, `C_j,u,z,X` and the other three
 bags already form a `K_7`-minus-one-edge model.  Thus the first milestone is
 a label-preserving split of an actual branch set that repairs that missing
 adjacency, or an exact separator produced by the failure of every such
-split.  The old five-support/spanning-`K_6` packaging remains a
-falsification suite and label-rich source of candidate reroutings, but it
-is no longer the primary induction object.
+split.
+
+That split problem now has an exact global formulation.  A two-colour path
+from `C_j` to `T` repairs the missing adjacency.  After removing its
+vertices from the four protected branch sets, either suitable residual
+components give an explicit `K_7` model or the full neighbourhood of one
+residual component is an actual separator.  Moving the cut edge along the
+path gives an exact interval of valid cuts for every residual component.
+
+More generally, for seven disjoint nonempty candidate sets `B_i`, define
+
+\[
+ \delta(\mathcal B)=
+ \sum_{i<j}\bigl(c(B_i\cup B_j)-1\bigr)
+ -\sum_i\bigl(c(B_i)-1\bigr),                       \tag{4.3}
+\]
+
+where `c` counts connected components.  Contracting every internal
+component and applying Mader's exact edge bound gives a `K_7` minor whenever
+\(\delta(\mathcal B)\le 0\).  The unsplit `K_7`-minus-one-edge model has
+\(\delta(\mathcal B)=1\).  Thus branch-set repair is a strict decrease of one scalar
+component defect, not a collection of unrelated labelled cases.
+
+At a fixed path cut, form the contact graph whose vertices are residual
+components adjacent to `z` and to both repaired path sides.  Any `K_4`
+minor in this contact graph lifts, together with the two path sides and
+`z`, to a `K_7` model.  The extremal defect-one residue is therefore a
+maximal `K_4`-minor-free contact graph, equivalently a 2-tree.  The current
+constructive target is to use the compulsory proper-minor colourings at a
+simplicial degree-two component of that 2-tree to obtain a third independent
+contact, an order-seven separation, or a strict defect decrease.
+
+The proper-minor response now has a matching chromatic dichotomy.  For any
+elementary minor operation wholly inside the five-chromatic core, the new
+core has chromatic number four or five.  In the four-chromatic branch the
+intersection of the two pole-attachment sets is colourful and roots a
+`K_4` model meeting both sets in every branch set.  Thus the remaining
+two-tree exchange may be restricted to the five-chromatic branch, where
+every five-colouring satisfies the exact common-hole law but need not
+preserve full saturation.
+
+The old five-support/spanning-`K_6` packaging remains a falsification suite
+and label-rich source of candidate reroutings, but it is no longer the
+primary induction object.
 
 ## 5. Relation to the balanced order-eight branch
 
@@ -230,6 +277,15 @@ or explicitly identified as using additional balanced-boundary data.
 - Two colourful sets in a four-chromatic graph need not admit one `K_4`
   model meeting both sets in every branch set, even under substantial
   internal connectivity.  The lifted host hypotheses are essential.
+- The failure persists for a planar four-connected core whose two-pole
+  extension is five-chromatic and `K_6`-minor-free.  Static properties of
+  the compressed core therefore do not replace the proper-minor responses.
+- The connectivity-only assertion that an eight-connected graph containing
+  a `K_7`-minus-one-edge minor contains `K_7` would imply the open
+  seven-connected-to-`K_6` conjecture and is not used.
+- A shortest locked subpath can migrate reversibly through its Kempe orbit
+  while an order-seven separator is present.  Shortest-lock extremality is
+  not a well-founded substitute for the component defect.
 - Static exact traces on a boundary can have disjoint extension languages.
 - The endpoint feasibility relation of a Mader delta-matroid does not
   preserve same-branch-set adjacencies or the internal paths needed for a
@@ -250,6 +306,14 @@ or explicitly identified as using additional balanced-boundary data.
 - [connected two-colour compression to a five-chromatic core](../results/hc7_star_kempe_five_core_compression.md)
 - [exhaustive adjacent-pair separator-or-core theorem](../results/hc7_adjacent_pair_separator_or_five_core.md)
 - [deficient-component separator in a contact-maximal rooted model](../results/hc7_maximal_rooted_k4_deficient_component_separator.md)
+- [colour-matched repair path](../results/hc7_colour_matched_repair_path.md)
+- [component exchange criterion](../results/hc7_colour_matched_path_component_exchange.md)
+- [fixed-path exchange or separation](../results/hc7_colour_matched_path_exchange_or_separator.md)
+- [all-cut interval and component-defect criterion](../results/hc7_colour_matched_path_all_cut_interval_exchange.md)
+- [component-contact defect theorem and two-tree equality structure](../results/hc7_component_contact_defect_theorem.md)
+- [one-step minor dynamics and the exact common-hole law](../results/hc7_star_core_one_step_minor_dynamics.md)
+- [contracted-path list obstruction](../results/hc_contracted_path_list_lock.md)
+- [two-vertex transversal implies an order-seven separation](../results/hc7_k5_transversal_order7_separator.md)
 - [paired colourful-set `K_4` frontier](hc7_two_colorful_sets_rooted_k4_frontier.md)
 - [two-pole contact and branch-set split](../results/hc7_atomic_two_pole_contact_trichotomy.md)
 - [canonical balanced deletion model and reversible exchange](../results/hc7_outer_edge_canonical_k6_rotation.md)
@@ -258,6 +322,9 @@ or explicitly identified as using additional balanced-boundary data.
 - [static exact-trace parity barrier](../barriers/hc7_aligned_matching_exact_trace_parity_barrier.md)
 - [exact three-common-branch-set two-apex barrier](../barriers/hc7_three_common_geodesic_two_apex_barrier.md)
 - [five-connected two-colourful-set rooted-`K_4` barrier](../barriers/hc7_two_colorful_sets_paired_k4_barrier.md)
+- [planar four-connected paired-colourful-set barrier](../barriers/hc7_paired_colourful_planar_core_barrier.md)
+- [connectivity-only near-`K_7` augmentation hardness](../barriers/hc7_eight_connected_near_k7_augmentation_hardness.md)
+- [shortest locked interval orbit barrier](../barriers/hc7_contracted_path_shortest_lock_orbit_barrier.md)
 - [forced repeated colour without a rooted-model exchange](../barriers/hc7_repeated_colour_rooted_k4_exchange_barrier.md)
 
 ## 8. Primary external inputs

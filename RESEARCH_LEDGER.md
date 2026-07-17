@@ -115,8 +115,12 @@ The primary open theorem is to turn this dichotomy into one of:
 1. an explicit `K_7`-minor model;
 2. an actual order-seven separation carrying a named boundary colouring
    from both sides;
-3. two vertices meeting every `K_5`-minor model; or
-4. a strict improvement in a rooted-model contact invariant.
+3. a strict improvement in a rooted-model contact invariant.
+
+The former two-vertex terminal is no longer independent.  An audited
+lemma proves that, in the hypothetical counterexample, two vertices meeting
+every `K_5` model force a vertex of degree seven and hence an actual
+order-seven separation.  It is therefore subsumed by item 2.
 
 The first concrete milestone is now four-chromatic.  In the
 connected-dominating branch put `R=Q-{z,u}` and
@@ -140,11 +144,63 @@ This is an actual separator of order at least seven.  Contraction collapses
 that boundary to a few model labels and forces `u` to repeat a missed
 label, but a sharp `K_6`-minor-free example proves that this repeated colour
 does not itself reroute the model, even with a unique deficiency.  The
-immediate theorem must instead use the literal attachment distribution to
-split a branch set or construct `K_7`, or reduce the full boundary to an
-order-seven colour-compatible separation/fixed-pair exit.
+unique-deficiency case has nevertheless been compressed further.
 
-Ten results are now promoted with separate GREEN audits:
+A neighbour of `z` in the deficient component and a same-coloured
+neighbour of `u` are joined by a two-colour path.  Absorbing that path into
+the two nonadjacent branch sets either gives an explicit `K_7` model or
+exposes the full neighbourhood of a connected residual piece of one of the
+other four branch sets as an actual separator.  Thus there is no additional
+finite component-compatibility case.  Varying the cut edge of the path gives
+an exact interval criterion for every residual component.
+
+The path calculation also gives a global density relaxation.  Seven
+candidate sets need not be connected individually: after contracting each
+of their connected components, Mader's exact `K_7` extremal bound gives a
+`K_7` minor whenever
+
+\[
+ \sum_{i<j}\bigl(c(B_i\cup B_j)-1\bigr)
+ \;\le\;
+ \sum_i\bigl(c(B_i)-1\bigr),                         \tag{*}
+\]
+
+where `c(H)` is the number of connected components of `H`.  Pairwise
+connected unions are the special quasi-`K_7` case.  The original
+`K_7`-minus-one-edge model misses (*) by exactly one, so the repair problem
+has a scalar **component defect**.  A successful exchange removes its
+single unit.  The joined-planar barrier shows that changing the path cut
+may instead move that unit from the missing pole adjacency to a different
+pair of branch sets.  The live task is to use the compulsory proper-minor
+colourings to make the defect vanish or show that every defect-preserving
+move concentrates behind an order-seven separator.
+
+Independently, contracting a shortest admissible path produces a canonical
+list-colouring obstruction: an odd subpath has singleton endpoint lists and
+paired two-element internal lists.  This statement is uniform in the
+chromatic number.  It supplies saturated endpoints, but its colours are not
+yet identified with named branch sets.  A seven-chromatic join family shows
+that an invariant based only on the shortest locked interval can cycle while
+an order-seven separator is present, so separator detection must be a direct
+outcome rather than a consequence of local lock monotonicity.
+
+The corresponding connectivity-only shortcut is formally blocked.  The
+assertion that every eight-connected graph with a
+`K_7`-minus-one-edge minor has a `K_7` minor would imply the open statement
+that every seven-connected graph has a `K_6` minor.  Any completion theorem
+used here must retain the minor-critical colouring hypotheses.
+
+Those hypotheses now give an exact one-step dichotomy.  After any vertex
+deletion, edge deletion, or edge contraction wholly inside the
+five-chromatic core, the new core is four- or five-chromatic.  In the
+four-chromatic branch the intersection of the two pole-attachment sets is
+colourful, so the established strong four-colour theorem supplies a
+`K_4` model meeting both sets in every branch set.  The only unresolved
+branch remains five-chromatic; there the uniform conclusion is the exact
+common-hole law for the two attachment sets, not preservation of full
+colour saturation.
+
+The current chain uses the following results with separate GREEN audits:
 
 - [`hc7_global_adjacent_pair_palette_frame.md`](results/hc7_global_adjacent_pair_palette_frame.md)
 - [`hc7_adjacent_pair_palette_linkage.md`](results/hc7_adjacent_pair_palette_linkage.md)
@@ -156,8 +212,16 @@ Ten results are now promoted with separate GREEN audits:
 - [`hc7_adjacent_pair_separator_or_five_core.md`](results/hc7_adjacent_pair_separator_or_five_core.md)
 - [`hc7_maximal_rooted_k4_deficient_component_separator.md`](results/hc7_maximal_rooted_k4_deficient_component_separator.md)
 - [`hc7_outer_edge_canonical_k6_rotation.md`](results/hc7_outer_edge_canonical_k6_rotation.md)
+- [`hc7_colour_matched_repair_path.md`](results/hc7_colour_matched_repair_path.md)
+- [`hc7_colour_matched_path_component_exchange.md`](results/hc7_colour_matched_path_component_exchange.md)
+- [`hc7_colour_matched_path_exchange_or_separator.md`](results/hc7_colour_matched_path_exchange_or_separator.md)
+- [`hc7_colour_matched_path_all_cut_interval_exchange.md`](results/hc7_colour_matched_path_all_cut_interval_exchange.md)
+- [`hc7_component_contact_defect_theorem.md`](results/hc7_component_contact_defect_theorem.md)
+- [`hc7_star_core_one_step_minor_dynamics.md`](results/hc7_star_core_one_step_minor_dynamics.md)
+- [`hc_contracted_path_list_lock.md`](results/hc_contracted_path_list_lock.md)
+- [`hc7_k5_transversal_order7_separator.md`](results/hc7_k5_transversal_order7_separator.md)
 
-The last result locates the balanced order-eight laboratory within this
+The canonical outer-edge result locates the balanced order-eight laboratory within this
 uniform problem.  Its canonical deletion model has exact joint contact five
 but is reversibly coupled to the pre-existing singleton-centred
 near-complete model.  Thus model regeneration and contact maximization add

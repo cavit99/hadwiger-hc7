@@ -95,7 +95,10 @@ following.
    minor.
 2. `G` has an actual order-seven separation whose boundary colouring is
    induced by proper-minor six-colourings on both sides.
-3. There are two vertices of `G` meeting every `K_5`-minor model.
+
+The former two-vertex `K_5`-model-transversal outcome is subsumed by item
+2: in the present host it forces a degree-seven vertex and an actual
+order-seven separation.
 
 The statement is intentionally tied to the lifted host `G`.  It is false
 for arbitrary four-chromatic `R` with two colourful sets, even when `R` is
@@ -163,14 +166,54 @@ In the unique-deficiency case, `C_j,u,z,X` and the other three branch sets
 already form a `K_7`-minus-one-edge model, missing only the adjacency
 between `C_j` and `u`.  The immediate host theorem is therefore a
 label-preserving split-or-separator theorem for this actual near-complete
-model.  Any proof must use a host-measured strict improvement or the full
-literal separation; merely alternating between independently generated
-models, or rereading the repeated quotient colour, gives no descent.
+model.
+
+The promoted colour-matched-path theorem supplies a path from `C_j` to a
+neighbour of `u`.  Removing that path from the four protected branch sets
+has an exhaustive consequence: either residual components give an explicit
+`K_7` model, or the full neighbourhood of one connected residual component
+is an actual separator.  Varying the cut edge along the path gives an exact
+valid-cut interval for every residual component.
+
+This exchange has a scalar formulation.  For seven disjoint candidate sets
+`B_i`, put
+
+\[
+ \delta(\mathcal B)=
+ \sum_{i<j}\bigl(c(B_i\cup B_j)-1\bigr)
+ -\sum_i\bigl(c(B_i)-1\bigr),                       \tag{4.3}
+\]
+
+where `c` counts connected components.  A component-contraction density
+argument gives `K_7` whenever \(\delta\le0\); the initial
+`K_7`-minus-one-edge model has \(\delta=1\).  At one path cut, any `K_4` minor
+in the contact graph of residual components adjacent to `z` and both path
+sides lifts to `K_7`.  The defect-one extremal contact graph is a 2-tree.
+The next theorem must use the proper-minor six-colourings at a simplicial
+degree-two component to destroy that last unit of defect or expose the
+order-seven boundary.  An elementary minor operation in the
+five-chromatic core leaves a four- or five-chromatic core.  In the
+four-chromatic branch the common attachment set is colourful and already
+roots the required two-sided `K_4` model; the unresolved five-chromatic
+branch obeys only the exact common-hole law.  Merely alternating between independently generated
+models, rereading the repeated quotient colour, or optimizing a shortest
+locked subpath gives no descent.
 
 ## 5. Immediate dependencies and barrier
 
 - [deficient-component separator theorem](../results/hc7_maximal_rooted_k4_deficient_component_separator.md)
+- [colour-matched repair path](../results/hc7_colour_matched_repair_path.md)
+- [component exchange criterion](../results/hc7_colour_matched_path_component_exchange.md)
+- [fixed-path exchange or separation](../results/hc7_colour_matched_path_exchange_or_separator.md)
+- [all-cut interval and component-defect criterion](../results/hc7_colour_matched_path_all_cut_interval_exchange.md)
+- [component-contact defect theorem and two-tree equality structure](../results/hc7_component_contact_defect_theorem.md)
+- [one-step minor dynamics and the exact common-hole law](../results/hc7_star_core_one_step_minor_dynamics.md)
+- [contracted-path list obstruction](../results/hc_contracted_path_list_lock.md)
+- [two-vertex transversal implies an order-seven separation](../results/hc7_k5_transversal_order7_separator.md)
 - [repeated quotient colour does not force an exchange](../barriers/hc7_repeated_colour_rooted_k4_exchange_barrier.md)
+- [planar four-connected paired-root barrier](../barriers/hc7_paired_colourful_planar_core_barrier.md)
+- [connectivity-only near-`K_7` augmentation hardness](../barriers/hc7_eight_connected_near_k7_augmentation_hardness.md)
+- [shortest-lock orbit barrier](../barriers/hc7_contracted_path_shortest_lock_orbit_barrier.md)
 
 ## 6. Established external input
 
