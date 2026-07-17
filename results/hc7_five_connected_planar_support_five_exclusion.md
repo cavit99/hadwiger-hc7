@@ -3,7 +3,7 @@
 **Status:** proved and independently audited.
 
 This closes the standardized terminal-contraction branch in
-[`../active/hc7_support_six_terminal_contraction_three_root_reduction.md`](../active/hc7_support_six_terminal_contraction_three_root_reduction.md).
+[`hc7_support_six_terminal_contraction_three_root_reduction.md`](hc7_support_six_terminal_contraction_three_root_reduction.md).
 The alleged simultaneous three-root obstruction cannot occur: a
 five-connected planar core contains no `K_4` model on at most five
 vertices, rooted or otherwise.
@@ -134,7 +134,7 @@ Applying this to all three choices of `q` proves item 2.  \(\square\)
 ### Corollary 3.2 (terminal three-root branch)
 
 Under Proposition 2.1 of
-[`../active/hc7_support_six_terminal_contraction_three_root_reduction.md`](../active/hc7_support_six_terminal_contraction_three_root_reduction.md),
+[`hc7_support_six_terminal_contraction_three_root_reduction.md`](hc7_support_six_terminal_contraction_three_root_reduction.md),
 all three pairs among `x,y,r` meet every support-at-most-six `K_5` model.
 
 #### Proof

@@ -149,7 +149,7 @@ The closest repository precedents are:
    stronger assumption that every proper minor is colourable, Theorem 2.2
    also implies the corresponding disjointness of opposite response
    languages.
-2. `active/hc7_balanced_order8_edge_critical_completion.md`, Lemma 5.2,
+2. `results/hc7_balanced_order8_edge_critical_completion.md`, Lemma 5.2,
    which is precisely the `q=6`, two-opposite-edge instance of Theorem
    2.1.
 3. `results/hc7_repaired_contact_exchange.md`, Section 3, and
