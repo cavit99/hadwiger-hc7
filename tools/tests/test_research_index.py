@@ -136,6 +136,50 @@ class IntegrityTests(unittest.TestCase):
         errors = "\n".join(self.errors())
         self.assertIn("does not contain exact source hash", errors)
 
+    def test_missing_required_manifest_section_fails_cleanly(self) -> None:
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        self.repo.manifest.write_text(
+            manifest.replace("verifiers = []\n", ""), encoding="utf-8"
+        )
+        errors = "\n".join(self.errors())
+        self.assertIn("missing required top-level keys", errors)
+        self.assertIn("verifiers", errors)
+
+    def test_negative_green_mentions_are_not_positive_verdicts(self) -> None:
+        digest = hashlib.sha256(
+            (self.repo.root / "results/theorem.md").read_bytes()
+        ).hexdigest()
+        for verdict in (
+            "Not GREEN.",
+            "No GREEN verdict yet.",
+            "GREEN is not the verdict.",
+            "GREEN? No.",
+            "GREEN / RED pending.",
+            "GREEN. Not actually.",
+            "GREEN. This verdict is not GREEN.",
+            "GREEN for no audited claims.",
+            "Verdict: GREEN / RED pending.",
+        ):
+            with self.subTest(verdict=verdict):
+                self.repo.write(
+                    "results/theorem_audit.md",
+                    f"# Audit\n\n## Verdict\n\n{verdict}\n\nSource hash: `{digest}`\n",
+                )
+                errors = "\n".join(self.errors())
+                self.assertIn("lacks an unambiguous opening GREEN verdict", errors)
+
+    def test_explicit_positive_green_verdict_formats(self) -> None:
+        for verdict in (
+            "## Verdict\n\nGREEN.",
+            "Final verdict: GREEN.",
+            "Overall Verdict – GREEN.",
+            "**Verdict:** **GREEN after repair.**",
+            "**Verdict:** **GREEN.** The audited claim is correct.",
+            "The GREEN verdict below applies.\n\n## Verdict\n\nGREEN.",
+        ):
+            with self.subTest(verdict=verdict):
+                self.assertTrue(index._has_explicit_green_verdict(verdict))
+
     def test_link_to_untracked_file_fails_but_untracked_prose_is_not_indexed(self) -> None:
         self.repo.write("active/untracked.md", "# Secret\n\nUntracked quasar phrase.\n")
         self.repo.write(

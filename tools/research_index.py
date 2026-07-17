@@ -508,11 +508,62 @@ def _relative_path(value: str, field: str) -> None:
 
 def _opening_verdict(audit_text: str) -> str:
     lines = audit_text.splitlines()[:80]
-    candidates = [line for line in lines if re.search(r"\bverdict\b", line, re.I)]
-    if not candidates:
-        return ""
-    first = lines.index(candidates[0])
-    return "\n".join(lines[first : min(len(lines), first + 8)]).upper()
+    for first, raw_line in enumerate(lines):
+        line = re.sub(r"[`*_#>]", "", raw_line).strip()
+        is_verdict_label = bool(
+            re.match(r"^(?:(?:OVERALL|FINAL)\s+)?VERDICT\b", line, re.I)
+        )
+        is_verdict_heading = raw_line.lstrip().startswith("#") and bool(
+            re.search(r"\bverdict\b", line, re.I)
+        )
+        if is_verdict_label or is_verdict_heading:
+            return "\n".join(lines[first : min(len(lines), first + 8)]).upper()
+    return ""
+
+
+def _has_explicit_green_verdict(audit_text: str) -> bool:
+    """Return whether the opening verdict block explicitly declares GREEN.
+
+    Accept either a line beginning with ``GREEN`` after a verdict heading, or
+    a ``Verdict: GREEN`` form.  Merely mentioning GREEN elsewhere in the
+    block is insufficient; in particular, negative forms such as ``not
+    GREEN`` and ``no GREEN verdict`` are rejected.
+    """
+    block = _opening_verdict(audit_text)
+    if not block:
+        return False
+
+    def positive_green_line(line: str) -> bool:
+        if re.search(
+            r"\b(?:RED|AMBER|PENDING)\b|"
+            r"\b(?:NOT|NO)\s+(?:GREEN|AUDITED|PROVED|VALID|CORRECT|"
+            r"VERIFIED|ESTABLISHED|CLAIMS?)\b",
+            line,
+        ):
+            return False
+        return bool(
+            re.fullmatch(
+                r"GREEN(?:"
+                r"[.!](?:\s+(?!NOT\b|NO\b|RED\b|PENDING\b).+)?|"
+                r"\s+(?:FOR|AT|AFTER|WITH|THROUGH|ON|AS|IN|UNDER|SUBJECT\s+TO)\b.+|"
+                r",\s*(?:FOR|AT|AFTER|WITH|THROUGH|ON|AS|IN|UNDER|SUBJECT\s+TO)\b.+|"
+                r"\s*[:;\-—–]\s*(?!NOT\b|NO\b|RED\b|PENDING\b).+|"
+                r"\s*\((?!NOT\b|NO\b|RED\b|PENDING\b).+\)"
+                r")?",
+                line,
+            )
+        )
+
+    for raw_line in block.splitlines():
+        line = re.sub(r"[`*_#>]", "", raw_line).strip()
+        if positive_green_line(line):
+            return True
+        match = re.fullmatch(
+            r"(?:(?:OVERALL|FINAL)\s+)?VERDICT\s*[:\-—–]\s*(.+)", line
+        )
+        if match and positive_green_line(match.group(1)):
+            return True
+    return False
 
 
 def _proof_cycle(claims: dict[str, dict], relations: Sequence[dict]) -> list[str] | None:
@@ -544,7 +595,10 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
     tracked_tuple = tracked_paths(root)
     tracked = set(tracked_tuple)
     required_top = {"schema_version", "project", "required_text", "claims", "relations", "verifiers"}
+    missing_top = required_top - set(manifest)
     unknown_top = set(manifest) - required_top
+    if missing_top:
+        errors.append(f"manifest is missing required top-level keys: {sorted(missing_top)}")
     if unknown_top:
         errors.append(f"manifest has unknown top-level keys: {sorted(unknown_top)}")
     if manifest.get("schema_version") != 1:
@@ -614,8 +668,7 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
                 audit_text = (root / audit).read_text(encoding="utf-8")
                 if expected not in audit_text:
                     errors.append(f"audit {audit} does not contain exact source hash for {claim_id}")
-                verdict = _opening_verdict(audit_text)
-                if "GREEN" not in verdict or re.search(r"\bRED\b", verdict):
+                if not _has_explicit_green_verdict(audit_text):
                     errors.append(f"audit {audit} lacks an unambiguous opening GREEN verdict")
 
     relations = manifest.get("relations", [])
@@ -686,8 +739,7 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
             audit_text = (root / audit_relative).read_text(encoding="utf-8")
             if actual_hash not in audit_text:
                 errors.append(f"active proved input audit {audit_relative} lacks current source hash {actual_hash}")
-            verdict = _opening_verdict(audit_text)
-            if "GREEN" not in verdict or re.search(r"\bRED\b", verdict):
+            if not _has_explicit_green_verdict(audit_text):
                 errors.append(f"active proved input audit {audit_relative} lacks an unambiguous opening GREEN verdict")
 
     for required in manifest.get("required_text", []):
