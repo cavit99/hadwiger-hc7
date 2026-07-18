@@ -11,6 +11,15 @@ full-text indexed.  Only current claims and their typed relationships are
 curated in [`research_manifest.toml`](research_manifest.toml); lexical search
 matches are never inferred to be proof dependencies.
 
+The optional [`research_discovery.toml`](research_discovery.toml) contains a
+small set of source-verified but still non-authoritative terminology and
+connection candidates. Every entry is hash- and line-pinned and remains
+`needs-review`. Generated heading, status, audit-pair, dependency-link, and
+near-duplicate candidates are stored only in the disposable database.
+The discovery file has a closed schema: misspelled top-level or record keys,
+wrong container types, and evidence intervals outside the uniquely named
+heading subtree fail validation rather than disappearing silently.
+
 ## Commands
 
 ```bash
@@ -18,15 +27,42 @@ python3 tools/research_index.py check
 python3 tools/research_index.py build
 python3 tools/research_index.py search '"component defect"'
 python3 tools/research_index.py report
-python3 tools/research_index.py context hc7.target.defect_one_exchange
+python3 tools/research_index.py context hc7.target.degree7_model_separator
 python3 tools/research_index.py verify
 python3 tools/research_index.py ci
 ```
 
 Generated SQLite and Markdown reports live under `.cache/research/`.  They
 are disposable, ignored by Git, and can always be regenerated.  The reports
-include a current proof dependency graph, claim trust boundaries, a barrier
-matrix, and compact context packs for active targets.
+include the current proof dependency graph, active-target context packs with
+full dependency closure, trust boundaries, barrier hypotheses, orphaned
+hash-current audit candidates, duplicate/supersession candidates, terminology
+aliases, source-cited connection candidates, audit/source drift, and corpus
+coverage statistics. Candidate reports are discovery aids, never proof-status
+evidence.
+
+Automatic audit pairing is deliberately conservative. It records adjacent,
+explicitly declared, or exact-hash associations. Non-adjacent links and hashes
+count only in a local declaration such as “audited source” or “theorem revision”;
+dependency citations inside an audit do not create pairs. The extractor resolves
+a single named theorem when the audit says it covers only that theorem, including
+its complete nested subsection tree. Duplicate headings and ambiguous or
+non-contiguous partial audits are omitted. Common limiting language such as
+“except”, “not audited”, or “outside scope” cannot become whole-document
+coverage. Whole-document candidates require explicit whole-file wording, except
+for the deterministic adjacent `theorem.md`/`theorem_audit.md` filename
+convention. Shared legacy audits without exact hashes remain full-text discovery
+leads and require manual review.
+
+Builds use a unique temporary database followed by an atomic replacement, so
+overlapping rebuilds cannot corrupt one another. Near-duplicate discovery is
+blocked on informative title terms and confirmed against statement text; the
+compact report prioritizes HC7-specific and non-archive material.
+Report contents are prepared in a unique staging directory, then each report file
+is atomically replaced. The report family is not a transactional batch under
+concurrent report commands. When an active target disappears, the generator
+removes only stale `context_*.md` files bearing its own marker; unrelated cache
+files are not swept.
 
 The verifier whitelist is intentionally small and deterministic.  Install
 its one pinned dependency with
