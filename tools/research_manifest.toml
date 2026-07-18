@@ -22,6 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Boundary-edge contact exchange or compatible separator"
 active = true
+expected_source_sha256 = "0235383e818a2b837d9bdc38a0571ec86d3986e214a08ea790ddc89cc060de75"
 scope = "the degree-eight interface arising inside the degree-seven-derived two-pair disk configuration of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
 separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
@@ -1180,11 +1181,55 @@ title = "Two colourful sets need not share a rooted K4 model"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_two_colorful_sets_paired_k4_barrier.md"
-active = false
+active = true
 audit = "barriers/hc7_two_colorful_sets_paired_k4_barrier_audit.md"
 expected_source_sha256 = "f9d41fdffb6ca5a7bbc54cd67a5491aae7e6fdf12d03c8725403b7a4abfb8e6f"
 refutes = ["paired rooted K4 from colourful sets and connectivity alone"]
 lacks = ["K6-minor exclusion in the four-chromatic core"]
+
+[[claims]]
+id = "hc7.barrier.near_k7_rotation_involution"
+title = "Deficiency pivots are involutions"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_near_k7_rotation_involution_barrier.md"
+active = true
+audit = "barriers/hc7_near_k7_rotation_involution_barrier_audit.md"
+expected_source_sha256 = "5e8c75b67c7887ba68ecb4a853ce4d40897f46fa7a76d414642a9a06bcfa61e2"
+refutes = ["a strictly decreasing model-local potential based only on a reversible deficiency pivot"]
+
+[[claims]]
+id = "hc7.barrier.exact7_boundary_operation_parity"
+title = "Boundary operations do not synchronize an exact-seven interface"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md"
+active = true
+audit = "barriers/hc7_exact7_separator_boundary_operation_parity_barrier_audit.md"
+expected_source_sha256 = "2737b8a7aedbefe54d93dc2c4ee77812e766909a2841d0ea04c4136329432a6d"
+refutes = ["synchronization of exact-seven shores from boundary-local operations alone"]
+
+[[claims]]
+id = "hc7.barrier.first_entry_minimality"
+title = "Geometric minimality does not peel a direct first entry"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_first_entry_packet_minimality_barrier.md"
+active = true
+audit = "barriers/hc7_first_entry_packet_minimality_barrier_audit.md"
+expected_source_sha256 = "f731d5fec15e1734fb5ff2b465efaa71ed97fbed47670331c3abd27077ee3a28"
+refutes = ["a direct first-entry peel from lexicographic geometric minimality alone"]
+
+[[claims]]
+id = "hc7.barrier.three_path_missing_five_labels"
+title = "One missing far-side contact defeats the local three-path inference"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_three_path_missing_five_row_barrier.md"
+active = true
+audit = "barriers/hc7_three_path_missing_five_row_barrier_audit.md"
+expected_source_sha256 = "687e29c27fdcb2e2af4634de061064dce5ac3ef97286594d35faf7da94334a57"
+refutes = ["a K7-minor conclusion from the three-path geometry after losing one named far-side contact"]
 
 [[claims]]
 id = "hc7.barrier.repeated_colour_exchange"
@@ -1323,6 +1368,76 @@ expected_source_sha256 = "501f581d764607ef9cd13b854150dae95ea251efde0fdd28c77bb9
 scope = "actual order-seven separation in a seven-connected K7-minor-free strongly seven-contraction-critical graph"
 conclusions = ["the two full-packet numbers sum to at most four", "one shore has full-packet number one", "the boundary clique number is at most six minus the packet-number sum"]
 does_not_prove = ["a small transversal in the thin shore", "compatible boundary colourings"]
+
+[[claims]]
+id = "hc7.exact7_packet_orientation"
+title = "Exact-seven orientation by full connected subgraphs"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_packet_orientation_corollary.md"
+active = true
+audit = "results/hc7_exact7_packet_orientation_corollary_audit.md"
+expected_source_sha256 = "4f857d8cdecc7b885610fc9f528d8ca4e71c0b42a20f89a45d20d3a667db2ee8"
+
+[[claims]]
+id = "hc7.two_vertex_boundary_contact_transversal"
+title = "Two-vertex boundary-contact transversal: repair or web"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_vertex_boundary_contact_transversal.md"
+active = true
+audit = "results/hc7_two_vertex_boundary_contact_transversal_audit.md"
+expected_source_sha256 = "74825bfc670a9e24049eb2242d747c1096ee23b9e57264e3d4f36f59b181459b"
+
+[[claims]]
+id = "hc7.exact7_first_entry_bridge_reduction"
+title = "First-entry components at an exact order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_first_entry_bridge_reduction.md"
+active = true
+audit = "results/hc7_exact7_first_entry_bridge_reduction_audit.md"
+expected_source_sha256 = "edb821588975da2590d0f355d17ddbc16c2bf00abc12d8565c62176da4fcc540"
+
+[[claims]]
+id = "hc7.path_residual_separator_excess"
+title = "Path-residual separator excess"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_small_path_intersection_lobe.md"
+active = true
+audit = "results/hc7_small_path_intersection_lobe_audit.md"
+expected_source_sha256 = "a857c7881308333eedca799bfe0d22b458c4f711d43ccacaeeb56f8dfbd46676"
+
+[[claims]]
+id = "hc7.nested_full_neighbourhood_descent"
+title = "Nested full-neighbourhood descent"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_nested_full_neighbourhood_descent.md"
+active = true
+audit = "results/hc7_nested_full_neighbourhood_descent_audit.md"
+expected_source_sha256 = "61ea0abfc8a72f04a93bf0e6f1e06660262c466ce4c50474efe1e79e5ec263f0"
+
+[[claims]]
+id = "hc7.first_entry_singleton_peel"
+title = "First-entry singleton peel in a degree-eight exterior component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_first_entry_singleton_peel.md"
+active = true
+audit = "results/hc7_first_entry_singleton_peel_audit.md"
+expected_source_sha256 = "ac4bdeaf72a40f68b57f501878941333255f9c2724172b60fa34c5da530af146"
+
+[[claims]]
+id = "hc7.atomic_three_path_quotient_completion"
+title = "Three explicit K7 models for the minimal three-path quotient"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_three_path_quotient_completion.md"
+active = true
+audit = "results/hc7_atomic_three_path_quotient_completion_audit.md"
+expected_source_sha256 = "00877886de71201cd7b0472d70a1f65fecc4664fa6abef77695ac324708c41b6"
 
 [[claims]]
 id = "hc7.reserved_cycle_or_two_cut"
@@ -2297,9 +2412,9 @@ kind = "uses"
 note = "A component-missing descent with a split seven-vertex boundary closes by the audited synchronization theorem."
 evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
-evidence_start_line = 423
-evidence_end_line = 429
-evidence_sha256 = "2d09a601511308dbf34d05db00564d0f8ce172038754cd755b353899ff30e56e"
+evidence_start_line = 428
+evidence_end_line = 436
+evidence_sha256 = "0235383e818a2b837d9bdc38a0571ec86d3986e214a08ea790ddc89cc060de75"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2321,18 +2436,18 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "2d09a601511308dbf34d05db00564d0f8ce172038754cd755b353899ff30e56e"
+evidence_sha256 = "0235383e818a2b837d9bdc38a0571ec86d3986e214a08ea790ddc89cc060de75"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.cycle_boundary_completion"
-kind = "related_to"
+kind = "uses"
 note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
 evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 722
 evidence_end_line = 749
-evidence_sha256 = "36ce7423cf9d72f59859bb09c0b67954cdc83e51c7f4b73f29d30d8c209fcd10"
+evidence_sha256 = "56114200aa51a5079aa6a65aa96b3b3383ed896a777ebb2ff74674974cb1755e"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2366,6 +2481,96 @@ evidence_heading = "3. Why this is not the `HC_7` residue"
 evidence_start_line = 72
 evidence_end_line = 90
 evidence_sha256 = "f9d41fdffb6ca5a7bbc54cd67a5491aae7e6fdf12d03c8725403b7a4abfb8e6f"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.low_degree_adjacent_pair_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.low_degree_boundary_edge_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree9_pole_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_packet_orientation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_vertex_boundary_contact_transversal"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_first_entry_bridge_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.path_residual_separator_excess"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.nested_full_neighbourhood_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.first_entry_singleton_peel"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.atomic_three_path_quotient_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_connected_boundary_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_full_shore_boundary_absorption"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.adjacent_pair_palette_linkage"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.near_k7_rotation_involution"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.exact7_boundary_operation_parity"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.first_entry_minimality"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.three_path_missing_five_labels"
+kind = "guarded_by"
 
 [[verifiers]]
 id = "degree-nine-pole-completion"

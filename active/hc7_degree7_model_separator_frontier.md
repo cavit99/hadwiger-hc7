@@ -420,13 +420,20 @@ components reproduce that partition on every closed component-side.  No
 minimum-cut hypothesis is used.  Therefore only the two- and
 three-component order-eight interfaces remain.
 
+For the exactly-two-component remainder, the two-full-shore boundary-
+absorption theorem makes the order-eight boundary four-colourable.  It
+does not align the two closed-shore colourings or produce a common labelled
+boundary partition.
+
 The component-missing branch is sharper than a bare separator return.  Its
 new seven-vertex boundary has exact-block-complete extension languages on
-both shores.  A split boundary therefore synchronizes immediately.  Under
-`K_7`-minor exclusion the boundary is four-colourable except for the unique
-five-chromatic quotient `K_2\vee C_5`.  The old `D,E,r,z` labels and the
-location at which the eight-set can cut the second named subgraph are
-retained literally; what remains open is the nonsplit state transfer.
+both shores.  A split boundary therefore synchronizes immediately.  In the
+hypothetical counterexample the boundary is always four-colourable: the only
+five-chromatic possibility from the exact-seven classification is
+`K_2\vee C_5`, and its two connected full shores are eliminated by the
+cycle-boundary completion theorem.  The old `D,E,r,z` labels and the
+location at which the eight-set can cut the second named subgraph remain
+literal; what remains open is nonsplit four-colour state transfer.
 
 For three full components at order eight, compact boundary `K_4` models
 and clique odd-cycle transversals already close.  An audited exhaustive
@@ -508,6 +515,8 @@ through label-preserving contacts with the five named connected subgraphs.
 - [nested full-neighbourhood descent](../results/hc7_nested_full_neighbourhood_descent.md)
 - [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
 - [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
+- [two-full-shore boundary absorption](../results/hc7_two_full_shore_boundary_absorption.md)
+- [cycle-boundary completion](../results/hc7_cycle_boundary_completion.md)
 - [exact-block bounded-interface reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [shortest-path normalization barrier](../barriers/hc7_one_spoke_shortest_path_barrier.md)
 - [multicoloured-row response barrier](../barriers/hc7_multicoloured_row_response_barrier.md)

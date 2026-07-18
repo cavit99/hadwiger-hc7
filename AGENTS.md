@@ -48,6 +48,18 @@ directly or through one of the technical files it designates.  An unlisted
 file in `active/` is not thereby false or obsolete, but it must not be treated
 as part of the current proof spine until it is classified.
 
+The generated research index is a retrieval and integrity aid, not a status
+authority.  Its dependency closure is curated rather than presumed complete.
+When the primary target, its immediate proved inputs, or its immediate
+barriers change, update `tools/research_manifest.toml` in the same focused
+commit.  The integrity check enforces this navigation-to-manifest alignment.
+Run `python3 tools/research_index.py check` and
+`python3 tools/research_index.py report`, then inspect the regenerated target
+context pack.  Agents must still consult `RESEARCH_LEDGER.md`, `active/INDEX.md`, and
+the designated technical frontier before relying on a generated context
+pack.  Discovery connections remain non-authoritative until separately
+reviewed and promoted as typed manifest relations.
+
 ## Mathematical language
 
 Prefer established graph-theoretic terminology and self-contained theorem

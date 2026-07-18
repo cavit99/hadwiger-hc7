@@ -1785,9 +1785,12 @@ classification or computation as well as a written reduction.
     closed shores then realize every prescribed independent boundary set
     as an exact colour class.  A split seven-vertex boundary therefore
     returns one common equality partition and six-colours `G`.  The new
-    boundary is four-colourable except for the unique sharp quotient
-    `K_2\vee C_5`; nonsplit boundaries, including that exception, still
-    require a dynamic transition.
+    boundary is always four-colourable.  The exact-seven classification
+    leaves `K_2\vee C_5` as the only possible five-chromatic boundary, but
+    in that equality case contraction-criticality makes both open shores
+    connected and the cycle-boundary completion theorem gives a `K_7`
+    minor.  Nonsplit four-colour boundaries still require a dynamic
+    transition.
 
     The boundary-full order-eight alternative is now closed whenever it
     has at least four complementary components.  Four full components and
@@ -1798,6 +1801,11 @@ classification or computation as well as a written reduction.
     glue.  This argument does not require the eight-set to be a minimum
     cut.  Hence the irreducible positive-excess alternative has exactly two
     or three full complementary components.
+
+    In the exactly-two-component case, the two-full-shore boundary-
+    absorption theorem makes the eight-vertex boundary four-colourable.
+    This is not a closure: it neither supplies a common labelled boundary
+    partition nor synchronizes the two closed-shore six-colourings.
 
     The three-component boundary has also been classified exactly at the
     finite boundary level.  Compact `K_4` models and clique odd-cycle
@@ -1825,7 +1833,9 @@ classification or computation as well as a written reduction.
     together with the
     [excess-one labelled descent](results/hc7_epsilon_one_labelled_descent.md),
     [four-component order-eight closure](results/hc7_full_order8_four_component_closure.md),
-    and [three-component boundary classification](results/hc7_order8_three_component_boundary_classification.md),
+    [three-component boundary classification](results/hc7_order8_three_component_boundary_classification.md),
+    [two-full-shore boundary absorption](results/hc7_two_full_shore_boundary_absorption.md),
+    and [cycle-boundary completion](results/hc7_cycle_boundary_completion.md),
     each with an adjacent internal audit.  The fixed compressed three-path
     quotient is closed by
     [three explicit minor models](results/hc7_atomic_three_path_quotient_completion.md),
