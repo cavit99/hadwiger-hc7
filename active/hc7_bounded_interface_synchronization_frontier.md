@@ -1,7 +1,10 @@
 # Bounded-interface bridge composition
 
-**Status:** active conjectural target.  Sections 1--3 summarize separately
-audited results.  The theorem in Section 4 is open.  Nothing here proves
+**Status:** general bounded-interface continuation.  Sections 1--3 summarize
+separately audited results and the theorem in Section 4 remains open.  The
+degree-seven branch has a stronger active formulation in
+[`hc7_degree7_model_separator_frontier.md`](hc7_degree7_model_separator_frontier.md);
+this file remains the degree-eight/nine continuation.  Nothing here proves
 `HC_7`.
 
 ## 1. Uniform entry from every hypothetical counterexample

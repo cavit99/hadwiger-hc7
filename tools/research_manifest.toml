@@ -15,13 +15,43 @@ file = "RESEARCH_LEDGER.md"
 pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
+id = "hc7.target.degree7_model_separator"
+title = "Degree-seven boundary-labelled centre repair"
+kind = "target"
+status = "active-target"
+source = "active/hc7_degree7_model_separator_frontier.md"
+source_heading = "5. Primary open theorem"
+active = true
+scope = "degree-seven vertex in a hypothetical minor-minimal HC7 counterexample"
+label_fidelity = "one fixed colouring and a boundary-labelled K7 model with one/two adjacent missing centre edges"
+separator_order = "six in G-u or seven after adjoining u; larger separators carry sevenfold linkage"
+colour_compatibility = "open"
+hypotheses = [
+  "connected degree-seven anti-neighbourhood",
+  "exact one-edge versus size-at-least-two matching languages",
+  "same-colouring Kempe path system and rooted K5 for every boundary nonedge",
+  "proper-minor matching response inside a multiply hit rooted bag",
+]
+allowed_exits = [
+  "explicit K7-minor model",
+  "two vertices whose deletion is K5-minor-free",
+  "one equality partition realised by both closed shores of an actual order-seven separation",
+]
+does_not_prove = [
+  "HC7",
+  "existence of a degree-seven vertex in every hypothetical counterexample",
+  "the corresponding degree-eight or degree-nine exchange",
+]
+keywords = ["degree seven", "exact matching language", "rooted K5", "model-carried separator"]
+
+[[claims]]
 id = "hc7.target.bounded_interface_bridge"
 title = "Bounded-interface pole-free bridge composition"
 kind = "target"
-status = "active-target"
+status = "frozen"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
-active = true
+active = false
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints and host paths"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -178,6 +208,58 @@ source = "results/hc7_bounded_interface_exact_block_kempe_reduction.md"
 active = true
 audit = "results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md"
 expected_source_sha256 = "2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9"
+
+[[claims]]
+id = "hc7.degree7_antineighbourhood_connectivity"
+title = "Connected anti-neighbourhood at degree seven"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
+active = true
+audit = "results/hc7_degree7_anti_neighbourhood_connectivity_audit.md"
+expected_source_sha256 = "9ac0a18bde65c2b8eba985f4cee63977536a08b55c1ef0bf1b3e9600dfae3301"
+scope = "degree-seven vertex in the hypothetical HC7 kernel"
+
+[[claims]]
+id = "hc7.degree7_matching_rooted_separator"
+title = "Exact matching languages and rooted model-carried separator"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_matching_bridge_bundle.md"
+active = true
+audit = "results/hc7_degree7_matching_bridge_bundle_audit.md"
+expected_source_sha256 = "7fda58a909aabf5a49c32be513ebc598695c448855a4a8bede3ae1efdc63314a"
+scope = "degree-seven sole-exterior branch"
+preserves = [
+  "one fixed six-colouring for every simultaneous path bundle",
+  "five literal boundary roots and their rooted branch-set labels",
+  "full neighbourhood of the model-carried separator",
+]
+does_not_prove = [
+  "label-preserving split of a multiply hit rooted bag",
+  "colour compatibility at the returned order-seven separation",
+]
+
+[[claims]]
+id = "hc7.degree7_aligned_near_k7"
+title = "Boundary-labelled near-K7 model at degree seven"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_aligned_near_k7_model.md"
+active = true
+audit = "results/hc7_degree7_aligned_near_k7_model_audit.md"
+expected_source_sha256 = "51bd2cf191f848a398a1a4aee711ef0c4d36c747468ce9613b9514cbc56cd060"
+scope = "every degree-seven vertex in the hypothetical HC7 kernel"
+preserves = [
+  "singleton degree-seven pole",
+  "singleton boundary centre incident with every possible missing edge",
+  "literal boundary roots in the remaining named branch sets",
+]
+does_not_prove = [
+  "repair of either missing centre adjacency",
+  "colour compatibility at an order-seven separator",
+  "existence of a degree-seven vertex in every hypothetical counterexample",
+]
 
 [[claims]]
 id = "hc7.global_adjacent_pair_palette_frame"
@@ -1102,6 +1184,46 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.defect_one_exchange"
 target = "hc7.minimal_sixth_branch_set_path"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.target.bounded_interface_bridge"
+kind = "subproblem_of"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_aligned_near_k7"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_aligned_near_k7"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_aligned_near_k7"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_matching_rooted_separator"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_matching_rooted_separator"
+target = "hc7.exact_block_kempe_reduction"
 kind = "uses"
 
 [[relations]]

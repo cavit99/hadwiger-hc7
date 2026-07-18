@@ -52,19 +52,26 @@ Several infinite branches are now closed:
   forces a $K_7$ minor under the full-shore hypotheses; and
 - the earlier induced-cycle completion is a special case of that theorem.
 
-For every $x\in S$, the exact-singleton boundary-colouring space is
-Kempe-connected.  Attempting to lift a transition from a colouring of the
-edge deletion $G-ux$ to the opposite shore must fail at a literal
-bichromatic path.  That path avoids $u,x$, lies wholly in one open shore,
-and on the $u$-side uses at most three other exterior components, each
-adjacent to all but at most two boundary vertices.
+The degree-seven branch now has a stronger uniform description.  The graph
+$G-N[u]$ is one connected component.  Boundary equality partitions are
+encoded by matchings in the complement of $G[N(u)]$: the exterior shore
+realizes exactly the one-edge matchings, while the pole shore realizes
+exactly the matchings of order two or three.  One fixed colouring therefore
+supplies all missing-edge Kempe paths on the five uniquely coloured roots.
+Kriesell--Mohr's five-root theorem packages them into a rooted $K_5$ for
+every repeated boundary pair.
 
-The open step is to compose these forced paths into an explicit $K_7$-minor
-model, a common boundary partition, or a strictly smaller bounded interface
-that preserves the named colouring response.  Static boundary partitions
-cannot suffice: every nonsplit four-colourable boundary admits an abstract
-even/odd parity obstruction.  The remaining theorem must therefore use
-literal path placement, operation endpoints, or labelled branch sets.
+If the repeated pair cannot be joined disjointly from that rooted model,
+the five named branch sets carry a full separator.  Either an exact
+order-seven separator occurs or seven disjoint paths cross those five bags.
+More strongly, every surviving degree-seven interface contains a
+boundary-labelled model of $K_7$ with one edge deleted or two adjacent edges
+deleted.  The missing pairs share a singleton boundary centre.  The open
+step is to repair those centre incidences using the proper-minor matching
+response, or turn failure into a two-vertex $K_5$-minor transversal or
+compatible colourings across an exact order-seven separator.  This is a
+label-preserving exchange problem; connectivity and unlabelled paths alone
+are known to be insufficient.
 
 ## Start here
 
@@ -72,10 +79,14 @@ literal path placement, operation endpoints, or labelled branch sets.
 |---|---|
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Authoritative research status and exact open gap |
 | [`active/INDEX.md`](active/INDEX.md) | Navigation map for live proof work |
-| [Bounded-interface bridge frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Current theorem and immediate constructive milestone |
+| [Degree-seven near-clique composition](active/hc7_degree7_model_separator_frontier.md) | Current theorem and immediate constructive milestone |
+| [Bounded-interface bridge frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Degree-eight/nine continuation |
 | [Low-degree bounded-interface theorem](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Boundary-edge alignment](results/hc7_low_degree_boundary_edge_alignment.md) | Places the adjacent-pair endpoint on the same boundary |
 | [Exact-block Kempe reduction](results/hc7_bounded_interface_exact_block_kempe_reduction.md) | Produces the literal pole-free bridge |
+| [Degree-seven anti-neighbourhood connectivity](results/hc7_degree7_anti_neighbourhood_connectivity.md) | Reduces degree seven to one exterior component |
+| [Exact matching languages and rooted-model separator](results/hc7_degree7_matching_bridge_bundle.md) | Uniform degree-seven rooted-model principle |
+| [Boundary-labelled near-`K_7` model](results/hc7_degree7_aligned_near_k7_model.md) | Compresses every degree-seven survivor to one/two adjacent missing edges |
 | [Research integrity tools](tools/README.md) | Search, dependency metadata, audit hashes, and CI checks |
 
 Read a theorem in [`results/`](results/) together with its adjacent
@@ -105,7 +116,7 @@ the disposable SQLite/FTS index:
 ```bash
 python3 tools/research_index.py build
 python3 tools/research_index.py search '"bounded interface"'
-python3 tools/research_index.py context hc7.target.bounded_interface_bridge
+python3 tools/research_index.py context hc7.target.degree7_model_separator
 ```
 
 The generated index is a discovery aid.  Markdown remains authoritative,
