@@ -16,37 +16,47 @@ pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
 id = "hc7.target.degree7_model_separator"
-title = "Degree-seven reserved-cycle or compatible-separator completion"
+title = "Degree-seven boundary-edge contact exchange or compatible-separator completion"
 kind = "target"
 status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
-source_heading = "Reserved-cycle or compatible-separator theorem"
+source_heading = "Boundary-edge contact exchange or compatible separator"
 active = true
-scope = "degree-seven vertex in a hypothetical minor-minimal HC7 counterexample"
-label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named far-shore connected subgraphs, two paired traces, nested rooted separators and literal proper-minor contacts"
+scope = "the degree-eight interface arising inside the degree-seven-derived two-pair disk configuration of a hypothetical minor-minimal HC7 counterexample"
+label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
 separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
 colour_compatibility = "open"
 hypotheses = [
   "connected degree-seven anti-neighbourhood",
   "exact one-edge versus size-at-least-two matching languages",
   "spanning boundary-labelled K7-minus-one-edge model with singleton centre",
-  "two-mark split gives K7 or a universal multicoloured-row separator",
+  "two-mark split gives K7 or a full-neighbourhood separator with a multicoloured named trace",
   "boundary-full-subgraph reflection closes every independent-trace conflict graph within the available disjoint full-side capacity",
   "disjoint two-trace linkage closes by simultaneous contraction",
   "the rural alternative returns nested labelled separators and a degree-seven/eight curvature vertex",
   "a reserved cyclic degree-eight allocation with at most two independent cross-defects gives K7",
+  "deleting three vertices preserves five-cyclability and a component-deleted degree-eight residue yields a reserved cycle or an order-at-most-two cut",
+  "a stable four-path system in the rooted disk always allocates the four roots and all five centre neighbours among five cyclically adjacent connected sets",
+  "two safe paired-trace supports reflect, while a nonempty boundary-edge obstruction forces at least three simultaneous far-shore Kempe connections",
+  "those three Kempe connections either pack disjointly away from their prescribed terminals or expose an actual order-seven boundary carrying a concrete one-sided equality partition",
+  "cutvertices and two-vertex separators inside a boundary-full component give an exact-seven boundary or an explicit repair support disjoint from a boundary-full residual, apart from a classified contact-concentration list",
+  "a universal boundary-contact vertex in a three-connected component gives the same split or an exact-seven boundary by Tutte's nonseparating-path theorem",
+  "an already-disjoint configuration of boundary-rooted connected subgraphs and cyclic connected sets gives K7, an exact order-seven separator or a strict separator-order descent",
 ]
 allowed_exits = [
   "explicit K7-minor model",
   "one equality partition realised by both closed shores of an actual order-seven separation",
-  "a reserved degree-eight cyclic allocation whose contact defect graph is a matching of size at most two",
+  "a label-preserving configuration satisfying every hypothesis of the audited connected-subgraph cyclic-contact allocation theorem, with cross-nonadjacency graph a matching of order at most two",
+  "a strict full-neighbourhood-separator descent preserving the paired traces, selected boundary-edge response and five named pairwise-adjacent connected subgraphs",
 ]
 does_not_prove = [
   "HC7",
   "existence of a degree-seven vertex in every hypothetical counterexample",
-  "host-level reservation of the facial cycle from the seventh branch set",
-  "contact-label diversification from contraction-critical colourings",
-  "the corresponding degree-eight or degree-nine exchange",
+  "elimination of the concentrated low-cut residue after the component-deleted reserved-cycle fork",
+  "label-preserving use of the three-path packing through the five named connected subgraphs",
+  "extension of the concrete one-sided equality partition returned by the Kempe-path separation through the opposite closed shore",
+  "a disjoint seven-contact residual after one named connected subgraph is used as a repair connector",
+  "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
 ]
 keywords = ["degree seven", "two paired traces", "nested full-neighbourhood separator", "facial cycle", "degree eight", "colour gluing"]
 
@@ -1175,6 +1185,244 @@ conclusions = ["explicit K7-minor model when the cross-defect graph is a matchin
 does_not_prove = ["disjointness of the facial cycle from the seventh branch set", "host-level contact-label diversification"]
 
 [[claims]]
+id = "hc7.three_deletion_five_cyclability"
+title = "Five prescribed vertices remain cyclable after three deletions"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_three_vertex_deletion_five_cyclability.md"
+active = true
+audit = "results/hc7_three_vertex_deletion_five_cyclability_audit.md"
+expected_source_sha256 = "93d4c49b90ea06d5143fcb4e04ed7c76a4160b92c63c7fdf7969325c7281c1c7"
+scope = "seven-connected K7-minor-free seven-chromatic graph whose proper minors are six-colourable"
+conclusions = ["deleting at most three vertices leaves every prescribed five-set on one cycle"]
+does_not_prove = ["a cycle avoiding a prescribed connected subgraph", "a prescribed cyclic order", "compatible boundary colourings"]
+
+[[claims]]
+id = "hc7.exact_seven_packet_packing"
+title = "Exact-seven full-packet packing"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact_seven_packet_packing.md"
+active = true
+audit = "results/hc7_exact_seven_packet_packing_audit.md"
+expected_source_sha256 = "501f581d764607ef9cd13b854150dae95ea251efde0fdd28c77bb9632415fc57"
+scope = "actual order-seven separation in a seven-connected K7-minor-free strongly seven-contraction-critical graph"
+conclusions = ["the two full-packet numbers sum to at most four", "one shore has full-packet number one", "the boundary clique number is at most six minus the packet-number sum"]
+does_not_prove = ["a small transversal in the thin shore", "compatible boundary colourings"]
+
+[[claims]]
+id = "hc7.reserved_cycle_or_two_cut"
+title = "Reserved cycle or an order-at-most-two cut in the component-deleted residue"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_reserved_cycle_or_two_cut.md"
+active = true
+audit = "results/hc7_reserved_cycle_or_two_cut_audit.md"
+expected_source_sha256 = "8f9cd1d6a76c868a200b3d5504584980d054bf8bb43d880fcbf360a9f3938495"
+scope = "the degree-eight equality inside the exact two-pair disk configuration, after deleting the reserved connected subgraph, the two paired traces and the centre"
+preserves = ["literal five-set of disk neighbours", "a disjoint component reserved as the seventh branch set", "the full neighbourhood only of the particular connected component returned by the low-cut argument"]
+conclusions = ["five cyclic connected sets disjoint from the reserved component when the deleted residue is three-connected, or more generally k-connected with independence number at most k", "an actual order-seven separation from a low-cut side A only when A minus its nominated neighbours is nonempty and the number of nominated neighbours in A is at most four minus the number of cut vertices"]
+does_not_prove = ["matching contact defects", "a split of the concentrated low-cut residue", "a common equality partition"]
+
+[[claims]]
+id = "hc7.rooted_hamiltonian_cycle_reduction"
+title = "Hamiltonian-cycle reduction for the four-root degree-eight disk"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_rooted_hamiltonian_cycle_reduction.md"
+active = true
+audit = "results/hc7_rooted_hamiltonian_cycle_reduction_audit.md"
+expected_source_sha256 = "8c3f9eb12e4e04716a590d9a98eb4b7716cffbd9874eee6a149fa4c19bfe7c32"
+scope = "a three-connected plane graph with four cofacial roots, rooted internal four-connectivity and an interior vertex with five nominated neighbours"
+preserves = ["all four literal roots", "all five nominated neighbours", "a Hamiltonian cycle avoiding the degree-eight centre", "disjointness from the opposite open shore in the exact-seven application"]
+conclusions = ["adding one outer-face vertex complete to the four roots gives a four-connected planar graph", "deleting that new vertex and the five-neighbour centre leaves a Hamiltonian graph", "the five cyclic connected sets with four distinct roots exist unless the roots have one of two explicit clustering patterns on the Hamiltonian cycle"]
+does_not_prove = ["elimination of either root-clustering pattern", "matching contact defects", "compatible shore colourings", "a K7 minor"]
+
+[[claims]]
+id = "hc7.four_root_stable_theta_allocation"
+title = "Stable-theta allocation for the four-root degree-eight disk"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_four_root_stable_theta_allocation.md"
+active = true
+audit = "results/hc7_four_root_stable_theta_allocation_audit.md"
+expected_source_sha256 = "f5fb47f4e9e9e2857addbb3d7f5be54c7818bd32f264b07eccc729f671bbfa62"
+scope = "a three-connected plane graph with four cofacial roots, rooted internal four-connectivity and an interior vertex with five nominated neighbours"
+preserves = ["all four literal roots", "all five nominated neighbours, including arbitrary root-neighbour overlap", "five pairwise-disjoint connected sets", "literal cyclic adjacencies from the outer root cycle and one stable bridge"]
+conclusions = ["five cyclically adjacent connected sets contain all five nominated neighbours and four distinct sets contain the four distinct roots"]
+does_not_prove = ["the required contacts from the three omitted boundary vertices", "a disjoint connected seventh branch set with all required contacts", "matching contact defects", "compatible shore colourings"]
+
+[[claims]]
+id = "hc7.degree8_safe_support_reflection"
+title = "Two safe boundary supports force five-row colour reflection"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_safe_support_reflection.md"
+active = true
+audit = "results/hc7_degree8_safe_support_reflection_audit.md"
+expected_source_sha256 = "1248eb14c14662052bcbcd59c98e9b9a37d2e04ca06c6061fecdf811e0bb4f24"
+scope = "two paired traces with four rooted connected sets and one of four stated degree-eight contact patterns"
+conclusions = ["six-colourability from two distinct contact supports whose enlarged traces are independent", "exact Boolean boundary-edge blockers for the four normalized patterns"]
+does_not_prove = ["exhaustiveness of the four patterns", "elimination of a blocker edge", "cycle-sector root alignment"]
+
+[[claims]]
+id = "hc7.degree8_blocker_star_kempe_fork"
+title = "A boundary-edge obstruction yields three far-shore Kempe connections"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_blocker_edge_kempe_fork.md"
+active = true
+audit = "results/hc7_degree8_blocker_edge_kempe_fork_audit.md"
+expected_source_sha256 = "ab33c617b53e45d6f881e932074e9c96ced3457bed8c3e699168899bcdfbb144"
+scope = "two paired traces with two adjacent connected supports and a nonempty set of obstructing boundary edges sharing one endpoint"
+preserves = ["one common far-shore colouring for all absent-colour connections", "literal obstructing boundary edges", "the two named paired traces and five named pairwise-adjacent connected subgraphs"]
+conclusions = ["a six-colouring of the far closed shore with all obstructing boundary edges deleted and both enlarged paired traces monochromatic", "at least three colour-indexed far-shore paths from the common endpoint to the paired trace in every non-six-colourable host", "the deletion/contraction response square at a unique obstructing edge carries no second colouring state"]
+does_not_prove = ["three internally disjoint paths", "a common host separator", "label-preserving allocation of first hits", "a K7 minor or common boundary partition"]
+
+[[claims]]
+id = "hc7.kempe_fan_or_exact_seven_boundary"
+title = "Three Kempe connections give a packing or an exact-seven boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_kempe_fan_or_exact_seven_boundary.md"
+active = true
+audit = "results/hc7_kempe_fan_or_exact_seven_boundary_audit.md"
+expected_source_sha256 = "1c616beccaea3d798e6c1659ee0311247a5d78bf90c593acae2cb86d31cdd258"
+scope = "the exact-seven two-pair boundary with the three simultaneous Kempe connections returned by one obstructing-edge colouring"
+preserves = ["literal boundary vertices", "all three selected two-colour paths", "a full neighbourhood in the original host", "the one-sided boundary colouring"]
+conclusions = ["three b-to-I paths disjoint outside the prescribed terminal set, or an actual order-seven separation", "in the separation branch the near shore has a proper six-colouring with the paired J trace monochromatic and b joined in colour to an internal two-vertex cut member"]
+does_not_prove = ["extension of that equality partition through the opposite closed shore", "label-preserving allocation of the three packed paths", "a K7 minor"]
+
+[[claims]]
+id = "hc7.connected_row_cyclic_corner_dichotomy"
+title = "Boundary-rooted connected subgraphs, cyclic connected sets and corner separators"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_connected_row_cyclic_corner_dichotomy.md"
+active = true
+audit = "results/hc7_connected_row_cyclic_corner_dichotomy_audit.md"
+expected_source_sha256 = "cc3c6012b32e8f0116e4c3863ad9cbd7199620419ab2d8df9b3de517000029c2"
+scope = "the stated pairwise-disjoint degree-eight configuration of three boundary-rooted connected subgraphs and five cyclic connected sets"
+preserves = ["one named boundary root", "one named missed connected set", "literal full neighbourhood after strict separator descent"]
+conclusions = ["explicit K7 minor for matching defects or defects confined to the unrooted fifth cyclic set", "exact order-seven separator or strict separator-order descent for a rooted missing incidence only when the corresponding far-side connected subgraph meets the open shore"]
+does_not_prove = ["a choice of three boundary-rooted connected subgraphs disjoint from the connected seventh branch set", "that the far-side connected subgraph meets the open shore while remaining disjoint from the seventh branch set", "preservation of all other labels under descent", "compatible shore colourings"]
+
+[[claims]]
+id = "hc7.boundary_full_component_low_cut_reduction"
+title = "Low-order separators inside a boundary-full component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_boundary_full_component_low_cut_reduction.md"
+active = true
+audit = "results/hc7_boundary_full_component_low_cut_reduction_audit.md"
+expected_source_sha256 = "b6205cae0d5ee6fe25a7258b3b8e3aa1894ce97d0fa348cef2c06935f5c24d87"
+scope = "a boundary-full component behind an order-seven separation in a seven-connected graph"
+preserves = ["literal seven-vertex boundary", "full neighbourhoods of cut-off lobes", "a repair support adjacent to b and the prescribed two-set", "a disjoint boundary-full residual when the exact criterion succeeds"]
+conclusions = ["a cutvertex gives an actual order-seven boundary or the two required disjoint connected subgraphs", "a two-vertex separator has an exact necessary-and-sufficient contact criterion", "all exceptional two-lobe and multi-lobe contact patterns are classified", "a unique boundary portal gives an exact order-seven boundary"]
+does_not_prove = ["preservation of the already named far-side connected subgraphs", "compatible boundary colourings", "elimination of every exceptional two-cut contact pattern", "the three-connected component case"]
+
+[[claims]]
+id = "hc7.boundary_full_universal_vertex_split"
+title = "A universal boundary-contact vertex in a three-connected component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_boundary_full_universal_vertex_split.md"
+active = true
+audit = "results/hc7_boundary_full_universal_vertex_split_audit.md"
+expected_source_sha256 = "3390c21c45c2541ea4e4aba19776aa578e44ac9f9ac6739816aae4994148266e"
+scope = "a three-connected boundary-full component behind an order-seven separation with one vertex adjacent to every boundary vertex"
+preserves = ["literal boundary vertices", "a repair path adjacent to b and the prescribed two-set", "a disjoint connected boundary-full residual"]
+conclusions = ["an actual order-seven separation from a unique boundary contact, or a nonseparating repair path whose residual contains the universal boundary-contact vertex"]
+does_not_prove = ["existence of a universal boundary-contact vertex", "preservation of previously named branch sets", "compatible boundary colourings", "the general three-connected component case"]
+
+[[claims]]
+id = "hc7.barrier.reserved_cycle_fournier"
+title = "Cyclability need not reserve a prescribed contacting connected set"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_reserved_cycle_fournier_barrier.md"
+active = true
+refutes = ["a prescribed-set cycle disjoint from a full contacting connected set using only three-connectivity and alpha at most three"]
+lacks = ["the exact disk host", "contraction-critical colouring responses", "three-connectivity after deleting the reserved set"]
+
+[[claims]]
+id = "hc7.barrier.rural_saturated_spokes"
+title = "Separately selected saturated spoke responses do not complete the rural two-pair geometry"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_two_pair_rural_saturated_spoke_barrier.md"
+active = true
+refutes = ["completion from the rural two-pair geometry plus one saturated response for every spoke"]
+satisfies = ["seven-connectivity", "K7-minor exclusion", "exact order-seven five-row geometry", "one fully endpoint-saturated six-colouring for every spoke deletion"]
+lacks = ["seven-chromaticity", "universal nonextension for every colouring of each edge deletion", "absence of a global two-vertex terminal"]
+
+[[claims]]
+id = "hc7.barrier.three_kempe_paths_bottleneck"
+title = "Three colour-indexed paths need not have a common bottleneck"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_three_kempe_paths_common_bottleneck_barrier.md"
+active = true
+audit = "barriers/hc7_three_kempe_paths_common_bottleneck_barrier_audit.md"
+expected_source_sha256 = "fe7cc2f3596e305c36a220c3e65039b737b756232051017b4533287769736354"
+refutes = ["three colour-indexed paths with only base-colour intersections yield three internally disjoint paths or one common internal bottleneck", "a common bottleneck in the selected colour paths is automatically a host separator"]
+lacks = ["five named pairwise-adjacent connected subgraphs", "universal proper-minor responses at bypass edges", "host-level full-neighbourhood completeness"]
+
+[[claims]]
+id = "hc7.barrier.blocker_first_hit_concentration"
+title = "Universal obstructing-edge responses need not diversify named first hits"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_degree8_blocker_first_hit_concentration_barrier.md"
+active = true
+scope = "finite deterministic construction"
+refutes = ["first-hit diversity from seven-connectivity, one universal obstructing-edge response, five named pairwise-adjacent connected subgraphs and five cyclic connected subgraphs alone"]
+satisfies = ["seven-connectivity", "actual order-seven separation", "universal equality on the selected edge deletion", "endpoint saturation in all five alternate colours", "all three absent-colour first hits concentrated in one named boundary-free connected subgraph"]
+lacks = ["K7-minor exclusion", "minor-minimality", "proper-minor responses away from the selected edge"]
+
+[[claims]]
+id = "hc7.barrier.two_edge_deletion_lattice"
+title = "The three responses of a two-edge star do not force a fourth boundary partition"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_two_edge_deletion_lattice_barrier.md"
+active = true
+audit = "barriers/hc7_two_edge_deletion_lattice_barrier_audit.md"
+expected_source_sha256 = "3d931f5f356c28a101dc279bd3ad0b598435ed386df7094d7b8c04d01b8c0a37"
+scope = "explicit six-vertex gadget with exhaustive minimality through two internal vertices"
+refutes = ["a fourth boundary equality partition or common colouring follows abstractly from the two exclusive single-edge deletion responses and the all-equal double-deletion response"]
+satisfies = ["exact three-state deletion lattice", "exact six-versus-seven colour lift after joining K3"]
+lacks = ["K7-minor exclusion", "seven-connectivity", "the five named pairwise-adjacent connected subgraphs", "full minor-critical host structure"]
+
+[[claims]]
+id = "hc7.barrier.stable_theta_three_path_matching"
+title = "Three terminal-capacitated paths do not force matching sector defects"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_stable_theta_three_path_matching_barrier.md"
+active = true
+audit = "barriers/hc7_stable_theta_three_path_matching_barrier_audit.md"
+expected_source_sha256 = "83fb3c4dcfdc8dcea94d0b11a3e694fbb1f6fd1f318c0266bcae23d839da0ff2"
+scope = "explicit finite order-seven interface with the exact stable-theta and terminal-capacitated path outputs"
+refutes = ["matching cross-defect follows from stable-theta allocation, a connected seven-contact subgraph and three terminal-capacitated paths alone"]
+satisfies = ["degree-eight centre", "five cyclically adjacent connected sets", "four roots in distinct sets", "a connected subgraph meeting seven of eight labels", "three paths disjoint outside prescribed terminals"]
+lacks = ["seven-connectivity", "contraction-critical proper-minor responses", "K7-minor exclusion"]
+
+[[claims]]
+id = "hc7.barrier.exact7_paired_block_trace_parity"
+title = "Exact independent-block traces do not synchronize the new seven-boundary"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_exact7_paired_block_trace_parity_barrier.md"
+active = true
+audit = "barriers/hc7_exact7_paired_block_trace_parity_barrier_audit.md"
+expected_source_sha256 = "aaef229a36ab6eae0fb15a55a0f9faf7de1862a0ac376327460921bb8963a89b"
+scope = "two abstract parity-separated boundary response languages on K3 disjoint union K3 disjoint union K1, plus the static two-packet quotient"
+refutes = ["synchronization from all one-block and all two-block exact independent-set trace queries plus a K7-minor-free two-packet quotient"]
+satisfies = ["the concrete one-sided paired-block partition", "both parity languages meet all 31 one-block and all 222 two-block cylinders", "the two-packet quotient has no K7 minor"]
+lacks = ["realization as opposite shores in one seven-connected host", "seven-chromatic contraction-critical host structure", "K7-minor exclusion for such a host", "coupled proper-minor transitions"]
+
+[[claims]]
 id = "hc7.barrier.two_pair_rural_almost_universal_apex"
 title = "Rural two-pair geometry without criticality does not force completion"
 kind = "barrier"
@@ -1460,6 +1708,56 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.three_deletion_five_cyclability"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.reserved_cycle_or_two_cut"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.rooted_hamiltonian_cycle_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.four_root_stable_theta_allocation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree8_safe_support_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree8_blocker_star_kempe_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.kempe_fan_or_exact_seven_boundary"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.connected_row_cyclic_corner_dichotomy"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.boundary_full_component_low_cut_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.boundary_full_universal_vertex_split"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.one_spoke_shortest_path"
 kind = "guarded_by"
 
@@ -1489,6 +1787,41 @@ target = "hc7.barrier.degree8_curvature_contact"
 kind = "guarded_by"
 
 [[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.reserved_cycle_fournier"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.rural_saturated_spokes"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.three_kempe_paths_bottleneck"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.blocker_first_hit_concentration"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.two_edge_deletion_lattice"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.stable_theta_three_path_matching"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.exact7_paired_block_trace_parity"
+kind = "guarded_by"
+
+[[relations]]
 source = "hc7.two_pair_disk_structure"
 target = "hc7.disjoint_trace_linkage_reflection"
 kind = "uses"
@@ -1497,6 +1830,56 @@ kind = "uses"
 source = "hc7.degree8_contact_allocation"
 target = "hc7.two_pair_disk_structure"
 kind = "related_to"
+
+[[relations]]
+source = "hc7.reserved_cycle_or_two_cut"
+target = "hc7.degree8_contact_allocation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.reserved_cycle_or_two_cut"
+target = "hc7.two_pair_disk_structure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.rooted_hamiltonian_cycle_reduction"
+target = "hc7.two_pair_disk_structure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.four_root_stable_theta_allocation"
+target = "hc7.rooted_hamiltonian_cycle_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_deletion_five_cyclability"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_safe_support_reflection"
+target = "hc7.five_row_separator_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_blocker_star_kempe_fork"
+target = "hc7.degree8_safe_support_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_blocker_star_kempe_fork"
+target = "hc7.five_row_separator_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.kempe_fan_or_exact_seven_boundary"
+target = "hc7.degree8_blocker_star_kempe_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.connected_row_cyclic_corner_dichotomy"
+target = "hc7.degree8_contact_allocation"
+kind = "uses"
 
 [[relations]]
 source = "hc7.universal_multicoloured_row_separator"
@@ -1766,12 +2149,72 @@ expected_stdout = [
 ]
 
 [[verifiers]]
+id = "two-pair-rural-saturated-spokes"
+path = "barriers/hc7_two_pair_rural_saturated_spoke_barrier_verify.py"
+sha256 = "6f02c3464b01af224b2e87bd4af2556cfd000de50a8053dd24755b6de222f51b"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "host: 7-connected and K7-minor-free by the two-apex argument",
+  "disk: exact seven-boundary and alternating two-pair obstruction",
+  "rows: all five named traces and adjacencies remain valid",
+  "transversal: no pair among the three omitted labels hits every K5",
+  "responses: every spoke has a fully endpoint-saturated 6-colouring",
+  "criticality gap: the host itself still has a proper 6-colouring",
+]
+
+[[verifiers]]
 id = "degree-eight-contact-allocation-barrier"
 path = "barriers/hc7_degree8_contact_allocation_barrier_verify.py"
 sha256 = "33d686b93ec4ccd6563306571fa9878e951e5420baf0ef6908c06262d1f3867b"
 timeout = 30
 expected_stdout = [
   "GREEN: degree-eight contact-allocation barrier verified",
+]
+
+[[verifiers]]
+id = "degree-eight-blocker-first-hit-concentration"
+path = "barriers/hc7_degree8_blocker_first_hit_concentration_barrier_verify.py"
+sha256 = "ff31a84389d14ef1a30df8115855a523709c73cb2421813a98c6960d99326bf6"
+timeout = 30
+expected_stdout = [
+  "host: seven-connected with an actual order-seven L-T-R separation",
+  "geometry: five named connected subgraphs and five cyclic left-side subgraphs verified",
+  "response: universal obstructing-edge equality and all five colour locks verified",
+  "first hits: all three absent colours enter the same boundary-free connected subgraph",
+  "scope: an explicit K7 remains after deleting a left-side vertex",
+]
+
+[[verifiers]]
+id = "two-edge-deletion-lattice"
+path = "barriers/hc7_two_edge_deletion_lattice_barrier_verify.py"
+sha256 = "6f6c6145c42e09d192007e5c15f488655870a0365af724ec7fa58a32034e8bd2"
+timeout = 30
+expected_stdout = [
+  "GREEN: exact three-state deletion lattice verified",
+  "GREEN: no realization with at most two internal vertices",
+]
+
+[[verifiers]]
+id = "stable-theta-three-path-matching"
+path = "barriers/hc7_stable_theta_three_path_matching_barrier_verify.py"
+sha256 = "de9c7eb1c0da62b8de703e14071946cf26d447ea7b04c4ad67a6c6eb8ba60362"
+timeout = 30
+expected_stdout = [
+  "stable-theta three-path matching barrier: PASS",
+]
+
+[[verifiers]]
+id = "exact7-paired-block-trace-parity"
+path = "barriers/hc7_exact7_paired_block_trace_parity_barrier_verify.py"
+sha256 = "c3f144632ff9ced17c51e4a842b6dd232f0ca1d993098f53d8225b70ae94d6ba"
+timeout = 30
+expected_stdout = [
+  "GREEN: 174 proper states split into 93 even and 81 odd",
+  "GREEN: both parities answer all 31 exact-block queries",
+  "GREEN: both parities answer all 222 two-block queries",
+  "GREEN: the returned paired-block partition is even",
+  "GREEN: the two-packet quotient has order 9 and clique number 4",
 ]
 
 [[verifiers]]

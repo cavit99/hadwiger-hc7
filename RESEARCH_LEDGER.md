@@ -217,46 +217,161 @@ plane graph supplies the cyclic connected sets from the facial cycle
 exposed by deleting `v`, provided that cycle is disjoint from the proposed
 seventh branch set.
 
-The immediate open theorem is therefore the **reserved-cycle or
-compatible-separator theorem**.  In the contraction-critical two-pair disk
-configuration, prove one of:
+Four further audited results compress the reservation and contact
+obstructions.
+
+- Deleting at most three vertices leaves every prescribed five-set on one
+  cycle.  A failure would create an actual order-seven separation with at
+  least five disjoint boundary-full connected subgraphs, contradicting the
+  exact-seven packet bound.
+- After deleting a chosen exterior component, the three omitted boundary
+  vertices and the degree-eight centre, a three-connected residue contains
+  a cycle through the five disk neighbours.  Otherwise a separator of order
+  at most two either lifts to an actual order-seven full-neighbourhood
+  separation or has one component containing at least `5-|Z|` nominated
+  neighbours and no second component containing an off-neighbour vertex.
+- In the rooted internally four-connected disk itself, adding one
+  outer-face vertex complete to the four roots gives a four-connected
+  planar graph.  Four internally disjoint paths from the new vertex to the
+  degree-eight centre can be made stable in Tutte's sense.  The paths use
+  all four roots and four of the five disk neighbours, while the bridge
+  containing the fifth neighbour attaches to both paths bounding one
+  sector.  Together with the outer root cycle this always gives five
+  pairwise-disjoint cyclically adjacent connected sets, containing all five
+  neighbours and placing the four roots in four distinct sets.  Thus both
+  clustering patterns left by the Hamiltonian-cycle reduction are closed,
+  including arbitrary overlap between roots and disk neighbours.
+- Two distinct safe supports for the paired traces force five-row
+  reflection.  For the four normalized concentrated contact patterns, the
+  complete obstruction is a short Boolean list of literal boundary edges.
+- Contracting the two connected supports in the original graph and deleting
+  the whole obstructing boundary-edge set only in the pulled-back far-shore
+  colouring forces at least three absent-colour Kempe components from the
+  selected boundary vertex back to the paired trace.  All three paths come
+  from one colouring.  When the obstructing set is one edge, deleting and
+  contracting that same edge yield the same colouring space, not two
+  independent states.
+- Terminal-capacitated Menger applied to those three connections gives an
+  exact host-level dichotomy.  Either three boundary-to-trace paths are
+  disjoint outside their prescribed terminals, or a connected open-shore
+  set has a full neighbourhood of order exactly seven.  In the latter case
+  the original colouring restricts properly to that closed shore and gives
+  a concrete boundary partition: the opposite paired trace is
+  monochromatic and the selected boundary vertex shares its colour with a
+  new two-cut vertex.  Extending that same partition through the other
+  closed shore remains open.
+- Low connectivity in a boundary-full component is completely explicit.
+  A cutvertex yields either an actual order-seven boundary or a repair
+  support disjoint from a boundary-full residual.  A two-vertex separator
+  has an exact necessary-and-sufficient contact criterion, with all
+  two-lobe and multi-lobe exceptions classified; a unique boundary portal
+  also yields an exact order-seven boundary.  This does not preserve the
+  already named far-side connected subgraphs or a boundary colouring, so
+  the positive allocation problem is concentrated in the three-connected
+  component case and the listed contact-concentration exceptions.
+- A three-connected component containing one vertex adjacent to all seven
+  boundary vertices also closes.  Tutte's nonseparating-path theorem gives
+  a repair path avoiding that vertex whose deletion leaves a connected,
+  automatically boundary-full residual.  Endpoint degeneracies give a
+  one-vertex repair support or an actual order-seven separation.  Thus a
+  surviving unrestricted component has no universal boundary-contact
+  vertex, apart from the separate named-subgraph preservation obligation.
+
+An additional audited conditional theorem closes the incidence problem
+once three boundary-rooted far-side connected subgraphs are disjoint from
+the connected seventh branch set.  Matching defects and defects confined to
+the unrooted fifth cyclic connected set give explicit `K_7` models.  If a
+selected rooted missing incidence has its far-side connected subgraph
+meeting the open shore, it gives an exact order-seven separator or a strict
+decrease in the order of a literal full-neighbourhood separator.  The
+unresolved step is to obtain this disjoint configuration with the shore-
+meeting condition, or to preserve a common boundary partition under the
+descent.
+
+The immediate open theorem is therefore the **boundary-edge contact
+exchange or compatible-separator theorem**, with two exact branches.  In
+the three-path branch, allocate the packed paths among the five named
+far-side connected subgraphs while preserving the stable-theta cyclic
+sets and the disjoint seventh branch set.  In the separator branch,
+synchronize the concrete one-sided equality partition through the opposite
+closed shore.  In either branch prove one of:
 
 1. an explicit `K_7`-minor model;
 2. an actual order-seven separation with one equality partition extending
    through both closed shores; or
-3. a degree-eight cyclic allocation satisfying the preceding matching
-   criterion and disjoint from its connected seventh branch set.
+3. a label-preserving configuration satisfying every hypothesis of the
+   audited connected-subgraph cyclic-contact allocation theorem, with
+   cross-nonadjacency graph a matching of order at most two; or
+4. a strict full-neighbourhood-separator descent preserving the paired
+   traces, the selected boundary-edge response and the five named
+   pairwise-adjacent connected subgraphs.
 
-The third outcome is already terminal.  The missing work is to use the
-proper-minor colouring responses and five named far-side branch sets to
-reserve the facial cycle and diversify the three boundary-contact labels.
-Failure must compress one of the nested full-neighbourhood separators to
-order seven and synchronize its two shore colourings.  If curvature yields
-a degree-seven vertex instead, its neighbourhood is already an exact
+The third outcome is terminal through the contact-allocation theorem.  The
+fourth is admissible only when the decrease is measured on a literal host
+separator and all named colouring data survive.  If curvature yields a
+degree-seven vertex instead, its neighbourhood is already an exact
 order-seven boundary; regeneration of another unranked interface is not a
 descent, so colour synchronization or an explicit minor is required there.
 
-Four complementary barriers define the trust boundary.  The
+The two remaining branches require genuinely coupled host information.  A
+verified finite interface realizes the stable-theta allocation, a connected
+seven-contact subgraph and three terminal-capacitated paths, yet its two
+missing boundary-to-sector incidences share one boundary vertex.  Hence the
+matching-defect conclusion does not follow by incidence counting.  On the
+separator side, two disjoint abstract parity languages meet every one-block
+and every two-block exact independent-trace query, while their static
+two-packet quotient has no `K_7` minor.  Split boundaries synchronize by
+the existing theorem, but every live nonsplit boundary requires a coupled
+proper-minor transition or a labelled minor construction; further
+independent-set trace queries cannot finish it.
+
+Several complementary barriers define the trust boundary.  The
 seven-connected `K_7`-minor-free join of an edge with the icosahedron has
-the same five-row geometry and saturated responses for every incident
+the same five-subgraph geometry and saturated responses for every incident
 contraction, but is six-colourable and has a terminal two-vertex set.  A
 separate exact-seven realization shows that all internal proper-minor
 response partitions plus unlabelled Kempe connectivity can remain
 nonreflectable when the full connectivity and minor-exclusion geometry is
 absent.  A seven-connected two-apex tube realizes the entire rural
-two-pair/five-row geometry but lacks criticality.  Finally, an unbounded
+two-pair/five-subgraph geometry but lacks criticality.  A strengthened version
+even gives a fully endpoint-saturated response for every relevant spoke;
+it remains six-colourable, showing that separately selected responses do
+not spend the universal nonextension law.  Three colour-indexed paths can
+also have a triangle of pairwise base-colour intersections, with neither
+three internally disjoint representatives nor one common bottleneck; a
+bottleneck of the selected paths need not separate the host when other
+colours provide bypasses.  A separate verified seven-connected example has
+universal nonextension and all five colour locks at one selected boundary
+edge, yet all three absent-colour first hits enter the same boundary-free
+named connected subgraph.  It contains a `K_7` subgraph and is not
+minor-minimal; it shows that a positive allocation theorem must explicitly
+use global `K_7`-minor exclusion or proper-minor responses away from the
+selected edge.  Finally, an unbounded
 triangulated-disc family concentrates all missing contacts in one boundary
 label at mutually remote curvature vertices, while a ten-vertex local graph
 remains `K_7`-minor-free even with full exterior contact.  Thus curvature,
-Hall counting, web structure and static responses are insufficient: the
-next theorem must spend contraction-critical colourings, literal
-first-hit locations, named branch sets and global `K_7` exclusion.
+Hall counting, web structure, static responses and the selected Kempe-path
+union are insufficient: the next theorem must spend contraction-critical
+colourings, every host bypass, literal first-hit locations, named branch
+sets and global `K_7` exclusion.
+
+For the later two-edge exceptional branch, the three available proper-minor
+boundary partitions also have no abstract composition consequence.  A
+verified minimal gadget realizes the all-equal response and both exclusive
+single-edge responses while forbidding the fourth equality partition and
+the all-distinct partition.  Its six-colour lift contains a `K_7` minor, so
+the missing positive theorem must couple the response lattice to the named
+connected subgraphs under global `K_7`-minor exclusion.
 
 This does not prove `HC_7`.  It closes the one-hole donor splitting problem,
-the disjoint two-trace linkage branch, and broad degree-eight cyclic-contact
-families by unbounded theorems.  The residual is a host-level
-cycle-reservation/contact-diversification or exact-separator synchronization
-problem, not a finite web census.  The
+the disjoint two-trace linkage branch, broad degree-eight cyclic-contact
+families, the entire rooted cycle-allocation problem, the cutvertex and
+generic two-cut component geometry, the universal-contact three-connected
+family, the reserved-cycle/high-connectivity branch and the two-safe-support
+branch by
+unbounded theorems.  The residual is now either a label-preserving use of a
+three-path packing or synchronization of a concrete one-sided partition on
+an exact order-seven separator, not a finite web census.  The
 two-adjacent-edge exceptional complements and the degree-eight/nine
 bounded-interface continuation remain after this branch.  The older
 component-defect programme below is retained as a secondary source of

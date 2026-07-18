@@ -22,6 +22,17 @@ gluing.  Its useful new packaging is the sharp conclusion about arbitrary
 internally disjoint `S`-full packets, rather than merely the components of
 `G-S`.
 
+**Audited theorem revision.**  This audit checks
+`results/hc7_exact_seven_packet_packing.md` at SHA-256
+
+```text
+501f581d764607ef9cd13b854150dae95ea251efde0fdd28c77bb9632415fc57
+```
+
+The theorem source has not changed since this audit was written; the hash is
+recorded here to bring the existing audit up to the repository's current
+revision-pinning standard.
+
 ## 1. Corrected exact statement
 
 Let `G` be seven-connected, `K_7`-minor-free, and strongly
