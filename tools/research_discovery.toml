@@ -1,0 +1,143 @@
+schema_version = 1
+non_authoritative = true
+
+[[connections]]
+id = "exact7-order8.two-carrier-completion"
+kind = "candidate-application"
+source_path = "active/hc7_degree7_model_separator_frontier.md"
+source_heading = "Exact-seven first-entry and separator-excess reduction"
+source_start_line = 373
+source_end_line = 452
+source_sha256 = "2d09a601511308dbf34d05db00564d0f8ce172038754cd755b353899ff30e56e"
+target_path = "results/hc7_near_k7_rotation_edge.md"
+target_heading = "2. The exact connector split"
+target_start_line = 153
+target_end_line = 206
+target_sha256 = "871125e9b0dc8201ac48d210bc9698f05ccad6d869a46e1806ea4a57bace2a6b"
+extraction_method = "manual-source-verification"
+confidence = 0.73
+review_status = "needs-review"
+evidence = "The current exact-seven reduction retains two named boundary-full connected subgraphs, paired colouring traces, and five named far-side connected subgraphs; the older theorem gives an explicit K_7-minor model once two disjoint connected subgraphs with the correct roots and complementary label contacts are realized."
+matching = "five fixed named pairwise-adjacent connected subgraphs; two connected subgraphs intended to preserve opposite rooted contacts; an explicit K_7-minor construction once the rooted label contacts are available"
+unmatched = "the current order-eight interfaces do not yet provide a common connector Z, the two specified root attachments, disjoint rooted carriers of the required complementary types, or preservation of the attained boundary equality partition"
+rationale = "This is a possible terminal construction for a label-preserving compression of the two- and three-component order-eight interfaces, not a route to producing the required rooted connected subgraphs."
+warning = "Discovery candidate only. Boundary fullness, path contact, or unrooted connected subgraphs do not satisfy the two-carrier theorem; every root, label contact, disjointness condition, and lifted branch-set adjacency must be proved literally."
+
+[[connections]]
+id = "exact7-first-hit.palette-label-barrier"
+kind = "barrier-warning"
+source_path = "active/hc7_degree7_model_separator_frontier.md"
+source_heading = "Boundary-edge contact exchange or compatible separator"
+source_start_line = 363
+source_end_line = 369
+source_sha256 = "2d09a601511308dbf34d05db00564d0f8ce172038754cd755b353899ff30e56e"
+target_path = "barriers/hc7_exact7_two_shore_kempe_pairing_barrier.md"
+target_heading = "3. Exact obstruction to the pairing argument"
+target_start_line = 131
+target_end_line = 164
+target_sha256 = "0c78aff763f7b40d221c22e6a49dd73d1c43ef116524fc82ba3957d21e6b2e43"
+extraction_method = "manual-source-verification"
+confidence = 0.94
+review_status = "needs-review"
+evidence = "The current first-hit gate requires distribution among five named connected subgraphs, while the barrier demonstrates that bichromatic palette endpoints and path interiors need not identify or avoid the corresponding named branch sets."
+matching = "five-label compression requires literal first-hit ownership, protected-core avoidance, and branch-set-label preservation; palette colours alone provide none of these"
+unmatched = "the barrier host is not seven-connected or contraction-critical and therefore does not refute a theorem that essentially uses those host hypotheses and global K_7-minor exclusion"
+rationale = "It is the direct guardrail against replacing the current five-label first-hit problem by an unlabelled Kempe-path pairing argument."
+warning = "Barrier only. It does not refute the current exact-seven exchange target; it forbids inferring named branch-set contacts from colour names without additional host-level input."
+
+[[connections]]
+id = "support-six.false-global-transversal-connection"
+kind = "rejected"
+source_path = "active/hc7_support_six_frontier.md"
+source_heading = "1. Setup and intermediate target"
+source_start_line = 16
+source_end_line = 29
+source_sha256 = "a0308fbb46b15b62ce32c52497901ca3e994f3bbf547af87efcc0cc96370e88f"
+target_path = "active/hc7_adjacent_pair_palette_model_frontier.md"
+target_heading = "Adjacent-pair colouring-space alternative"
+target_start_line = 119
+target_end_line = 130
+target_sha256 = "4bdfef125a883100dc743e3d6cc1a82d4574486e06e3ca077c7b38581531c881"
+extraction_method = "manual-source-verification"
+confidence = 0.99
+review_status = "needs-review"
+evidence = "The support-six target meets only supports of K_5-minor models using at most six vertices, whereas the adjacent-pair frontier invokes a pair meeting every K_5-minor model as an entry to an order-seven separation."
+matching = "both statements concern a two-vertex set intersecting a family of K_5-minor models"
+unmatched = "the support-six family excludes every K_5 model whose support has more than six vertices, so its transversal need not meet all K_5-minor models and cannot trigger the adjacent-pair frontier's global transversal consequence"
+rationale = "This records a rejected lexical analogy so retrieval does not promote the frozen support-six target into a dependency of the current adjacent-pair programme."
+warning = "Rejected connection. Do not infer a global K_5-minor transversal, an order-seven separation, or progress on the adjacent-pair alternative from tau(F_6(G)) <= 2."
+
+[[aliases]]
+id = "alias.k7-vee"
+term = "K_7^vee"
+meaning = "K_7 with two incident edges deleted"
+source_path = "archive/hadwiger_spanning_k7vee_qfull_normalization.md"
+source_heading = "1. The weakest unconditional normalization"
+start_line = 27
+end_line = 30
+source_sha256 = "313d9a014c4298412d71c8bfb98d64ab219b506141d4d933130de0424c4a58aa"
+extraction_method = "manual-source-verification"
+confidence = 1.0
+review_status = "needs-review"
+evidence = "The document defines K_7^vee as K_7 with two incident edges deleted."
+false_positive_warning = "Near-K7 may instead mean K_7 minus one edge or a model with at most two absent adjacencies."
+
+[[aliases]]
+id = "alias.equality-state"
+term = "state"
+meaning = "a labelled boundary equality partition, in this theorem family"
+source_path = "results/hc7_near_k7_critical_pinch_state.md"
+source_heading = "1. Setting and equality states"
+start_line = 17
+end_line = 32
+source_sha256 = "69c3598acd7fb1e4c518354e6ead0b090f3932af2055bc85354a52442ab0424a"
+extraction_method = "manual-source-verification"
+confidence = 0.92
+review_status = "needs-review"
+evidence = "This source defines its state as the equality partition induced on the labelled boundary."
+false_positive_warning = "Rotation documents may use state for an entire labelled near-model configuration."
+
+[[aliases]]
+id = "alias.row-branch-set"
+term = "row"
+meaning = "one fixed named branch set F_i, in the rotation-edge programme"
+source_path = "results/hc7_near_k7_rotation_edge.md"
+source_heading = "1. Rotation datum"
+start_line = 90
+end_line = 98
+source_sha256 = "871125e9b0dc8201ac48d210bc9698f05ccad6d869a46e1806ea4a57bace2a6b"
+extraction_method = "manual-source-verification"
+confidence = 0.86
+review_status = "needs-review"
+evidence = "The source explicitly calls the five fixed named branch sets the five rows of the near-model."
+false_positive_warning = "Other historical files use row for boundary labels, colour classes, or demand coordinates."
+
+[[aliases]]
+id = "alias.carrier-connected-subgraph"
+term = "carrier"
+meaning = "a connected subgraph meeting specified portal sets"
+source_path = "results/hc7_near_k7_rotation_edge.md"
+source_heading = "2. The exact connector split"
+start_line = 153
+end_line = 168
+source_sha256 = "871125e9b0dc8201ac48d210bc9698f05ccad6d869a46e1806ea4a57bace2a6b"
+extraction_method = "manual-source-verification"
+confidence = 0.90
+review_status = "needs-review"
+evidence = "The theorem defines carriers by connectivity and prescribed portal contacts."
+false_positive_warning = "A carrier is not automatically a branch set; rooting and side allocation remain essential."
+
+[[aliases]]
+id = "alias.support-six"
+term = "support-six"
+meaning = "a K5 minor-model support using at most six vertices"
+source_path = "active/hc7_support_six_frontier.md"
+source_heading = "1. Setup and intermediate target"
+start_line = 16
+end_line = 29
+source_sha256 = "a0308fbb46b15b62ce32c52497901ca3e994f3bbf547af87efcc0cc96370e88f"
+extraction_method = "manual-source-verification"
+confidence = 1.0
+review_status = "needs-review"
+evidence = "The frontier explicitly quantifies over K5-model supports with at most six vertices."
+false_positive_warning = "It does not mean six colours, a six-vertex separator, or all K5-minor models."
