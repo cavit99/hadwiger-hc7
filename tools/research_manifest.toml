@@ -16,33 +16,39 @@ pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
 id = "hc7.target.degree7_model_separator"
-title = "Degree-seven boundary-labelled centre repair"
+title = "Degree-seven reserved-cycle or compatible-separator completion"
 kind = "target"
 status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
-source_heading = "5. Primary open theorem"
+source_heading = "Reserved-cycle or compatible-separator theorem"
 active = true
 scope = "degree-seven vertex in a hypothetical minor-minimal HC7 counterexample"
-label_fidelity = "one fixed colouring and a boundary-labelled K7 model with one/two adjacent missing centre edges"
-separator_order = "six in G-u or seven after adjoining u; larger separators carry sevenfold linkage"
+label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named far-shore connected subgraphs, two paired traces, nested rooted separators and literal proper-minor contacts"
+separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
 colour_compatibility = "open"
 hypotheses = [
   "connected degree-seven anti-neighbourhood",
   "exact one-edge versus size-at-least-two matching languages",
-  "same-colouring Kempe path system and rooted K5 for every boundary nonedge",
-  "proper-minor matching response inside a multiply hit rooted bag",
+  "spanning boundary-labelled K7-minus-one-edge model with singleton centre",
+  "two-mark split gives K7 or a universal multicoloured-row separator",
+  "boundary-full-subgraph reflection closes every independent-trace conflict graph within the available disjoint full-side capacity",
+  "disjoint two-trace linkage closes by simultaneous contraction",
+  "the rural alternative returns nested labelled separators and a degree-seven/eight curvature vertex",
+  "a reserved cyclic degree-eight allocation with at most two independent cross-defects gives K7",
 ]
 allowed_exits = [
   "explicit K7-minor model",
-  "two vertices whose deletion is K5-minor-free",
   "one equality partition realised by both closed shores of an actual order-seven separation",
+  "a reserved degree-eight cyclic allocation whose contact defect graph is a matching of size at most two",
 ]
 does_not_prove = [
   "HC7",
   "existence of a degree-seven vertex in every hypothetical counterexample",
+  "host-level reservation of the facial cycle from the seventh branch set",
+  "contact-label diversification from contraction-critical colourings",
   "the corresponding degree-eight or degree-nine exchange",
 ]
-keywords = ["degree seven", "exact matching language", "rooted K5", "model-carried separator"]
+keywords = ["degree seven", "two paired traces", "nested full-neighbourhood separator", "facial cycle", "degree eight", "colour gluing"]
 
 [[claims]]
 id = "hc7.target.bounded_interface_bridge"
@@ -271,6 +277,89 @@ does_not_prove = [
   "colour compatibility at an order-seven separator",
   "existence of a degree-seven vertex in every hypothetical counterexample",
 ]
+
+[[claims]]
+id = "hc7.degree7_one_spoke_bridge"
+title = "Spanning alignment, off-pole edge responses and dual orientation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_one_spoke_bridge_corollaries.md"
+active = true
+audit = "results/hc7_degree7_one_spoke_bridge_corollaries_audit.md"
+expected_source_sha256 = "61ed79428d43a82043ea024e5c804f12d59f74c1082be726865d588338039d37"
+scope = "degree-two boundary-complement branch at a degree-seven vertex"
+preserves = [
+  "singleton pole and centre",
+  "five boundary root labels under spanning absorption",
+  "proper-minor matching response for every edge with an endpoint outside the pole shore",
+]
+
+[[claims]]
+id = "hc7.two_mark_branch_set_split"
+title = "Two-mark branch-set split or full-neighbourhood separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_mark_branch_set_split.md"
+active = true
+audit = "results/hc7_two_mark_branch_set_split_audit.md"
+expected_source_sha256 = "d146edf7783d6f29750d634ac3d224da14bdd83dd91170011293ece177240d64"
+scope = "parameter-uniform labelled Kt-minus-one-edge model"
+conclusions = [
+  "explicit Kt-minor model preserving a protected root",
+  "or an actual full-neighbourhood separation inside the split branch set",
+]
+does_not_prove = ["an upper bound on the returned separator", "compatible shore colourings"]
+
+[[claims]]
+id = "hc7.five_row_separator_reflection"
+title = "Five-row reflection across a separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_row_separator_reflection.md"
+active = true
+audit = "results/hc7_five_row_separator_reflection_audit.md"
+expected_source_sha256 = "31adbe5d6255d2424c3fd9aeb9f1cef52068ea4d9bfe1150dea12cdb6c93fb06"
+scope = "arbitrary finite separation in a minor-minimal non-six-colourable graph"
+colour_compatibility = "closes when every named boundary intersection is monochromatic and the centre block has a row carrier"
+
+[[claims]]
+id = "hc7.universal_multicoloured_row_separator"
+title = "A spanning one-missing-adjacency model yields a universally multicoloured separator"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_universal_multicoloured_row_separator.md"
+active = true
+audit = "results/hc7_universal_multicoloured_row_separator_audit.md"
+expected_source_sha256 = "9a62bd17005bcd327e77f4dcfdd636f83bb680ea8c173e1a607e545ff24a88f8"
+scope = "spanning labelled K7-minus-one-edge model in a seven-connected minor-minimal host"
+preserves = ["five named far-shore connected subgraphs", "the full neighbourhood of the connected open side"]
+does_not_prove = ["a fixed multicoloured row", "an upper bound on separator order", "a branch-set split from multicolouring"]
+
+[[claims]]
+id = "hc7.boundary_full_subgraph_row_reflection"
+title = "Boundary-full connected subgraphs make row traces monochromatic"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_boundary_full_subgraph_row_reflection.md"
+active = true
+audit = "results/hc7_boundary_full_subgraph_row_reflection_audit.md"
+expected_source_sha256 = "2073fad6bd81f3d7a82f18720e719d86656e75587d720a1ed3006ae77a52223a"
+scope = "five-row separation with independent boundary traces"
+strict_parameter = "maximum number of disjoint connected subgraphs on the open side adjacent to every boundary vertex"
+conclusions = ["six-colourability when the trace-conflict graph fits the available boundary-full-subgraph capacity"]
+
+[[claims]]
+id = "hc7.root_protected_double_loss_closure"
+title = "Root-protected closure of one double-loss orientation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_root_protected_double_loss_closure.md"
+active = true
+audit = "results/hc7_root_protected_double_loss_closure_audit.md"
+expected_source_sha256 = "1cd5ae4eac0c518370b7800a174af948f4612bb434e202021d3c7e0704a7433d"
+scope = "degree-two aligned-model provenance with the protected root outside the detached connected subgraph"
+conclusions = ["explicit K7-minor model"]
+does_not_prove = ["the opposite protected-root orientation", "the exceptional two-missing-edge complement graphs"]
 
 [[claims]]
 id = "hc7.global_adjacent_pair_palette_frame"
@@ -1009,6 +1098,113 @@ expected_source_sha256 = "f165b53691bc24afbad933d4f334ab9c1ce02fb10f79cad42b1e9f
 refutes = ["completion of a K7-minus-one-edge model from connectivity alone"]
 lacks = ["proper-minor colouring responses"]
 
+[[claims]]
+id = "hc7.barrier.one_spoke_shortest_path"
+title = "The unrestricted centre-to-deficient-bag shortest-path rank is degenerate"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_one_spoke_shortest_path_barrier.md"
+active = true
+refutes = ["lexicographic first-hit descent on an unrestricted centre-to-deficient-bag path"]
+satisfies = ["the spanning boundary-labelled degree-seven K7-minus-one-edge setup"]
+lacks = ["no host hypothesis; the pole creates the degeneracy in every such setup"]
+
+[[claims]]
+id = "hc7.barrier.multicoloured_row_response"
+title = "One multicoloured row and separately chosen saturated responses do not determine a labelled exchange"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_multicoloured_row_response_barrier.md"
+active = true
+refutes = [
+  "a branch-set split from static multicolouring",
+  "a labelled exchange from one saturated proper-minor response per incident edge",
+]
+satisfies = ["seven-connectivity", "K7-minor exclusion", "exact order-seven five-row separator geometry"]
+lacks = ["seven-chromaticity", "universal nonextension and Kempe connectivity", "absence of a two-vertex terminal"]
+
+[[claims]]
+id = "hc7.barrier.five_row_dynamic_language"
+title = "All open-side response partitions and unlabelled Kempe connections need not reflect five rows"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_five_row_dynamic_response_language_barrier.md"
+active = true
+refutes = ["five-row completion from the abstract family of all proper-minor equality partitions plus unlabelled Kempe connectivity"]
+satisfies = ["exact seven-vertex boundary", "five named far-shore rows", "open-side internal minor minimality"]
+lacks = ["seven-connectivity", "K7-minor exclusion", "a connected boundary-full open side"]
+
+[[claims]]
+id = "hc7.disjoint_trace_linkage_reflection"
+title = "Disjoint connected trace realizations force five-row reflection"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_disjoint_trace_linkage_reflection.md"
+active = true
+audit = "results/hc7_disjoint_trace_linkage_reflection_audit.md"
+expected_source_sha256 = "931b70417d8ec307b54088c862384983d6b172d2fc93daefca7a66ea221a4dcd"
+scope = "arbitrary finite five-row separation with independent boundary traces"
+conclusions = ["six-colourability when every nonsingleton trace has a pairwise-disjoint connected realization", "a genuine four-root disk alternative for two paired traces at exact order seven"]
+does_not_prove = ["existence of the disjoint trace realizations", "completion of the disk alternative"]
+
+[[claims]]
+id = "hc7.two_pair_disk_structure"
+title = "Two-pair disk structure, nested separators and degree-seven/eight re-entry"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_pair_disk_structure.md"
+active = true
+audit = "results/hc7_two_pair_disk_structure_audit.md"
+expected_source_sha256 = "e9af096101d418e95418203fc0a2c6634aa4184dc45a42c0e14abbef00fd3254"
+scope = "exact order-seven separation with two paired traces, five named far-side branch sets and a four-root disk"
+preserves = ["one nominated boundary root in the expanded separator side", "one named missed residual branch set", "literal full-neighbourhood separators"]
+conclusions = ["explicit K7-minor model or two nested full-neighbourhood separations", "host degree seven or eight in the disk", "a colour-dependent common-neighbour constraint on the three omitted boundary vertices"]
+does_not_prove = ["separator order exactly seven", "compatible shore colourings", "strict trace-preserving descent"]
+
+[[claims]]
+id = "hc7.degree8_contact_allocation"
+title = "Degree-eight cyclic contact allocation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_contact_allocation.md"
+active = true
+audit = "results/hc7_degree8_contact_allocation_audit.md"
+expected_source_sha256 = "84c47863546f9800db24bf042e60952221dcf3649b4076170259efa9fde78049"
+scope = "degree-eight vertex with three boundary labels, five cyclic connected sets and a disjoint connected seventh branch set"
+conclusions = ["explicit K7-minor model when the cross-defect graph is a matching of size at most two", "facial-cycle realization in a three-connected plane graph when disjointness is available"]
+does_not_prove = ["disjointness of the facial cycle from the seventh branch set", "host-level contact-label diversification"]
+
+[[claims]]
+id = "hc7.barrier.two_pair_rural_almost_universal_apex"
+title = "Rural two-pair geometry without criticality does not force completion"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_two_pair_rural_almost_universal_apex_barrier.md"
+active = true
+refutes = ["K7 or a fixed omitted-boundary K5-model transversal from rural two-pair geometry, five rows, seven-connectivity and K7-minor exclusion alone"]
+satisfies = ["seven-connectivity", "K7-minor exclusion", "exact order-seven rural two-pair geometry", "five named far-side branch sets"]
+lacks = ["seven-chromaticity", "proper-minor critical colouring responses"]
+
+[[claims]]
+id = "hc7.barrier.degree8_contact_allocation"
+title = "Sparse five-set edges obstruct local degree-eight contact allocation"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_degree8_contact_allocation_barrier.md"
+active = true
+refutes = ["six contacted local branch sets from alpha at most three, seven contacts and one missing cross-edge alone"]
+lacks = ["seven-connected host realization", "contraction-critical colouring responses", "facial-cycle structure"]
+
+[[claims]]
+id = "hc7.barrier.degree8_curvature_contact"
+title = "Curvature and Hall counting do not diversify degree-eight boundary contacts"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_degree8_curvature_contact_barrier.md"
+active = true
+refutes = ["a complete or matching-defect five-ring from curvature and contact counting alone", "local K7 completion from one fully contacting exterior representative"]
+lacks = ["seven-connected contraction-critical host", "named far-side branch sets", "proper-minor colouring responses"]
+
 [[relations]]
 source = "hc7.adjacent_pair_palette_linkage"
 target = "hc7.two_pole_contact_trichotomy"
@@ -1215,6 +1411,106 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree7_aligned_near_k7"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_one_spoke_bridge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_mark_branch_set_split"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.five_row_separator_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.universal_multicoloured_row_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.boundary_full_subgraph_row_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.root_protected_double_loss_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.disjoint_trace_linkage_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_pair_disk_structure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree8_contact_allocation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.one_spoke_shortest_path"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.multicoloured_row_response"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.five_row_dynamic_language"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.two_pair_rural_almost_universal_apex"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.degree8_contact_allocation"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.degree8_curvature_contact"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.two_pair_disk_structure"
+target = "hc7.disjoint_trace_linkage_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_contact_allocation"
+target = "hc7.two_pair_disk_structure"
+kind = "related_to"
+
+[[relations]]
+source = "hc7.universal_multicoloured_row_separator"
+target = "hc7.two_mark_branch_set_split"
+kind = "uses"
+
+[[relations]]
+source = "hc7.universal_multicoloured_row_separator"
+target = "hc7.five_row_separator_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.boundary_full_subgraph_row_reflection"
+target = "hc7.five_row_separator_reflection"
 kind = "uses"
 
 [[relations]]
@@ -1452,4 +1748,37 @@ expected_stdout = [
   "PASS R: planar, kappa=4, chi=4, labelled_4_colourings=48",
   "PASS S,T: colourful; no paired K4 minor",
   "PASS Q: chi=5; no K6 minor (two exact exhaustive encodings)",
+]
+
+[[verifiers]]
+id = "two-pair-rural-almost-universal-apex"
+path = "barriers/hc7_two_pair_rural_almost_universal_apex_barrier_verify.py"
+sha256 = "d334beae0b99b883ad413557cb7bb252ace334e2e2c36cc4226e9213676cdd49"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "tube: planar and 5-connected",
+  "host: 7-connected and K7-minor-free by the two-apex argument",
+  "boundary: alpha 2; alternating wheel has no required two-linkage",
+  "rows: exact traces and all required adjacencies verified",
+  "transversal: every pair in B misses an explicit K5 subgraph",
+  "colouring: explicit proper 6-colouring verified",
+]
+
+[[verifiers]]
+id = "degree-eight-contact-allocation-barrier"
+path = "barriers/hc7_degree8_contact_allocation_barrier_verify.py"
+sha256 = "33d686b93ec4ccd6563306571fa9878e951e5420baf0ef6908c06262d1f3867b"
+timeout = 30
+expected_stdout = [
+  "GREEN: degree-eight contact-allocation barrier verified",
+]
+
+[[verifiers]]
+id = "multicoloured-row-response-barrier"
+path = "barriers/hc7_multicoloured_row_response_barrier_verify.py"
+sha256 = "36535074ea67044bc5ec7977f65f191a5a0b6428235a27e2962c9af884e5557a"
+timeout = 30
+expected_stdout = [
+  "GREEN: exact-seven multicoloured-carrier barrier; all seven spoke contractions have saturated nonextendible responses",
 ]

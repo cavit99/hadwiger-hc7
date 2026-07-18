@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 17 July 2026
+**Last updated:** 18 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
 This file records the current mathematical dependency chain. The concise
@@ -113,23 +113,154 @@ or of `K_7` with two adjacent edges deleted.  This theorem is written and
 separately audited; it is stronger than merely regenerating an unlabelled
 near-clique minor.
 
-The immediate open theorem is the **boundary-labelled centre-repair
-theorem**.  The proper-minor matching response and literal first-hit data
-must repair the one/two missing centre adjacencies, yield a pair whose
-deletion is `K_5`-minor-free, or produce a common equality partition on an
-exact order-seven boundary.  A two-vertex `K_5`-minor transversal is
-terminal by the proved `t=5` case.  A matching-only monotonicity argument is
-insufficient: the maximum matchings of a seven-cycle admit a cyclic static
-rebasing.  The proof must therefore spend the operation endpoints, the
-named first-hit bags, or the full neighbourhood of a failed bypass.
+For positioning, Norin and Totschnig proved that every graph with no
+unlabelled `K_7`-minor with two adjacent edges deleted is six-colourable
+([arXiv:2507.03244](https://arxiv.org/abs/2507.03244)).  The contribution
+used here is therefore not first
+existence of that unlabelled minor; it is the singleton-centre and boundary-
+root alignment, exact matching-language provenance, and the stronger
+one-missing-edge outcome in part of the degree-seven branch.
 
-This does not prove `HC_7`.  It proves a new uniform boundary-labelled
-near-clique principle and identifies one host-level exchange in the
-degree-seven branch.  The
-bounded-interface theorem remains the continuation for degree eight and
-nine.  The older component-defect programme below is retained as a
-secondary source of explicit branch-set splits, not as a competing primary
-spine.
+Three further audited theorems now close the static one-hole splitting
+step.  First, the aligned model may be made spanning while retaining its
+singleton pole, singleton centre and named boundary roots.  Proper-minor
+matching responses apply to every edge with an endpoint outside the closed
+pole shore, and a degree-two complement vertex gives two opposed
+centre-preserving orientations.  Spanning absorption does not preserve
+colour purity or provide a bag-size rank.
+
+Second, a parameter-uniform two-mark branch-set theorem applies to any
+spanning labelled `K_t^-` model.  If one common bag contains two neighbours
+of the singleton centre, a marked tree cut gives either an explicit `K_t`
+model or the full neighbourhood of a proper connected subbag as an actual
+separation.  At `t=7`, minimum degree seven distributes at least seven
+centre neighbours over only five common bags, so a multiply-hit bag is
+automatic.  Therefore every spanning aligned one-missing-adjacency model
+gives a `K_7` minor or an actual full-neighbourhood separation.
+
+Third, a five-row reflection theorem works across a boundary of arbitrary
+order.  If five pairwise adjacent connected rows on one closed shore cover
+the boundary apart from the centre, then any far-shore six-colouring whose
+intersection with each row is monochromatic reflects through the other
+shore, provided the centre colour occurs in a row or some row misses the
+boundary.  The proof constructs one connected carrier per equality block
+inside the far shore and colours the resulting proper minor.
+
+Together these results replace the proposed centre-to-deficient-bag
+shortest-path programme.  That path rank is universally degenerate because
+the pole gives the absolute-minimum path `c-u-b`, and every path leaves the
+centre through a common bag.
+
+The marked-tree split now has a single audited separator outcome.  In both
+orientations, merging the deficient bag with the opposite donor part gives
+five pairwise adjacent connected subgraphs on the far shore, all adjacent
+to the boundary centre and covering the rest of the full neighbourhood.
+In the non-`K_7` case at least one is boundary-free.  The five-row
+reflection theorem therefore implies that every proper six-colouring of
+the unchanged far closed shore multicolours at least one nonempty named
+row intersection.  Simultaneous losses do not create a third geometric
+case.
+
+In the protected-root orientation of the old double-loss configuration,
+ownership makes five literal boundary vertices common anti-neighbours of
+the protected root.  Dirac's independence bound makes them a `K_5`, and
+the connected full exterior gives an explicit `K_7` model.  The opposite
+orientation is already included in the universal multicoloured-row
+separator.
+
+A second audited theorem gives the first dynamic compression of this
+obstruction.  Suppose every row intersection is independent.  Form the
+conflict graph on nonsingleton row intersections, joining two when a
+boundary edge runs between them.  If the other open shore contains `k`
+pairwise disjoint connected subgraphs each adjacent to every boundary
+vertex, and the conflict graph is `k`-colourable, simultaneous connected
+contractions produce an unchanged-far-shore colouring in which every row
+intersection is monochromatic.  Five-row reflection then six-colours `G`.
+
+At an exact order-seven boundary, a first nontrivial independent-trace
+subcase contains two disjoint two-vertex traces.  A new audited theorem
+closes this subcase whenever the two traces have vertex-disjoint connected
+realizations through the other open shore: contract both realizations and
+apply five-row reflection.  If no such linkage exists, rooted internal
+four-connectivity and the Two Paths theorem give a genuine disk drawing
+with the four roots alternating.
+
+The disk alternative has now been compressed by a second unbounded audited
+theorem.  When its open side has at least two vertices, it gives either an
+explicit `K_7` model or two nested full-neighbourhood separators.  The
+smaller connected set is a proper tree part of one paired far-side branch
+set.  Expanding it by the corresponding rooted disk bag gives a second
+connected set containing exactly one nominated boundary root and missing
+one named residual branch set.  Both separator boundaries have order at
+least seven.  This preserves substantially more host-level information
+than the old abstract web description, but neither separator is known to
+have order exactly seven or compatible shore colourings.
+
+The same theorem package supplies two further constraints.
+
+- Euler curvature in the four-root disk yields a host vertex of degree
+  seven or eight.  In the degree-eight equality it has five disk neighbours
+  and all three omitted boundary vertices as neighbours.
+- Every nonextendable far-side six-colouring which is nonconstant on the
+  four roots forces a disk vertex adjacent to two differently coloured
+  omitted boundary vertices.  Proper star contractions and boundary-edge
+  deletions therefore create literal contact transitions.
+
+A separate audited degree-eight contact-allocation theorem closes a broad
+equality family.  If a connected seventh branch set meets at least seven of
+the eight labels around `v`, five cyclic connected sets contain the five
+neighbours of `v`, and the missing adjacencies from the three omitted
+boundary vertices to those five sets form a matching of order at most two,
+then an explicit finite table gives six disjoint pairwise adjacent branch
+sets meeting the seventh.  Hence `G` has a `K_7` minor.  A three-connected
+plane graph supplies the cyclic connected sets from the facial cycle
+exposed by deleting `v`, provided that cycle is disjoint from the proposed
+seventh branch set.
+
+The immediate open theorem is therefore the **reserved-cycle or
+compatible-separator theorem**.  In the contraction-critical two-pair disk
+configuration, prove one of:
+
+1. an explicit `K_7`-minor model;
+2. an actual order-seven separation with one equality partition extending
+   through both closed shores; or
+3. a degree-eight cyclic allocation satisfying the preceding matching
+   criterion and disjoint from its connected seventh branch set.
+
+The third outcome is already terminal.  The missing work is to use the
+proper-minor colouring responses and five named far-side branch sets to
+reserve the facial cycle and diversify the three boundary-contact labels.
+Failure must compress one of the nested full-neighbourhood separators to
+order seven and synchronize its two shore colourings.  If curvature yields
+a degree-seven vertex instead, its neighbourhood is already an exact
+order-seven boundary; regeneration of another unranked interface is not a
+descent, so colour synchronization or an explicit minor is required there.
+
+Four complementary barriers define the trust boundary.  The
+seven-connected `K_7`-minor-free join of an edge with the icosahedron has
+the same five-row geometry and saturated responses for every incident
+contraction, but is six-colourable and has a terminal two-vertex set.  A
+separate exact-seven realization shows that all internal proper-minor
+response partitions plus unlabelled Kempe connectivity can remain
+nonreflectable when the full connectivity and minor-exclusion geometry is
+absent.  A seven-connected two-apex tube realizes the entire rural
+two-pair/five-row geometry but lacks criticality.  Finally, an unbounded
+triangulated-disc family concentrates all missing contacts in one boundary
+label at mutually remote curvature vertices, while a ten-vertex local graph
+remains `K_7`-minor-free even with full exterior contact.  Thus curvature,
+Hall counting, web structure and static responses are insufficient: the
+next theorem must spend contraction-critical colourings, literal
+first-hit locations, named branch sets and global `K_7` exclusion.
+
+This does not prove `HC_7`.  It closes the one-hole donor splitting problem,
+the disjoint two-trace linkage branch, and broad degree-eight cyclic-contact
+families by unbounded theorems.  The residual is a host-level
+cycle-reservation/contact-diversification or exact-separator synchronization
+problem, not a finite web census.  The
+two-adjacent-edge exceptional complements and the degree-eight/nine
+bounded-interface continuation remain after this branch.  The older
+component-defect programme below is retained as a secondary source of
+explicit branch-set splits, not as a competing primary spine.
 
 ## Secondary structural laboratory: adjacent-pair colouring and rooted models
 

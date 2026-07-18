@@ -1,7 +1,8 @@
 # Degree-seven boundary-labelled near-clique composition
 
-**Status:** active conjectural target.  The input theorems in Sections 1--4
-are separately audited.  Section 5 is open.  Nothing here proves `HC_7`.
+**Status:** active conjectural target.  Every result described below as
+proved has a separate adjacent audit.  The reserved-cycle or compatible-
+separator theorem in Section 7 is open.  Nothing here proves `HC_7`.
 
 ## 1. The degree-seven interface is a single connected exterior
 
@@ -103,72 +104,190 @@ there is no such vertex, then
 
 and explicit rooted bags give the two-adjacent-edge model.
 
-## 5. Primary open theorem
+## 5. The branch-set splitting step is closed
 
-### Boundary-labelled centre-repair theorem
+The aligned model can be made spanning while retaining its singleton pole,
+singleton centre and all five boundary roots.  Spanning absorption preserves
+the labels and old adjacencies, but not the colour purity or order of a
+rooted bag.  The proper-minor matching response also applies to every edge
+with at least one endpoint in `C`, and a degree-two vertex of `F` supplies
+the two centre-preserving orientations of the one-edge defect.
 
-For the aligned one-/two-missing-edge model in Section 4, use the exact
-matching-language transition and literal first hits in the five named bags
-to obtain at least one of:
+The branch-set splitting problem itself is now parameter-uniform.  In a
+spanning labelled `K_t^-` model with singleton centre `c`, deficient bag
+`D` and `t-2` common bags, suppose one common bag contains two neighbours
+of `c`.  A marked spanning-tree cut partitions that bag into adjacent
+connected sets `Z,W`, both adjacent to `c`, while retaining any prescribed
+root in `W`.  Then either
 
-1. an explicit `K_7`-minor model in `G`;
-2. vertices `p,q` such that `G-{p,q}` has no `K_5` minor; or
-3. one equality partition on an actual order-seven boundary induced by
-   six-colourings of both closed sides.
+1. `Z` misses `D`, so `N_G(Z)` is an actual full-neighbourhood separation;
+2. `W` misses another common bag, so `N_G(W)` is such a separation; or
+3. `D union Z` and `W` replace the old two bags and give an explicit
+   `K_t`-minor model.
 
-Outcome 2 is terminal: the established `t=5` case makes `G-{p,q}`
-four-colourable, and two fresh colours extend to `p,q`.  Outcome 3 is also
-terminal after a permutation of colour names and gluing.
+For `t=7`, seven-connectivity gives `d(c)>=7`, while all neighbours of `c`
+lie in only five common bags.  A multiply-hit bag is therefore automatic.
+Consequently every spanning aligned one-missing-adjacency model gives
 
-The model is not an arbitrary `K_7`-minus-two-edges minor.  Its deficient
-centre is a literal boundary singleton, its other bags contain specified
-boundary roots, and it comes from a six-colouring with one prescribed
-repeated boundary pair.  These labels must be retained.
+\[
+                  K_7\text{ minor}\quad\text{or}\quad
+                  \text{an actual full-neighbourhood separation}. \tag{5.1}
+\]
 
-If a clean path from the centre to every deficient bag exists outside the
-other five branch sets, absorption gives the missing adjacencies.  Failure
-returns the model-carried separator of Section 3.  A proper-minor operation
-on an internal edge then induces a boundary matching of size two or three
-and locks the edge endpoints in all five bichromatic colour graphs.  The
-proof must convert one such palette-labelled bypass into a first hit in a
-prescribed deficient bag, or transfer the resulting equality partition to
-the actual separator.
+This replaces the proposed unrestricted shortest-path rank.  That rank is
+degenerate: the pole gives the absolute-minimum path `c-u-b`, and every
+centre-to-deficient-bag path enters a common bag on its first edge.
 
-Matching data alone cannot select the required bag: on a seven-cycle the
-legal size-three matchings admit a cyclic static rebasing.  Consequently a
-valid proof must use the literal operation endpoints, first-hit bag labels,
-or the full neighbourhood of a failed bypass.  Merely regenerating another
-near-clique model is not a decrease.
+## 6. Colour reflection and the exact residual
 
-## 6. Immediate milestone
+A second parameter-uniform theorem reflects boundary colourings.  Let
+`T` separate open sides `L,R`, let `a in T`, and suppose the `R`-side has
+five disjoint connected pairwise adjacent rows `Q_1,...,Q_5`, each adjacent
+to `a`, which cover `T-{a}`.  A proper six-colouring of the unchanged
+closed `R`-side reflects through the `L`-side whenever
 
-First prove the theorem for the one-missing-edge model.  Normalize the five
-protected bags and choose the centre-to-deficient-bag obstruction
-extremally.  If the obstruction is carried by a separator, use the
-seven-path linkage and select either a triple-hit bag or two double-hit
-bags.  Apply the proper-minor colouring to an internal first-entry edge.  A
-successful proof must track:
+1. each nonempty `T intersect Q_i` is monochromatic; and
+2. either the colour of `a` occurs in one row or one row misses `T`.
 
-- the two endpoints of that edge;
-- the matching of `F` returned by the proper-minor colouring;
-- the first literal contacts with all five named branch sets; and
-- the complete neighbourhood of any connected component exposed by a
-  failed rerouting.
+The proof contracts one connected row carrier for each equality block in
+the opposite shore.  It works for an arbitrary finite boundary, not only
+for order seven.
 
-Then treat the two-missing-edge models from the two exceptional complement
-graphs.  Both missing pairs share the same singleton centre, so a connected
-centre fan repairing both is sufficient; two unrelated pairwise paths are
-not.
+Applying the marked-tree split in either orientation and merging `D` with
+the opposite donor part gives five named rows satisfying all the geometric
+hypotheses above.  In the non-`K_7` outcome at least one row misses the
+boundary.  Simultaneous losses therefore do not create a separate
+quotient case.  The exact conclusion is stronger and singular:
 
-The standard seven-connected counterexamples fail exactly (2.1): they have
-a common boundary partition or noncritical internal edges.  They therefore
-guard the proof against dropping the matching-language hypothesis, but do
-not refute this target.
+> every proper six-colouring of the unchanged far closed shore has a
+> multicoloured nonempty row intersection.
+
+A further audited theorem converts this universal obstruction into a
+capacity condition.  Put `I_i=T intersect Q_i`, assume every `I_i` is
+independent, and form the conflict graph on the nonsingleton traces by
+joining two traces when a boundary edge runs between them.  If the other
+open side contains `k` pairwise disjoint connected subgraphs, each adjacent
+to every vertex of `T`, and the conflict graph is `k`-colourable, then
+simultaneous connected contractions manufacture a far-shore colouring in
+which every `I_i` is monochromatic.  Reflection then six-colours `G`.
+
+Consequently every survivor has one of two standard graph-theoretic
+obstructions:
+
+1. some row intersection contains an edge; or
+2. the chromatic number of the trace-conflict graph exceeds the maximum
+   number of disjoint boundary-full connected subgraphs on the other side.
+
+The protected-root orientation of the old double-loss configuration is
+also closed directly: ownership gives five common anti-neighbours of one
+boundary root; `alpha(G[N(u)])<=2` makes them a `K_5`, and the connected
+full exterior supplies the remaining branch set of an explicit `K_7`
+model.
+
+## 7. The two-pair disk obstruction is now structural
+
+At an exact order-seven boundary, the first nontrivial independent-trace
+case has two disjoint independent pairs `I,J`.  Vertex-disjoint connectors
+for the two pairs can be contracted simultaneously; five-row reflection
+then six-colours `G`.  If those connectors do not exist, the closed shore
+containing them has a genuine disk drawing with the four roots alternating
+on its boundary.
+
+The disk alternative now has an unbounded structural theorem.  If its open
+side has at least two vertices, then either `G` has a `K_7` minor or one of
+the paired far-side branch sets splits into a proper connected tree part
+`A` and a label-preserving expanded part `X`.  The set `X` contains exactly
+one nominated boundary root and misses one named residual branch set.  Both
+`A` and `X` give genuine full-neighbourhood separations of order at least
+seven.  Thus the residual is no longer an arbitrary web: it returns nested
+host-level separators with a retained root and a retained missed label.
+
+Two independent consequences sharpen that separator outcome.
+
+1. Plane curvature gives an interior vertex of host degree seven or eight.
+   In the degree-eight equality it has five neighbours in the disk and is
+   adjacent to all three omitted boundary vertices.
+2. Every nonextendable far-side six-colouring which is nonconstant on the
+   four roots forces one disk vertex to see two distinct colours on the
+   three omitted boundary vertices.  Deleting a boundary edge or
+   contracting a common-neighbour star therefore gives a literal dynamic
+   contact, not merely an abstract extension state.
+
+The degree-eight local construction is also exact.  Let `D` be a connected
+set meeting at least seven of the eight neighbours of a degree-eight
+vertex `v`, split those neighbours into a three-set `B` and five cyclic
+connected sets, and record adjacency between `B` and those five sets.  If
+the missing adjacencies form a matching of order at most two, six explicit
+branch sets all meet `D`; appending `D` gives a `K_7` minor.  A
+three-connected plane graph supplies the five cyclic sets from the facial
+cycle exposed by deleting `v`, provided that cycle is disjoint from `D`.
+
+Static curvature and Hall counting do not force this conclusion.  An
+unbounded triangulated-disc family can concentrate every missing contact
+in the same boundary label while keeping all positive-curvature vertices
+at host degree eight.  A separate ten-vertex graph remains `K_7`-minor-free
+even when one exterior vertex contacts all eight neighbours.  These
+barriers lack contraction-critical colouring responses and the named
+far-side branch sets, which are therefore essential.
+
+### Reserved-cycle or compatible-separator theorem
+
+The immediate open theorem is the following host-level completion of the
+two-pair disk branch.  In the active hypothetical minor-minimal
+counterexample, prove at least one of:
+
+1. an explicit `K_7`-minor model;
+2. an actual order-seven separation with one equality partition extending
+   through both closed shores; or
+3. for a curvature degree-eight vertex `v`, five cyclic connected sets
+   disjoint from a connected seventh branch set `D`, each containing a
+   distinct neighbour of `v`, such that the missing adjacencies from the
+   three omitted boundary vertices form a matching of order at most two
+   and `D` meets at least seven of the eight labels.
+
+Outcome 3 is terminal by the audited degree-eight contact-allocation
+theorem.  Thus the new work is not another local allocation census.  It
+must use proper-minor colourings and the five named far-side branch sets to
+reserve the facial cycle and diversify its three boundary-contact labels;
+failure must compress one of the nested full-neighbourhood separators to
+order seven and synchronize its two shore colourings.
+
+If curvature instead returns a degree-seven vertex, its neighbourhood is
+already an exact order-seven boundary.  The remaining task there is colour
+synchronization or an explicit minor, not regeneration of another
+unranked degree-seven interface.  Any recursive alternative must declare a
+strict host-level rank and preserve the two paired traces and named
+far-side branch sets.
+
+The earlier barriers still apply.  One response colouring, an abstract
+response language, shortest-path rerouting, or web structure without
+criticality cannot produce the required labelled allocation or common
+partition.
+
+Only after this one-missing-adjacency theorem is closed should the two
+adjacent missing edges from the exceptional complement graphs be treated.
+They share the same singleton centre and require a connected two-spoke
+repair, not two unrelated paths.
 
 ## Dependencies
 
 - [connected degree-seven anti-neighbourhood](../results/hc7_degree7_anti_neighbourhood_connectivity.md)
 - [exact matching languages and simultaneous Kempe paths](../results/hc7_degree7_matching_bridge_bundle.md)
 - [boundary-labelled one-/two-edge-deficient `K_7` model](../results/hc7_degree7_aligned_near_k7_model.md)
+- [spanning enhancement, off-pole response and dual orientation](../results/hc7_degree7_one_spoke_bridge_corollaries.md)
+- [two-mark branch-set split or separation](../results/hc7_two_mark_branch_set_split.md)
+- [five-row separator reflection](../results/hc7_five_row_separator_reflection.md)
+- [universal multicoloured-row separator](../results/hc7_universal_multicoloured_row_separator.md)
+- [boundary-full-subgraph row reflection](../results/hc7_boundary_full_subgraph_row_reflection.md)
+- [disjoint trace linkage reflection](../results/hc7_disjoint_trace_linkage_reflection.md)
+- [two-pair disk structure and nested separators](../results/hc7_two_pair_disk_structure.md)
+- [degree-eight cyclic contact allocation](../results/hc7_degree8_contact_allocation.md)
+- [root-protected double-loss closure](../results/hc7_root_protected_double_loss_closure.md)
 - [rooted `K_5`: reserved connector or full separator](../results/hc7_exact7_rooted_k5_connector_separator.md)
 - [exact-block bounded-interface reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
+- [shortest-path normalization barrier](../barriers/hc7_one_spoke_shortest_path_barrier.md)
+- [multicoloured-row response barrier](../barriers/hc7_multicoloured_row_response_barrier.md)
+- [dynamic response-language barrier](../barriers/hc7_five_row_dynamic_response_language_barrier.md)
+- [rural almost-universal-apex barrier](../barriers/hc7_two_pair_rural_almost_universal_apex_barrier.md)
+- [degree-eight local allocation barrier](../barriers/hc7_degree8_contact_allocation_barrier.md)
+- [curvature/contact-distribution barrier](../barriers/hc7_degree8_curvature_contact_barrier.md)

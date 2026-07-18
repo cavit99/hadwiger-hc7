@@ -67,11 +67,30 @@ order-seven separator occurs or seven disjoint paths cross those five bags.
 More strongly, every surviving degree-seven interface contains a
 boundary-labelled model of $K_7$ with one edge deleted or two adjacent edges
 deleted.  The missing pairs share a singleton boundary centre.  The open
-step is to repair those centre incidences using the proper-minor matching
-response, or turn failure into a two-vertex $K_5$-minor transversal or
-compatible colourings across an exact order-seven separator.  This is a
-label-preserving exchange problem; connectivity and unlabelled paths alone
-are known to be insufficient.
+one-edge branch has now been compressed further by two unbounded theorems.
+A common branch set containing two neighbours of the centre can be split to
+give either an explicit $K_7$ model or an actual full-neighbourhood
+separation.  Across such a separation, five named pairwise adjacent rows
+reflect any boundary colouring whose intersection with each row is
+monochromatic.
+
+The remaining one-edge obstruction is therefore exact: every far-shore
+colouring multicolours a named boundary intersection.  Simultaneous losses
+do not form a separate geometric case.  Independent row traces close when
+they have disjoint connected realizations through the other shore.  If two
+paired traces have no such linkage, the resulting disk configuration now
+gives either an explicit $K_7$ model or nested full-neighbourhood
+separations retaining one boundary root and one missed branch-set label.
+Curvature reduces that disk to degree seven or eight, and a new cyclic
+contact-allocation theorem closes the degree-eight case whenever its three-
+by-five missing-contact graph is a matching of order at most two.
+
+The immediate target is a reserved-cycle or compatible-separator theorem:
+proper-minor colourings must either produce that cyclic allocation or
+compress one of the returned separators to exact order seven with a common
+boundary colour partition.  Static web structure, curvature and Hall
+counting are provably insufficient.  The two-adjacent-edge and remaining
+degree-eight/nine branches remain after this one-edge case.
 
 ## Start here
 
@@ -87,6 +106,13 @@ are known to be insufficient.
 | [Degree-seven anti-neighbourhood connectivity](results/hc7_degree7_anti_neighbourhood_connectivity.md) | Reduces degree seven to one exterior component |
 | [Exact matching languages and rooted-model separator](results/hc7_degree7_matching_bridge_bundle.md) | Uniform degree-seven rooted-model principle |
 | [Boundary-labelled near-`K_7` model](results/hc7_degree7_aligned_near_k7_model.md) | Compresses every degree-seven survivor to one/two adjacent missing edges |
+| [Two-mark branch-set split](results/hc7_two_mark_branch_set_split.md) | Gives a complete minor or a full-neighbourhood separation |
+| [Five-row separator reflection](results/hc7_five_row_separator_reflection.md) | Glues any row-monochromatic boundary response |
+| [Universal multicoloured-row separator](results/hc7_universal_multicoloured_row_separator.md) | Removes simultaneous-loss case distinctions |
+| [Boundary-full-subgraph row reflection](results/hc7_boundary_full_subgraph_row_reflection.md) | Converts disjoint boundary-full subgraphs into monochromatic row traces |
+| [Disjoint trace-linkage reflection](results/hc7_disjoint_trace_linkage_reflection.md) | Closes simultaneous independent traces when their connected realizations are disjoint |
+| [Two-pair disk structure](results/hc7_two_pair_disk_structure.md) | Gives a complete minor, nested labelled separators, or degree-seven/eight re-entry |
+| [Degree-eight cyclic contact allocation](results/hc7_degree8_contact_allocation.md) | Converts a five-cycle with at most two independent contact defects into a `K_7` model |
 | [Research integrity tools](tools/README.md) | Search, dependency metadata, audit hashes, and CI checks |
 
 Read a theorem in [`results/`](results/) together with its adjacent
