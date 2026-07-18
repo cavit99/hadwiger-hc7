@@ -241,6 +241,17 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.exact7_rooted_k5_connector_separator"
+title = "Rooted K5 connector-or-separator theorem"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_rooted_k5_connector_separator.md"
+active = true
+audit = "results/hc7_exact7_rooted_k5_connector_separator_audit.md"
+expected_source_sha256 = "2ee51a2af500d8d208964e130ac3008e937b2c05dcc1231e7f13cf7ce340dda8"
+scope = "five labelled roots with a jointly dominating reserved pair"
+
+[[claims]]
 id = "hc7.degree7_aligned_near_k7"
 title = "Boundary-labelled near-K7 model at degree seven"
 kind = "theorem"
@@ -1224,6 +1235,11 @@ kind = "uses"
 [[relations]]
 source = "hc7.degree7_matching_rooted_separator"
 target = "hc7.exact_block_kempe_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_matching_rooted_separator"
+target = "hc7.exact7_rooted_k5_connector_separator"
 kind = "uses"
 
 [[relations]]
