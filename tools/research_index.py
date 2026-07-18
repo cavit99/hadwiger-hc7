@@ -826,7 +826,10 @@ def _audited_source_scope(
         r"\bonly\s+the\s+proof\s+is\s+checked\b)",
         audit_text,
     )
-    if hard_partial.search(declarations) or standalone_limitation:
+    # An adjacent filename is only a pairing hint; it must never override an
+    # exclusion stated elsewhere in the audit.  Scan the complete audit text
+    # before considering the adjacent-file whole-document convention.
+    if hard_partial.search(audit_text) or standalone_limitation:
         return None
 
     named = re.findall(
@@ -1635,7 +1638,6 @@ def orphaned_audited_results(database: Path) -> str:
             JOIN documents ds ON ds.id=ap.source_document_id
             JOIN documents da ON da.id=ap.audit_document_id
             WHERE ds.area='results' AND ap.green_verdict=1 AND ap.source_hash_bound=1
-              AND ap.extraction_method LIKE '%adjacent-filename%'
               AND NOT EXISTS (SELECT 1 FROM claims c WHERE c.source_path=ds.path)
             GROUP BY ds.path, ap.source_heading, ap.source_start_line, ap.source_end_line, ap.source_sha256
             ORDER BY ds.path

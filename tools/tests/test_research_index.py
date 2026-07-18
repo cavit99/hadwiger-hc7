@@ -576,8 +576,24 @@ class IntegrityTests(unittest.TestCase):
             "results/orphan_audit.md",
             f"# Audit\n\n## Verdict\n\nGREEN.\n\nSource hash: `{digest}`\n\n[Source](orphan.md)\n",
         )
+        self.repo.write(
+            "results/declared.md",
+            "# Declared result\n\n## Theorem 3\n\nAnother candidate result.\n",
+        )
+        declared_digest = hashlib.sha256(
+            (self.repo.root / "results/declared.md").read_bytes()
+        ).hexdigest()
+        self.repo.write(
+            "results/nonadjacent_audit.md",
+            f"# Review\n\n**Audited source:** [declared result](declared.md)\n\n"
+            f"**Source SHA-256:** `{declared_digest}`\n\n"
+            "**Verdict:** GREEN.\n\n**Audit scope:** entire source document.\n",
+        )
         subprocess.run(
-            ["git", "add", "results/orphan.md", "results/orphan_audit.md"],
+            [
+                "git", "add", "results/orphan.md", "results/orphan_audit.md",
+                "results/declared.md", "results/nonadjacent_audit.md",
+            ],
             cwd=self.repo.root,
             check=True,
         )
@@ -602,7 +618,9 @@ class IntegrityTests(unittest.TestCase):
                 "audit_source_drift.md", "corpus_coverage.md", "context_target.md",
             } <= names
         )
-        self.assertIn("results/orphan.md", (self.repo.root / "orphaned_audited_results.md").read_text())
+        orphan_report = (self.repo.root / "orphaned_audited_results.md").read_text()
+        self.assertIn("results/orphan.md", orphan_report)
+        self.assertIn("results/declared.md", orphan_report)
 
     def test_audit_dependency_citations_do_not_create_audit_pairs(self) -> None:
         self.repo.write("results/consumer.md", "# Consumer\n\n## Theorem 2\n\nUses the dependency.\n")
@@ -717,6 +735,13 @@ class MarkdownParserTests(unittest.TestCase):
             index._audited_source_scope(
                 sections,
                 "Theorem 1 was checked; Appendix A was not.",
+                allow_adjacent_full_document=True,
+            )
+        )
+        self.assertIsNone(
+            index._audited_source_scope(
+                sections,
+                "# Audit\n\n## Unresolved assumptions\n\nThe appendix is not audited.",
                 allow_adjacent_full_document=True,
             )
         )
