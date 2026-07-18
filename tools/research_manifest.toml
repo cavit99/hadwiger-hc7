@@ -1383,6 +1383,27 @@ target = "hc7.barrier.three_common_profile"
 kind = "guarded_by"
 
 [[verifiers]]
+id = "degree-nine-pole-completion"
+path = "results/hc7_degree9_pole_verifier.py"
+sha256 = "9a59ff768994b7aef86b9c54b5c1b4c613629d45a307dc1ba6300d1c4c7ec342"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "degree9_pole_verifier version=1",
+  "restricted_partitions=1260",
+  "case F_edges=13 c_nonneighbours=2 complements=20 instances=720 bad=0",
+  "certificate F=H?`vAqo missing=0,1 bags={0} {1} {2,c} {4,5} {3,6} {7,8}",
+  "case F_edges=13 c_nonneighbours=1 complements=20 instances=180 bad=0",
+  "certificate F=H?`vAqo missing=0 bags={0} {1} {2} {3,4} {5,6,c} {7,8}",
+  "case F_edges=12 c_nonneighbours=2 complements=103 instances=3708 bad=0",
+  "certificate F=H?Bed`o missing=0,1 bags={0} {1} {2,c} {3,5} {4,6} {7,8}",
+  "total_instances=4608 bad=0",
+  "catalogue_sha256=489ef6397133a86bddaabb3c0a27b78b36e172d041ec5aab05e9c89ed9e175eb",
+  "witness_sha256=168b7a1b4c863029ee4ee14b1b53d8843b9b79d4b0c2205d093636a13a1abdb1",
+  "PASS degree-nine local completion",
+]
+
+[[verifiers]]
 id = "atomic-two-pole-contact"
 path = "active/hc7_atomic_two_pole_contact_trichotomy_verify.py"
 sha256 = "4a81379c2ae4dc5cb127d2c2192b50f4296ed581a9d54f12622bf17d4dfda71b"
