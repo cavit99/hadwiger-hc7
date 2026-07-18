@@ -1,8 +1,8 @@
 # Audit of the missing-five-row three-path barrier
 
-**Status:** separate internal audit; **GREEN** for the finite,
-computer-assisted barrier exactly as stated.  This is not external peer
-review and is not a counterexample to `HC_7`.
+**Verdict:** **GREEN** for the finite, computer-assisted barrier exactly as
+stated.  This is a separate internal audit, not external peer review, and
+not a counterexample to `HC_7`.
 
 ## Audited revision
 

@@ -1145,6 +1145,141 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
             if not _has_explicit_green_verdict(audit_text):
                 errors.append(f"active proved input audit {audit_relative} lacks an unambiguous opening GREEN verdict")
 
+        active_targets = [
+            claim_id
+            for claim_id, claim in claims.items()
+            if claim["active"] and claim["status"] == "active-target"
+        ]
+        if len(active_targets) != 1:
+            errors.append(
+                f"manifest must contain exactly one active target, found {len(active_targets)}"
+            )
+        input_markers = [
+            line_number
+            for line_number, line in enumerate(navigation_text.splitlines(), start=1)
+            if line.strip().startswith("Immediate proved inputs")
+        ]
+        barrier_markers = [
+            line_number
+            for line_number, line in enumerate(navigation_text.splitlines(), start=1)
+            if line.strip() == "Immediate barriers:"
+        ]
+        if len(active_targets) == 1 and (len(input_markers) != 1 or len(barrier_markers) != 1):
+            errors.append(
+                "active/INDEX.md must contain exactly one Immediate proved inputs section and one Immediate barriers section"
+            )
+        if (
+            len(input_markers) == 1
+            and len(barrier_markers) == 1
+            and input_markers[0] >= barrier_markers[0]
+        ):
+            errors.append(
+                "active/INDEX.md Immediate proved inputs must precede Immediate barriers"
+            )
+        if (
+            len(active_targets) == 1
+            and len(input_markers) == 1
+            and len(barrier_markers) == 1
+            and input_markers[0] < barrier_markers[0]
+        ):
+            target_id = active_targets[0]
+            input_start, barrier_start = input_markers[0], barrier_markers[0]
+            following_heading = next(
+                (
+                    line_number
+                    for line_number, line in enumerate(navigation_text.splitlines(), start=1)
+                    if line_number > barrier_start and line.startswith("## ")
+                ),
+                len(navigation_text.splitlines()) + 1,
+            )
+            input_sources = {
+                link.resolved_path
+                for link in navigation_links
+                if link.valid
+                and link.resolved_path
+                and input_start < link.line < barrier_start
+                and link.resolved_path.startswith("results/")
+                and not link.resolved_path.endswith("_audit.md")
+            }
+            barrier_sources = {
+                link.resolved_path
+                for link in navigation_links
+                if link.valid
+                and link.resolved_path
+                and barrier_start < link.line < following_heading
+                and link.resolved_path.startswith("barriers/")
+                and not link.resolved_path.endswith("_audit.md")
+            }
+            relation_keys = {
+                (relation["source"], relation["target"], relation["kind"])
+                for relation in relations
+                if {"source", "target", "kind"} <= set(relation)
+            }
+            claims_by_source: defaultdict[str, list[tuple[str, dict]]] = defaultdict(list)
+            for claim_id, claim in claims.items():
+                claims_by_source[claim["source"]].append((claim_id, claim))
+
+            for source in sorted(input_sources):
+                candidates = [
+                    (claim_id, claim)
+                    for claim_id, claim in claims_by_source.get(source, [])
+                    if claim["active"] and claim["status"] == "audited-green"
+                ]
+                if not candidates:
+                    errors.append(
+                        f"primary proved input {source} lacks an active audited-green manifest claim"
+                    )
+                    continue
+                if not any(
+                    (target_id, claim_id, "uses") in relation_keys
+                    for claim_id, _claim in candidates
+                ):
+                    errors.append(
+                        f"primary proved input {source} lacks a direct uses relation from {target_id}"
+                    )
+
+            barrier_relation_kinds = {
+                "guarded_by", "refuted_by", "sharpness_witness", "related_to"
+            }
+            for source in sorted(barrier_sources):
+                candidates = [
+                    (claim_id, claim)
+                    for claim_id, claim in claims_by_source.get(source, [])
+                    if claim["active"] and claim["kind"] == "barrier"
+                ]
+                if not candidates:
+                    errors.append(
+                        f"primary barrier {source} lacks an active manifest barrier claim"
+                    )
+                    continue
+                if not any(
+                    (target_id, claim_id, kind) in relation_keys
+                    for claim_id, _claim in candidates
+                    for kind in barrier_relation_kinds
+                ):
+                    errors.append(
+                        f"primary barrier {source} lacks a direct guard relation from {target_id}"
+                    )
+
+            for relation in relations:
+                if relation.get("source") != target_id:
+                    continue
+                target_claim = claims.get(relation.get("target"))
+                if not target_claim:
+                    continue
+                if relation.get("kind") == "uses" and target_claim["source"] not in input_sources:
+                    errors.append(
+                        f"direct uses relation {target_id}->{relation['target']} is absent from the primary proved-input list"
+                    )
+                if (
+                    relation.get("kind") in barrier_relation_kinds
+                    and target_claim["kind"] == "barrier"
+                    and target_claim["source"] not in barrier_sources
+                ):
+                    errors.append(
+                        f"direct guard relation {target_id}->{relation['target']} is absent from the primary barrier list"
+                    )
+
     for required in manifest.get("required_text", []):
         if set(required) != {"file", "pattern"}:
             errors.append(f"required_text entry must contain only file and pattern: {required}")
@@ -1835,7 +1970,13 @@ def context_pack(manifest: dict, claim_id: str, database: Path | None = None) ->
                 for relation in outgoing.get(dependency_id, [])
                 if relation["kind"] in PROOF_RELATIONS
             )
-        lines.extend(["", "## Full proved dependency closure", ""])
+        lines.extend([
+            "",
+            "## Curated proved-dependency closure",
+            "",
+            "This is the transitive closure of explicit `uses` relations in the manifest, not an independent completeness claim.",
+            "",
+        ])
         for dependency_id in sorted(closure):
             dependency = claims[dependency_id]
             lines.append(f"- `{dependency_id}` — {dependency['title']} ({dependency['status']})")

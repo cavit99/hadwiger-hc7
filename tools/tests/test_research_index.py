@@ -40,7 +40,10 @@ class MiniRepository:
         self.write("active/target.md", "# Target\n\nA conjectural target.\n")
         self.write(
             "active/INDEX.md",
-            "# Index\n\n[Target](target.md)\n\n[Theorem](../results/theorem.md)\n",
+            "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
+            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "- [Theorem](../results/theorem.md)\n\n"
+            "Immediate barriers:\n\n## Other work\n",
         )
         self.write("archive/history.md", "# History\n\nA unique archival helicoid phrase.\n")
         self.write_manifest(digest)
@@ -186,13 +189,20 @@ class IntegrityTests(unittest.TestCase):
         self.repo.write("active/untracked.md", "# Secret\n\nUntracked quasar phrase.\n")
         self.repo.write(
             "active/INDEX.md",
-            "# Index\n\n[Target](target.md)\n[Theorem](../results/theorem.md)\n[Untracked](untracked.md)\n",
+            "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
+            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "- [Theorem](../results/theorem.md)\n"
+            "- [Untracked](untracked.md)\n\n"
+            "Immediate barriers:\n\n## Other work\n",
         )
         errors = "\n".join(self.errors())
         self.assertIn("missing or untracked", errors)
         self.repo.write(
             "active/INDEX.md",
-            "# Index\n\n[Target](target.md)\n[Theorem](../results/theorem.md)\n",
+            "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
+            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "- [Theorem](../results/theorem.md)\n\n"
+            "Immediate barriers:\n\n## Other work\n",
         )
         database = self.repo.root / "index.sqlite"
         index.build_index(self.repo.root, self.repo.manifest, database)
@@ -280,6 +290,140 @@ class IntegrityTests(unittest.TestCase):
         manifest = manifest.replace('status = "audited-green"', 'status = "active-target"', 1)
         self.repo.manifest.write_text(manifest, encoding="utf-8")
         self.assertIn("must be audited-green", "\n".join(self.errors()))
+
+    def test_primary_input_requires_direct_manifest_relation(self) -> None:
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        relation = textwrap.dedent(
+            """
+            [[relations]]
+            source = "target"
+            target = "theorem"
+            kind = "uses"
+            """
+        )
+        self.repo.manifest.write_text(manifest.replace(relation, ""), encoding="utf-8")
+        self.assertIn(
+            "primary proved input results/theorem.md lacks a direct uses relation",
+            "\n".join(self.errors()),
+        )
+
+    def test_primary_input_requires_active_audited_claim(self) -> None:
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        manifest = manifest.replace(
+            'source = "results/theorem.md"\nactive = true',
+            'source = "results/theorem.md"\nactive = false',
+        )
+        self.repo.manifest.write_text(manifest, encoding="utf-8")
+        self.assertIn(
+            "primary proved input results/theorem.md lacks an active audited-green manifest claim",
+            "\n".join(self.errors()),
+        )
+
+    def test_primary_barrier_requires_claim_and_guard_relation(self) -> None:
+        self.repo.write("barriers/example.md", "# Barrier\n\nA warning.\n")
+        subprocess.run(["git", "add", "barriers/example.md"], cwd=self.repo.root, check=True)
+        index_text = (self.repo.root / "active/INDEX.md").read_text(encoding="utf-8")
+        self.repo.write(
+            "active/INDEX.md",
+            index_text.replace(
+                "Immediate barriers:\n",
+                "Immediate barriers:\n\n- [Example](../barriers/example.md)\n",
+            ),
+        )
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        self.repo.manifest.write_text(
+            manifest
+            + textwrap.dedent(
+                """
+
+                [[claims]]
+                id = "example-barrier"
+                title = "Example barrier"
+                kind = "barrier"
+                status = "barrier"
+                source = "barriers/example.md"
+                active = true
+                """
+            ),
+            encoding="utf-8",
+        )
+        self.assertIn(
+            "primary barrier barriers/example.md lacks a direct guard relation",
+            "\n".join(self.errors()),
+        )
+
+    def test_manifest_requires_exactly_one_active_target(self) -> None:
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        self.repo.manifest.write_text(
+            manifest.replace('status = "active-target"', 'status = "frozen"', 1),
+            encoding="utf-8",
+        )
+        self.assertIn(
+            "manifest must contain exactly one active target, found 0",
+            "\n".join(self.errors()),
+        )
+
+    def test_primary_navigation_markers_must_be_ordered(self) -> None:
+        self.repo.write(
+            "active/INDEX.md",
+            "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
+            "Immediate barriers:\n\n"
+            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "- [Theorem](../results/theorem.md)\n\n## Other work\n",
+        )
+        self.assertIn(
+            "Immediate proved inputs must precede Immediate barriers",
+            "\n".join(self.errors()),
+        )
+
+    def test_stale_direct_uses_relation_must_remain_in_navigation(self) -> None:
+        self.repo.write(
+            "active/INDEX.md",
+            "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
+            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "Immediate barriers:\n\n## Other work\n",
+        )
+        self.assertIn(
+            "direct uses relation target->theorem is absent from the primary proved-input list",
+            "\n".join(self.errors()),
+        )
+
+    def test_stale_direct_guard_relation_must_remain_in_navigation(self) -> None:
+        self.repo.write("barriers/example.md", "# Barrier\n\nA warning.\n")
+        subprocess.run(["git", "add", "barriers/example.md"], cwd=self.repo.root, check=True)
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        self.repo.manifest.write_text(
+            manifest
+            + textwrap.dedent(
+                """
+
+                [[claims]]
+                id = "example-barrier"
+                title = "Example barrier"
+                kind = "barrier"
+                status = "barrier"
+                source = "barriers/example.md"
+                active = true
+
+                [[relations]]
+                source = "target"
+                target = "example-barrier"
+                kind = "guarded_by"
+                """
+            ),
+            encoding="utf-8",
+        )
+        self.assertIn(
+            "direct guard relation target->example-barrier is absent from the primary barrier list",
+            "\n".join(self.errors()),
+        )
+
+    def test_context_pack_labels_manifest_closure_as_curated(self) -> None:
+        manifest = index.load_manifest(self.repo.manifest)
+        rendered = index.context_pack(manifest, "target")
+        self.assertIn("## Curated proved-dependency closure", rendered)
+        self.assertIn("not an independent completeness claim", rendered)
+        self.assertNotIn("## Full proved dependency closure", rendered)
 
     def test_authoritative_document_paths_cannot_be_redirected(self) -> None:
         manifest = self.repo.manifest.read_text(encoding="utf-8")

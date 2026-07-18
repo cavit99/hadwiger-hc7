@@ -35,11 +35,16 @@ python3 tools/research_index.py ci
 Generated SQLite and Markdown reports live under `.cache/research/`.  They
 are disposable, ignored by Git, and can always be regenerated.  The reports
 include the current proof dependency graph, active-target context packs with
-full dependency closure, trust boundaries, barrier hypotheses, orphaned
+curated proved-dependency closure, trust boundaries, barrier hypotheses, orphaned
 hash-current audit candidates, duplicate/supersession candidates, terminology
 aliases, source-cited connection candidates, audit/source drift, and corpus
 coverage statistics. Candidate reports are discovery aids, never proof-status
-evidence.
+evidence.  The curated closure is not an exhaustive substitute for the
+dependency lists in [`../active/INDEX.md`](../active/INDEX.md) or the live
+technical frontier; it is exactly the transitive closure of explicit `uses`
+relations in the manifest.  The integrity check requires every immediate
+proved input and barrier under the primary target in `active/INDEX.md` to
+have a corresponding active manifest claim and direct target relation.
 
 Automatic audit pairing is deliberately conservative. It records adjacent,
 explicitly declared, or exact-hash associations. Non-adjacent links and hashes
