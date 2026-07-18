@@ -412,14 +412,38 @@ The equality case is an actual order-seven separation.  A nested
 full-neighbourhood argument strictly lowers this excess whenever a
 component behind `N_G(R)` misses one of its boundary vertices.  At the
 first positive value, failure of descent is exactly a boundary-full
-order-eight interface.  Thus the next theorem has only two legitimate
+order-eight interface.  An audited componentwise reflection theorem closes
+that interface whenever it has at least four complementary components:
+a boundary triangle gives an explicit `K_7` model, while a triangle-free
+eight-vertex boundary is three-colourable and the other three full
+components reproduce that partition on every closed component-side.  No
+minimum-cut hypothesis is used.  Therefore only the two- and
+three-component order-eight interfaces remain.
+
+The component-missing branch is sharper than a bare separator return.  Its
+new seven-vertex boundary has exact-block-complete extension languages on
+both shores.  A split boundary therefore synchronizes immediately.  Under
+`K_7`-minor exclusion the boundary is four-colourable except for the unique
+five-chromatic quotient `K_2\vee C_5`.  The old `D,E,r,z` labels and the
+location at which the eight-set can cut the second named subgraph are
+retained literally; what remains open is the nonsplit state transfer.
+
+For three full components at order eight, compact boundary `K_4` models
+and clique odd-cycle transversals already close.  An audited exhaustive
+eight-vertex census leaves 82 boundary types, all three-colourable and all
+containing two vertex-disjoint odd cycles.  This is a finite normal form,
+not a proof: the selected proper-minor response need not be one of the
+three-colour partitions.
+
+Thus the next theorem has only two legitimate
 forms:
 
 1. a label-preserving nested-separation exchange which lowers the literal
    separator excess while retaining the named subgraphs and equality data;
    or
 2. a proper-minor colouring or explicit minor construction closing the
-   boundary-full order-eight interface.
+   two-component interface or turning the three-component finite normal
+   form into a common boundary partition.
 
 The fixed eighteen-label quotient at the end of the three-path branch is
 already closed by three explicit `K_7`-minor models.  A verified sharpness

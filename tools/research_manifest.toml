@@ -1453,6 +1453,61 @@ active = true
 refutes = ["a complete or matching-defect five-ring from curvature and contact counting alone", "local K7 completion from one fully contacting exterior representative"]
 lacks = ["seven-connected contraction-critical host", "named far-side branch sets", "proper-minor colouring responses"]
 
+[[claims]]
+id = "hc7.epsilon_one_labelled_descent"
+title = "Excess-one nested descent with literal boundary data"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_epsilon_one_labelled_descent.md"
+active = true
+audit = "results/hc7_epsilon_one_labelled_descent_audit.md"
+expected_source_sha256 = "6108e6992e1ef069e3a44abac7f0202fbbe38df3659182f091ef416a5475b42f"
+scope = "the excess-one path-residual or nested full-neighbourhood branch"
+preserves = ["literal descended boundary", "old exact-seven labels", "location of the two named boundary-full connected subgraphs"]
+conclusions = ["a split descended order-seven boundary synchronizes", "the only possible five-chromatic descended boundary is K2 join C5", "failure of component descent is a decorated full order-eight interface"]
+does_not_prove = ["synchronization of a nonsplit descended boundary", "closure of the full order-eight interface"]
+
+[[claims]]
+id = "hc7.full_order8_four_component_closure"
+title = "Four full components close an order-eight boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_full_order8_four_component_closure.md"
+active = true
+audit = "results/hc7_full_order8_four_component_closure_audit.md"
+expected_source_sha256 = "1c50f6a2e666c316d99dead9f8e3fbd185c56e87f9bf396229b7b75043994222"
+scope = "any full eight-vertex boundary with at least four complementary components"
+conclusions = ["explicit K7 from a boundary triangle", "componentwise colour synchronization when the boundary is triangle-free", "the excess-one full interface has at most three components"]
+does_not_prove = ["closure of the two-component interface", "closure of the three-component interface", "preservation of inherited exact-seven equality blocks"]
+
+[[claims]]
+id = "hc7.order8_three_component_boundary_classification"
+title = "Three-component order-eight boundary classification"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_three_component_boundary_classification.md"
+active = true
+audit = "results/hc7_order8_three_component_boundary_classification_audit.md"
+expected_source_sha256 = "1d976b6ece78b66c08a87df36cfc3f31a3e8511d57aa6990aeaa28c7c67c76b3"
+scope = "computer-assisted classification of the eight-vertex boundary after three full complementary components"
+conclusions = ["compact K4 models and clique odd-cycle transversals close", "82 boundary types survive", "all survivors are three-colourable and contain two disjoint odd cycles"]
+does_not_prove = ["an unbounded host closure", "selection of a common proper-minor boundary partition"]
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.epsilon_one_labelled_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.full_order8_four_component_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_three_component_boundary_classification"
+kind = "uses"
+
 [[relations]]
 source = "hc7.adjacent_pair_palette_linkage"
 target = "hc7.two_pole_contact_trichotomy"

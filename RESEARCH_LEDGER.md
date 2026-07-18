@@ -1780,12 +1780,40 @@ classification or computation as well as a written reduction.
     there are `m` such components and `Q` is a boundary clique, then
     `m+|Q|\le6`.
 
+    At excess one, a component which misses one of the eight boundary
+    vertices has neighbourhood exactly the other seven vertices.  Both
+    closed shores then realize every prescribed independent boundary set
+    as an exact colour class.  A split seven-vertex boundary therefore
+    returns one common equality partition and six-colours `G`.  The new
+    boundary is four-colourable except for the unique sharp quotient
+    `K_2\vee C_5`; nonsplit boundaries, including that exception, still
+    require a dynamic transition.
+
+    The boundary-full order-eight alternative is now closed whenever it
+    has at least four complementary components.  Four full components and
+    a boundary triangle give an explicit `K_7`-minor model.  If there is no
+    boundary triangle, the eight-vertex boundary is three-colourable; the
+    other three full components can realize that same labelled colour
+    partition on the closed side of each component, and the side colourings
+    glue.  This argument does not require the eight-set to be a minimum
+    cut.  Hence the irreducible positive-excess alternative has exactly two
+    or three full complementary components.
+
+    The three-component boundary has also been classified exactly at the
+    finite boundary level.  Compact `K_4` models and clique odd-cycle
+    transversals close by explicit component lifts or packet-funded
+    gluing.  Among all eight-vertex graphs, precisely 82 isomorphism types
+    avoid both mechanisms; all are three-colourable, all contain two
+    vertex-disjoint odd cycles, and five are edge-minimal within the finite
+    residue.  This computer-assisted census does not synchronize a
+    proper-minor response and is not an unbounded closure.
+
     The precise open theorem is now a **label-preserving external-attachment
     exchange**: either lower `epsilon` while retaining the two named
     connected subgraphs and the boundary equality data, synchronize an
     exact order-seven boundary, or construct an explicit `K_7`-minor model.
-    At minimal positive excess it may equivalently close the resulting
-    boundary-full order-eight interface.  Separator order alone is
+    At minimal positive excess it may equivalently close the remaining
+    two- or three-component boundary-full order-eight interface.  Separator order alone is
     insufficient because the new boundary can cut through one of the named
     subgraphs and four-colourability does not synchronize shore extensions.
 
@@ -1794,6 +1822,10 @@ classification or computation as well as a written reduction.
     [non-direct first-entry reduction](results/hc7_exact7_first_entry_bridge_reduction.md),
     [path-residual separator-excess theorem](results/hc7_small_path_intersection_lobe.md),
     and [nested full-neighbourhood descent](results/hc7_nested_full_neighbourhood_descent.md),
+    together with the
+    [excess-one labelled descent](results/hc7_epsilon_one_labelled_descent.md),
+    [four-component order-eight closure](results/hc7_full_order8_four_component_closure.md),
+    and [three-component boundary classification](results/hc7_order8_three_component_boundary_classification.md),
     each with an adjacent internal audit.  The fixed compressed three-path
     quotient is closed by
     [three explicit minor models](results/hc7_atomic_three_path_quotient_completion.md),
