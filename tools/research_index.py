@@ -806,7 +806,7 @@ def _audited_source_scope(
         paragraph
         for paragraph in paragraphs
         if re.search(
-            r"(?i)\b(audit|verdict|coverage|scope|green|checked\s+material)\b",
+            r"(?i)\b(audit|verdict|coverage|scope|green|checked)\b",
             paragraph,
         )
     ]
@@ -822,7 +822,7 @@ def _audited_source_scope(
     )
     standalone_limitation = re.search(
         r"(?i)(?:\b(?:the\s+)?appendix\b[^.\n]{0,60}"
-        r"(?:\bnot\s+checked\b|\bis\s+excluded\b)|"
+        r"(?:\bnot\s+checked\b|\bis\s+excluded\b|\bwas\s+not\b)|"
         r"\bonly\s+the\s+proof\s+is\s+checked\b)",
         audit_text,
     )
@@ -842,7 +842,8 @@ def _audited_source_scope(
             r"(?i)(?:\b(?:audit|scope)\b[^.\n]{0,100}\b(?:checks?|covers?|audits?|verifies?|limited\s+to)\b|"
             r"\b(?:only|limited\s+to|covers?\s+only)\b[^.\n]{0,60}"
             r"\b(?:theorem|lemma|corollary)\b|"
-            r"\b(?:theorem|lemma|corollary)\b[^.\n]{0,40}\bonly\b)",
+            r"\b(?:theorem|lemma|corollary)\b[^.\n]{0,40}"
+            r"(?:\bonly\b|\b(?:was|is)\s+checked\b))",
             declarations,
         )
     )
@@ -880,8 +881,18 @@ def _audited_source_scope(
         r"\bfull[- ]document\s+audit\b|\bwhole[- ]file\s+audit\b)",
         declarations,
     )
-    if not explicit_whole and not allow_adjacent_full_document:
-        return None
+    if not explicit_whole:
+        scoped_or_limiting_wording = re.search(
+            r"(?i)(?:\b(?:audit|we|i)\b[^.\n]{0,60}"
+            r"\b(?:checks?|checked|covers?|audits?|verifies?)\b|"
+            r"\b(?:scope|coverage|limitations?|exclusions?)\b|"
+            r"\b(?:theorem|lemma|corollary)\b[^.\n]{0,50}"
+            r"\b(?:was|is)\s+checked\b|\bchecked\s+material\b|"
+            r"\bonly\s+(?:the\s+)?(?:proof|theorem|lemma|corollary)\b)",
+            declarations,
+        )
+        if scoped_or_limiting_wording or not allow_adjacent_full_document:
+            return None
     heading = next((section.heading for section in source_sections if section.level == 1), source_sections[0].heading)
     note = (
         "explicit whole-document audit"

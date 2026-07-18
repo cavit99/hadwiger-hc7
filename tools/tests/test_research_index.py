@@ -705,6 +705,21 @@ class MarkdownParserTests(unittest.TestCase):
             ("Theorem 1", 3, 6, "explicit named-theorem subtree audit"),
             index._audited_source_scope(sections, "This audit checks Theorem 1."),
         )
+        self.assertEqual(
+            ("Theorem 1", 3, 6, "explicit named-theorem subtree audit"),
+            index._audited_source_scope(
+                sections,
+                "I checked only Theorem 1.",
+                allow_adjacent_full_document=True,
+            ),
+        )
+        self.assertIsNone(
+            index._audited_source_scope(
+                sections,
+                "Theorem 1 was checked; Appendix A was not.",
+                allow_adjacent_full_document=True,
+            )
+        )
 
     def test_status_and_claim_extraction_are_section_scoped_and_fence_masked(self) -> None:
         text = """# Document
