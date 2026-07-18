@@ -25,7 +25,7 @@ The principal promoted dependencies were checked at these current revisions:
 ```text
 263611a40dc7829788967250e031a3f3170e1c7a6c8c9a3fbfbb358231b1f9ca  results/hc7_low_degree_adjacent_pair_alignment.md
 dd8817ceec58b083e12adae943f49cf2bb5a401f17ca87950477906f811c5a08  results/hc7_degree9_pole_verifier.md
-9a59ff768994b7aef86b9c54b5c1b4c613629d45a307dc1ba6300d1c4c7ec342  results/hc7_degree9_pole_verifier.py
+b4bab9be44feb5dc749dc8ba3f41a85094896d4b3de8a7d8246342b2729c9c59  results/hc7_degree9_pole_verifier.py
 ```
 
 The first two sources have adjacent GREEN audits.  The degree-nine verifier

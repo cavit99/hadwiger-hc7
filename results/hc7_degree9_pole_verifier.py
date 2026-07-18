@@ -76,7 +76,7 @@ def edge_count(adjacency: Sequence[int]) -> int:
 def geng_graphs(executable: str, edges: int) -> tuple[tuple[str, tuple[int, ...]], ...]:
     """Return all unlabelled nine-vertex graphs in one nauty class."""
 
-    command = [executable, "-q", str(H_ORDER), f"{edges}:{edges}", "-D3"]
+    command = [executable, "-q", "-D3", str(H_ORDER), f"{edges}:{edges}"]
     completed = subprocess.run(
         command,
         check=True,

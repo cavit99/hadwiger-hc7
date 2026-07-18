@@ -10,12 +10,14 @@ itself, promote the surrounding degree-nine reduction to a theorem.
 
 ```text
 c25413c92817f52167196848276b70626d7541073d1319c1b66e281ba095480e  audited Markdown content
-9a59ff768994b7aef86b9c54b5c1b4c613629d45a307dc1ba6300d1c4c7ec342  results/hc7_degree9_pole_verifier.py
+b4bab9be44feb5dc749dc8ba3f41a85094896d4b3de8a7d8246342b2729c9c59  results/hc7_degree9_pole_verifier.py
 ```
 
-Promotion changed only the status line and the documented invocation path
-after moving the verifier from `active/` to `results/`.  Its promoted
-content hash is
+The current verifier revision also places the `geng` maximum-degree option
+before its positional arguments, as required by the portable command-line
+grammar.  The finite search, certificate checks, expected census, and output
+are unchanged and were rerun at the displayed revision.  The promoted
+Markdown content hash is
 
 ```text
 dd8817ceec58b083e12adae943f49cf2bb5a401f17ca87950477906f811c5a08  results/hc7_degree9_pole_verifier.md
