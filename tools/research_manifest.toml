@@ -217,7 +217,7 @@ status = "audited-green"
 source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
 active = true
 audit = "results/hc7_degree7_anti_neighbourhood_connectivity_audit.md"
-expected_source_sha256 = "9ac0a18bde65c2b8eba985f4cee63977536a08b55c1ef0bf1b3e9600dfae3301"
+expected_source_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
 scope = "degree-seven vertex in the hypothetical HC7 kernel"
 
 [[claims]]

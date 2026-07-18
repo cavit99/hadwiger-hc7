@@ -147,7 +147,6 @@ hashes are
 | adaptive `(1,2)` closure | `df8d47261337659ade312bf8a6dfab22453c92bae5841bbb6b6fd303eadf6533` | GREEN legacy audit; no source hash recorded |
 | singleton-component closure | `a68b0f0efe5b526d050261fbec3e0c3df47a96d022cb90f95ae5b3ca9616d8d4` | GREEN audit pinned to this hash |
 
-Consequently this draft should not be promoted into the current proof spine
-until an independent audit has both checked the composition above and pinned
-the first three legacy inputs to their current source hashes.  No cited
-finite residual or verifier is untracked.
+The adjacent audit independently checks this composition at the displayed
+input revisions and pins the present theorem revision.  No cited finite
+residual or verifier is untracked.

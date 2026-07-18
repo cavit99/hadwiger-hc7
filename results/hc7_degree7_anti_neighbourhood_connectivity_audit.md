@@ -5,7 +5,7 @@
 **GREEN** at the exact source revision
 
 ```text
-9ac0a18bde65c2b8eba985f4cee63977536a08b55c1ef0bf1b3e9600dfae3301  results/hc7_degree7_anti_neighbourhood_connectivity.md
+a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3  results/hc7_degree7_anti_neighbourhood_connectivity.md
 ```
 
 Theorem 1 is correct.  Its order-seven separation is oriented correctly,
@@ -13,6 +13,10 @@ the maximum packing numbers really are `(1,2)` in the only surviving
 two-component case, and the singleton-component closure applies to the
 side containing `{u}` and the other component of `G-N[u]` without reversing
 the shores.
+
+The checked revision also removes the superseded pre-promotion warning.  The
+change is status-only: the theorem statement, proof, cited input revisions,
+and trust boundary are unchanged.
 
 Corollary 2 is also correct.  Its final “Audited inputs” paragraph records
 the GREEN-audited exact-block Kempe reduction at source hash

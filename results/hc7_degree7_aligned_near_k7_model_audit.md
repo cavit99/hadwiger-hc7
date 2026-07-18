@@ -101,7 +101,7 @@ are the two stated pairs incident with `{b}`.  At least one is absent under
 The audit checked the following exact GREEN source revisions:
 
 ```text
-9ac0a18bde65c2b8eba985f4cee63977536a08b55c1ef0bf1b3e9600dfae3301
+a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3
 results/hc7_degree7_anti_neighbourhood_connectivity.md
 
 7fda58a909aabf5a49c32be513ebc598695c448855a4a8bede3ae1efdc63314a
