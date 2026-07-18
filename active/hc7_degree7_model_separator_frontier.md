@@ -448,27 +448,71 @@ and clique odd-cycle transversals already close.  An audited exhaustive
 eight-vertex census leaves 82 boundary types, all three-colourable and all
 containing two vertex-disjoint odd cycles.  The same transition theorem now
 turns this finite normal form into literal host geometry.  Every survivor
-has a three-colouring `A|B|{r,z}`.  Either that exact three-block partition
+has a three-colouring `A|B|{p,q}` for some local nonedge `pq` of the new
+boundary.  This local pair is not automatically the inherited old pair
+`r,z`.  Either that exact three-block partition
 extends through all three component-sides and glues, or one component is
-locked in the split partition `A|B|{r}|{z}` and contains a bichromatic
-`r`--`z` path.  Deleting the first boundary--component edge of that path
+locked in the split partition `A|B|{p}|{q}` and contains a bichromatic
+`p`--`q` path.  Deleting the first boundary--component edge of that path
 forces a different, demand-at-least-three response and five colour-indexed
 paths from the internal endpoint back to the boundary.  The five paths are
 edge-disjoint and can meet only at vertices of their common endpoint colour,
-but they may all return to `r`; they are not yet five labelled branch-set
-contacts.
+but the paths as originally selected need not be internally disjoint.
+
+There are now two complementary normalizations.  Globally, the edge `vp`
+and the five colour-indexed first edges extend to six pairwise internally
+disjoint paths ending at every vertex of any prescribed six-set.  This
+removes endpoint concentration only when the paths may traverse the whole
+host; they can cross unselected boundary vertices or protected branch sets.
+If the original boundary targets are retained inside the named component,
+a vertex-capacitated Menger argument instead returns either five paths
+disjoint outside their base and the boundary, or an actual order-seven
+separation.  In the latter outcome the edge-deletion colouring is proper on
+one closed shore and has a named exact boundary colour class `J` of order at
+least two.  The opposite shore also realizes `J` exactly, and all exact-`J`
+boundary colourings lie in one Kempe class.  A clique outside `J` already
+synchronizes the shores; every live separator output has a nonedge outside
+`J`.
+
+The nonedge now has a simultaneous host-level consequence.  Either one
+shore contains its bichromatic path, or the two shore colourings can be
+normalized with a common non-`J` colour absent from the boundary.  In the
+latter case there are two vertex-disjoint paths: one joins the deleted-edge
+endpoints and meets the seven-boundary only in `J`; the other passes through
+the opposite shore and joins two distinct bichromatic components outside
+`J`.  Equivalently, after recolouring the exterior deleted-edge endpoint
+with the fresh colour and adjoining it to the boundary, a shortest
+eight-vertex boundary transition gives a common trace, an actual order-seven
+separation, or one selected component adjacent to all eight boundary
+vertices.  The theorem does not yet allocate either path to the inherited
+minor-model labels, and only the selected component is asserted to be
+eight-boundary-full.
+
+There is also a well-founded normalization on the minor-model side.
+Contract the deleted edge and choose a `K_6`-minor model containing its
+image so that the containing branch set is first as small as possible and
+then the whole model covers as many vertices as possible.  Removing the
+contraction image leaves at most two components of that branch set.  Every
+detachable component is solely responsible for contacts with at least two
+of the other five branch sets, and different components are responsible
+for disjoint label sets.  A component outside the model attaches only to
+the contraction-image branch set; a six-vertex attachment set lifts to a
+full exact order-seven separator.  Splitting the lifted branch set across
+the deleted edge gives an explicit `K_7` model whenever both sides retain
+all five foreign contacts.  A connected subgraph wholly outside the model
+cannot repair a missing foreign contact.
 
 Thus the next theorem has only two legitimate
 forms:
 
-1. a first-hit allocation theorem which converts the locked edge-deletion
-   fan or one of the two-shore signature-change paths into two disjoint
-   connected subgraphs with the required literal contacts; or
+1. a model-alignment theorem which decodes the two disjoint rooted paths or
+   the selected eight-boundary-full component into clean traces of the five
+   inherited named branch sets, or splits the normalized contraction-image
+   branch set and repairs every contact lost on one side; or
 2. a compatible full-neighbourhood-separator theorem which turns
-   concentration of those paths into an actual order-seven boundary with
-   one equality partition extending through both closed shores, or strictly
-   lowers separator excess while retaining the named subgraphs and equality
-   data.
+   the exact block on the returned order-seven boundary into a common full
+   equality partition, or strictly lowers separator excess while retaining
+   the named subgraphs and equality data.
 
 The fixed eighteen-label quotient at the end of the three-path branch is
 already closed by three explicit `K_7`-minor models.  A verified sharpness
@@ -531,6 +575,13 @@ through label-preserving contacts with the five named connected subgraphs.
 - [non-direct first-entry bridge reduction](../results/hc7_exact7_first_entry_bridge_reduction.md)
 - [path-residual separator excess](../results/hc7_small_path_intersection_lobe.md)
 - [nested full-neighbourhood descent](../results/hc7_nested_full_neighbourhood_descent.md)
+- [excess-one descent with literal boundary data](../results/hc7_epsilon_one_labelled_descent.md)
+- [four full components close an order-eight boundary](../results/hc7_full_order8_four_component_closure.md)
+- [three-component order-eight boundary classification](../results/hc7_order8_three_component_boundary_classification.md)
+- [Kempe transitions across full order-eight components](../results/hc7_order8_full_component_kempe_transition.md)
+- [prescribed spokes or a coloured exact-seven separator](../results/hc7_order8_prescribed_spoke_reduction.md)
+- [minimal contracted-edge `K_6` model](../results/hc7_contracted_edge_k6_model_normalization.md)
+- [fresh-colour disjoint linkages and augmented-boundary transition](../results/hc7_exact7_fresh_colour_linkage.md)
 - [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
 - [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
 - [two-full-shore boundary absorption](../results/hc7_two_full_shore_boundary_absorption.md)

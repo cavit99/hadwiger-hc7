@@ -288,13 +288,15 @@ Choose a proper three-colouring
 
 \[
                          X=A\mathbin{\dot\cup}B
-                              \mathbin{\dot\cup}\{r,z\}. \tag{5.1}
+                              \mathbin{\dot\cup}\{p,q\}. \tag{5.1}
 \]
 
 Such a colouring exists: no colour class can be a singleton, since deleting
 that singleton clique would leave a bipartite graph; hence a three-colouring
 of eight vertices has a colour class of order two.  In particular,
-`rz notin E(H)`.
+`pq notin E(H)`.  The local names `p,q` need not be the inherited old
+boundary labels used before the order-eight descent; identifying them with
+minor-model labels is part of the remaining allocation problem.
 
 For each `i`, fix an ordering `(j,k)` of the other two components and form
 the proper minor obtained by contracting separately
@@ -307,8 +309,8 @@ Every six-colouring of this fixed minor induces on `X` one of the two
 partitions
 
 \[
- \Theta=A\mid B\mid\{r,z\},\qquad
- \Omega=A\mid B\mid\{r\}\mid\{z\}.                    \tag{5.3}
+ \Theta=A\mid B\mid\{p,q\},\qquad
+ \Omega=A\mid B\mid\{p\}\mid\{q\}.                    \tag{5.3}
 \]
 
 ### Theorem 5.1 (gluing or a locked path and critical fan)
@@ -320,13 +322,13 @@ Exactly one of the following outcomes is forced.
 2. For some fixed `i` and the fixed orientation (5.2), every colouring of
    that minor induces `Omega`.  In this case:
 
-   a. `G[C_i union X]` contains a bichromatic `r`--`z` path with all
+   a. `G[C_i union X]` contains a bichromatic `p`--`q` path with all
       internal vertices in `C_i`;
-   b. if `e=rv` is the first edge of such a path and `d` is any
+   b. if `e=pv` is the first edge of such a path and `d` is any
       six-colouring of `G-e`, then its boundary partition `rho` is different
       from `Omega`, does not extend through the intact `C_i`-side, and has
       packet demand at least three;
-   c. writing `alpha=d(r)=d(v)`, for every colour `beta ne alpha` there is
+   c. writing `alpha=d(p)=d(v)`, for every colour `beta ne alpha` there is
       an `alpha`--`beta` path from `v` to `X` with all internal vertices in
       `C_i`;
    d. the five paths in item c can be selected pairwise edge-disjoint, and
@@ -337,22 +339,22 @@ Exactly one of the following outcomes is forced.
 #### Proof
 
 The contraction images in (5.2) are adjacent to one another and to both
-`r,z`.  Hence (5.3) lists all possible boundary partitions.  If, for every
+`p,q`.  Hence (5.3) lists all possible boundary partitions.  If, for every
 `i`, the fixed minor has some colouring inducing `Theta`, restrict those
 three colourings to the respective intact component-sides, align their
 palettes on the common equality partition, and glue.
 
 Otherwise fix `i` for which no such colouring exists.  Every colouring of
 that fixed minor induces `Omega`.  In one such colouring, consider the
-two-colour graph determined by the colours on `r,z`.  If they lie in
+two-colour graph determined by the colours on `p,q`.  If they lie in
 different components, a Kempe interchange on the component containing
-`r` merges them, producing `Theta`.  They therefore lie in the same
+`p` merges them, producing `Theta`.  They therefore lie in the same
 component.  The two contraction images and all vertices of `A union B`
-use the other two boundary colours, so a shortest `r`--`z` path has all
-internal vertices in `C_i`.  Since `rz` is not an edge, its first edge is
-`e=rv` with `v in C_i`.  This proves item a.
+use the other two boundary colours, so a shortest `p`--`q` path has all
+internal vertices in `C_i`.  Since `pq` is not an edge, its first edge is
+`e=pv` with `v in C_i`.  This proves item a.
 
-Every colouring `d` of `G-e` gives `d(r)=d(v)`: otherwise restoring `e`
+Every colouring `d` of `G-e` gives `d(p)=d(v)`: otherwise restoring `e`
 would six-colour `G`.  Its restriction to `X` extends through both
 components other than `C_i`.  It cannot extend through intact `C_i`, since
 the three extensions would glue.  On the other hand `Omega` does extend
@@ -361,11 +363,11 @@ extensions again glue, so `rho ne Omega`.  The no-clique-odd-cycle-
 transversal property says exactly that every proper partition of `H` has
 packet demand at least three.  This proves item b.
 
-Put `alpha=d(r)=d(v)`.  Fix `beta ne alpha`.  If the full
-`alpha`--`beta` component containing `v` did not contain `r`, interchange
+Put `alpha=d(p)=d(v)`.  Fix `beta ne alpha`.  If the full
+`alpha`--`beta` component containing `v` did not contain `p`, interchange
 the two colours on that component.  The result would still colour `G-e`,
-but `r,v` would then have different colours and `e` could be restored.
-Thus `v,r` lie in the same two-colour component.  Take a `v`--`r` path in
+but `p,v` would then have different colours and `e` could be restored.
+Thus `v,p` lie in the same two-colour component.  Take a `v`--`p` path in
 that component and stop it at its first vertex of `X`; its internal vertices
 lie in `C_i`.  This proves item c.
 
@@ -383,7 +385,7 @@ repeated boundary endpoint is `alpha`-coloured.  This proves item d.
 \(\square\)
 
 The paths in Theorem 5.1 all contain `v` and may share further
-`alpha`-coloured vertices.  Their first boundary endpoint may be `r`.
+`alpha`-coloured vertices.  Their first boundary endpoint may be `p`.
 Accordingly, they are not five disjoint branch-set extensions and do not
 simultaneously add five boundary edges.  The remaining theorem must use
 the inherited named branch sets and proper-minor responses to diversify

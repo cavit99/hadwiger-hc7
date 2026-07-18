@@ -7,7 +7,7 @@ stated in Sections 5 and 6 of the source.
 `hc7_order8_full_component_kempe_transition.md`, SHA-256
 
 ```text
-2ee9a566e57e27983d8c17c54621768fd228c02a1f0f533db7c727010fc60575
+491cf219c3ffe01334770d9c1ddb5e9933dbb7e68a492b9d879c51a5f0d9c905
 ```
 
 This is a separate internal mathematical audit, not external peer review.
@@ -106,13 +106,13 @@ glue.  Otherwise one fixed minor has no `Theta` response, and every colouring
 of that fixed minor returns `Omega`.  The theorem does not claim the same
 for the swapped assignment of the two other components.
 
-In a locked colouring, a Kempe swap would merge `r,z` unless their two-colour
-component contains an `r`--`z` path.  The two contraction representatives
+In a locked colouring, a Kempe swap would merge `p,q` unless their two-colour
+component contains a `p`--`q` path.  The two contraction representatives
 and `A union B` use the other two boundary colours, so the path interior is
-in the intact component.  The nonedge `rz` makes its first edge `rv` a
+in the intact component.  The nonedge `pq` makes its first edge `pv` a
 literal boundary-to-component edge.
 
-For any colouring of `G-rv`, the endpoints have one common colour `alpha`;
+For any colouring of `G-pv`, the endpoints have one common colour `alpha`;
 otherwise restoring the edge colours `G`.  Its boundary partition cannot
 extend through the intact component.  It is not `Omega`, because `Omega`
 already extends there and the deletion colouring extends through the other
@@ -120,18 +120,22 @@ two components.  Packet demand is at least three by the no-clique-odd-cycle-
 transversal identity proved in the cited classification.
 
 For every other colour `beta`, the `alpha`--`beta` component containing `v`
-must also contain `r`; otherwise swapping it permits restoration of `rv`.
-Stopping a `v`--`r` path at its first boundary hit gives item c.  Paths for
+must also contain `p`; otherwise swapping it permits restoration of `pv`.
+Stopping a `v`--`p` path at its first boundary hit gives item c.  Paths for
 different colours can share only `alpha`-coloured vertices and cannot share
 an edge.  A repeated boundary endpoint is likewise `alpha`-coloured.
 
 ## 6. Explicit non-conclusions
 
+The source correctly distinguishes the locally chosen pair `p,q` from the
+old labelled pair present before the order-eight descent.  No identity
+between those pairs is proved.
+
 The audit rejects the following stronger inferences, none of which appears
 in the source:
 
 - the five paths are vertex-disjoint (they all contain `v`);
-- their first boundary endpoints are distinct or different from `r`;
+- their first boundary endpoints are distinct or different from `p`;
 - the paths simultaneously add five boundary edges;
 - the three transition-tree paths use one common boundary colouring; or
 - palette colours identify the inherited clique-minor branch sets.

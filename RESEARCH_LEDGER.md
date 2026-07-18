@@ -1832,24 +1832,69 @@ classification or computation as well as a written reduction.
 
     For each of the 82 three-component boundary types this can be sharpened
     with a second proper-minor operation.  Choose a three-colouring
-    `A|B|{r,z}`.  Either its three-block partition extends through every
-    component-side and glues, or a fixed component is locked in the split
-    partition `A|B|{r}|{z}` and contains a bichromatic `r`--`z` path.
+    `A|B|{p,q}` for some local nonedge `pq` of the new boundary.  This pair
+    is not automatically the inherited old pair `r,z`.  Either its
+    three-block partition extends through every component-side and glues,
+    or a fixed component is locked in the split partition
+    `A|B|{p}|{q}` and contains a bichromatic `p`--`q` path.
     Deleting the first edge of that path produces a different
     demand-at-least-three boundary response and five colour-indexed paths
     from its internal endpoint to the boundary.  Those paths are pairwise
     edge-disjoint and may intersect only at vertices of the common endpoint
-    colour.  They need not have distinct first boundary hits and may all
-    return to `r`, so this is a host-level fan localization rather than a
-    `K_7`-minor model.
+    colour.
 
-    The precise open theorem is now a **label-preserving external-attachment
-    exchange**: diversify the first hits of the locked fan or a two-shore
-    signature-change path into the inherited named branch sets, or turn
-    their concentration into a compatible exact-seven separator.  The
-    alternatives remain to lower `epsilon` while retaining the two named
-    connected subgraphs and the boundary equality data, synchronize an
-    exact order-seven boundary, or construct an explicit `K_7`-minor model.
+    Two complementary path normalizations are now available.  Globally,
+    the edge `vp` and the five colour-indexed first edges extend to six
+    pairwise internally disjoint paths ending at every vertex of any
+    prescribed six-set.  These paths may traverse the whole host, including
+    unselected boundary vertices and protected branch sets.  If the
+    original boundary targets are retained inside the named component, a
+    vertex-capacitated Menger argument instead gives either five paths
+    disjoint outside their base and the boundary, or an actual order-seven
+    separation.
+
+    In the separator outcome the edge-deletion colouring is proper on one
+    closed shore and supplies an exact boundary colour class `J` of order at
+    least two.  Contracting the connected side together with `J` gives the
+    same exact class on the opposite shore.  The exact-`J` boundary-colouring
+    space is Kempe connected.  If the remaining boundary is a clique, the
+    shores glue; hence every live separator output has a nonedge outside
+    `J`.
+
+    That nonedge now yields a simultaneous host-level object.  Either one
+    shore contains its bichromatic path, or both shore colourings admit a
+    common fresh non-`J` colour absent from the boundary.  In the latter
+    case there are two vertex-disjoint paths: the first joins the endpoints
+    of the deleted edge and meets the boundary only in `J`; the second runs
+    through the opposite shore between two distinct bichromatic components
+    outside `J`.  On the actual augmented eight-boundary, the same argument
+    gives a common trace, an order-seven full-neighbourhood separator, or
+    one selected component adjacent to all eight boundary vertices.  It
+    does not yet allocate the paths to inherited branch-set labels or make
+    every complementary component boundary-full.
+
+    Independently, contracting the deleted edge and extremizing an
+    image-containing `K_6` model gives a well-founded model-side normal
+    form.  The branch set containing the contraction image has at most two
+    components after the image is removed.  Each such component is solely
+    responsible for contacts with at least two of the five other branch
+    sets, and their responsibility sets are disjoint.  Uncovered components
+    attach only to the image-containing branch set; six attachment vertices
+    lift to a full exact order-seven separator.  Splitting that branch set
+    across the deleted edge gives an explicit `K_7` whenever both sides
+    retain all five foreign contacts.  A connected subgraph wholly outside
+    the model cannot repair a missing foreign contact.
+
+    The precise open theorem is now a **label-preserving model alignment or
+    separator synchronization**.  The two disjoint rooted paths or the
+    selected eight-boundary-full component must be decoded through clean
+    traces of the five inherited named branch sets, or the normalized
+    contraction-image branch set must be split and every lost contact
+    repaired.  In the separator branch the common exact class must be
+    extended to a common full equality partition.  The alternatives remain
+    to lower `epsilon` while retaining the two named connected subgraphs and
+    the boundary equality data, synchronize an exact order-seven boundary,
+    or construct an explicit `K_7`-minor model.
     At minimal positive excess it may equivalently close the remaining
     two- or three-component boundary-full order-eight interface.  Separator order alone is
     insufficient because the new boundary can cut through one of the named
@@ -1865,6 +1910,9 @@ classification or computation as well as a written reduction.
     [four-component order-eight closure](results/hc7_full_order8_four_component_closure.md),
     [three-component boundary classification](results/hc7_order8_three_component_boundary_classification.md),
     [full-component Kempe-transition theorem](results/hc7_order8_full_component_kempe_transition.md),
+    [prescribed-spoke and coloured-separator reduction](results/hc7_order8_prescribed_spoke_reduction.md),
+    [minimal contracted-edge `K_6` model](results/hc7_contracted_edge_k6_model_normalization.md),
+    [fresh-colour disjoint linkages and augmented-boundary transition](results/hc7_exact7_fresh_colour_linkage.md),
     [two-full-shore boundary absorption](results/hc7_two_full_shore_boundary_absorption.md),
     and [cycle-boundary completion](results/hc7_cycle_boundary_completion.md),
     each with an adjacent internal audit.  The fixed compressed three-path

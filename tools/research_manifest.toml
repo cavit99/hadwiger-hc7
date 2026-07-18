@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Boundary-edge contact exchange or compatible separator"
 active = true
-expected_source_sha256 = "22bc2ffaaa759885ed8b04a5834325f0e45a0cb2a042f3596f40fb685278805c"
+expected_source_sha256 = "5c1d30f279e90165e761f12dd72eead12f42fd5e812371ae723fa9deef3b6031"
 scope = "the degree-eight interface arising inside the degree-seven-derived two-pair disk configuration of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
 separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
@@ -1730,7 +1730,7 @@ status = "audited-green"
 source = "results/hc7_order8_full_component_kempe_transition.md"
 active = true
 audit = "results/hc7_order8_full_component_kempe_transition_audit.md"
-expected_source_sha256 = "2ee9a566e57e27983d8c17c54621768fd228c02a1f0f533db7c727010fc60575"
+expected_source_sha256 = "491cf219c3ffe01334770d9c1ddb5e9933dbb7e68a492b9d879c51a5f0d9c905"
 scope = "any boundary-full order-eight interface with two or three complementary components, with a specialised conclusion for the 82 three-component boundary types"
 label_fidelity = "labelled boundary colourings, exact independent colour blocks, literal complementary components and literal bichromatic obstruction paths"
 colour_compatibility = "all exact-block boundary colourings lie in one Kempe class; extension signatures still need not coincide"
@@ -1747,6 +1747,88 @@ does_not_prove = [
   "simultaneous or vertex-disjoint obstruction paths",
   "allocation of palette colours to the five inherited clique-minor branch sets",
   "an order-seven compatible separator",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_prescribed_spoke_reduction"
+title = "Prescribed spokes or a coloured exact-seven separator"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_prescribed_spoke_reduction.md"
+active = true
+audit = "results/hc7_order8_prescribed_spoke_reduction_audit.md"
+expected_source_sha256 = "3b55f263775f35164efe1d32c6ed86eab777ea2272b24293129e8e65517517d6"
+scope = "the locked edge-deletion fan in a boundary-full order-eight interface, plus an unrestricted prescribed-spoke theorem"
+label_fidelity = "prescribed literal first edges; the target-retaining branch preserves the literal complementary component and a one-sided boundary colouring"
+separator_order = "exactly seven in the target-retaining cut outcome"
+colour_compatibility = "the exact boundary block is attained on both shores and its boundary-colouring cylinder is Kempe connected; the full equality partition remains open"
+conclusions = [
+  "prescribed incident edges in a sufficiently connected host extend to a fan with distinct prescribed-set ends",
+  "the locked five-edge fan either cleans inside its component relative to its original targets or exposes an actual order-seven separation",
+  "the separator carries a common exact boundary colour class of order at least two",
+  "a split K6 branch set plus a clean connected repair meeting every lost label gives an explicit K7-minor model",
+]
+does_not_prove = [
+  "that the arbitrary-target fan stays in the selected complementary component",
+  "that arbitrary target ends are clean traces of five inherited branch sets",
+  "a common full boundary equality partition",
+  "closure of either remaining order-eight component count",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.contracted_edge_k6_model_normalization"
+title = "Minimal contracted-edge K6 model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_contracted_edge_k6_model_normalization.md"
+active = true
+audit = "results/hc7_contracted_edge_k6_model_normalization_audit.md"
+expected_source_sha256 = "61fa3c094c34d06590efcef8a6903356f36bc8aadcdec75f834aa7e5cfd82936"
+scope = "an edge in a seven-connected minor-minimal non-six-colourable K7-minor-free graph, after contracting the edge and extremizing a K6 model containing its image"
+label_fidelity = "five named foreign branch sets and the literal preimage of the contraction-image branch set"
+separator_order = "uncovered six-attachment components lift to full exact order-seven separators; deficient split sides give literal separators with no general upper bound"
+conclusions = [
+  "the contracted graph is six-connected and exactly six-chromatic",
+  "the contraction-image branch set has at most two components after deleting the image",
+  "each detachable component monopolizes at least two disjoint foreign label contacts",
+  "an uncovered component attaches only to the image-containing branch set",
+  "a split retaining all five contacts on both sides gives an explicit K7-minor model",
+]
+does_not_prove = [
+  "that the contraction image is a singleton branch set",
+  "a clean split in every model",
+  "that a repair using outside and reassigned model vertices is impossible",
+  "a compatible boundary colouring",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.exact7_fresh_colour_linkage"
+title = "Fresh-colour disjoint linkages across an exact order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_fresh_colour_linkage.md"
+active = true
+audit = "results/hc7_exact7_fresh_colour_linkage_audit.md"
+expected_source_sha256 = "d4725d119bac52e27f72a92645d9e1506473bcd66308378868027718539aad29"
+scope = "an exact order-seven separation carrying the same exact nontrivial colour block in an edge-deletion colouring and an opposite-shore proper colouring"
+label_fidelity = "literal deleted-edge endpoints, exact boundary block, two vertex-disjoint colour-separated paths and a selected literal complementary component"
+separator_order = "an actual augmented-boundary transition returns a full neighbourhood of order seven or one selected order-eight-full component"
+colour_compatibility = "a common fresh colour is absent from the boundary; a common augmented-boundary trace six-colours the host"
+conclusions = [
+  "a boundary nonedge yields a shore-supported bichromatic path or a common fresh boundary colour",
+  "the fresh-colour case gives two vertex-disjoint rooted obstruction paths",
+  "all six-colourings of a K7-minor-free graph of order at most eight are Kempe equivalent",
+  "the actual augmented-boundary transition gives a common trace, an order-seven separator or one selected order-eight-full component",
+]
+does_not_prove = [
+  "allocation of either path among inherited clique-minor branch-set labels",
+  "an explicit K7-minor model",
+  "a common full equality partition on the order-seven output",
+  "that all order-eight complementary components are boundary-full",
+  "a strict recursive descent",
   "HC7",
 ]
 
@@ -1768,6 +1850,21 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_full_component_kempe_transition"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_prescribed_spoke_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.contracted_edge_k6_model_normalization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_fresh_colour_linkage"
 kind = "uses"
 
 [[relations]]
@@ -2447,7 +2544,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "22bc2ffaaa759885ed8b04a5834325f0e45a0cb2a042f3596f40fb685278805c"
+evidence_sha256 = "5c1d30f279e90165e761f12dd72eead12f42fd5e812371ae723fa9deef3b6031"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2469,7 +2566,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "22bc2ffaaa759885ed8b04a5834325f0e45a0cb2a042f3596f40fb685278805c"
+evidence_sha256 = "5c1d30f279e90165e761f12dd72eead12f42fd5e812371ae723fa9deef3b6031"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2480,7 +2577,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 722
 evidence_end_line = 749
-evidence_sha256 = "7bd4488fc15d42657406f99627875aee86fe880aac484c9b6b03b046372e2bca"
+evidence_sha256 = "1aaf18b3c1113e7406a97b33f9bf000236ba6366ff10636a0e24c65e0b5de3c5"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
