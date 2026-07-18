@@ -237,6 +237,92 @@ expected_source_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee628
 scope = "degree-seven vertex in the hypothetical HC7 kernel"
 
 [[claims]]
+id = "hc7.exact7_adaptive_packet_reflection"
+title = "Adaptive exact-seven (1,3) packet reflection"
+kind = "theorem"
+status = "written-unaudited"
+source = "results/hc7_exact7_adaptive_packet_reflection.md"
+source_heading = "Theorem 1.1 (adaptive `(1,3)` packet reflection)"
+active = false
+expected_source_sha256 = "14690180c44a9e5836591a54c4c7cdb7a26f1a2c78147470257072d5bc425e96"
+scope = "an actual order-seven separation with one boundary-full connected subgraph on one open shore and three pairwise-disjoint boundary-full connected subgraphs on the other"
+hypotheses = [
+  "the host is seven-connected, K7-minor-free, and every proper minor is six-colourable",
+  "the two open shores have boundary-full connected-subgraph packing numbers at least one and three",
+]
+conclusions = [
+  "the host has an explicit K7-minor model or is six-colourable",
+  "the packing vector (1,3) is impossible in the hypothetical HC7 kernel",
+]
+does_not_prove = [
+  "closure of the packing vectors (1,1) or (1,2)",
+  "a colour-compatible order-seven separation in the remaining cases",
+]
+
+[[claims]]
+id = "hc7.exact7_adaptive_12_boundary_closure"
+title = "Adaptive (1,2) boundary closure"
+kind = "theorem"
+status = "written-unaudited"
+source = "results/hc7_exact7_adaptive_12_boundary_closure.md"
+source_heading = "Theorem 4.1"
+active = false
+expected_source_sha256 = "df8d47261337659ade312bf8a6dfab22453c92bae5841bbb6b6fd303eadf6533"
+scope = "computer-assisted boundary classification within an actual exact-seven (1,2) full-subgraph packing separation"
+hypotheses = [
+  "the boundary graph has a robust independent block or a two-vertex deletion containing a K4 minor",
+]
+conclusions = [
+  "the corresponding exact-seven (1,2) boundary configuration is impossible",
+  "the deterministic enumeration leaves a frozen 129-graph residual before the connected-rich-shore refinement",
+]
+does_not_prove = [
+  "that the thin shore realizes an arbitrarily selected favourable boundary partition",
+  "closure of the full 129-graph residual",
+]
+
+[[claims]]
+id = "hc7.exact7_two_component_singleton_closure"
+title = "Singleton-component closure in the residual (1,2) case"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_two_component_singleton_closure.md"
+source_heading = "Theorem 1.1"
+active = false
+audit = "results/hc7_exact7_two_component_singleton_closure_audit.md"
+expected_source_sha256 = "a68b0f0efe5b526d050261fbec3e0c3df47a96d022cb90f95ae5b3ca9616d8d4"
+scope = "the frozen 129-boundary residual in an actual exact-seven (1,2) full-subgraph packing separation"
+hypotheses = [
+  "the host is seven-connected, K7-minor-free, and every proper minor is six-colourable",
+  "the rich open shore has exactly two components, one of which is a singleton",
+]
+conclusions = ["the stated residual configuration is impossible"]
+
+[[claims]]
+id = "hc7.two_full_shore_boundary_absorption"
+title = "Two-full-shore boundary absorption"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_full_shore_boundary_absorption.md"
+source_heading = "Theorem 1 (boundary absorption)"
+active = true
+audit = "results/hc7_two_full_shore_boundary_absorption_audit.md"
+expected_source_sha256 = "f66559a43b49cdf77963f3dd64066f71da9defd69a111107e030e5a626602d8d"
+scope = "two anticomplete connected open shores that are each adjacent to every literal vertex of a boundary of order eight or nine in a K7-minor-free host"
+hypotheses = [
+  "the two open shores are nonempty, connected, and anticomplete",
+  "every boundary vertex has a neighbour in each open shore",
+]
+conclusions = [
+  "an order-eight boundary is four-colourable",
+  "an order-nine boundary is four-colourable or isomorphic to K2 joined with C7",
+]
+does_not_prove = [
+  "that the exceptional universal pair is a global two-vertex transversal",
+  "that a four-colouring of the boundary extends compatibly through both closed shores",
+]
+
+[[claims]]
 id = "hc7.degree7_matching_rooted_separator"
 title = "Exact matching languages and rooted model-carried separator"
 kind = "theorem"
@@ -387,7 +473,8 @@ title = "Palette-permutation linkage and contact consequences"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_adjacent_pair_palette_linkage.md"
-active = false
+source_heading = "Theorem 3.1 (palette-permutation linkage)"
+active = true
 audit = "results/hc7_adjacent_pair_palette_linkage_audit.md"
 expected_source_sha256 = "2b0c30b9d8566f6da4959df145bf0f527249bf887dfa844d19a98e524080a9f2"
 
@@ -865,7 +952,8 @@ title = "Completion of two full shores behind an induced cycle"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_cycle_boundary_completion.md"
-active = false
+source_heading = "Theorem"
+active = true
 scope = "seven-connected host; induced cycle of arbitrary length at least four with two connected full shores and two adjacent universal vertices"
 label_fidelity = "the cycle roots, two universal vertices and the two literal shores"
 audit = "results/hc7_cycle_boundary_completion_audit.md"
@@ -1047,6 +1135,32 @@ audit = "barriers/hc7_aligned_matching_exact_trace_parity_barrier_audit.md"
 expected_source_sha256 = "137a06460e9b448ee661222b3d84c185b1200884a307b65558524f69457ea26a"
 refutes = ["state synchronization from static exact boundary traces alone"]
 lacks = ["proper-minor transition dynamics"]
+
+[[claims]]
+id = "hc7.barrier.four_colour_parity_language"
+title = "Four-colour parity-language state-transfer barrier"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_four_colour_parity_language_barrier.md"
+source_heading = "3. Consequence"
+active = true
+expected_source_sha256 = "961011d6a52b82fbec9016c6846188a5bfa05db40dfb2f5c2f2397598f21ede5"
+refutes = ["a common six-colour boundary equality partition from four-colourability, a target-free two-shore quotient, and exact private-block responses alone"]
+satisfies = ["four-colourable boundary", "target-free two-full-shore join quotient", "exact private-block response for every independent boundary set"]
+lacks = ["an actual contraction-critical host", "seven-connectivity", "global K7-minor exclusion in the uncontracted host"]
+
+[[claims]]
+id = "hc7.barrier.eight_boundary_state_transfer"
+title = "Eight-boundary Gallai--Edmonds state-transfer barrier"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md"
+source_heading = "6. Exact scope"
+active = true
+expected_source_sha256 = "76666dbd1a748f6f4b1048d16eb959bf96524ed1604f38227aea1c3c1618ab16"
+refutes = ["alignment of two shore colouring languages from static Gallai--Edmonds data and two named boundary-edge transitions alone"]
+satisfies = ["seven-connectivity and chromatic number seven", "connected full shores", "target-free two-shore quotient", "exact named-edge and independent-block responses"]
+lacks = ["global K7-minor exclusion in the host", "six-colourability of every proper minor", "specified literal minor-model branch sets"]
 
 [[claims]]
 id = "hc7.barrier.three_common_profile"
@@ -2131,6 +2245,127 @@ kind = "guarded_by"
 source = "hc7.target.adjacent_pair_model_or_separator"
 target = "hc7.barrier.three_common_profile"
 kind = "guarded_by"
+
+[[relations]]
+source = "hc7.degree7_antineighbourhood_connectivity"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+note = "The two-component contradiction uses the canonical exact-seven packing theorem to orient the actual separation as (1,2)."
+evidence_source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
+evidence_heading = "Theorem 1 (degree-seven anti-neighbourhood connectivity)"
+evidence_start_line = 58
+evidence_end_line = 67
+evidence_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
+
+[[relations]]
+source = "hc7.degree7_antineighbourhood_connectivity"
+target = "hc7.exact7_two_component_singleton_closure"
+kind = "uses"
+note = "After the (1,2) orientation and residual classification, the singleton component theorem excludes the final two boundary graphs."
+evidence_source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
+evidence_heading = "Theorem 1 (degree-seven anti-neighbourhood connectivity)"
+evidence_start_line = 69
+evidence_end_line = 82
+evidence_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
+
+[[relations]]
+source = "hc7.degree7_antineighbourhood_connectivity"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "related_to"
+note = "The written proof invokes the legacy-audited adaptive (1,3) result, but that source remains outside the proved dependency DAG until its audit is pinned to the full current source hash."
+evidence_source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
+evidence_heading = "Theorem 1 (degree-seven anti-neighbourhood connectivity)"
+evidence_start_line = 47
+evidence_end_line = 63
+evidence_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
+
+[[relations]]
+source = "hc7.degree7_antineighbourhood_connectivity"
+target = "hc7.exact7_adaptive_12_boundary_closure"
+kind = "related_to"
+note = "The written proof invokes the legacy-audited adaptive (1,2) classification, but that source remains outside the proved dependency DAG until its audit is pinned to the full current source hash."
+evidence_source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
+evidence_heading = "Theorem 1 (degree-seven anti-neighbourhood connectivity)"
+evidence_start_line = 69
+evidence_end_line = 82
+evidence_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.split_boundary_synchronization"
+kind = "uses"
+note = "A component-missing descent with a split seven-vertex boundary closes by the audited synchronization theorem."
+evidence_source = "active/hc7_degree7_model_separator_frontier.md"
+evidence_heading = "Exact-seven first-entry and separator-excess reduction"
+evidence_start_line = 423
+evidence_end_line = 429
+evidence_sha256 = "2d09a601511308dbf34d05db00564d0f8ce172038754cd755b353899ff30e56e"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact_block_kempe_reduction"
+kind = "uses"
+note = "The degree-seven programme uses the pole-free exact-block path inside the sole exterior component through the audited anti-neighbourhood corollary."
+evidence_source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
+evidence_heading = "Corollary 2 (the pole-free bridge lies in the sole exterior component)"
+evidence_start_line = 87
+evidence_end_line = 112
+evidence_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_rooted_k5_connector_separator"
+kind = "uses"
+note = "The target's model-carried obstruction is the rooted-K5 connector-or-full-separator dichotomy."
+evidence_source = "active/hc7_degree7_model_separator_frontier.md"
+evidence_heading = "3. The model-carried obstruction"
+evidence_start_line = 61
+evidence_end_line = 84
+evidence_sha256 = "2d09a601511308dbf34d05db00564d0f8ce172038754cd755b353899ff30e56e"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.cycle_boundary_completion"
+kind = "related_to"
+note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
+evidence_source = "RESEARCH_LEDGER.md"
+evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
+evidence_start_line = 722
+evidence_end_line = 749
+evidence_sha256 = "36ce7423cf9d72f59859bb09c0b67954cdc83e51c7f4b73f29d30d8c209fcd10"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.four_colour_parity_language"
+kind = "guarded_by"
+note = "Four-colourability, the target-free two-shore quotient and exact independent-block responses do not by themselves synchronize the shore colourings."
+evidence_source = "barriers/hc7_four_colour_parity_language_barrier.md"
+evidence_heading = "3. Consequence"
+evidence_start_line = 76
+evidence_end_line = 93
+evidence_sha256 = "961011d6a52b82fbec9016c6846188a5bfa05db40dfb2f5c2f2397598f21ede5"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.eight_boundary_state_transfer"
+kind = "guarded_by"
+note = "Even canonical matching data and two named boundary-edge transitions leave the two full-shore extension languages disjoint without the missing host-level hypotheses."
+evidence_source = "barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md"
+evidence_heading = "6. Exact scope"
+evidence_start_line = 185
+evidence_end_line = 211
+evidence_sha256 = "76666dbd1a748f6f4b1048d16eb959bf96524ed1604f38227aea1c3c1618ab16"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.two_colourful_sets"
+kind = "guarded_by"
+note = "Connectivity and two colourful root sets do not supply one simultaneously rooted model; the positive theorem must retain K6-minor exclusion and the contraction-critical lift."
+evidence_source = "barriers/hc7_two_colorful_sets_paired_k4_barrier.md"
+evidence_heading = "3. Why this is not the `HC_7` residue"
+evidence_start_line = 72
+evidence_end_line = 90
+evidence_sha256 = "f9d41fdffb6ca5a7bbc54cd67a5491aae7e6fdf12d03c8725403b7a4abfb8e6f"
 
 [[verifiers]]
 id = "degree-nine-pole-completion"
