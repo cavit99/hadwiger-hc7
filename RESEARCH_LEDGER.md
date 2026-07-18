@@ -1816,8 +1816,38 @@ classification or computation as well as a written reduction.
     residue.  This computer-assisted census does not synchronize a
     proper-minor response and is not an unbounded closure.
 
+    The remaining two component counts now share one unbounded dynamic
+    reduction.  The eight-vertex boundary is five-degenerate, and deleting
+    any fixed nonempty independent boundary class leaves a four-degenerate
+    graph.  Hence the full six-colour boundary space, and every exact-block
+    five-colour subspace, is Kempe connected.  Extension through a named
+    complementary component can change across one boundary Kempe move only
+    when that literal component contains a bichromatic path joining two
+    boundary two-colour components.  With two full components, a shortest
+    transition between the disjoint extension sets gives such a path at
+    each end.  With three components, deletion or exact-block contraction
+    gives three pairwise-extension anchor colourings in one connected
+    transition space, and every component occurs on a signature-changing
+    edge.
+
+    For each of the 82 three-component boundary types this can be sharpened
+    with a second proper-minor operation.  Choose a three-colouring
+    `A|B|{r,z}`.  Either its three-block partition extends through every
+    component-side and glues, or a fixed component is locked in the split
+    partition `A|B|{r}|{z}` and contains a bichromatic `r`--`z` path.
+    Deleting the first edge of that path produces a different
+    demand-at-least-three boundary response and five colour-indexed paths
+    from its internal endpoint to the boundary.  Those paths are pairwise
+    edge-disjoint and may intersect only at vertices of the common endpoint
+    colour.  They need not have distinct first boundary hits and may all
+    return to `r`, so this is a host-level fan localization rather than a
+    `K_7`-minor model.
+
     The precise open theorem is now a **label-preserving external-attachment
-    exchange**: either lower `epsilon` while retaining the two named
+    exchange**: diversify the first hits of the locked fan or a two-shore
+    signature-change path into the inherited named branch sets, or turn
+    their concentration into a compatible exact-seven separator.  The
+    alternatives remain to lower `epsilon` while retaining the two named
     connected subgraphs and the boundary equality data, synchronize an
     exact order-seven boundary, or construct an explicit `K_7`-minor model.
     At minimal positive excess it may equivalently close the remaining
@@ -1834,6 +1864,7 @@ classification or computation as well as a written reduction.
     [excess-one labelled descent](results/hc7_epsilon_one_labelled_descent.md),
     [four-component order-eight closure](results/hc7_full_order8_four_component_closure.md),
     [three-component boundary classification](results/hc7_order8_three_component_boundary_classification.md),
+    [full-component Kempe-transition theorem](results/hc7_order8_full_component_kempe_transition.md),
     [two-full-shore boundary absorption](results/hc7_two_full_shore_boundary_absorption.md),
     and [cycle-boundary completion](results/hc7_cycle_boundary_completion.md),
     each with an adjacent internal audit.  The fixed compressed three-path

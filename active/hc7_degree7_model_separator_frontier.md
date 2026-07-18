@@ -422,8 +422,16 @@ three-component order-eight interfaces remain.
 
 For the exactly-two-component remainder, the two-full-shore boundary-
 absorption theorem makes the order-eight boundary four-colourable.  It
-does not align the two closed-shore colourings or produce a common labelled
-boundary partition.
+does not by itself align the two closed-shore colourings.  The new
+full-component Kempe-transition theorem supplies the missing dynamic
+coupling: the boundary is five-degenerate, and, after fixing any nonempty
+independent boundary set as one exact colour class, every labelled boundary
+colouring lies in one Kempe component.  A shortest transition between the
+two disjoint shore-extension sets has a literal bichromatic obstruction
+path in the first component at one end and in the other component at the
+opposite end.  If the transition has length one, the same boundary
+interchange is obstructed on both sides.  The paths are not yet proved to
+meet the inherited branch sets in the required labelled pattern.
 
 The component-missing branch is sharper than a bare separator return.  Its
 new seven-vertex boundary has exact-block-complete extension languages on
@@ -438,19 +446,29 @@ literal; what remains open is nonsplit four-colour state transfer.
 For three full components at order eight, compact boundary `K_4` models
 and clique odd-cycle transversals already close.  An audited exhaustive
 eight-vertex census leaves 82 boundary types, all three-colourable and all
-containing two vertex-disjoint odd cycles.  This is a finite normal form,
-not a proof: the selected proper-minor response need not be one of the
-three-colour partitions.
+containing two vertex-disjoint odd cycles.  The same transition theorem now
+turns this finite normal form into literal host geometry.  Every survivor
+has a three-colouring `A|B|{r,z}`.  Either that exact three-block partition
+extends through all three component-sides and glues, or one component is
+locked in the split partition `A|B|{r}|{z}` and contains a bichromatic
+`r`--`z` path.  Deleting the first boundary--component edge of that path
+forces a different, demand-at-least-three response and five colour-indexed
+paths from the internal endpoint back to the boundary.  The five paths are
+edge-disjoint and can meet only at vertices of their common endpoint colour,
+but they may all return to `r`; they are not yet five labelled branch-set
+contacts.
 
 Thus the next theorem has only two legitimate
 forms:
 
-1. a label-preserving nested-separation exchange which lowers the literal
-   separator excess while retaining the named subgraphs and equality data;
-   or
-2. a proper-minor colouring or explicit minor construction closing the
-   two-component interface or turning the three-component finite normal
-   form into a common boundary partition.
+1. a first-hit allocation theorem which converts the locked edge-deletion
+   fan or one of the two-shore signature-change paths into two disjoint
+   connected subgraphs with the required literal contacts; or
+2. a compatible full-neighbourhood-separator theorem which turns
+   concentration of those paths into an actual order-seven boundary with
+   one equality partition extending through both closed shores, or strictly
+   lowers separator excess while retaining the named subgraphs and equality
+   data.
 
 The fixed eighteen-label quotient at the end of the three-path branch is
 already closed by three explicit `K_7`-minor models.  A verified sharpness

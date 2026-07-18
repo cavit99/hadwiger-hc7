@@ -44,6 +44,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [excess-one descent with literal boundary data](../results/hc7_epsilon_one_labelled_descent.md)
 - [four full components close an order-eight boundary](../results/hc7_full_order8_four_component_closure.md)
 - [three-component order-eight boundary classification](../results/hc7_order8_three_component_boundary_classification.md)
+- [Kempe transitions across two or three full order-eight components](../results/hc7_order8_full_component_kempe_transition.md)
 - [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
 - [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
 - [root-protected double-loss closure](../results/hc7_root_protected_double_loss_closure.md)

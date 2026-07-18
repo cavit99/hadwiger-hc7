@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Boundary-edge contact exchange or compatible separator"
 active = true
-expected_source_sha256 = "0235383e818a2b837d9bdc38a0571ec86d3986e214a08ea790ddc89cc060de75"
+expected_source_sha256 = "22bc2ffaaa759885ed8b04a5834325f0e45a0cb2a042f3596f40fb685278805c"
 scope = "the degree-eight interface arising inside the degree-seven-derived two-pair disk configuration of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
 separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
@@ -1722,6 +1722,34 @@ scope = "computer-assisted classification of the eight-vertex boundary after thr
 conclusions = ["compact K4 models and clique odd-cycle transversals close", "82 boundary types survive", "all survivors are three-colourable and contain two disjoint odd cycles"]
 does_not_prove = ["an unbounded host closure", "selection of a common proper-minor boundary partition"]
 
+[[claims]]
+id = "hc7.order8_full_component_kempe_transition"
+title = "Kempe transitions across boundary-full order-eight components"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_full_component_kempe_transition.md"
+active = true
+audit = "results/hc7_order8_full_component_kempe_transition_audit.md"
+expected_source_sha256 = "2ee9a566e57e27983d8c17c54621768fd228c02a1f0f533db7c727010fc60575"
+scope = "any boundary-full order-eight interface with two or three complementary components, with a specialised conclusion for the 82 three-component boundary types"
+label_fidelity = "labelled boundary colourings, exact independent colour blocks, literal complementary components and literal bichromatic obstruction paths"
+colour_compatibility = "all exact-block boundary colourings lie in one Kempe class; extension signatures still need not coincide"
+conclusions = [
+  "the boundary is five-degenerate and deleting any nonempty independent set leaves a four-degenerate graph",
+  "every signature-changing Kempe move lifts to a literal bichromatic path through the named complementary component",
+  "two complementary components give obstruction paths at the opposite ends of a shortest exact-block transition",
+  "three complementary components give a transition tree with a signature-changing path in every component",
+  "each of the 82 finite boundary types either glues or yields a locked boundary path and a five-colour edge-deletion fan in one literal component",
+]
+does_not_prove = [
+  "closure of the two-component interface",
+  "closure of the three-component interface",
+  "simultaneous or vertex-disjoint obstruction paths",
+  "allocation of palette colours to the five inherited clique-minor branch sets",
+  "an order-seven compatible separator",
+  "HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.epsilon_one_labelled_descent"
@@ -1735,6 +1763,11 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_three_component_boundary_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_full_component_kempe_transition"
 kind = "uses"
 
 [[relations]]
@@ -2412,9 +2445,9 @@ kind = "uses"
 note = "A component-missing descent with a split seven-vertex boundary closes by the audited synchronization theorem."
 evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
-evidence_start_line = 428
-evidence_end_line = 436
-evidence_sha256 = "0235383e818a2b837d9bdc38a0571ec86d3986e214a08ea790ddc89cc060de75"
+evidence_start_line = 436
+evidence_end_line = 444
+evidence_sha256 = "22bc2ffaaa759885ed8b04a5834325f0e45a0cb2a042f3596f40fb685278805c"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2436,7 +2469,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "0235383e818a2b837d9bdc38a0571ec86d3986e214a08ea790ddc89cc060de75"
+evidence_sha256 = "22bc2ffaaa759885ed8b04a5834325f0e45a0cb2a042f3596f40fb685278805c"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2447,7 +2480,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 722
 evidence_end_line = 749
-evidence_sha256 = "56114200aa51a5079aa6a65aa96b3b3383ed896a777ebb2ff74674974cb1755e"
+evidence_sha256 = "7bd4488fc15d42657406f99627875aee86fe880aac484c9b6b03b046372e2bca"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
