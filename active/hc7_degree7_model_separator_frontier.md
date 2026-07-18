@@ -368,6 +368,65 @@ subgraph and is not minor-minimal.  Consequently, any positive first-hit
 allocation theorem must use global `K_7`-minor exclusion or proper-minor
 responses away from the selected edge.
 
+### Exact-seven first-entry and separator-excess reduction
+
+The exact-seven separator branch now has a common orientation.  If the
+six-coloured shore contains two disjoint connected subgraphs adjacent to
+every boundary vertex, every boundary equality partition of demand at most
+two reflects.  The only survivors are
+
+\[
+  D\mid E\mid\{r\}\mid\{z\}
+  \quad(rz\notin E(G)),
+  \qquad\text{and}\qquad
+  D\mid E\mid\{r,z\},
+  \qquad |D|=3,\ |E|=2.
+\]
+
+In either case a bichromatic `r`--`z` path exists in that shore and every
+such path meets the same two named boundary-full connected subgraphs.  If
+the shore has full-subgraph packing number one and a boundary-contact
+transversal of order at most two, the alternative is an actual order-seven
+separation, a repair subgraph disjoint from a boundary-full residual
+subgraph, or a labelled alternating Two-Paths web.
+
+For the hard exact-seven `(1,2)` case, a non-direct first-entry component
+with at least five boundary contacts is closed by the audited defect-two
+contraction theorem.  Hence every non-direct survivor has at most four
+boundary contacts and at least three distinct attachment vertices in the
+two named full subgraphs.  This is a host-level bridge condition, not an
+endpoint quotient.
+
+There is a compatible numerical reduction.  When the path avoids one named
+full subgraph and leaves a connected residual `R` in the other, let
+`Lambda` be the boundary contacts lost by `R` and put `U=N_G(R)-S`.  Every
+failed boundary-block allocation satisfies
+
+\[
+ |U|\ge|\Lambda|\ge2,
+ \qquad
+ \varepsilon(R)=|N_G(R)|-7=|U|-|\Lambda|\ge0.
+\]
+
+The equality case is an actual order-seven separation.  A nested
+full-neighbourhood argument strictly lowers this excess whenever a
+component behind `N_G(R)` misses one of its boundary vertices.  At the
+first positive value, failure of descent is exactly a boundary-full
+order-eight interface.  Thus the next theorem has only two legitimate
+forms:
+
+1. a label-preserving nested-separation exchange which lowers the literal
+   separator excess while retaining the named subgraphs and equality data;
+   or
+2. a proper-minor colouring or explicit minor construction closing the
+   boundary-full order-eight interface.
+
+The fixed eighteen-label quotient at the end of the three-path branch is
+already closed by three explicit `K_7`-minor models.  A verified sharpness
+example shows why the complete fifth labelled far-side contact is
+indispensable.  The open issue is therefore compression with all five
+labels, not another finite quotient census.
+
 If curvature instead returns a degree-seven vertex, its neighbourhood is
 already an exact order-seven boundary.  The remaining task there is colour
 synchronization or an explicit minor, not regeneration of another
@@ -418,6 +477,13 @@ through label-preserving contacts with the five named connected subgraphs.
 - [exact-seven boundary-full connected-subgraph packing](../results/hc7_exact_seven_packet_packing.md)
 - [root-protected double-loss closure](../results/hc7_root_protected_double_loss_closure.md)
 - [rooted `K_5`: reserved connector or full separator](../results/hc7_exact7_rooted_k5_connector_separator.md)
+- [exact-seven orientation by boundary-full connected subgraphs](../results/hc7_exact7_packet_orientation_corollary.md)
+- [two-vertex boundary-contact transversal](../results/hc7_two_vertex_boundary_contact_transversal.md)
+- [non-direct first-entry bridge reduction](../results/hc7_exact7_first_entry_bridge_reduction.md)
+- [path-residual separator excess](../results/hc7_small_path_intersection_lobe.md)
+- [nested full-neighbourhood descent](../results/hc7_nested_full_neighbourhood_descent.md)
+- [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
+- [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
 - [exact-block bounded-interface reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [shortest-path normalization barrier](../barriers/hc7_one_spoke_shortest_path_barrier.md)
 - [multicoloured-row response barrier](../barriers/hc7_multicoloured_row_response_barrier.md)
@@ -432,3 +498,6 @@ through label-preserving contacts with the five named connected subgraphs.
 - [two-edge deletion-lattice barrier](../barriers/hc7_two_edge_deletion_lattice_barrier.md)
 - [stable-theta/three-path matching-defect barrier](../barriers/hc7_stable_theta_three_path_matching_barrier.md)
 - [paired-block exact-trace parity barrier](../barriers/hc7_exact7_paired_block_trace_parity_barrier.md)
+- [boundary-local operation parity barrier](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)
+- [first-entry geometric-minimality barrier](../barriers/hc7_first_entry_packet_minimality_barrier.md)
+- [missing fifth far-side contact barrier](../barriers/hc7_three_path_missing_five_row_barrier.md)

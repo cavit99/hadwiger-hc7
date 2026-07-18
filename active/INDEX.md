@@ -36,6 +36,13 @@ Immediate proved inputs, each with an adjacent audit:
 - [low-order separators inside a boundary-full component](../results/hc7_boundary_full_component_low_cut_reduction.md)
 - [universal boundary-contact vertex split in a three-connected component](../results/hc7_boundary_full_universal_vertex_split.md)
 - [exact-seven boundary-full connected-subgraph packing](../results/hc7_exact_seven_packet_packing.md)
+- [exact-seven orientation by boundary-full connected subgraphs](../results/hc7_exact7_packet_orientation_corollary.md)
+- [two-vertex boundary-contact transversal](../results/hc7_two_vertex_boundary_contact_transversal.md)
+- [non-direct first-entry bridge reduction](../results/hc7_exact7_first_entry_bridge_reduction.md)
+- [path-residual separator excess](../results/hc7_small_path_intersection_lobe.md)
+- [nested full-neighbourhood descent](../results/hc7_nested_full_neighbourhood_descent.md)
+- [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
+- [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
 - [root-protected double-loss closure](../results/hc7_root_protected_double_loss_closure.md)
 - [rooted `K_5` connector-or-separator theorem](../results/hc7_exact7_rooted_k5_connector_separator.md)
 - [two-connected boundary-core completion](../results/hc7_two_connected_boundary_completion.md)
@@ -62,6 +69,9 @@ Immediate barriers:
 - [the three responses of a two-edge star do not force a fourth boundary partition](../barriers/hc7_two_edge_deletion_lattice_barrier.md)
 - [stable-theta allocation and three packed paths do not force matching cross-defect](../barriers/hc7_stable_theta_three_path_matching_barrier.md)
 - [one- and two-block exact traces do not synchronize the new seven-boundary](../barriers/hc7_exact7_paired_block_trace_parity_barrier.md)
+- [boundary-local operations do not synchronize an exact-seven interface](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)
+- [geometric first-entry minimality does not force a peel](../barriers/hc7_first_entry_packet_minimality_barrier.md)
+- [three-path geometry without the fifth labelled contact is insufficient](../barriers/hc7_three_path_missing_five_row_barrier.md)
 
 ## General bounded-interface continuation
 

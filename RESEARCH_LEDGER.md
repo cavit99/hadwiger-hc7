@@ -1716,6 +1716,90 @@ classification or computation as well as a written reduction.
     which every literal `K_5` contains `p`, and the smaller star and triangle
     kernels, remain open.
 
+21. **Exact-seven first entry now has a host-measured separator excess.**
+    Orient an actual order-seven separation toward a six-coloured shore and
+    write its high-demand boundary partition as
+
+    $$
+       D\mid E\mid\{r\}\mid\{z\}
+       \quad\text{or}\quad
+       D\mid E\mid\{r,z\},
+       \qquad |D|=3,\ |E|=2.
+    $$
+
+    If that shore contains two disjoint connected subgraphs adjacent to
+    every boundary vertex, every other boundary partition reflects and
+    six-colours `G`; in either displayed partition a prescribed
+    bichromatic `r`--`z` path exists and every such path meets the same two
+    named subgraphs.  No adjacency between those two subgraphs is needed.
+    If instead the shore has full-subgraph packing number one and a
+    boundary-contact transversal of order at most two, it gives an actual
+    order-seven separation, a repair subgraph disjoint from a boundary-full
+    residual subgraph, or a labelled alternating Two-Paths web.
+
+    In the hard `(1,2)` orientation, a non-direct first entry has a connected
+    prefix component `K`.  If `K` contacts at least five boundary vertices,
+    the audited defect-two contraction theorem synchronizes the shore
+    colourings.  Every survivor therefore satisfies
+
+    $$
+       |N_G(K)\cap S|\le4,
+       \qquad
+       |N_G(K)\cap(P_1\cup P_2)|\ge3.
+    $$
+
+    Thus an entire unbounded broad-support family is closed.  A verified
+    six-connected `K_7`-minor-free example shows that lexicographic
+    path/subgraph minimality alone cannot peel a direct first entry; the
+    seventh connectivity unit and proper-minor colour responses are
+    essential.
+
+    There is also a scalar host invariant.  Suppose a forced path avoids
+    the second named boundary-full subgraph and leaves a nonempty connected
+    residual `R` in the first.  Let `Lambda` be the boundary contacts lost
+    by `R` and put `U=N_G(R)-S`.  Failure of the explicit boundary-block
+    contractions forces
+
+    $$
+       |U|\ge|\Lambda|\ge2,
+       \qquad
+       \varepsilon(R)=|U|-|\Lambda|=|N_G(R)|-7\ge0.
+    $$
+
+    Equality is an actual order-seven separation.  When `|U|\le2`, the
+    two lost boundary contacts are classified exactly: they are either
+    `\{r,z\}` or one vertex of `D` and one of `E` in the four-block case,
+    and necessarily the latter in the three-block case.
+
+    Nested full-neighbourhoods identify the next obstruction.  For a
+    connected side with boundary `X` of order `7+epsilon`, every component
+    of `G-X` which misses a vertex of `X` has a full neighbourhood of
+    strictly smaller excess.  At `epsilon=1`, failure of such descent is
+    exactly an eight-vertex boundary for which every component of `G-X` is
+    adjacent to every boundary vertex.  In a `K_7`-minor-free graph, if
+    there are `m` such components and `Q` is a boundary clique, then
+    `m+|Q|\le6`.
+
+    The precise open theorem is now a **label-preserving external-attachment
+    exchange**: either lower `epsilon` while retaining the two named
+    connected subgraphs and the boundary equality data, synchronize an
+    exact order-seven boundary, or construct an explicit `K_7`-minor model.
+    At minimal positive excess it may equivalently close the resulting
+    boundary-full order-eight interface.  Separator order alone is
+    insufficient because the new boundary can cut through one of the named
+    subgraphs and four-colourability does not synchronize shore extensions.
+
+    The written sources are the
+    [exact-seven orientation theorem](results/hc7_exact7_packet_orientation_corollary.md),
+    [non-direct first-entry reduction](results/hc7_exact7_first_entry_bridge_reduction.md),
+    [path-residual separator-excess theorem](results/hc7_small_path_intersection_lobe.md),
+    and [nested full-neighbourhood descent](results/hc7_nested_full_neighbourhood_descent.md),
+    each with an adjacent internal audit.  The fixed compressed three-path
+    quotient is closed by
+    [three explicit minor models](results/hc7_atomic_three_path_quotient_completion.md),
+    but the missing label-preserving compression into that quotient remains
+    open.
+
 The most recent end-to-end composition theorem in item 11 is
 [`hc7_three_split_marked_mader_branch_closure.md`](results/hc7_three_split_marked_mader_branch_closure.md),
 with its adjacent audit.  The weighted separation and Kempe-component inputs
