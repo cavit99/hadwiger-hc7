@@ -2,17 +2,16 @@
 
 > **Research status:** $HC_7$ is not proved in this repository.
 
-This is an open research workspace devoted to the first unresolved case of
-Hadwiger's Conjecture. It contains partial theorems, proof attempts,
-computer-assisted finite classifications, internal audit notes, and explicit
-counterexamples to proposed intermediate lemmas. It is not a claimed proof
-of $HC_7$, and the internal audits are not external peer review.
+This is an open research workspace on the first unresolved case of
+Hadwiger's Conjecture.  It contains partial theorems, proof attempts,
+computer-assisted finite results, internal audits, and counterexamples to
+intermediate claims.  The audits are not external peer review.
 
 ## The problem
 
 A $K_t$-minor model in a graph $G$ consists of $t$ pairwise disjoint
-connected branch sets, with an edge between every pair of branch sets.
-Hadwiger's Conjecture asserts
+connected branch sets, with an edge between every pair.  Hadwiger's
+Conjecture asserts
 
 $$
 K_t\not\preccurlyeq G\quad\Longrightarrow\quad \chi(G)\le t-1.
@@ -20,172 +19,128 @@ $$
 
 The conjecture is known for $t\le6$; the $t=6$ case is due to
 [Robertson, Seymour, and Thomas](https://doi.org/10.1007/BF01202354),
-building on the Four-Colour Theorem. Write $HC_7$ for the assertion at
-$t=7$:
+building on the Four-Colour Theorem.  This repository studies
 
 $$
-K_7\not\preccurlyeq G\quad\Longrightarrow\quad \chi(G)\le6.
+HC_7:\qquad K_7\not\preccurlyeq G\quad\Longrightarrow\quad\chi(G)\le6.
 $$
 
 ## Current programme
 
-Assume, for contradiction, that $G$ is minor-minimal with $\chi(G)=7$ and
-no $K_7$ minor. Then every proper minor of $G$ is six-colourable, so $G$ is
-7-contraction-critical; [Mader's theorem](https://eudml.org/doc/161665)
-implies that $G$ is seven-connected.
+Assume that $G$ is a minor-minimal counterexample.  Then $G$ is
+seven-connected, $\chi(G)=7$, has no $K_7$ minor, and every proper minor is
+six-colourable.
 
-The current programme starts from a uniform adjacent-pair theorem.  A
-result of Kawarabayashi, Pedersen, and Toft on double-critical
-seven-chromatic graphs implies that some edge `zu` satisfies
+The present proof spine reduces every such $G$ to a bounded, literal graph
+separation.  There are a vertex $u$ of degree seven, eight, or nine, a
+component $C$ of $G-N[u]$, and
 
 $$
-                         \chi(G-\{z,u\})=6.
+S=N(C)\subseteq N(u),\qquad 7\le |S|\le9,
 $$
 
-The five-connected remainder has a spanning `K_6` model.  An audited
-proper-minor colouring argument also gives a nonempty colour class missed
-by both endpoints, five other colours seen by both, and five simultaneous
-vertex-disjoint paths whose endpoint colours form the two complete
-five-colour palettes.  This structure exists in every hypothetical
-minor-minimal counterexample, not only in one finite boundary case.
+such that both open sides contain a connected subgraph adjacent to every
+vertex of $S$.  The boundary $G[S]$ is four-colourable.  Both closed shores
+realize every independent subset of $S$ as one exact boundary colour class,
+and the second endpoint of the adjacent-pair colouring framework can be
+chosen on this same boundary.
 
-Audited colouring theorems now control every pair of colours around such a
-contraction.  For a connected induced bipartite subgraph, both sides see
-every other colour.  Each colour supplies a common bichromatic component,
-and every pair of other colours supplies a diagonal component forced by
-nonextendability.  Matchings of colour pairs therefore give simultaneous
-vertex-disjoint connected witnesses.  Whenever the relevant boundary
-contacts occupy more than one component, the full neighbourhood of a
-component is an actual graph separator.  These separators need not yet
-have order seven.
+Several infinite branches are now closed:
 
-If all five full two-colour graphs through the missed colour are connected,
-the structure compresses further.  The union of any one other colour with
-the missed colour is a connected dominating induced bipartite subgraph
-`X`.  The graph `G-X` is five-chromatic and `K_6`-minor-free, and deleting
-either endpoint of the selected edge leaves a five-chromatic graph.
-Martinsson--Steiner's prescribed-singleton theorem then produces two
-oppositely rooted near-`K_7` models.  This compression no longer depends on
-preserving the original spanning `K_6` model.
+- every split boundary has compatible shore colourings and glues;
+- a boundary with an adjacent pair complete to a two-connected remainder
+  forces a $K_7$ minor under the full-shore hypotheses; and
+- the earlier induced-cycle completion is a special case of that theorem.
 
-These alternatives have been combined into one audited exhaustive theorem
-for the selected adjacent-pair colouring: a disconnected two-colour graph
-returns a genuine separator, while the separator-free case returns all
-five connected-dominating cores.  The theorem supplies no upper bound on a
-returned separator and does not yet synchronize the two rooted models.
+The degree-seven branch now has a stronger uniform description.  The graph
+$G-N[u]$ is one connected component.  Boundary equality partitions are
+encoded by matchings in the complement of $G[N(u)]$: the exterior shore
+realizes exactly the one-edge matchings, while the pole shore realizes
+exactly the matchings of order two or three.  One fixed colouring therefore
+supplies all missing-edge Kempe paths on the five uniquely coloured roots.
+Kriesell--Mohr's five-root theorem packages them into a rooted $K_5$ for
+every repeated boundary pair.
 
-Separately, an audited hand proof shows that every eight-connected
-`K_7`-minor-free graph has at least 17 vertices.  Its new elementary step
-rules out a seven-regular graph on 16 vertices in which every nonadjacent
-pair has four common neighbours.  This is a global order bound, not a proof
-of the palette-to-model exchange.
-
-The immediate constructive target lies in the unique-deficiency branch.
-A colour-matched repair path and a component-defect theorem give an
-explicit `K_7` minor whenever that defect is nonpositive.  At a fixed
-admissible path cut, if all four protected component classes are represented
-by eligible components—each adjacent to `z` and to both path-side anchor
-sets—and the component-contact graph is `K_4`-minor-free, defect one is
-equivalent to the contact graph being a two-tree.  These hypotheses have
-not been proved for every connected-dominating residue.  The next target is
-to use proper-minor colourings at a lifted simplicial degree-two component
-to construct `K_7`, obtain a colour-compatible order-seven separation, or
-produce a new valid instance of the same eligible defect-one setup with a
-strictly smaller lifted simplicial component.  The extremal scaffold is the
-minimum of `|V(L)|` over all eligible simplicial lifted components in all
-valid configurations in the fixed host `G`; no path length or auxiliary
-contact-graph order is part of the proposed rank.  A proof must preserve the
-literal branch-set ownership, valid-cut data, and host edges witnessing all
-required contacts, retaining those witnesses under lifting or supplying
-explicit replacements.  It must also preserve the boundary equality
-partition needed for colour gluing—not only the six colours on adjacent
-two-tree triangles.
-
-One infinite separator family is now closed by a reusable rooted-model
-theorem.  If two adjacent vertices are complete to an induced cycle of
-length at least four, the remainder has exactly two connected shores fully
-adjacent to that boundary, and deleting the adjacent pair leaves a `K_5`
-minor, then the graph has a `K_7` minor.  The theorem eliminates the
-five-chromatic exact order-seven boundary `K_2\vee C_5` in a hypothetical
-counterexample.  It does not close exact order-seven boundaries of
-chromatic number at most four or the conditional defect-one branch.
-
-The previously developed balanced order-eight boundary remains the main
-label-rich laboratory.  There the canonical regenerated `K_6` model is
-reversibly coupled to the old near-complete model, proving that contact
-maximization alone cannot orient the exchange.  Static boundary traces,
-endpoint-only delta-matroids, and unlabelled model regeneration are also
-known to be insufficient.  This is substantive uniform infrastructure,
-not a proof of $HC_7$.
+If the repeated pair cannot be joined disjointly from that rooted model,
+the five named branch sets carry a full separator.  Either an exact
+order-seven separator occurs or seven disjoint paths cross those five bags.
+More strongly, every surviving degree-seven interface contains a
+boundary-labelled model of $K_7$ with one edge deleted or two adjacent edges
+deleted.  The missing pairs share a singleton boundary centre.  The open
+step is to repair those centre incidences using the proper-minor matching
+response, or turn failure into a two-vertex $K_5$-minor transversal or
+compatible colourings across an exact order-seven separator.  This is a
+label-preserving exchange problem; connectivity and unlabelled paths alone
+are known to be insufficient.
 
 ## Start here
 
 | Document | Purpose |
 |---|---|
-| [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Authoritative current status, proved dependency chain, exact open problems, and known obstructions |
-| [`active/INDEX.md`](active/INDEX.md) | Short list of current proof work and immediate dependencies |
-| [Current adjacent-pair frontier](active/hc7_adjacent_pair_palette_model_frontier.md) | Colour-component dichotomy, connected-dominating compression, and immediate rooted-model theorem |
-| [Paired colourful-set `K_4` frontier](active/hc7_two_colorful_sets_rooted_k4_frontier.md) | Exact four-chromatic reduction and the current constructive milestone |
-| [Balanced order-eight laboratory](active/hc7_balanced_order8_frontier.md) | Label-rich special branch retained to test the uniform exchange |
-| [Frozen support-six technical frontier](active/hc7_support_six_frontier.md) | Earlier developed dependency chain retained for reuse |
-| [Research integrity tools](tools/README.md) | Tracked-document search, current-spine dependency graph, audit checks, and deterministic verifier CI |
+| [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Authoritative research status and exact open gap |
+| [`active/INDEX.md`](active/INDEX.md) | Navigation map for live proof work |
+| [Degree-seven near-clique composition](active/hc7_degree7_model_separator_frontier.md) | Current theorem and immediate constructive milestone |
+| [Bounded-interface bridge frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Degree-eight/nine continuation |
+| [Low-degree bounded-interface theorem](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
+| [Boundary-edge alignment](results/hc7_low_degree_boundary_edge_alignment.md) | Places the adjacent-pair endpoint on the same boundary |
+| [Exact-block Kempe reduction](results/hc7_bounded_interface_exact_block_kempe_reduction.md) | Produces the literal pole-free bridge |
+| [Degree-seven anti-neighbourhood connectivity](results/hc7_degree7_anti_neighbourhood_connectivity.md) | Reduces degree seven to one exterior component |
+| [Exact matching languages and rooted-model separator](results/hc7_degree7_matching_bridge_bundle.md) | Uniform degree-seven rooted-model principle |
+| [Boundary-labelled near-`K_7` model](results/hc7_degree7_aligned_near_k7_model.md) | Compresses every degree-seven survivor to one/two adjacent missing edges |
+| [Research integrity tools](tools/README.md) | Search, dependency metadata, audit hashes, and CI checks |
 
-For a specific claim, read the theorem note in [`results/`](results/) together
-with its adjacent `_audit.md` file when one exists. Failed intermediate
-claims and concrete counterexamples are kept in [`barriers/`](barriers/).
+Read a theorem in [`results/`](results/) together with its adjacent
+`_audit.md` file.  Refuted intermediate principles and their exact scope are
+kept in [`barriers/`](barriers/).  Superseded work remains in
+[`archive/`](archive/) for provenance.
 
 ## Claim labels
 
-- **Written proof:** a proof is present, with explicit hypotheses and
-  conclusion.
-- **Separate internal audit:** another agent checked the stated proof; this
-  is not peer review.
-- **Computer-assisted finite result:** a finite reduction or exhaustive
-  classification has retained code and, where practical, independently
-  checkable certificates.
-- **Conjectural target:** an unproved lemma or intended next theorem.
-- **Barrier:** a counterexample to an intermediate lemma, not to Hadwiger's
+- **Written proof:** a proof with explicit hypotheses and conclusion.
+- **Separate internal audit:** an independent agent checked that revision;
+  this is not peer review.
+- **Computer-assisted finite result:** an exact finite reduction with
+  retained code and, where practical, checkable certificates.
+- **Conjectural target:** an unproved next theorem.
+- **Barrier:** a counterexample to an intermediate claim, not to Hadwiger's
   Conjecture.
 
-Computer searches are used to test conjectured lemmas and settle explicitly
-finite interfaces. They are not treated as proofs of unbounded statements.
+Finite computation is used to test conjectured lemmas and settle explicitly
+finite subproblems.  It is never substituted for an unbounded proof.
 
 ## Finding prior work
 
-Every tracked Markdown document, including superseded work in `archive/`, can
-be searched through the disposable SQLite/FTS index:
+Every tracked Markdown file, including archived work, is searchable through
+the disposable SQLite/FTS index:
 
 ```bash
 python3 tools/research_index.py build
-python3 tools/research_index.py search '"component defect"'
-python3 tools/research_index.py context hc7.target.defect_one_exchange
+python3 tools/research_index.py search '"bounded interface"'
+python3 tools/research_index.py context hc7.target.degree7_model_separator
 ```
 
-The curated manifest records only the current proof spine and typed barrier
-relationships.  Search results are discovery leads, not inferred
-mathematical dependencies, and `RESEARCH_LEDGER.md` remains the sole status
-authority.
+The generated index is a discovery aid.  Markdown remains authoritative,
+and `RESEARCH_LEDGER.md` is the sole status authority.
 
 ## Repository layout
 
 ```text
 .
-├── README.md            # stable project overview
+├── README.md            # public overview
 ├── RESEARCH_LEDGER.md   # authoritative research status
-├── AGENTS.md            # workflow and mathematical-writing rules
-├── tools/               # generated research index and integrity checks
-├── results/             # proved lemmas and adjacent audit notes
-├── active/              # current proof work and finite verification code
+├── AGENTS.md            # workflow and proof-integrity rules
+├── tools/               # generated index and integrity checks
+├── results/             # proved claims and adjacent audits
+├── active/              # current proof targets and live scripts
 ├── barriers/            # counterexamples to intermediate claims
 └── archive/             # superseded work retained for provenance
 ```
 
-When contributing, state hypotheses and conclusions in standard
-graph-theoretic language, distinguish written proofs from finite evidence,
-and cite the relevant file and commit. See [`AGENTS.md`](AGENTS.md) for the
-maintenance rules.
+See [`AGENTS.md`](AGENTS.md) before contributing.  Prefer standard
+graph-theoretic language, state exact trust boundaries, and do not modify an
+audited theorem without renewing its audit.
 
 ## Licence
 
-Repository materials are available under the [MIT License](LICENSE). The
+Repository materials are available under the [MIT License](LICENSE).  The
 licence permits reuse; it does not certify the mathematical claims.

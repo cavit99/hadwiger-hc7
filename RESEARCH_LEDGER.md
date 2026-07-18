@@ -6,13 +6,132 @@
 This file records the current mathematical dependency chain. The concise
 list of live files is [`active/INDEX.md`](active/INDEX.md), and the current
 technical statement is
-[`active/hc7_adjacent_pair_palette_model_frontier.md`](active/hc7_adjacent_pair_palette_model_frontier.md).
+[`active/hc7_degree7_model_separator_frontier.md`](active/hc7_degree7_model_separator_frontier.md).
 If an archived note conflicts with this ledger, this ledger governs the
 current programme. The balanced order-eight, two-root, and support-six
 sections retain developed dependency chains but are not by themselves the
 current engine.
 
-## Current strategic frontier: adjacent-pair colouring and rooted models
+## Current strategic frontier: degree-seven boundary-labelled near-clique composition
+
+The bounded-interface entry theorem is global.  Every hypothetical minor-minimal
+counterexample contains a vertex `u` of degree seven, eight, or nine and a
+component `C` of `G-N[u]` whose full boundary `S=N(C)` has order seven,
+eight, or nine.  The boundary is four-colourable, has independence number
+at most four, and both closed shores realize every nonempty independent
+subset of `S` as an exact boundary colour block.  Contracting `C` also
+shows that `overline(K_2) join G[S]` is a `K_7`-minor-free minor.
+
+The adjacent-pair colouring can be aligned with this same interface.  At
+least seven neighbours of `u` meet the exterior.  If all those incident
+edges were double-critical, those neighbours would have at least five
+neighbours in `G[N(u)]`; every remaining neighbour has at least six there
+because it has no exterior neighbour.  The audited degree-seven/eight/nine
+local completion then gives a `K_7` minor.  Hence one may choose
+
+\[
+ z\in S,\qquad \chi(G-\{u,z\})=6.
+\]
+
+Every six-colouring of the edge deletion `G-uz` makes `u,z`
+monochromatic.  On the `C`-shore it gives an exact singleton boundary
+block `{z}`; its complete equality partition cannot extend through the
+opposite original shore.  At degree seven this normalizes to one boundary
+nonedge of the other six vertices and four further singletons.
+
+Two unbounded branches are now closed.  If `G[S]` is split, exact-block
+attainability forces both shores to realize the unique partition consisting
+of the independent part and singleton clique vertices, so they glue.  This
+is sharp at the static level: every nonsplit four-colourable boundary has
+an abstract even/odd partition-language obstruction.  Separately, if the
+boundary has an adjacent pair complete to a two-connected remainder and
+the two open shores are connected and full, Martinsson--Steiner's rooted
+`K_4` planarity lemma gives either an explicit `K_7` model or a planar
+embedding after deleting the pair, contradicting the required `K_5`
+minor.  This strictly generalizes the earlier induced-cycle completion
+theorem.
+
+The remaining nonsplit case now carries literal paths rather than only
+abstract colour responses.  For every `x in S`, the exact-singleton
+boundary cylinder is Kempe-connected: after deleting `x`, the boundary is
+four-degenerate by Mader's density bound, and Las Vergnas--Meyniel applies
+with five colours.  Starting from a six-colouring of the edge deletion
+`G-ux` and lifting a boundary Kempe sequence toward an opposite-shore
+colouring, the first failed lift gives a bichromatic path avoiding `u,x`.
+Its interior lies wholly in one open shore.  On the `u`-side it traverses
+at most three other components of `G-N[u]`, each adjacent to all but at
+most two vertices of `S`.
+
+At degree seven the interface is now substantially sharper.  A new audited
+composition of the exact-seven packet theorems proves that `G-N[u]` is one
+nonempty connected component `C`.  Hence
+
+\[
+                    S=N(u),\qquad A=G-u,
+                    \qquad B=G[N[u]].
+\]
+
+Dirac's inequality makes every boundary colour class a singleton or a pair.
+Writing `F=overline{G[S]}`, the two extension languages are exact:
+
+\[
+ \mathcal M(A)=\{\{e\}:e\in E(F)\},\qquad
+ \mathcal M(B)=\{M:M\text{ is a matching of }F, |M|\ge2\}.
+\]
+
+Thus any chosen nonedge `ab` is the sole repeated pair in one six-colouring
+of `A`; the remaining five boundary roots have five distinct colours.  In
+that same colouring every missing root adjacency has a bichromatic path
+through `C`, with paths for disjoint missing edges vertex-disjoint.  After
+restricting to the five relevant colour classes, Kriesell--Mohr's Theorem 7
+packages this system into a rooted `K_5`, uniformly for every `ab` and
+without Moser labels.
+
+The reserved-connector dichotomy is also audited.  Either the rooted model
+and an `a-b` connector give an explicit `K_7`-minor model, or the five named
+bags contain a minimal `a-b` separator `Z` of order at least six.  Both
+distinguished components are full to `Z`, one bag is hit twice, and
+`Z union {u}` is an actual full separation boundary in `G`.  More sharply,
+either an exact full order-seven separation occurs or seven internally
+vertex-disjoint `a-b` paths all traverse the five rooted bags.
+
+The boundary graph and rooted models now admit a uniform further
+compression.  The nonisolated part of `F` is one two-connected component on
+six or seven vertices.  A degree-two vertex of that component gives a
+boundary-labelled `K_7^-` model.  If no such vertex exists, then
+
+\[
+              F\cong K_{3,4}
+       \quad\text{or}\quad
+              F\cong K_{3,3}\mathbin{\dot\cup}K_1,
+\]
+
+and explicit rooted branch sets give a model of `K_7` with at most two
+missing adjacencies, both incident with one singleton boundary vertex.
+Thus every degree-seven survivor has a boundary-labelled model of `K_7^-`
+or of `K_7` with two adjacent edges deleted.  This theorem is written and
+separately audited; it is stronger than merely regenerating an unlabelled
+near-clique minor.
+
+The immediate open theorem is the **boundary-labelled centre-repair
+theorem**.  The proper-minor matching response and literal first-hit data
+must repair the one/two missing centre adjacencies, yield a pair whose
+deletion is `K_5`-minor-free, or produce a common equality partition on an
+exact order-seven boundary.  A two-vertex `K_5`-minor transversal is
+terminal by the proved `t=5` case.  A matching-only monotonicity argument is
+insufficient: the maximum matchings of a seven-cycle admit a cyclic static
+rebasing.  The proof must therefore spend the operation endpoints, the
+named first-hit bags, or the full neighbourhood of a failed bypass.
+
+This does not prove `HC_7`.  It proves a new uniform boundary-labelled
+near-clique principle and identifies one host-level exchange in the
+degree-seven branch.  The
+bounded-interface theorem remains the continuation for degree eight and
+nine.  The older component-defect programme below is retained as a
+secondary source of explicit branch-set splits, not as a competing primary
+spine.
+
+## Secondary structural laboratory: adjacent-pair colouring and rooted models
 
 A new audited reduction supplies a uniform entry point in every hypothetical
 minor-minimal counterexample.  Kawarabayashi--Pedersen--Toft's theorem for

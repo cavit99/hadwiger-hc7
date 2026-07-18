@@ -2,6 +2,12 @@
 
 Audited file: `results/hc7_exact7_rooted_k5_connector_separator.md`.
 
+Audited SHA-256:
+
+```text
+2ee51a2af500d8d208964e130ac3008e937b2c05dcc1231e7f13cf7ce340dda8
+```
+
 **Verdict:** **GREEN**.
 
 This focused theorem is exactly the independently audited GREEN part of the

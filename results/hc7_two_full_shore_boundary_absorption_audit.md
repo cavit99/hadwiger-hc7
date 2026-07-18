@@ -2,6 +2,9 @@
 
 **Verdict:** GREEN.
 
+**Current audited source hash:**
+`f66559a43b49cdf77963f3dd64066f71da9defd69a111107e030e5a626602d8d`
+
 This audit used a separate rerun and an independent branch-set minor
 checker.  It confirms the reduction and the complete order-eight/nine
 census in `hc7_two_full_shore_boundary_absorption.md`.

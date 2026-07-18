@@ -15,13 +15,73 @@ file = "RESEARCH_LEDGER.md"
 pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
+id = "hc7.target.degree7_model_separator"
+title = "Degree-seven boundary-labelled centre repair"
+kind = "target"
+status = "active-target"
+source = "active/hc7_degree7_model_separator_frontier.md"
+source_heading = "5. Primary open theorem"
+active = true
+scope = "degree-seven vertex in a hypothetical minor-minimal HC7 counterexample"
+label_fidelity = "one fixed colouring and a boundary-labelled K7 model with one/two adjacent missing centre edges"
+separator_order = "six in G-u or seven after adjoining u; larger separators carry sevenfold linkage"
+colour_compatibility = "open"
+hypotheses = [
+  "connected degree-seven anti-neighbourhood",
+  "exact one-edge versus size-at-least-two matching languages",
+  "same-colouring Kempe path system and rooted K5 for every boundary nonedge",
+  "proper-minor matching response inside a multiply hit rooted bag",
+]
+allowed_exits = [
+  "explicit K7-minor model",
+  "two vertices whose deletion is K5-minor-free",
+  "one equality partition realised by both closed shores of an actual order-seven separation",
+]
+does_not_prove = [
+  "HC7",
+  "existence of a degree-seven vertex in every hypothetical counterexample",
+  "the corresponding degree-eight or degree-nine exchange",
+]
+keywords = ["degree seven", "exact matching language", "rooted K5", "model-carried separator"]
+
+[[claims]]
+id = "hc7.target.bounded_interface_bridge"
+title = "Bounded-interface pole-free bridge composition"
+kind = "target"
+status = "frozen"
+source = "active/hc7_bounded_interface_synchronization_frontier.md"
+source_heading = "4. Primary open theorem"
+active = false
+scope = "every hypothetical minor-minimal HC7 counterexample"
+label_fidelity = "literal boundary vertices, operation endpoints and host paths"
+separator_order = "seven through nine; strict host-component descent allowed"
+colour_compatibility = "open"
+strict_parameter = "order of the chosen literal anti-neighbourhood component in the fixed host"
+hypotheses = [
+  "low-degree boundary-aligned adjacent pair",
+  "nonsplit four-colourable boundary of order seven, eight or nine",
+  "pole-free bichromatic paths returned by failed exact-singleton Kempe lifts",
+]
+allowed_exits = [
+  "explicit K7-minor model",
+  "one boundary equality partition realised by both closed shores",
+  "another full instance of the bounded-interface setup in the same host with a strictly smaller anti-neighbourhood component and preserved named response",
+]
+does_not_prove = [
+  "HC7",
+  "compatibility of arbitrary abstract boundary-extension languages",
+  "a branch-set split from one unlabelled bichromatic path",
+]
+keywords = ["bounded separator", "Kempe path", "colour gluing", "low degree"]
+
+[[claims]]
 id = "hc7.target.adjacent_pair_model_or_separator"
 title = "Adjacent-pair model synchronization or colour-compatible separation"
 kind = "target"
-status = "active-target"
+status = "frozen"
 source = "active/hc7_adjacent_pair_palette_model_frontier.md"
 source_heading = "3. Primary open theorem"
-active = true
+active = false
 scope = "unbounded host graph"
 label_fidelity = "literal host vertices and named branch sets"
 separator_order = "exact seven required"
@@ -46,10 +106,10 @@ keywords = ["adjacent pair", "component defect", "colour-compatible separation",
 id = "hc7.target.defect_one_exchange"
 title = "Defect-one two-tree exchange or colour-gluing theorem"
 kind = "target"
-status = "active-target"
+status = "frozen"
 source = "active/hc7_two_colorful_sets_rooted_k4_frontier.md"
 source_heading = "4. The deficient component and its expanded boundary"
-active = true
+active = false
 scope = "conditional unique-deficiency branch in the host graph"
 label_fidelity = "literal lifted residual components and named path-side anchors"
 separator_order = "at least seven; exact seven is an allowed exit"
@@ -89,12 +149,136 @@ preserves = [
 keywords = ["component defect", "two-tree", "simplicial component", "common-hole law"]
 
 [[claims]]
+id = "hc7.low_degree_adjacent_pair_alignment"
+title = "Low-degree adjacent pair and bounded full separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_low_degree_adjacent_pair_alignment.md"
+active = true
+audit = "results/hc7_low_degree_adjacent_pair_alignment_audit.md"
+expected_source_sha256 = "263611a40dc7829788967250e031a3f3170e1c7a6c8c9a3fbfbb358231b1f9ca"
+
+[[claims]]
+id = "hc7.degree9_pole_completion"
+title = "Degree-nine finite local completion"
+kind = "lemma"
+status = "audited-green"
+source = "results/hc7_degree9_pole_verifier.md"
+active = true
+audit = "results/hc7_degree9_pole_verifier_audit.md"
+expected_source_sha256 = "dd8817ceec58b083e12adae943f49cf2bb5a401f17ca87950477906f811c5a08"
+scope = "computer-assisted finite nine-vertex neighbourhood lemma"
+
+[[claims]]
+id = "hc7.low_degree_boundary_edge_alignment"
+title = "Boundary-aligned low-degree adjacent pair"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_low_degree_boundary_edge_alignment.md"
+active = true
+audit = "results/hc7_low_degree_boundary_edge_alignment_audit.md"
+expected_source_sha256 = "424bfaeaa9023a2be0b2c8817608d28e38d8b2f7893284f46b733e1f21de513b"
+
+[[claims]]
+id = "hc7.split_boundary_synchronization"
+title = "Split-boundary colour synchronization"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_split_boundary_synchronization.md"
+active = true
+audit = "results/hc7_split_boundary_synchronization_audit.md"
+expected_source_sha256 = "3e3030d6e206fd81b3a79256be2d94cb4a4aac5ad5985fb95008488d9412edf8"
+
+[[claims]]
+id = "hc7.two_connected_boundary_completion"
+title = "Two-connected boundary-core completion"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_connected_boundary_completion.md"
+active = true
+audit = "results/hc7_two_connected_boundary_completion_audit.md"
+expected_source_sha256 = "8b12881cebb2df2bc17917367173aa047a64f990530da695a73e7fed68c31a2d"
+
+[[claims]]
+id = "hc7.exact_block_kempe_reduction"
+title = "Exact-block Kempe reduction and pole-free bridge"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_bounded_interface_exact_block_kempe_reduction.md"
+active = true
+audit = "results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md"
+expected_source_sha256 = "2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9"
+
+[[claims]]
+id = "hc7.degree7_antineighbourhood_connectivity"
+title = "Connected anti-neighbourhood at degree seven"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
+active = true
+audit = "results/hc7_degree7_anti_neighbourhood_connectivity_audit.md"
+expected_source_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
+scope = "degree-seven vertex in the hypothetical HC7 kernel"
+
+[[claims]]
+id = "hc7.degree7_matching_rooted_separator"
+title = "Exact matching languages and rooted model-carried separator"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_matching_bridge_bundle.md"
+active = true
+audit = "results/hc7_degree7_matching_bridge_bundle_audit.md"
+expected_source_sha256 = "7fda58a909aabf5a49c32be513ebc598695c448855a4a8bede3ae1efdc63314a"
+scope = "degree-seven sole-exterior branch"
+preserves = [
+  "one fixed six-colouring for every simultaneous path bundle",
+  "five literal boundary roots and their rooted branch-set labels",
+  "full neighbourhood of the model-carried separator",
+]
+does_not_prove = [
+  "label-preserving split of a multiply hit rooted bag",
+  "colour compatibility at the returned order-seven separation",
+]
+
+[[claims]]
+id = "hc7.exact7_rooted_k5_connector_separator"
+title = "Rooted K5 connector-or-separator theorem"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_rooted_k5_connector_separator.md"
+active = true
+audit = "results/hc7_exact7_rooted_k5_connector_separator_audit.md"
+expected_source_sha256 = "2ee51a2af500d8d208964e130ac3008e937b2c05dcc1231e7f13cf7ce340dda8"
+scope = "five labelled roots with a jointly dominating reserved pair"
+
+[[claims]]
+id = "hc7.degree7_aligned_near_k7"
+title = "Boundary-labelled near-K7 model at degree seven"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_aligned_near_k7_model.md"
+active = true
+audit = "results/hc7_degree7_aligned_near_k7_model_audit.md"
+expected_source_sha256 = "51bd2cf191f848a398a1a4aee711ef0c4d36c747468ce9613b9514cbc56cd060"
+scope = "every degree-seven vertex in the hypothetical HC7 kernel"
+preserves = [
+  "singleton degree-seven pole",
+  "singleton boundary centre incident with every possible missing edge",
+  "literal boundary roots in the remaining named branch sets",
+]
+does_not_prove = [
+  "repair of either missing centre adjacency",
+  "colour compatibility at an order-seven separator",
+  "existence of a degree-seven vertex in every hypothetical counterexample",
+]
+
+[[claims]]
 id = "hc7.global_adjacent_pair_palette_frame"
 title = "Global adjacent-pair palette frame"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_global_adjacent_pair_palette_frame.md"
-active = true
+active = false
 audit = "results/hc7_global_adjacent_pair_palette_frame_audit.md"
 expected_source_sha256 = "e4f99a43d6f45d3c1e7d93bbf854185e0009ecdc143c733d25449c2956aead98"
 
@@ -104,7 +288,7 @@ title = "Palette-permutation linkage and contact consequences"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_adjacent_pair_palette_linkage.md"
-active = true
+active = false
 audit = "results/hc7_adjacent_pair_palette_linkage_audit.md"
 expected_source_sha256 = "2b0c30b9d8566f6da4959df145bf0f527249bf887dfa844d19a98e524080a9f2"
 
@@ -114,7 +298,7 @@ title = "Bichromatic support and exact missing-colour rotation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_adjacent_pair_bichromatic_support_dichotomy.md"
-active = true
+active = false
 audit = "results/hc7_adjacent_pair_bichromatic_support_dichotomy_audit.md"
 expected_source_sha256 = "cbceda7fd8f6323d7b78a23e47cb7d8a0650b634ddd3decddf7e27367e9d2bcb"
 
@@ -124,7 +308,7 @@ title = "Palette dichotomy after contracting an induced bipartite subgraph"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc_bipartite_contraction_palette_dichotomy.md"
-active = true
+active = false
 audit = "results/hc_bipartite_contraction_palette_dichotomy_audit.md"
 expected_source_sha256 = "9856ce9908d2a2d6a3e36177d32ec4aa0d9f389b1e2fcd6632829db9ce08dbc6"
 
@@ -134,7 +318,7 @@ title = "Bichromatic components after a bipartite contraction"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc_bipartite_contraction_bichromatic_components.md"
-active = true
+active = false
 audit = "results/hc_bipartite_contraction_bichromatic_components_audit.md"
 expected_source_sha256 = "ca1d5ba0defb2af5c5db6c10c96e3279c68fb64fa0ffb07543a44a1db93b7eae"
 
@@ -144,7 +328,7 @@ title = "Normal form for concentrated colour rotations"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_concentrated_rotation_normalization.md"
-active = true
+active = false
 audit = "results/hc7_concentrated_rotation_normalization_audit.md"
 expected_source_sha256 = "c60dd0c95f38bb39cf6922987861be83c66e6f85dc9cbf7a452df307d2eef37f"
 
@@ -154,7 +338,7 @@ title = "Connected two-colour compression to a five-chromatic core"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_star_kempe_five_core_compression.md"
-active = true
+active = false
 audit = "results/hc7_star_kempe_five_core_compression_audit.md"
 expected_source_sha256 = "45e3d2e1a8aab16690c3941e5013c0f5bdc296ab257cea042dab1ceec7cb5557"
 
@@ -164,7 +348,7 @@ title = "Adjacent-pair separator-or-five-core theorem"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_adjacent_pair_separator_or_five_core.md"
-active = true
+active = false
 audit = "results/hc7_adjacent_pair_separator_or_five_core_audit.md"
 expected_source_sha256 = "e8ac71370bbefbd9bd7bd717b335a8e9179499fdbbe554a1c61d37a4e0701f93"
 
@@ -174,7 +358,7 @@ title = "Deficient-component separator in a contact-maximal rooted K4 model"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_maximal_rooted_k4_deficient_component_separator.md"
-active = true
+active = false
 audit = "results/hc7_maximal_rooted_k4_deficient_component_separator_audit.md"
 expected_source_sha256 = "fe5bff7d881faeda5c259750e8f634d8b0f59892cf76dd461e40489d26629c59"
 
@@ -184,7 +368,7 @@ title = "Two-pole contact and branch-set split"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_atomic_two_pole_contact_trichotomy.md"
-active = true
+active = false
 audit = "results/hc7_atomic_two_pole_contact_trichotomy_audit.md"
 expected_source_sha256 = "6bce1f570c12a93a7d1830f53905cb1e033bd2e40abed948a70a21ce5100c03d"
 
@@ -194,7 +378,7 @@ title = "Colour-matched path to the missed pole"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_colour_matched_repair_path.md"
-active = true
+active = false
 audit = "results/hc7_colour_matched_repair_path_audit.md"
 expected_source_sha256 = "ff04ccf580a4ebe8b0f2d3be3e8710d48cfae5717d3f91eb48a118148ba90efc"
 
@@ -204,7 +388,7 @@ title = "Component criterion for absorbing the repair path"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_colour_matched_path_component_exchange.md"
-active = true
+active = false
 audit = "results/hc7_colour_matched_path_component_exchange_audit.md"
 expected_source_sha256 = "eb024c94213b993bccc3b7c116117831ee898cb8eaf94535e7dd1b7fe622257c"
 
@@ -214,7 +398,7 @@ title = "Fixed-path K7-model-or-separation theorem"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_colour_matched_path_exchange_or_separator.md"
-active = true
+active = false
 audit = "results/hc7_colour_matched_path_exchange_or_separator_audit.md"
 expected_source_sha256 = "9f22f7f8828ed5d64b269c18e31aae82deb10fc5c57c6d1b89cdccf47af5cc6b"
 
@@ -224,7 +408,7 @@ title = "All-cut interval and component-defect criterion"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_colour_matched_path_all_cut_interval_exchange.md"
-active = true
+active = false
 audit = "results/hc7_colour_matched_path_all_cut_interval_exchange_audit.md"
 expected_source_sha256 = "719e034ea81221c4fbddd77ea4cdd661ce1b04b1f84b007a69e73a89de4f2057"
 
@@ -234,7 +418,7 @@ title = "Component-contact defect and two-tree equality structure"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_component_contact_defect_theorem.md"
-active = true
+active = false
 scope = "conditional fixed repair-path cut"
 label_fidelity = "literal eligible residual components and three anchor sets"
 audit = "results/hc7_component_contact_defect_theorem_audit.md"
@@ -264,7 +448,7 @@ title = "Normal form around a lifted simplicial component"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_defect_one_simplicial_normalization.md"
-active = true
+active = false
 scope = "conditional inclusion-maximal defect-one selection at one fixed path cut"
 label_fidelity = "literal selected components and three named path-cut anchors"
 separator_order = "at least seven only"
@@ -288,7 +472,7 @@ title = "Path normal form for one branch set of a K6-minor model"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_minimal_sixth_branch_set_path.md"
-active = true
+active = false
 scope = "local K6-minor model"
 label_fidelity = "five named branch sets, preserved under deletion or enlargement"
 audit = "results/hc7_minimal_sixth_branch_set_path_audit.md"
@@ -309,7 +493,7 @@ title = "Attachment forcing from proper-minor colourings"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_edge_response_attachment_forcing.md"
-active = true
+active = false
 scope = "one edge or vertex operation outside an induced bipartite subgraph"
 label_fidelity = "literal endpoint contacts with the two bipartition classes"
 audit = "results/hc7_edge_response_attachment_forcing_audit.md"
@@ -331,7 +515,7 @@ title = "Labelled near-K7 model and internal-edge colouring fork"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_defect_one_near_k7_edge_fork.md"
-active = true
+active = false
 scope = "conditional defect-one two-tree branch"
 label_fidelity = "five named common branch sets and two named deficient branch sets"
 audit = "results/hc7_defect_one_near_k7_edge_fork_audit.md"
@@ -354,7 +538,7 @@ title = "Rainbow-diamond separation in a four-labelled two-tree"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_defect_one_rainbow_diamond_separator.md"
-active = true
+active = false
 scope = "conditional host realization of the defect-one four-labelled two-tree"
 label_fidelity = "one represented connected subgraph of each protected label and five named common branch sets"
 separator_order = "at least seven only"
@@ -378,7 +562,7 @@ title = "Common-neighbour-rooted fan at a double-critical edge"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_double_critical_edge_rooted_fan.md"
-active = true
+active = false
 scope = "one edge xy with chi(G-{x,y})=5 in a seven-connected seven-chromatic graph"
 label_fidelity = "literal singleton endpoints and a rainbow transversal of their common-neighbour set"
 audit = "results/hc7_double_critical_edge_rooted_fan_audit.md"
@@ -402,7 +586,7 @@ title = "Connected deficient-branch-set trichotomy"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_connected_one_hole_trichotomy.md"
-active = true
+active = false
 scope = "seven-connected graph with one connected branch set missing one clique-model adjacency"
 label_fidelity = "six fixed branch-set labels and the literal connected donor split"
 separator_order = "at least seven; full at equality"
@@ -425,7 +609,7 @@ title = "Fan collision at a globally minimum deficient branch set"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_near_k7_minimal_path_fan_collision.md"
-active = true
+active = false
 scope = "globally minimum oriented K7-minus-one-edge minor model"
 label_fidelity = "five named common branch sets and the oriented deficient pair"
 separator_order = "exact seven only when the collision branch set contributes exactly five boundary vertices"
@@ -449,7 +633,7 @@ title = "Oppositely oriented boundary responses at a reversible rotation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_rotation_opposite_boundary_responses.md"
-active = true
+active = false
 scope = "mutually unavoidable branch of the connected deficient-branch-set trichotomy"
 label_fidelity = "literal donor-interface edge and named lost-branch-set contact edge"
 colour_compatibility = "a common response partition is terminal but not forced"
@@ -473,7 +657,7 @@ title = "A two-vertex K5-model transversal contradicts seven-chromaticity"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_vertex_k5_transversal_chromatic_obstruction.md"
-active = true
+active = false
 scope = "every finite seven-chromatic graph"
 audit = "results/hc7_two_vertex_k5_transversal_chromatic_obstruction_audit.md"
 expected_source_sha256 = "4c3c4283c0fa1c74a8711467a49b946bf056d2df53f6edce15f7c765d6fed1f9"
@@ -488,7 +672,7 @@ title = "Connected transfer and extremal normalization in a supported near-K7 mo
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_response_collision_quasi_transfer.md"
-active = true
+active = false
 scope = "supported one-missing-adjacency minor models in a seven-connected host"
 label_fidelity = "named fixed branch sets, literal residual components and external attachments"
 separator_order = "at least seven; exact order not forced"
@@ -511,7 +695,7 @@ title = "Bichromatic saturation or a bypass at two incident critical edges"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_shared_interface_bichromatic_bypass.md"
-active = true
+active = false
 scope = "uniform non-q-colourable graph; specialized to a shared endpoint in a reversible rotation"
 label_fidelity = "two named incident host edges and their coupled Kempe components"
 audit = "results/hc7_shared_interface_bichromatic_bypass_audit.md"
@@ -533,7 +717,7 @@ kind = "theorem"
 status = "audited-green"
 source = "active/hc7_contracted_portal_path_palette_obstruction.md"
 source_heading = "4. A common-colouring Kempe allocation"
-active = true
+active = false
 scope = "Theorem 4.3 only: a connected contracted cone in a non-q-colourable graph"
 label_fidelity = "the literal centre and named leaf endpoints"
 audit = "active/hc7_contracted_portal_path_palette_obstruction_theorem43_audit.md"
@@ -554,7 +738,7 @@ title = "Exact seven-vertex boundary classification and no-rigid-trace theorem"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_no_rigid_trace.md"
-active = true
+active = false
 scope = "actual order-seven separation in a seven-connected K7-minor-free graph, with stronger conclusions under minor-criticality"
 label_fidelity = "seven literal boundary vertices and the five cycle roots in the exceptional boundary"
 separator_order = "exact seven"
@@ -582,7 +766,7 @@ title = "Completion of two full shores behind an induced cycle"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_cycle_boundary_completion.md"
-active = true
+active = false
 scope = "seven-connected host; induced cycle of arbitrary length at least four with two connected full shores and two adjacent universal vertices"
 label_fidelity = "the cycle roots, two universal vertices and the two literal shores"
 audit = "results/hc7_cycle_boundary_completion_audit.md"
@@ -603,7 +787,7 @@ title = "Pentagonal order-seven separation corollary"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_pentagonal_separation_completion.md"
-active = true
+active = false
 scope = "seven-connected host with a K2-join-C5 boundary and exactly two connected open shores"
 label_fidelity = "the five cycle roots, two universal boundary vertices and the two literal shores"
 separator_order = "exact seven"
@@ -624,7 +808,7 @@ title = "Universal-edge Kempe normalization at the pentagonal boundary"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_universal_edge_kempe_normalization.md"
-active = true
+active = false
 scope = "canonical K2-join-C5 exact-seven separation"
 audit = "results/hc7_exact7_universal_edge_kempe_normalization_audit.md"
 expected_source_sha256 = "f2ae7f267ad2026c532b55d29189f4ba097b1c51ed31a702c4b66b4e63c4fb1c"
@@ -636,7 +820,7 @@ title = "Exposed six-block boundary partition and same-shore Kempe paths"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_exposed_sigma_kempe_paths.md"
-active = true
+active = false
 scope = "canonical K2-join-C5 exact-seven separation"
 audit = "results/hc7_exact7_exposed_sigma_kempe_paths_audit.md"
 expected_source_sha256 = "e8495a4f1bbcc7009379af72d94a807b9ac301fae9a5bde9ae86e098f9397a07"
@@ -653,7 +837,7 @@ title = "One-step minor dynamics and the common-hole law"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_star_core_one_step_minor_dynamics.md"
-active = true
+active = false
 audit = "results/hc7_star_core_one_step_minor_dynamics_audit.md"
 expected_source_sha256 = "f1e976266afb7b4e2daeb9ee36c0da13518d59540ae6c5244fd82cd3cb37e3b8"
 conclusions = [
@@ -672,7 +856,7 @@ title = "List-colouring obstruction on a contracted induced path"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc_contracted_path_list_lock.md"
-active = true
+active = false
 audit = "results/hc_contracted_path_list_lock_audit.md"
 expected_source_sha256 = "804550a76c1566f6867d21d3254a67b881bac9370556c9b9d84fe6eabce5c634"
 
@@ -682,7 +866,7 @@ title = "Two-vertex K5-model transversal implies a raw order-seven separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_k5_transversal_order7_separator.md"
-active = true
+active = false
 separator_order = "exact seven"
 colour_compatibility = "not supplied"
 audit = "results/hc7_k5_transversal_order7_separator_audit.md"
@@ -695,7 +879,7 @@ title = "Five-branch-set separator excess is unbounded under geometry alone"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_five_bag_separator_excess_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_five_bag_separator_excess_barrier_audit.md"
 expected_source_sha256 = "0613bfb720df55cccc63182fcbf7187b5f882be0e6eb5224356e4a7f16fdd05c"
 refutes = [
@@ -713,7 +897,7 @@ title = "Static boundary responses force neither a common partition nor a two-ve
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_k35_no_common_state_or_two_vertex_transversal.md"
-active = true
+active = false
 audit = "barriers/hc7_k35_no_common_state_or_two_vertex_transversal_audit.md"
 expected_source_sha256 = "a2ae9052b307cccae5a9499729fe8a5a2f7330c81c501910c28ca075542bf4dc"
 refutes = [
@@ -731,7 +915,7 @@ title = "The two sharp barrier architectures fail on complementary critical hypo
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_two_barrier_upgrade_no_go.md"
-active = true
+active = false
 audit = "barriers/hc7_two_barrier_upgrade_no_go_audit.md"
 expected_source_sha256 = "0206c365fbd761648080e758c60a75bd8188d1f1f07d3a632f9cad9052e4e1cd"
 refutes = [
@@ -747,7 +931,7 @@ title = "Endpoint-only delta-matroid exchange is not label-preserving"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_labelled_mader_delta_enrichment_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_labelled_mader_delta_enrichment_barrier_audit.md"
 expected_source_sha256 = "27bc1eea766fcbe91f5c6e44016296d0f0f6d2c601cbb2cafae443209455fd2c"
 refutes = ["endpoint-only delta-matroid exchange as a label-preserving rerouting principle"]
@@ -759,7 +943,7 @@ title = "Static exact boundary traces need not synchronize"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_aligned_matching_exact_trace_parity_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_aligned_matching_exact_trace_parity_barrier_audit.md"
 expected_source_sha256 = "137a06460e9b448ee661222b3d84c185b1200884a307b65558524f69457ea26a"
 refutes = ["state synchronization from static exact boundary traces alone"]
@@ -771,7 +955,7 @@ title = "Three-common-branch-set profile can stop at an order-seven separator"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_three_common_geodesic_two_apex_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_three_common_geodesic_two_apex_barrier_audit.md"
 expected_source_sha256 = "4de8c7a1081d1e04b6f676e905afc9727ca9ef25c75e8d0d4b05973fb07083c1"
 refutes = ["a model-local strict rank from three common branch sets alone"]
@@ -783,7 +967,7 @@ title = "Two colourful sets need not share a rooted K4 model"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_two_colorful_sets_paired_k4_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_two_colorful_sets_paired_k4_barrier_audit.md"
 expected_source_sha256 = "f9d41fdffb6ca5a7bbc54cd67a5491aae7e6fdf12d03c8725403b7a4abfb8e6f"
 refutes = ["paired rooted K4 from colourful sets and connectivity alone"]
@@ -795,7 +979,7 @@ title = "A repeated colour does not force rooted-model rerouting"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_repeated_colour_rooted_k4_exchange_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_repeated_colour_rooted_k4_exchange_barrier_audit.md"
 expected_source_sha256 = "8c30b47253d63cbf98e5c8ee5901bbe81abc6b3eb3b20c8a5c6e0c5aad38df09"
 refutes = ["rooted branch-set exchange from the repeated quotient colour alone"]
@@ -807,7 +991,7 @@ title = "A planar four-connected core need not synchronize two colourful sets"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_paired_colourful_planar_core_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_paired_colourful_planar_core_barrier_audit.md"
 expected_source_sha256 = "25d436688ed47f624fafc465249165ac889c43839e1c3a83d4930a90f1118630"
 refutes = ["paired rooted K4 from planarity, four-connectivity and colourful sets alone"]
@@ -819,7 +1003,7 @@ title = "Connectivity-only near-K7 augmentation is open-problem strength"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_eight_connected_near_k7_augmentation_hardness.md"
-active = true
+active = false
 audit = "barriers/hc7_eight_connected_near_k7_augmentation_hardness_audit.md"
 expected_source_sha256 = "f165b53691bc24afbad933d4f334ab9c1ce02fb10f79cad42b1e9f266b7542b6"
 refutes = ["completion of a K7-minus-one-edge model from connectivity alone"]
@@ -1014,6 +1198,101 @@ target = "hc7.minimal_sixth_branch_set_path"
 kind = "uses"
 
 [[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.target.bounded_interface_bridge"
+kind = "subproblem_of"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_aligned_near_k7"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_aligned_near_k7"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_aligned_near_k7"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_matching_rooted_separator"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_matching_rooted_separator"
+target = "hc7.exact_block_kempe_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_matching_rooted_separator"
+target = "hc7.exact7_rooted_k5_connector_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.low_degree_adjacent_pair_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.low_degree_boundary_edge_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.split_boundary_synchronization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.exact_block_kempe_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.two_connected_boundary_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.low_degree_adjacent_pair_alignment"
+target = "hc7.degree9_pole_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.low_degree_boundary_edge_alignment"
+target = "hc7.low_degree_adjacent_pair_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.low_degree_boundary_edge_alignment"
+target = "hc7.degree9_pole_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.split_boundary_synchronization"
+target = "hc7.low_degree_adjacent_pair_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact_block_kempe_reduction"
+target = "hc7.low_degree_adjacent_pair_alignment"
+kind = "uses"
+
+[[relations]]
 source = "hc7.target.defect_one_exchange"
 target = "hc7.edge_response_attachment_forcing"
 kind = "uses"
@@ -1118,6 +1397,27 @@ kind = "guarded_by"
 source = "hc7.target.adjacent_pair_model_or_separator"
 target = "hc7.barrier.three_common_profile"
 kind = "guarded_by"
+
+[[verifiers]]
+id = "degree-nine-pole-completion"
+path = "results/hc7_degree9_pole_verifier.py"
+sha256 = "b4bab9be44feb5dc749dc8ba3f41a85094896d4b3de8a7d8246342b2729c9c59"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "degree9_pole_verifier version=1",
+  "restricted_partitions=1260",
+  "case F_edges=13 c_nonneighbours=2 complements=20 instances=720 bad=0",
+  "certificate F=H?`vAqo missing=0,1 bags={0} {1} {2,c} {4,5} {3,6} {7,8}",
+  "case F_edges=13 c_nonneighbours=1 complements=20 instances=180 bad=0",
+  "certificate F=H?`vAqo missing=0 bags={0} {1} {2} {3,4} {5,6,c} {7,8}",
+  "case F_edges=12 c_nonneighbours=2 complements=103 instances=3708 bad=0",
+  "certificate F=H?Bed`o missing=0,1 bags={0} {1} {2,c} {3,5} {4,6} {7,8}",
+  "total_instances=4608 bad=0",
+  "catalogue_sha256=489ef6397133a86bddaabb3c0a27b78b36e172d041ec5aab05e9c89ed9e175eb",
+  "witness_sha256=168b7a1b4c863029ee4ee14b1b53d8843b9b79d4b0c2205d093636a13a1abdb1",
+  "PASS degree-nine local completion",
+]
 
 [[verifiers]]
 id = "atomic-two-pole-contact"
