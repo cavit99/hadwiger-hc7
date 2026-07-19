@@ -363,15 +363,63 @@ the all-distinct partition.  Its six-colour lift contains a `K_7` minor, so
 the missing positive theorem must couple the response lattice to the named
 connected subgraphs under global `K_7`-minor exclusion.
 
+The exact-seven and minor-model sides of that coupling have now been
+strengthened by audited unbounded theorems.  Contracting the distinguished
+edge in the asymmetric order-eight full-component interface gives a
+seven-vertex boundary with one connected boundary-full component on each
+side.  Its boundary is four-degenerate.  The only five-chromatic case is
+`K_2 join C_5`; deleting its universal pair makes the contracted graph
+planar.  Undoing the contraction leaves an adjacent vertex split of that
+planar graph in the original host, with every relevant `K_5` model using
+the two split vertices in distinct branch sets.  This is a precise
+split-planar residue, not yet an actual two-apex conclusion.
+
+At an actual order-seven boundary, deleting a boundary--component edge
+produces five colour-distinguished first edges.  Seven-connectivity extends
+them to a six-ended fan inside the component.  If their original targets
+occupy at most five boundary vertices, there is either a clean
+target-retaining five-spoke packing or a strictly smaller open component
+behind another actual order-seven boundary.  The returned boundary has one
+exact colour block of order at least two attained on both shores.  In
+parallel, a shortest boundary Kempe transition now gives either the same
+two-colour obstruction path through both open shores or a vertex-minimal
+list-critical subgraph in each shore.  A proper fixed-trace critical
+subgraph transfers the rejected trace to a strictly smaller complementary
+component; a shore-filling critical subgraph instead synchronizes all of
+its vertex-deletion responses on that trace.
+
+On the labelled-model side, safe absorption makes the
+`K_7`-minus-one-edge model spanning.  Seven-connectivity then forces two
+distinct attachment vertices from one neighbouring branch set to the
+deficient branch set.  Deleting one corresponding model edge preserves the
+same labelled model, while all five bichromatic endpoint paths coexist in
+that edge-deleted graph.  Thus unique-portal concentration and destruction
+of the chosen model edge are no longer obstructions.  Palette colours still
+do not identify the five branch-set labels.
+
+The immediate open theorem is now **persistent-edge fixed-trace alignment
+or compatible separation**.  It must align a critical
+boundary--component edge and the deletion-persistent model edge at one
+shore vertex, then use the fixed-trace list-critical subgraph or exact-seven
+fan to give an explicit `K_7` model, a common full equality partition on an
+actual order-seven separation, or a strictly smaller aligned component in
+the same host.  For any proposed persistent edge, a proved binary lemma
+applies: if one colouring of its deletion has the prescribed boundary
+trace, then the edge belongs to every list-critical obstruction for that
+trace; otherwise its entire proper-minor response set rejects the trace.
+Mere coexistence of an unaligned fan, list-critical subgraph and stable
+minor model is not enough.
+
 This does not prove `HC_7`.  It closes the one-hole donor splitting problem,
 the disjoint two-trace linkage branch, broad degree-eight cyclic-contact
 families, the entire rooted cycle-allocation problem, the cutvertex and
 generic two-cut component geometry, the universal-contact three-connected
 family, the reserved-cycle/high-connectivity branch and the two-safe-support
 branch by
-unbounded theorems.  The residual is now either a label-preserving use of a
-three-path packing or synchronization of a concrete one-sided partition on
-an exact order-seven separator, not a finite web census.  The
+unbounded theorems.  The residual is now the label-preserving alignment of
+a deletion-persistent model edge with the dynamic shore obstruction, or
+synchronization of a concrete one-sided partition on an exact order-seven
+separator, not a finite web census.  The
 two-adjacent-edge exceptional complements and the degree-eight/nine
 bounded-interface continuation remain after this branch.  The older
 component-defect programme below is retained as a secondary source of
@@ -1885,16 +1933,46 @@ classification or computation as well as a written reduction.
     retain all five foreign contacts.  A connected subgraph wholly outside
     the model cannot repair a missing foreign contact.
 
+    This normalization now has a deletion-persistent version.  Safe
+    absorption makes the labelled `K_7`-minus-one-edge model spanning, and
+    seven-connectivity forces one neighbouring branch set to contain two
+    attachment vertices to the deficient set.  Deleting one corresponding
+    edge preserves the model through the other, so all five bichromatic
+    endpoint paths occur in the same graph as the fixed labelled model.
+
+    On the colouring side, shortest Kempe distance between the two shore
+    extension sets gives either one common obstructed boundary move, with a
+    path through each shore, or one list-critical subgraph in each shore for
+    a boundary trace rejected by both.  In the exact asymmetric interface,
+    a proper fixed-trace critical subgraph transfers to a smaller connected
+    component; a shore-filling one synchronizes all vertex-deletion
+    responses on the fixed trace.  A persistent edge whose deletion attains
+    that trace belongs to every such obstruction.  Otherwise the entire
+    edge-deletion response set rejects the trace.
+
+    Contracting the distinguished boundary edge gives two full shores on a
+    seven-vertex boundary.  The boundary is four-degenerate, and its only
+    five-chromatic form is `K_2 join C_5`.  That form has a planarizing pair
+    in the contracted graph; lifting leaves one adjacent vertex split and a
+    prescribed two-root `K_5`-model obligation in the original graph.
+
+    Finally, a critical edge at any actual order-seven separator gives a
+    six-ended component-internal fan.  With at most five original boundary
+    targets, failure of the clean five-spoke packing strictly decreases the
+    open component and returns another order-seven boundary with one exact
+    colour block attained on both shores.
+
     The precise open theorem is now a **label-preserving model alignment or
-    separator synchronization**.  The two disjoint rooted paths or the
-    selected eight-boundary-full component must be decoded through clean
-    traces of the five inherited named branch sets, or the normalized
-    contraction-image branch set must be split and every lost contact
-    repaired.  In the separator branch the common exact class must be
-    extended to a common full equality partition.  The alternatives remain
-    to lower `epsilon` while retaining the two named connected subgraphs and
-    the boundary equality data, synchronize an exact order-seven boundary,
-    or construct an explicit `K_7`-minor model.
+    separator synchronization**.  One must first align the persistent model
+    edge and a critical boundary edge at a common shore vertex.  The aligned
+    fixed-trace obstruction or the paired rejection responses must then be
+    decoded through clean traces of the five inherited branch sets, or the
+    normalized contraction-image branch set must be split and every lost
+    contact repaired.  In the separator branch the common exact class must
+    be extended to a common full equality partition.  The alternatives are
+    to lower `epsilon` while retaining the named subgraphs, labelled model
+    and boundary trace, synchronize an exact order-seven boundary, or
+    construct an explicit `K_7`-minor model.
     At minimal positive excess it may equivalently close the remaining
     two- or three-component boundary-full order-eight interface.  Separator order alone is
     insufficient because the new boundary can cut through one of the named
@@ -1913,6 +1991,14 @@ classification or computation as well as a written reduction.
     [prescribed-spoke and coloured-separator reduction](results/hc7_order8_prescribed_spoke_reduction.md),
     [minimal contracted-edge `K_6` model](results/hc7_contracted_edge_k6_model_normalization.md),
     [fresh-colour disjoint linkages and augmented-boundary transition](results/hc7_exact7_fresh_colour_linkage.md),
+    [contracted full-component interface](results/hc7_augmented_full_component_contraction_reduction.md),
+    [contracted five-chromatic boundary](results/hc7_contracted_five_chromatic_boundary.md),
+    [critical-edge exact-seven fan descent](results/hc7_exact7_critical_edge_fan_descent.md),
+    [opposite-shore single-transition obstruction](results/hc7_opposite_shore_single_kempe_transition.md),
+    [two-shore Kempe/list-critical dichotomy](results/hc7_two_shore_kempe_list_dichotomy.md),
+    [fixed-trace list-critical transfer](results/hc7_boundary_list_critical_transfer.md),
+    [single-portal amplification](results/hc7_single_portal_amplification.md),
+    [persistent-edge fixed-trace alignment](results/hc7_persistent_edge_fixed_trace_alignment.md),
     [two-full-shore boundary absorption](results/hc7_two_full_shore_boundary_absorption.md),
     and [cycle-boundary completion](results/hc7_cycle_boundary_completion.md),
     each with an adjacent internal audit.  The fixed compressed three-path

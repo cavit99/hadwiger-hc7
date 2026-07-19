@@ -16,14 +16,14 @@ pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
 id = "hc7.target.degree7_model_separator"
-title = "Degree-seven boundary-edge contact exchange or compatible-separator completion"
+title = "Persistent-edge fixed-trace alignment or compatible-separator completion"
 kind = "target"
 status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
-source_heading = "Boundary-edge contact exchange or compatible separator"
+source_heading = "Persistent-edge fixed-trace alignment or compatible separator"
 active = true
-expected_source_sha256 = "5c1d30f279e90165e761f12dd72eead12f42fd5e812371ae723fa9deef3b6031"
-scope = "the degree-eight interface arising inside the degree-seven-derived two-pair disk configuration of a hypothetical minor-minimal HC7 counterexample"
+expected_source_sha256 = "4f7ab837c52d8779e6595b8023c4914b9a9550ff4a47d5b4145402669860247c"
+scope = "the exact asymmetric order-eight and descended exact-seven interfaces arising in the degree-seven boundary-labelled branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
 separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
 colour_compatibility = "open"
@@ -43,12 +43,18 @@ hypotheses = [
   "cutvertices and two-vertex separators inside a boundary-full component give an exact-seven boundary or an explicit repair support disjoint from a boundary-full residual, apart from a classified contact-concentration list",
   "a universal boundary-contact vertex in a three-connected component gives the same split or an exact-seven boundary by Tutte's nonseparating-path theorem",
   "an already-disjoint configuration of boundary-rooted connected subgraphs and cyclic connected sets gives K7, an exact order-seven separator or a strict separator-order descent",
+  "safe absorption gives a spanning labelled K7-minus-one-edge model with a deletion-persistent model edge and two donor-side attachment vertices",
+  "shortest boundary Kempe distance gives either simultaneous opposite-shore paths or paired list-critical subgraphs",
+  "a critical exact-seven boundary edge gives a six-ended fan, clean five-spoke packing or strict component descent",
+  "contracting the distinguished asymmetric-interface edge gives two exact-seven full shores and a split-planar normal form in the five-chromatic boundary case",
+  "a persistent edge attaining the fixed trace belongs to every list-critical obstruction for that trace, while failure means total trace rejection",
 ]
 allowed_exits = [
   "explicit K7-minor model",
   "one equality partition realised by both closed shores of an actual order-seven separation",
   "a label-preserving configuration satisfying every hypothesis of the audited connected-subgraph cyclic-contact allocation theorem, with cross-nonadjacency graph a matching of order at most two",
   "a strict full-neighbourhood-separator descent preserving the paired traces, selected boundary-edge response and five named pairwise-adjacent connected subgraphs",
+  "a new aligned persistent-edge instance in the same host with a strictly smaller open component and the fixed trace and labelled near-complete model preserved",
 ]
 does_not_prove = [
   "HC7",
@@ -56,6 +62,8 @@ does_not_prove = [
   "elimination of the concentrated low-cut residue after the component-deleted reserved-cycle fork",
   "label-preserving use of the three-path packing through the five named connected subgraphs",
   "extension of the concrete one-sided equality partition returned by the Kempe-path separation through the opposite closed shore",
+  "existence of a persistent model edge sharing the selected boundary-component endpoint and fixed-trace list-critical kernel",
+  "closure of the adjacent-vertex-split planar residue after contracting the distinguished edge",
   "a disjoint seven-contact residual after one named connected subgraph is used as a repair connector",
   "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
 ]
@@ -1832,6 +1840,116 @@ does_not_prove = [
   "HC7",
 ]
 
+[[claims]]
+id = "hc7.augmented_full_component_contraction"
+title = "Contracting an augmented full-component interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_augmented_full_component_contraction_reduction.md"
+active = true
+audit = "results/hc7_augmented_full_component_contraction_reduction_audit.md"
+expected_source_sha256 = "f5cff7a8318fd8d17a3779c23e10d568c2ee0fa2850cb6ac5f4bd153cdbcafaf"
+scope = "the exact asymmetric order-eight full-component interface after contracting its distinguished boundary edge"
+separator_order = "exact seven in the contracted graph"
+conclusions = ["two anticomplete boundary-full components on a seven-set", "an S-meeting K6 model or a K5 minor after one boundary deletion lifts to K7", "the contracted graph is six-connected and exactly six-chromatic"]
+does_not_prove = ["an S-meeting K6 model", "closure of the contracted exact-seven interface", "HC7"]
+
+[[claims]]
+id = "hc7.contracted_five_chromatic_boundary"
+title = "Five-chromatic contracted boundary and split-planar normal form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_contracted_five_chromatic_boundary.md"
+active = true
+audit = "results/hc7_contracted_five_chromatic_boundary_audit.md"
+expected_source_sha256 = "9502143a9a003193bc1c405f9c95eb9cb2f547925e3e26204915e4dc36c04d5c"
+scope = "a six-connected K7-minor-free graph with two distinct components full to one seven-vertex boundary"
+conclusions = ["the boundary is four-degenerate", "the only five-chromatic boundary is K2 join C5", "the universal pair planarizes the contracted graph", "lifting gives an adjacent vertex split and rooted K5-model obligations"]
+does_not_prove = ["that the universal pair planarizes the original graph", "a K7-minor model", "HC7"]
+
+[[claims]]
+id = "hc7.exact7_critical_edge_fan_descent"
+title = "Critical exact-seven boundary edge: prescribed fan or strict component descent"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_critical_edge_fan_descent.md"
+active = true
+audit = "results/hc7_exact7_critical_edge_fan_descent_audit.md"
+expected_source_sha256 = "d359b4a14520fc4d558ebc600c4e64b7f6bf65ef9fa425b107effa498afc3bfa"
+scope = "an edge from an open component to an actual seven-vertex separator in a minor-minimal non-six-colourable graph"
+label_fidelity = "five prescribed colour-indexed first edges and literal boundary ends"
+strict_parameter = "order of the selected open component in the fixed host"
+conclusions = ["a six-ended component-internal fan", "a clean target-retaining five-spoke packing or a smaller exact-seven component", "one exact nontrivial boundary colour block attained on both shores after descent"]
+does_not_prove = ["distinct target ends in the target-retaining packing", "branch-set allocation", "a common full equality partition", "HC7"]
+
+[[claims]]
+id = "hc7.opposite_shore_single_kempe_transition"
+title = "One boundary Kempe transition forces obstruction paths through both shores"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_opposite_shore_single_kempe_transition.md"
+active = true
+audit = "results/hc7_opposite_shore_single_kempe_transition_audit.md"
+expected_source_sha256 = "54b07b1173d828535e878b24a504fd86ddd0052a2681f500e8a159db30f02181"
+scope = "opposite-shore proper-minor boundary responses differing by one labelled Kempe interchange"
+conclusions = ["the same boundary move is obstructed by a two-colour path through each open shore", "at an order-eight boundary every supporting component is full or has an exact-seven full neighbourhood", "deletion and contraction of the same edge have identical colouring and Kempe graphs"]
+does_not_prove = ["existence of adjacent opposite-shore responses", "labelled branch-set allocation", "a common boundary partition", "HC7"]
+
+[[claims]]
+id = "hc7.two_shore_kempe_list_dichotomy"
+title = "Boundary Kempe distance gives two paths or two list-critical subgraphs"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_shore_kempe_list_dichotomy.md"
+active = true
+audit = "results/hc7_two_shore_kempe_list_dichotomy_audit.md"
+expected_source_sha256 = "0882a91fbb18c51fcec93ee8980f6c67d0a99a289e3f5bd264b1c8c27f13e4ec"
+scope = "two incompatible shore-extension sets in a connected labelled boundary Kempe graph"
+conclusions = ["distance one gives simultaneous opposite-shore obstruction paths", "larger distance gives one induced list-critical subgraph in each open shore"]
+does_not_prove = ["a clique minor", "branch-set label allocation", "a colour-compatible separator", "HC7"]
+
+[[claims]]
+id = "hc7.boundary_list_critical_transfer"
+title = "Fixed-trace list-critical transfer"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_boundary_list_critical_transfer.md"
+active = true
+audit = "results/hc7_boundary_list_critical_transfer_audit.md"
+expected_source_sha256 = "4e38af17e211f2f384dee804e55092b98512483eac4a897353eb5cbc3954b8f1"
+scope = "one rejected boundary trace on the full shore of an exact asymmetric order-eight interface"
+strict_parameter = "order of the rejected-trace connected subgraph, without automatic preservation of boundary order or model labels"
+conclusions = ["an induced minimal list-critical kernel and exact degree identity", "fixed-trace locked-edge alternatives", "strict rejected-trace transfer when the kernel is proper", "synchronized vertex-deletion colourings when the kernel fills the shore"]
+does_not_prove = ["iteration with preserved boundary order", "alignment of fixed-trace and whole-host colourings", "branch-set label allocation", "HC7"]
+
+[[claims]]
+id = "hc7.single_portal_amplification"
+title = "Spanning near-complete model with a deletion-persistent edge"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_single_portal_amplification.md"
+active = true
+audit = "results/hc7_single_portal_amplification_audit.md"
+expected_source_sha256 = "b4315f0adaff165acfbd338c7b1def8f3bddf8cae4d8d16501b9708c9c3252e6"
+scope = "a safely absorbable labelled K7-minus-one-edge model in a seven-connected graph"
+label_fidelity = "the same spanning labelled model survives deletion of one selected model edge"
+conclusions = ["some donor branch set has two attachment vertices to the deficient set", "deleting one donor edge preserves the labelled near-complete model", "contracting it gives a K6 model", "all five bichromatic endpoint paths coexist with the persistent model"]
+does_not_prove = ["palette-to-branch-set alignment", "path disjointness", "a K7-minor model", "a compatible separator", "HC7"]
+
+[[claims]]
+id = "hc7.persistent_edge_fixed_trace_alignment"
+title = "Persistent model edge: fixed-trace alignment or total trace rejection"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_persistent_edge_fixed_trace_alignment.md"
+active = true
+audit = "results/hc7_persistent_edge_fixed_trace_alignment_audit.md"
+expected_source_sha256 = "a01a86295dc0b797ab19f63049e893ac97dbb712a22a3dad6de0b316b07b4cab"
+scope = "one edge inside a shore carrying a fixed rejected labelled boundary colouring"
+label_fidelity = "exact equality of the labelled boundary trace"
+conclusions = ["either every colouring of the edge deletion rejects the trace", "or the edge lies in every induced list-critical obstruction for that trace and every spanning edge-minimal obstruction"]
+does_not_prove = ["existence of an aligned persistent edge", "palette-to-branch-set alignment", "a K7-minor model", "a compatible separator", "HC7"]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.epsilon_one_labelled_descent"
@@ -1865,6 +1983,61 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_fresh_colour_linkage"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.augmented_full_component_contraction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.contracted_five_chromatic_boundary"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_critical_edge_fan_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.opposite_shore_single_kempe_transition"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_shore_kempe_list_dichotomy"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.boundary_list_critical_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.single_portal_amplification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.persistent_edge_fixed_trace_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.contracted_five_chromatic_boundary"
+target = "hc7.augmented_full_component_contraction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.persistent_edge_fixed_trace_alignment"
+target = "hc7.boundary_list_critical_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.persistent_edge_fixed_trace_alignment"
+target = "hc7.single_portal_amplification"
 kind = "uses"
 
 [[relations]]
@@ -2544,7 +2717,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "5c1d30f279e90165e761f12dd72eead12f42fd5e812371ae723fa9deef3b6031"
+evidence_sha256 = "4f7ab837c52d8779e6595b8023c4914b9a9550ff4a47d5b4145402669860247c"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2566,7 +2739,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "5c1d30f279e90165e761f12dd72eead12f42fd5e812371ae723fa9deef3b6031"
+evidence_sha256 = "4f7ab837c52d8779e6595b8023c4914b9a9550ff4a47d5b4145402669860247c"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2575,9 +2748,9 @@ kind = "uses"
 note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
 evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
-evidence_start_line = 722
-evidence_end_line = 749
-evidence_sha256 = "1aaf18b3c1113e7406a97b33f9bf000236ba6366ff10636a0e24c65e0b5de3c5"
+evidence_start_line = 770
+evidence_end_line = 797
+evidence_sha256 = "77b7f5f018f73c03726f0b5279ac0d99b9126015c1081a7181a57744319098af"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

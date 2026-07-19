@@ -502,7 +502,83 @@ the deleted edge gives an explicit `K_7` model whenever both sides retain
 all five foreign contacts.  A connected subgraph wholly outside the model
 cannot repair a missing foreign contact.
 
-Thus the next theorem has only two legitimate
+That model-side normalization can now be made stable under one proper-minor
+response.  After safely absorbing every unused component, the lifted
+`K_7`-minus-one-edge model is spanning.  Seven-connectivity distributes the
+neighbourhood of a deficient branch set among only five other branch sets,
+so one of them contains two distinct attachment vertices.  Deleting one of
+the corresponding model edges leaves the same labelled near-complete model,
+while contracting it gives a rooted `K_6` model.  In the edge deletion all
+five bichromatic endpoint paths therefore coexist with the fixed spanning
+model.  This removes the former unique-portal and model-edge-destruction
+obstructions, but the paths are still palette-labelled rather than
+branch-set-labelled.
+
+The colouring side now has an exhaustive dynamic reduction.  On a boundary
+of order at most eight, take a shortest Kempe path between the two disjoint
+sets of boundary colourings extending through the two shores.  If its
+length is one, the same boundary interchange is obstructed by a literal
+two-colour path through each open shore.  If its length is larger, an
+intermediate boundary colouring is rejected by both shores and produces an
+induced vertex-minimal list-critical subgraph in each.  For a fixed rejected
+trace on the asymmetric order-eight interface, a proper list-critical
+subgraph transfers the same rejected trace to a strictly smaller
+complementary connected subgraph.  If it fills its shore instead, every
+vertex deletion has a six-colouring inducing that same boundary trace.
+
+At an actual order-seven boundary there is an independent well-founded
+reduction.  A critical boundary edge gives five colour-distinguished first
+edges and a six-ended fan inside its open component.  When the original
+targets occupy at most five boundary vertices, either the five prescribed
+first edges extend to a clean target-retaining packing or a strictly smaller
+component lies behind another actual order-seven boundary.  The smaller
+boundary has one exact colour block of order at least two attained on both
+closed shores.  This is a genuine component-order descent, but it does not
+retain a common full boundary partition or the five minor-model labels.
+
+Contracting the distinguished edge in the asymmetric order-eight interface
+also gives a precise exact-seven normal form.  Both open components become
+adjacent to all seven boundary vertices.  The contracted boundary is
+four-degenerate.  Its only five-chromatic form is `K_2 join C_5`; in that
+case the contracted graph has a planarizing pair.  Undoing the contraction
+leaves one adjacent vertex split of the planar graph, and every relevant
+`K_5` model uses the two split vertices in different branch sets.  This
+split-planar alternative is a normalized residue, not a two-apex conclusion
+in the original graph.
+
+### Persistent-edge fixed-trace alignment or compatible separator
+
+The immediate theorem must couple the stable labelled model to one of the
+dynamic colouring objects above.  It is not enough that they occur
+somewhere in the same graph: the model edge can otherwise be disjoint from
+both the exact-seven fan base and the fixed-trace list-critical subgraph.
+
+In the asymmetric order-eight interface, choose a critical
+boundary--component edge `g=xv` and its rejected boundary trace.  Prove that
+one may either terminate directly, or choose the deletion-persistent model
+edge `f=vu` so that it shares the vertex `v`, lies in the shore-filling
+fixed-trace list-critical subgraph, and retains the normalized exact-seven
+fan data.  In that aligned case prove one of:
+
+1. an explicit `K_7`-minor model;
+2. an actual order-seven separation with one full equality partition
+   extending through both closed shores;
+3. a new aligned instance in the same host with a strictly smaller open
+   component, preserving the fixed boundary trace and the labelled
+   near-complete model; or
+4. a two-vertex set meeting every `K_5`-minor model in the relevant
+   two-vertex deletion, which returns the existing exact-seven terminal
+   mechanism.
+
+For any proposed aligned edge `f`, one binary fact is already proved.  If a
+six-colouring of `G-f` induces the fixed boundary trace, then `f` belongs to
+every induced obstruction for the resulting boundary lists; if no such
+colouring exists, the entire proper-minor response set of `f` rejects that
+trace.  Thus the proof must use either a genuine fixed-trace critical edge
+or two disjoint response sets.  Comparing deletion and contraction of the
+same edge cannot supply independent trace dynamics.
+
+Equivalently, the remaining theorem has only two legitimate geometric
 forms:
 
 1. a model-alignment theorem which decodes the two disjoint rooted paths or
@@ -582,6 +658,14 @@ through label-preserving contacts with the five named connected subgraphs.
 - [prescribed spokes or a coloured exact-seven separator](../results/hc7_order8_prescribed_spoke_reduction.md)
 - [minimal contracted-edge `K_6` model](../results/hc7_contracted_edge_k6_model_normalization.md)
 - [fresh-colour disjoint linkages and augmented-boundary transition](../results/hc7_exact7_fresh_colour_linkage.md)
+- [contracting an augmented full-component interface](../results/hc7_augmented_full_component_contraction_reduction.md)
+- [the contracted five-chromatic boundary and split-planar normal form](../results/hc7_contracted_five_chromatic_boundary.md)
+- [a critical exact-seven boundary edge gives a fan or strict component descent](../results/hc7_exact7_critical_edge_fan_descent.md)
+- [opposite-shore obstruction paths for one boundary Kempe transition](../results/hc7_opposite_shore_single_kempe_transition.md)
+- [shortest boundary Kempe distance gives paths or two list-critical subgraphs](../results/hc7_two_shore_kempe_list_dichotomy.md)
+- [fixed-trace list-critical transfer](../results/hc7_boundary_list_critical_transfer.md)
+- [single-portal amplification and a deletion-persistent model edge](../results/hc7_single_portal_amplification.md)
+- [persistent model-edge alignment with a fixed boundary trace](../results/hc7_persistent_edge_fixed_trace_alignment.md)
 - [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
 - [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
 - [two-full-shore boundary absorption](../results/hc7_two_full_shore_boundary_absorption.md)
