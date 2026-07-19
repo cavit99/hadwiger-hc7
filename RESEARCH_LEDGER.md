@@ -12,7 +12,99 @@ current programme. The balanced order-eight, two-root, and support-six
 sections retain developed dependency chains but are not by themselves the
 current engine.
 
-## Current strategic frontier: degree-seven boundary-labelled near-clique composition
+## Current status
+
+The exact live theorem and its hypotheses are maintained in the
+[degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md).
+This section records only the current dependency chain and trust boundary;
+the detailed programme snapshots below are frozen research history.
+
+### Uniform entry
+
+Assume `G` is a hypothetical minor-minimal counterexample to `HC_7`.
+Thus `G` is seven-connected, `chi(G)=7`, `G` has no `K_7` minor, and every
+proper minor is six-colourable.  Audited reductions give a vertex of degree
+seven, eight, or nine and an actual full separation whose boundary has the
+same order.  The adjacent-pair colouring framework can be aligned with that
+boundary.  The boundary is four-colourable, and both closed shores realize
+strong operation-specific boundary-colouring constraints.
+
+### Degree-seven compression
+
+At degree seven the exterior of the closed neighbourhood is one connected
+component.  Exact boundary equality partitions are matchings in the
+complement of the neighbourhood graph: one shore realizes one-edge
+matchings and the other realizes matchings of order at least two.  The
+resulting Kempe paths package into a rooted `K_5`, and every survivor has a
+boundary-labelled model of `K_7` with one missing edge or two adjacent
+missing edges.
+
+Failed branch-set repairs yield actual full-neighbourhood separations.
+Several infinite boundary families are closed, including split boundaries,
+the five-chromatic `K_2`-join-`C_5` boundary, and induced-cycle/full-shore
+interfaces.  These results do not by themselves synchronize one complete
+boundary partition across both shores.
+
+### Special exact-seven branch
+
+The concentrated order-eight owner configuration reduces to a special
+order-seven boundary consisting of five inherited literal vertices and two
+cut vertices.  Its full-subgraph packing vector is `(1,1)` or `(1,2)`, its
+boundary is four-colourable, and deleting an entrance edge gives a complete
+partition which is legal on one closed shore and rejected on the other.
+
+There are two present subbranches.
+
+1. **Singleton shore.**  The opposite exterior is connected and has
+   full-subgraph packing number one.  It is now known to be nonbipartite, so
+   every tree and every bipartite exterior is eliminated.  Binary
+   cutvertices and nonbipartite two-connected exteriors remain.
+2. **Two entrance edges.**  Simultaneous contraction gives a connected
+   two-root list-critical core.  If a proper core has an order-seven full
+   neighbourhood retaining all five inherited literal vertices, one
+   original edge-deletion colouring pulls back to a strict generic
+   five-plus-two response interface.  The remaining placement obstructions
+   are separator excess and loss of an inherited boundary vertex.
+
+If the list-critical core fills its shore, its total list-degree excess is
+the remaining unbounded scalar.  The all-tight case has at most eleven
+vertices and a restricted Gallai block structure.  Actual wheel shores are
+excluded by an explicit `K_7`-minor construction.  Every internal edge
+either lowers the fixed-list excess by two after one edge deletion or has a
+fixed-trace Kempe certificate; if every edge has the latter form, the core
+is subgraph-minimal non-list-colourable.  A lexicographically minimal
+double-contraction colouring gives one common bichromatic component for
+every pair of boundary colours, with a shortest connection internally
+confined to one open shore in the quotient.
+
+### Exact live gap
+
+The current missing theorem is simultaneous and label-sensitive.  It must
+use the operation-specific proper-minor responses and literal first-hit
+locations to obtain one of:
+
+1. an explicit `K_7`-minor model;
+2. an actual order-seven separation on which one complete equality
+   partition is realized by both closed shores; or
+3. a strict host-level descent retaining the selected response and the
+   required inherited literal vertices.
+
+Pairwise Kempe connectivity is not enough: the paths may intersect, use
+different shores, or first meet the wrong branch sets.  A separator without
+compatible shore colourings is also not terminal.  Outside the special
+degree-seven branch, the bounded degree-eight and degree-nine interfaces
+remain global obligations.
+
+This is meaningful progress, not a proof of `HC_7`.
+
+## Detailed programme snapshot — frozen 19 July 2026
+
+The remainder of this file preserves the detailed dependency record at this
+checkpoint.  It is retained for provenance and search, but it is not to be
+updated as the live frontier changes.  The section above and the designated
+technical frontier govern current status.
+
+### Degree-seven boundary-labelled near-clique composition
 
 The bounded-interface entry theorem is global.  Every hypothetical minor-minimal
 counterexample contains a vertex `u` of degree seven, eight, or nine and a
@@ -875,7 +967,7 @@ remain after this branch.  The older
 component-defect programme below is retained as a secondary source of
 explicit branch-set splits, not as a competing primary spine.
 
-## Secondary structural laboratory: adjacent-pair colouring and rooted models
+## Historical snapshot: adjacent-pair colouring and rooted models
 
 A new audited reduction supplies a uniform entry point in every hypothetical
 minor-minimal counterexample.  Kawarabayashi--Pedersen--Toft's theorem for
@@ -1360,7 +1452,7 @@ The exact current formulation and trust boundary are in
 with the immediate four-chromatic reduction in
 [`active/hc7_two_colorful_sets_rooted_k4_frontier.md`](active/hc7_two_colorful_sets_rooted_k4_frontier.md).
 
-## Developed laboratory: balanced order-eight completion
+## Historical snapshot: balanced order-eight completion
 
 The earlier global intermediate target was the maximal-pair support-height
 exchange at level six, equivalently the two-vertex transversal theorem for
@@ -1697,7 +1789,7 @@ Earlier audited dependencies retained by this frontier:
 - [`hc7_mixed_shore_two_component_exchange.md`](results/hc7_mixed_shore_two_component_exchange.md)
 - [`hc7_boundary_anchored_model_completion.md`](results/hc7_boundary_anchored_model_completion.md)
 
-## Previous two-root frontier (frozen)
+## Historical snapshot: previous two-root frontier
 
 ### Clean target
 
@@ -1790,7 +1882,7 @@ Principal current files:
 - [`hc7_two_root_kempe_causal_support.md`](barriers/hc7_two_root_kempe_causal_support.md)
 - [`hc7_normalized_separator_icosahedron_barrier.md`](barriers/hc7_normalized_separator_icosahedron_barrier.md)
 
-## 1. Frozen support-six counterexample framework
+## Historical snapshot: support-six counterexample framework
 
 Suppose that $G$ is a minor-minimal counterexample to $HC_7$.  The programme
 uses the following standard consequences:
@@ -1822,7 +1914,7 @@ two vertices meeting the support of every $K_5$-minor model in $G$.  Deleting
 such a pair leaves a $K_5$-minor-free graph; the known $t=5$ case then gives
 a four-colouring, and two additional colours finish $G$.
 
-## 2. Established dependency chain of the frozen programme
+## Historical snapshot: support-six dependency chain
 
 The following statements have written proofs in the repository.  Many have
 separate internal audit notes; those audits are not external peer review.
@@ -2610,7 +2702,7 @@ The two secondary criticality constraints are
 and
 [`hc7_disjoint_k6minus_k5model_two_apex_exclusion.md`](results/hc7_disjoint_k6minus_k5model_two_apex_exclusion.md).
 
-## 3. Exact open problems
+## Historical snapshot: support-six open problems
 
 ### 3.1 Label-preserving extraction of compatible $K_5$ models
 
@@ -2747,7 +2839,7 @@ The detailed formulations and all immediate dependencies are in
 [`active/INDEX.md`](active/INDEX.md) and
 [`active/hc7_support_six_frontier.md`](active/hc7_support_six_frontier.md).
 
-## 4. Established obstructions to tempting shortcuts
+## Historical snapshot: support-six barriers
 
 The following approaches are known to be insufficient without additional
 hypotheses:
@@ -2803,7 +2895,7 @@ hypotheses:
 Concrete examples and verification scripts are stored in
 [`barriers/`](barriers/). They refute intermediate lemmas, not $HC_7$.
 
-## 5. Evidence and maintenance policy
+## Historical snapshot: support-six evidence policy
 
 - A theorem note in [`results/`](results/) is treated as a repository proof
   only when its hypotheses, conclusion, and proof are written explicitly.
@@ -2820,7 +2912,7 @@ Historical filenames retain some old project shorthand so that citations
 and audit hashes remain stable.  Current public documents and all new work
 should use standard graph-theoretic descriptions; see [`AGENTS.md`](AGENTS.md).
 
-## 6. Principal external inputs
+## Historical snapshot: support-six external inputs
 
 - W. Mader, [*Über trennende Eckenmengen in homomorphiekritischen
   Graphen*](https://eudml.org/doc/161665), Math. Ann. 175 (1968), 243--252:

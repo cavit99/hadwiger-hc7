@@ -181,7 +181,7 @@ title = "Low-degree adjacent pair and bounded full separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_adjacent_pair_alignment.md"
-active = true
+active = false
 audit = "results/hc7_low_degree_adjacent_pair_alignment_audit.md"
 expected_source_sha256 = "263611a40dc7829788967250e031a3f3170e1c7a6c8c9a3fbfbb358231b1f9ca"
 
@@ -191,7 +191,7 @@ title = "Degree-nine finite local completion"
 kind = "lemma"
 status = "audited-green"
 source = "results/hc7_degree9_pole_verifier.md"
-active = true
+active = false
 audit = "results/hc7_degree9_pole_verifier_audit.md"
 expected_source_sha256 = "dd8817ceec58b083e12adae943f49cf2bb5a401f17ca87950477906f811c5a08"
 scope = "computer-assisted finite nine-vertex neighbourhood lemma"
@@ -212,7 +212,7 @@ title = "Split-boundary colour synchronization"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_split_boundary_synchronization.md"
-active = true
+active = false
 audit = "results/hc7_split_boundary_synchronization_audit.md"
 expected_source_sha256 = "3e3030d6e206fd81b3a79256be2d94cb4a4aac5ad5985fb95008488d9412edf8"
 
@@ -222,7 +222,7 @@ title = "Two-connected boundary-core completion"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_connected_boundary_completion.md"
-active = true
+active = false
 audit = "results/hc7_two_connected_boundary_completion_audit.md"
 expected_source_sha256 = "8b12881cebb2df2bc17917367173aa047a64f990530da695a73e7fed68c31a2d"
 
@@ -232,7 +232,7 @@ title = "Exact-block Kempe reduction and pole-free bridge"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_bounded_interface_exact_block_kempe_reduction.md"
-active = true
+active = false
 audit = "results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md"
 expected_source_sha256 = "2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9"
 
@@ -242,7 +242,7 @@ title = "Connected anti-neighbourhood at degree seven"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
-active = true
+active = false
 audit = "results/hc7_degree7_anti_neighbourhood_connectivity_audit.md"
 expected_source_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a90f3"
 scope = "degree-seven vertex in the hypothetical HC7 kernel"
@@ -339,7 +339,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_full_shore_boundary_absorption.md"
 source_heading = "Theorem 1 (boundary absorption)"
-active = true
+active = false
 audit = "results/hc7_two_full_shore_boundary_absorption_audit.md"
 expected_source_sha256 = "f66559a43b49cdf77963f3dd64066f71da9defd69a111107e030e5a626602d8d"
 scope = "two anticomplete connected open shores that are each adjacent to every literal vertex of a boundary of order eight or nine in a K7-minor-free host"
@@ -362,7 +362,7 @@ title = "Exact matching languages and rooted model-carried separator"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree7_matching_bridge_bundle.md"
-active = true
+active = false
 audit = "results/hc7_degree7_matching_bridge_bundle_audit.md"
 expected_source_sha256 = "7fda58a909aabf5a49c32be513ebc598695c448855a4a8bede3ae1efdc63314a"
 scope = "degree-seven sole-exterior branch"
@@ -382,7 +382,7 @@ title = "Rooted K5 connector-or-separator theorem"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_rooted_k5_connector_separator.md"
-active = true
+active = false
 audit = "results/hc7_exact7_rooted_k5_connector_separator_audit.md"
 expected_source_sha256 = "2ee51a2af500d8d208964e130ac3008e937b2c05dcc1231e7f13cf7ce340dda8"
 scope = "five labelled roots with a jointly dominating reserved pair"
@@ -414,7 +414,7 @@ title = "Spanning alignment, off-pole edge responses and dual orientation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree7_one_spoke_bridge_corollaries.md"
-active = true
+active = false
 audit = "results/hc7_degree7_one_spoke_bridge_corollaries_audit.md"
 expected_source_sha256 = "61ed79428d43a82043ea024e5c804f12d59f74c1082be726865d588338039d37"
 scope = "degree-two boundary-complement branch at a degree-seven vertex"
@@ -430,7 +430,7 @@ title = "Two-mark branch-set split or full-neighbourhood separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_mark_branch_set_split.md"
-active = true
+active = false
 audit = "results/hc7_two_mark_branch_set_split_audit.md"
 expected_source_sha256 = "d146edf7783d6f29750d634ac3d224da14bdd83dd91170011293ece177240d64"
 scope = "parameter-uniform labelled Kt-minus-one-edge model"
@@ -446,7 +446,7 @@ title = "Five-row reflection across a separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_five_row_separator_reflection.md"
-active = true
+active = false
 audit = "results/hc7_five_row_separator_reflection_audit.md"
 expected_source_sha256 = "31adbe5d6255d2424c3fd9aeb9f1cef52068ea4d9bfe1150dea12cdb6c93fb06"
 scope = "arbitrary finite separation in a minor-minimal non-six-colourable graph"
@@ -458,7 +458,7 @@ title = "A spanning one-missing-adjacency model yields a universally multicolour
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_universal_multicoloured_row_separator.md"
-active = true
+active = false
 audit = "results/hc7_universal_multicoloured_row_separator_audit.md"
 expected_source_sha256 = "9a62bd17005bcd327e77f4dcfdd636f83bb680ea8c173e1a607e545ff24a88f8"
 scope = "spanning labelled K7-minus-one-edge model in a seven-connected minor-minimal host"
@@ -471,7 +471,7 @@ title = "Boundary-full connected subgraphs make row traces monochromatic"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_boundary_full_subgraph_row_reflection.md"
-active = true
+active = false
 audit = "results/hc7_boundary_full_subgraph_row_reflection_audit.md"
 expected_source_sha256 = "2073fad6bd81f3d7a82f18720e719d86656e75587d720a1ed3006ae77a52223a"
 scope = "five-row separation with independent boundary traces"
@@ -484,7 +484,7 @@ title = "Root-protected closure of one double-loss orientation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_root_protected_double_loss_closure.md"
-active = true
+active = false
 audit = "results/hc7_root_protected_double_loss_closure_audit.md"
 expected_source_sha256 = "1cd5ae4eac0c518370b7800a174af948f4612bb434e202021d3c7e0704a7433d"
 scope = "degree-two aligned-model provenance with the protected root outside the detached connected subgraph"
@@ -508,7 +508,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_adjacent_pair_palette_linkage.md"
 source_heading = "Theorem 3.1 (palette-permutation linkage)"
-active = true
+active = false
 audit = "results/hc7_adjacent_pair_palette_linkage_audit.md"
 expected_source_sha256 = "2b0c30b9d8566f6da4959df145bf0f527249bf887dfa844d19a98e524080a9f2"
 
@@ -987,7 +987,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_cycle_boundary_completion.md"
 source_heading = "Theorem"
-active = true
+active = false
 scope = "seven-connected host; induced cycle of arbitrary length at least four with two connected full shores and two adjacent universal vertices"
 label_fidelity = "the cycle roots, two universal vertices and the two literal shores"
 audit = "results/hc7_cycle_boundary_completion_audit.md"
@@ -1177,7 +1177,7 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_four_colour_parity_language_barrier.md"
 source_heading = "3. Consequence"
-active = true
+active = false
 expected_source_sha256 = "961011d6a52b82fbec9016c6846188a5bfa05db40dfb2f5c2f2397598f21ede5"
 refutes = ["a common six-colour boundary equality partition from four-colourability, a target-free two-shore quotient, and exact private-block responses alone"]
 satisfies = ["four-colourable boundary", "target-free two-full-shore join quotient", "exact private-block response for every independent boundary set"]
@@ -1190,7 +1190,7 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md"
 source_heading = "6. Exact scope"
-active = true
+active = false
 expected_source_sha256 = "76666dbd1a748f6f4b1048d16eb959bf96524ed1604f38227aea1c3c1618ab16"
 refutes = ["alignment of two shore colouring languages from static Gallai--Edmonds data and two named boundary-edge transitions alone"]
 satisfies = ["seven-connectivity and chromatic number seven", "connected full shores", "target-free two-shore quotient", "exact named-edge and independent-block responses"]
@@ -1214,7 +1214,7 @@ title = "Two colourful sets need not share a rooted K4 model"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_two_colorful_sets_paired_k4_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_two_colorful_sets_paired_k4_barrier_audit.md"
 expected_source_sha256 = "f9d41fdffb6ca5a7bbc54cd67a5491aae7e6fdf12d03c8725403b7a4abfb8e6f"
 refutes = ["paired rooted K4 from colourful sets and connectivity alone"]
@@ -1226,7 +1226,7 @@ title = "Deficiency pivots are involutions"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_near_k7_rotation_involution_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_near_k7_rotation_involution_barrier_audit.md"
 expected_source_sha256 = "5e8c75b67c7887ba68ecb4a853ce4d40897f46fa7a76d414642a9a06bcfa61e2"
 refutes = ["a strictly decreasing model-local potential based only on a reversible deficiency pivot"]
@@ -1248,7 +1248,7 @@ title = "Geometric minimality does not peel a direct first entry"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_first_entry_packet_minimality_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_first_entry_packet_minimality_barrier_audit.md"
 expected_source_sha256 = "f731d5fec15e1734fb5ff2b465efaa71ed97fbed47670331c3abd27077ee3a28"
 refutes = ["a direct first-entry peel from lexicographic geometric minimality alone"]
@@ -1259,7 +1259,7 @@ title = "One missing far-side contact defeats the local three-path inference"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_three_path_missing_five_row_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_three_path_missing_five_row_barrier_audit.md"
 expected_source_sha256 = "687e29c27fdcb2e2af4634de061064dce5ac3ef97286594d35faf7da94334a57"
 refutes = ["a K7-minor conclusion from the three-path geometry after losing one named far-side contact"]
@@ -1306,7 +1306,7 @@ title = "The unrestricted centre-to-deficient-bag shortest-path rank is degenera
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_one_spoke_shortest_path_barrier.md"
-active = true
+active = false
 refutes = ["lexicographic first-hit descent on an unrestricted centre-to-deficient-bag path"]
 satisfies = ["the spanning boundary-labelled degree-seven K7-minus-one-edge setup"]
 lacks = ["no host hypothesis; the pole creates the degeneracy in every such setup"]
@@ -1317,7 +1317,7 @@ title = "One multicoloured row and separately chosen saturated responses do not 
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_multicoloured_row_response_barrier.md"
-active = true
+active = false
 refutes = [
   "a branch-set split from static multicolouring",
   "a labelled exchange from one saturated proper-minor response per incident edge",
@@ -1331,7 +1331,7 @@ title = "All open-side response partitions and unlabelled Kempe connections need
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_five_row_dynamic_response_language_barrier.md"
-active = true
+active = false
 refutes = ["five-row completion from the abstract family of all proper-minor equality partitions plus unlabelled Kempe connectivity"]
 satisfies = ["exact seven-vertex boundary", "five named far-shore rows", "open-side internal minor minimality"]
 lacks = ["seven-connectivity", "K7-minor exclusion", "a connected boundary-full open side"]
@@ -1342,7 +1342,7 @@ title = "Disjoint connected trace realizations force five-row reflection"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_disjoint_trace_linkage_reflection.md"
-active = true
+active = false
 audit = "results/hc7_disjoint_trace_linkage_reflection_audit.md"
 expected_source_sha256 = "931b70417d8ec307b54088c862384983d6b172d2fc93daefca7a66ea221a4dcd"
 scope = "arbitrary finite five-row separation with independent boundary traces"
@@ -1355,7 +1355,7 @@ title = "Two-pair disk structure, nested separators and degree-seven/eight re-en
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_pair_disk_structure.md"
-active = true
+active = false
 audit = "results/hc7_two_pair_disk_structure_audit.md"
 expected_source_sha256 = "e9af096101d418e95418203fc0a2c6634aa4184dc45a42c0e14abbef00fd3254"
 scope = "exact order-seven separation with two paired traces, five named far-side branch sets and a four-root disk"
@@ -1369,7 +1369,7 @@ title = "Degree-eight cyclic contact allocation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_contact_allocation.md"
-active = true
+active = false
 audit = "results/hc7_degree8_contact_allocation_audit.md"
 expected_source_sha256 = "84c47863546f9800db24bf042e60952221dcf3649b4076170259efa9fde78049"
 scope = "degree-eight vertex with three boundary labels, five cyclic connected sets and a disjoint connected seventh branch set"
@@ -1382,7 +1382,7 @@ title = "Five prescribed vertices remain cyclable after three deletions"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_three_vertex_deletion_five_cyclability.md"
-active = true
+active = false
 audit = "results/hc7_three_vertex_deletion_five_cyclability_audit.md"
 expected_source_sha256 = "93d4c49b90ea06d5143fcb4e04ed7c76a4160b92c63c7fdf7969325c7281c1c7"
 scope = "seven-connected K7-minor-free seven-chromatic graph whose proper minors are six-colourable"
@@ -1395,7 +1395,7 @@ title = "Exact-seven full-packet packing"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact_seven_packet_packing.md"
-active = true
+active = false
 audit = "results/hc7_exact_seven_packet_packing_audit.md"
 expected_source_sha256 = "501f581d764607ef9cd13b854150dae95ea251efde0fdd28c77bb9632415fc57"
 scope = "actual order-seven separation in a seven-connected K7-minor-free strongly seven-contraction-critical graph"
@@ -1408,7 +1408,7 @@ title = "Exact-seven orientation by full connected subgraphs"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_packet_orientation_corollary.md"
-active = true
+active = false
 audit = "results/hc7_exact7_packet_orientation_corollary_audit.md"
 expected_source_sha256 = "4f857d8cdecc7b885610fc9f528d8ca4e71c0b42a20f89a45d20d3a667db2ee8"
 
@@ -1418,7 +1418,7 @@ title = "Two-vertex boundary-contact transversal: repair or web"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_vertex_boundary_contact_transversal.md"
-active = true
+active = false
 audit = "results/hc7_two_vertex_boundary_contact_transversal_audit.md"
 expected_source_sha256 = "74825bfc670a9e24049eb2242d747c1096ee23b9e57264e3d4f36f59b181459b"
 
@@ -1428,7 +1428,7 @@ title = "First-entry components at an exact order-seven separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_first_entry_bridge_reduction.md"
-active = true
+active = false
 audit = "results/hc7_exact7_first_entry_bridge_reduction_audit.md"
 expected_source_sha256 = "edb821588975da2590d0f355d17ddbc16c2bf00abc12d8565c62176da4fcc540"
 
@@ -1438,7 +1438,7 @@ title = "Path-residual separator excess"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_small_path_intersection_lobe.md"
-active = true
+active = false
 audit = "results/hc7_small_path_intersection_lobe_audit.md"
 expected_source_sha256 = "a857c7881308333eedca799bfe0d22b458c4f711d43ccacaeeb56f8dfbd46676"
 
@@ -1448,7 +1448,7 @@ title = "Nested full-neighbourhood descent"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_nested_full_neighbourhood_descent.md"
-active = true
+active = false
 audit = "results/hc7_nested_full_neighbourhood_descent_audit.md"
 expected_source_sha256 = "61ea0abfc8a72f04a93bf0e6f1e06660262c466ce4c50474efe1e79e5ec263f0"
 
@@ -1458,7 +1458,7 @@ title = "First-entry singleton peel in a degree-eight exterior component"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_first_entry_singleton_peel.md"
-active = true
+active = false
 audit = "results/hc7_first_entry_singleton_peel_audit.md"
 expected_source_sha256 = "ac4bdeaf72a40f68b57f501878941333255f9c2724172b60fa34c5da530af146"
 
@@ -1468,7 +1468,7 @@ title = "Three explicit K7 models for the minimal three-path quotient"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_atomic_three_path_quotient_completion.md"
-active = true
+active = false
 audit = "results/hc7_atomic_three_path_quotient_completion_audit.md"
 expected_source_sha256 = "00877886de71201cd7b0472d70a1f65fecc4664fa6abef77695ac324708c41b6"
 
@@ -1478,7 +1478,7 @@ title = "Reserved cycle or an order-at-most-two cut in the component-deleted res
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_reserved_cycle_or_two_cut.md"
-active = true
+active = false
 audit = "results/hc7_reserved_cycle_or_two_cut_audit.md"
 expected_source_sha256 = "8f9cd1d6a76c868a200b3d5504584980d054bf8bb43d880fcbf360a9f3938495"
 scope = "the degree-eight equality inside the exact two-pair disk configuration, after deleting the reserved connected subgraph, the two paired traces and the centre"
@@ -1492,7 +1492,7 @@ title = "Hamiltonian-cycle reduction for the four-root degree-eight disk"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_rooted_hamiltonian_cycle_reduction.md"
-active = true
+active = false
 audit = "results/hc7_rooted_hamiltonian_cycle_reduction_audit.md"
 expected_source_sha256 = "8c3f9eb12e4e04716a590d9a98eb4b7716cffbd9874eee6a149fa4c19bfe7c32"
 scope = "a three-connected plane graph with four cofacial roots, rooted internal four-connectivity and an interior vertex with five nominated neighbours"
@@ -1506,7 +1506,7 @@ title = "Stable-theta allocation for the four-root degree-eight disk"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_four_root_stable_theta_allocation.md"
-active = true
+active = false
 audit = "results/hc7_four_root_stable_theta_allocation_audit.md"
 expected_source_sha256 = "f5fb47f4e9e9e2857addbb3d7f5be54c7818bd32f264b07eccc729f671bbfa62"
 scope = "a three-connected plane graph with four cofacial roots, rooted internal four-connectivity and an interior vertex with five nominated neighbours"
@@ -1520,7 +1520,7 @@ title = "Two safe boundary supports force five-row colour reflection"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_safe_support_reflection.md"
-active = true
+active = false
 audit = "results/hc7_degree8_safe_support_reflection_audit.md"
 expected_source_sha256 = "1248eb14c14662052bcbcd59c98e9b9a37d2e04ca06c6061fecdf811e0bb4f24"
 scope = "two paired traces with four rooted connected sets and one of four stated degree-eight contact patterns"
@@ -1533,7 +1533,7 @@ title = "A boundary-edge obstruction yields three far-shore Kempe connections"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_blocker_edge_kempe_fork.md"
-active = true
+active = false
 audit = "results/hc7_degree8_blocker_edge_kempe_fork_audit.md"
 expected_source_sha256 = "ab33c617b53e45d6f881e932074e9c96ced3457bed8c3e699168899bcdfbb144"
 scope = "two paired traces with two adjacent connected supports and a nonempty set of obstructing boundary edges sharing one endpoint"
@@ -1547,7 +1547,7 @@ title = "Three Kempe connections give a packing or an exact-seven boundary"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_kempe_fan_or_exact_seven_boundary.md"
-active = true
+active = false
 audit = "results/hc7_kempe_fan_or_exact_seven_boundary_audit.md"
 expected_source_sha256 = "1c616beccaea3d798e6c1659ee0311247a5d78bf90c593acae2cb86d31cdd258"
 scope = "the exact-seven two-pair boundary with the three simultaneous Kempe connections returned by one obstructing-edge colouring"
@@ -1561,7 +1561,7 @@ title = "Boundary-rooted connected subgraphs, cyclic connected sets and corner s
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_connected_row_cyclic_corner_dichotomy.md"
-active = true
+active = false
 audit = "results/hc7_connected_row_cyclic_corner_dichotomy_audit.md"
 expected_source_sha256 = "cc3c6012b32e8f0116e4c3863ad9cbd7199620419ab2d8df9b3de517000029c2"
 scope = "the stated pairwise-disjoint degree-eight configuration of three boundary-rooted connected subgraphs and five cyclic connected sets"
@@ -1575,7 +1575,7 @@ title = "Low-order separators inside a boundary-full component"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_boundary_full_component_low_cut_reduction.md"
-active = true
+active = false
 audit = "results/hc7_boundary_full_component_low_cut_reduction_audit.md"
 expected_source_sha256 = "b6205cae0d5ee6fe25a7258b3b8e3aa1894ce97d0fa348cef2c06935f5c24d87"
 scope = "a boundary-full component behind an order-seven separation in a seven-connected graph"
@@ -1589,7 +1589,7 @@ title = "A universal boundary-contact vertex in a three-connected component"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_boundary_full_universal_vertex_split.md"
-active = true
+active = false
 audit = "results/hc7_boundary_full_universal_vertex_split_audit.md"
 expected_source_sha256 = "3390c21c45c2541ea4e4aba19776aa578e44ac9f9ac6739816aae4994148266e"
 scope = "a three-connected boundary-full component behind an order-seven separation with one vertex adjacent to every boundary vertex"
@@ -1603,7 +1603,7 @@ title = "Cyclability need not reserve a prescribed contacting connected set"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_reserved_cycle_fournier_barrier.md"
-active = true
+active = false
 refutes = ["a prescribed-set cycle disjoint from a full contacting connected set using only three-connectivity and alpha at most three"]
 lacks = ["the exact disk host", "contraction-critical colouring responses", "three-connectivity after deleting the reserved set"]
 
@@ -1613,7 +1613,7 @@ title = "Separately selected saturated spoke responses do not complete the rural
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_two_pair_rural_saturated_spoke_barrier.md"
-active = true
+active = false
 refutes = ["completion from the rural two-pair geometry plus one saturated response for every spoke"]
 satisfies = ["seven-connectivity", "K7-minor exclusion", "exact order-seven five-row geometry", "one fully endpoint-saturated six-colouring for every spoke deletion"]
 lacks = ["seven-chromaticity", "universal nonextension for every colouring of each edge deletion", "absence of a global two-vertex terminal"]
@@ -1624,7 +1624,7 @@ title = "Three colour-indexed paths need not have a common bottleneck"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_three_kempe_paths_common_bottleneck_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_three_kempe_paths_common_bottleneck_barrier_audit.md"
 expected_source_sha256 = "fe7cc2f3596e305c36a220c3e65039b737b756232051017b4533287769736354"
 refutes = ["three colour-indexed paths with only base-colour intersections yield three internally disjoint paths or one common internal bottleneck", "a common bottleneck in the selected colour paths is automatically a host separator"]
@@ -1636,7 +1636,7 @@ title = "Universal obstructing-edge responses need not diversify named first hit
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_degree8_blocker_first_hit_concentration_barrier.md"
-active = true
+active = false
 scope = "finite deterministic construction"
 refutes = ["first-hit diversity from seven-connectivity, one universal obstructing-edge response, five named pairwise-adjacent connected subgraphs and five cyclic connected subgraphs alone"]
 satisfies = ["seven-connectivity", "actual order-seven separation", "universal equality on the selected edge deletion", "endpoint saturation in all five alternate colours", "all three absent-colour first hits concentrated in one named boundary-free connected subgraph"]
@@ -1648,7 +1648,7 @@ title = "The three responses of a two-edge star do not force a fourth boundary p
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_two_edge_deletion_lattice_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_two_edge_deletion_lattice_barrier_audit.md"
 expected_source_sha256 = "3d931f5f356c28a101dc279bd3ad0b598435ed386df7094d7b8c04d01b8c0a37"
 scope = "explicit six-vertex gadget with exhaustive minimality through two internal vertices"
@@ -1662,7 +1662,7 @@ title = "Three terminal-capacitated paths do not force matching sector defects"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_stable_theta_three_path_matching_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_stable_theta_three_path_matching_barrier_audit.md"
 expected_source_sha256 = "83fb3c4dcfdc8dcea94d0b11a3e694fbb1f6fd1f318c0266bcae23d839da0ff2"
 scope = "explicit finite order-seven interface with the exact stable-theta and terminal-capacitated path outputs"
@@ -1676,7 +1676,7 @@ title = "Exact independent-block traces do not synchronize the new seven-boundar
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_exact7_paired_block_trace_parity_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_exact7_paired_block_trace_parity_barrier_audit.md"
 expected_source_sha256 = "aaef229a36ab6eae0fb15a55a0f9faf7de1862a0ac376327460921bb8963a89b"
 scope = "two abstract parity-separated boundary response languages on K3 disjoint union K3 disjoint union K1, plus the static two-packet quotient"
@@ -1690,7 +1690,7 @@ title = "Rural two-pair geometry without criticality does not force completion"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_two_pair_rural_almost_universal_apex_barrier.md"
-active = true
+active = false
 refutes = ["K7 or a fixed omitted-boundary K5-model transversal from rural two-pair geometry, five rows, seven-connectivity and K7-minor exclusion alone"]
 satisfies = ["seven-connectivity", "K7-minor exclusion", "exact order-seven rural two-pair geometry", "five named far-side branch sets"]
 lacks = ["seven-chromaticity", "proper-minor critical colouring responses"]
@@ -1701,7 +1701,7 @@ title = "Sparse five-set edges obstruct local degree-eight contact allocation"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_degree8_contact_allocation_barrier.md"
-active = true
+active = false
 refutes = ["six contacted local branch sets from alpha at most three, seven contacts and one missing cross-edge alone"]
 lacks = ["seven-connected host realization", "contraction-critical colouring responses", "facial-cycle structure"]
 
@@ -1711,7 +1711,7 @@ title = "Curvature and Hall counting do not diversify degree-eight boundary cont
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_degree8_curvature_contact_barrier.md"
-active = true
+active = false
 refutes = ["a complete or matching-defect five-ring from curvature and contact counting alone", "local K7 completion from one fully contacting exterior representative"]
 lacks = ["seven-connected contraction-critical host", "named far-side branch sets", "proper-minor colouring responses"]
 
@@ -1721,7 +1721,7 @@ title = "Excess-one nested descent with literal boundary data"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_epsilon_one_labelled_descent.md"
-active = true
+active = false
 audit = "results/hc7_epsilon_one_labelled_descent_audit.md"
 expected_source_sha256 = "6108e6992e1ef069e3a44abac7f0202fbbe38df3659182f091ef416a5475b42f"
 scope = "the excess-one path-residual or nested full-neighbourhood branch"
@@ -1735,7 +1735,7 @@ title = "Four full components close an order-eight boundary"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_full_order8_four_component_closure.md"
-active = true
+active = false
 audit = "results/hc7_full_order8_four_component_closure_audit.md"
 expected_source_sha256 = "1c50f6a2e666c316d99dead9f8e3fbd185c56e87f9bf396229b7b75043994222"
 scope = "any full eight-vertex boundary with at least four complementary components"
@@ -1748,7 +1748,7 @@ title = "Three-component order-eight boundary classification"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_order8_three_component_boundary_classification.md"
-active = true
+active = false
 audit = "results/hc7_order8_three_component_boundary_classification_audit.md"
 expected_source_sha256 = "1d976b6ece78b66c08a87df36cfc3f31a3e8511d57aa6990aeaa28c7c67c76b3"
 scope = "computer-assisted classification of the eight-vertex boundary after three full complementary components"
@@ -1761,7 +1761,7 @@ title = "Kempe transitions across boundary-full order-eight components"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_order8_full_component_kempe_transition.md"
-active = true
+active = false
 audit = "results/hc7_order8_full_component_kempe_transition_audit.md"
 expected_source_sha256 = "491cf219c3ffe01334770d9c1ddb5e9933dbb7e68a492b9d879c51a5f0d9c905"
 scope = "any boundary-full order-eight interface with two or three complementary components, with a specialised conclusion for the 82 three-component boundary types"
@@ -1789,7 +1789,7 @@ title = "Prescribed spokes or a coloured exact-seven separator"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_order8_prescribed_spoke_reduction.md"
-active = true
+active = false
 audit = "results/hc7_order8_prescribed_spoke_reduction_audit.md"
 expected_source_sha256 = "3b55f263775f35164efe1d32c6ed86eab777ea2272b24293129e8e65517517d6"
 scope = "the locked edge-deletion fan in a boundary-full order-eight interface, plus an unrestricted prescribed-spoke theorem"
@@ -1816,7 +1816,7 @@ title = "Minimal contracted-edge K6 model"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_contracted_edge_k6_model_normalization.md"
-active = true
+active = false
 audit = "results/hc7_contracted_edge_k6_model_normalization_audit.md"
 expected_source_sha256 = "61fa3c094c34d06590efcef8a6903356f36bc8aadcdec75f834aa7e5cfd82936"
 scope = "an edge in a seven-connected minor-minimal non-six-colourable K7-minor-free graph, after contracting the edge and extremizing a K6 model containing its image"
@@ -1843,7 +1843,7 @@ title = "Fresh-colour disjoint linkages across an exact order-seven separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_fresh_colour_linkage.md"
-active = true
+active = false
 audit = "results/hc7_exact7_fresh_colour_linkage_audit.md"
 expected_source_sha256 = "d4725d119bac52e27f72a92645d9e1506473bcd66308378868027718539aad29"
 scope = "an exact order-seven separation carrying the same exact nontrivial colour block in an edge-deletion colouring and an opposite-shore proper colouring"
@@ -1871,7 +1871,7 @@ title = "Contracting an augmented full-component interface"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_augmented_full_component_contraction_reduction.md"
-active = true
+active = false
 audit = "results/hc7_augmented_full_component_contraction_reduction_audit.md"
 expected_source_sha256 = "f5cff7a8318fd8d17a3779c23e10d568c2ee0fa2850cb6ac5f4bd153cdbcafaf"
 scope = "the exact asymmetric order-eight full-component interface after contracting its distinguished boundary edge"
@@ -1885,7 +1885,7 @@ title = "Five-chromatic contracted boundary and split-planar normal form"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_contracted_five_chromatic_boundary.md"
-active = true
+active = false
 audit = "results/hc7_contracted_five_chromatic_boundary_audit.md"
 expected_source_sha256 = "9502143a9a003193bc1c405f9c95eb9cb2f547925e3e26204915e4dc36c04d5c"
 scope = "a six-connected K7-minor-free graph with two distinct components full to one seven-vertex boundary"
@@ -1898,7 +1898,7 @@ title = "Critical exact-seven boundary edge: prescribed fan or strict component 
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_critical_edge_fan_descent.md"
-active = true
+active = false
 audit = "results/hc7_exact7_critical_edge_fan_descent_audit.md"
 expected_source_sha256 = "d359b4a14520fc4d558ebc600c4e64b7f6bf65ef9fa425b107effa498afc3bfa"
 scope = "an edge from an open component to an actual seven-vertex separator in a minor-minimal non-six-colourable graph"
@@ -1913,7 +1913,7 @@ title = "One boundary Kempe transition forces obstruction paths through both sho
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_opposite_shore_single_kempe_transition.md"
-active = true
+active = false
 audit = "results/hc7_opposite_shore_single_kempe_transition_audit.md"
 expected_source_sha256 = "54b07b1173d828535e878b24a504fd86ddd0052a2681f500e8a159db30f02181"
 scope = "opposite-shore proper-minor boundary responses differing by one labelled Kempe interchange"
@@ -1926,7 +1926,7 @@ title = "Boundary Kempe distance gives two paths or two list-critical subgraphs"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_shore_kempe_list_dichotomy.md"
-active = true
+active = false
 audit = "results/hc7_two_shore_kempe_list_dichotomy_audit.md"
 expected_source_sha256 = "0882a91fbb18c51fcec93ee8980f6c67d0a99a289e3f5bd264b1c8c27f13e4ec"
 scope = "two incompatible shore-extension sets in a connected labelled boundary Kempe graph"
@@ -1939,7 +1939,7 @@ title = "Fixed-trace list-critical transfer"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_boundary_list_critical_transfer.md"
-active = true
+active = false
 audit = "results/hc7_boundary_list_critical_transfer_audit.md"
 expected_source_sha256 = "4e38af17e211f2f384dee804e55092b98512483eac4a897353eb5cbc3954b8f1"
 scope = "one rejected boundary trace on the full shore of an exact asymmetric order-eight interface"
@@ -1953,7 +1953,7 @@ title = "Spanning near-complete model with a deletion-persistent edge"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_single_portal_amplification.md"
-active = true
+active = false
 audit = "results/hc7_single_portal_amplification_audit.md"
 expected_source_sha256 = "b4315f0adaff165acfbd338c7b1def8f3bddf8cae4d8d16501b9708c9c3252e6"
 scope = "a safely absorbable labelled K7-minus-one-edge model in a seven-connected graph"
@@ -1967,7 +1967,7 @@ title = "Persistent model edge: fixed-trace alignment or total trace rejection"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_persistent_edge_fixed_trace_alignment.md"
-active = true
+active = false
 audit = "results/hc7_persistent_edge_fixed_trace_alignment_audit.md"
 expected_source_sha256 = "a01a86295dc0b797ab19f63049e893ac97dbb712a22a3dad6de0b316b07b4cab"
 scope = "one edge inside a shore carrying a fixed rejected labelled boundary colouring"
@@ -1981,7 +1981,7 @@ title = "Rooted incident-edge persistence with a protected singleton"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_rooted_persistent_model_edge.md"
-active = true
+active = false
 audit = "results/hc7_rooted_persistent_model_edge_audit.md"
 expected_source_sha256 = "05548e80573736ea1f56b23db7372b2487eacdcda32dd5633a0af63be65212b7"
 scope = "parameter-uniform spanning labelled K_t-minus-one-edge models in t-connected K_t-minor-free hosts"
@@ -1995,7 +1995,7 @@ title = "Persistent incident edges with several protected singleton branch sets"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_multi_protected_persistent_model_edge.md"
-active = true
+active = false
 audit = "results/hc7_multi_protected_persistent_model_edge_audit.md"
 expected_source_sha256 = "db70c8487c0561ab88d88cf08efc96c63c11c645f79ddd634a50c3505ee7d161"
 scope = "parameter-uniform rooted-minimal spanning labelled K_t-minus-one-edge models with a prescribed family of singleton neighbours"
@@ -2009,7 +2009,7 @@ title = "Jointly persistent incident edges or an exact order-seven separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_joint_persistent_edge_or_exact_seven.md"
-active = true
+active = false
 audit = "results/hc7_joint_persistent_edge_or_exact_seven_audit.md"
 expected_source_sha256 = "b78989355a006501d91c3732e3231e99d85fc01e6558259fdcb6b447d0845fcd"
 scope = "protected common-label K7-minus-one-edge models in a seven-connected K7-minor-free graph"
@@ -2024,7 +2024,7 @@ title = "Persistent-edge support classes and the dense-alternative degree bound"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_persistent_support_class_refinement.md"
-active = true
+active = false
 audit = "results/hc7_persistent_support_class_refinement_audit.md"
 expected_source_sha256 = "4218dea7a7d02c571078dd7b2f1fc34e0fad1abab57dcc4e0f14e6503afa3629"
 scope = "persistent incident edges in one rooted-minimal spanning labelled K_t-minus-one-edge model, with the common-label HC7 specialization"
@@ -2038,7 +2038,7 @@ title = "Colouring fork for a jointly persistent incident pair"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_joint_persistent_incident_colour_fork.md"
-active = true
+active = false
 audit = "results/hc7_joint_persistent_incident_colour_fork_audit.md"
 expected_source_sha256 = "21b5fd5c523efb673ca11b0e604e0e81d173a5dbda677baa235efd8924d4b865"
 scope = "two incident edges in a (q+1)-chromatic graph all of whose proper minors are q-colourable, with a fixed model-preserving common deletion"
@@ -2054,7 +2054,7 @@ title = "One-extra-colour critical kernel at a boundary edge"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_one_extra_colour_boundary_kernel.md"
-active = true
+active = false
 audit = "results/hc7_one_extra_colour_boundary_kernel_audit.md"
 expected_source_sha256 = "6317f20d0307b00ceec9ad1290f08e81e211f2dd34a85b975400381bb08c5c07"
 scope = "vertex-minimal boundary-list obstruction after deleting one boundary edge"
@@ -2067,7 +2067,7 @@ title = "Boundary-crossing persistent edge gives a strict one-extra-colour desce
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_boundary_crossing_persistent_edge_reduction.md"
-active = true
+active = false
 audit = "results/hc7_boundary_crossing_persistent_edge_reduction_audit.md"
 expected_source_sha256 = "f57949ded3c17962004cbe1c7f1a36bb5ec9667cc79a901326b44234dfa41326"
 scope = "the asymmetric order-eight branch when a deletion-persistent edge crosses into the branch set deficient from the protected singleton"
@@ -2081,7 +2081,7 @@ title = "Total rejection of a fixed boundary trace at an internal edge"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_total_trace_rejection_kernel.md"
-active = true
+active = false
 audit = "results/hc7_total_trace_rejection_kernel_audit.md"
 expected_source_sha256 = "1bb4fff7f050cf4349ee46d612949c8ddfc07d51d69f65f2406fc7fa6ff6b258"
 scope = "one fixed boundary trace rejected by every colouring after deleting an internal shore edge"
@@ -2094,7 +2094,7 @@ title = "Aligned critical edges give a bypass or labelled donor separation"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_aligned_two_edge_bypass_separator.md"
-active = true
+active = false
 audit = "results/hc7_aligned_two_edge_bypass_separator_audit.md"
 expected_source_sha256 = "de9e974aa71a2372933a65b01835d2543664ebe63ca637591b50b63cfb50efae"
 scope = "two aligned critical edges in a spanning labelled K7-minus-one-edge model"
@@ -2108,7 +2108,7 @@ title = "Persistence does not force a tight list-critical endpoint"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_persistent_edge_tight_endpoint_barrier.md"
-active = true
+active = false
 scope = "abstract vertex-minimal list-critical graphs before and after one edge deletion"
 refutes = ["a deletion-persistent edge in a vertex-minimal list obstruction must have a tight endpoint after deletion"]
 does_not_prove = ["a counterexample under the full HC7 host geometry", "a counterexample to HC7"]
@@ -2119,7 +2119,7 @@ title = "Static seven-connected alignment does not force a tight endpoint"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_persistent_edge_tight_endpoint_shadow.md"
-active = true
+active = false
 scope = "a seven-connected K7-minor-free but six-colourable aligned shadow with a compatible exact-seven terminal"
 refutes = ["the full current static alignment data force a tight persistent endpoint, a K7 minor, or a proper rejected kernel"]
 does_not_prove = ["a counterexample in a seven-chromatic contraction-critical host", "a counterexample to HC7"]
@@ -2130,7 +2130,7 @@ title = "Three persistent edges need not have two nonadjacent outer endpoints"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_persistent_induced_star_barrier.md"
-active = true
+active = false
 scope = "a seven-connected K7-minor-free host with a spanning labelled K7-minus-one-edge model and three persistent incident edges"
 refutes = ["three deletion-persistent incident edges force two with nonadjacent outer endpoints"]
 does_not_prove = ["a counterexample with no actual order-seven separation", "a counterexample to the degree-at-least-thirteen corollary", "a counterexample to HC7"]
@@ -2141,7 +2141,7 @@ title = "Split-planar complement-P7 model reselection"
 kind = "target"
 status = "written-unaudited"
 source = "active/hc7_split_planar_pbar7_reduction.md"
-active = true
+active = false
 scope = "the contracted five-chromatic split-planar boundary residue"
 allowed_exits = ["six contacted quotient bags and an explicit K7", "global model reselection", "a colour-compatible exact separation"]
 does_not_prove = ["fixed-bag root transfer", "a K7-minor model in every residue", "HC7"]
@@ -2153,7 +2153,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_deficient_singleton_joint_persistence.md"
 source_heading = "Theorem 1.1 (deficient-singleton joint persistence)"
-active = true
+active = false
 audit = "results/hc7_deficient_singleton_joint_persistence_audit.md"
 expected_source_sha256 = "2f413fa679fc7366920b9adbd1cdc9c419e7f2ff26c871ba8757ce2d8510c409"
 scope = "parameter-uniform spanning labelled K_t-minus-one-edge model whose deficient branch set is a singleton"
@@ -2177,7 +2177,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_split_aligned_joint_deletion.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_split_aligned_joint_deletion_audit.md"
 expected_source_sha256 = "4aaff1e806bfbcd56c59b8e5d9647fc182104328c35439e3d3735559ab06f62b"
 scope = "a spanning labelled K7-minus-one-edge model with a deficient singleton"
@@ -2202,7 +2202,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_critical_triangle_kempe_separation.md"
 source_heading = "Theorem 2.1 (critical-triangle Kempe-separated component)"
-active = true
+active = false
 audit = "results/hc7_critical_triangle_kempe_separation_audit.md"
 expected_source_sha256 = "f036d79fb94b67859bdea86e54a1c2d08b85ba66f1171cbe3e21253b47358dc3"
 scope = "two exclusive colouring-response families at two incident deleted edges whose outer endpoints are adjacent"
@@ -2224,7 +2224,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_clique_star_kempe_separation.md"
 source_heading = "Theorem 1 (clique-star response dichotomy)"
-active = true
+active = false
 audit = "results/hc7_clique_star_kempe_separation_audit.md"
 expected_source_sha256 = "c64df3af9619df6aa6408c11c223041557cda26b1009e4a80d65f26070b71e73"
 scope = "parameter-uniform response classes obtained by deleting every edge from one vertex to a clique"
@@ -2246,7 +2246,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_critical_triangle_full_subgraph_demand.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_exact7_critical_triangle_full_subgraph_demand_audit.md"
 expected_source_sha256 = "5715ddbabac72efd27cfa6c5242c9026e64f6dcc7b1416707fea2842513931c6"
 scope = "an exact order-seven separator returned by a critical-triangle Kempe transition"
@@ -2270,7 +2270,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_demand_set_separator_descent.md"
 source_heading = "Theorem 2.1 (demand-set reflection)"
-active = true
+active = false
 audit = "results/hc7_exact7_demand_set_separator_descent_audit.md"
 expected_source_sha256 = "9729a02a822c16f7cc90de1a7fa3ba6728173f37f84623e134a53719f5e8b713"
 scope = "the two exact residual boundary partitions with two selected disjoint boundary-full connected subgraphs"
@@ -2293,7 +2293,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_direct_entry_two_edge_list_core.md"
 source_heading = "Theorem 2.1 (two-edge list-critical descent)"
-active = true
+active = false
 audit = "results/hc7_direct_entry_two_edge_list_core_audit.md"
 expected_source_sha256 = "2a1f41bd8214e1e6abc34882e71a22fae302c421e9c13d4cd9fb06354405b74f"
 scope = "two vertex-disjoint direct-entry edges crossing the same side of a separation in a minor-minimal non-q-colourable graph"
@@ -2320,7 +2320,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_direct_entry_surplus_density.md"
 source_heading = "Theorem 2.1 (surplus-sensitive shore bound)"
-active = true
+active = false
 audit = "results/hc7_direct_entry_surplus_density_audit.md"
 expected_source_sha256 = "59b12bb3ee5b1215fa054e468553154e884c978e0cee8af6ce54a5e7f12cf3e9"
 scope = "a list-critical open shore at an exact seven-boundary"
@@ -2334,7 +2334,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_tight_shore_order_bound.md"
 source_heading = "Theorem 1 (tight-shore order bound)"
-active = true
+active = false
 audit = "results/hc7_tight_shore_order_bound_audit.md"
 expected_source_sha256 = "88b7a9329c3a3a4170022cd1b0a54cef6305e22809d3cc932ccca9d24afc066f"
 conclusions = ["an order-seven or order-eight singleton-side separation, or an open shore of order at most eighteen"]
@@ -2347,7 +2347,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_paired_boundary_forced_kempe_locks.md"
 source_heading = "Lemma 2.1"
-active = true
+active = false
 audit = "results/hc7_paired_boundary_forced_kempe_locks_audit.md"
 expected_source_sha256 = "d7a7f3788928f5ddb9fee1ef4776bcc0ffe9c8751a925f505a9774665eba2c08"
 conclusions = ["an unlocked response forces a disconnected literal two-colour boundary graph", "exact paired lock counts"]
@@ -2360,7 +2360,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_paired_boundary_partial_switch_calculus.md"
 source_heading = "Theorem 3.1 (exact singleton-merge response criterion)"
-active = true
+active = false
 audit = "results/hc7_paired_boundary_partial_switch_calculus_audit.md"
 expected_source_sha256 = "bdbb02aa94b413a2ed68fd448f29385669a89f2cd4e1bde49da31aec592085b4"
 conclusions = ["exact boundary footprint and demand formulae", "the exceptional nonedge cannot support a selected partition-changing response", "all surviving responses have demand at least three"]
@@ -2373,7 +2373,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_labelled_first_hit_rado_reduction.md"
 source_heading = "Theorem 1.1 (Rado--gammoid first-hit alternative)"
-active = true
+active = false
 audit = "results/hc7_labelled_first_hit_rado_reduction_audit.md"
 expected_source_sha256 = "2bde8b468d236f26322d0072a503183efbc93f6bec9fa67f4a1a9fd101c9174f"
 scope = "a terminal-avoiding graph with source ports and five named terminal classes"
@@ -2395,7 +2395,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_labelled_first_hit_exposure_collision.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_labelled_first_hit_exposure_collision_audit.md"
 expected_source_sha256 = "78c8f35c75a652ed97b0263a16bad5f782089c46a652ec43d8989e30303b7911"
 scope = "five first-hit labels with at most three fixed response vertices"
@@ -2427,7 +2427,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_repeated_exposure_fixed_trace_fork.md"
 source_heading = "Theorem 2.1 (single attainment, common equality, or common rejection)"
-active = true
+active = false
 audit = "results/hc7_repeated_exposure_fixed_trace_fork_audit.md"
 expected_source_sha256 = "1df977201ca009336eb1393f2407d16e3258747ba55bd64f2af7be6844cd610e"
 colour_compatibility = "the same selected boundary partition is used throughout the trichotomy"
@@ -2445,7 +2445,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_selected_response_preservation.md"
 source_heading = "Theorem 1.1 (exact response reflection)"
-active = true
+active = false
 audit = "results/hc7_exact7_selected_response_preservation_audit.md"
 expected_source_sha256 = "94c154ce0d8d9bebaaff2ff97df66beb3e2381bb242378df38d9620ed8ec36e0"
 scope = "an actual seven-vertex separator and one selected boundary equality partition"
@@ -2459,7 +2459,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_response_aligned_two_contact_lobe_transfer.md"
 source_heading = "Theorem 2.1 (response-aligned lobe transfer)"
-active = true
+active = false
 audit = "results/hc7_response_aligned_two_contact_lobe_transfer_audit.md"
 expected_source_sha256 = "ec3f24c3d7de083542603bf05716c62b0ce0c1b5e9e705538c26e691cc1047dd"
 strict_parameter = "order of the receiving labelled branch set"
@@ -2496,7 +2496,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_multi_owner_portal_linkage_transfer.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_multi_owner_portal_linkage_transfer_audit.md"
 expected_source_sha256 = "4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b"
 strict_parameter = "the donor branch-set order after maximizing the relaxed literal first-hit rank"
@@ -2519,7 +2519,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_multi_owner_portal_linkage_transfer.md"
 source_heading = "Theorem 4.1 (concentrated portals, exact boundary, or repeated contact)"
-active = true
+active = false
 audit = "results/hc7_multi_owner_portal_linkage_transfer_audit.md"
 expected_source_sha256 = "4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b"
 scope = "the exact two-owner Rado-Menger obstruction inside one donor branch set of a seven-connected host"
@@ -2543,7 +2543,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_multi_owner_portal_linkage_transfer.md"
 source_heading = "Theorem 4.3 (a general owner circuit has a bounded host outcome)"
-active = true
+active = false
 audit = "results/hc7_multi_owner_portal_linkage_transfer_audit.md"
 expected_source_sha256 = "4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b"
 scope = "an inclusion-minimal deficient owner family in the portal gammoid of one donor branch set in a seven-connected host"
@@ -2567,7 +2567,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_reserved_component_linkage_completion.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_reserved_component_linkage_completion_audit.md"
 expected_source_sha256 = "9710607f41d2c5120f5a24daa0f909a0e5e5fbf119f9e0d7198ebcea98c0b2ff"
 scope = "a three-owner minimal portal circuit in the no-repeated-contact equality-eight branch"
@@ -2591,7 +2591,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_reserved_component_linkage_completion.md"
 source_heading = "Theorem 4.1 (reserved-component linkage completion)"
-active = true
+active = false
 audit = "results/hc7_reserved_component_linkage_completion_audit.md"
 expected_source_sha256 = "9710607f41d2c5120f5a24daa0f909a0e5e5fbf119f9e0d7198ebcea98c0b2ff"
 scope = "every minimal deficient owner family of order two through five in the labelled K7-minus-one-edge transfer configuration"
@@ -2614,7 +2614,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_three_owner_reserved_component_concentration.md"
 source_heading = "Theorem 3.1"
-active = true
+active = false
 audit = "results/hc7_three_owner_reserved_component_concentration_audit.md"
 expected_source_sha256 = "d30971fa491a1264101cc949b0712e9b41d87f8879499e529a124403149aea9d"
 scope = "the lexicographically extremal three-owner no-repeated-contact equality-eight branch"
@@ -2637,7 +2637,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_three_owner_reserved_component_concentration.md"
 source_heading = "Corollary 4.1"
-active = true
+active = false
 audit = "results/hc7_three_owner_reserved_component_concentration_audit.md"
 expected_source_sha256 = "d30971fa491a1264101cc949b0712e9b41d87f8879499e529a124403149aea9d"
 scope = "any two owners in the concentrated three-owner branch"
@@ -2659,7 +2659,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_three_owner_order8_exact7_reduction.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_three_owner_order8_exact7_reduction_audit.md"
 expected_source_sha256 = "b13976c72c59e4d25a697bc390f6fda92364b0efe945bcf29f466d0e12e088e2"
 scope = "the lexicographically extremal concentrated three-owner, boundary-full order-eight normal form"
@@ -2685,7 +2685,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_operation_coupled_order8_response.md"
 source_heading = "Theorem 4.1"
-active = true
+active = false
 audit = "results/hc7_operation_coupled_order8_response_audit.md"
 expected_source_sha256 = "be8fc118ab832ff9a24057873c815805539c0ab7cb1e4996c4d81202cf72b268"
 scope = "a boundary-full order-eight separation with two or three complementary components and one selected boundary-to-component deletion edge"
@@ -2780,7 +2780,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_operation_coupled_order8_response.md"
 source_heading = "Theorem 5.1"
-active = true
+active = false
 audit = "results/hc7_operation_coupled_order8_response_audit.md"
 expected_source_sha256 = "be8fc118ab832ff9a24057873c815805539c0ab7cb1e4996c4d81202cf72b268"
 scope = "the exact order-seven outcome of the operated full order-eight component theorem"
@@ -2803,7 +2803,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_special_five_plus_two_exact7_response.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_special_five_plus_two_exact7_response_audit.md"
 expected_source_sha256 = "abcfb4a16616bfa5260826c798589afc93aa592f0f73068ea2bf7a95f8e34f19"
 scope = "the exact order-seven separation produced by the concentrated three-owner order-eight three-fan reduction"
@@ -2883,7 +2883,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_exact7_bipartite_bridge_response_descent.md"
 source_heading = "A bridge in the thin shore gives a strict exact-seven response descent"
-active = true
+active = false
 audit = "results/hc7_exact7_bipartite_bridge_response_descent_audit.md"
 expected_source_sha256 = "638adad4e58de96f59918d8ebf13d224f1cff9b61889ef7f9a0ee6a44f7f94e1"
 scope = "an exact-seven separation with connected boundary-full thin shore, two full connected subgraphs on the other shore, bipartite boundary and a bridge in the thin shore"
@@ -3079,7 +3079,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_label_transversal_pinch_hall_obstruction.md"
 source_heading = "Theorem 2.1"
-active = true
+active = false
 audit = "results/hc7_label_transversal_pinch_hall_obstruction_audit.md"
 expected_source_sha256 = "46df0d770db1e4918a53de49e1b911814a378c245690bfdbe1a0c8ff68aad37d"
 scope = "the label-transversal exact-seven critical-pinch outcome of the owner-circuit theorem"
@@ -3103,7 +3103,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_repeated_contact_component_defect.md"
 source_heading = "Theorem 3.1"
-active = true
+active = false
 audit = "results/hc7_repeated_contact_component_defect_audit.md"
 expected_source_sha256 = "1e1e67661628b700997ad3c0a847260a7ad213840d32587cebfc98a519ccd9f4"
 conclusions = [
@@ -3164,7 +3164,7 @@ title = "Seven-connectivity and K7-minor exclusion do not bound first-hit exposu
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_labelled_first_hit_k2_planar_exposure_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_labelled_first_hit_k2_planar_exposure_barrier_audit.md"
 expected_source_sha256 = "3740bb30892da5e38c3baa3b851dd307a349576c7e61d41a96daaf0927ba8835"
 scope = "a seven-connected K7-minor-free but six-colourable join-planar family"
@@ -3203,7 +3203,7 @@ title = "Repeated contacts do not by themselves lower component defect"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_repeated_contact_component_defect_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_repeated_contact_component_defect_barrier_audit.md"
 expected_source_sha256 = "a4a194219a8cdc917f421501daddb86fef6acb11172b16e7fa7f6c790a23a9a5"
 scope = "seven-connected K7-minor-free but six-colourable static labelled models"
@@ -3246,7 +3246,7 @@ title = "A seven-connected critical triangle can have separated Kempe responses"
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_critical_triangle_kempe_separation_barrier.md"
-active = true
+active = false
 scope = "a seven-connected seven-vertex-critical host with a spanning labelled near-complete model"
 refutes = ["connectivity, vertex-criticality, exact opposite responses and one common model force Kempe adjacency of the response families"]
 does_not_prove = [
@@ -3260,7 +3260,7 @@ title = "A clean forced path and three boundary-full connected subgraphs need no
 kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_exact7_clean_path_geometry_barrier.md"
-active = true
+active = false
 scope = "an exact seven-boundary geometry without contraction-critical colouring data"
 refutes = ["a clean bichromatic path is automatically a third demand-set representative or forces a K7 minor"]
 does_not_prove = [
@@ -3289,7 +3289,7 @@ does_not_prove = [
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.epsilon_one_labelled_descent"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3299,27 +3299,27 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.multi_owner_portal_linkage_transfer"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_owner_portal_host_fork"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.owner_circuit_bounded_host_fork"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.three_owner_order8_normal_form"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.reserved_component_linkage_completion"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.three_owner_order8_normal_form"
@@ -3349,7 +3349,7 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.label_transversal_pinch_hall_obstruction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3409,132 +3409,117 @@ kind = "strengthens"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.full_order8_four_component_closure"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_three_component_boundary_classification"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_full_component_kempe_transition"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_prescribed_spoke_reduction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.contracted_edge_k6_model_normalization"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_fresh_colour_linkage"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.augmented_full_component_contraction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.contracted_five_chromatic_boundary"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_critical_edge_fan_descent"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.opposite_shore_single_kempe_transition"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_shore_kempe_list_dichotomy"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.boundary_list_critical_transfer"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.single_portal_amplification"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.persistent_edge_fixed_trace_alignment"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.rooted_persistent_model_edge"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.multi_protected_persistent_model_edge"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.joint_persistent_edge_or_exact_seven"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.persistent_support_class_refinement"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.joint_persistent_incident_colour_fork"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.one_extra_colour_boundary_kernel"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.boundary_crossing_persistent_edge_reduction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.total_trace_rejection_kernel"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.aligned_two_edge_bypass_separator"
-kind = "uses"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.persistent_tight_endpoint"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.persistent_tight_endpoint_shadow"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.persistent_induced_star"
-kind = "guarded_by"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.boundary_crossing_persistent_edge_reduction"
@@ -3782,12 +3767,12 @@ kind = "subproblem_of"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree7_antineighbourhood_connectivity"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree7_matching_rooted_separator"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3797,162 +3782,97 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree7_one_spoke_bridge"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_mark_branch_set_split"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.five_row_separator_reflection"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.universal_multicoloured_row_separator"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.boundary_full_subgraph_row_reflection"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.root_protected_double_loss_closure"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.disjoint_trace_linkage_reflection"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_pair_disk_structure"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree8_contact_allocation"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.three_deletion_five_cyclability"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.reserved_cycle_or_two_cut"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.rooted_hamiltonian_cycle_reduction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.four_root_stable_theta_allocation"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree8_safe_support_reflection"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree8_blocker_star_kempe_fork"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.kempe_fan_or_exact_seven_boundary"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.connected_row_cyclic_corner_dichotomy"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.boundary_full_component_low_cut_reduction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.boundary_full_universal_vertex_split"
-kind = "uses"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.one_spoke_shortest_path"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.multicoloured_row_response"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.five_row_dynamic_language"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.two_pair_rural_almost_universal_apex"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.degree8_contact_allocation"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.degree8_curvature_contact"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.reserved_cycle_fournier"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.rural_saturated_spokes"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.three_kempe_paths_bottleneck"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.blocker_first_hit_concentration"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.two_edge_deletion_lattice"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.stable_theta_three_path_matching"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.exact7_paired_block_trace_parity"
-kind = "guarded_by"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.two_pair_disk_structure"
@@ -4257,7 +4177,7 @@ evidence_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a9
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.split_boundary_synchronization"
-kind = "uses"
+kind = "related_to"
 note = "A component-missing descent with a split seven-vertex boundary closes by the audited synchronization theorem."
 evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
@@ -4268,7 +4188,7 @@ evidence_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c3
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact_block_kempe_reduction"
-kind = "uses"
+kind = "related_to"
 note = "The degree-seven programme uses the pole-free exact-block path inside the sole exterior component through the audited anti-neighbourhood corollary."
 evidence_source = "results/hc7_degree7_anti_neighbourhood_connectivity.md"
 evidence_heading = "Corollary 2 (the pole-free bridge lies in the sole exterior component)"
@@ -4279,7 +4199,7 @@ evidence_sha256 = "a73429c60377546d55f9578a7795eb45634a98fdc87d84604ee62865880a9
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_rooted_k5_connector_separator"
-kind = "uses"
+kind = "related_to"
 note = "The target's model-carried obstruction is the rooted-K5 connector-or-full-separator dichotomy."
 evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
@@ -4290,13 +4210,13 @@ evidence_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c3
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.cycle_boundary_completion"
-kind = "uses"
+kind = "related_to"
 note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
-evidence_source = "RESEARCH_LEDGER.md"
-evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
-evidence_start_line = 1068
-evidence_end_line = 1095
-evidence_sha256 = "a48bb94023409be6d37ab454be37d0e28780e33255c4e19bef7cf0709de2d353"
+evidence_source = "results/hc7_cycle_boundary_completion.md"
+evidence_heading = "Theorem"
+evidence_start_line = 5
+evidence_end_line = 17
+evidence_sha256 = "f87ddcf7e4bd33b0fc107033033d9a8ebb2f6e32533b1b9c4538c0bf4bd137db"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4307,7 +4227,7 @@ note = "Normalizes the special five-plus-two exact-seven response branch to a si
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_bipartite_bridge_response_descent"
-kind = "uses"
+kind = "related_to"
 note = "Supplies a strict host-level descent whenever the thin shore of a bipartite exact-seven response interface has a bridge."
 
 [[relations]]
@@ -4348,41 +4268,8 @@ note = "Eliminates every bipartite and tree exterior in the singleton exact-seve
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.four_colour_parity_language"
-kind = "guarded_by"
-note = "Four-colourability, the target-free two-shore quotient and exact independent-block responses do not by themselves synchronize the shore colourings."
-evidence_source = "barriers/hc7_four_colour_parity_language_barrier.md"
-evidence_heading = "3. Consequence"
-evidence_start_line = 76
-evidence_end_line = 93
-evidence_sha256 = "961011d6a52b82fbec9016c6846188a5bfa05db40dfb2f5c2f2397598f21ede5"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.eight_boundary_state_transfer"
-kind = "guarded_by"
-note = "Even canonical matching data and two named boundary-edge transitions leave the two full-shore extension languages disjoint without the missing host-level hypotheses."
-evidence_source = "barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md"
-evidence_heading = "6. Exact scope"
-evidence_start_line = 185
-evidence_end_line = 211
-evidence_sha256 = "76666dbd1a748f6f4b1048d16eb959bf96524ed1604f38227aea1c3c1618ab16"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.two_colourful_sets"
-kind = "guarded_by"
-note = "Connectivity and two colourful root sets do not supply one simultaneously rooted model; the positive theorem must retain K6-minor exclusion and the contraction-critical lift."
-evidence_source = "barriers/hc7_two_colorful_sets_paired_k4_barrier.md"
-evidence_heading = "3. Why this is not the `HC_7` residue"
-evidence_start_line = 72
-evidence_end_line = 90
-evidence_sha256 = "f9d41fdffb6ca5a7bbc54cd67a5491aae7e6fdf12d03c8725403b7a4abfb8e6f"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
 target = "hc7.low_degree_adjacent_pair_alignment"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4392,67 +4279,62 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.degree9_pole_completion"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact_seven_packet_packing"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_packet_orientation"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_vertex_boundary_contact_transversal"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_first_entry_bridge_reduction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.path_residual_separator_excess"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.nested_full_neighbourhood_descent"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.first_entry_singleton_peel"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.atomic_three_path_quotient_completion"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_connected_boundary_completion"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_full_shore_boundary_absorption"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.adjacent_pair_palette_linkage"
-kind = "uses"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.near_k7_rotation_involution"
-kind = "guarded_by"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4461,78 +4343,68 @@ kind = "guarded_by"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.first_entry_minimality"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.three_path_missing_five_labels"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
 target = "hc7.deficient_singleton_joint_persistence"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.split_aligned_joint_deletion"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.critical_triangle_kempe_separation"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.clique_star_kempe_separation"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_critical_triangle_full_subgraph_demand"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_demand_set_separator_descent"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.direct_entry_two_edge_list_core"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.direct_entry_surplus_density"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.tight_shore_order_bound"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.paired_boundary_forced_kempe_locks"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.paired_boundary_partial_switch_calculus"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.labelled_first_hit_rado"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.labelled_first_hit_exposure_collision"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4542,22 +4414,22 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.repeated_exposure_fixed_partition_fork"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.exact7_selected_partition_preservation"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.two_contact_branch_set_transfer"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.repeated_contact_component_defect"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4576,22 +4448,7 @@ kind = "guarded_by"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.critical_triangle_kempe_separation"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.exact7_clean_path_geometry"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.exact7_bichromatic_path_full_subgraphs"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.labelled_first_hit_planar_exposure"
 kind = "guarded_by"
 
 [[relations]]
@@ -4602,11 +4459,6 @@ kind = "guarded_by"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.same_branch_two_critical_edges"
-kind = "guarded_by"
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
-target = "hc7.barrier.repeated_contact_component_defect"
 kind = "guarded_by"
 
 [[relations]]
@@ -4752,32 +4604,32 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.three_owner_component_concentration"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.three_owner_two_edge_response"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.three_owner_order8_exact7_reduction"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.operation_coupled_order8_fan"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.operation_coupled_exact7_response"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.special_five_plus_two_exact7_response"
-kind = "uses"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.three_owner_component_concentration"

@@ -1,7 +1,10 @@
 # Current proof work
 
-**Role:** navigation only.  The authoritative status is
-[`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md).
+**Role:** navigation only. The authoritative status is
+[`../RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md), and the exact live theorem
+is stated in the technical frontier linked below. Transitive dependencies
+and historical connections are available through the generated research
+index; they are not duplicated here.
 
 ## Primary target
 
@@ -9,154 +12,50 @@
 
 Immediate proved inputs, each with an adjacent audit:
 
-- [low-degree adjacent pair and bounded full separation](../results/hc7_low_degree_adjacent_pair_alignment.md)
-- [boundary-aligned adjacent pair and singleton trace](../results/hc7_low_degree_boundary_edge_alignment.md)
-- [degree-nine finite local completion](../results/hc7_degree9_pole_verifier.md)
-- [split-boundary synchronization](../results/hc7_split_boundary_synchronization.md)
-- [exact-block Kempe reduction and pole-free bridge](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
-- [connected degree-seven anti-neighbourhood](../results/hc7_degree7_anti_neighbourhood_connectivity.md)
-- [exact matching languages and simultaneous Kempe paths](../results/hc7_degree7_matching_bridge_bundle.md)
+### Global entry
+
+- [boundary-aligned low-degree adjacent pair](../results/hc7_low_degree_boundary_edge_alignment.md)
 - [boundary-labelled one-/two-edge-deficient `K_7` model](../results/hc7_degree7_aligned_near_k7_model.md)
-- [spanning enhancement, off-pole response and dual orientation](../results/hc7_degree7_one_spoke_bridge_corollaries.md)
-- [two-mark branch-set split or full-neighbourhood separation](../results/hc7_two_mark_branch_set_split.md)
-- [named-trace colour reflection across a separation](../results/hc7_five_row_separator_reflection.md)
-- [one-missing-adjacency model gives a universal multicoloured-row separator](../results/hc7_universal_multicoloured_row_separator.md)
-- [boundary-full connected subgraphs make row traces monochromatic](../results/hc7_boundary_full_subgraph_row_reflection.md)
-- [disjoint trace linkages make all independent row traces monochromatic](../results/hc7_disjoint_trace_linkage_reflection.md)
-- [two-pair disk structure, nested separators and curvature](../results/hc7_two_pair_disk_structure.md)
-- [degree-eight cyclic contact allocation](../results/hc7_degree8_contact_allocation.md)
-- [five prescribed vertices remain cyclable after three deletions](../results/hc7_three_vertex_deletion_five_cyclability.md)
-- [reserved cycle or an order-at-most-two cut](../results/hc7_reserved_cycle_or_two_cut.md)
-- [Hamiltonian-cycle reduction for the four-root degree-eight disk](../results/hc7_rooted_hamiltonian_cycle_reduction.md)
-- [stable-theta allocation for the four-root degree-eight disk](../results/hc7_four_root_stable_theta_allocation.md)
-- [safe boundary supports force colour reflection](../results/hc7_degree8_safe_support_reflection.md)
-- [a boundary-edge obstruction yields three Kempe connections](../results/hc7_degree8_blocker_edge_kempe_fork.md)
-- [three Kempe connections give a packing or an exact-seven boundary](../results/hc7_kempe_fan_or_exact_seven_boundary.md)
-- [boundary-rooted connected subgraphs, cyclic connected sets and corner separators](../results/hc7_connected_row_cyclic_corner_dichotomy.md)
-- [low-order separators inside a boundary-full component](../results/hc7_boundary_full_component_low_cut_reduction.md)
-- [universal boundary-contact vertex split in a three-connected component](../results/hc7_boundary_full_universal_vertex_split.md)
-- [exact-seven boundary-full connected-subgraph packing](../results/hc7_exact_seven_packet_packing.md)
-- [exact-seven orientation by boundary-full connected subgraphs](../results/hc7_exact7_packet_orientation_corollary.md)
-- [two-vertex boundary-contact transversal](../results/hc7_two_vertex_boundary_contact_transversal.md)
-- [non-direct first-entry bridge reduction](../results/hc7_exact7_first_entry_bridge_reduction.md)
-- [path-residual separator excess](../results/hc7_small_path_intersection_lobe.md)
-- [nested full-neighbourhood descent](../results/hc7_nested_full_neighbourhood_descent.md)
-- [excess-one descent with literal boundary data](../results/hc7_epsilon_one_labelled_descent.md)
-- [four full components close an order-eight boundary](../results/hc7_full_order8_four_component_closure.md)
-- [three-component order-eight boundary classification](../results/hc7_order8_three_component_boundary_classification.md)
-- [Kempe transitions across two or three full order-eight components](../results/hc7_order8_full_component_kempe_transition.md)
-- [prescribed spokes or a coloured exact-seven separator](../results/hc7_order8_prescribed_spoke_reduction.md)
-- [minimal contracted-edge `K_6` model and two-component root branch set](../results/hc7_contracted_edge_k6_model_normalization.md)
-- [fresh-colour disjoint linkages and the actual augmented-boundary transition](../results/hc7_exact7_fresh_colour_linkage.md)
-- [contracting the augmented interface to two full shores on seven boundary vertices](../results/hc7_augmented_full_component_contraction_reduction.md)
-- [five-chromatic contracted boundary and split-planar normal form](../results/hc7_contracted_five_chromatic_boundary.md)
-- [critical exact-seven boundary edge: prescribed fan or strict component descent](../results/hc7_exact7_critical_edge_fan_descent.md)
-- [one boundary Kempe transition forces paths through both shores](../results/hc7_opposite_shore_single_kempe_transition.md)
-- [boundary Kempe distance gives two paths or two list-critical subgraphs](../results/hc7_two_shore_kempe_list_dichotomy.md)
-- [fixed-trace list-critical transfer](../results/hc7_boundary_list_critical_transfer.md)
-- [spanning near-complete model with a deletion-persistent edge](../results/hc7_single_portal_amplification.md)
-- [persistent model edge: fixed-trace alignment or total trace rejection](../results/hc7_persistent_edge_fixed_trace_alignment.md)
-- [rooted incident-edge persistence with a protected singleton](../results/hc7_rooted_persistent_model_edge.md)
-- [persistent incident edges with several protected singleton branch sets](../results/hc7_multi_protected_persistent_model_edge.md)
-- [jointly persistent incident edges or an exact order-seven separation](../results/hc7_joint_persistent_edge_or_exact_seven.md)
-- [persistent-edge support classes and dense-alternative degree bound](../results/hc7_persistent_support_class_refinement.md)
-- [colouring fork for a jointly persistent incident pair](../results/hc7_joint_persistent_incident_colour_fork.md)
-- [maximum deletion capacity at a deficient singleton](../results/hc7_deficient_singleton_joint_persistence.md)
-- [branch-set split aligned with two persistent incident edges](../results/hc7_split_aligned_joint_deletion.md)
-- [Kempe-separated responses at a critical triangle](../results/hc7_critical_triangle_kempe_separation.md)
-- [clique-star response transition or higher-chromatic connected subgraph](../results/hc7_clique_star_kempe_separation.md)
-- [full-subgraph demand at an exact-seven critical-triangle transition](../results/hc7_exact7_critical_triangle_full_subgraph_demand.md)
-- [demand-set reflection and strict full-neighbourhood descent](../results/hc7_exact7_demand_set_separator_descent.md)
-- [simultaneous direct-entry contraction gives a list-critical descent or a shore-filling normal form](../results/hc7_direct_entry_two_edge_list_core.md)
-- [surplus-sensitive density at an exact seven-boundary](../results/hc7_direct_entry_surplus_density.md)
-- [tight-shore order bound](../results/hc7_tight_shore_order_bound.md)
-- [exact Rado--gammoid criterion for labelled first-hit paths](../results/hc7_labelled_first_hit_rado_reduction.md)
-- [rank defect gives a tight separator or repeated literal exposure](../results/hc7_labelled_first_hit_exposure_collision.md)
-- [compression of repeated labelled first-hit exposure](../results/hc7_labelled_first_hit_exposure_compression.md)
-- [fixed-partition alternatives for two persistent edges](../results/hc7_repeated_exposure_fixed_trace_fork.md)
-- [boundary-forced Kempe locks](../results/hc7_paired_boundary_forced_kempe_locks.md)
-- [paired-boundary partial-switch calculus](../results/hc7_paired_boundary_partial_switch_calculus.md)
-- [exact preservation criterion for a selected boundary partition](../results/hc7_exact7_selected_response_preservation.md)
-- [Hall criterion for reflecting a transported partition through mixed connected supports](../results/hc7_transported_partition_hall_reflection.md)
-- [label-preserving transfer from two contacts into one branch set](../results/hc7_response_aligned_two_contact_lobe_transfer.md)
-- [first-hit rank preservation under every zero- or one-owner transfer](../results/hc7_first_hit_rank_preserving_branch_set_transfer.md)
-- [multi-owner portal linkage gives a strict label-preserving branch-set transfer](../results/hc7_multi_owner_portal_linkage_transfer.md)
-- [reserved-component linkage completion and the exact three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
-- [three-owner component concentration and the two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
-- [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
-- [operation-specific response normal form at the resulting special five-plus-two exact-seven boundary](../results/hc7_special_five_plus_two_exact7_response.md)
-- [two distinguished boundary vertices give a singleton shore or a two-root list-critical core](../results/hc7_special_exact7_two_edge_list_core.md)
-- [a bridge in a bipartite-boundary thin shore gives a strict exact-seven response descent](../results/hc7_exact7_bipartite_bridge_response_descent.md)
-- [density and block structure in the special shore-filling list-critical core](../results/hc7_special_shore_filling_density.md)
-- [fixed-trace internal-edge dichotomy in the shore-filling core](../results/hc7_fixed_trace_internal_edge_dichotomy.md)
+
+### Special exact-seven normal form
+
+- [singleton shore or two-root list-critical core](../results/hc7_special_exact7_two_edge_list_core.md)
+- [selected-response pullback through a retained exact-seven boundary](../results/hc7_special_exact7_selected_response_pullback.md)
+- [density and block structure in the shore-filling core](../results/hc7_special_shore_filling_density.md)
+- [fixed-trace internal-edge dichotomy](../results/hc7_fixed_trace_internal_edge_dichotomy.md)
 - [six almost-boundary-complete neighbours force a `K_7` minor](../results/hc7_six_spoke_boundary_completion.md)
-- [a selected edge-deletion response pulls back through an exact retained boundary](../results/hc7_special_exact7_selected_response_pullback.md)
 - [Kempe-minimal boundary traces have pairwise bichromatic support](../results/hc7_kempe_minimal_boundary_trace.md)
 - [the singleton-shore exterior is nonbipartite](../results/hc7_singleton_shore_nonbipartite.md)
-- [operation-coupled colouring responses at a boundary-full order-eight separation](../results/hc7_operation_coupled_order8_response.md)
-- [a label-transversal critical pinch has an exact Hall-deficient opposite-shore residue](../results/hc7_label_transversal_pinch_hall_obstruction.md)
-- [repeated contacts and the exact component-defect change](../results/hc7_repeated_contact_component_defect.md)
-- [opposite-shore critical edges give a rooted `K_4` or exact order-seven separation](../results/hc7_cross_shore_critical_edge_linkage.md)
-- [label-preserving absorption of a five-contact rejection component](../results/hc7_five_contact_rejection_component_absorption.md)
-- [one-extra-colour critical kernel at a boundary edge](../results/hc7_one_extra_colour_boundary_kernel.md)
-- [boundary-crossing persistent-edge reduction](../results/hc7_boundary_crossing_persistent_edge_reduction.md)
-- [total rejection of a fixed boundary trace](../results/hc7_total_trace_rejection_kernel.md)
-- [aligned two-edge bypass or labelled donor separation](../results/hc7_aligned_two_edge_bypass_separator.md)
-- [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
-- [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
-- [root-protected double-loss closure](../results/hc7_root_protected_double_loss_closure.md)
-- [rooted `K_5` connector-or-separator theorem](../results/hc7_exact7_rooted_k5_connector_separator.md)
-- [two-connected boundary-core completion](../results/hc7_two_connected_boundary_completion.md)
-- [two-full-shore boundary absorption](../results/hc7_two_full_shore_boundary_absorption.md)
-- [cycle-boundary completion](../results/hc7_cycle_boundary_completion.md)
-- [adjacent-pair palette linkage](../results/hc7_adjacent_pair_palette_linkage.md)
+
+### Label-preserving response machinery
+
+- [compression of repeated labelled first-hit exposure](../results/hc7_labelled_first_hit_exposure_compression.md)
+- [first-hit rank preservation under branch-set transfer](../results/hc7_first_hit_rank_preserving_branch_set_transfer.md)
+
+### Terminal constructions
+
+- [Hall reflection through mixed connected supports](../results/hc7_transported_partition_hall_reflection.md)
+- [opposite-shore critical-edge linkage](../results/hc7_cross_shore_critical_edge_linkage.md)
+- [five-contact rejection-component absorption](../results/hc7_five_contact_rejection_component_absorption.md)
 
 Immediate barriers:
 
-- [four-colour parity-language barrier](../barriers/hc7_four_colour_parity_language_barrier.md)
-- [eight-boundary state-transfer barrier](../barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md)
-- [two colourful sets need not share a rooted `K_4`](../barriers/hc7_two_colorful_sets_paired_k4_barrier.md)
-- [the unrestricted one-spoke shortest-path rank is degenerate](../barriers/hc7_one_spoke_shortest_path_barrier.md)
-- [single branch-set rotations are reversible](../barriers/hc7_near_k7_rotation_involution_barrier.md)
-- [one multicoloured row and separately chosen responses are insufficient](../barriers/hc7_multicoloured_row_response_barrier.md)
-- [response partitions plus unlabelled Kempe connectivity are insufficient](../barriers/hc7_five_row_dynamic_response_language_barrier.md)
-- [the rural two-pair geometry without criticality is insufficient](../barriers/hc7_two_pair_rural_almost_universal_apex_barrier.md)
-- [local degree-eight data need not allocate six contacted branch sets](../barriers/hc7_degree8_contact_allocation_barrier.md)
-- [curvature and Hall counting do not diversify boundary contacts](../barriers/hc7_degree8_curvature_contact_barrier.md)
-- [cyclability need not reserve a prescribed contacting connected set](../barriers/hc7_reserved_cycle_fournier_barrier.md)
-- [separately selected saturated spoke responses are insufficient](../barriers/hc7_two_pair_rural_saturated_spoke_barrier.md)
-- [three colour-indexed paths need not have one common bottleneck](../barriers/hc7_three_kempe_paths_common_bottleneck_barrier.md)
-- [universal obstructing-edge responses need not diversify named first hits](../barriers/hc7_degree8_blocker_first_hit_concentration_barrier.md)
-- [maximum first-hit rank and minimum donor order do not resolve a static two-owner split](../barriers/hc7_multi_owner_static_first_hit_barrier.md)
-- [the three responses of a two-edge star do not force a fourth boundary partition](../barriers/hc7_two_edge_deletion_lattice_barrier.md)
-- [persistent edges need not have tight list-critical endpoints](../barriers/hc7_persistent_edge_tight_endpoint_barrier.md)
-- [seven-connected static alignment still need not yield a tight endpoint](../barriers/hc7_persistent_edge_tight_endpoint_shadow.md)
-- [three persistent edges need not have two nonadjacent outer endpoints](../barriers/hc7_persistent_induced_star_barrier.md)
-- [first-hit exposure remains unbounded under seven-connectivity and `K_7`-minor exclusion](../barriers/hc7_labelled_first_hit_k2_planar_exposure_barrier.md)
+- [static first-hit colours need not allocate distinct model labels](../barriers/hc7_joint_pair_first_hit_hall_barrier.md)
+- [maximum first-hit rank does not resolve a static multi-owner split](../barriers/hc7_multi_owner_static_first_hit_barrier.md)
 - [a fixed response can rotate between repeated contacts](../barriers/hc7_fixed_trace_edge_rotation_barrier.md)
 - [two same-branch-set critical edges do not allocate first-hit labels](../barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md)
-- [repeated contacts need not lower component defect](../barriers/hc7_repeated_contact_component_defect_barrier.md)
-- [static first-hit colours need not allocate distinct model labels](../barriers/hc7_joint_pair_first_hit_hall_barrier.md)
-- [critical-triangle response classes can be Kempe-separated](../barriers/hc7_critical_triangle_kempe_separation_barrier.md)
-- [a clean bichromatic path is not by itself a third full-subgraph representative](../barriers/hc7_exact7_clean_path_geometry_barrier.md)
-- [the direct path/two-full-subgraph obstruction persists at connectivity six](../barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier.md)
-- [stable-theta allocation and three packed paths do not force matching cross-defect](../barriers/hc7_stable_theta_three_path_matching_barrier.md)
-- [one- and two-block exact traces do not synchronize the new seven-boundary](../barriers/hc7_exact7_paired_block_trace_parity_barrier.md)
+- [a forced bichromatic path need not augment two boundary-full subgraphs](../barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier.md)
 - [boundary-local operations do not synchronize an exact-seven interface](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)
-- [geometric first-entry minimality does not force a peel](../barriers/hc7_first_entry_packet_minimality_barrier.md)
-- [three-path geometry without the fifth labelled contact is insufficient](../barriers/hc7_three_path_missing_five_row_barrier.md)
 
 ## General bounded-interface continuation
 
-[Bounded-interface bridge composition](hc7_bounded_interface_synchronization_frontier.md)
+[Degree-eight/nine bounded-interface composition](hc7_bounded_interface_synchronization_frontier.md)
 
-## Secondary structural laboratory
+## Secondary structural laboratories
 
-[Adjacent-pair rooted-model and component-defect frontier](hc7_adjacent_pair_palette_model_frontier.md)
-
-[Paired colourful-set rooted-`K_4` frontier](hc7_two_colorful_sets_rooted_k4_frontier.md)
-
-[Split-planar `\overline{P_7}` model-reselection reduction](hc7_split_planar_pbar7_reduction.md)
+- [Adjacent-pair rooted-model and component-defect frontier](hc7_adjacent_pair_palette_model_frontier.md)
+- [Paired colourful-set rooted-`K_4` frontier](hc7_two_colorful_sets_rooted_k4_frontier.md)
+- [Split-planar `\overline{P_7}` model-reselection reduction](hc7_split_planar_pbar7_reduction.md)
 
 ## Frozen programmes
 
