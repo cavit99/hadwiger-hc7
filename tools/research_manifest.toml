@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "24c015853e7057d0b424aabdcdca1b3dbac21ae93e4d40aadc984e93f655c866"
+expected_source_sha256 = "a67afe9bdeaa7589e9c40c9f947cbaaf67f7fde9c1fe06f1d24593830cde7b34"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -37,8 +37,14 @@ hypotheses = [
   "repeated exposure compresses to a persistent edge pair, a small connected source subgraph, or an exact order-seven separator",
   "the fixed-partition two-edge fork and paired-boundary footprint calculus eliminate every demand-at-most-two switch",
   "a root-free connected split between two contacts gives K7, a strict label-preserving branch-set reduction, or a multi-owner piece",
+  "the relaxed connected-kernel first-hit rank is preserved under every zero- or one-owner transfer",
+  "a full labelled owner-portal linkage gives K7 or a strict model-and-rank descent; failure gives an internal transversal of order at most four",
+  "for two owners, portal-linkage failure gives concentrated incident contacts, a label-transversal order-seven boundary, or a repeated model-preserving contact pair",
+  "every minimal owner circuit gives an incident differently labelled contact pair, a repeated model-preserving contact pair, or an actual separator of order at most ten",
+  "at a label-transversal critical pinch, the legal opposite-shore partition has an exact Hall-deficient support family with one or two full supports",
   "one critical edge in each opposite shore gives an endpoint-rooted K4 minor or a universally orientable exact order-seven separator",
   "a transported boundary partition reflects exactly when the named connected contraction supports exist on the opposite closed shore",
+  "mixed boundary-full and named supports satisfy an exact Hall duty criterion for reflecting a transported partition",
 ]
 allowed_exits = [
   "explicit K7-minor model",
@@ -51,7 +57,7 @@ does_not_prove = [
   "existence of a degree-seven vertex in every hypothetical counterexample",
   "reservation of three inherited branch sets in the endpoint-rooted K4 outcome",
   "realization of one legally transported partition by five named connected contraction supports on the opposite shore",
-  "elimination of the multi-owner branch-set split residue",
+  "dynamic closure of the incident differently labelled, repeated model-preserving, and bounded-separator owner-circuit outcomes",
   "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
 ]
 keywords = ["degree seven", "labelled first hit", "strict gammoid", "rooted K4", "exact seven-separator", "colour gluing"]
@@ -2452,6 +2458,147 @@ conclusions = ["explicit K7", "strict branch-set descent", "or a multi-owner con
 does_not_prove = ["elimination of the multi-owner residue", "HC7"]
 
 [[claims]]
+id = "hc7.first_hit_rank_preserving_transfer"
+title = "First-hit rank preservation under a label-preserving branch-set transfer"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_first_hit_rank_preserving_branch_set_transfer.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_first_hit_rank_preserving_branch_set_transfer_audit.md"
+expected_source_sha256 = "8012e097021736357c2b91445f209c39b69dda58cfc3fa7ed7ddc3695be6290a"
+strict_parameter = "maximize the relaxed literal first-hit rank, then minimize the donor branch-set order"
+label_fidelity = "all branch-set labels, roots, the selected partition, and the fixed connected response subgraph are preserved"
+conclusions = [
+  "every zero- or one-owner transfer preserves the relaxed connected-kernel first-hit rank",
+  "a lexicographically extremal K7-minor-free model has no such nonterminal transfer",
+]
+does_not_prove = [
+  "preservation of the stricter everywhere-disjoint Rado rank",
+  "elimination of a multi-owner portal bottleneck",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.multi_owner_portal_linkage_transfer"
+title = "A labelled portal linkage splits a donor branch set among all owners"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_multi_owner_portal_linkage_transfer.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_multi_owner_portal_linkage_transfer_audit.md"
+expected_source_sha256 = "4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b"
+strict_parameter = "the donor branch-set order after maximizing the relaxed literal first-hit rank"
+label_fidelity = "the portal paths are indexed by literal owner branch sets and the transfer preserves every named branch-set label"
+conclusions = [
+  "a full labelled owner-to-retained-donor portal linkage gives an explicit K7 or a strict compatible model descent",
+  "failure gives an inclusion-minimal owner family with an internal transversal of order exactly one less than the family",
+  "every proper owner subfamily remains linkable",
+]
+does_not_prove = [
+  "that the internal transversal has bounded exposure in the host",
+  "a colour-compatible order-seven separator",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.two_owner_portal_host_fork"
+title = "A two-owner portal bottleneck gives concentrated contacts, an exact boundary, or a repeated contact"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_multi_owner_portal_linkage_transfer.md"
+source_heading = "Theorem 4.1 (concentrated portals, exact boundary, or repeated contact)"
+active = true
+audit = "results/hc7_multi_owner_portal_linkage_transfer_audit.md"
+expected_source_sha256 = "4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b"
+scope = "the exact two-owner Rado-Menger obstruction inside one donor branch set of a seven-connected host"
+label_fidelity = "the concentrated and repeated contacts retain their literal outside branch-set labels; the exact boundary contains one vertex from every other branch set"
+conclusions = [
+  "two differently labelled owner contacts incident with one bottleneck vertex",
+  "a label-transversal actual order-seven full-neighbourhood separation",
+  "or two model-preserving contacts to the same outside branch set",
+]
+does_not_prove = [
+  "a common boundary partition across the exact separation",
+  "first-hit label allocation from either critical edge pair",
+  "the corresponding host fork for at least three owners",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.owner_circuit_bounded_host_fork"
+title = "A minimal owner circuit gives labelled incident contacts, a bounded separation, or repeated contact"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_multi_owner_portal_linkage_transfer.md"
+source_heading = "Theorem 4.3 (a general owner circuit has a bounded host outcome)"
+active = true
+audit = "results/hc7_multi_owner_portal_linkage_transfer_audit.md"
+expected_source_sha256 = "4cd27295dc89c172d4246c67a529b87318d9e4343e5185dc5233f37d04f7109b"
+scope = "an inclusion-minimal deficient owner family in the portal gammoid of one donor branch set in a seven-connected host"
+label_fidelity = "incident contacts retain two different owner labels; repeated contacts retain one outside label; the separator is a literal full neighbourhood"
+separator_order = "between seven and ten"
+conclusions = [
+  "an incident pair of differently labelled owner contacts",
+  "an actual full-neighbourhood separation of order at most ten",
+  "or two model-preserving contacts to the same outside branch set",
+]
+does_not_prove = [
+  "a common partition at the bounded separation",
+  "first-hit label allocation from either critical edge pair",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.transported_partition_hall_reflection"
+title = "Hall reflection of a boundary partition through mixed connected supports"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_transported_partition_hall_reflection.md"
+source_heading = "Theorem 2.1 (transported-partition Hall reflection)"
+active = true
+audit = "results/hc7_transported_partition_hall_reflection_audit.md"
+expected_source_sha256 = "e22e88a66d4a9eed07e1f86888adcb80c7ab826c03de99e4a5a830999f3ccbd4"
+scope = "one legal boundary partition and a fixed family of boundary-full or named connected supports on its coloured shore"
+colour_compatibility = "a saturating duty-incidence matching reproduces the exact partition on the opposite closed shore"
+conclusions = [
+  "an exact Hall criterion for carrier systems subordinate to the displayed supports",
+  "two boundary-full supports reflect demand at most two",
+  "with one additional named support, demand three reflects exactly when one complete duty is met",
+  "complete demand-three and demand-at-least-four block-shape lists on seven boundary vertices",
+]
+does_not_prove = [
+  "placement of the required supports on the legally coloured shore",
+  "legality of an arbitrary transported boundary assignment",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.label_transversal_pinch_hall_obstruction"
+title = "Hall obstruction at a label-transversal critical pinch"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_label_transversal_pinch_hall_obstruction.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_label_transversal_pinch_hall_obstruction_audit.md"
+expected_source_sha256 = "46df0d770db1e4918a53de49e1b911814a378c245690bfdbe1a0c8ff68aad37d"
+scope = "the label-transversal exact-seven critical-pinch outcome of the owner-circuit theorem"
+separator_order = "exactly seven"
+colour_compatibility = "the pinch partition is legal on the opposite closed shore and rejected by the intact exposed closed shore"
+conclusions = [
+  "the opposite shore has full-support packing number one or two",
+  "every legitimate retained-support incidence graph has a nonempty Hall-deficient block family",
+  "in the sharp demand r+1 cases no retained named support meets any complete duty",
+]
+does_not_prove = [
+  "that labelled remnants are connected, pairwise adjacent supports",
+  "a new support violating the Hall deficiency",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.repeated_contact_component_defect"
 title = "Repeated contacts and the exact component-defect change"
 kind = "theorem"
@@ -2566,6 +2713,19 @@ refutes = ["two literal contacts between the same branch sets lower component de
 does_not_prove = ["a counterexample with the selected dynamic boundary response", "a counterexample to HC7"]
 
 [[claims]]
+id = "hc7.barrier.multi_owner_static_first_hit"
+title = "Maximum first-hit rank does not resolve a static two-owner branch-set split"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_multi_owner_static_first_hit_barrier.md"
+active = true
+audit = "barriers/hc7_multi_owner_static_first_hit_barrier_audit.md"
+expected_source_sha256 = "2bccdecb65ce1a5ca0df2122584cfab3019c4ea79bbd4f4f3f14697b100fed08"
+scope = "a seven-connected K7-minor-free but six-colourable coherently two-apex host"
+refutes = ["maximum relaxed first-hit rank, minimum donor order, seven-connectivity and K7-minor exclusion force a local exchange or local order-seven boundary"]
+does_not_prove = ["a counterexample with an operation-specific contraction-critical colouring response", "a counterexample to HC7"]
+
+[[claims]]
 id = "hc7.barrier.joint_pair_first_hit_hall"
 title = "Joint persistence and exact colour responses do not force first-hit Hall allocation"
 kind = "barrier"
@@ -2632,6 +2792,86 @@ does_not_prove = [
 source = "hc7.target.degree7_model_separator"
 target = "hc7.epsilon_one_labelled_descent"
 kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.multi_owner_portal_linkage_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_owner_portal_host_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.owner_circuit_bounded_host_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.label_transversal_pinch_hall_obstruction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.transported_partition_hall_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.first_hit_rank_preserving_transfer"
+target = "hc7.two_contact_branch_set_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.multi_owner_portal_linkage_transfer"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.multi_owner_portal_linkage_transfer"
+target = "hc7.labelled_first_hit_rado"
+kind = "uses"
+
+[[relations]]
+source = "hc7.two_owner_portal_host_fork"
+target = "hc7.multi_owner_portal_linkage_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.owner_circuit_bounded_host_fork"
+target = "hc7.multi_owner_portal_linkage_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.label_transversal_pinch_hall_obstruction"
+target = "hc7.two_owner_portal_host_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.label_transversal_pinch_hall_obstruction"
+target = "hc7.transported_partition_hall_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.label_transversal_pinch_hall_obstruction"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.multi_owner_static_first_hit"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.transported_partition_hall_reflection"
+target = "hc7.exact7_selected_partition_preservation"
+kind = "strengthens"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3490,7 +3730,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "24c015853e7057d0b424aabdcdca1b3dbac21ae93e4d40aadc984e93f655c866"
+evidence_sha256 = "a67afe9bdeaa7589e9c40c9f947cbaaf67f7fde9c1fe06f1d24593830cde7b34"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3512,7 +3752,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "24c015853e7057d0b424aabdcdca1b3dbac21ae93e4d40aadc984e93f655c866"
+evidence_sha256 = "a67afe9bdeaa7589e9c40c9f947cbaaf67f7fde9c1fe06f1d24593830cde7b34"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3523,7 +3763,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 900
 evidence_end_line = 925
-evidence_sha256 = "f1a4b9bca3ba8104556ee58cdeadac22fb8b4e7d7eb35af4607f7e381705ea76"
+evidence_sha256 = "ea7b4e7195335864d87622fc50e84a610f67d40d93260a538a14e6fec0b11526"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4164,4 +4404,14 @@ expected_stdout = [
   "base: vertices=12 edges=38 connectivity=6 K7_minor=no demand=3",
   "augmentations: allowed_edges=17 minimal_7_connected=165 all_have_K7=yes",
   "augmentation_sizes: 4:2 5:66 6:89 7:8",
+]
+
+[[verifiers]]
+id = "multi-owner-static-first-hit-barrier"
+path = "barriers/hc7_multi_owner_static_first_hit_barrier_verify.py"
+sha256 = "b239fd8af8dbc2a55ddf688fd93db3025ab5c99ee45b99f8a0a8972e9171b03f"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN multi-owner static first-hit barrier: kappa=7, lambda=6, minimum U and local boundary orders verified",
 ]

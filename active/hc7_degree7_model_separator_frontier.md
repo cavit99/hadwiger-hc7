@@ -683,17 +683,80 @@ nonedge.  A proper total-rejection component retaining all five named
 contacts is already absorbable; the unresolved branch is the one in which
 contacts collide in inherited branch sets.
 
-The collision geometry is also sharply constrained.  A connected split
-separating two contacts in one branch set gives an explicit `K_7`, a strict
-label-preserving reduction, or a piece owning at least two foreign
-adjacencies.  Repeated contacts alone do not lower component defect: after a
-split the exact value is
+The collision geometry now has a well-founded label-sensitive rank.  The
+response paths may overlap inside the fixed connected response subgraph but
+are disjoint outside it and have distinct literal first branch-set labels.
+Every zero- or one-owner transfer preserves this rank: a path formerly
+ending in the transferred piece is replaced inside the response subgraph by
+the persistent edge into the retained donor.  Maximizing the rank and then
+minimizing the donor therefore eliminates all such transfers, including a
+ranked unique owner.
+
+More generally, let `A_i` be the portal set in a transferred piece for its
+`i`th owner, and let `B` be its portal set to the retained donor.  Disjoint
+paths from distinct vertices of `B` to the `A_i`, one per owner, split the
+piece among all owners.  Absorbing the resulting connected parts gives an
+explicit `K_7` or a strict rank- and label-preserving model descent.  In an
+extremal model Rado--Menger failure therefore has a canonical form: an
+inclusion-minimal owner family `I` has a transversal of order
+`|I|-1<=4` inside the old branch set, while every proper subfamily is
+linkable.  With two owners the obstruction is one literal bottleneck.  If
+both owner portal sets are not concentrated at that vertex, a component
+behind it is anticomplete to the retained donor.  Seven-connectivity then
+returns either a label-transversal order-seven full-neighbourhood boundary
+or two model-preserving deletion-critical edges from that component to one
+outside branch set.  More generally, for any minimal deficient owner family,
+either all owner portals lie in its internal transversal of order at most
+four, a connected piece exposes an actual separator of order at most ten,
+or one outside branch set is met twice.  The concentrated case itself gives
+an incident pair of differently labelled owner contacts by pigeonhole.
+Thus every owner-portal obstruction has been converted to a bounded host
+separation or one of two explicit critical-edge geometries.
+
+Repeated contacts alone do not lower component defect: after a split the
+exact value is
 
 \[
                     \Delta'=\kappa_2+\kappa_3+\kappa_4-3.
 \]
 
-Thus the old-contact components must be retained, not merely hit twice.
+Thus the old-contact components must be retained, not merely hit twice.  On
+the separator side, mixed connected supports now have an exact Hall
+criterion.  Boundary-full subgraphs are universal supports; every other
+named connected subgraph is eligible exactly for the boundary blocks whose
+complete duty set it meets.  Two full subgraphs close demand at most two,
+and close demand three exactly when one additional named subgraph meets one
+complete duty.  Failure is an explicit Hall-deficient block family.
+
+For the label-transversal exact seven-boundary returned above, this failure
+has now been calculated dynamically.  The boundary-edge critical-pinch
+partition is legal on the opposite shore and rejected by the intact exposed
+shore.  The opposite shore contains only `r in {1,2}` disjoint
+boundary-full connected supports, and every permissible family of further
+named connected supports has a nonempty block family `X` with
+
+\[
+                          r+|N(X)|<|X|.
+\]
+
+When `(r,d)=(2,3)` or `(1,2)`, every named support misses a literal vertex
+of every complete duty.  The five bichromatic entrance paths returned by
+the pinch lie on the wrong shore, so this is an exact operation-specific
+residue rather than an automatic reflection.
+
+The two edge-pair outcomes have also been checked against the complete
+audited incident-edge calculus.  For an incident differently labelled pair,
+deleting both edges leaves a six-chromatic, five-connected graph with the
+two opposite one-edge equality responses and no response proper on both
+edges.  Nonadjacent outer ends add the exact double-equality response and
+give saturation or an outer-end bypass; adjacent outer ends give the
+critical-triangle transition fork.  Only the subcase in which the two
+owners are the missing model pair and their outer ends are adjacent is
+immediately terminal.  For a repeated model-preserving pair, the two edges
+cross the natural full-neighbourhood boundary, so the internal-shore and
+opposite-shore edge theorems do not apply there.  Neither normal form yet
+assigns a response path to a new named branch set.
+
 Selecting one critical edge in each anticomplete open shore now supplies the
 missing host geometry.  The common deletion host is six-chromatic and
 five-connected; it contains either a `K_4` minor rooted at the four edge
@@ -701,25 +764,28 @@ endpoints or a universally orientable exact order-seven separation.  On the
 same three-edge deletion host, the selected fixed-partition response is
 coupled to a different opposite-shore boundary trace.
 
-The first-hit rank therefore leaves one precise label-faithful step.  In the
-rooted-`K_4` outcome, three inherited branch sets must be reserved as named
-completing branch sets.  In the separator outcome, one legally transported
-partition on the new boundary must be realized on the opposite shore by
-five named connected contraction supports.  The two partitions transported
-automatically by the opposite colouring chambers are incompatible, and the
-old partition is not literally a partition of the new seven-boundary.  The
-exact selected-partition preservation criterion is proved; what is missing
-is the operation-coupled theorem forcing one of those two certificates.
+The first-hit rank therefore leaves one precise label-faithful step.  Every
+internal owner-portal obstruction has now been converted into an incident
+differently labelled edge pair, a repeated model-preserving edge pair, or
+an actual separator of order seven through ten.  In the rooted-`K_4`
+outcome,
+three inherited branch sets must still be reserved as named completing
+branch sets.  In the separator outcome, the retained named supports must
+satisfy the Hall duty inequalities for one legally transported partition.
+The two partitions transported automatically by the opposite colouring
+chambers are incompatible.  What is missing is the operation-coupled theorem
+which converts excess exposure at the internal transversal into one of
+those two exact certificates.
 
 The immediate theorem must close one of the following four literal forks,
 with the first-hit rank providing the primary mechanism.
 
-1. **Common model-preserving deletion.**  Couple the fixed first-hit rank to
-   the opposite-shore theorem.  Either reserve three inherited branch sets
-   outside its endpoint-rooted `K_4`, or lift its universal order-seven
-   separator with one legal transported partition and all five named
-   connected contraction supports on its opposite shore.  These give,
-   respectively, an explicit `K_7` model or a valid colour gluing.
+1. **Owner-circuit dynamic closure.**  Apply the operation-specific
+   colouring at the incident differently labelled pair, repeated
+   model-preserving pair, or returned order-seven-through-ten separator.
+   Prove that it gives a new named first hit, a strict compatible model
+   reduction, an exact-seven descent, or a new opposite-shore support which
+   violates the displayed Hall deficiency.
 2. **Minimum oriented interface.**  At the minimum two-full-component
    boundary, eliminate a boundary-edge pinch, lower separator excess to
    zero while retaining the opposite response partitions, or split the

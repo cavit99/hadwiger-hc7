@@ -480,18 +480,82 @@ partition-changing Kempe component meets the literal boundary.  The exact
 boundary-footprint calculation eliminates all demand-at-most-two switches;
 static switches alone cannot synchronize the two shores.
 
-Two host-level theorems further constrain the remaining geometry.  A
-root-free connected split separating two contacts into one branch set gives
-an explicit `K_7`, a strict label-preserving branch-set reduction, or a
-piece which carries at least two foreign branch-set adjacencies.  Repeated
-contacts lower the component defect only when all old contact components
-are retained; the exact defect change is
+The branch-set collision now has a well-founded labelled rank.  Response
+paths may overlap inside the fixed connected response subgraph, but are
+disjoint outside it and record their literal first branch-set labels.  Under
+a zero- or one-owner transfer, a path lost with the transferred piece is
+rerouted inside that response subgraph directly to the retained donor.
+Thus the rank never falls, even when the unique owner is itself ranked.
+Maximizing the rank and then minimizing the donor eliminates every such
+transfer.
+
+The same mechanism now handles an arbitrary owner set whenever its portal
+sets can be linked disjointly inside the transferred piece to distinct
+attachments of the retained donor.  Splitting the piece along those paths
+and absorbing one part into each owner preserves the selected response,
+all labels and the rank while strictly shrinking the donor.  Rado and
+Menger make failure exact: an inclusion-minimal owner family `I`, with
+`2<=|I|<=5`, has a vertex transversal of order `|I|-1<=4` inside the
+piece, every proper owner subfamily being linkable.  For two owners the
+entire obstruction is one literal bottleneck vertex, and its host exposure
+has an exact fork.  Either both owner portals are concentrated at that
+vertex, or a connected component behind it is anticomplete to the retained
+donor.  In the latter case, seven-connectivity gives either a
+label-transversal order-seven full-neighbourhood separator or two
+model-preserving deletion-critical edges to the same outside branch set.
+More generally, the same minimal owner circuit gives one of three host-level
+outcomes for any number of owners: an incident pair of differently labelled
+owner contacts, a repeated model-preserving contact to one outside branch
+set, or an actual full-neighbourhood separation of order between seven and
+ten.  This is the first uniform conversion from a label-allocation failure
+inside one branch set to bounded host geometry.  The remaining work is to
+convert one of those operation-specific edge or separator responses into
+the named first-hit allocation or Hall matching.
+
+Repeated contacts lower the component defect only when all old contact
+components are retained; the exact defect change is
 
 \[
              \Delta'=\kappa_2+\kappa_3+\kappa_4-3.
 \]
 
-Thus multiplicity alone is not a descent invariant.  Finally, selecting one
+Thus multiplicity alone is not a descent invariant.  On the colouring side,
+the selected-partition carrier condition is now an exact Hall problem.
+Boundary-full connected subgraphs are universal supports, while each further
+named connected subgraph can support exactly the blocks whose complete
+literal duty set it meets.  Two full supports close every demand-at-most-two
+partition and close a demand-three partition precisely when one additional
+support meets one full duty set.  The only higher-demand block shapes on a
+seven-vertex boundary are explicitly classified.
+
+At the label-transversal exact seven-boundary returned by the owner-circuit
+theorem, the deletion-critical boundary edge now has an exact dynamic normal
+form.  Its legal opposite-shore partition sees only one or two disjoint
+boundary-full connected supports.  For every legitimate family of retained
+named supports, Hall has a nonempty deficient block family `X` satisfying
+
+\[
+                       r+|N(X)|<|X|,
+                       \qquad r\in\{1,2\}.
+\]
+
+In the sharp cases `(r,d)=(2,3)` and `(1,2)`, no retained named support
+meets even one complete duty set.  Thus the exact-seven branch is no longer
+an unspecified gluing failure: it is a literal duty-contact obstruction on
+the opposite shore.  The five critical-pinch entrance paths lie on the
+other shore and cannot be counted as those supports.
+
+The returned edge pairs have no further automatic closure under the current
+audited Kempe calculus.  An incident differently labelled pair has exact
+opposite one-edge responses and then either the nonadjacent-leaf
+saturation/bypass fork or the adjacent critical-triangle fork.  A repeated
+model-preserving pair crosses its natural full-neighbourhood boundary, so
+the existing internal-shore and opposite-shore edge theorems do not apply
+without a new placement argument.  In both cases the remaining issue is
+still literal first-hit ownership, not existence of another bichromatic
+path.
+
+Finally, selecting one
 critical edge from each anticomplete open shore gives a six-chromatic,
 five-connected deletion host.  It contains either a `K_4` minor rooted at
 the four edge endpoints or a universally orientable exact order-seven
@@ -500,27 +564,29 @@ three-edge-deletion host is the first theorem here which converts arbitrary
 opposite-shore colour drift into literal host geometry.
 
 The immediate open theorem is consequently narrower than the original
-first-hit proposal.  It must prove one of two label-preserving exits:
+first-hit proposal.  It must turn one of the two exact deficiency
+certificates into a terminal outcome:
 
-1. the endpoint-rooted `K_4` can be chosen so that three inherited branch
-   sets remain as named completing branch sets, yielding an explicit
-   `K_7`-minor model; or
-2. one legally transported partition on the universally orientable
-   order-seven separation is realized on the opposite shore by five named
-   connected contraction supports, so that the two six-colourings glue.
+1. the incident differently labelled edge pair, repeated model-preserving
+   edge pair, or returned order-seven-through-ten separation must yield a
+   new named first hit, a strict model reduction, or a Hall-reflecting
+   partition; or
+2. at the universally orientable order-seven separator, the named remnants
+   must satisfy the Hall duty inequalities for one legal partition, or the
+   Hall-deficient block family must force the endpoint-rooted `K_4` to
+   reserve three inherited completing branch sets.
 
-Equivalently, the first-hit rank must be coupled to the opposite-shore
-critical-edge theorem.  An unlabelled rooted model, an order-seven boundary
-without the selected partition, or another persistent contact pair is not a
-terminal conclusion.  The exact preservation criterion is already known:
-a selected partition reflects precisely when the required connected
-contraction supports exist on both shores.  The two partitions transported
-automatically by the opposite colouring chambers are in fact incompatible;
-the old partition is not literally a partition of the new seven-boundary.
-Moreover, audited static examples show that even a lexicographically
-maximum first-hit rank can remain four with a neighbourhood larger than
-seven.  The missing theorem must therefore spend contraction-criticality
-and `K_7`-minor exclusion together, not only the gammoid rank.
+An unlabelled rooted model, an internal portal cut, or an order-seven
+boundary without one legal matching of blocks to literal connected supports
+is not terminal.  The two partitions transported automatically by the
+opposite colouring chambers remain incompatible.  Audited static examples
+allow maximum first-hit rank, minimum donor order and no local order-seven
+boundary even under seven-connectivity and `K_7`-minor exclusion.  Those
+examples are six-colourable and coherently two-apex, so the missing theorem
+must spend
+contraction-criticality and `K_7`-minor exclusion together to convert the
+new internal transversal into the exact Hall certificate; neither rank nor
+boundary colour data alone suffices.
 
 The newly promoted sources are the
 [deficient-singleton deletion theorem](results/hc7_deficient_singleton_joint_persistence.md),
@@ -535,7 +601,11 @@ The newly promoted sources are the
 [repeated-exposure compression](results/hc7_labelled_first_hit_exposure_compression.md),
 [fixed-partition two-edge fork](results/hc7_repeated_exposure_fixed_trace_fork.md),
 [selected-partition preservation criterion](results/hc7_exact7_selected_response_preservation.md),
+[transported-partition Hall reflection](results/hc7_transported_partition_hall_reflection.md),
 [two-contact branch-set transfer](results/hc7_response_aligned_two_contact_lobe_transfer.md),
+[first-hit rank preservation under branch-set transfer](results/hc7_first_hit_rank_preserving_branch_set_transfer.md),
+[multi-owner portal-linkage transfer](results/hc7_multi_owner_portal_linkage_transfer.md),
+[Hall obstruction at a label-transversal critical pinch](results/hc7_label_transversal_pinch_hall_obstruction.md),
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),
 and [opposite-shore critical-edge linkage](results/hc7_cross_shore_critical_edge_linkage.md),
 each with an adjacent internal audit.
