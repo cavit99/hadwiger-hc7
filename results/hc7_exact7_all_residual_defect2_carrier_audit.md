@@ -206,7 +206,7 @@ The audited run was
 
 ```text
 PYTHONPATH=active/runtime/deps:results python3 \
-  active/hc7_exact7_all_residual_defect2_probe.py
+  results/hc7_exact7_all_residual_defect2_probe.py
 ```
 
 It terminated with the certificate reproduced in Section 3.

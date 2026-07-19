@@ -75,11 +75,13 @@ There are two present subbranches.
    two- or three-component interface of order at least eight.
 
 At order eight, deletion of a selected boundary-to-component edge gives a
-clean five-path fan or a strict generic exact-seven restart.  The restart is
-impossible inside the minimum selected shore.  The resulting fan is still
-not terminal: its paths need not first meet five distinct inherited branch
-sets, and a fan failure does not by itself synchronize the two closed-shore
-colourings.
+clean five-path fan or a strict generic exact-seven restart.  When the
+operated order-eight component is a proper subset of the minimum selected
+shore, the restart is impossible by minimality and the clean fan is forced.
+Without that strict-containment hypothesis both outcomes remain.  The fan
+is still not terminal: its paths need not first meet five distinct inherited
+branch sets, and a fan failure does not by itself synchronize the two
+closed-shore colourings.
 
 If the list-critical core fills its shore, its total list-degree excess is
 the remaining unbounded scalar.  The all-tight case has at most eleven

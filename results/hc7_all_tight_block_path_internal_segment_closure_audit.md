@@ -141,7 +141,7 @@ does not supply the sought general inequality
 The full-residual defect-two carrier theorem was used at source SHA-256
 
 ```text
-e2fa9946a06ccd31f72784059b3cefc0b92ae2982ca00943d8b8a317c824b12d
+7957de3aeb635a9f48e1e1668e34f43abbba15cac270c0f716821b2925af3fd8
 ```
 
 and verifier SHA-256
@@ -151,6 +151,10 @@ and verifier SHA-256
 ```
 
 Its adjacent audit records a GREEN verdict and the exhaustive output
+
+The dependency differs from the initially checked revision only in its
+opening status line and recorded audit link; its theorem statements, proof,
+and verifier are unchanged.
 
 ```text
 boundaries=129

@@ -981,9 +981,11 @@ literal statements in `G`, not counts of contracted model bags.
 At boundary order eight the two- and three-component cases have a uniform
 operation-specific alternative.  Deleting one selected
 boundary-to-component edge gives either a clean five-path fan or an exact
-order-seven generic restart with a strictly smaller connected shore.  The
-restart cannot occur inside the minimum shore.  Independently, the
-boundary-labelled near-`K_7` model supplies two disjoint boundary edges
+order-seven generic restart with a strictly smaller connected component.
+If that operated component is a proper subset of the minimum generic shore,
+the restart contradicts minimality and the clean fan is forced; otherwise
+both outcomes remain.  Independently, the boundary-labelled near-`K_7`
+model supplies two disjoint boundary edges
 leading to different common labels and a paired-source five-fan or another
 strict order-seven restart.  What remains is not path existence: the paths
 may have repeated boundary ends or first meet the wrong inherited branch
