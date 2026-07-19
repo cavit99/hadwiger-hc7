@@ -35,6 +35,8 @@ Immediate proved inputs, each with an adjacent audit:
 - [completion of the exact two-lobe two-cut residue](../results/hc7_order8_two_cut_completion.md)
 - [root connector and two boundary-class supports force the split-root response](../results/hc7_order8_root_connector_reflection.md)
 - [two-part connected-shore normal form and common two-vertex-transversal descent](../results/hc7_order8_common_two_vertex_transversal_descent.md)
+- [role-sensitive support transversals give order-seven or root-preserving order-eight separations](../results/hc7_order8_root_preserving_transversal_descent.md)
+- [connected-shore cycle completion and the two-triangle forest normalization](../results/hc7_adjacent_full_pair_cycle_completion.md)
 - [three simultaneous colour-indexed Kempe paths on the merged-response shore](../results/hc7_merged_root_three_kempe_locks.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)

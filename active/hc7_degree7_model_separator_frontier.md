@@ -1102,6 +1102,19 @@ boundary classes force the split-root partition on the opposite shore by a
 proper-minor contraction.  Consequently, within either part of the cover,
 every root connector intersects every support for each boundary class.
 
+Connectedness of both open shores also removes all cycles from the
+six-vertex boundary graph obtained by deleting the two roots.  A shortest
+path in the merged-response shore makes its two one-defect connected
+subgraphs adjacent without losing any boundary contact, while the split
+shore has the adjacent boundary-full cover above.  Any residual boundary
+cycle then splits into three connected arcs and, together with those four
+off-boundary subgraphs and the two roots, gives an explicit `K_7`-minor
+model.  Hence the residual graph is a forest.  If the boundary contains two
+vertex-disjoint odd cycles, the `(3,5)` type is impossible; the survivor has
+two root-containing triangles and each root has boundary degree exactly
+two.  This normalizes, but does not eliminate, the remaining `(3,3)` forest
+case.
+
 This cross-intersection has a sharp small-transversal consequence.  If one
 set of order at most two meets every root connector and every support for
 both boundary classes, then it has order exactly two.  Each component after
@@ -1110,6 +1123,19 @@ boundary class, so its full neighbourhood is an actual order-seven
 separator.  Every complementary component is adjacent to every new boundary
 vertex, and the selected split colouring supplies one closed-shore response
 on the seven-set.  A common opposite-shore partition is not yet obtained.
+
+The separator calculation is now role-sensitive.  A set of order at most
+three meeting all three support families gives an actual order-seven
+separation or an exact order-eight full-neighbourhood separation missing
+one root and one vertex from each boundary class.  More importantly, a set
+of order at most two meeting only the two boundary-class support families
+gives an actual order-seven separation or an exact order-eight
+full-neighbourhood separation which retains both roots and two vertices of
+each boundary class.  The selected split colouring restricts to that new
+closed shore with those four inherited colour blocks, and its open shore is
+a proper subset of the old one.  This does not yet transfer the opposite
+response or the inherited minor-model labels, so the strict set inclusion
+is not by itself a recursive descent.
 
 The remaining high-transversal case must spend the global hypotheses.  An
 explicit finite example is eight-connected and seven-chromatic, has the
@@ -1130,6 +1156,15 @@ have no disjoint transversal and have common transversal number three, and
 whose union with the eight-vertex boundary has treewidth at most five.
 Therefore the next exchange must couple the split shore to the merged shore
 or to a proper-minor colouring of the full host.
+
+Equivalently, if `tau_XY` denotes the minimum order of a set meeting every
+support for either three-vertex boundary class, the root-preserving
+separator theorem handles `tau_XY<=2`.  The verified split-shore example has
+`tau_XY=3`.  The immediate cross-shore obligation is therefore to use the
+merged-shore response paths and the full-host proper-minor colourings to
+force `tau_XY<=2`, construct an explicit `K_7` model, or return an
+order-seven separation with one complete equality partition on both closed
+shores.
 
 The opposite merged-response shore supplies a complementary dynamic
 constraint.  In every fixed merged-root six-colouring, each of the three
@@ -1255,12 +1290,16 @@ locations to obtain one of:
 
 In the connected two-component opposite-response subbranch, the same target
 can equivalently be entered through the two-part cover above.  Either the
-root-connector and two boundary-class-support families have a common
-transversal of order two, giving the exact structural order-seven descent,
-or their common transversal number is at least three.  The latter is the
-present host-level exchange problem: use `K_7`-minor exclusion and a selected
-proper-minor response to create the missing disjoint support, a saturated
-edge/`K_5` completion, a common boundary partition, or a strict descent.
+two boundary-class-support families have a common transversal of order at
+most two, giving an actual order-seven separation or a strict
+root-preserving order-eight separation with the selected response retained,
+or their role-sensitive transversal number `tau_XY` is at least three.  The
+first alternative still needs opposite-shore state transfer before it is a
+recursive or colouring conclusion.  The latter is the present host-level
+exchange problem: use `K_7`-minor exclusion and a selected proper-minor
+response to create the missing disjoint support, a saturated edge/`K_5`
+completion, a common boundary partition, or a strict response-preserving
+descent.
 
 The two component counts should be treated uniformly up to the point where
 the 82-type classification supplies additional boundary information.  A

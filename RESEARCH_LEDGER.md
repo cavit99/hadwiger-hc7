@@ -193,6 +193,17 @@ partition on the opposite closed shore by three simultaneous contractions.
 Thus, inside either part of the two-part cover, every root connector
 intersects every support for each boundary class.
 
+The same connected-shore normal form now gives an explicit minor-model
+closure for every cycle in the boundary after deleting the two roots.  A
+shortest path joins the two one-defect connected subgraphs on the
+merged-response shore, and the adjacent boundary-full cover lies on the
+other shore.  Three consecutive arcs of any residual cycle then complete
+these four subgraphs to a `K_7`-minor model.  Therefore the six-vertex
+residual boundary is a forest.  When two disjoint odd cycles are present,
+the `(3,5)` type is eliminated; only two root-containing triangles remain,
+and both roots have boundary degree exactly two.  This is an unbounded
+host-level normalization, not a closure of the surviving `(3,3)` forest.
+
 If the three resulting families of connected supports have a common vertex
 transversal of order at most two, then the transversal has order exactly two
 and every component behind it has an actual full neighbourhood of order
@@ -201,6 +212,16 @@ of that separation, and every complementary component is adjacent to all
 seven new boundary vertices.  The opposite closed shore is not yet known to
 induce the same complete equality partition, so this is a structural descent
 rather than a terminal colouring argument.
+
+The transversal calculation is sharper when the two boundary-class support
+families are distinguished from the root-connector family.  A set of order
+at most two meeting every support for either boundary class returns an
+actual order-seven separation or a root-preserving exact order-eight
+full-neighbourhood separation.  In the latter case the two roots and two
+vertices from each boundary class retain four distinct colour blocks on the
+selected closed shore, and the new open shore is a proper subset of the old
+one.  The result neither forces such a transversal nor transfers the
+opposite response, so this strict inclusion is not yet a recursive theorem.
 
 The complementary high-transversal case cannot be closed from connectivity
 and the two local response types alone.  A verified eight-connected,
@@ -220,6 +241,13 @@ transversal number three, while its union with the boundary has treewidth at
 most five.  Thus the positive theorem must couple the two shores or use the
 proper-minor response dynamics of the complete host; it cannot be a static
 one-shore packing theorem.
+
+Thus the current cross-shore target may be stated using the role-sensitive
+parameter `tau_XY`: force `tau_XY<=2`, an explicit `K_7`-minor model, or an
+actual order-seven separation on whose two closed shores one complete
+boundary equality partition is realized.  The merged-response shore's three
+colour-indexed root paths are the available dynamic input.  A static
+split-shore argument cannot prove this disjunction.
 
 On the merged-response shore, every fixed response colouring has three
 simultaneous colour-indexed root-to-root Kempe paths, one for each colour

@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "6c8e8be3bae133a9e049ad8afad04ed24a4144d0a69cc0ab585fd882ee6df77b"
+expected_source_sha256 = "ea1293c68120b320545b05821c6dd69016d9ddbf27b747738b2f9fca01639c28"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3988,6 +3988,34 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_root_preserving_transversal_descent"
+title = "Role-sensitive support transversals give order-seven or root-preserving order-eight separations"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_root_preserving_transversal_descent.md"
+active = true
+audit = "results/hc7_order8_root_preserving_transversal_descent_audit.md"
+expected_source_sha256 = "9909747c5612ad45d5c75e7a4bb66c51afe883e63530d8fcc1748760edaab161"
+scope = "a connected split-response shore behind an exact order-eight separation, with nonadjacent roots and two independent three-vertex boundary classes"
+label_fidelity = "the roots, boundary classes, support transversals, components and every returned separator vertex are literal host objects"
+separator_order = "a three-family transversal of order at most three, or a two-family transversal of order at most two, returns an actual separation of order seven or an exact full-neighbourhood separation of order eight"
+colour_compatibility = "the selected split response restricts to the returned closed shore; the opposite response remains open"
+strict_parameter = "in the order-eight outcome the returned open component is a proper subset of the old connected shore"
+conclusions = [
+  "a common three-family transversal of order at most three gives order seven or an exact order-eight boundary missing one root and one vertex from each boundary class",
+  "a transversal of the two boundary-class support families of order at most two gives order seven or an exact root-preserving order-eight boundary",
+  "every complementary component is boundary-full when order-seven separations are excluded",
+  "the selected colouring preserves the stated inherited boundary blocks on the returned closed shore",
+]
+does_not_prove = [
+  "existence of either small transversal",
+  "a complete equality partition on the opposite closed shore",
+  "transfer of inherited minor-model labels",
+  "that proper containment alone is a valid recursive selected-response descent",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.merged_root_three_kempe_locks"
 title = "Three simultaneous colour-indexed Kempe paths on a merged-root shore"
 kind = "theorem"
@@ -4013,24 +4041,25 @@ does_not_prove = [
 
 [[claims]]
 id = "hc7.adjacent_full_pair_cycle_completion"
-title = "Cycle completion from adjacent defect-one and boundary-full pairs"
+title = "Cycle completion from two connected shores"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_adjacent_full_pair_cycle_completion.md"
-source_heading = "2. Cycle completion"
-active = false
+active = true
 audit = "results/hc7_adjacent_full_pair_cycle_completion_audit.md"
-expected_source_sha256 = "20c0e37056fab8dff204511a5d776000a90614b3e6d520118be7d4235c2de165"
-scope = "four pairwise disjoint connected subgraphs outside an eight-vertex boundary: an adjacent exact-defect pair and an adjacent boundary-full pair"
-label_fidelity = "the four connected subgraphs, two defects and three cycle arcs lift directly to seven explicit branch sets"
+expected_source_sha256 = "832fff95b699aa73b1f1b10cc52e1f562d6e108dad059962b3563a799bc3f875"
+scope = "a connected two-shore order-eight interface with two disjoint lower-defect connected subgraphs on one shore and two disjoint boundary-full connected subgraphs on the other"
+label_fidelity = "the shores, four connected subgraphs, absorbed shortest path, reserved boundary vertices and three cycle arcs lift directly to seven explicit branch sets"
 conclusions = [
-  "any cycle in the boundary after deleting the two defects gives an explicit K7-minor model",
-  "in a K7-minor-free host the six-vertex boundary core is a forest",
-  "two disjoint boundary odd cycles then leave two disjoint odd-length rooted paths in that forest",
+  "connectedness makes both same-shore pairs adjacent without losing their boundary contacts",
+  "any cycle in the boundary after deleting the two roots gives an explicit K7-minor model",
+  "in a K7-minor-free live two-component interface the six-vertex residual boundary is a forest",
+  "the disjoint odd-cycle type (3,5) is impossible, while a surviving (3,3) type has two rooted triangles and both roots have boundary degree exactly two",
 ]
 does_not_prove = [
-  "that the current live opposite-response branch supplies all four connected subgraphs",
-  "a composition with the merged-root Kempe-lock theorem",
+  "closure of the surviving two-triangle forest",
+  "a common boundary equality partition or an order-seven separation",
+  "a label-preserving strict descent",
   "HC7",
 ]
 
@@ -4191,6 +4220,12 @@ note = "This normalizes the connected split-response shore to two adjacent full 
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_root_preserving_transversal_descent"
+kind = "uses"
+note = "This turns a two-vertex transversal of the two boundary-class support families into an order-seven separation or a strict root-preserving order-eight full-neighbourhood separation with the selected response retained."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.merged_root_three_kempe_locks"
 kind = "uses"
 note = "This supplies three simultaneous colour-indexed root paths on the merged-response shore, with exact endpoint saturation and intersection restrictions, for the high-transversal exchange."
@@ -4198,8 +4233,8 @@ note = "This supplies three simultaneous colour-indexed root paths on the merged
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.adjacent_full_pair_cycle_completion"
-kind = "related_to"
-note = "This is a reusable K7 construction if future exchange work places adjacent defect-one pieces opposite the adjacent full cover; the present live branch does not yet supply that conjunction."
+kind = "uses"
+note = "In the connected two-component opposite-response branch this forces the residual six-vertex boundary to be a forest, eliminates the (3,5) odd-cycle type and normalizes the survivor to two rooted triangles with root degree two."
 
 [[relations]]
 source = "hc7.order8_two_cut_completion"
@@ -5282,7 +5317,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "6c8e8be3bae133a9e049ad8afad04ed24a4144d0a69cc0ab585fd882ee6df77b"
+evidence_sha256 = "ea1293c68120b320545b05821c6dd69016d9ddbf27b747738b2f9fca01639c28"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5304,7 +5339,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "6c8e8be3bae133a9e049ad8afad04ed24a4144d0a69cc0ab585fd882ee6df77b"
+evidence_sha256 = "ea1293c68120b320545b05821c6dd69016d9ddbf27b747738b2f9fca01639c28"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
