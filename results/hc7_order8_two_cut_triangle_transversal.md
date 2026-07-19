@@ -1,7 +1,8 @@
 # Triangle-transversal structure behind a two-cut
 
-**Status:** draft written proof for independent audit.  This statement is
-not a proof of `HC_7`.
+**Status:** written proof; separate internal audit GREEN in
+[`hc7_order8_two_cut_triangle_transversal_audit.md`](hc7_order8_two_cut_triangle_transversal_audit.md).
+This statement is not a proof of `HC_7`.
 
 ## Theorem (two-cut triangle-transversal residue)
 

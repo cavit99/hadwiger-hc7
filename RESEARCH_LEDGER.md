@@ -137,6 +137,14 @@ boundary vertices; at most one lobe is boundary-full.  Thus the unresolved
 two-cut geometry consists only of one possible full lobe and otherwise
 defect-one lobes.
 
+For the 80 residual boundary types containing two vertex-disjoint
+triangles, that residue is sharper.  Every unresolved two-cut has exactly
+two lobes, both miss exactly one boundary vertex, and their two distinct
+missed vertices meet every boundary triangle (one lies in each of any
+fixed pair of disjoint triangles).  The two-lobe configuration itself is
+not eliminated, and the two residual boundary types with odd-cycle packing
+orders `(3,5)` are not covered by this strengthening.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains

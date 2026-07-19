@@ -5,8 +5,14 @@
 **Audited source:**
 `results/hc7_order8_two_cut_triangle_transversal.md`
 
-**Audited SHA-256:**
+**Mathematical source audited SHA-256:**
 `7e487b3863ccbdae331a248bddfe6001b7ed97b0285e4cc945c4151e087ce43f`
+
+**Promoted source SHA-256:**
+`bea55c37d9f769243acdbba302476b214aaf83e5fea724edb739b22f4962ebe8`
+
+The promoted revision differs only in its status line and audit link; the
+theorem statement and proof audited below are unchanged.
 
 **Audit type:** independent internal mathematical audit.  This is not
 external peer review and does not prove `HC_7`.

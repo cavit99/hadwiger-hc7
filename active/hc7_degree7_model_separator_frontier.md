@@ -1057,6 +1057,14 @@ boundary-full.  Hence every other surviving lobe has exactly one missing
 boundary contact.  The placement and colouring response of those defects,
 not low connectivity alone, is the remaining two-cut obstruction.
 
+On the 80 residual boundaries containing two vertex-disjoint triangles,
+the two-cut obstruction has an exact form.  There are precisely two lobes;
+each misses exactly one boundary vertex, and the two distinct missed
+vertices meet every boundary triangle.  In particular they lie one in
+each member of any fixed pair of disjoint triangles.  This does not yet
+eliminate the two-lobe configuration and does not cover the two residual
+boundary types whose certified disjoint odd cycles have orders `(3,5)`.
+
 The induced-path-component hypothesis is essential: the seven-connected,
 `K_7`-minor-free graph obtained as the join of `K_2` and the icosahedral
 graph has an all-boundary path fan with strictly reversed demands but no
@@ -1320,6 +1328,7 @@ one of the three literal host configurations above.
 - [completion of every overlap outcome for a nontrivial induced-path component in the exact three-component interface](../results/hc7_order8_endpoint_shared_portal_completion.md)
 - [leaf-block descent for a selected order-eight component with a cutvertex](../results/hc7_order8_leaf_block_descent.md)
 - [small-boundary lobe descent and the defect-one two-cut residue](../results/hc7_order8_small_boundary_lobe_descent.md)
+- [triangle-transversal structure of the remaining two-cut residue](../results/hc7_order8_two_cut_triangle_transversal.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)

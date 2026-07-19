@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "484ed3eeff02824a524a34b98b4260568509b6b17629ed6928dd2f2590c0d480"
+expected_source_sha256 = "b3ecadecefd7aed566a49361da82984a2ca1b0b57280051c2e291193c33a3725"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3726,6 +3726,33 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_two_cut_triangle_transversal"
+title = "Triangle-transversal structure behind a two-cut"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_two_cut_triangle_transversal.md"
+active = true
+audit = "results/hc7_order8_two_cut_triangle_transversal_audit.md"
+expected_source_sha256 = "bea55c37d9f769243acdbba302476b214aaf83e5fea724edb739b22f4962ebe8"
+scope = "the exact three-component boundary-full order-eight interface when the selected component is two-connected, its boundary contains two vertex-disjoint triangles, and a fixed two-cut triggers neither the small-lobe descent nor an order-seven separation"
+separator_order = "conditional on no order-seven or strict order-eight lobe descent"
+label_fidelity = "the missed boundary vertices are literal and meet every boundary triangle; no inherited equality partition, branch-set labels, or compatible shore colourings are preserved"
+conclusions = [
+  "every unresolved two-cut has exactly two lobes",
+  "both lobes have boundary defect exactly one",
+  "the two missed boundary vertices are distinct and form a transversal of all boundary triangles",
+  "for every fixed pair of disjoint boundary triangles, one missed vertex lies in each triangle",
+]
+does_not_prove = [
+  "elimination of the final two-lobe residue",
+  "the two residual boundary types whose certified odd-cycle packing has orders (3,5)",
+  "a common boundary equality partition or compatible shore colourings",
+  "preservation of inherited minor-model labels",
+  "closure of the two-component order-eight interface",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.order8_three_full_one_defect2_quotient"
 title = "Three boundary-full connected subgraphs and one defect-two subgraph do not force a K7 minor"
 kind = "barrier"
@@ -3844,6 +3871,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_small_boundary_lobe_descent"
 kind = "uses"
 note = "This turns every sufficiently small lobe behind the selected order-eight component into an actual order-seven separation or a strict smaller-component return, leaving only the defect-one two-cut residue."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_two_cut_triangle_transversal"
+kind = "uses"
+note = "For the 80 two-triangle residual boundaries, this reduces every unresolved two-cut to exactly two defect-one lobes whose distinct misses meet every boundary triangle."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4896,7 +4929,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "484ed3eeff02824a524a34b98b4260568509b6b17629ed6928dd2f2590c0d480"
+evidence_sha256 = "b3ecadecefd7aed566a49361da82984a2ca1b0b57280051c2e291193c33a3725"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4918,7 +4951,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "484ed3eeff02824a524a34b98b4260568509b6b17629ed6928dd2f2590c0d480"
+evidence_sha256 = "b3ecadecefd7aed566a49361da82984a2ca1b0b57280051c2e291193c33a3725"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
