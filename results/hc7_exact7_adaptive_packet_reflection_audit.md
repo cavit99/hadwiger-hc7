@@ -4,6 +4,18 @@
 
 **GREEN for the exact `(1,3)` application.**
 
+**Audited source:** `hc7_exact7_adaptive_packet_reflection.md`, SHA-256
+
+```text
+14690180c44a9e5836591a54c4c7cdb7a26f1a2c78147470257072d5bc425e96
+```
+
+This exact-revision pin supersedes the legacy unpinned form of this audit.
+The proof below was rechecked against the displayed source revision,
+including the stand-alone exact-reflection lemma now used by the
+critical-triangle packet-demand theorem.  This is a separate internal
+mathematical audit, not external peer review.
+
 The proposed adaptive argument is valid: in a graph in which every proper
 minor is six-colourable, one `S`-full packet on one open shore and three
 pairwise disjoint `S`-full packets on the other force either a literal
@@ -249,3 +261,11 @@ dichotomy gives a literal `K_7` if `G[S]` contains a triangle and a global
 six-colouring otherwise.  Both contradict the defining properties of a
 hypothetical minimal `HC_7` counterexample.  Therefore the entire `(1,3)`
 actual exact-seven adhesion cell is eliminated.
+
+The broader exact-reflection Lemma 2.1 is GREEN at the same pinned source
+revision: for any independent-block partition `Pi`, `q` disjoint full
+packets suffice when `d_H(Pi)<=q`, with the source's explicit alternatives
+for zero contractions and seven block representatives.  Its direction is
+essential: contractions in one closed shore pull a colouring back only to
+the untouched opposite closed shore.  No same-shore packet expansion is
+licensed by this verdict.

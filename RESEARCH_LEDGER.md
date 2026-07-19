@@ -397,31 +397,88 @@ that edge-deleted graph.  Thus unique-portal concentration and destruction
 of the chosen model edge are no longer obstructions.  Palette colours still
 do not identify the five branch-set labels.
 
-The immediate open theorem is now **persistent-edge fixed-trace alignment
-or compatible separation**.  It must align a critical
-boundary--component edge and the deletion-persistent model edge at one
-shore vertex, then use the fixed-trace list-critical subgraph or exact-seven
-fan to give an explicit `K_7` model, a common full equality partition on an
-actual order-seven separation, or a strictly smaller aligned component in
-the same host.  For any proposed persistent edge, a proved binary lemma
-applies: if one colouring of its deletion has the prescribed boundary
-trace, then the edge belongs to every list-critical obstruction for that
-trace; otherwise its entire proper-minor response set rejects the trace.
-Mere coexistence of an unaligned fan, list-critical subgraph and stable
-minor model is not enough.
+The common deletion can now be centred at the deficient singleton.  If its
+five common branch sets have neighbour multiplicities `n_1,...,n_5`, the
+exact maximum number of simultaneously deletable incident model edges is
+`d(x)-5`, and every prescribed persistent edge belongs to a maximum
+deletion.  Nonjoint pairs form a matching.  Degree seven is already an
+exact singleton-side separation; in its nonadjacent-pair trace, the five
+remaining neighbours are bijective both with the five common model labels
+and with the five alternate colours.  In the dense alternative, two
+explicit path/fan constructions exclude both degree-nine equality
+patterns, so `d(x)<=8`; degree at least nine therefore forces a jointly
+persistent nonadjacent pair.
+
+At degree eight, a maximum three-edge deletion has triangle endpoints.  A
+new parameter-uniform colouring theorem turns its three response classes
+into either a single Kempe transition with a common-boundary connected
+bipartite subgraph or a connected four-chromatic subgraph containing the
+four-vertex clique.  Nondominating outcomes give actual separators;
+dominating outcomes give `K_6`-minor-free bounded-chromatic complements.
+The previously unexplained two-response Kempe-separated branch is similarly
+a connected three-chromatic subgraph, with the same separator-or-dominating
+alternative.
+
+The two incident deletions can also be aligned with a split of one common
+branch set.  Either this constructs `K_7`, or it returns an actual
+full-neighbourhood separation with the two deleted edges on named opposite
+sides.  A nested step strictly lowers that boundary unless the opposite
+endpoint component is full to it.  Minimizing over all such oriented
+separators is a well-founded normalization in which both endpoint
+components are full to the same boundary; only a boundary-edge pinch and
+the absence of a common partition remain.
+
+At an exact order-seven transition boundary, the opposite-side equality
+partition now has full-subgraph demand strictly greater than its packing
+number; lower demand reflects and glues.  The two residual partition forms
+are explicit, and every merge-critical singleton pair forces a literal
+bichromatic path through the opposite open side.  Demand-set reflection
+then converts every clean or non-direct path end into a strictly smaller
+connected side behind its full neighbourhood.  The unreduced geometry has
+both path ends entering the two selected boundary-full connected subgraphs
+directly, or loses the old labelled partition under the smaller separator.
+A six-connected verified example realizes this direct-entry obstruction,
+while every admissible seven-connected augmentation of its fixed skeleton
+contains a `K_7`; seven-connectivity and contraction-critical state transfer
+must therefore be used together.
+
+Finally, a proper total-rejection kernel which retains all five required
+model contacts can be absorbed label-preservingly.  The result is an
+explicit `K_7`, a full-neighbourhood separator, or the same spanning
+labelled near-complete model with a strictly smaller common branch set.
+The only equality case is an induced shortest private connector, so the
+open work is to force the five contacts or eliminate that path residue.
+
+The immediate open theorem is now a **label-preserving first-entry or
+compatible-separator theorem**.  It must turn the direct path/full-subgraph
+intersection, the minimum oriented interface, or one of the connected
+dominating bounded-chromatic subgraphs into an explicit `K_7` model, a
+common full equality partition on an actual order-seven separation, or a
+strict descent which retains both the selected response and all five named
+common branch sets.  Merely regenerating another unlabelled near-complete
+minor or another boundary of unknown colouring state is not sufficient.
+
+The newly promoted sources are the
+[deficient-singleton deletion theorem](results/hc7_deficient_singleton_joint_persistence.md),
+[split-aligned separator theorem](results/hc7_split_aligned_joint_deletion.md),
+[critical-triangle Kempe-separated-component theorem](results/hc7_critical_triangle_kempe_separation.md),
+[clique-star response theorem](results/hc7_clique_star_kempe_separation.md),
+[exact-seven full-subgraph-demand theorem](results/hc7_exact7_critical_triangle_full_subgraph_demand.md),
+[five-contact component absorption](results/hc7_five_contact_rejection_component_absorption.md),
+and [demand-set separator descent](results/hc7_exact7_demand_set_separator_descent.md),
+each with an adjacent internal audit.
 
 This does not prove `HC_7`.  It closes the one-hole donor splitting problem,
 the disjoint two-trace linkage branch, broad degree-eight cyclic-contact
 families, the entire rooted cycle-allocation problem, the cutvertex and
 generic two-cut component geometry, the universal-contact three-connected
 family, the reserved-cycle/high-connectivity branch and the two-safe-support
-branch by
-unbounded theorems.  The residual is now the label-preserving alignment of
-a deletion-persistent model edge with the dynamic shore obstruction, or
-synchronization of a concrete one-sided partition on an exact order-seven
-separator, not a finite web census.  The
-two-adjacent-edge exceptional complements and the degree-eight/nine
-bounded-interface continuation remain after this branch.  The older
+branch by unbounded theorems.  The residual is now the label-preserving
+allocation at one minimum full-neighbourhood interface, direct
+path/full-subgraph intersection, or dominating bounded-chromatic subgraph,
+not a finite web census.  The two-adjacent-edge exceptional complements and
+the remaining degree-eight bounded-interface continuation remain after this
+branch.  The older
 component-defect programme below is retained as a secondary source of
 explicit branch-set splits, not as a competing primary spine.
 

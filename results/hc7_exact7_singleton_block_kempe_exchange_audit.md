@@ -1,8 +1,18 @@
 # Independent audit: exact singleton-block Kempe exchange
 
-Audited file: `results/hc7_exact7_singleton_block_kempe_exchange.md`.
+**Verdict:** **GREEN** at the exact source revision below.
 
-**Verdict:** **GREEN.**
+**Audited source:** `hc7_exact7_singleton_block_kempe_exchange.md`,
+SHA-256
+
+```text
+d0157bc10b6f588a7e7fd714b1e5be02faee3da35f2d35ce43cf03f5237c91e2
+```
+
+This exact-revision pin supersedes the legacy unpinned form of this audit.
+The lemma was reconstructed directly from the two components of the
+induced bichromatic graph.  This is a separate internal mathematical audit,
+not external peer review.
 
 Let `alpha=c(x)` and `beta=c(y)`.  Since `{x}` and `{y}` are distinct
 singleton blocks of the equality partition on `S`, `alpha!=beta`, and no
@@ -32,3 +42,9 @@ disjointness from packets, branch sets, or reserved connectors.
 
 No minor operation occurs in this lemma, so no proper-minor hypothesis is
 being used implicitly.
+
+At the pinned revision, the exact scope is also GREEN: the path need not
+avoid any preselected full connected subgraphs, branch sets, or connectors.
+For a closed shore `J=G[R union S]`, the conclusion that all internal path
+vertices lie in `R` uses only `V(J)-S=R`; no connectivity or
+minor-criticality hypothesis is hidden.

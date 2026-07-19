@@ -16,13 +16,13 @@ pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
 id = "hc7.target.degree7_model_separator"
-title = "Joint model-preserving deletion: label allocation or compatible separator"
+title = "Label-preserving first-entry or compatible separator"
 kind = "target"
 status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Rooted model persistence and the remaining label-allocation fork"
 active = true
-expected_source_sha256 = "3287618888d56ac0ff4f5d549e3a29a0b7b3ba895ec7edce0786284656d414f0"
+expected_source_sha256 = "a0a932a83f1984c0f36d867b28ef85538c8aa806f07823362a59a5da6ff98081"
 scope = "the exact asymmetric order-eight and descended exact-seven interfaces arising in the degree-seven boundary-labelled branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
 separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
@@ -48,10 +48,15 @@ hypotheses = [
   "a critical exact-seven boundary edge gives a six-ended fan, clean five-spoke packing or strict component descent",
   "contracting the distinguished asymmetric-interface edge gives two exact-seven full shores and a split-planar normal form in the five-chromatic boundary case",
   "a persistent edge attaining the fixed trace belongs to every list-critical obstruction for that trace, while failure means total trace rejection",
-  "rooted minimization retaining the protected singleton gives at least two persistent incident edges and at most two rooted components",
-  "either two incident edges are jointly model-persistent or the rooted vertex has an actual order-seven neighbourhood boundary",
-  "nonjoint persistent pairs form a matching of fragile support classes, while degree at least thirteen forces a jointly persistent induced two-edge path",
+  "at the deficient singleton a maximum common model-preserving incident-edge deletion has exact order d(x)-5 and can contain any prescribed persistent edge",
+  "nonjoint persistent pairs form a matching of two-contact branch-set classes; degree seven is an actual order-seven boundary and degree at least nine forces a jointly persistent nonadjacent pair",
+  "the remaining dense degree-eight case gives a clique-star Kempe transition or a connected four-chromatic subgraph, followed by a separator or a dominating K6-minor-free complement",
+  "a common two-edge deletion can be aligned with a branch-set split and globally minimized to an oriented boundary with both endpoint components boundary-full",
   "a jointly persistent pair gives an exact nonadjacent-end trace or two critical-triangle response families separated by Kempe components, a common-coloured transition boundary, or a dominating five-chromatic K6-minor-free complement",
+  "Kempe-separated critical-triangle responses force a connected three-chromatic subgraph containing the triangle, followed by a separator or a dominating bounded-chromatic K6-minor-free complement",
+  "at an exact order-seven transition boundary every unresolved boundary partition has full-subgraph demand greater than the opposite packing number and every merge-critical singleton pair forces a literal bichromatic path",
+  "demand-set reflection closes a third disjoint demand representative and every non-direct path end gives a strictly smaller connected side behind its full neighbourhood",
+  "a proper rejection component retaining all five other model contacts gives K7, a full-neighbourhood separator, or a strictly smaller labelled common branch set",
   "a boundary-crossing persistent edge gives a strict one-extra-colour component descent or a shore-filling minimum-degree-nine normal form",
 ]
 allowed_exits = [
@@ -60,6 +65,7 @@ allowed_exits = [
   "a label-preserving configuration satisfying every hypothesis of the audited connected-subgraph cyclic-contact allocation theorem, with cross-nonadjacency graph a matching of order at most two",
   "a strict full-neighbourhood-separator descent preserving the paired traces, selected boundary-edge response and five named pairwise-adjacent connected subgraphs",
   "a new aligned persistent-edge instance in the same host with a strictly smaller open component and the fixed trace and labelled near-complete model preserved",
+  "a smaller connected side behind a full-neighbourhood separator with the attained boundary partition and five named common branch sets preserved",
 ]
 does_not_prove = [
   "HC7",
@@ -70,6 +76,9 @@ does_not_prove = [
   "placement of a persistent model edge in the selected fixed-trace critical kernel and deficient branch set simultaneously",
   "label allocation in the common model-preserving two-edge deletion",
   "connection or terminal use of Kempe-separated critical-triangle response families",
+  "composition of the direct bichromatic path with the two selected boundary-full connected subgraphs",
+  "preservation of the old boundary partition and model labels under the strict demand-set separator descent",
+  "elimination of the five-contact absorption equality case when the retained component is a private induced path",
   "synchronization of the exact-seven separator returned by the joint-persistence equality case",
   "closure of the adjacent-vertex-split planar residue after contracting the distinguished edge",
   "a disjoint seven-contact residual after one named connected subgraph is used as a repair connector",
@@ -257,10 +266,11 @@ scope = "degree-seven vertex in the hypothetical HC7 kernel"
 id = "hc7.exact7_adaptive_packet_reflection"
 title = "Adaptive exact-seven (1,3) packet reflection"
 kind = "theorem"
-status = "written-unaudited"
+status = "audited-green"
 source = "results/hc7_exact7_adaptive_packet_reflection.md"
 source_heading = "Theorem 1.1 (adaptive `(1,3)` packet reflection)"
 active = false
+audit = "results/hc7_exact7_adaptive_packet_reflection_audit.md"
 expected_source_sha256 = "14690180c44a9e5836591a54c4c7cdb7a26f1a2c78147470257072d5bc425e96"
 scope = "an actual order-seven separation with one boundary-full connected subgraph on one open shore and three pairwise-disjoint boundary-full connected subgraphs on the other"
 hypotheses = [
@@ -274,6 +284,27 @@ conclusions = [
 does_not_prove = [
   "closure of the packing vectors (1,1) or (1,2)",
   "a colour-compatible order-seven separation in the remaining cases",
+]
+
+[[claims]]
+id = "hc7.exact7_singleton_block_kempe_exchange"
+title = "Exact singleton-block Kempe exchange"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_singleton_block_kempe_exchange.md"
+source_heading = "Lemma"
+active = false
+audit = "results/hc7_exact7_singleton_block_kempe_exchange_audit.md"
+expected_source_sha256 = "d0157bc10b6f588a7e7fd714b1e5be02faee3da35f2d35ce43cf03f5237c91e2"
+scope = "one exact boundary colouring with two singleton colour blocks"
+conclusions = [
+  "merge the two singleton boundary blocks by one Kempe interchange",
+  "or obtain a literal bichromatic path between them with interior outside the boundary",
+]
+does_not_prove = [
+  "which open-shore connected subgraphs the path meets",
+  "an explicit K7-minor model",
+  "HC7",
 ]
 
 [[claims]]
@@ -2129,6 +2160,235 @@ scope = "the contracted five-chromatic split-planar boundary residue"
 allowed_exits = ["six contacted quotient bags and an explicit K7", "global model reselection", "a colour-compatible exact separation"]
 does_not_prove = ["fixed-bag root transfer", "a K7-minor model in every residue", "HC7"]
 
+[[claims]]
+id = "hc7.deficient_singleton_joint_persistence"
+title = "Joint deletion at the singleton end of a missing model adjacency"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_deficient_singleton_joint_persistence.md"
+source_heading = "Theorem 1.1 (deficient-singleton joint persistence)"
+active = true
+audit = "results/hc7_deficient_singleton_joint_persistence_audit.md"
+expected_source_sha256 = "2f413fa679fc7366920b9adbd1cdc9c419e7f2ff26c871ba8757ce2d8510c409"
+scope = "parameter-uniform spanning labelled K_t-minus-one-edge model whose deficient branch set is a singleton"
+label_fidelity = "the same spanning labelled model survives every asserted simultaneous incident-edge deletion"
+conclusions = [
+  "the exact maximum deletion capacity d(x)-(t-2)",
+  "every prescribed persistent edge extends to a maximum deletion",
+  "nonjoint persistent pairs form a matching of two-contact branch-set classes",
+  "in the HC7 specialization degree at least nine forces a jointly persistent pair with nonadjacent outer endpoints",
+]
+does_not_prove = [
+  "palette-to-branch-set allocation beyond the degree-seven equality case",
+  "closure of the dense degree-eight alternative",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.split_aligned_joint_deletion"
+title = "Branch-set split aligned with a common two-edge deletion"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_split_aligned_joint_deletion.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_split_aligned_joint_deletion_audit.md"
+expected_source_sha256 = "4aaff1e806bfbcd56c59b8e5d9647fc182104328c35439e3d3735559ab06f62b"
+scope = "a spanning labelled K7-minus-one-edge model with a deficient singleton"
+label_fidelity = "one common two-edge deletion, the old model labels, and the two oriented endpoint components of the returned full-neighbourhood separation"
+separator_order = "at least seven; minimized over oriented full-neighbourhood interfaces"
+conclusions = [
+  "explicit K7-minor model or an actual separator aligned with a common model-preserving two-edge deletion",
+  "opposite closed-shore response languages in the clean placement",
+  "strict nested boundary descent or two endpoint components full to one minimum boundary",
+]
+does_not_prove = [
+  "that the minimum boundary has order seven",
+  "synchronization of the two shore colourings",
+  "elimination of a deleted edge lying in the boundary",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.critical_triangle_kempe_separation"
+title = "Kempe-separated responses at a critical triangle"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_critical_triangle_kempe_separation.md"
+source_heading = "Theorem 2.1 (critical-triangle Kempe-separated component)"
+active = true
+audit = "results/hc7_critical_triangle_kempe_separation_audit.md"
+expected_source_sha256 = "f036d79fb94b67859bdea86e54a1c2d08b85ba66f1171cbe3e21253b47358dc3"
+scope = "two exclusive colouring-response families at two incident deleted edges whose outer endpoints are adjacent"
+conclusions = [
+  "Kempe separation forces a connected three-chromatic subgraph containing the whole critical triangle",
+  "a nondominating component exposes an actual separator",
+  "a dominating component in HC7 has a four- or five-chromatic K6-minor-free complement",
+]
+does_not_prove = [
+  "an upper bound of seven on the separator",
+  "alignment of palette colours with fixed minor-model labels",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.clique_star_kempe_separation"
+title = "Clique-star colouring responses and Kempe separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_clique_star_kempe_separation.md"
+source_heading = "Theorem 1 (clique-star response dichotomy)"
+active = true
+audit = "results/hc7_clique_star_kempe_separation_audit.md"
+expected_source_sha256 = "c64df3af9619df6aa6408c11c223041557cda26b1009e4a80d65f26070b71e73"
+scope = "parameter-uniform response classes obtained by deleting every edge from one vertex to a clique"
+conclusions = [
+  "a normalized Kempe transition component disjoint from the clique and agreeing on its full neighbourhood",
+  "or a connected subgraph of chromatic number one more than the clique order containing the vertex and clique",
+  "in the degree-eight HC7 dense alternative, a separator or a connected dominating bounded-chromatic subgraph with K6-minor-free complement",
+]
+does_not_prove = [
+  "alignment with fixed minor-model labels",
+  "closure of the degree-eight dense residue",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.exact7_critical_triangle_full_subgraph_demand"
+title = "Full-subgraph demand at an exact-seven critical-triangle transition"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_critical_triangle_full_subgraph_demand.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_exact7_critical_triangle_full_subgraph_demand_audit.md"
+expected_source_sha256 = "5715ddbabac72efd27cfa6c5242c9026e64f6dcc7b1416707fea2842513931c6"
+scope = "an exact order-seven separator returned by a critical-triangle Kempe transition"
+colour_compatibility = "closes whenever the boundary-partition demand is at most the opposite shore's disjoint boundary-full-subgraph capacity"
+conclusions = [
+  "the only packing vectors are (1,1), (1,2), and (2,1)",
+  "every unresolved partition has full-subgraph demand greater than the opposite packing number",
+  "the residual boundary partitions have two explicit forms",
+  "every merge-critical singleton pair yields a literal opposite-shore bichromatic path",
+]
+does_not_prove = [
+  "composition of that path with the selected boundary-full connected subgraphs",
+  "closure of the demand-three residual",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.exact7_demand_set_separator_descent"
+title = "Demand-set reflection and full-neighbourhood descent at an exact seven-boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_demand_set_separator_descent.md"
+source_heading = "Theorem 2.1 (demand-set reflection)"
+active = true
+audit = "results/hc7_exact7_demand_set_separator_descent_audit.md"
+expected_source_sha256 = "9729a02a822c16f7cc90de1a7fa3ba6728173f37f84623e134a53719f5e8b713"
+scope = "the two exact residual boundary partitions with two selected disjoint boundary-full connected subgraphs"
+strict_parameter = "order of the connected open side behind the returned full-neighbourhood separation"
+conclusions = [
+  "a third disjoint connected subgraph meeting one exact demand set reflects and glues",
+  "a clean or non-direct end of the forced bichromatic path returns a strictly smaller connected side behind its full neighbourhood",
+  "only direct entry into both selected boundary-full connected subgraphs remains geometrically unreduced",
+]
+does_not_prove = [
+  "preservation of the old labelled boundary partition on a nested separator",
+  "closure of the two-ended direct-entry geometry",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.five_contact_rejection_component_absorption"
+title = "Absorbing a five-contact rejection component into a labelled near-complete model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_contact_rejection_component_absorption.md"
+source_heading = "Theorem 2.1 (five-contact absorption or a full-neighbourhood obstruction)"
+active = true
+audit = "results/hc7_five_contact_rejection_component_absorption_audit.md"
+expected_source_sha256 = "8dda06118dbf82a516ce32c50b2be4bf6647b39dcfe9ff395810689d6ff18500"
+scope = "a proper connected part of one common branch set retaining all five other required model contacts"
+label_fidelity = "the same protected singleton, missing adjacency, and five named common branch-set labels"
+strict_parameter = "order of the replaced common branch set"
+conclusions = [
+  "an explicit K7-minor model",
+  "a full-neighbourhood separator",
+  "or a strictly smaller spanning labelled K7-minus-one-edge model",
+  "the equality case is an induced shortest private connector",
+]
+does_not_prove = [
+  "that every proper rejection component retains the five required contacts",
+  "colour compatibility of the separator outcome",
+  "elimination of the private-path equality case",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.joint_pair_first_hit_hall"
+title = "Joint persistence and exact colour responses do not force first-hit Hall allocation"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_joint_pair_first_hit_hall_barrier.md"
+active = true
+scope = "two explicit eight-connected hosts with a common spanning labelled near-complete model and exact joint-deletion responses"
+refutes = [
+  "static saturated colours have first-hit representatives in distinct foreign branch sets",
+  "a single critical-triangle transition forces injective palette-to-label allocation",
+]
+does_not_prove = [
+  "a counterexample under K7-minor exclusion and minor-minimality",
+  "a counterexample to HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.critical_triangle_kempe_separation"
+title = "A seven-connected critical triangle can have separated Kempe responses"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_critical_triangle_kempe_separation_barrier.md"
+active = true
+scope = "a seven-connected seven-vertex-critical host with a spanning labelled near-complete model"
+refutes = ["connectivity, vertex-criticality, exact opposite responses and one common model force Kempe adjacency of the response families"]
+does_not_prove = [
+  "a counterexample after excluding K7 minors and exact order-seven terminal outcomes",
+  "a counterexample to HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.exact7_clean_path_geometry"
+title = "A clean forced path and three boundary-full connected subgraphs need not force K7"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_exact7_clean_path_geometry_barrier.md"
+active = true
+scope = "an exact seven-boundary geometry without contraction-critical colouring data"
+refutes = ["a clean bichromatic path is automatically a third demand-set representative or forces a K7 minor"]
+does_not_prove = [
+  "a counterexample to demand-set reflection",
+  "a counterexample in a seven-connected contraction-critical host",
+  "a counterexample to HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.exact7_bichromatic_path_full_subgraphs"
+title = "A direct bichromatic path need not augment two boundary-full connected subgraphs"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier.md"
+active = true
+audit = "barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier_audit.md"
+expected_source_sha256 = "6db581f47fedffb4105028568630dfa0df3d07da83856142654e21218c1996bc"
+scope = "one fixed six-connected K7-minor-free exact-seven skeleton and all minimal seven-connected admissible edge augmentations of that skeleton"
+refutes = ["the direct path and two selected boundary-full connected subgraphs are automatically three independent model resources"]
+does_not_prove = [
+  "a counterexample in a seven-connected K7-minor-free host",
+  "a counterexample under the proper-minor response constraints",
+  "a counterexample to HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.epsilon_one_labelled_descent"
@@ -2991,7 +3251,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "3287618888d56ac0ff4f5d549e3a29a0b7b3ba895ec7edce0786284656d414f0"
+evidence_sha256 = "a0a932a83f1984c0f36d867b28ef85538c8aa806f07823362a59a5da6ff98081"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3013,7 +3273,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "3287618888d56ac0ff4f5d549e3a29a0b7b3ba895ec7edce0786284656d414f0"
+evidence_sha256 = "a0a932a83f1984c0f36d867b28ef85538c8aa806f07823362a59a5da6ff98081"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3022,9 +3282,9 @@ kind = "uses"
 note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
 evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
-evidence_start_line = 770
-evidence_end_line = 797
-evidence_sha256 = "ff42c4fa4042da826803506ead7f20f1a658f8517cca86c5a679d66b4311b2e1"
+evidence_start_line = 827
+evidence_end_line = 854
+evidence_sha256 = "789747cb249802473eda058c54aa50b7c99466d5fb8b8e74f8472966c649dd59"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3148,6 +3408,156 @@ kind = "guarded_by"
 source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.three_path_missing_five_labels"
 kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.deficient_singleton_joint_persistence"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.split_aligned_joint_deletion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.critical_triangle_kempe_separation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.clique_star_kempe_separation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_critical_triangle_full_subgraph_demand"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_demand_set_separator_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.five_contact_rejection_component_absorption"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.joint_pair_first_hit_hall"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.critical_triangle_kempe_separation"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.exact7_clean_path_geometry"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.exact7_bichromatic_path_full_subgraphs"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.deficient_singleton_joint_persistence"
+target = "hc7.rooted_persistent_model_edge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.deficient_singleton_joint_persistence"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+
+[[relations]]
+source = "hc7.deficient_singleton_joint_persistence"
+target = "hc7.joint_persistent_incident_colour_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.deficient_singleton_joint_persistence"
+target = "hc7.persistent_support_class_refinement"
+kind = "uses"
+
+[[relations]]
+source = "hc7.split_aligned_joint_deletion"
+target = "hc7.deficient_singleton_joint_persistence"
+kind = "uses"
+
+[[relations]]
+source = "hc7.split_aligned_joint_deletion"
+target = "hc7.two_mark_branch_set_split"
+kind = "uses"
+
+[[relations]]
+source = "hc7.split_aligned_joint_deletion"
+target = "hc7.joint_persistent_incident_colour_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.critical_triangle_kempe_separation"
+target = "hc7.barrier.critical_triangle_kempe_separation"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.clique_star_kempe_separation"
+target = "hc7.deficient_singleton_joint_persistence"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_critical_triangle_full_subgraph_demand"
+target = "hc7.joint_persistent_incident_colour_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_critical_triangle_full_subgraph_demand"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_critical_triangle_full_subgraph_demand"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_critical_triangle_full_subgraph_demand"
+target = "hc7.exact7_singleton_block_kempe_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_demand_set_separator_descent"
+target = "hc7.exact7_critical_triangle_full_subgraph_demand"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_demand_set_separator_descent"
+target = "hc7.nested_full_neighbourhood_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_demand_set_separator_descent"
+target = "hc7.epsilon_one_labelled_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_demand_set_separator_descent"
+target = "hc7.barrier.exact7_clean_path_geometry"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.exact7_demand_set_separator_descent"
+target = "hc7.barrier.exact7_bichromatic_path_full_subgraphs"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.five_contact_rejection_component_absorption"
+target = "hc7.total_trace_rejection_kernel"
+kind = "uses"
 
 [[verifiers]]
 id = "degree-nine-pole-completion"
@@ -3339,4 +3749,50 @@ timeout = 30
 requires = ["networkx==3.6.1"]
 expected_stdout = [
   "verified persistent induced-star barrier",
+]
+
+[[verifiers]]
+id = "critical-triangle-kempe-separation-barrier"
+path = "barriers/hc7_critical_triangle_kempe_separation_barrier_verify.py"
+sha256 = "77b61c20a1bb7881ff351b55d64234b5b111383a87368dd50dcdbdf616034dc8"
+timeout = 30
+expected_stdout = [
+  "core graph6 HCpvbqk: 4-connected and 4-vertex-critical",
+  "common deletion: 24 three-colourings in two pure Kempe components of order 12",
+  "joined host: 7-connected and 7-vertex-critical",
+  "spanning labelled K7-minus-edge model: verified",
+  "actual order-seven separator and explicit K7 model: verified",
+  "ALL CHECKS PASSED",
+]
+
+[[verifiers]]
+id = "joint-pair-first-hit-hall-barrier"
+path = "barriers/hc7_joint_pair_first_hit_hall_barrier_verify.py"
+sha256 = "a1aa6a049ba0c5d2c9d520fd14e447abb866715d419b8960236ae81c7dd67cac"
+timeout = 30
+expected_stdout = [
+  "nonadjacent star: kappa=8, singleton rooted K7^- model, joint persistence, exact trace, Hall failure, explicit K7",
+  "adjacent triangle: kappa=8, singleton rooted K7^- model, EP/PE transition, Hall failure, explicit K7",
+  "verified joint-pair first-hit Hall barriers",
+]
+
+[[verifiers]]
+id = "exact7-clean-path-geometry-barrier"
+path = "barriers/hc7_exact7_clean_path_geometry_barrier_verify.py"
+sha256 = "abfa8caba1a3bd1f39a939daf92fde102c5026bb6df23b4408b67d7c76744893"
+timeout = 30
+expected_stdout = [
+  "PASS: clean-path geometry; tree decomposition width 5; no K7 minor",
+]
+
+[[verifiers]]
+id = "exact7-bichromatic-path-full-subgraphs-barrier"
+path = "barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier_verify.py"
+sha256 = "41ee3590f9521c47c293f379f404a59a923b570852d4b1a7d40971efc77c6f2c"
+timeout = 30
+expected_stdout = [
+  "GREEN exact-seven bichromatic-path/full-subgraph barrier",
+  "base: vertices=12 edges=38 connectivity=6 K7_minor=no demand=3",
+  "augmentations: allowed_edges=17 minimal_7_connected=165 all_have_K7=yes",
+  "augmentation_sizes: 4:2 5:66 6:89 7:8",
 ]

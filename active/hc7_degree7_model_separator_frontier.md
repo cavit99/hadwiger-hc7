@@ -574,30 +574,75 @@ model-preserving.  It remains essential that the colouring and the model
 now coexist in one graph; a palette colour still does not identify a named
 branch set.
 
-The persistent edges have an exact pairwise structure.  Their number is at
-least `d_G(v)-5`, and the pairs which cannot be deleted jointly form a
-matching of fragile two-edge support classes.  If no jointly persistent
-pair has nonadjacent outer endpoints, the outer endpoints induce a complete
-graph minus a matching.  `K_7`-minor exclusion then gives at most seven
-persistent edges in this dense alternative; equality forces
-`K_7-3K_2`, and `d_G(v)<=12`.  Thus degree at least thirteen forces a
-jointly persistent pair whose outer endpoints are nonadjacent.  The
-verified dual-truncated-icosahedron example shows that three persistent
-edges alone do not force this pair, but that example has an actual
-order-seven separation.
+At the deficient singleton itself the persistence structure is exact.  If
+the five common branch sets meet `{x}` in `n_1,...,n_5` edges, a maximum
+simultaneous model-preserving incident-edge deletion has order
 
-There is also an exhaustive colouring fork for a jointly persistent pair
+\[
+                              d_G(x)-5.
+\]
+
+Every prescribed persistent edge belongs to such a maximum deletion, and
+the pairs which are not jointly persistent form a matching, one pair for
+each common branch set with exactly two neighbours of `x`.  Degree seven
+is already an actual order-seven singleton-side separation.  For a
+nonadjacent maximum pair at that degree, the five surviving neighbours are
+simultaneously one per named common branch set and one per alternate
+colour, so palette-to-label allocation is genuinely bijective there.
+
+The dense alternative is now much smaller than the earlier generic bound.
+If every jointly persistent pair has adjacent outer endpoints, then
+`d_G(x)<=8`.  The two provisional degree-nine equality patterns each give
+an explicit `K_7` model: one by a path after deleting five vertices, the
+other by a five-fan in `G-x`.  Consequently degree at least nine forces a
+jointly persistent pair with nonadjacent outer endpoints.  At degree eight,
+a maximum three-edge deletion has triangle outer endpoints.  The uniform
+clique-star response theorem then gives either one Kempe transition and a
+common-boundary connected bipartite subgraph, or a connected
+four-chromatic subgraph containing the whole four-vertex clique.  A
+nondominating subgraph in either outcome exposes an actual separator; a
+dominating one has a `K_6`-minor-free complement of the stated lower
+chromatic number.  This replaces the finite degree-eight Hall pattern by
+an unbounded separator-or-dominating-subgraph dichotomy, but it does not
+yet align colours with model labels.
+
+The model-preserving deletion can also be aligned with a branch-set split.
+Either the split gives an explicit `K_7` model, or one deleted edge enters a
+proper connected part `L` of a common branch set while the other ends
+outside it, and `N_G(L)` is an actual separator.  In the clean placement,
+the two one-edge response languages lie on opposite closed shores.  A
+nested full-neighbourhood step strictly lowers the same boundary, unless
+the opposite endpoint component is full to it.  Minimizing over all such
+oriented separators is therefore well founded and gives two endpoint
+components which are both full to one common boundary.  The remaining
+exception is a deleted edge lying in the boundary itself.
+
+There is an exhaustive colouring fork for every jointly persistent pair
 `va,vb`.  If `ab` is absent, contracting the induced star gives the exact
 trace with colour class `{a,b}` on `N_G(v)`, followed by the existing
 saturation-or-bypass alternative.  If `ab` is present, the common deletion
-has exactly the two exclusive critical-triangle response families.  They
-are either Kempe-separated or a first transition swaps one connected
-bichromatic subgraph `D`.  The opposite one-edge responses agree on
-`N_G(D)`.  A nondominating `D` therefore exposes an actual commonly
-coloured separator; a dominating `D` has a five-chromatic,
-`K_6`-minor-free complement.  The fixed labelled near-complete model
-survives throughout, but none of these palette colours is yet assigned to
-a foreign branch-set label.
+has exactly two critical-triangle response families.  A first transition
+swaps one connected bichromatic subgraph `D`; the opposite one-edge
+responses agree on `N_G(D)`.  A nondominating `D` exposes an actual commonly
+coloured separator, while a dominating `D` has a five-chromatic,
+`K_6`-minor-free complement.  If the response families are Kempe-separated,
+the component containing the triangle is connected and exactly
+three-chromatic.  It again gives an actual separator when nondominating;
+when dominating its complement is `K_6`-minor-free and four- or
+five-chromatic.  Thus the former unexplained Kempe-separated branch is now
+a standard host-level structural alternative.
+
+At an exact order-seven separator returned by a transition, the two open
+sides have boundary-full connected-subgraph packing vector `(1,1)`, `(1,2)`
+or `(2,1)`.  The common boundary partition has exact full-subgraph demand
+strictly greater than the packing number on the opposite side; otherwise
+connected contractions reflect the same partition and the two shore
+colourings glue.  The two surviving partition forms and their clique
+restrictions are explicit.  In every demand-two merge-critical subcase a
+literal bichromatic path through the opposite open side is forced.  The
+next operation must compose that path with the two disjoint boundary-full
+connected subgraphs; further enumeration of boundary partitions is no
+longer relevant.
 
 The boundary-crossing placement is reduced unboundedly.  If a persistent
 edge `f=vu` ends in the branch set anticomplete to `{x}`, then `x-v-u` is an
@@ -622,31 +667,41 @@ along a shortest boundary Kempe sequence.  A proper kernel transfers to a
 smaller rejected component, but the new trace and model placement may
 drift.  Two explicit counterexamples show that neither deletion persistence
 nor all of this static alignment forces a tight endpoint; that route is
-closed.
+closed.  In the proper-kernel branch there is now a label-preserving
+absorption theorem.  If the selected connected component retains its five
+required contacts, every omitted component can be reassigned to another
+branch set, giving an explicit `K_7`, a full-neighbourhood separator, or a
+strictly smaller common branch set in the same spanning labelled model.
+The sole equality case is an induced shortest private connector; a
+nonpath rejected kernel excludes it.  What remains is to force the five
+contacts or close that private-path residue.
 
-The immediate theorem must now close one of the following three literal
+The immediate theorem must now close one of the following four literal
 forks.
 
 1. **Common model-preserving deletion.**  Decode a six-colouring of the
    joint two-edge deletion through the same labelled near-complete model.
-   For nonadjacent outer endpoints the induced two-edge path gives the
-   shared-interface saturation-or-bypass theorem.  For adjacent endpoints
-   the three vertices form a critical triangle.  Either couple its two
-   Kempe-separated response families, or decode the first transition
-   component and its commonly coloured neighbourhood through the six named
-   branch sets.  In either case the required conclusion is an explicit
-   `K_7` model, a colour-compatible exact-seven separation, or a strict
-   label-preserving full-neighbourhood descent.
-2. **Exact order seven.**  Extend the returned exact colour block to one
-   full equality partition realised by both closed shores, or build the
-   `K_7` model directly.  Merely obtaining the separator is not terminal.
-3. **High-excess shore filling.**  Use the additional persistent incident
-   edges forced by minimum degree at least nine to allocate the five named
-   branch-set contacts, or expose one of the first two outcomes.  At least
-   four persistent edges exist.  The dense no-induced-star alternative can
-   survive only in degrees nine through twelve; at degree at least thirteen
-   the exact nonadjacent-end trace is forced.  Another abstract
-   list-critical classification is not sufficient.
+   For nonadjacent outer endpoints, decode the saturated first exits or the
+   strict two-terminal rejected kernel through the five named common branch
+   sets.  For adjacent endpoints, decode the transition separator or the
+   three-chromatic Kempe-separated component through those same labels.
+   The required conclusion is an explicit `K_7` model, a colour-compatible
+   exact-seven separation, or a strict label-preserving full-neighbourhood
+   descent.
+2. **Minimum oriented interface.**  At the minimum two-full-component
+   boundary, eliminate a boundary-edge pinch, lower separator excess to
+   zero while retaining the opposite response partitions, or split the
+   two full components into correctly labelled branch sets.
+3. **Exact order seven.**  In the demand-three residue, combine the forced
+   bichromatic path with the two boundary-full connected subgraphs to meet
+   the three exact demand sets, or extend one boundary partition through
+   both closed shores.  Merely obtaining another unlabelled separator is
+   not terminal.
+4. **Dominating bounded-chromatic subgraph.**  Use the surviving labelled
+   near-complete model and proper-minor responses to split a connected
+   dominating bipartite, three-chromatic or four-chromatic subgraph into
+   the missing named branch sets, or return one of the preceding separator
+   outcomes.
 
 The contracted five-chromatic branch has an independent split-planar
 reduction: a spanning `\overline{P_7}` model leaves at least two empty
@@ -713,6 +768,13 @@ cannot supply the missing labelled allocation.
 - [jointly persistent incident edges or an exact order-seven separation](../results/hc7_joint_persistent_edge_or_exact_seven.md)
 - [persistent-edge support classes and the dense-alternative degree bound](../results/hc7_persistent_support_class_refinement.md)
 - [colouring fork for a jointly persistent incident pair](../results/hc7_joint_persistent_incident_colour_fork.md)
+- [maximum deletion capacity at a deficient singleton](../results/hc7_deficient_singleton_joint_persistence.md)
+- [branch-set split aligned with a common two-edge deletion](../results/hc7_split_aligned_joint_deletion.md)
+- [Kempe-separated responses at a critical triangle](../results/hc7_critical_triangle_kempe_separation.md)
+- [clique-star response transition or higher-chromatic connected subgraph](../results/hc7_clique_star_kempe_separation.md)
+- [full-subgraph demand at an exact-seven transition](../results/hc7_exact7_critical_triangle_full_subgraph_demand.md)
+- [demand-set reflection and strict full-neighbourhood descent](../results/hc7_exact7_demand_set_separator_descent.md)
+- [label-preserving absorption of a five-contact rejection component](../results/hc7_five_contact_rejection_component_absorption.md)
 - [one-extra-colour critical kernel at a boundary edge](../results/hc7_one_extra_colour_boundary_kernel.md)
 - [boundary-crossing persistent-edge reduction](../results/hc7_boundary_crossing_persistent_edge_reduction.md)
 - [total rejection of a fixed boundary trace](../results/hc7_total_trace_rejection_kernel.md)
@@ -733,6 +795,10 @@ cannot supply the missing labelled allocation.
 - [three-path common-bottleneck barrier](../barriers/hc7_three_kempe_paths_common_bottleneck_barrier.md)
 - [first-hit concentration despite universal response](../barriers/hc7_degree8_blocker_first_hit_concentration_barrier.md)
 - [two-edge deletion-lattice barrier](../barriers/hc7_two_edge_deletion_lattice_barrier.md)
+- [static first-hit colours need not allocate distinct model labels](../barriers/hc7_joint_pair_first_hit_hall_barrier.md)
+- [critical-triangle responses can remain Kempe-separated](../barriers/hc7_critical_triangle_kempe_separation_barrier.md)
+- [clean bichromatic-path geometry alone does not force a clique minor](../barriers/hc7_exact7_clean_path_geometry_barrier.md)
+- [the direct bichromatic-path/full-subgraph obstruction at connectivity six](../barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier.md)
 - [stable-theta/three-path matching-defect barrier](../barriers/hc7_stable_theta_three_path_matching_barrier.md)
 - [paired-block exact-trace parity barrier](../barriers/hc7_exact7_paired_block_trace_parity_barrier.md)
 - [boundary-local operation parity barrier](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)
