@@ -536,6 +536,35 @@ must destroy every connected remainder with the six required outside
 contacts.  This is a smaller dynamic obstruction than the earlier generic
 owner-circuit fork, but it does not yet produce a common boundary partition.
 
+The lexicographic model choice now sharpens that three-owner obstruction
+further.  Maximize the relaxed literal first-hit rank and then minimize the
+donor branch set.  The retained part of the donor outside the distinguished
+component is connected.  Moving or splitting the distinguished component
+would then strictly shrink the donor whenever zero, one or two owner portal
+sets have all their contacts there.  Hence in the only nonterminal case all
+three owner portal sets are concentrated in the same distinguished
+component.  Any two owners consequently give two vertex-disjoint contact
+edges with different inherited branch-set labels.  Deleting the pair admits
+the three exact response signatures `(equal,equal)`, `(equal,proper)` and
+`(proper,equal)`, but not `(proper,proper)`; the common deletion host either
+has a `K_4` on the four endpoints or is six-chromatic with a spanning
+`K_6`-minor model.  Palette colours are still not model labels, so this
+two-edge response substrate is not yet terminal.
+
+Independently, every remaining boundary-full order-eight interface with two
+or three complementary components now has one operation-coupled normal
+form.  A deletion response at an edge from the boundary into one component
+is legal on every unchanged component and rejected on the operated one.  It
+has an exact Hall-deficient transported partition and connected exact-block
+Kempe transition space.  The five forced two-colour paths return either a
+clean five-path fan, pairwise disjoint outside its source and boundary, or an
+actual order-seven separation.  In the latter outcome the two closed shores
+carry the same exact colour block; if their complete equality partitions do
+not already agree, both orientations carry literal Kempe obstruction paths
+and Hall-deficient connected-support systems.  The theorem deliberately does
+not assign the clean fan to five inherited branch-set labels or preserve a
+six-contact residual after that assignment.
+
 Repeated contacts lower the component defect only when all old contact
 components are retained; the exact defect change is
 
@@ -588,20 +617,21 @@ three-edge-deletion host is the first theorem here which converts arbitrary
 opposite-shore colour drift into literal host geometry.
 
 The immediate open theorem is consequently narrower than the original
-first-hit proposal.  It must turn one of the two exact deficiency
-certificates into a terminal outcome:
+first-hit proposal.  It must compose the concentrated three-owner response
+with one of the two operation-coupled outcomes:
 
-1. the incident differently labelled edge pair, repeated model-preserving
-   edge pair, or returned order-seven-through-ten separation must yield a
-   new named first hit, a strict model reduction, or a Hall-reflecting
-   partition; equivalently, in the reserved-component branch a proper-minor
-   response must reroute one proper-subfamily linkage away from the reserved
-   component, leave the connected remainder required by the explicit
-   completion theorem, or return a compatible exact-seven partition; or
-2. at the universally orientable order-seven separator, the named remnants
-   must satisfy the Hall duty inequalities for one legal partition, or the
-   Hall-deficient block family must force the endpoint-rooted `K_4` to
-   reserve three inherited completing branch sets.
+1. in the clean-fan branch, allocate five pairwise disjoint response paths to
+   five distinct inherited branch-set labels while retaining a connected
+   subgraph adjacent to all six outside branch sets; the reserved-component
+   theorem then supplies an explicit `K_7`-minor model; or
+2. in the exact order-seven branch, make one named support meet a complete
+   Hall duty, or preserve one complete equality partition through both
+   closed shores and glue their six-colourings.
+
+A strict compatible model reduction preserving the selected response and
+all literal labels is also a valid exit.  The two-edge endpoint-`K_4` fork
+may close the first alternative only after its four branches are shown to
+reserve the three required inherited completing branch sets.
 
 An unlabelled rooted model, an internal portal cut, or an order-seven
 boundary without one legal matching of blocks to literal connected supports
@@ -633,6 +663,8 @@ The newly promoted sources are the
 [first-hit rank preservation under branch-set transfer](results/hc7_first_hit_rank_preserving_branch_set_transfer.md),
 [multi-owner portal-linkage transfer](results/hc7_multi_owner_portal_linkage_transfer.md),
 [reserved-component linkage completion and the three-label order-eight normal form](results/hc7_reserved_component_linkage_completion.md),
+[three-owner component concentration and its two-edge response substrate](results/hc7_three_owner_reserved_component_concentration.md),
+[operation-coupled colouring responses at a boundary-full order-eight separation](results/hc7_operation_coupled_order8_response.md),
 [Hall obstruction at a label-transversal critical pinch](results/hc7_label_transversal_pinch_hall_obstruction.md),
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),
 and [opposite-shore critical-edge linkage](results/hc7_cross_shore_critical_edge_linkage.md),

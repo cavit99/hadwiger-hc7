@@ -736,6 +736,29 @@ uses the distinguished component and leaves no connected residual with all
 six outside contacts.  Only a proper-minor colouring response can now break
 that obstruction or synchronize the returned boundary.
 
+The global max-first-hit-rank/minimum-donor choice forces an additional
+concentration.  The part of the donor retained outside the distinguished
+component is connected.  If zero, one or two owner portal sets were
+concentrated in the component, moving it wholesale or splitting it along a
+proper two-owner linkage would preserve all labels and the selected response
+while strictly shrinking the donor.  Therefore all three owner portal sets
+are concentrated there.  Any two owners supply disjoint, differently
+labelled contact edges.  Their common deletion admits exactly the three
+signatures `(equal,equal)`, `(equal,proper)` and `(proper,equal)`, never
+`(proper,proper)`, and returns either a `K_4` on the four endpoints or a
+six-chromatic common host with a spanning `K_6` model.
+
+The order-eight side is now operation-decorated as well.  For both two and
+three boundary-full complementary components, a selected edge-deletion
+colouring is legal on all unchanged components and rejected on the operated
+one.  Its five forced two-colour paths give either a clean fan, pairwise
+disjoint outside the source and the boundary, or an exact order-seven
+separation.  At the exact boundary, both shores realize the same exact
+colour block; if their full equality partitions differ, both orientations
+have literal Kempe obstruction paths and Hall-deficient connected-support
+systems.  These paths and supports are operation-specific, but they are not
+yet allocated to the inherited branch-set labels.
+
 Repeated contacts alone do not lower component defect: after a split the
 exact value is
 
@@ -787,18 +810,16 @@ endpoints or a universally orientable exact order-seven separation.  On the
 same three-edge deletion host, the selected fixed-partition response is
 coupled to a different opposite-shore boundary trace.
 
-The first-hit rank therefore leaves one precise label-faithful step.  Every
-internal owner-portal obstruction has now been converted into an incident
-differently labelled edge pair, a repeated model-preserving edge pair, or
-an actual separator of order seven through ten.  In the rooted-`K_4`
-outcome,
-three inherited branch sets must still be reserved as named completing
-branch sets.  In the separator outcome, the retained named supports must
-satisfy the Hall duty inequalities for one legally transported partition.
-The two partitions transported automatically by the opposite colouring
-chambers are incompatible.  What is missing is the operation-coupled theorem
-which converts excess exposure at the internal transversal into one of
-those two exact certificates.
+The first-hit rank therefore leaves one precise label-faithful composition
+step.  In the clean-fan outcome, its five paths must first hit five distinct
+inherited branch sets while leaving a connected part of the concentrated
+component adjacent to all six outside branch sets.  That conclusion feeds
+directly into the reserved-component completion theorem.  In the exact
+order-seven outcome, one named support must meet a complete Hall duty, or one
+complete equality partition must survive through both shores.  In the
+endpoint-rooted `K_4` outcome, three inherited branch sets must still be
+reserved as named completing branch sets.  No further unlabelled path or
+static boundary partition closes any of these alternatives.
 
 The immediate theorem must close one of the following four literal forks,
 with the first-hit rank providing the primary mechanism.
@@ -911,6 +932,8 @@ cannot supply the missing labelled allocation.
 - [exact selected-partition preservation at a seven-separator](../results/hc7_exact7_selected_response_preservation.md)
 - [two-contact label-preserving branch-set transfer](../results/hc7_response_aligned_two_contact_lobe_transfer.md)
 - [reserved-component linkage completion and three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
+- [three-owner component concentration and two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
+- [operation-coupled colouring responses at a boundary-full order-eight separation](../results/hc7_operation_coupled_order8_response.md)
 - [repeated contacts and component defect](../results/hc7_repeated_contact_component_defect.md)
 - [opposite-shore critical edges give a rooted four-vertex model or exact seven-separation](../results/hc7_cross_shore_critical_edge_linkage.md)
 - [label-preserving absorption of a five-contact rejection component](../results/hc7_five_contact_rejection_component_absorption.md)

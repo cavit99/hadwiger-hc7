@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "175833682eaa52b5ddb9d954130e6533cf1c50534c33b9092f57b011bfd2ae93"
+expected_source_sha256 = "ca38a1460aa43dbb55e7fb0b6aa8a23a70eed456d5967a1e8c4ad959e468070e"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -43,6 +43,8 @@ hypotheses = [
   "every minimal owner circuit gives an incident differently labelled contact pair, a repeated model-preserving contact pair, or an actual separator of order at most ten",
   "a reserved component plus a proper-subfamily owner linkage avoiding it gives an explicit K7, uniformly for two through five owners",
   "the three-owner no-repeated-contact equality case has a literal order-eight boundary or returns an actual order-seven separation",
+  "in the extremal three-owner equality case all three owner portal sets are concentrated in the distinguished component and any owner pair gives two differently labelled critical contact edges",
+  "every boundary-full order-eight interface with two or three components gives a clean five-path fan or an operation-decorated exact order-seven separation with bilateral Hall deficiency",
   "at a label-transversal critical pinch, the legal opposite-shore partition has an exact Hall-deficient support family with one or two full supports",
   "one critical edge in each opposite shore gives an endpoint-rooted K4 minor or a universally orientable exact order-seven separator",
   "a transported boundary partition reflects exactly when the named connected contraction supports exist on the opposite closed shore",
@@ -61,6 +63,8 @@ does_not_prove = [
   "realization of one legally transported partition by five named connected contraction supports on the opposite shore",
   "dynamic closure of the incident differently labelled, repeated model-preserving, and bounded-separator owner-circuit outcomes",
   "a proper-minor response which reroutes a proper-subfamily linkage away from the reserved component, preserves a six-contact residual, or synchronizes the returned boundary",
+  "allocation of the clean five-path fan to five distinct inherited branch-set labels while preserving a connected six-contact residual",
+  "a complete common equality partition or a complete Hall-duty support at the returned exact order-seven separation",
   "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
 ]
 keywords = ["degree seven", "labelled first hit", "strict gammoid", "rooted K4", "exact seven-separator", "colour gluing"]
@@ -2601,6 +2605,96 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.three_owner_component_concentration"
+title = "Three owner portal sets concentrate in one distinguished component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_three_owner_reserved_component_concentration.md"
+source_heading = "Theorem 3.1"
+active = true
+audit = "results/hc7_three_owner_reserved_component_concentration_audit.md"
+expected_source_sha256 = "d30971fa491a1264101cc949b0712e9b41d87f8879499e529a124403149aea9d"
+scope = "the lexicographically extremal three-owner no-repeated-contact equality-eight branch"
+strict_parameter = "maximize the relaxed literal first-hit rank, then minimize the donor branch-set order"
+label_fidelity = "all three literal owner portal sets lie in the distinguished component; every transfer preserves the selected response, prescribed roots and inherited branch-set labels"
+conclusions = [
+  "all three owner portal sets are concentrated in the distinguished component",
+  "zero-, one- and two-owner concentration alternatives give an explicit K7 or a strict compatible model reduction",
+]
+does_not_prove = [
+  "allocation of palette responses to the three owner labels",
+  "a connected six-contact residual after a response-path allocation",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.three_owner_two_edge_response"
+title = "Two differently labelled owner contacts give an exact three-signature deletion substrate"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_three_owner_reserved_component_concentration.md"
+source_heading = "Corollary 4.1"
+active = true
+audit = "results/hc7_three_owner_reserved_component_concentration_audit.md"
+expected_source_sha256 = "d30971fa491a1264101cc949b0712e9b41d87f8879499e529a124403149aea9d"
+scope = "any two owners in the concentrated three-owner branch"
+label_fidelity = "the two deleted contact edges have different inherited owner labels and distinct endpoints in the concentrated component"
+conclusions = [
+  "the common deletion host has the equal-equal, equal-proper and proper-equal six-colouring signatures but not proper-proper",
+  "the four endpoints induce K4 or the common deletion host is six-chromatic with a spanning K6-minor model",
+]
+does_not_prove = [
+  "reservation of three inherited completing branch sets in the endpoint K4 outcome",
+  "alignment of the spanning K6 model with inherited labels",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.operation_coupled_order8_fan"
+title = "An operated full order-eight component gives a clean five-path fan or an exact seven-separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_operation_coupled_order8_response.md"
+source_heading = "Theorem 4.1"
+active = true
+audit = "results/hc7_operation_coupled_order8_response_audit.md"
+expected_source_sha256 = "be8fc118ab832ff9a24057873c815805539c0ab7cb1e4996c4d81202cf72b268"
+scope = "a boundary-full order-eight separation with two or three complementary components and one selected boundary-to-component deletion edge"
+separator_order = "the cut outcome is the full neighbourhood of a connected set and has order exactly seven"
+conclusions = [
+  "five response paths pairwise disjoint outside their source and boundary",
+  "or an actual order-seven separation carrying the selected proper one-sided trace and its exact common-colour block",
+]
+does_not_prove = [
+  "five distinct inherited first-hit labels",
+  "a connected residual adjacent to all six inherited outside branch sets",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.operation_coupled_exact7_response"
+title = "The returned exact seven-separation has two operation-coupled Hall-deficient orientations"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_operation_coupled_order8_response.md"
+source_heading = "Theorem 5.1"
+active = true
+audit = "results/hc7_operation_coupled_order8_response_audit.md"
+expected_source_sha256 = "be8fc118ab832ff9a24057873c815805539c0ab7cb1e4996c4d81202cf72b268"
+scope = "the exact order-seven outcome of the operated full order-eight component theorem"
+separator_order = "exactly seven"
+colour_compatibility = "both shores realize the same exact colour block; equal complete partitions glue, while unequal partitions have obstruction paths and Hall-deficient support systems in both orientations"
+conclusions = [
+  "a common complete equality partition and a six-colouring of the host",
+  "or two exact-block Kempe-related partitions with bilateral operation-specific paths and Hall-deficient support systems",
+]
+does_not_prove = [
+  "one named support meeting a complete Hall duty",
+  "synchronization of the two complete equality partitions",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.transported_partition_hall_reflection"
 title = "Hall reflection of a boundary partition through mixed connected supports"
 kind = "theorem"
@@ -3815,7 +3909,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "175833682eaa52b5ddb9d954130e6533cf1c50534c33b9092f57b011bfd2ae93"
+evidence_sha256 = "ca38a1460aa43dbb55e7fb0b6aa8a23a70eed456d5967a1e8c4ad959e468070e"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3837,7 +3931,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "175833682eaa52b5ddb9d954130e6533cf1c50534c33b9092f57b011bfd2ae93"
+evidence_sha256 = "ca38a1460aa43dbb55e7fb0b6aa8a23a70eed456d5967a1e8c4ad959e468070e"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3848,7 +3942,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 1004
 evidence_end_line = 1023
-evidence_sha256 = "f69c94076e045d5a69b447704c6d51370a416e16219ebeeb3f1f81e29f20b353"
+evidence_sha256 = "9db7e55883e0a1c6a14cbe51fa044535139a20f284eebf2b9ac0f6cc618eed84"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4251,6 +4345,66 @@ kind = "guarded_by"
 [[relations]]
 source = "hc7.five_contact_rejection_component_absorption"
 target = "hc7.total_trace_rejection_kernel"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.three_owner_two_edge_response"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.operation_coupled_order8_fan"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.operation_coupled_exact7_response"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_component_concentration"
+target = "hc7.reserved_component_linkage_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_component_concentration"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_component_concentration"
+target = "hc7.multi_owner_portal_linkage_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_two_edge_response"
+target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.operation_coupled_order8_fan"
+target = "hc7.order8_prescribed_spoke_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.operation_coupled_order8_fan"
+target = "hc7.order8_full_component_kempe_transition"
+kind = "uses"
+
+[[relations]]
+source = "hc7.operation_coupled_exact7_response"
+target = "hc7.operation_coupled_order8_fan"
+kind = "uses"
+
+[[relations]]
+source = "hc7.operation_coupled_exact7_response"
+target = "hc7.transported_partition_hall_reflection"
 kind = "uses"
 
 [[verifiers]]
