@@ -257,6 +257,35 @@ vertices of the common root colour.  This is an unbounded operation-free
 constraint, but it does not make the paths internally disjoint or allocate
 their first hits to named branch sets.
 
+Those paths now yield an ordered two-part allocation theorem.  Every
+root-to-root path crosses the two named one-defect connected subgraphs in
+the same order.  Local connectivity one reduces to an exact one-vertex
+series composition with opposite lobe responses; its incident-edge probe
+returns only an incompatible singleton-side order-seven boundary or an
+unlabelled rooted `K_4`.
+
+When local connectivity is at least two, the shore has an induced partition
+`L=E dotcup D` into adjacent connected parts with exact boundary defects
+`e,d`.  Three colour-indexed paths give three distinct `d`-portals in `E`,
+while local two-connectivity gives two distinct `E-D` portals.  A Hall
+reduction and Xie's two--three linkage theorem give an explicit `K_7` minor
+whenever the associated five-terminal completion is six-connected.
+Otherwise there is an actual order-seven separator, a strict order-eight
+full-neighbourhood descent, or a connected positive-excess side whose outer
+proper-minor boundary partition is incompatible with the fixed inner
+partition.  A completion on at most six vertices folds into the same
+host-level alternatives and is not a separate residue.
+
+This closes an unbounded linkage family but not the branch.  A verified
+three-vertex endpoint-reversal example retains the static portal layout and
+all three Kempe paths without a `K_7` minor; it lacks seven-connectivity and
+the rejected proper-minor response.  The exact remaining mechanism is
+therefore dynamic: couple the incompatible boundary partitions at a
+positive-excess full neighbourhood to a label-preserving connected split,
+a common complete boundary partition, or a strict selected-response
+descent.  Symmetric low cuts and neighbourhood submodularity alone do not
+supply that conclusion.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains

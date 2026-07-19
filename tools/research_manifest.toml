@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "ea1293c68120b320545b05821c6dd69016d9ddbf27b747738b2f9fca01639c28"
+expected_source_sha256 = "e9bd76a29bd7998e4d35530639de1424b65f20c9360142097c6d4ba69dbd57ee"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4083,6 +4083,144 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.order8_ordered_defect_crossing"
+title = "Ordered crossings of the two one-defect connected subgraphs"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_ordered_defect_crossing.md"
+active = true
+audit = "results/hc7_order8_ordered_defect_crossing_audit.md"
+expected_source_sha256 = "434efeab93a4f693d212b4ee434532e81647df775a69494384ffcb3349735dde"
+scope = "the connected two-component order-eight opposite-response interface"
+label_fidelity = "the two roots, one-defect connected subgraphs and every path are literal host objects"
+conclusions = [
+  "every connected root connector meets both one-defect connected subgraphs",
+  "every root-to-root path meets the two subgraphs in one fixed order",
+  "the three merged-root Kempe paths inherit this order",
+]
+does_not_prove = [
+  "two internally disjoint ordered paths",
+  "allocation of boundary contacts to named branch sets",
+  "a common boundary partition",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_ordered_series_separation"
+title = "Ordered paths give a rooted model or an exact one-vertex series separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_ordered_paths_rooted_model_or_series_separation.md"
+active = true
+audit = "results/hc7_order8_ordered_paths_rooted_model_or_series_separation_audit.md"
+expected_source_sha256 = "e674bc4f51601e133dd8f84f14a5cd49b242ea69a00bef66b8eff1d4f0aed0a3"
+scope = "the ordered merged-response shore at an order-eight interface"
+label_fidelity = "all roots, paths, lobes, boundary contacts and branch sets are literal"
+separator_order = "local root-to-root connectivity one gives order at most seven or an exact two-lobe cutvertex form"
+conclusions = [
+  "a pointwise compatible pair of ordered paths gives an explicit K7-minor model",
+  "otherwise local connectivity one gives a separator of order at most seven or exactly two cutvertex lobes with six retained colour-indexed neighbours",
+]
+does_not_prove = [
+  "pointwise boundary compatibility for two paths",
+  "preservation of old labels under lobe descent",
+  "a common boundary partition",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_cutvertex_lobe_response"
+title = "Opposite colouring responses across the exact two-lobe series separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_cutvertex_lobe_response_propagation.md"
+active = true
+audit = "results/hc7_order8_cutvertex_lobe_response_propagation_audit.md"
+expected_source_sha256 = "5a43978e738e149140cc4f32e46a8d64c117e4c883f1c70fb52c2a32b834f7d2"
+scope = "the exact two-lobe cutvertex survivor in the ordered order-eight interface"
+label_fidelity = "the two lobes, cutvertex, roots, boundary blocks and critical edges are literal"
+colour_compatibility = "the two lobe boundaries have opposite singleton equality responses"
+conclusions = [
+  "each lobe side has only the equality response and its complement only the inequality response",
+  "both lobes are nonbipartite",
+  "crossed edge-deletion colourings and their bichromatic locks are retained",
+]
+does_not_prove = [
+  "a label-preserving rooted minor",
+  "a compatible order-seven separation",
+  "strict descent preserving the old boundary labels",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_ordered_two_three_allocation"
+title = "Two--three portal allocation in the ordered order-eight interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_ordered_two_three_allocation.md"
+active = true
+audit = "results/hc7_order8_ordered_two_three_allocation_audit.md"
+expected_source_sha256 = "3f62092ab492815d5c21489e001e5732da76bc28454dac75206ba5aa61299dde"
+scope = "the locally two-connected ordered merged-response shore"
+label_fidelity = "the induced two-part shore, five portal classes, Xie terminals and seven branch sets are literal host objects"
+separator_order = "a failed completion yields order seven, strict order eight, or boundary order at least nine"
+colour_compatibility = "positive-excess failure retains an outer boundary partition incompatible with the fixed inner partition"
+conclusions = [
+  "a six-connected five-terminal completion gives an explicit K7-minor model",
+  "Hall failure gives order seven, a three-vertex part, or one common portal",
+  "every remaining non-six-connected completion yields a confined full-neighbourhood separation",
+]
+does_not_prove = [
+  "compatibility of the returned order-seven separation",
+  "strict selected-response descent in the positive-excess branch",
+  "closure of the small static endpoint-reversal pattern",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_small_completion_host_lift"
+title = "Small five-terminal completions lift to descent or positive boundary excess"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_small_completion_host_lift.md"
+active = true
+audit = "results/hc7_order8_small_completion_host_lift_audit.md"
+expected_source_sha256 = "a2bb06c0c6301f5a1a5d806b3e2dd1cebb9f8c9b71fcc50e4b1fd5d30632981e"
+scope = "the normalized two-part merged-response shore, including completion order at most six"
+label_fidelity = "the exact boundary is seven named old boundary vertices plus literal neighbours in the opposite connected part"
+separator_order = "one opposite-part neighbour gives strict order-eight descent; at least two give boundary order at least nine"
+colour_compatibility = "every crossing-edge proper-minor colouring gives an outer boundary partition incompatible with the fixed inner partition"
+conclusions = [
+  "small completion order is not a separate residue",
+  "the whole selected part gives an exact strict-order-eight or positive-excess full-neighbourhood separation",
+]
+does_not_prove = [
+  "a well-founded decrease of positive boundary excess",
+  "a common boundary partition",
+  "allocation to the old branch-set labels",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.order8_three_vertex_portal_reversal"
+title = "Three-vertex endpoint-reversal portal barrier"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order8_three_vertex_portal_reversal_barrier.md"
+active = true
+audit = "barriers/hc7_order8_three_vertex_portal_reversal_barrier_audit.md"
+expected_source_sha256 = "15ca455c022c90fb3719c4a1341e792f77f4a2cf0725bf03b7598ebca0000290"
+scope = "the static three-vertex part of the ordered two--three allocation interface"
+refutes = [
+  "the two rooted boundary triangles, two full subgraphs, complementary one-defect parts, three ordered Kempe paths and two opposite-part contacts alone force a K7 minor",
+]
+does_not_prove = [
+  "a counterexample with seven-connectivity",
+  "a counterexample with contraction-critical proper-minor responses",
+  "a counterexample to HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.minimum_generic_exact7_relative_connectivity"
@@ -4232,9 +4370,80 @@ note = "This supplies three simultaneous colour-indexed root paths on the merged
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_ordered_defect_crossing"
+kind = "uses"
+note = "This forces every root connector and every merged-root Kempe path to cross the two one-defect connected subgraphs in one literal order."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_ordered_series_separation"
+kind = "uses"
+note = "This either decodes two pointwise compatible paths into a K7 model or gives the exact one-cutvertex series survivor."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_cutvertex_lobe_response"
+kind = "uses"
+note = "This records the opposite equality responses and critical-edge colouring data on the exact two-lobe series survivor."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_ordered_two_three_allocation"
+kind = "uses"
+note = "This closes every six-connected five-terminal completion by explicit branch sets and confines failure to full-neighbourhood separations."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_small_completion_host_lift"
+kind = "uses"
+note = "This folds every small completion into the existing strict order-eight descent or the positive-excess response obstruction."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order8_three_vertex_portal_reversal"
+kind = "guarded_by"
+note = "This shows that static portal contacts and all three ordered Kempe paths do not close the endpoint-reversal residue without the host proper-minor response."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.adjacent_full_pair_cycle_completion"
 kind = "uses"
 note = "In the connected two-component opposite-response branch this forces the residual six-vertex boundary to be a forest, eliminates the (3,5) odd-cycle type and normalizes the survivor to two rooted triangles with root degree two."
+
+[[relations]]
+source = "hc7.order8_ordered_series_separation"
+target = "hc7.order8_ordered_defect_crossing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_cutvertex_lobe_response"
+target = "hc7.order8_ordered_series_separation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_ordered_two_three_allocation"
+target = "hc7.order8_ordered_defect_crossing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_ordered_two_three_allocation"
+target = "hc7.merged_root_three_kempe_locks"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_ordered_two_three_allocation"
+target = "hc7.order8_small_boundary_lobe_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_small_completion_host_lift"
+target = "hc7.order8_ordered_two_three_allocation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_small_completion_host_lift"
+target = "hc7.order8_small_boundary_lobe_descent"
+kind = "uses"
 
 [[relations]]
 source = "hc7.order8_two_cut_completion"
@@ -5317,7 +5526,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "ea1293c68120b320545b05821c6dd69016d9ddbf27b747738b2f9fca01639c28"
+evidence_sha256 = "e9bd76a29bd7998e4d35530639de1424b65f20c9360142097c6d4ba69dbd57ee"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5339,7 +5548,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "ea1293c68120b320545b05821c6dd69016d9ddbf27b747738b2f9fca01639c28"
+evidence_sha256 = "e9bd76a29bd7998e4d35530639de1424b65f20c9360142097c6d4ba69dbd57ee"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

@@ -38,6 +38,11 @@ Immediate proved inputs, each with an adjacent audit:
 - [role-sensitive support transversals give order-seven or root-preserving order-eight separations](../results/hc7_order8_root_preserving_transversal_descent.md)
 - [connected-shore cycle completion and the two-triangle forest normalization](../results/hc7_adjacent_full_pair_cycle_completion.md)
 - [three simultaneous colour-indexed Kempe paths on the merged-response shore](../results/hc7_merged_root_three_kempe_locks.md)
+- [ordered crossings of the two one-defect connected subgraphs](../results/hc7_order8_ordered_defect_crossing.md)
+- [rooted model or exact one-vertex series separation from ordered paths](../results/hc7_order8_ordered_paths_rooted_model_or_series_separation.md)
+- [opposite colouring responses across the exact two-lobe series separation](../results/hc7_order8_cutvertex_lobe_response_propagation.md)
+- [two--three portal allocation or a confined full-neighbourhood separation](../results/hc7_order8_ordered_two_three_allocation.md)
+- [small five-terminal completions lift to descent or positive boundary excess](../results/hc7_order8_small_completion_host_lift.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)
@@ -80,6 +85,7 @@ Immediate barriers:
 - [boundary-local operations do not synchronize an exact-seven interface](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)
 - [a common-label paired fan is not terminal without dynamic response data](../barriers/hc7_common_label_paired_fan_k7_barrier.md)
 - [same-shore edge responses and six-colourable shores need not synchronize](../barriers/hc7_exact7_crossing_disjoint_languages_barrier.md)
+- [the three-vertex endpoint-reversal portal pattern survives all static contacts and three Kempe paths](../barriers/hc7_order8_three_vertex_portal_reversal_barrier.md)
 
 ## General bounded-interface continuation
 

@@ -1306,6 +1306,56 @@ the 82-type classification supplies additional boundary information.  A
 palette colour is never a branch-set label, and an unlabelled fan or another
 unlabelled near-clique model is not a terminal outcome.
 
+The merged-response shore now has a sharper ordered normal form.  Every
+connected subgraph adjacent to both nonadjacent roots meets both named
+one-defect connected subgraphs, and every root-to-root path meets them in
+the same order.  If the local root-to-root connectivity is one, the only
+survivor is an exact one-vertex series composition with two lobes.  The two
+lobe boundaries have opposite equality responses, while probing two
+incident critical edges yields only an incompatible singleton-side
+order-seven boundary or an unlabelled rooted `K_4`.  Neither outcome
+allocates the old branch-set labels.
+
+If the local root-to-root connectivity is at least two, the two named
+one-defect subgraphs extend to an induced partition
+
+\[
+                         L=E\mathbin{\dot\cup}D
+\]
+
+into adjacent connected subgraphs, where `E` is adjacent to exactly
+`S-{e}` and `D` to exactly `S-{d}`.  The three merged-root Kempe paths give
+three distinct `d`-portals in `E`, and local two-connectivity gives at least
+two `E-D` portals.  Two disjoint connected subgraphs of `E`, one meeting
+the `d` and `D` portal classes and the other meeting three named boundary
+portal classes, give seven explicit `K_7` branch sets.
+
+A Hall reduction followed by Xie's two--three linkage theorem closes this
+construction whenever the corresponding five-terminal completion is
+six-connected.  Failure gives an actual order-seven separator, the existing
+strict order-eight full-neighbourhood descent, or a connected proper set
+`C subset E` with `|N_G(C)|>=9` and an operation-specific outer boundary
+partition different from the fixed inner partition.  Completion order at
+most six is not a separate case: the whole part `E` has exact boundary
+
+\[
+             N_G(E)=(S-\{e\})\mathbin{\dot\cup}(N_G(E)\cap D),
+\]
+
+so it yields the same strict order-eight descent or positive-excess response
+obstruction.  The order-three portal classification is sharp: all static
+layouts but one endpoint-reversal pattern give explicit `K_7` models,
+whereas an exact finite example shows that the endpoint reversal, all three
+Kempe paths and two `D`-side contacts can coexist without a `K_7` minor when
+seven-connectivity and the rejected proper-minor response are omitted.
+
+Thus the remaining constructive issue is no longer the existence of two
+connected parts or of an unlabelled two--three linkage.  It is to use the
+incompatible proper-minor boundary responses at the positive-excess side to
+obtain a label-preserving split, a common complete boundary partition, or a
+strict selected-response descent.  Ordinary uncrossing of symmetric low
+cuts is insufficient without that colouring data.
+
 Within the three-component branch, the selected component may now be
 assumed singleton or three-connected: induced-path overlap, cutvertices,
 and the complete two-lobe two-cut normal form have been eliminated or
