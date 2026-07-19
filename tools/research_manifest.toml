@@ -3217,15 +3217,15 @@ does_not_prove = ["a counterexample under K7-minor exclusion and minor-minimalit
 
 [[claims]]
 id = "hc7.barrier.same_branch_two_critical_edges"
-title = "Two same-branch-set critical edges do not allocate first-hit labels"
+title = "Shared-portal critical edges do not allocate first-hit labels"
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md"
 active = true
 audit = "barriers/hc7_same_bag_two_critical_edges_exact7_barrier_audit.md"
-expected_source_sha256 = "75993b8655219126151c0b985388d766a9b4efb95b966a82ea745d22a1611753"
+expected_source_sha256 = "aa4e557365cc35621753d8df9f630ca2703d6a0b4da67dd803db834e7529cc28"
 scope = "a seven-connected seven-chromatic exact-seven host containing K7 and not minor-minimal"
-refutes = ["same-branch-set operation-specific responses alone allocate five distinct first-hit labels"]
+refutes = ["shared-portal operation-specific responses, even with distinct outer model labels, alone allocate five distinct first-hit labels"]
 does_not_prove = ["a counterexample under K7-minor exclusion and minor-minimality", "a counterexample to HC7"]
 
 [[claims]]

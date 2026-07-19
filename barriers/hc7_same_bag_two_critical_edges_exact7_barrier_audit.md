@@ -11,12 +11,9 @@ This is a separate internal mathematical audit, not external peer review.
 ## Exact revisions audited
 
 ```text
-75993b8655219126151c0b985388d766a9b4efb95b966a82ea745d22a1611753  barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md
-0f68a6c58f0c426c407a9dc510bc9c63369c399686bc35d42501fe3cc39a7ebd  barriers/hc7_same_bag_two_critical_edges_exact7_barrier_verify.py
+aa4e557365cc35621753d8df9f630ca2703d6a0b4da67dd803db834e7529cc28  barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md
+036f43ff06b787a611376e6926297fa9a177227a874413382a02f6a1bba8d85a  barriers/hc7_same_bag_two_critical_edges_exact7_barrier_verify.py
 ```
-
-The source change after the mathematical audit is status-only: it replaces
-"audit pending" with a link to this GREEN audit.
 
 The verifier imports the adjacent base construction from
 `hc7_joint_pair_first_hit_hall_barrier_verify.py`.  I inspected that
@@ -69,6 +66,14 @@ The other edges `vpA,vpB` preserve the `R-U` adjacency after deleting either
 or both selected edges, so this is genuinely a jointly persistent labelled
 `K_7`-minus-one-edge model.
 
+The verifier separately checks the second displayed model.  Its bags are
+connected, disjoint and spanning, and its unique missing adjacency is again
+`Y1,Y2`.  In this model `va` joins `R` to `A`, while `vb` joins `R` to the
+distinct label `B`; `vpA` and `vpB` retain the respective model adjacencies
+after the common deletion.  Thus the same graph verifies both the
+same-outer-label and distinct-outer-label formulations claimed by the
+source.
+
 ## 3. The two root-edge responses and their exact trace
 
 The assignments `phi,psi` are checked on the complete deletion graphs, not
@@ -93,6 +98,31 @@ extends this trace through the singleton closed shore.  The opposite closed
 shore is the old graph and contains the displayed `K_7`, so no six-colouring
 of it—and therefore no extension of this trace—exists.
 
+There are no additional endpoint signatures or boundary partitions hidden
+by the two selected responses.  After fixing distinct colours on the
+`K_6`
+
+```text
+a b c1 c2 c3 c4,
+```
+
+the verifier exhausts every assignment of the remaining vertices.  Fixing
+this clique loses only the global permutation of the six colour names, so
+the search covers every six-colouring of the common deletion.  It returns
+exactly six normalized colourings: three of signature `EP` and three of
+signature `PE`.  All six induce the same complete equality partition
+
+```text
+{pA,pB,p1,p2,p3} | {c2} | {c3}.
+```
+
+The absence of `EE` and `PP` also follows directly.  The displayed `K_6`
+uses all six colours, while `v` is adjacent to its four `c` vertices and
+nonadjacent to `a,b`, so `v` receives exactly one of the colours on `a,b`.
+Under `phi`, the colour-zero/colour-two component containing `v` is the
+singleton `{v}`; switching it produces `psi`.  This is the claimed
+one-step Kempe transition.
+
 ## 4. Hall failure and the two further selected-trace probes
 
 Under `phi`, the root `v` is a singleton branch set and has colour zero.
@@ -107,6 +137,10 @@ subfamily therefore has only two possible first-hit labels, which violates
 Hall's condition.  Since the root branch set is a singleton, these support
 vertices are literal first hits; no hidden traversal inside the root bag is
 being suppressed.
+
+For the second branch-set model, all three colours have the sole first-hit
+label `C`.  Hence the Hall failure persists—and is stronger—even though
+the two selected response edges enter the distinct labels `A,B`.
 
 Deleting the internal edge `c3c4` admits the displayed six-colouring (4.2),
 whose two ends are equal and which agrees literally with `phi` on the
@@ -145,7 +179,7 @@ python3 barriers/hc7_same_bag_two_critical_edges_exact7_barrier_verify.py
 at the audited revisions prints exactly
 
 ```text
-GREEN same-bag exact-seven two-edge barrier: kappa=7, chi=7, shared trace, internal/root responses, Hall failure, explicit K7
+GREEN shared-portal exact-seven two-edge barrier: kappa=7, chi=7, same/distinct outer labels, shared trace, internal/root responses, Hall failure, explicit K7
 ```
 
 No unresolved gap remains within the stated barrier scope.

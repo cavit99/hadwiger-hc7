@@ -59,7 +59,7 @@ Immediate barriers:
 - [static first-hit colours need not allocate distinct model labels](../barriers/hc7_joint_pair_first_hit_hall_barrier.md)
 - [maximum first-hit rank does not resolve a static multi-owner split](../barriers/hc7_multi_owner_static_first_hit_barrier.md)
 - [a fixed response can rotate between repeated contacts](../barriers/hc7_fixed_trace_edge_rotation_barrier.md)
-- [two same-branch-set critical edges do not allocate first-hit labels](../barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md)
+- [shared-portal critical-edge responses do not allocate first-hit labels](../barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md)
 - [a forced bichromatic path need not augment two boundary-full subgraphs](../barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier.md)
 - [three full connected subgraphs plus one missing two boundary vertices do not force a `K_7` minor](../barriers/hc7_order8_three_full_one_defect2_quotient_barrier.md)
 - [boundary-local operations do not synchronize an exact-seven interface](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)

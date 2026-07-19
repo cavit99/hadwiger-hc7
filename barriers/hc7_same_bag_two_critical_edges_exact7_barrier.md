@@ -28,8 +28,10 @@ proper-minor criticality are omitted.
 
 The example below has neither conclusion.  It strengthens the adjacent
 example in the existing joint-persistence barrier in two ways: the two
-critical edges join the same pair of model branch sets, and their common
-response is located at a literal order-seven separation.
+critical edges can be viewed either as joining the same pair of model
+branch sets or as leaving one singleton branch set for two different named
+branch sets, and their common response is located at a literal order-seven
+separation.
 
 ## 2. Construction
 
@@ -85,6 +87,29 @@ They are connected, disjoint, spanning and pairwise adjacent except for
 `Y1,Y2`.  The same model remains after deleting either or both of `va,vb`:
 both edges join `R` to `U`, and `vpA,vpB` retain that model adjacency.
 
+### 2.1 A second model with two distinct outer labels
+
+The same host and the same response edges also admit the spanning model
+
+\[
+\begin{array}{c|l}
+R&\{v\}\\
+A&\{a,pA\}\\
+B&\{b,pB\}\\
+C&\{c1,c2,c3,c4,ell\}\\
+Y_1&\{p1,r1\}\\
+Y_2&\{p2,r2\}\\
+Y_3&\{p3,r3\}.
+\end{array}                                           \tag{2.4}
+\]
+
+Again the seven branch sets are connected, disjoint and spanning, and their
+only missing adjacency is `Y1-Y2`.  In this model `va` joins `R` to `A`
+and `vb` joins `R` to the different label `B`.  Deleting both edges still
+preserves these two model adjacencies through `vpA` and `vpB`, respectively.
+Thus merely requiring the two incident response edges to have distinct
+outer branch-set labels does not repair the first-hit allocation.
+
 ## 3. Exact-seven interface and critical responses
 
 The old fifteen-vertex graph is eight-connected.  Adding `ell` with the
@@ -127,6 +152,34 @@ through the singleton closed shore by giving `ell` colour five.  It cannot
 extend through the opposite original closed shore: that shore is the old
 graph and contains the `K_7` in (3.2).
 
+The common deletion has exactly the two endpoint signatures
+
+\[
+       (\mathsf{equal},\mathsf{proper}),\qquad
+       (\mathsf{proper},\mathsf{equal}).              \tag{3.4}
+\]
+
+Indeed `a,b,c1,c2,c3,c4` induce `K_6`, while `v` is adjacent to the four
+`c` vertices and nonadjacent to `a,b`.  Every six-colouring therefore gives
+`v` the colour of exactly one of `a,b`.  In particular neither
+`(equal,equal)` nor `(proper,proper)` occurs.  Moreover, under `phi` the
+component containing `v` in the subgraph induced by colours zero and two is
+the singleton `\{v\}`.  Interchanging those colours on that component gives
+`psi`.  Thus (3.4) is joined by an actual one-step Kempe transition at the
+shared portal.
+
+The deterministic verifier also exhausts all six-colourings after fixing
+the colours of the displayed `K_6`.  There are six normalized colourings,
+three of each signature in (3.4), and all six induce the same equality
+partition
+
+\[
+ \{pA,pB,p1,p2,p3\}\mid\{c2\}\mid\{c3\}             \tag{3.5}
+\]
+
+on the literal boundary.  Thus the common trace is universal for this
+common-deletion host, not merely shared by the two selected responses.
+
 ## 4. Same-bag first-hit Hall failure
 
 Use `phi` and the singleton root `v`.  Among its five alternate colours,
@@ -140,6 +193,12 @@ the supports in the named branch sets satisfy
 Indeed the relevant root neighbours are `c2,c3,c4`.  Thus the three
 colours `3,4,5` have only two possible first-hit labels.  Hall's condition
 fails, so no five-label first-hit allocation exists.
+
+For the distinct-label model (2.4), the same failure is stronger still:
+the supports of colours `3,4,5` are all the singleton set `\{C\}`.  Hence
+three saturated colours have only one available first-hit branch-set label,
+even though the two response edges themselves enter the distinct labels
+`A,B`.
 
 There is also a further critical response inside the repeated first-hit
 branch set `C2`.  Deleting the edge `c3c4` admits the six-colouring
@@ -204,11 +263,12 @@ active `HC_7` branch.
 The example therefore does not refute a theorem whose alternatives include
 an explicit `K_7`-minor model, nor a theorem which uses every proper-minor
 response of a hypothetical counterexample.  Its purpose is sharper: the
-two selected critical edges, same-model-bag geometry, exact-seven boundary,
-common labelled trace and seven-connectivity still do not produce the
-palette-to-label allocation.  A positive theorem has to spend global
-`K_7`-minor exclusion and use a further proper-minor response through
-literal model geometry, rather than merely invoke its existence.
+two selected critical edges (whether assigned the same or distinct outer
+model labels), exact-seven boundary, common labelled trace and
+seven-connectivity still do not produce the palette-to-label allocation.  A
+positive theorem has to spend global `K_7`-minor exclusion and use a further
+proper-minor response through literal model geometry, rather than merely
+invoke its existence.
 
 ## 6. Verification
 
@@ -221,5 +281,5 @@ python3 barriers/hc7_same_bag_two_critical_edges_exact7_barrier_verify.py
 Expected output:
 
 ```text
-GREEN same-bag exact-seven two-edge barrier: kappa=7, chi=7, shared trace, internal/root responses, Hall failure, explicit K7
+GREEN shared-portal exact-seven two-edge barrier: kappa=7, chi=7, same/distinct outer labels, shared trace, internal/root responses, Hall failure, explicit K7
 ```

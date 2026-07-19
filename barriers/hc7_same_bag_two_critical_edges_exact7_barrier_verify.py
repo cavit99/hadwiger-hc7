@@ -8,6 +8,7 @@ order-seven separation without changing the two critical edge responses.
 
 from __future__ import annotations
 
+from collections import Counter
 from itertools import combinations
 
 from hc7_joint_pair_first_hit_hall_barrier_verify import (
@@ -116,6 +117,52 @@ def support_by_colour(
     }
 
 
+def normalized_common_deletion_profiles(
+    graph: Graph, boundary: set[str]
+) -> Counter[tuple[str, tuple[tuple[str, ...], ...]]]:
+    """Enumerate all six-colourings after fixing the displayed K6 palette."""
+
+    fixed_order = ("a", "b", "c1", "c2", "c3", "c4")
+    assigned = {vertex: colour for colour, vertex in enumerate(fixed_order)}
+    adjacency = {vertex: graph.neighbours(vertex) for vertex in graph.vertices}
+    profiles: Counter[tuple[str, tuple[tuple[str, ...], ...]]] = Counter()
+
+    def search() -> None:
+        if len(assigned) == len(graph.vertices):
+            signature = (
+                ("E" if assigned["v"] == assigned["a"] else "P")
+                + ("E" if assigned["v"] == assigned["b"] else "P")
+            )
+            blocks: dict[int, list[str]] = {}
+            for vertex in sorted(boundary):
+                blocks.setdefault(assigned[vertex], []).append(vertex)
+            partition = tuple(sorted(tuple(block) for block in blocks.values()))
+            profiles[(signature, partition)] += 1
+            return
+
+        remaining = graph.vertices - set(assigned)
+        vertex = max(
+            remaining,
+            key=lambda item: (
+                len({assigned[x] for x in adjacency[item] if x in assigned}),
+                len(adjacency[item]),
+                item,
+            ),
+        )
+        unavailable = {
+            assigned[x] for x in adjacency[vertex] if x in assigned
+        }
+        for colour in range(6):
+            if colour in unavailable:
+                continue
+            assigned[vertex] = colour
+            search()
+            del assigned[vertex]
+
+    search()
+    return profiles
+
+
 def has_system_of_distinct_representatives(
     supports: dict[int, set[str]],
 ) -> bool:
@@ -153,6 +200,15 @@ def main() -> None:
         "Y2": {"p2", "r2"},
         "Y3": {"p3", "r3"},
     }
+    distinct_label_bags = {
+        "R": {"v"},
+        "A": {"a", "pA"},
+        "B": {"b", "pB"},
+        "C": {"c1", "c2", "c3", "c4", "ell"},
+        "Y1": {"p1", "r1"},
+        "Y2": {"p2", "r2"},
+        "Y3": {"p3", "r3"},
+    }
 
     verify_kappa_seven(graph, boundary)
     require(graph.neighbours("ell") == boundary, "wrong new neighbourhood")
@@ -170,6 +226,15 @@ def main() -> None:
         model_missing_pairs(common_deletion, bags) == expected_missing,
         "the common deletion does not preserve the model",
     )
+    require(
+        model_missing_pairs(graph, distinct_label_bags) == expected_missing,
+        "wrong distinct-label model",
+    )
+    require(
+        model_missing_pairs(common_deletion, distinct_label_bags)
+        == expected_missing,
+        "the common deletion does not preserve the distinct-label model",
+    )
 
     clique = {"v", "a", "b", "c1", "c2", "c3", "c4"}
     verify_clique(graph, clique)
@@ -181,6 +246,40 @@ def main() -> None:
         proper_colouring(common_deletion, first)
         and proper_colouring(common_deletion, second),
         "bad common-deletion response",
+    )
+    six_core = {"a", "b", "c1", "c2", "c3", "c4"}
+    verify_clique(common_deletion, six_core)
+    require(
+        not common_deletion.has_edge("v", "a")
+        and not common_deletion.has_edge("v", "b"),
+        "selected edges survive in the common deletion",
+    )
+    require(
+        all(common_deletion.has_edge("v", x) for x in {"c1", "c2", "c3", "c4"}),
+        "the shared portal misses a fixed-clique vertex",
+    )
+    alpha_beta_vertices = {
+        vertex for vertex in common_deletion.vertices if first[vertex] in {0, 2}
+    }
+    require(
+        not any(
+            common_deletion.has_edge("v", other)
+            for other in alpha_beta_vertices - {"v"}
+        ),
+        "the response-changing Kempe component is not the singleton portal",
+    )
+    switched = dict(first)
+    switched["v"] = 2
+    require(switched == second, "the singleton interchange does not give PE")
+    boundary_partition = (
+        ("c2",),
+        ("c3",),
+        ("p1", "p2", "p3", "pA", "pB"),
+    )
+    require(
+        normalized_common_deletion_profiles(common_deletion, boundary)
+        == Counter({("EP", boundary_partition): 3, ("PE", boundary_partition): 3}),
+        "unexpected common-deletion signature or boundary language",
     )
     edge_responses = {
         ("v", "a"): first,
@@ -221,6 +320,17 @@ def main() -> None:
     require(
         not has_system_of_distinct_representatives(supports),
         "unexpected first-hit label allocation",
+    )
+    distinct_supports = support_by_colour(
+        graph, "v", first, distinct_label_bags
+    )
+    require(
+        all(distinct_supports[colour] == {"C"} for colour in (3, 4, 5)),
+        "wrong distinct-label first-hit supports",
+    )
+    require(
+        not has_system_of_distinct_representatives(distinct_supports),
+        "unexpected distinct-label first-hit allocation",
     )
 
     # A further proper-minor response exists inside the repeated first-hit
@@ -299,9 +409,9 @@ def main() -> None:
     verify_clique(old_graph, clique)
 
     print(
-        "GREEN same-bag exact-seven two-edge barrier: "
-        "kappa=7, chi=7, shared trace, internal/root responses, Hall "
-        "failure, explicit K7"
+        "GREEN shared-portal exact-seven two-edge barrier: "
+        "kappa=7, chi=7, same/distinct outer labels, shared trace, "
+        "internal/root responses, Hall failure, explicit K7"
     )
 
 
