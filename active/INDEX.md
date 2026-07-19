@@ -84,6 +84,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [reserved-component linkage completion and the exact three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [three-owner component concentration and the two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
 - [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
+- [operation-specific response normal form at the resulting special five-plus-two exact-seven boundary](../results/hc7_special_five_plus_two_exact7_response.md)
 - [operation-coupled colouring responses at a boundary-full order-eight separation](../results/hc7_operation_coupled_order8_response.md)
 - [a label-transversal critical pinch has an exact Hall-deficient opposite-shore residue](../results/hc7_label_transversal_pinch_hall_obstruction.md)
 - [repeated contacts and the exact component-defect change](../results/hc7_repeated_contact_component_defect.md)

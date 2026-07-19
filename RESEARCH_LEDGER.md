@@ -657,6 +657,24 @@ boundary with a proper-minor colouring response and prove one of:
 3. a strict host-level descent preserves the selected response, the five
    inherited labels and the exact order-seven interface.
 
+The special boundary returned by the three-fan reduction now has an audited
+operation-specific normal form.  It is the disjoint union of the five
+surviving order-eight boundary vertices and the two vertices of the failed
+three-fan cut.  Every component off this boundary is adjacent to all seven
+boundary vertices; its full-subgraph packing vector is `(1,1)` or `(1,2)`;
+and the boundary graph is four-colourable.  Deleting an edge from either cut
+vertex into the exposed component produces a partition which is legal on
+the opposite closed shore, rejected on the exposed shore, and has demand
+strictly exceeding the opposite full-subgraph packing number.  Every
+admissible mixed-support system therefore has an explicit Hall-deficient
+block family.  The same critical edge gives a six-ended prescribed-first-
+edge fan, or a five-path packing, or a strictly smaller exact-seven
+separation carrying one common exact colour block.  The fan lies on the
+shore which rejects the transported complete partition, while the full
+connected subgraphs used for reflection lie on the shore where that
+partition is legal; they cannot be combined as one Hall system without a
+new trace-preserving transfer theorem.
+
 The existing exact-block and Hall-reflection theorems apply once the
 returned boundary carries the required operation-specific response; the new
 three-fan reduction by itself does not supply that decoration.  Outside this
@@ -696,6 +714,7 @@ The newly promoted sources are the
 [reserved-component linkage completion and the three-label order-eight normal form](results/hc7_reserved_component_linkage_completion.md),
 [three-owner component concentration and its two-edge response substrate](results/hc7_three_owner_reserved_component_concentration.md),
 [three-owner order-eight reduction to an actual order-seven separation](results/hc7_three_owner_order8_exact7_reduction.md),
+[operation responses at the resulting special five-plus-two exact-seven boundary](results/hc7_special_five_plus_two_exact7_response.md),
 [operation-coupled colouring responses at a boundary-full order-eight separation](results/hc7_operation_coupled_order8_response.md),
 [Hall obstruction at a label-transversal critical pinch](results/hc7_label_transversal_pinch_hall_obstruction.md),
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),

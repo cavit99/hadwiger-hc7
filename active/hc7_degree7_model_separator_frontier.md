@@ -845,6 +845,22 @@ branches, incident or repeated contacts and bounded separators still require
 the corresponding label-faithful operation-specific closure.  No further
 unlabelled path or static boundary partition closes these alternatives.
 
+For this returned boundary, the five surviving vertices of the order-eight
+interface together with the two vertices of the failed three-fan cut form a
+special `5+2` exact-seven normal form.  Every off-boundary component is full,
+the packing vector is `(1,1)` or `(1,2)`, and the induced boundary is
+four-colourable.  A cut-to-shore edge deletion supplies a partition legal on
+the far closed shore and rejected on the near one, with demand above the far
+shore's full-subgraph capacity and a corresponding Hall-deficient block
+family.  The near shore supplies either a six-ended fan, a clean five-path
+packing, or a smaller exact-seven separation with one synchronized block.
+This does not yet reflect the complete partition: the fan and the full
+connected subgraphs occupy opposite orientations.  The live theorem must
+either transfer the selected legal partition together with a complete
+support system, use the fan to construct an explicit labelled `K_7` model,
+or make a strict descent retaining the complete partition and inherited
+labels.
+
 The immediate theorem must close one of the following four literal forks,
 with the first-hit rank providing the primary mechanism.
 
@@ -956,6 +972,7 @@ cannot supply the missing labelled allocation.
 - [reserved-component linkage completion and three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [three-owner component concentration and two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
 - [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
+- [operation-specific normal form at the resulting special five-plus-two exact-seven boundary](../results/hc7_special_five_plus_two_exact7_response.md)
 - [exact completion classification for two connected subgraphs at a near-complete six-branch-set model](../results/hc7_five_contact_completion_classification.md)
 - [endpoint-`K_4` transfer or an actual order-seven separation](../results/hc7_endpoint_k4_transfer_or_order7.md)
 - [distinct-boundary prescribed-spoke transfer](../results/hc7_distinct_boundary_spoke_owner_transfer.md)

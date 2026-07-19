@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "b57c1879bca54749491f53ca7fd366934a2a07868355b801fb241b4e562a6e85"
+expected_source_sha256 = "38ea560029c0abb8637aa75caf3cbde24ae0b739325a32d41bacd5977147952a"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -2796,6 +2796,33 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.special_five_plus_two_exact7_response"
+title = "Operation responses at the special five-plus-two exact-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_special_five_plus_two_exact7_response.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_special_five_plus_two_exact7_response_audit.md"
+expected_source_sha256 = "abcfb4a16616bfa5260826c798589afc93aa592f0f73068ea2bf7a95f8e34f19"
+scope = "the exact order-seven separation produced by the concentrated three-owner order-eight three-fan reduction"
+separator_order = "the initial boundary and the descent outcome both have order exactly seven"
+colour_compatibility = "the operated-edge partition is legal on the opposite shore and rejected on the exposed shore; the strict descent synchronizes one exact block but not the complete partition"
+label_fidelity = "the boundary is the five surviving order-eight representatives together with the two literal vertices of the failed three-fan cut"
+conclusions = [
+  "every off-boundary component is boundary-full and the packing vector is 1,1 or 1,2",
+  "the induced seven-vertex boundary is four-colourable",
+  "every cut-to-shore edge deletion returns a partition whose demand exceeds the opposite full-subgraph packing number and whose admissible mixed supports have a Hall-deficient block family",
+  "the same critical edge gives a six-ended fan, a clean five-path packing, or a smaller exact-seven separation carrying one common exact colour block",
+]
+does_not_prove = [
+  "a common complete equality partition on the two closed shores",
+  "allocation of the fan paths to inherited minor-model labels",
+  "a recursive descent preserving the complete partition",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.transported_partition_hall_reflection"
 title = "Hall reflection of a boundary partition through mixed connected supports"
 kind = "theorem"
@@ -4010,7 +4037,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "b57c1879bca54749491f53ca7fd366934a2a07868355b801fb241b4e562a6e85"
+evidence_sha256 = "38ea560029c0abb8637aa75caf3cbde24ae0b739325a32d41bacd5977147952a"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4032,7 +4059,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "b57c1879bca54749491f53ca7fd366934a2a07868355b801fb241b4e562a6e85"
+evidence_sha256 = "38ea560029c0abb8637aa75caf3cbde24ae0b739325a32d41bacd5977147952a"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4043,7 +4070,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 1068
 evidence_end_line = 1095
-evidence_sha256 = "bb71519583170dc29b1a561c81cfcd5e0df004a6d70c56835b7eca0e9b0c4410"
+evidence_sha256 = "6e1f00c71d7cda4fcc0f04a15304bbe90413aa576d8435784b360de45a88e368"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4474,6 +4501,11 @@ target = "hc7.operation_coupled_exact7_response"
 kind = "uses"
 
 [[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.special_five_plus_two_exact7_response"
+kind = "uses"
+
+[[relations]]
 source = "hc7.three_owner_component_concentration"
 target = "hc7.reserved_component_linkage_completion"
 kind = "uses"
@@ -4566,6 +4598,41 @@ kind = "uses"
 [[relations]]
 source = "hc7.operation_coupled_exact7_response"
 target = "hc7.transported_partition_hall_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_five_plus_two_exact7_response"
+target = "hc7.three_owner_order8_exact7_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_five_plus_two_exact7_response"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_five_plus_two_exact7_response"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_five_plus_two_exact7_response"
+target = "hc7.exact7_boundary_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_five_plus_two_exact7_response"
+target = "hc7.cycle_boundary_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_five_plus_two_exact7_response"
+target = "hc7.transported_partition_hall_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_five_plus_two_exact7_response"
+target = "hc7.exact7_critical_edge_fan_descent"
 kind = "uses"
 
 [[verifiers]]
