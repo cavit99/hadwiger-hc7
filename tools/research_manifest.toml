@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "453f8203c63a056c465dbc6a15b6c9fb244785f192ea0bff7231251085886c21"
+expected_source_sha256 = "6f64e451d6b6302676f3ff4abdad5d58accdea22b519306f41435dd7685fe4ac"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -43,6 +43,7 @@ allowed_exits = [
 does_not_prove = [
   "HC7",
   "elimination of the singleton nonbipartite exterior",
+  "strictness of the exact order-seven component returned by a minimum positive-excess separator",
   "label allocation or colour synchronization in the boundary-full two-/three-component minimum positive-excess interface",
   "closure of the shore-filling positive-list-excess obstruction or the one-block K4/K5 all-tight residue",
   "the degree-eight and degree-nine bounded-interface cases",
@@ -3332,7 +3333,7 @@ does_not_prove = ["an order-seven reduction", "a common boundary colouring", "HC
 
 [[claims]]
 id = "hc7.minimum_positive_separator_normal_form"
-title = "A minimum positive-excess separator has two or three boundary-full components"
+title = "A minimum positive-excess separator gives an exact-seven response or two or three boundary-full components"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_minimum_positive_separator_normal_form.md"
@@ -3341,8 +3342,8 @@ active = true
 audit = "results/hc7_minimum_positive_separator_normal_form_audit.md"
 expected_source_sha256 = "4b6a4d7a434cb255229fcf4fe12e1393d7b0dadad27985e8528b0535d4cf64ba"
 scope = "a minimum-order literal full-neighbourhood separator of order at least eight"
-conclusions = ["an exact order-seven generic restart", "or exactly two or three components each adjacent to every boundary vertex"]
-does_not_prove = ["that the boundary has order eight", "a common boundary colouring", "HC7"]
+conclusions = ["an exact order-seven generic response interface, not known to be smaller than an earlier selected shore", "or exactly two or three components each adjacent to every boundary vertex"]
+does_not_prove = ["strictness of the exact order-seven returned shore", "that the boundary has order eight", "a common boundary colouring", "HC7"]
 
 [[claims]]
 id = "hc7.order8_clean_fan_or_generic_restart"
@@ -3361,7 +3362,7 @@ does_not_prove = ["five distinct first-hit branch-set labels", "a compatible sep
 
 [[claims]]
 id = "hc7.order8_common_label_paired_fan"
-title = "Common-label paired paths at a boundary-full order-eight separation"
+title = "Common-label paired paths at a non-singleton boundary-full order-eight component"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_order8_common_label_paired_fan.md"
@@ -3369,10 +3370,10 @@ source_heading = "Theorem 3.1 (paired-source alternative)"
 active = true
 audit = "results/hc7_order8_common_label_paired_fan_audit.md"
 expected_source_sha256 = "560dced4ba8ee95833e316978a7d8352f92670261194d68d3b203551cf1e09b3"
-scope = "a boundary-full order-eight interface carrying the inherited five common near-clique labels"
+scope = "a non-singleton boundary-full component behind an order-eight boundary carrying the inherited five common near-clique labels"
 label_fidelity = "two selected boundary edges lead to different common labels; fan paths keep literal first hits"
-conclusions = ["a paired-source five-fan", "or a strict exact-seven response descent preserving the selected labels"]
-does_not_prove = ["an explicit K7 minor", "a common complete equality partition", "HC7"]
+conclusions = ["a paired-source five-fan", "or an exact-seven response descent strict relative to that selected component and preserving the selected labels"]
+does_not_prove = ["the singleton component case", "that every order-eight component lies strictly inside the chosen minimum generic shore", "an explicit K7 minor", "a common complete equality partition", "HC7"]
 
 [[claims]]
 id = "hc7.paired_source_path_transfer"
@@ -3412,8 +3413,8 @@ source_heading = "Theorem 2.1 (two full subgraphs and one defect-two subgraph)"
 active = true
 audit = "results/hc7_exact7_all_residual_defect2_carrier_audit.md"
 expected_source_sha256 = "7957de3aeb635a9f48e1e1668e34f43abbba15cac270c0f716821b2925af3fd8"
-scope = "all frozen 129 adaptive (1,2) residual boundaries and every defect set of order at most two"
-colour_compatibility = "terminal once the two full connected subgraphs and the defect-two connected subgraph exist"
+scope = "the computer-assisted 129-boundary/29-defect certificate and its host lift across an actual order-seven separation, with two full plus one defect-two connected subgraph on one shore and a boundary-full connected subgraph on the other"
+colour_compatibility = "terminal under those two-shore support hypotheses"
 does_not_prove = ["existence of the third connected subgraph", "HC7"]
 
 [[claims]]
@@ -3426,7 +3427,7 @@ source_heading = "Theorem 2.1 (all multiblock cores close)"
 active = true
 audit = "results/hc7_all_tight_block_path_internal_segment_closure_audit.md"
 expected_source_sha256 = "28825bfc646bc0ff805b117c90c1ef4f21eee7332a1af676e249960cbc7dc7ba"
-scope = "the all-tight Gallai-tree branch of the surviving adaptive exact-seven (1,2) cell"
+scope = "the all-tight Gallai-tree branch of the surviving adaptive exact-seven (1,2) case"
 conclusions = ["a six-colouring", "or an explicit K7-minor model"]
 does_not_prove = ["the one-block K4 or K5 cases", "positive total list-degree excess", "HC7"]
 
@@ -3486,6 +3487,102 @@ refutes = ["the paired fan and three allowed response signatures alone force a K
 does_not_prove = ["a counterexample under the no-proper/proper criticality law", "a counterexample to HC7"]
 
 [[claims]]
+id = "hc7.order8_all_boundary_source_fan"
+title = "All-boundary fan or exact order-seven separation at an eight-vertex boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_all_boundary_source_fan.md"
+active = true
+audit = "results/hc7_order8_all_boundary_source_fan_audit.md"
+expected_source_sha256 = "6b474d1ffdfd622b9993ba4c879b2b777079e9c289fd4c9855bc838997264efc"
+scope = "a seven-connected host, an eight-vertex separator, a boundary-full component with a nonempty opposite side, and any nonempty connected source subgraph inside that component"
+separator_order = "failure of the eight-fan gives the full neighbourhood of a nonempty proper connected subset, of order exactly seven"
+conclusions = [
+  "eight paths from the connected source to all eight literal boundary vertices, pairwise disjoint outside the source and preserving prescribed distinct source-boundary edges",
+  "or an actual order-seven separation",
+  "when the source is a path, an exact disjoint-interval criterion for dividing rooted limbs between two disjoint connected subgraphs and extending them to a connected adjacent bipartition of the component",
+]
+does_not_prove = [
+  "containment of boundary terminals in inherited branch sets beyond their literal vertices",
+  "the rooted connector paths required by a labelled near-K7 model transfer",
+  "the disjoint-interval condition",
+  "a common boundary equality partition",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_six_label_donor_fan_reduction"
+title = "Six-label fan reduction for a donor-contained order-eight component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_six_label_donor_fan_reduction.md"
+active = true
+audit = "results/hc7_order8_six_label_donor_fan_reduction_audit.md"
+expected_source_sha256 = "c12d8b83a64b8ff7d6e02d55a6eb21b9a5ef513c2036997318be6c7083d725f8"
+scope = "an extremal spanning labelled K7-minus-one-edge model in which a boundary-full order-eight component lies wholly in one donor branch set, the retained donor is connected, and the eight boundary vertices have the stated six outside labels and two retained-donor labels"
+strict_parameter = "maximize the relaxed literal first-hit rank, then minimize the donor branch-set order"
+label_fidelity = "the fan arms end at six literal vertices in six named outside branch sets; the model transfer preserves prescribed roots, selected boundary partition, fixed response subgraph and maximum relaxed first-hit rank"
+separator_order = "a non-singleton donor-contained component gives an actual order-seven full-neighbourhood separation; otherwise it is one degree-eight vertex whose neighbourhood is the order-eight boundary"
+conclusions = [
+  "an actual order-seven separation inside the selected component",
+  "or the selected component is a singleton of degree eight",
+  "for two incident selected operation edges, the separator outcome preserves both one-edge responses and their labels; a simultaneous response restricts properly to the opposite shore only when the two boundary endpoints are nonadjacent",
+]
+does_not_prove = [
+  "the donor-containment or connected-retained-donor hypotheses for every order-eight component",
+  "a common equality partition on the returned order-seven separation",
+  "elimination of the degree-eight singleton",
+  "proper opposite-shore restriction of a simultaneous response when its two boundary endpoints are adjacent",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.three_edge_owner_saturation_elimination"
+title = "Three opposite-shore edge probes eliminate simultaneous five-chromatic saturation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_three_edge_owner_saturation_elimination.md"
+active = true
+audit = "results/hc7_three_edge_owner_saturation_elimination_audit.md"
+expected_source_sha256 = "779b6ce18ae3ba9761648ff7cacdbb33b62510cee6b550e502f379468da0fee1"
+scope = "the concentrated three-owner configuration with a suitable opposite-shore edge anticomplete to the selected owner-contact endpoints"
+strict_parameter = "maximize the relaxed literal first-hit rank, then minimize the donor branch-set order"
+label_fidelity = "the five-chromatic endpoint-K4 alternatives supply literal owner contacts; the resulting donor transfer preserves roots, selected boundary partition, response subgraph, inherited labels and maximum relaxed first-hit rank"
+conclusions = [
+  "the three owner-pair deletion hosts cannot all be five-chromatic",
+  "for some owner pair the four contact-edge endpoints do not induce K4 and the common three-edge deletion host is six-chromatic",
+  "that connected deletion host has a spanning K6-minor model",
+]
+does_not_prove = [
+  "existence of the required opposite-shore edge in every concentrated three-owner configuration",
+  "alignment of the regenerated K6-minor model with the inherited five branch-set labels",
+  "a common boundary equality partition",
+  "a K7-minor model from the surviving six-chromatic probe",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.four_boundary_full_subgraphs_triangle_completion"
+title = "Four boundary-full connected subgraphs and a boundary triangle give a K7 minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_four_boundary_full_subgraphs_triangle_completion.md"
+active = true
+audit = "results/hc7_four_boundary_full_subgraphs_triangle_completion_audit.md"
+expected_source_sha256 = "bd0f4cd57a8973918380fb2cfc799b6c9120b8b00cacefb7bf23b81dba6ee486"
+scope = "four pairwise disjoint connected subgraphs outside a vertex set, each adjacent to every boundary vertex, where the boundary contains a triangle and three further vertices"
+conclusions = [
+  "an explicit K7-minor model",
+  "in every one of the 82 surviving three-component order-eight boundary types, each boundary-full component has boundary-full connected-subgraph packing number exactly one",
+]
+does_not_prove = [
+  "a split into a connected subgraph missing at most two boundary vertices",
+  "production of an actual order-seven separation",
+  "a common boundary equality partition",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.exact7_crossing_disjoint_languages"
 title = "Same-shore edge responses do not synchronize two six-colourable closed shores"
 kind = "barrier"
@@ -3497,6 +3594,79 @@ expected_source_sha256 = "5698af94146e423bb62945ed2aec904cbff4f15f8eac4ba23811c2
 scope = "a seven-connected seven-chromatic exact-seven (2,1) host with EE/EP/PE and no PP, but containing K7 and a proper seven-chromatic subgraph"
 refutes = ["the response profile, packing vector, common demand-three partition and separate six-colourability of both closed shores force a common partition"]
 does_not_prove = ["a counterexample under K7-minor exclusion and full minor-criticality", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.order8_singleton_label_obstruction"
+title = "Label obstruction at the degree-eight singleton outcome"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_singleton_label_obstruction.md"
+active = true
+audit = "results/hc7_order8_singleton_label_obstruction_audit.md"
+expected_source_sha256 = "2dd29f27ea1dce603e162747e968d33e9c81e5e4d21678ab86cfef9dcafc614a"
+scope = "the degree-eight singleton outcome of the extremal six-label donor-fan reduction with the retained donor connected; only the boundary-minor exclusion additionally assumes an opposite boundary-full component"
+strict_parameter = "maximize the relaxed literal first-hit rank, then minimize the donor branch-set order"
+label_fidelity = "the singleton and all eight neighbours retain their literal membership in the named donor and six foreign branch sets"
+conclusions = [
+  "the retained donor loses adjacency to at least two foreign branch-set labels",
+  "at least one lost label is X or Y, the ends of the only possible missing branch-set adjacency",
+  "under three-owner provenance, only two lost-label patterns remain up to the stated symmetries",
+  "if another boundary-full component exists, deleting any one boundary vertex leaves no K5-minor in the boundary graph",
+]
+does_not_prove = [
+  "elimination of the degree-eight singleton",
+  "the three-owner provenance or exactly three lost labels in every singleton outcome",
+  "a repartition of the opposite component preserving all six foreign labels",
+  "an order-seven separation with a common equality partition",
+  "the cyclic contact-allocation hypotheses",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_overlapping_interval_normal_form"
+title = "Overlapping boundary-demand intervals in an induced path component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_overlapping_interval_normal_form.md"
+active = true
+audit = "results/hc7_order8_overlapping_interval_normal_form_audit.md"
+expected_source_sha256 = "c973d105dd9441840de98bf9ebf0c7a362a76f4980400ea3a9e403bd5b116560"
+scope = "a boundary-full component behind an eight-vertex boundary which is itself an induced path, with two disjoint two-vertex boundary demand sets rooted at opposite path ends"
+separator_order = "strictly reversed demand intervals give exact order-seven tails or middle subpath when the corresponding literal neighbourhood has order seven"
+label_fidelity = "the strict-reversal case exposes two independent literal contact edges and four literal roots; the resulting rooted K4 or regenerated K6 model remains unaligned with inherited branch-set labels"
+conclusions = [
+  "an exact necessary and sufficient interval criterion for two disjoint rooted connected subgraphs in the induced path component",
+  "strict reversal gives opposite one-defect tails, a highly exposed middle subpath and a canonical independent-edge placement-or-rooted-K4 fork",
+  "a shared portal gives a six-chromatic common two-edge deletion host with a spanning but unlabelled K6-minor model and the two exclusive endpoint signatures",
+]
+does_not_prove = [
+  "that an arbitrary boundary-full component equals the chosen fan spine",
+  "rerouting of overlapping intervals when the component has off-spine vertices",
+  "alignment of the rooted K4 or regenerated K6 model with the five inherited common branch-set labels",
+  "a common equality partition on any returned order-seven separation",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.order8_three_full_one_defect2_quotient"
+title = "Three boundary-full connected subgraphs and one defect-two subgraph do not force a K7 minor"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order8_three_full_one_defect2_quotient_barrier.md"
+active = true
+audit = "barriers/hc7_order8_three_full_one_defect2_quotient_barrier_audit.md"
+expected_source_sha256 = "6b8ab1c914e59db6336facba13aa52853544321c8c3a53b542ff79eaaa145467"
+scope = "a twelve-vertex order-eight quotient with three boundary-full singleton subgraphs and a fourth singleton subgraph missing exactly two boundary vertices"
+refutes = [
+  "three boundary-full connected subgraphs plus one connected subgraph missing at most two boundary vertices unconditionally force a K7 minor at the raw order-eight boundary",
+]
+does_not_prove = [
+  "a counterexample in a seven-connected host",
+  "a counterexample under contraction-critical proper-minor responses",
+  "a counterexample with the inherited branch-set labels",
+  "a counterexample after first producing an actual order-seven separation",
+  "a counterexample to HC7",
+]
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3545,6 +3715,42 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_all_boundary_source_fan"
+kind = "uses"
+note = "This supplies the literal all-boundary fan or exact order-seven return in the boundary-full order-eight branch."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_six_label_donor_fan_reduction"
+kind = "uses"
+note = "This closes the donor-contained non-singleton order-eight component up to an exact order-seven return and isolates the degree-eight singleton residue."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.three_edge_owner_saturation_elimination"
+kind = "uses"
+note = "This eliminates the simultaneous five-chromatic three-owner probe branch and identifies the remaining unlabelled six-chromatic probe."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.four_boundary_full_subgraphs_triangle_completion"
+kind = "uses"
+note = "This is a guardrail: at the raw three-component order-eight boundary, a fourth boundary-full connected subgraph is already terminal, so defect-two reflection must be entered only after producing an actual order-seven boundary."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_singleton_label_obstruction"
+kind = "uses"
+note = "This normalizes, but does not eliminate, the degree-eight singleton left by the donor-contained order-eight reduction."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_overlapping_interval_normal_form"
+kind = "uses"
+note = "This gives the exact host-level obstruction modes when the boundary-full order-eight component itself is an induced path."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.labelled_first_hit_rado"
 kind = "uses"
 
@@ -3557,6 +3763,145 @@ kind = "guarded_by"
 source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.exact7_crossing_disjoint_languages"
 kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order8_three_full_one_defect2_quotient"
+kind = "guarded_by"
+note = "This prevents replacing the actual seven-boundary hypothesis of defect-two reflection by raw order-eight contact-set data alone."
+
+[[relations]]
+source = "hc7.minimum_generic_exact7_relative_connectivity"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_six_label_donor_fan_reduction"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_six_label_donor_fan_reduction"
+target = "hc7.reserved_component_linkage_completion"
+kind = "related_to"
+note = "The reserved-component normal form supplies the donor-containment geometry in one active application, but it is not a hypothesis-free derivation of the donor-fan theorem's setting."
+
+[[relations]]
+source = "hc7.order8_singleton_label_obstruction"
+target = "hc7.order8_six_label_donor_fan_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_singleton_label_obstruction"
+target = "hc7.reserved_component_linkage_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_overlapping_interval_normal_form"
+target = "hc7.two_edge_opposite_shore_or_rooted_k4"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_overlapping_interval_normal_form"
+target = "hc7.barrier.common_label_paired_fan_k7"
+kind = "guarded_by"
+note = "The barrier shows that an all-boundary fan with a path spine does not extend this theorem beyond the hypothesis that the whole component is the induced path."
+
+[[relations]]
+source = "hc7.three_edge_owner_saturation_elimination"
+target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_edge_owner_saturation_elimination"
+target = "hc7.cross_shore_critical_edge_linkage"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_edge_owner_saturation_elimination"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.four_boundary_full_subgraphs_triangle_completion"
+target = "hc7.order8_three_component_boundary_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.four_boundary_full_subgraphs_triangle_completion"
+target = "hc7.exact7_all_residual_defect2_carrier"
+kind = "related_to"
+note = "The four-full theorem explains why the defect-two reflection theorem cannot be invoked by treating the raw order-eight boundary as its seven-vertex boundary."
+
+[[relations]]
+source = "hc7.minimum_positive_separator_normal_form"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_clean_fan_or_generic_restart"
+target = "hc7.operation_coupled_order8_fan"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_clean_fan_or_generic_restart"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+
+[[relations]]
+source = "hc7.all_tight_multiblock_closure"
+target = "hc7.special_shore_filling_density"
+kind = "uses"
+
+[[relations]]
+source = "hc7.all_tight_multiblock_closure"
+target = "hc7.exact7_all_residual_defect2_carrier"
+kind = "uses"
+
+[[relations]]
+source = "hc7.all_tight_multiblock_closure"
+target = "hc7.exact7_adaptive_12_boundary_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.all_tight_multiblock_closure"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_exact7_terminal_normal_form"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_exact7_terminal_normal_form"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_exact7_terminal_normal_form"
+target = "hc7.degree7_aligned_near_k7"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_exact7_terminal_normal_form"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_exact7_terminal_normal_form"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_exact7_terminal_normal_form"
+target = "hc7.exact7_adaptive_12_boundary_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_exact7_terminal_normal_form"
+target = "hc7.singleton_shore_nonbipartite"
+kind = "uses"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4455,7 +4800,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "453f8203c63a056c465dbc6a15b6c9fb244785f192ea0bff7231251085886c21"
+evidence_sha256 = "6f64e451d6b6302676f3ff4abdad5d58accdea22b519306f41435dd7685fe4ac"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4477,7 +4822,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "453f8203c63a056c465dbc6a15b6c9fb244785f192ea0bff7231251085886c21"
+evidence_sha256 = "6f64e451d6b6302676f3ff4abdad5d58accdea22b519306f41435dd7685fe4ac"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

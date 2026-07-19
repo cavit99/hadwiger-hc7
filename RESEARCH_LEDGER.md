@@ -57,8 +57,9 @@ There are two present subbranches.
 
 1. **Singleton shore.**  The opposite exterior is connected and has
    full-subgraph packing number one.  It is now known to be nonbipartite, so
-   every tree and every bipartite exterior is eliminated.  Binary
-   cutvertices and nonbipartite two-connected exteriors remain.
+   every tree and every bipartite exterior is eliminated.  Cutvertices
+   and bridges return strict exact-seven restarts; hence in a minimum
+   interface the unresolved exterior is nonbipartite and two-connected.
 2. **Two entrance edges.**  Simultaneous contraction gives a connected
    two-root list-critical core.  A proper core with an order-seven full
    neighbourhood is now always a strictly smaller generic exact-seven
@@ -68,10 +69,12 @@ There are two present subbranches.
    part of the selected connected shore has at least eight literal
    neighbours; after completing the seven boundary vertices to a clique,
    that shore is eight-connected.  For a minimum positive-excess
-   full-neighbourhood separator, either a component already gives an exact
-   order-seven restart, or the complement has exactly two or three
-   components and every one is adjacent to every boundary vertex.  Thus the
-   remaining placement obstruction for a proper core is a boundary-full
+   full-neighbourhood separator, either a component gives a fresh exact
+   order-seven generic response interface, whose shore is not yet proved
+   smaller than the selected minimum shore, or the complement has exactly
+   two or three components and every one is adjacent to every boundary
+   vertex.  Thus the proper-core residue consists of that possibly
+   non-strict order-seven return and, in the second outcome, a boundary-full
    two- or three-component interface of order at least eight.
 
 At order eight, deletion of a selected boundary-to-component edge gives a
@@ -82,6 +85,80 @@ Without that strict-containment hypothesis both outcomes remain.  The fan
 is still not terminal: its paths need not first meet five distinct inherited
 branch sets, and a fan failure does not by itself synchronize the two
 closed-shore colourings.
+
+The literal path geometry at such an order-eight boundary is now exact.
+From any nonempty connected subgraph of a boundary-full component there
+are eight paths to the eight distinct boundary vertices, pairwise disjoint
+outside the source subgraph, or a nonempty proper connected subset has an
+actual full neighbourhood of order seven.  Prescribed distinct
+source-to-boundary edges can be retained.  When the source is a path, two
+specified groups of boundary-contact limbs can be contained in disjoint
+connected subgraphs exactly when their minimal attachment intervals on the
+source path are disjoint.  This theorem neither forces that interval
+condition nor identifies boundary vertices with inherited branch sets.
+
+When the entire boundary-full component is itself an induced path with
+prescribed roots at its ends and two two-vertex demand sets, the remaining
+ordering obstruction has an exact form.  The required two rooted connected
+subgraphs exist exactly when the latest first contact for the left demand
+precedes the earliest last contact for the right demand.  Under strict
+reversal, the two tails and middle subpath give explicit order-seven
+separations whenever their boundary-contact counts are tight; otherwise
+they give opposite one-defect tails, a highly exposed middle, and two
+independent critical edges.  Those edges yield either an order-seven
+separation or a rooted `K_4` model.  When the two extremal contacts share
+one path vertex, their common deletion is six-chromatic and regenerates a
+spanning but unlabelled `K_6` model.  This normalization is special to an
+induced-path component: the seven-connected join of `K_2` and the
+icosahedral graph shows that an arbitrary all-boundary fan cannot be
+rerouted by geometry alone.
+
+One important labelled subcase of the order-eight residue is also reduced.
+Suppose a boundary-full component `C` lies wholly in one branch set `U` of
+an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains
+connected and contains the prescribed root and response edge, and the
+eight boundary vertices consist of two vertices of `U-C` and one literal
+vertex in each of the other six branch sets.  Then either a nonempty proper
+part of `C` has an actual full neighbourhood of order seven, or
+`C={v}`, `N(v)` is the eight-vertex boundary, and `d(v)=8`.  The order-seven
+outcome retains prescribed one-edge responses, but it does not yet supply a
+complete equality partition common to both closed shores.  The singleton
+outcome is not eliminated, and the theorem does not place an arbitrary
+order-eight component inside such a branch set.
+
+The degree-eight singleton has nevertheless been normalized.  Write `U`
+as the disjoint union of `U_0` and the singleton `{v}`.  At least two of the
+six foreign branch-set labels have no edge to `U_0`, and at least one of
+those labels is `X` or `Y`, the endpoints of the possible missing model
+adjacency.  When exactly three labels are lost, symmetry leaves only the
+patterns consisting of both polar labels and one further label, or one
+polar label and two further labels.  If another component is adjacent to
+all eight boundary vertices, then `G[S-w]` has no `K_5` minor for every
+`w in S`.  These restrictions do not repartition the opposite component,
+align the labels, or produce a common boundary partition.  Neither
+normalization proves `HC_7`.
+
+Two further terminal checks delimit this geometry.  Four pairwise disjoint
+connected subgraphs outside a boundary, each adjacent to every boundary
+vertex, together with a boundary triangle and three further boundary
+vertices, form an explicit `K_7`-minor model.  Hence in every one of the 82
+three-component order-eight boundary types each full component contains no
+two disjoint connected subgraphs both adjacent to every boundary vertex;
+splitting a raw order-eight component into two full pieces cannot be used
+to enter the seven-boundary defect-two reflection theorem.  The analogous
+claim with only three boundary-full connected subgraphs and a fourth
+missing at most two boundary vertices is false: a quotient with boundary
+`2K_3` plus two isolated vertices has treewidth at most five.  That example
+does not have seven-connectivity, contraction-critical colouring responses,
+or internal connected-subgraph structure, so those remain possible
+mechanisms for the host-level theorem.  Separately, in the concentrated
+configuration with three designated branch sets, the three
+opposite-shore edge probes cannot all have five-chromatic deletion hosts.
+If they did, their endpoint `K_4` conclusions would give a strict
+label-preserving reduction of `U`.  Thus some common three-edge deletion
+host is six-chromatic and contains a spanning `K_6` minor.  That regenerated
+model is not aligned with the five inherited labels or with a common
+boundary partition, so this is not yet a terminal construction.
 
 If the list-critical core fills its shore, its total list-degree excess is
 the remaining unbounded scalar.  The all-tight case has at most eleven
@@ -112,8 +189,12 @@ terminal modes:
    unresolved core is two-connected after the proved cutvertex/bridge
    reductions;
 2. a proper two-root list-critical core whose minimum positive-excess
-   boundary has order at least eight, with exactly two or three
-   boundary-full complementary components; or
+   separator either returns an exact order-seven generic interface not
+   known to be strict, or has order at least eight with exactly two or
+   three boundary-full complementary components; in the labelled
+   branch-set-contained subcase, a non-singleton component already returns
+   an exact order-seven separation, leaving only the degree-eight
+   singleton; or
 3. a shore-filling positive-excess list-critical core, together with the
    bounded one-block `K_4` and `K_5` all-tight residue.
 
@@ -125,15 +206,17 @@ responses and literal host attachments to obtain one of:
    partition is realized by both closed shores; or
 3. a strictly smaller generic exact-seven selected-response interface.
 
-In the surviving adaptive `(1,2)` exact-seven cell, once one shore contains
+In the surviving adaptive `(1,2)` exact-seven case, once one shore contains
 two disjoint boundary-full connected subgraphs and a third disjoint
 connected subgraph missing at most two boundary vertices, the new uniform
 reflection theorem supplies the common complete equality partition and
 six-colours `G`.  The remaining task is therefore geometric and
 operation-specific: construct that third connected subgraph, allocate the
-clean fan to five literal branch-set labels, or force an exact compatible
-order-seven boundary.  A contracted-terminal cut is not enough, because
-its branch-set preimages can contain arbitrarily many literal vertices.
+all-boundary fan to five literal branch-set labels with disjoint required
+attachment intervals, or force an exact compatible order-seven boundary.
+The surviving six-chromatic three-edge probe supplies only an unlabelled
+`K_6` model.  A contracted-terminal cut is not enough, because its
+branch-set preimages can contain arbitrarily many literal vertices.
 
 Old near-clique labels need be preserved only when they are used to claim a
 particular minor-model construction; they are not part of the recursion

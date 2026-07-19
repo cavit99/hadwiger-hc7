@@ -971,15 +971,17 @@ branch-set ownership remain the missing packaging step.
 The separator-excess branch now has a host-level minimum normal form.  Let
 `R` be an eligible connected set with `|N_G(R)|>=8`, chosen with minimum
 boundary order.  Either a component of the complement has an exact
-order-seven full neighbourhood and restarts the generic recursion, or the
-complement has exactly two or three components and every component is
-adjacent to every literal boundary vertex.  In a minimum generic response
+order-seven full neighbourhood and restarts the generic recursion (with no
+theorem yet making that returned shore smaller than the previously selected
+minimum shore), or the complement has exactly two or three components and
+every component is adjacent to every literal boundary vertex.  In a minimum generic response
 shore every proper connected subset has at least eight literal neighbours;
 the boundary-completed shore is consequently eight-connected.  These are
 literal statements in `G`, not counts of contracted model bags.
 
 At boundary order eight the two- and three-component cases have a uniform
-operation-specific alternative.  Deleting one selected
+operation-specific alternative.  For a non-singleton selected component,
+deleting one selected
 boundary-to-component edge gives either a clean five-path fan or an exact
 order-seven generic restart with a strictly smaller connected component.
 If that operated component is a proper subset of the minimum generic shore,
@@ -990,6 +992,116 @@ leading to different common labels and a paired-source five-fan or another
 strict order-seven restart.  What remains is not path existence: the paths
 may have repeated boundary ends or first meet the wrong inherited branch
 sets.
+
+There is now an unconditional literal-host strengthening of the path
+existence part.  Let `S` be an eight-vertex separator, let `C` be a
+component of `G-S` with `N_G(C)=S`, and assume that `G-S` has another
+component.  From every nonempty connected subgraph `P` of `C`, either
+eight paths reach the eight distinct literal vertices of `S`, pairwise
+disjoint outside `P`, or a nonempty connected proper subset of `C` has an
+actual full neighbourhood of order seven.  Any prescribed distinct
+`P-S` edges may be retained as fan limbs.  If `P` is a path and two
+disjoint groups of boundary terminals are specified, the corresponding
+rooted limbs lie in two vertex-disjoint connected subgraphs of the fan tree
+if and only if their two minimal attachment intervals on `P` are disjoint.
+Connectedness of `C` then extends them to an adjacent connected partition
+of `C`.
+
+This theorem removes repeated boundary endpoints, but not the labelled
+allocation problem.  A boundary terminal is not its inherited branch set,
+and the theorem neither places prescribed internal roots in `P` nor forces
+the two attachment intervals to be disjoint.  Failure gives a literal
+order-seven separation, but no complete equality partition is thereby
+known to extend through both closed shores.
+
+If the component `C` itself is an induced path with prescribed roots at
+its two ends and two disjoint two-vertex demand sets, the rooted split is
+completely determined by literal contact intervals.  Let `a` be the latest
+first contact required on the left and `b` the earliest last contact
+required on the right.  The two requested disjoint rooted connected
+subgraphs exist exactly when `a<b`.  If `a>b`, the two tails and the middle
+subpath have exact full-neighbourhood formulas: every tight case is an
+actual order-seven separation, while the nontight case consists of
+opposite one-defect tails, a highly exposed middle, and two canonical
+independent critical edges.  The existing independent-edge theorem then
+gives an order-seven separation or a `K_4`-minor model rooted at the four
+literal endpoints.  If `a=b`, the two contacts share one portal; their
+common deletion is six-chromatic and contains a spanning `K_6` minor.
+
+Neither regenerated model is aligned with the inherited branch-set labels.
+The induced-path-component hypothesis is essential: the seven-connected,
+`K_7`-minor-free graph obtained as the join of `K_2` and the icosahedral
+graph has an all-boundary path fan with strictly reversed demands but no
+requested rooted split.  It is six-colourable and has the compatible
+order-seven separation recorded by the barrier.  Thus geometry alone does
+not reroute the intervals; a positive theorem must use the proper-minor
+response prohibition or return the compatible separation.
+
+A label-preserving reduction applies when one boundary-full component is
+contained literally in one branch set `U` of an extremal spanning labelled
+`K_7`-minus-one-edge model.  Assume that deleting the component leaves `U`
+connected with its prescribed root and fixed response edge, and that the
+eight boundary vertices consist of two vertices in the retained part of
+`U` and one vertex in each of the other six branch sets.  A six-label fan
+and the maximum-first-hit-rank/minimum-`|U|` choice then give either an
+actual order-seven full-neighbourhood separation or a singleton component
+`{v}` with `N_G(v)=S` and `d_G(v)=8`.  Prescribed incident one-edge
+responses and their literal branch-set labels survive the separation
+outcome.  A simultaneous contraction response survives as a proper
+opposite-shore colouring only when its two boundary terminals are
+nonadjacent.  No common equality partition is obtained, the degree-eight
+singleton remains open, and an arbitrary full component has not been
+proved to satisfy the branch-set-containment hypotheses.
+
+The singleton outcome has a further exact label obstruction.  Write `U`
+as the disjoint union of `U_0` and `{v}`, and let `Omega` be the set of the
+six foreign branch-set labels with no edge from `U_0`.  Extremality gives
+`|Omega|>=2`, and `Omega` contains `X` or `Y`.  If its provenance gives
+`|Omega|=3`, then, up to the natural symmetries, only two patterns remain:
+both polar labels plus one further label, or one polar label plus two
+further labels.  If an opposite component is adjacent to all eight
+boundary vertices, then `G[S-w]` is `K_5`-minor-free for every `w in S`,
+since any such model, that component, and `{v,w}` would form a `K_7`
+model.  This still neither repartitions the opposite component among the
+six inherited labels nor produces one equality partition common to both
+closed shores.  Neither normalization proves `HC_7`.
+
+At the raw three-component order-eight interface, a different elementary
+construction rules out a tempting shortcut.  Four pairwise disjoint
+connected subgraphs, each adjacent to every boundary vertex, together with
+a boundary triangle and three further boundary vertices form an explicit
+`K_7`-minor model.  All 82 surviving boundary types contain a triangle.
+Consequently none of their three boundary-full components contains two
+disjoint connected subgraphs both adjacent to every boundary vertex.  In
+particular, splitting one raw component into two boundary-full pieces is
+already terminal and cannot serve as an order-eight substitute for the
+defect-two reflection theorem, whose input is an actual seven-vertex
+separator.
+
+Nor may a fourth boundary-full subgraph be replaced unconditionally by a
+connected subgraph missing at most two boundary vertices.  There is an
+explicit quotient with boundary `2K_3` plus two isolated vertices, three
+boundary-full vertices, and a fourth vertex missing one vertex of each
+triangle.  It has a tree decomposition of width at most five and hence no
+`K_7` minor.  This refutes the raw order-eight contact-set implication, not
+the active host theorem: the quotient is not seven-connected or
+seven-contraction-critical and carries no operation-specific colouring
+response.  Seven-connectivity, such proper-minor responses, and a split
+using the internal structure of a connected subgraph remain available
+extra mechanisms.
+
+Finally, the concentrated alternative with three designated branch sets
+has a new operation-specific gain.  Probe each of the three pairs by deleting
+its two contact edges together with one suitable edge in the opposite
+shore.  The three deletion hosts cannot all be five-chromatic: the three
+endpoint-`K_4` conclusions would force pairwise portal intersections and a
+connected-transversal transfer strictly reducing `U` while preserving the
+selected response data and relaxed first-hit rank.  Hence at least one
+probe is six-chromatic and contains a spanning `K_6`-minor model.  This
+eliminates the all-five-chromatic branch, but the surviving `K_6` model is
+unlabelled.  It is not known to respect the selected equality partition,
+contain prescribed endpoints in prescribed branch sets, or combine with a
+deleted edge to form a `K_7`-minor model.
 
 The exact partition side is now uniform over the complete frozen
 129-boundary residual.  Given a connected subgraph missing at most two
@@ -1066,9 +1178,14 @@ The terminal modes have now been sharpened as follows.
 1. In the singleton mode, cutvertices and bridges return exact order-seven
    interfaces; the surviving opposite exterior is nonbipartite and
    two-connected.
-2. In the proper-core mode, a minimum positive-excess separator has two or
-   three boundary-full complementary components.  At order eight it lies in
-   the clean-fan/label-allocation problem above.
+2. In the proper-core mode, a minimum positive-excess separator either
+   returns an exact order-seven generic interface not known to be strict,
+   or has order at least eight with exactly two or three boundary-full
+   complementary components.  At order eight the non-singleton components
+   lie in the all-boundary-fan/label-allocation problem above.  In the
+   branch-set-contained labelled subcase a non-singleton component already
+   returns an exact order-seven separation, leaving the degree-eight
+   singleton; this containment has not been proved for every component.
 3. In the shore-filling mode, every all-tight core with at least two Gallai
    blocks is eliminated by the uniform defect-two reflection theorem.  The
    all-tight residue consists only of the bounded one-block `K_4,K_5`
@@ -1170,6 +1287,12 @@ one of the three literal host configurations above.
 - [minimum positive-excess separator: exact-seven restart or two/three full components](../results/hc7_minimum_positive_separator_normal_form.md)
 - [boundary-full order-eight response: clean fan or generic exact-seven restart](../results/hc7_order8_clean_fan_or_generic_restart.md)
 - [common-label paired paths at a boundary-full order-eight separation](../results/hc7_order8_common_label_paired_fan.md)
+- [all eight boundary vertices from a connected source, or an exact order-seven separation](../results/hc7_order8_all_boundary_source_fan.md)
+- [exact rooted split and critical-edge normal forms for an induced-path component](../results/hc7_order8_overlapping_interval_normal_form.md)
+- [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
+- [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
+- [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)
+- [three opposite-shore edge probes eliminate simultaneous five-chromatic saturation](../results/hc7_three_edge_owner_saturation_elimination.md)
 - [paired-source path transfer or exact order-seven separation](../results/hc7_paired_source_path_transfer.md)
 - [componentwise exchange at a forced boundary path](../results/hc7_componentwise_path_residual_exchange.md)
 - [uniform defect-two reflection on all residual seven-boundaries](../results/hc7_exact7_all_residual_defect2_carrier.md)
