@@ -166,6 +166,23 @@ negative set-terminal Two Paths instance: a common-portal degeneracy or a
 crossless four-terminal web.  The analogous three-vertex class still lacks
 the required disjoint portal-spanning connected subgraph.
 
+The two-lobe two-cut residue is now eliminated completely.  Both cut
+vertices miss both defect vertices; assigning them to opposite lobes gives
+adjacent connected pieces with exact defects `d,e`; deleting `d,e` leaves
+a bipartite boundary; and `de` is absent.  Proper-minor colouring first
+orients the two responses.  For either opposite component, distinct
+`d`- and `e`-portals give a splittable root path.  If distinct portals do
+not exist, the two portal sets are one common singleton; contracting that
+portal with one root and contracting the two defect-one lobes with the two
+bipartition classes produces four pairwise adjacent images.  In both
+cases the individual component-side realizes the unequal four-block
+partition.  The two component-side colourings therefore align with the
+selected-component colouring and six-colour `G`.  This is an unbounded
+host theorem, so no two-cut case remains in the exact three-component
+order-eight residue.  The remaining three-component modes have a
+three-connected or singleton selected component; the genuinely
+two-component path/allocation obstruction remains open.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains

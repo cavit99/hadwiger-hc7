@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "766007cf3826363d7ded2b9142c383bbdeda55745c28ae3c2960286b8728b702"
+expected_source_sha256 = "2173abe43786e401f29bc8c43c981b74826c46dd025cbc7304c8a274f423b4d4"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3805,6 +3805,98 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_two_cut_opposite_response"
+title = "Opposite colouring responses forced by an unresolved two-cut"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_two_cut_opposite_response.md"
+active = false
+audit = "results/hc7_order8_two_cut_opposite_response_audit.md"
+expected_source_sha256 = "d7bf19ae1f0575a0580215c56d9fcb253263dfd57a0964971f97c4dea10b3f51"
+scope = "the exact three-component order-eight two-lobe residue behind a two-cut, with two full opposite components and two vertex-disjoint boundary odd cycles"
+separator_order = "conditional normal form after the small-lobe descent returns no order-seven separation"
+label_fidelity = "the cut vertices, lobes, defects, boundary bipartition, and forced bichromatic path are literal host objects"
+conclusions = [
+  "both cut vertices miss both lobe-defect boundary vertices",
+  "assigning the cut vertices to opposite lobes gives adjacent connected exact one-defect pieces covering the selected component",
+  "the boundary minus the two defects is bipartite and the defect pair is a nonedge",
+  "the two closed shores have opposite singleton equality responses and the unequal shore has the forced bichromatic root path",
+]
+does_not_prove = [
+  "elimination of the opposite-response normal form",
+  "a first-hit split of either full component",
+  "a compatible order-seven separator",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_two_cut_response_orientation"
+title = "The unequal response is forced onto the selected two-cut component"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_two_cut_response_orientation.md"
+active = false
+audit = "results/hc7_order8_two_cut_response_orientation_audit.md"
+expected_source_sha256 = "2f494477ffaf4f8f0f7e9df2835f1387bcc9aff463fa758298e8c53c08e514d8"
+scope = "the exact three-component order-eight two-lobe response normal form"
+label_fidelity = "the response orientation, roots, cut vertices, lobes, and every root path are literal host objects"
+conclusions = [
+  "each individual opposite component-side realizes the equality partition",
+  "the selected two-cut component realizes only the unequal partition",
+  "every prescribed unequal-response colouring contains a root path crossing the two-cut",
+  "the selected component is at least four-chromatic",
+]
+does_not_prove = [
+  "completion without the subsequent portal contraction",
+  "a compatible order-seven separator",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_two_cut_completion"
+title = "Completion of the exact two-lobe two-cut residue"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_two_cut_completion.md"
+active = true
+audit = "results/hc7_order8_two_cut_completion_audit.md"
+expected_source_sha256 = "70dc6941781f5023e0848c6db7c3924d2ae78382e98aeb909882a1eaa54ec206"
+scope = "the response-oriented exact three-component order-eight residue in which the selected component has two defect-one lobes behind a two-cut"
+label_fidelity = "the proof uses literal root portal sets and boundary blocks and never identifies palette colours with model labels"
+conclusions = [
+  "distinct root portals in an opposite component give a splittable root path",
+  "a unique common root portal gives a four-block K4 contraction",
+  "each opposite component-side realizes the unequal partition",
+  "the three closed component-side colourings align and six-colour the host",
+  "the entire two-lobe two-cut residue is impossible",
+]
+does_not_prove = [
+  "completion of a three-connected or singleton selected component",
+  "completion when two full connected subgraphs lie inside one connected shore rather than being separate components",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.order8_adjacent_defect_one_carriers"
+title = "Adjacent defect-one connected subgraphs do not complete an order-eight interface by contact incidence"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order8_adjacent_defect_one_carriers_barrier.md"
+active = true
+audit = "barriers/hc7_order8_adjacent_defect_one_carriers_barrier_audit.md"
+expected_source_sha256 = "c293b2c1910a491a0774090baeaaa7b204f193a1131d539f2b030aa75f92c360"
+scope = "a twelve-vertex order-eight quotient with two full vertices and two adjacent defect-one vertices whose missed boundary vertices lie in different disjoint triangles"
+refutes = [
+  "two full connected subgraphs plus two adjacent defect-one connected subgraphs with separated triangle defects force a K7 minor from contact incidence alone",
+]
+does_not_prove = [
+  "a counterexample in a seven-connected host",
+  "a counterexample under contraction-critical proper-minor responses",
+  "a counterexample to the two-cut opposite-response theorem",
+  "a counterexample to HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.order8_three_full_one_defect2_quotient"
 title = "Three boundary-full connected subgraphs and one defect-two subgraph do not force a K7 minor"
 kind = "barrier"
@@ -3944,6 +4036,24 @@ note = "This closes every positive reserved path-versus-boundary-block linkage i
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_two_cut_completion"
+kind = "uses"
+note = "This eliminates the complete two-lobe two-cut residue for arbitrary component sizes, leaving only three-connected or singleton selected components in the exact three-component branch."
+
+[[relations]]
+source = "hc7.order8_two_cut_completion"
+target = "hc7.order8_two_cut_response_orientation"
+kind = "uses"
+note = "The completion aligns the unequal response already forced onto the selected component."
+
+[[relations]]
+source = "hc7.order8_two_cut_response_orientation"
+target = "hc7.order8_two_cut_opposite_response"
+kind = "uses"
+note = "The orientation theorem sharpens the opposite singleton response sets to the componentwise equality/unequal assignment used by the completion."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.labelled_first_hit_rado"
 kind = "uses"
 
@@ -3962,6 +4072,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.order8_three_full_one_defect2_quotient"
 kind = "guarded_by"
 note = "This prevents replacing the actual seven-boundary hypothesis of defect-two reflection by raw order-eight contact-set data alone."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order8_adjacent_defect_one_carriers"
+kind = "guarded_by"
+note = "This rules out closing the exact two-lobe residue from two full contacts and two adjacent defect-one contacts without using the proper-minor colouring response or internal lobe structure."
 
 [[relations]]
 source = "hc7.minimum_generic_exact7_relative_connectivity"
@@ -4993,7 +5109,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "766007cf3826363d7ded2b9142c383bbdeda55745c28ae3c2960286b8728b702"
+evidence_sha256 = "2173abe43786e401f29bc8c43c981b74826c46dd025cbc7304c8a274f423b4d4"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5015,7 +5131,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "766007cf3826363d7ded2b9142c383bbdeda55745c28ae3c2960286b8728b702"
+evidence_sha256 = "2173abe43786e401f29bc8c43c981b74826c46dd025cbc7304c8a274f423b4d4"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6016,4 +6132,17 @@ expected_stdout = [
   "common signatures=EE,EP,PE; PP absent; one five-block partition of demand=3",
   "both intact closed shores are exactly 6-colourable and their languages are disjoint",
   "full host contains explicit K7 minor; deleting y3 leaves a 7-chromatic graph",
+]
+
+[[verifiers]]
+id = "order8-adjacent-defect-one-carriers-barrier"
+path = "barriers/hc7_order8_adjacent_defect_one_carriers_barrier_verify.py"
+sha256 = "24212f718a6c4c73e2e2a70c5ab05f17030d2742eb87b08352ebc1823803dde7"
+timeout = 30
+expected_stdout = [
+  "vertices=12",
+  "defects=A:{0} B:{3} full=Q0,Q1 edge=AB",
+  "elimination_order=0,6,7,1,2,3,4,5,8,9,10,11",
+  "elimination_width=5",
+  "K7_minor=no (treewidth at most 5)",
 ]

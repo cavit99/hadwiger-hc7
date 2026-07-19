@@ -1078,6 +1078,21 @@ each member of any fixed pair of disjoint triangles.  This does not yet
 eliminate the two-lobe configuration and does not cover the two residual
 boundary types whose certified disjoint odd cycles have orders `(3,5)`.
 
+The exact two-lobe residue is now closed.  Both cut vertices miss both
+defect vertices; assigning the cut vertices to opposite lobes produces
+adjacent connected pieces with exact defects `d,e`; the boundary minus
+`d,e` is bipartite; and `de` is absent.  Proper-minor colouring orients the
+two responses.  For either opposite component, distinct root portals give
+a splittable root path and hence the unequal response.  Failure of distinct
+portals gives one common portal; contracting it with one root and
+contracting the two defect-one lobes with the two bipartition classes
+produces a `K_4` of contraction images and gives the same unequal response.
+Both opposite component-sides therefore align with the selected-component
+colouring, so the three colourings glue.  This eliminates the two-cut case
+for arbitrary lobe and component sizes.  The width-five contact quotient
+remains a valid warning that the dynamic response is essential, but it is
+not a survivor of the completed theorem.
+
 When the selected component is a singleton, low connectivity in the other
 two components is now equally constrained.  Neither is a singleton;
 cutvertices with at least three lobes are terminal; and at most one of the
@@ -1194,6 +1209,15 @@ The two component counts should be treated uniformly up to the point where
 the 82-type classification supplies additional boundary information.  A
 palette colour is never a branch-set label, and an unlabelled fan or another
 unlabelled near-clique model is not a terminal outcome.
+
+Within the three-component branch, the selected component may now be
+assumed singleton or three-connected: induced-path overlap, cutvertices,
+and the complete two-lobe two-cut normal form have been eliminated or
+returned one of the previously displayed separator/descent outcomes.  The
+two-component branch still requires label-preserving allocation inside one
+connected shore; the componentwise gluing used in the two-cut completion
+does not apply when the two full connected subgraphs are merely subgraphs
+of that same shore.
 
 The contracted five-chromatic branch has an independent split-planar
 reduction: a spanning `\overline{P_7}` model leaves at least two empty
@@ -1354,6 +1378,8 @@ one of the three literal host configurations above.
 - [triangle-transversal structure of the remaining two-cut residue](../results/hc7_order8_two_cut_triangle_transversal.md)
 - [low-connectivity reduction for a singleton selected component](../results/hc7_order8_singleton_low_connectivity_reduction.md)
 - [reserved path and boundary-block subgraphs realize both root responses](../results/hc7_order8_three_block_linkage_reflection.md)
+- [opposite colouring responses forced by the exact two-lobe residue](../results/hc7_order8_two_cut_opposite_response.md)
+- [completion of the exact two-lobe two-cut residue](../results/hc7_order8_two_cut_completion.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)
