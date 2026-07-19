@@ -1035,6 +1035,19 @@ for a nontrivial induced-path component returns an actual order-seven
 separation or is terminal.  Colour compatibility of the returned
 separation remains open, as do singleton and non-path selected components.
 
+The non-path branch now has a strict host-level reduction whenever the
+selected component has a cutvertex.  Choose a leaf block whose interior is
+not adjacent to all eight boundary vertices.  Its full neighbourhood has
+order seven or eight.  Order seven is an actual separation; at order eight
+every complementary component is adjacent to every new boundary vertex,
+there are only two or three components, and the leaf-block interior is a
+strictly smaller selected component carrying a fresh equal-endpoint
+edge-deletion response.  At a three-component return the audited boundary
+classification restores a boundary triangle, so iteration terminates at
+order seven, a two-component order-eight interface, or a three-component
+interface whose selected component is a singleton, an edge, or
+two-connected.  The move does not preserve the old partition or labels.
+
 The induced-path-component hypothesis is essential: the seven-connected,
 `K_7`-minor-free graph obtained as the join of `K_2` and the icosahedral
 graph has an all-boundary path fan with strictly reversed demands but no
@@ -1296,6 +1309,7 @@ one of the three literal host configurations above.
 - [all eight boundary vertices from a connected source, or an exact order-seven separation](../results/hc7_order8_all_boundary_source_fan.md)
 - [exact rooted split and critical-edge normal forms for an induced-path component](../results/hc7_order8_overlapping_interval_normal_form.md)
 - [completion of every overlap outcome for a nontrivial induced-path component in the exact three-component interface](../results/hc7_order8_endpoint_shared_portal_completion.md)
+- [leaf-block descent for a selected order-eight component with a cutvertex](../results/hc7_order8_leaf_block_descent.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)

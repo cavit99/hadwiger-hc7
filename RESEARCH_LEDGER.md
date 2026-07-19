@@ -115,6 +115,19 @@ components remain, and the seven-connected join of `K_2` and the
 icosahedral graph still shows that an arbitrary all-boundary fan cannot be
 rerouted by geometry alone.
 
+The non-path side now has a well-founded reduction whenever the selected
+component has a cutvertex.  A leaf-block interior which is not adjacent to
+all eight boundary vertices has full neighbourhood of order seven or eight.
+Order seven is an actual separation; at order eight every complementary
+component is boundary-full, there are only two or three of them, and the
+selected component has strictly smaller order together with a fresh
+equal-endpoint edge-deletion response.  On every three-component return the
+audited boundary classification restores a triangle, so the descent
+iterates.  It terminates at order seven, a two-component interface, or a
+three-component interface whose selected component is a singleton, an edge,
+or two-connected.  It does not preserve the older boundary partition or
+branch-set labels.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains
@@ -198,7 +211,10 @@ terminal modes:
    an exact order-seven separation, leaving only the degree-eight
    singleton; in the exact three-component case, a selected induced-path
    component of order at least two now also returns an order-seven
-   separation or a terminal minor/colouring outcome; or
+   separation or a terminal minor/colouring outcome, while every selected
+   component with a cutvertex strictly descends to order seven, a
+   two-component interface, or a singleton, edge, or two-connected
+   three-component residue; or
 3. a shore-filling positive-excess list-critical core, together with the
    bounded one-block `K_4` and `K_5` all-tight residue.
 

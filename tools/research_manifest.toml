@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "f544513662781a75c70377c71f24ebcbdbc446d328aa487d68b20b4cf7f66fb0"
+expected_source_sha256 = "5aa7b96ebe072d80cd56e3ba57a6ceee202b704dc37a6d105c88f74ac64d6ab5"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3674,6 +3674,31 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_leaf_block_descent"
+title = "Leaf-block descent at a boundary-full order-eight separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_leaf_block_descent.md"
+active = true
+audit = "results/hc7_order8_leaf_block_descent_audit.md"
+expected_source_sha256 = "de05b3115757852ebeb863e69ffd483e80cdf4ff07b448207658f42b20c895cc"
+scope = "an order-eight boundary with exactly three boundary-full complementary components and a boundary triangle in a hypothetical minor-minimal HC7 counterexample, when the selected component has a cutvertex"
+separator_order = "a non-boundary-full leaf-block interior has full neighbourhood of order seven or eight; order seven is an actual separation, while order eight is a strict smaller-component return with two or three boundary-full complementary components"
+label_fidelity = "every returned edge-deletion response uses a literal edge from the smaller selected component to its new boundary; no inherited boundary partition, branch-set labels, demand pairs, or interval data are preserved"
+conclusions = [
+  "a cutvertex selected component returns an actual order-seven separation or a strictly smaller selected component behind a boundary-full order-eight interface with two or three complementary components",
+  "every edge from the smaller selected component to its new boundary has a proper six-colouring after deletion in which its ends have the same colour",
+  "iteration through three-component returns terminates at an actual order-seven separation, a two-component order-eight interface, or a cutvertex-free selected component",
+]
+does_not_prove = [
+  "a common boundary equality partition on a returned order-seven separation",
+  "closure of the two-component order-eight interface",
+  "closure of a singleton, edge, or two-connected selected component",
+  "preservation of an inherited boundary partition, branch-set labels, demand pairs, or interval data",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.order8_three_full_one_defect2_quotient"
 title = "Three boundary-full connected subgraphs and one defect-two subgraph do not force a K7 minor"
 kind = "barrier"
@@ -3780,6 +3805,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_nontrivial_path_completion"
 kind = "uses"
 note = "This closes every overlap mode when the selected component is an induced path of order at least two, leaving singleton and non-path components plus colour compatibility of returned order-seven separations."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_leaf_block_descent"
+kind = "uses"
+note = "This eliminates cutvertex selected components by a strict smaller-component descent until an actual order-seven separation, a two-component order-eight return, or a cutvertex-free selected component remains."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4832,7 +4863,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "f544513662781a75c70377c71f24ebcbdbc446d328aa487d68b20b4cf7f66fb0"
+evidence_sha256 = "5aa7b96ebe072d80cd56e3ba57a6ceee202b704dc37a6d105c88f74ac64d6ab5"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4854,7 +4885,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "f544513662781a75c70377c71f24ebcbdbc446d328aa487d68b20b4cf7f66fb0"
+evidence_sha256 = "5aa7b96ebe072d80cd56e3ba57a6ceee202b704dc37a6d105c88f74ac64d6ab5"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
