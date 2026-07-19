@@ -872,6 +872,13 @@ boundary partition is legal on the opposite closed shore, rejected on the
 exposed shore, and Hall-deficient beyond the opposite full-subgraph
 capacity.
 
+The singleton alternative also has a new unbounded closure.  Its boundary
+has independence number at most two and chromatic number at most four, so
+it is exactly four-chromatic.  A bipartite opposite exterior, coloured with
+two fresh colours, could then be combined with the boundary colouring and
+the singleton pole to six-colour `G`.  Hence every surviving singleton
+exterior is nonbipartite; in particular no tree exterior survives.
+
 The simultaneous contraction response produces a connected induced
 two-root list-critical subgraph `K` in the exposed shore.  Its full
 neighbourhood is an actual separator of order at least seven.  A proper
@@ -881,8 +888,9 @@ neighbourhood is an actual separator of order at least seven.  A proper
                        d_G(v)=6+\varepsilon(v)+\rho(v)
 \]
 
-at every vertex, and low total excess yields a singleton-side separator of
-order seven or eight.  This does not yet preserve the special exact-seven
+at every vertex, and any vertex with
+`\varepsilon(v)+\rho(v)\le2` yields a singleton-side separator of order
+seven or eight.  This does not yet preserve the special exact-seven
 normal form: the new boundary can be larger than seven, the two failed
 edges can lie on opposite closed sides or one can lie in the boundary, and
 the double-contraction partition can differ from both one-edge responses.
@@ -923,6 +931,44 @@ Thus the all-tight infinite family is no longer the live unbounded
 obstruction.  The remaining shore-filling theorem must control positive
 total list-degree excess using the global minor exclusion or additional
 proper-minor responses; the local two-root list data alone cannot do so.
+
+Two further audited statements sharpen that positive-excess target.  First,
+an actual wheel shore is impossible: five or six almost-boundary-complete
+rim neighbours, the hub, and one boundary-full connected subgraph on the
+opposite shore form an explicit `K_7`-minor model.  Thus sparse wheel list
+obstructions remain a local sharpness example but no longer survive the
+host degree and full-shore hypotheses.
+
+Second, every internal edge of the shore-filling list-critical graph either
+lowers total list-degree excess by two in the edge-deleted fixed-list
+obstruction, or its fixed boundary trace yields an endpoint path or two
+disjoint first-hit paths to distinct boundary vertices for every alternate
+colour.  If every edge takes the latter alternative, the graph is
+subgraph-minimal non-list-colourable and its tight-vertex subgraph is a
+Gallai forest.  The edge-deleted obstruction is not itself another
+seven-chromatic host, so this is a normalization rather than a completed
+induction.
+
+For a proper list-critical core, the original one-edge deletion colouring
+now gives the correct response pullback.  It is legal on the opposite
+closed shore and rejected by the core side.  If the core has an exact
+order-seven full neighbourhood containing all five inherited literal
+vertices, that boundary is forced to be the five old vertices plus the
+chosen entrance vertex and one old-shore vertex.  This gives a strict
+generic five-plus-two response descent.  In the bridge branch one of the
+two orientations retains the five inherited vertices unless both exclusive
+contacts are among those five.  Thus the remaining placement obstructions
+are separator excess and literal inherited-vertex loss, not the earlier
+double-contraction response chambers.
+
+In the shore-filling branch, choose a double-contraction colouring which
+lexicographically minimizes total boundary-colour incidence, boundary
+demand, and then block count.  Every pair of boundary colours then has one
+common bichromatic component in the contracted minor: otherwise a Kempe
+switch merges their anticomplete blocks without increasing the first two
+coordinates.  A shortest connection is internally confined to one open
+shore.  This is pairwise support only; simultaneous disjointness and literal
+branch-set ownership remain the missing packaging step.
 
 The immediate theorem must close one of the following four literal forks,
 with the first-hit rank providing the primary mechanism.
@@ -1039,6 +1085,11 @@ cannot supply the missing labelled allocation.
 - [two boundary vertices give a singleton shore or a two-root list-critical core](../results/hc7_special_exact7_two_edge_list_core.md)
 - [a bridge in the bipartite-boundary thin shore gives a strict exact-seven response descent](../results/hc7_exact7_bipartite_bridge_response_descent.md)
 - [density and block structure in the special shore-filling list-critical core](../results/hc7_special_shore_filling_density.md)
+- [fixed-trace responses at every internal edge of the shore-filling core](../results/hc7_fixed_trace_internal_edge_dichotomy.md)
+- [six almost-boundary-complete neighbours force a `K_7` minor](../results/hc7_six_spoke_boundary_completion.md)
+- [a selected response pulls back through a retained exact-seven boundary](../results/hc7_special_exact7_selected_response_pullback.md)
+- [Kempe-minimal boundary traces have pairwise bichromatic support](../results/hc7_kempe_minimal_boundary_trace.md)
+- [the singleton-shore exterior is nonbipartite](../results/hc7_singleton_shore_nonbipartite.md)
 - [exact completion classification for two connected subgraphs at a near-complete six-branch-set model](../results/hc7_five_contact_completion_classification.md)
 - [endpoint-`K_4` transfer or an actual order-seven separation](../results/hc7_endpoint_k4_transfer_or_order7.md)
 - [distinct-boundary prescribed-spoke transfer](../results/hc7_distinct_boundary_spoke_owner_transfer.md)

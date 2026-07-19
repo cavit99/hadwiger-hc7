@@ -144,8 +144,9 @@ the following holds.
    both `Y`-full.
 3. `G[A]` consists of one block and is isomorphic to `K_4` or `K_5`.
 
-Here outcome 2 is the multi-block case.  Thus the unbounded all-tight
-residue has been reduced to a block path on at most eleven vertices.
+Here outcome 2 is the multi-block case.  Thus the formerly unbounded
+all-tight family has been reduced to a block path on at most eleven
+vertices.
 
 #### Proof
 

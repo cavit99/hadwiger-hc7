@@ -455,8 +455,9 @@ failed edges.  If it fills the shore, then every vertex satisfies
 \]
 
 where `epsilon` is internal list-degree excess and `rho` counts repeated
-boundary-neighbour colours.  Low total excess gives an order-seven or
-order-eight singleton-side separation.  An all-tight shore is a Gallai tree,
+boundary-neighbour colours.  A vertex satisfying
+`epsilon(v)+rho(v)<=2` gives an order-seven or order-eight singleton-side
+separation.  An all-tight shore is a Gallai tree,
 and the sharper surplus-sensitive inequality bounds many remaining shores.
 These are genuine unbounded host-side reductions, but their smaller
 separations do not automatically preserve the old five branch-set labels.
@@ -687,6 +688,14 @@ opposite closed shore, rejected on the exposed closed shore, has demand
 above the opposite full-subgraph capacity, and has a Hall-deficient family
 for every admissible named support system.
 
+The singleton alternative is no longer an arbitrary connected exterior.
+Its seven-vertex boundary has independence number at most two and chromatic
+number at most four, hence exactly four.  If the opposite exterior were
+bipartite, colour the boundary with four colours, the exterior with two new
+colours, and give the singleton pole one of the latter colours.  This would
+six-colour `G`.  Therefore the sole exterior is nonbipartite and contains an
+odd cycle; every tree and every bipartite exterior is eliminated at once.
+
 Simultaneous contraction of the two entrance edges gives a connected
 induced two-root list-critical subgraph `K` in the exposed shore.  Its full
 neighbourhood is an actual separation boundary of order at least seven.  A
@@ -698,8 +707,9 @@ shore, every vertex satisfies the exact identity
 \]
 
 where `\varepsilon` is list-degree excess and `\rho` counts repeated
-boundary-neighbour colours.  Low total excess gives a singleton-side
-separation of order seven or eight, while zero list-degree excess makes the
+boundary-neighbour colours.  A vertex with
+`\varepsilon(v)+\rho(v)<=2` gives a singleton-side separation of order
+seven or eight, while zero list-degree excess makes the
 shore a Gallai tree.  This is a genuine host-level reduction, but not yet a
 recursive copy of the special interface: a proper core may have boundary
 order greater than seven, one failed edge may lie on each side or in the
@@ -742,9 +752,53 @@ boundary contacts gives an order-seven separation; otherwise every
 endblock lobe is boundary-full, so the block-cutvertex tree is a path.  If
 there is only one block, it is `K_4` or `K_5`.  The remaining unbounded
 obstruction is therefore positive total list-degree excess, not the
-all-tight branch.  Existing odd-wheel examples show that this excess cannot
-be bounded from the local two-root list data alone; the next exchange must
-use global `K_7`-minor exclusion or further proper-minor responses.
+all-tight branch.  Sparse odd-wheel examples still show that this excess
+cannot be bounded from the local two-root list data alone, but the actual
+host wheel family is now eliminated uniformly.  A connected subgraph on
+the opposite shore which is adjacent to all seven boundary vertices,
+together with a wheel hub and five or six rim vertices having at least six
+boundary contacts, gives seven explicit branch sets of a `K_7` model.
+Minimum host degree supplies those contacts for every wheel shore with rim
+order at least five.
+
+Every internal edge of the shore-filling core now has an exact fixed-trace
+dichotomy.  Either deleting it leaves a vertex-minimal non-list-colourable
+core and lowers total list-degree excess by two, or the fixed boundary trace
+colours the edge deletion and supplies, for each alternate colour, an
+internal endpoint path or two disjoint first-hit paths to distinct boundary
+vertices.  Deletion and contraction of the same edge give the identical
+response family.  If all edges take the latter alternative, the core is
+subgraph-minimal non-list-colourable and its tight-vertex subgraph is a
+Gallai forest.  The `E-2` alternative is not a recursive counterexample, so
+the remaining exchange must still preserve literal labels or return a
+compatible exact-seven separation.
+
+The response-placement part of a proper-core descent is now exact.  Choose
+one entrance vertex which lies in the proper list-critical core and use its
+original one-edge deletion colouring, rather than the double-contraction
+assignment.  That colouring is proper on the opposite closed shore and its
+complete boundary partition is rejected by the core side.  If the core's
+full neighbourhood has order seven and contains the five inherited literal
+vertices, then it is exactly those five vertices together with the chosen
+cut vertex and one vertex of the old shore.  This is a strict generic
+five-plus-two response interface carrying the same one-edge witness.  In a
+bipartite bridge descent, an orientation retains all five inherited
+vertices unless both exclusive old-boundary contacts lie among those five.
+The remaining exact-order-seven obstruction in these pullbacks is therefore
+literal inherited-vertex loss; separator excess is the preceding
+obstruction.  The old boundary partition and five branch-set labels are not
+claimed to survive.
+
+There is also a canonical Kempe normalization of the shore-filling
+double-contraction trace.  Minimize, in order, total boundary-colour
+incidence in the shore, full-subgraph demand, and the number of boundary
+blocks.  Every pair of colours used on the boundary then lies in one common
+bichromatic component of the contracted minor.  Otherwise switching all
+components meeting one colour class merges two anticomplete boundary blocks
+without increasing either of the first two coordinates.  Shortest such
+connections are internally confined to one open shore in the quotient.
+They need not be mutually disjoint or label-aligned, and lifting a
+contracted endpoint can restore one monochromatic distinguished edge.
 
 The existing exact-block and Hall-reflection theorems apply once the
 returned boundary carries the required operation-specific response; the new
@@ -789,6 +843,11 @@ The newly promoted sources are the
 [two-boundary-vertex reduction to a singleton shore or two-root list-critical core](results/hc7_special_exact7_two_edge_list_core.md),
 [bipartite-boundary bridge response descent](results/hc7_exact7_bipartite_bridge_response_descent.md),
 [special shore-filling density and block structure](results/hc7_special_shore_filling_density.md),
+[fixed-trace internal-edge dichotomy](results/hc7_fixed_trace_internal_edge_dichotomy.md),
+[six-spoke boundary completion](results/hc7_six_spoke_boundary_completion.md),
+[selected-response pullback through a retained exact-seven boundary](results/hc7_special_exact7_selected_response_pullback.md),
+[Kempe-minimal boundary-trace normalization](results/hc7_kempe_minimal_boundary_trace.md),
+[nonbipartiteness of the singleton-shore exterior](results/hc7_singleton_shore_nonbipartite.md),
 [operation-coupled colouring responses at a boundary-full order-eight separation](results/hc7_operation_coupled_order8_response.md),
 [Hall obstruction at a label-transversal critical pinch](results/hc7_label_transversal_pinch_hall_obstruction.md),
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),

@@ -5,7 +5,7 @@
 at source SHA-256
 
 ```text
-eae97b46408659849c246d58c8d05f741d758df4b1df59f631380013d594ee08
+4f4dae9db11ed51ce33fe1054550cab8588360c1398e0954d76c9c3b0c3c65d9
 ```
 
 This is a separate internal mathematical audit, not external peer review.

@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "4f4927763648c408f04c9dd02265f01169dc5409c5dca4399136f60e06516ff5"
+expected_source_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c318e"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -2911,7 +2911,7 @@ source = "results/hc7_special_shore_filling_density.md"
 source_heading = "Density and block structure in the special shore-filling list-critical core"
 active = true
 audit = "results/hc7_special_shore_filling_density_audit.md"
-expected_source_sha256 = "eae97b46408659849c246d58c8d05f741d758df4b1df59f631380013d594ee08"
+expected_source_sha256 = "4f4dae9db11ed51ce33fe1054550cab8588360c1398e0954d76c9c3b0c3c65d9"
 scope = "the shore-filling two-root list-critical branch of the special five-plus-two exact-seven interface"
 separator_order = "low degree gives order seven or eight; a six-contact endblock lobe gives order exactly seven"
 strict_parameter = "the all-tight shore has at most eleven vertices and, absent an exact-seven endblock, has a path block-cutvertex tree"
@@ -2949,6 +2949,126 @@ conclusions = [
 does_not_prove = [
   "placement of the required supports on the legally coloured shore",
   "legality of an arbitrary transported boundary assignment",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.fixed_trace_internal_edge_dichotomy"
+title = "Fixed-trace dichotomy for internal edges of the shore-filling core"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_fixed_trace_internal_edge_dichotomy.md"
+source_heading = "Internal edges in a fixed boundary-trace list obstruction"
+active = true
+audit = "results/hc7_fixed_trace_internal_edge_dichotomy_audit.md"
+expected_source_sha256 = "4ee98b67df343cc5023822b43a5291ead6929067c6bb39242447b2cd1e717f84"
+scope = "every internal edge of the shore-filling two-root list-critical core at the special exact-seven interface"
+colour_compatibility = "the locked alternative attains the fixed opposite-shore boundary trace; the surviving alternative transports a different legal one-sided trace with an exact Hall obstruction"
+strict_parameter = "one edge deletion lowers total fixed-list degree excess by exactly two when the fixed-list obstruction survives"
+conclusions = [
+  "a surviving edge-deleted list obstruction of excess E-2 or a fixed-trace Kempe first-hit certificate",
+  "deletion and contraction of the same edge induce the same boundary-response family",
+  "if every edge is locked, the core is subgraph-minimal non-list-colourable and its tight-vertex subgraph is a Gallai forest",
+]
+does_not_prove = [
+  "that the edge-deleted obstruction is another hypothetical counterexample",
+  "a recursive decrease in the host graph",
+  "closure of the positive-excess branch",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.six_spoke_boundary_completion"
+title = "Six almost-boundary-complete neighbours force a K7 minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_six_spoke_boundary_completion.md"
+source_heading = "Boundary completion from six almost-full neighbours"
+active = true
+audit = "results/hc7_six_spoke_boundary_completion_audit.md"
+expected_source_sha256 = "b56fc75d796976e084ea7b94642d96419e620ca7c564a2b427be9359d580a8d3"
+scope = "an order-seven separation with one opposite boundary-full connected subgraph and a common centre with five or six almost-boundary-complete neighbours"
+label_fidelity = "the proof gives seven explicit literal connected branch sets"
+conclusions = [
+  "an explicit K7-minor model",
+  "elimination of every wheel shore with rim order at least five under minimum host degree nine",
+]
+does_not_prove = [
+  "that arbitrary positive-list-excess cores contain the required common-centre geometry",
+  "boundary-colouring synchronization",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.special_exact7_selected_response_pullback"
+title = "A selected edge-deletion response pulls back through a retained exact-seven boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_special_exact7_selected_response_pullback.md"
+source_heading = "Pulling one selected edge-deletion response through a proper list-critical core"
+active = true
+audit = "results/hc7_special_exact7_selected_response_pullback_audit.md"
+expected_source_sha256 = "993af43382b88c10ba75566e2e588c9486cd28908aeaf9bfe35805508dfb895b"
+scope = "a proper two-root list-critical core whose full neighbourhood has order seven and retains the five literal inherited boundary vertices"
+separator_order = "exactly seven in the recursive case; excess boundary order remains open"
+colour_compatibility = "the same one-edge deletion colouring is legal on the opposite shore and its exact partition is rejected on the core shore"
+strict_parameter = "the connected core has fewer vertices than the old exposed shore"
+conclusions = [
+  "the returned boundary is exactly the five retained vertices, the chosen entrance vertex and one old-shore vertex",
+  "a strict generic five-plus-two selected-response interface",
+  "a bridge orientation retains the five inherited vertices unless both exclusive contacts lie among them",
+]
+does_not_prove = [
+  "preservation of the old equality partition or full-subgraph identities",
+  "preservation of five branch-set labels or concentrated-order-eight provenance",
+  "recovery after literal inherited-vertex loss",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.kempe_minimal_boundary_trace"
+title = "Kempe-minimal boundary traces have pairwise bichromatic support"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_kempe_minimal_boundary_trace.md"
+source_heading = "Kempe-minimal boundary traces have pairwise bichromatic support"
+active = true
+audit = "results/hc7_kempe_minimal_boundary_trace_audit.md"
+expected_source_sha256 = "1a2779dd1a5a5cfdc7e576cdb422c7c06839c01cabcc55a9202e123101bb6d35"
+scope = "lexicographically minimal double-contraction colourings in the shore-filling two-root exact-seven setting"
+colour_compatibility = "the normalization remains within the double-equality colouring class"
+strict_parameter = "lexicographic minimization of boundary-colour incidence, full-subgraph demand and boundary block count"
+conclusions = [
+  "an exact Kempe-switch overlap-balance identity",
+  "every pair of boundary colours lies in one common bichromatic component of the contracted minor",
+  "a shortest such connection is internally confined to one open shore in the quotient",
+]
+does_not_prove = [
+  "laminar boundary neighbourhoods",
+  "simultaneous disjointness or literal branch-set ownership",
+  "a K7 minor or compatible exact-seven separator",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.singleton_shore_nonbipartite"
+title = "The singleton degree-seven shore has a nonbipartite exterior"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_singleton_shore_nonbipartite.md"
+source_heading = "A singleton degree-seven shore forces a nonbipartite opposite shore"
+active = true
+audit = "results/hc7_singleton_shore_nonbipartite_audit.md"
+expected_source_sha256 = "dbdae8295af908bce6101bd4d28d48a8f7e1de442f3749c9a7163d1d023ced4d"
+scope = "the singleton alternative of the special exact-seven two-boundary-vertex reduction"
+conclusions = [
+  "the seven-vertex boundary is exactly four-chromatic",
+  "the connected opposite exterior is nonbipartite and contains an odd cycle",
+  "all bipartite and tree exteriors are eliminated",
+]
+does_not_prove = [
+  "closure of binary cutvertices or nonbipartite two-connected exteriors",
+  "closure of the singleton branch",
   "HC7",
 ]
 
@@ -4143,7 +4263,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "4f4927763648c408f04c9dd02265f01169dc5409c5dca4399136f60e06516ff5"
+evidence_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c318e"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4165,7 +4285,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "4f4927763648c408f04c9dd02265f01169dc5409c5dca4399136f60e06516ff5"
+evidence_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c318e"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4176,7 +4296,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 1068
 evidence_end_line = 1095
-evidence_sha256 = "9ba14bf4b5c613bdb898990d9b7337fb9ece561aeb9ad5c76090f65a86b6cac2"
+evidence_sha256 = "a48bb94023409be6d37ab454be37d0e28780e33255c4e19bef7cf0709de2d353"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4195,6 +4315,36 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.special_shore_filling_density"
 kind = "uses"
 note = "Bounds and classifies the all-tight shore-filling branch and isolates positive list-degree excess as its remaining unbounded obstruction."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.fixed_trace_internal_edge_dichotomy"
+kind = "uses"
+note = "Normalizes every internal edge of the positive-excess shore-filling core into an excess-lowering fixed-list obstruction or a fixed-trace first-hit certificate."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.six_spoke_boundary_completion"
+kind = "uses"
+note = "Eliminates the unbounded wheel-shaped positive-excess family under the actual host degree and boundary-full opposite-shore hypotheses."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.special_exact7_selected_response_pullback"
+kind = "uses"
+note = "Makes a proper exact-seven list-critical core recursive precisely when all five inherited literal boundary vertices are retained."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.kempe_minimal_boundary_trace"
+kind = "uses"
+note = "Normalizes the shore-filling double-contraction trace so that every pair of boundary colours has shore-confined quotient Kempe support."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.singleton_shore_nonbipartite"
+kind = "uses"
+note = "Eliminates every bipartite and tree exterior in the singleton exact-seven branch."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4812,6 +4962,67 @@ kind = "uses"
 [[relations]]
 source = "hc7.special_shore_filling_density"
 target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_shore_filling_density"
+target = "hc7.exact7_selected_partition_preservation"
+kind = "uses"
+note = "Supplies the selected-response nonsplit boundary fact used in the density estimate."
+
+[[relations]]
+source = "hc7.fixed_trace_internal_edge_dichotomy"
+target = "hc7.special_exact7_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.fixed_trace_internal_edge_dichotomy"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.fixed_trace_internal_edge_dichotomy"
+target = "hc7.transported_partition_hall_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_selected_response_pullback"
+target = "hc7.special_exact7_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_selected_response_pullback"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_selected_response_pullback"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_selected_response_pullback"
+target = "hc7.cycle_boundary_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_selected_response_pullback"
+target = "hc7.exact7_bipartite_bridge_response_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.kempe_minimal_boundary_trace"
+target = "hc7.special_exact7_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_shore_nonbipartite"
+target = "hc7.special_exact7_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.singleton_shore_nonbipartite"
+target = "hc7.special_five_plus_two_exact7_response"
 kind = "uses"
 
 [[verifiers]]
