@@ -1019,23 +1019,29 @@ its two ends and two disjoint two-vertex demand sets, the rooted split is
 completely determined by literal contact intervals.  Let `a` be the latest
 first contact required on the left and `b` the earliest last contact
 required on the right.  The two requested disjoint rooted connected
-subgraphs exist exactly when `a<b`.  If `a>b`, the two tails and the middle
-subpath have exact full-neighbourhood formulas: every tight case is an
-actual order-seven separation, while the nontight case consists of
-opposite one-defect tails, a highly exposed middle, and two canonical
-independent critical edges.  The existing independent-edge theorem then
-gives an order-seven separation or a `K_4`-minor model rooted at the four
-literal endpoints.  If `a=b`, the two contacts share one portal; their
-common deletion is six-chromatic and contains a spanning `K_6` minor.
+subgraphs exist exactly when `a<b`.
 
-Neither regenerated model is aligned with the inherited branch-set labels.
+The overlap branch is now closed when the order-eight interface has exactly
+three boundary-full components and `|C|>=2`.  Under strict reversal
+`a>b`, either one of the exact tail/middle neighbourhoods has order seven,
+or the two complementary one-defect path sides combine with the other two
+components as follows.  A cycle in the six-vertex residual boundary gives
+an explicit `K_7` model; when that residual boundary is bipartite, an
+explicit three- or four-block partition colours all three closed component
+sides and the colourings glue.  When `a=b`, an internal shared portal gives
+an explicit `K_7` model, while a shared portal at a path endpoint gives the
+same minor/colouring/order-seven alternatives.  Thus every overlap outcome
+for a nontrivial induced-path component returns an actual order-seven
+separation or is terminal.  Colour compatibility of the returned
+separation remains open, as do singleton and non-path selected components.
+
 The induced-path-component hypothesis is essential: the seven-connected,
 `K_7`-minor-free graph obtained as the join of `K_2` and the icosahedral
 graph has an all-boundary path fan with strictly reversed demands but no
 requested rooted split.  It is six-colourable and has the compatible
-order-seven separation recorded by the barrier.  Thus geometry alone does
-not reroute the intervals; a positive theorem must use the proper-minor
-response prohibition or return the compatible separation.
+order-seven separation recorded by the barrier.  Thus this closure cannot
+be transferred to an arbitrary fan spine without using the component's
+literal off-path structure or the proper-minor response.
 
 A label-preserving reduction applies when one boundary-full component is
 contained literally in one branch set `U` of an extremal spanning labelled
@@ -1289,6 +1295,7 @@ one of the three literal host configurations above.
 - [common-label paired paths at a boundary-full order-eight separation](../results/hc7_order8_common_label_paired_fan.md)
 - [all eight boundary vertices from a connected source, or an exact order-seven separation](../results/hc7_order8_all_boundary_source_fan.md)
 - [exact rooted split and critical-edge normal forms for an induced-path component](../results/hc7_order8_overlapping_interval_normal_form.md)
+- [completion of every overlap outcome for a nontrivial induced-path component in the exact three-component interface](../results/hc7_order8_endpoint_shared_portal_completion.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)

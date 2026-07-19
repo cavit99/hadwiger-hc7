@@ -97,20 +97,22 @@ connected subgraphs exactly when their minimal attachment intervals on the
 source path are disjoint.  This theorem neither forces that interval
 condition nor identifies boundary vertices with inherited branch sets.
 
-When the entire boundary-full component is itself an induced path with
-prescribed roots at its ends and two two-vertex demand sets, the remaining
-ordering obstruction has an exact form.  The required two rooted connected
-subgraphs exist exactly when the latest first contact for the left demand
-precedes the earliest last contact for the right demand.  Under strict
-reversal, the two tails and middle subpath give explicit order-seven
-separations whenever their boundary-contact counts are tight; otherwise
-they give opposite one-defect tails, a highly exposed middle, and two
-independent critical edges.  Those edges yield either an order-seven
-separation or a rooted `K_4` model.  When the two extremal contacts share
-one path vertex, their common deletion is six-chromatic and regenerates a
-spanning but unlabelled `K_6` model.  This normalization is special to an
-induced-path component: the seven-connected join of `K_2` and the
-icosahedral graph shows that an arbitrary all-boundary fan cannot be
+When the entire boundary-full component is an induced path with prescribed
+roots at its ends and two two-vertex demand sets, the ordering obstruction
+is now closed in the exact three-component setting whenever the path has at
+least two vertices.  The required rooted subgraphs exist exactly when the
+latest first contact for the left demand precedes the earliest last contact
+for the right demand.  A strict reversal either exposes one of the existing
+order-seven full neighbourhoods, gives an explicit `K_7`-minor model from a
+cycle in the six-vertex residual boundary, or yields a common three- or
+four-block boundary colouring which six-colours the graph.  An internal
+shared portal gives an explicit `K_7` model, and an endpoint shared portal
+has the same minor/colouring/order-seven alternatives.  Consequently every
+overlap outcome for a nontrivial induced-path component returns an actual
+order-seven separation or is terminal.  The returned separation is not yet
+known to carry a common equality partition.  The singleton and non-path
+components remain, and the seven-connected join of `K_2` and the
+icosahedral graph still shows that an arbitrary all-boundary fan cannot be
 rerouted by geometry alone.
 
 One important labelled subcase of the order-eight residue is also reduced.
@@ -194,7 +196,9 @@ terminal modes:
    three boundary-full complementary components; in the labelled
    branch-set-contained subcase, a non-singleton component already returns
    an exact order-seven separation, leaving only the degree-eight
-   singleton; or
+   singleton; in the exact three-component case, a selected induced-path
+   component of order at least two now also returns an order-seven
+   separation or a terminal minor/colouring outcome; or
 3. a shore-filling positive-excess list-critical core, together with the
    bounded one-block `K_4` and `K_5` all-tight residue.
 
