@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "ef45de6e9eeb1c9e5a0e22bdd1a16993a45afe8fe17764cb67e851ad77c1772b"
+expected_source_sha256 = "6c8e8be3bae133a9e049ad8afad04ed24a4144d0a69cc0ab585fd882ee6df77b"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3987,6 +3987,73 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.merged_root_three_kempe_locks"
+title = "Three simultaneous colour-indexed Kempe paths on a merged-root shore"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_merged_root_three_kempe_locks.md"
+source_heading = "2. Three simultaneous Kempe locks"
+active = true
+audit = "results/hc7_merged_root_three_kempe_locks_audit.md"
+expected_source_sha256 = "2705b68b8452fd8642601ed48f93c84db98e313be46c12c3f4f7ba85cd94cd41"
+scope = "the merged-root closed shore of an exact order-eight opposite-response interface"
+label_fidelity = "the roots, boundary blocks, fixed colouring and three colour-indexed paths are literal host objects; no model-label allocation is inferred"
+conclusions = [
+  "each of the three boundary-absent colours forms a bichromatic component joining the two roots",
+  "a corresponding root-to-root path has all internal vertices in the merged-response shore",
+  "both roots see every absent colour and paths for distinct absent colours intersect only at vertices of the common root colour",
+]
+does_not_prove = [
+  "internal disjointness of the three paths",
+  "first-hit allocation to named branch sets",
+  "a common boundary response or an order-seven separation",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.adjacent_full_pair_cycle_completion"
+title = "Cycle completion from adjacent defect-one and boundary-full pairs"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_adjacent_full_pair_cycle_completion.md"
+source_heading = "2. Cycle completion"
+active = false
+audit = "results/hc7_adjacent_full_pair_cycle_completion_audit.md"
+expected_source_sha256 = "20c0e37056fab8dff204511a5d776000a90614b3e6d520118be7d4235c2de165"
+scope = "four pairwise disjoint connected subgraphs outside an eight-vertex boundary: an adjacent exact-defect pair and an adjacent boundary-full pair"
+label_fidelity = "the four connected subgraphs, two defects and three cycle arcs lift directly to seven explicit branch sets"
+conclusions = [
+  "any cycle in the boundary after deleting the two defects gives an explicit K7-minor model",
+  "in a K7-minor-free host the six-vertex boundary core is a forest",
+  "two disjoint boundary odd cycles then leave two disjoint odd-length rooted paths in that forest",
+]
+does_not_prove = [
+  "that the current live opposite-response branch supplies all four connected subgraphs",
+  "a composition with the merged-root Kempe-lock theorem",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.order8_split_shore_transversal"
+title = "A K7-minor-free split shore need not have a common two-vertex support transversal"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order8_split_shore_transversal_barrier.md"
+active = true
+audit = "barriers/hc7_order8_split_shore_transversal_barrier_audit.md"
+expected_source_sha256 = "77f34e0f7e588ed0b93f5b8576a9f6d94af918c6e37d14d589d767f3816e079f"
+scope = "a finite split-response closed shore with two adjacent boundary-full connected parts, K7-minor-free together with its eight-vertex boundary"
+refutes = [
+  "split-shore K7-minor exclusion, exact split-only response and two full parts force a three-support packing or a common transversal of order at most two",
+]
+does_not_prove = [
+  "a counterexample with an opposite merged-response shore",
+  "a counterexample in a seven-connected contraction-critical host",
+  "a counterexample to the active two-shore disjunction",
+  "a counterexample to HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.minimum_generic_exact7_relative_connectivity"
@@ -4123,6 +4190,18 @@ kind = "uses"
 note = "This normalizes the connected split-response shore to two adjacent full parts and turns any common two-vertex support transversal into an actual order-seven separation with one preserved response."
 
 [[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.merged_root_three_kempe_locks"
+kind = "uses"
+note = "This supplies three simultaneous colour-indexed root paths on the merged-response shore, with exact endpoint saturation and intersection restrictions, for the high-transversal exchange."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.adjacent_full_pair_cycle_completion"
+kind = "related_to"
+note = "This is a reusable K7 construction if future exchange work places adjacent defect-one pieces opposite the adjacent full cover; the present live branch does not yet supply that conjunction."
+
+[[relations]]
 source = "hc7.order8_two_cut_completion"
 target = "hc7.order8_two_cut_response_orientation"
 kind = "uses"
@@ -4166,6 +4245,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.order8_three_support_packing"
 kind = "guarded_by"
 note = "This shows that even eight-connectivity, exact opposite responses and two disjoint full connected subgraphs do not force the desired three-support packing or an order-seven separator; the live theorem must use K7-minor exclusion or dynamic proper-minor responses."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order8_split_shore_transversal"
+kind = "guarded_by"
+note = "This rules out a static theorem internal to the split shore even after excluding a K7 minor there; the live exchange must use the opposite shore or operation-specific full-host responses."
 
 [[relations]]
 source = "hc7.minimum_generic_exact7_relative_connectivity"
@@ -5197,7 +5282,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "ef45de6e9eeb1c9e5a0e22bdd1a16993a45afe8fe17764cb67e851ad77c1772b"
+evidence_sha256 = "6c8e8be3bae133a9e049ad8afad04ed24a4144d0a69cc0ab585fd882ee6df77b"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5219,7 +5304,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "ef45de6e9eeb1c9e5a0e22bdd1a16993a45afe8fe17764cb67e851ad77c1772b"
+evidence_sha256 = "6c8e8be3bae133a9e049ad8afad04ed24a4144d0a69cc0ab585fd882ee6df77b"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6248,4 +6333,17 @@ expected_stdout = [
   "relative_connected_set_boundary_min=8",
   "K7 minor: explicit seven branch sets verified inside S union R",
   "scope: K7-minor exclusion and contraction-criticality deliberately absent",
+]
+
+[[verifiers]]
+id = "order8-split-shore-transversal-barrier"
+path = "barriers/hc7_order8_split_shore_transversal_barrier_verify.py"
+sha256 = "c841ea30f724e9cab2af630622d751f7052189742b1f33a54d061b871ba26d15"
+timeout = 30
+expected_stdout = [
+  "GREEN K7-minor-free split-shore packing/transversal barrier",
+  "shore: |R|=4, two connected S-full parts, split-only response",
+  "three-piece packing=none; common transversal number=3",
+  "treewidth upper bounds: tw(G[S union R])<=5, tw(G[S])<=2",
+  "scope: no opposite merged shore, seven-connectivity, or minor-criticality",
 ]

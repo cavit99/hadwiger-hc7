@@ -1123,6 +1123,24 @@ operation-specific proper-minor colourings to obtain an explicit `K_7`
 model, a colour-compatible order-seven separation, or a strict
 selected-response descent.
 
+Minor exclusion on the split closed shore does not repair the static
+statement.  There is an exact four-vertex split-only shore whose two
+boundary-full connected parts are adjacent, whose three support families
+have no disjoint transversal and have common transversal number three, and
+whose union with the eight-vertex boundary has treewidth at most five.
+Therefore the next exchange must couple the split shore to the merged shore
+or to a proper-minor colouring of the full host.
+
+The opposite merged-response shore supplies a complementary dynamic
+constraint.  In every fixed merged-root six-colouring, each of the three
+colours absent from the boundary gives a bichromatic path between the two
+roots with all internal vertices in that shore.  The roots see all three
+colours, and paths belonging to distinct absent colours intersect only at
+vertices of the common root colour.  These three simultaneous Kempe locks
+do not by themselves give disjoint paths or named first-hit allocation, but
+they are the operation-free colouring data available to the high-transversal
+exchange.
+
 When the selected component is a singleton, low connectivity in the other
 two components is now equally constrained.  Neither is a singleton;
 cutvertices with at least three lobes are terminal; and at most one of the

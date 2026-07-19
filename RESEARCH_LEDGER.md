@@ -213,6 +213,22 @@ colourings: it must turn transversal number at least three into an explicit
 `K_7` model, a colour-compatible order-seven separation, or a strict
 selected-response descent.
 
+Even `K_7`-minor exclusion on the split closed shore is insufficient by
+itself.  A verified four-vertex shore has the exact split-only response, two
+adjacent boundary-full connected parts, no three-support packing and common
+transversal number three, while its union with the boundary has treewidth at
+most five.  Thus the positive theorem must couple the two shores or use the
+proper-minor response dynamics of the complete host; it cannot be a static
+one-shore packing theorem.
+
+On the merged-response shore, every fixed response colouring has three
+simultaneous colour-indexed root-to-root Kempe paths, one for each colour
+absent from the boundary.  All internal vertices lie in that shore, both
+roots see every absent colour there, and two such paths can meet only in
+vertices of the common root colour.  This is an unbounded operation-free
+constraint, but it does not make the paths internally disjoint or allocate
+their first hits to named branch sets.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains
