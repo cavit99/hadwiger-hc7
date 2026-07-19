@@ -713,6 +713,29 @@ an incident pair of differently labelled owner contacts by pigeonhole.
 Thus every owner-portal obstruction has been converted to a bounded host
 separation or one of two explicit critical-edge geometries.
 
+There is now a parameter-uniform completion theorem for the proper-subfamily
+linkages supplied by a minimal owner circuit.  Let `I` have order `m`, with
+`2<=m<=5`, and let `K` be its `m-1` vertex internal transversal.  If a
+component `C` of the donor minus `K` is anticomplete to the retained donor,
+meets all six outside branch sets, and the owners in `I-{R_0}` can be linked
+to distinct retained-donor portals in the donor minus `C`, then those paths,
+the retained donor, `C`, and five explicitly selected or merged outside
+branch sets form a `K_7`-minor model.  It is enough more generally that the
+paths leave a connected residual subgraph of `C` adjacent to their union and
+to all six outside branch sets.
+
+In the three-owner no-repeated-contact equality case, the same analysis
+gives a literal order-eight normal form.  The boundary is the two-vertex
+internal transversal together with one vertex from each of the six outside
+branch sets.  A component missing one boundary vertex returns an actual
+order-seven separation.  Otherwise the complement has two or three
+boundary-full components and the boundary is four-colourable; the
+three-component case lies in the audited 82-type order-eight residue.  Thus
+the exact remaining static obstruction is sharp: every two-owner linkage
+uses the distinguished component and leaves no connected residual with all
+six outside contacts.  Only a proper-minor colouring response can now break
+that obstruction or synchronize the returned boundary.
+
 Repeated contacts alone do not lower component defect: after a split the
 exact value is
 
@@ -785,7 +808,10 @@ with the first-hit rank providing the primary mechanism.
    model-preserving pair, or returned order-seven-through-ten separator.
    Prove that it gives a new named first hit, a strict compatible model
    reduction, an exact-seven descent, or a new opposite-shore support which
-   violates the displayed Hall deficiency.
+   violates the displayed Hall deficiency.  In the reserved-component
+   normal form it is enough to reroute one proper-subfamily linkage away
+   from the reserved component, leave a connected six-contact residual after
+   the linkage, or return one compatible exact-seven boundary partition.
 2. **Minimum oriented interface.**  At the minimum two-full-component
    boundary, eliminate a boundary-edge pinch, lower separator excess to
    zero while retaining the opposite response partitions, or split the
@@ -884,6 +910,7 @@ cannot supply the missing labelled allocation.
 - [paired-boundary partial-switch calculus](../results/hc7_paired_boundary_partial_switch_calculus.md)
 - [exact selected-partition preservation at a seven-separator](../results/hc7_exact7_selected_response_preservation.md)
 - [two-contact label-preserving branch-set transfer](../results/hc7_response_aligned_two_contact_lobe_transfer.md)
+- [reserved-component linkage completion and three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [repeated contacts and component defect](../results/hc7_repeated_contact_component_defect.md)
 - [opposite-shore critical edges give a rooted four-vertex model or exact seven-separation](../results/hc7_cross_shore_critical_edge_linkage.md)
 - [label-preserving absorption of a five-contact rejection component](../results/hc7_five_contact_rejection_component_absorption.md)

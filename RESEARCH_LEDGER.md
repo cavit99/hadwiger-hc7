@@ -512,6 +512,30 @@ inside one branch set to bounded host geometry.  The remaining work is to
 convert one of those operation-specific edge or separator responses into
 the named first-hit allocation or Hall matching.
 
+The proper-subfamily linkage branch now has a parameter-uniform terminal
+construction.  Let `I` be any inclusion-minimal deficient owner family of
+order `m`, `2<=m<=5`, and let `K` be its `m-1` vertex Rado--Menger
+transversal.  Suppose a component `C` of the donor minus `K` is anticomplete
+to the retained donor and adjacent to all six outside branch sets.  If the
+owners in `I-{R_0}` can be linked to distinct retained-donor portals while
+avoiding `C`, then the retained donor plus the linkage paths, `C`, and five
+explicitly selected or merged outside branch sets form a `K_7`-minor model.
+The same construction works when the paths meet `C` but leave a connected
+remainder adjacent to the linkage union and all six outside branch sets.
+
+For a three-owner circuit with no repeated outside contact, equality in the
+host-neighbourhood bound has also been normalized.  The separated component
+has an eight-vertex literal boundary consisting of the two internal
+transversal vertices and one vertex from each outside branch set.  A
+component missing a boundary vertex returns an actual order-seven
+separation.  Otherwise there are two or three boundary-full components and
+the boundary is four-colourable; in the three-component case it belongs to
+the audited 82-type order-eight residue.  Consequently, in a `K_7`-minor-free
+host every proper-subfamily linkage must use the distinguished component and
+must destroy every connected remainder with the six required outside
+contacts.  This is a smaller dynamic obstruction than the earlier generic
+owner-circuit fork, but it does not yet produce a common boundary partition.
+
 Repeated contacts lower the component defect only when all old contact
 components are retained; the exact defect change is
 
@@ -570,7 +594,10 @@ certificates into a terminal outcome:
 1. the incident differently labelled edge pair, repeated model-preserving
    edge pair, or returned order-seven-through-ten separation must yield a
    new named first hit, a strict model reduction, or a Hall-reflecting
-   partition; or
+   partition; equivalently, in the reserved-component branch a proper-minor
+   response must reroute one proper-subfamily linkage away from the reserved
+   component, leave the connected remainder required by the explicit
+   completion theorem, or return a compatible exact-seven partition; or
 2. at the universally orientable order-seven separator, the named remnants
    must satisfy the Hall duty inequalities for one legal partition, or the
    Hall-deficient block family must force the endpoint-rooted `K_4` to
@@ -605,6 +632,7 @@ The newly promoted sources are the
 [two-contact branch-set transfer](results/hc7_response_aligned_two_contact_lobe_transfer.md),
 [first-hit rank preservation under branch-set transfer](results/hc7_first_hit_rank_preserving_branch_set_transfer.md),
 [multi-owner portal-linkage transfer](results/hc7_multi_owner_portal_linkage_transfer.md),
+[reserved-component linkage completion and the three-label order-eight normal form](results/hc7_reserved_component_linkage_completion.md),
 [Hall obstruction at a label-transversal critical pinch](results/hc7_label_transversal_pinch_hall_obstruction.md),
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),
 and [opposite-shore critical-edge linkage](results/hc7_cross_shore_critical_edge_linkage.md),

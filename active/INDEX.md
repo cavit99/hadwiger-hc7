@@ -81,6 +81,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [label-preserving transfer from two contacts into one branch set](../results/hc7_response_aligned_two_contact_lobe_transfer.md)
 - [first-hit rank preservation under every zero- or one-owner transfer](../results/hc7_first_hit_rank_preserving_branch_set_transfer.md)
 - [multi-owner portal linkage gives a strict label-preserving branch-set transfer](../results/hc7_multi_owner_portal_linkage_transfer.md)
+- [reserved-component linkage completion and the exact three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [a label-transversal critical pinch has an exact Hall-deficient opposite-shore residue](../results/hc7_label_transversal_pinch_hall_obstruction.md)
 - [repeated contacts and the exact component-defect change](../results/hc7_repeated_contact_component_defect.md)
 - [opposite-shore critical edges give a rooted `K_4` or exact order-seven separation](../results/hc7_cross_shore_critical_edge_linkage.md)

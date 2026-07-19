@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "a67afe9bdeaa7589e9c40c9f947cbaaf67f7fde9c1fe06f1d24593830cde7b34"
+expected_source_sha256 = "175833682eaa52b5ddb9d954130e6533cf1c50534c33b9092f57b011bfd2ae93"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -41,6 +41,8 @@ hypotheses = [
   "a full labelled owner-portal linkage gives K7 or a strict model-and-rank descent; failure gives an internal transversal of order at most four",
   "for two owners, portal-linkage failure gives concentrated incident contacts, a label-transversal order-seven boundary, or a repeated model-preserving contact pair",
   "every minimal owner circuit gives an incident differently labelled contact pair, a repeated model-preserving contact pair, or an actual separator of order at most ten",
+  "a reserved component plus a proper-subfamily owner linkage avoiding it gives an explicit K7, uniformly for two through five owners",
+  "the three-owner no-repeated-contact equality case has a literal order-eight boundary or returns an actual order-seven separation",
   "at a label-transversal critical pinch, the legal opposite-shore partition has an exact Hall-deficient support family with one or two full supports",
   "one critical edge in each opposite shore gives an endpoint-rooted K4 minor or a universally orientable exact order-seven separator",
   "a transported boundary partition reflects exactly when the named connected contraction supports exist on the opposite closed shore",
@@ -58,6 +60,7 @@ does_not_prove = [
   "reservation of three inherited branch sets in the endpoint-rooted K4 outcome",
   "realization of one legally transported partition by five named connected contraction supports on the opposite shore",
   "dynamic closure of the incident differently labelled, repeated model-preserving, and bounded-separator owner-circuit outcomes",
+  "a proper-minor response which reroutes a proper-subfamily linkage away from the reserved component, preserves a six-contact residual, or synchronizes the returned boundary",
   "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
 ]
 keywords = ["degree seven", "labelled first hit", "strict gammoid", "rooted K4", "exact seven-separator", "colour gluing"]
@@ -2551,6 +2554,53 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.three_owner_order8_normal_form"
+title = "A three-owner circuit has a literal order-eight boundary normal form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_reserved_component_linkage_completion.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_reserved_component_linkage_completion_audit.md"
+expected_source_sha256 = "9710607f41d2c5120f5a24daa0f909a0e5e5fbf119f9e0d7198ebcea98c0b2ff"
+scope = "a three-owner minimal portal circuit in the no-repeated-contact equality-eight branch"
+label_fidelity = "the boundary contains the two literal internal transversal vertices and one literal vertex from each outside branch set"
+separator_order = "a component missing a boundary vertex returns an actual order-seven separation; otherwise the boundary has order eight"
+conclusions = [
+  "an actual order-seven full-neighbourhood separation",
+  "or exactly two or three boundary-full components behind a four-colourable order-eight boundary",
+  "with three components, the boundary belongs to the audited 82-type residue",
+]
+does_not_prove = [
+  "a common boundary partition on the two closed shores",
+  "that every minimal owner family has order three",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.reserved_component_linkage_completion"
+title = "A proper-subfamily owner linkage avoiding a reserved component completes a K7 model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_reserved_component_linkage_completion.md"
+source_heading = "Theorem 4.1 (reserved-component linkage completion)"
+active = true
+audit = "results/hc7_reserved_component_linkage_completion_audit.md"
+expected_source_sha256 = "9710607f41d2c5120f5a24daa0f909a0e5e5fbf119f9e0d7198ebcea98c0b2ff"
+scope = "every minimal deficient owner family of order two through five in the labelled K7-minus-one-edge transfer configuration"
+label_fidelity = "the linkage paths are indexed by all owners except one; the reserved component retains literal contacts to all six outside branch sets"
+conclusions = [
+  "an explicit K7-minor model when the proper-subfamily linkage avoids the reserved component",
+  "the same conclusion when the linkage leaves a connected residual adjacent to its union and all six outside branch sets",
+]
+does_not_prove = [
+  "that a proper-subfamily linkage avoids the reserved component",
+  "that a linkage meeting the component leaves the required connected residual",
+  "a compatible boundary partition",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.transported_partition_hall_reflection"
 title = "Hall reflection of a boundary partition through mixed connected supports"
 kind = "theorem"
@@ -2811,6 +2861,41 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.owner_circuit_bounded_host_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.three_owner_order8_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.reserved_component_linkage_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_normal_form"
+target = "hc7.multi_owner_portal_linkage_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_normal_form"
+target = "hc7.full_order8_four_component_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_normal_form"
+target = "hc7.two_full_shore_boundary_absorption"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_normal_form"
+target = "hc7.order8_three_component_boundary_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.reserved_component_linkage_completion"
+target = "hc7.multi_owner_portal_linkage_transfer"
 kind = "uses"
 
 [[relations]]
@@ -3730,7 +3815,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "a67afe9bdeaa7589e9c40c9f947cbaaf67f7fde9c1fe06f1d24593830cde7b34"
+evidence_sha256 = "175833682eaa52b5ddb9d954130e6533cf1c50534c33b9092f57b011bfd2ae93"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3752,7 +3837,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "a67afe9bdeaa7589e9c40c9f947cbaaf67f7fde9c1fe06f1d24593830cde7b34"
+evidence_sha256 = "175833682eaa52b5ddb9d954130e6533cf1c50534c33b9092f57b011bfd2ae93"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3761,9 +3846,9 @@ kind = "uses"
 note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
 evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
-evidence_start_line = 900
-evidence_end_line = 925
-evidence_sha256 = "ea7b4e7195335864d87622fc50e84a610f67d40d93260a538a14e6fec0b11526"
+evidence_start_line = 1004
+evidence_end_line = 1023
+evidence_sha256 = "f69c94076e045d5a69b447704c6d51370a416e16219ebeeb3f1f81e29f20b353"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
