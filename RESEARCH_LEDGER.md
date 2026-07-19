@@ -145,6 +145,27 @@ fixed pair of disjoint triangles).  The two-lobe configuration itself is
 not eliminated, and the two residual boundary types with odd-cycle packing
 orders `(3,5)` are not covered by this strengthening.
 
+The singleton selected-component case also has an unbounded
+low-connectivity reduction.  The other two components cannot be
+singletons; cutvertices with three or more lobes are eliminated; and both
+remaining components cannot simultaneously contain a cutvertex or bridge.
+Every surviving bridge or two-lobe cutvertex split consists of two adjacent
+connected pieces with distinct missed boundary vertices `d,e`, where `de`
+is a nonedge and deleting `d,e` leaves a bipartite boundary.  In the
+cutvertex case the cutvertex misses both `d` and `e`.  This exact two-piece
+configuration remains open.
+
+The two-component interface has a new unbounded colouring closure.  If one
+boundary-full component contains a nontrivial path between the two root
+portal sets, disjoint from a connected subgraph meeting every portal of one
+bipartition class, the other full component supplies the second class.  Two
+proper-minor contractions then realize both possible root equality
+patterns on the opposite closed shore, so one matches and the graph
+six-colours.  For a two-vertex class, every survivor is therefore a
+negative set-terminal Two Paths instance: a common-portal degeneracy or a
+crossless four-terminal web.  The analogous three-vertex class still lacks
+the required disjoint portal-spanning connected subgraph.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains

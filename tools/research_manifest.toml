@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "b3ecadecefd7aed566a49361da82984a2ca1b0b57280051c2e291193c33a3725"
+expected_source_sha256 = "766007cf3826363d7ded2b9142c383bbdeda55745c28ae3c2960286b8728b702"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3753,6 +3753,58 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_singleton_low_connectivity"
+title = "Low-connectivity reduction for a singleton component at an order-eight boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_singleton_low_connectivity_reduction.md"
+active = true
+audit = "results/hc7_order8_singleton_low_connectivity_reduction_audit.md"
+expected_source_sha256 = "dfc13ca824f17efa4dec7240828a2d375b3e65910dcf96c088ae694c97ee914f"
+scope = "the exact three-component boundary-full order-eight interface with one singleton component and a three-colourable boundary of independence number at most three containing two vertex-disjoint odd cycles"
+separator_order = "cutvertex or bridge lobes with six boundary contacts return an actual order-seven separation; all other surviving pieces have boundary defect at most one"
+label_fidelity = "the two defects and the cutvertex are literal host vertices; no inherited equality partition or minor-model labels are preserved"
+conclusions = [
+  "five disjoint connected subgraphs outside the boundary, one full and four of defect at most one, force an explicit K7 minor",
+  "the two nonsingleton exterior components cannot both contain a cutvertex or bridge",
+  "every surviving bridge or two-lobe cutvertex split has two adjacent connected sides with distinct exact defects d,e, with de absent and the boundary minus d,e bipartite",
+  "in the cutvertex case the cutvertex is adjacent to neither defect vertex",
+]
+does_not_prove = [
+  "elimination of the surviving two-piece residue",
+  "a common equality partition at a returned order-seven separation",
+  "closure when both nonsingleton exterior components are two-connected",
+  "preservation of inherited minor-model labels",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_three_block_linkage_reflection"
+title = "Reserved path and connected boundary-block subgraphs realize both root responses"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_three_block_linkage_reflection.md"
+active = true
+audit = "results/hc7_order8_three_block_linkage_reflection_audit.md"
+expected_source_sha256 = "e7d5db7a4cd9226f7dc2f50cb15b98977dc08707f9d7649e3eb9cb29c7fe7ccc"
+scope = "an order-eight two-shore interface with a nonadjacent root pair d,e, a bipartition X,Y of the remaining boundary, and on one shore a reserved root path disjoint from connected subgraphs meeting all X- and Y-portals"
+separator_order = "the theorem is a positive-linkage colouring closure; its negative crossless-web case remains"
+label_fidelity = "all portal contacts and the reserved path are literal host subgraphs; no palette colour is identified with a branch-set label"
+conclusions = [
+  "three connected carriers realize the exact boundary partition X|Y|{d,e} on the opposite closed shore",
+  "splitting the nontrivial root path realizes X|Y|{d}|{e} on the same closed shore",
+  "one of the two responses matches the nonempty response set on the other shore, so the colourings glue",
+  "when one bipartition class has order two, every counterexample residue is a negative set-terminal Two Paths instance in each named full component",
+]
+does_not_prove = [
+  "elimination of a common-root-portal degeneracy",
+  "elimination of the crossless four-terminal web obstruction",
+  "existence of a connected portal-spanning subgraph for a three-vertex bipartition class",
+  "a compatible order-seven separator in the negative case",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.order8_three_full_one_defect2_quotient"
 title = "Three boundary-full connected subgraphs and one defect-two subgraph do not force a K7 minor"
 kind = "barrier"
@@ -3877,6 +3929,18 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_two_cut_triangle_transversal"
 kind = "uses"
 note = "For the 80 two-triangle residual boundaries, this reduces every unresolved two-cut to exactly two defect-one lobes whose distinct misses meet every boundary triangle."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_singleton_low_connectivity"
+kind = "uses"
+note = "This eliminates all but one exact low-connectivity geometry when the selected order-eight component is a singleton."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_three_block_linkage_reflection"
+kind = "uses"
+note = "This closes every positive reserved path-versus-boundary-block linkage in the two-component opposite-response residue, leaving only the negative set-terminal path/tree obstruction."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4929,7 +4993,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "b3ecadecefd7aed566a49361da82984a2ca1b0b57280051c2e291193c33a3725"
+evidence_sha256 = "766007cf3826363d7ded2b9142c383bbdeda55745c28ae3c2960286b8728b702"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4951,7 +5015,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "b3ecadecefd7aed566a49361da82984a2ca1b0b57280051c2e291193c33a3725"
+evidence_sha256 = "766007cf3826363d7ded2b9142c383bbdeda55745c28ae3c2960286b8728b702"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

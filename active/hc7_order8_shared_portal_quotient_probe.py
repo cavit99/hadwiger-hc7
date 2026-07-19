@@ -405,6 +405,40 @@ def shortest_cycle_order(boundary: tuple[int, ...], vertices: int) -> int | None
     return None
 
 
+def minimum_root_valid_bipartition_side(
+    boundary: tuple[int, ...], d: int, e: int
+) -> int:
+    """Minimum smaller class with both roots seeing both classes."""
+
+    remainder = [vertex for vertex in range(N) if vertex not in (d, e)]
+    best = N
+    for assignment in range(1 << len(remainder)):
+        colour = {
+            vertex: (assignment >> index) & 1
+            for index, vertex in enumerate(remainder)
+        }
+        if any(
+            colour[left] == colour[right]
+            for index, left in enumerate(remainder)
+            for right in remainder[index + 1 :]
+            if (boundary[left] >> right) & 1
+        ):
+            continue
+        if not all(
+            any(
+                ((boundary[root] >> vertex) & 1) and colour[vertex] == value
+                for vertex in remainder
+            )
+            for root in (d, e)
+            for value in (0, 1)
+        ):
+            continue
+        first = sum(colour.values())
+        best = min(best, first, len(remainder) - first)
+    assert best < N
+    return best
+
+
 def automorphisms(boundary: tuple[int, ...]) -> tuple[tuple[int, ...], ...]:
     degree = tuple(row.bit_count() for row in boundary)
     order = sorted(
@@ -591,8 +625,18 @@ def main() -> None:
             remaining -= orbit
             orbit_representatives.append((code, *representative))
     assert len(orbit_representatives) == 19
+    minimum_side_counts: Counter[int] = Counter()
+    for code, pairs in true_survivor_pairs.items():
+        boundary = boundary_by_code[code]
+        for d, e in pairs:
+            minimum_side_counts[
+                minimum_root_valid_bipartition_side(boundary, d, e)
+            ] += 1
+    assert minimum_side_counts == Counter({2: 66, 3: 58})
     print(f"strict_true_quotient_orbits={len(orbit_representatives)}")
     print(f"strict_true_survivor_sha256={true_survivor_digest}")
+    for side, count in sorted(minimum_side_counts.items()):
+        print(f"strict_true_survivor_min_bipartition_side={side} count={count}")
     for code, d, e in orbit_representatives:
         print(f"strict_quotient_orbit {code} d={d} e={e}")
     for item in uncovered_true_quotient_survivors:

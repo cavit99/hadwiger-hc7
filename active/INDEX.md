@@ -30,6 +30,8 @@ Immediate proved inputs, each with an adjacent audit:
 - [leaf-block descent for a selected order-eight component with a cutvertex](../results/hc7_order8_leaf_block_descent.md)
 - [small-boundary lobe descent and the defect-one two-cut residue](../results/hc7_order8_small_boundary_lobe_descent.md)
 - [triangle-transversal structure of the remaining two-cut residue](../results/hc7_order8_two_cut_triangle_transversal.md)
+- [low-connectivity reduction for a singleton selected component](../results/hc7_order8_singleton_low_connectivity_reduction.md)
+- [reserved path and boundary-block subgraphs realize both root responses](../results/hc7_order8_three_block_linkage_reflection.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)

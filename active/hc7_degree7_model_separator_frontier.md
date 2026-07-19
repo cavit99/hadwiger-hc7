@@ -432,6 +432,19 @@ opposite end.  If the transition has length one, the same boundary
 interchange is obstructed on both sides.  The paths are not yet proved to
 meet the inherited branch sets in the required labelled pattern.
 
+There is now a complete positive-linkage closure in this two-component
+normal form.  If one named full component contains a nontrivial path
+between the `d`- and `e`-portal sets, disjoint from a connected subgraph
+meeting every portal of one bipartition class, the other full component
+supplies the second class.  Three- and four-block contractions realize both
+root equality responses on the opposite shore; one response therefore
+matches and the two shore colourings glue.  When the selected class has
+order two, the exact survivor is a negative set-terminal Two Paths
+instance in each named full component: either the root portal sets share a
+degenerate first hit or the four portals have a crossless web obstruction.
+For a class of order three, the unresolved analogue is the failure of a
+root path disjoint from a connected subgraph meeting all three portal sets.
+
 The component-missing branch is sharper than a bare separator return.  Its
 new seven-vertex boundary has exact-block-complete extension languages on
 both shores.  A split boundary therefore synchronizes immediately.  In the
@@ -1065,6 +1078,16 @@ each member of any fixed pair of disjoint triangles.  This does not yet
 eliminate the two-lobe configuration and does not cover the two residual
 boundary types whose certified disjoint odd cycles have orders `(3,5)`.
 
+When the selected component is a singleton, low connectivity in the other
+two components is now equally constrained.  Neither is a singleton;
+cutvertices with at least three lobes are terminal; and at most one of the
+two components can contain a cutvertex or bridge.  Every surviving bridge
+or two-lobe cutvertex split has two adjacent connected sides with distinct
+defects `d,e`, where `de` is absent and `G[S-{d,e}]` is bipartite.  A
+surviving cutvertex itself misses both defects.  The remaining issue is the
+label- and colouring-sensitive two-piece configuration, not the existence
+of further lobes.
+
 The induced-path-component hypothesis is essential: the seven-connected,
 `K_7`-minor-free graph obtained as the join of `K_2` and the icosahedral
 graph has an all-boundary path fan with strictly reversed demands but no
@@ -1329,6 +1352,8 @@ one of the three literal host configurations above.
 - [leaf-block descent for a selected order-eight component with a cutvertex](../results/hc7_order8_leaf_block_descent.md)
 - [small-boundary lobe descent and the defect-one two-cut residue](../results/hc7_order8_small_boundary_lobe_descent.md)
 - [triangle-transversal structure of the remaining two-cut residue](../results/hc7_order8_two_cut_triangle_transversal.md)
+- [low-connectivity reduction for a singleton selected component](../results/hc7_order8_singleton_low_connectivity_reduction.md)
+- [reserved path and boundary-block subgraphs realize both root responses](../results/hc7_order8_three_block_linkage_reflection.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)
