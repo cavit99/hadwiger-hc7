@@ -773,6 +773,16 @@ have literal Kempe obstruction paths and Hall-deficient connected-support
 systems.  These paths and supports are operation-specific, but they are not
 yet allocated to the inherited branch-set labels.
 
+Raw five-contact support is not a terminal substitute for that allocation.
+The exact quotient classification for two adjacent connected subgraphs and
+the six outside branch sets has two sharp obstruction types: crossed misses
+at `X,Y`, and distinct misses among `D,F_1,F_2,F_3`.  Their quotients are
+respectively `K_8` minus the edges of a four-vertex path and `K_8-3K_2`.
+Every other pattern gives an explicit `K_7`-minor model, and repairing any
+one of the three missing adjacencies in either obstruction is terminal.  The
+correct dynamic object is therefore the family of outside branch sets usable
+simultaneously by both connected subgraphs, not the number of raw contacts.
+
 Repeated contacts alone do not lower component defect: after a split the
 exact value is
 
@@ -946,6 +956,9 @@ cannot supply the missing labelled allocation.
 - [reserved-component linkage completion and three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [three-owner component concentration and two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
 - [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
+- [exact completion classification for two connected subgraphs at a near-complete six-branch-set model](../results/hc7_five_contact_completion_classification.md)
+- [endpoint-`K_4` transfer or an actual order-seven separation](../results/hc7_endpoint_k4_transfer_or_order7.md)
+- [distinct-boundary prescribed-spoke transfer](../results/hc7_distinct_boundary_spoke_owner_transfer.md)
 - [operation-coupled colouring responses at a boundary-full order-eight separation](../results/hc7_operation_coupled_order8_response.md)
 - [repeated contacts and component defect](../results/hc7_repeated_contact_component_defect.md)
 - [opposite-shore critical edges give a rooted four-vertex model or exact seven-separation](../results/hc7_cross_shore_critical_edge_linkage.md)

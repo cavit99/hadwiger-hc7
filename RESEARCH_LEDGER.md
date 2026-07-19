@@ -582,6 +582,17 @@ and Hall-deficient connected-support systems.  The theorem deliberately does
 not assign the clean fan to five inherited branch-set labels or preserve a
 six-contact residual after that assignment.
 
+An exact eight-object quotient classification also corrects a tempting
+shortcut in that fan branch.  Two adjacent connected subgraphs which each
+meet five of the six outside branch sets do not always complete the model.
+Besides the crossed `X,Y` misses, a second sharp obstruction occurs when the
+two connected subgraphs miss two distinct members of
+`{D,F_1,F_2,F_3}`; its quotient is `K_8-3K_2`.  These and the crossed
+quotient are the only exceptions under the reserved-component hypotheses,
+and repairing any one of their three missing adjacencies gives an explicit
+`K_7`-minor model.  Thus subsequent arguments must count mutually usable
+outside branch sets, rather than raw contacts.
+
 Repeated contacts lower the component defect only when all old contact
 components are retained; the exact defect change is
 
@@ -690,6 +701,14 @@ The newly promoted sources are the
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),
 and [opposite-shore critical-edge linkage](results/hc7_cross_shore_critical_edge_linkage.md),
 each with an adjacent internal audit.
+
+The supplementary audited constructions are the
+[exact two-subgraph completion classification](results/hc7_five_contact_completion_classification.md),
+[endpoint-`K_4` transfer](results/hc7_endpoint_k4_transfer_or_order7.md),
+and [distinct-boundary prescribed-spoke transfer](results/hc7_distinct_boundary_spoke_owner_transfer.md).
+They remain useful as labelled constructions and guardrails, but the
+three-fan theorem supersedes them as the active route through the
+concentrated three-owner order-eight branch.
 
 This does not prove `HC_7`.  It closes the one-hole donor splitting problem,
 the disjoint two-trace linkage branch, broad degree-eight cyclic-contact

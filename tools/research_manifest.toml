@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "69e8b0e717632dc2ed21478ed1711be38b0b553b588e030ff76fa4b2d74c5925"
+expected_source_sha256 = "b57c1879bca54749491f53ca7fd366934a2a07868355b801fb241b4e562a6e85"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -2700,6 +2700,79 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.five_contact_completion_classification"
+title = "Exact completion classification for two connected subgraphs at a K6-minus-one-edge model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_contact_completion_classification.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_five_contact_completion_classification_audit.md"
+expected_source_sha256 = "02949267b281bc8dc883cd13e94490b10e9be8601bc9bb7a11a3f72855ee83f0"
+scope = "two adjacent connected subgraphs, each missing at most one of six outside branch sets forming a K6-minus-one-edge model, with the first miss not at D"
+label_fidelity = "all eight connected sets and all three possible missing adjacencies retain their literal inherited labels"
+conclusions = [
+  "every nonterminal quotient gives an explicit K7-minor model",
+  "the only quotient obstructions are crossed polar misses and distinct universal misses",
+  "repairing any one of the three missing adjacencies in either obstruction gives an explicit K7-minor model",
+  "with at most four outside contacts, a residual component has two linkage attachments unless its full neighbourhood is an actual order-seven boundary",
+]
+does_not_prove = [
+  "that five raw outside contacts always complete K7",
+  "a response path repairing one of the three exceptional missing adjacencies",
+  "a common boundary partition",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.endpoint_k4_transfer_or_order7"
+title = "An endpoint K4 gives a strict labelled transfer or an order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_endpoint_k4_transfer_or_order7.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_endpoint_k4_transfer_or_order7_audit.md"
+expected_source_sha256 = "da446cbcacde393aa24bb8f0a3bdce86527e392c2065dfd170fe8bb6f800e81d"
+scope = "the endpoint-K4 alternative for two differently labelled owner-contact edges in the concentrated three-owner branch"
+strict_parameter = "the donor branch-set order after preserving maximum relaxed first-hit rank"
+label_fidelity = "the selected response subgraph, roots, boundary partition and inherited branch-set labels are preserved"
+separator_order = "exactly seven"
+conclusions = [
+  "an explicit K7-minor model",
+  "an actual order-seven full-neighbourhood separation",
+  "or a strict compatible donor reduction",
+]
+does_not_prove = [
+  "a common equality partition at the returned separation",
+  "closure of the spanning-K6 alternative of the two-edge response",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.distinct_boundary_spoke_owner_transfer"
+title = "Five prescribed response edges give distinct boundary ends and an all-owner transfer"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_distinct_boundary_spoke_owner_transfer.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_distinct_boundary_spoke_owner_transfer_audit.md"
+expected_source_sha256 = "65a166ff3768ccbc69c0afe0380164f180a496852a863487dcdc0d048e66287a"
+scope = "five prescribed first edges at one vertex of the concentrated component and the literal order-eight boundary"
+strict_parameter = "the donor branch-set order after preserving maximum relaxed first-hit rank"
+label_fidelity = "the fan retains the five prescribed host edges and has five distinct literal boundary endpoints"
+conclusions = [
+  "five internally component-contained paths with distinct boundary endpoints and at least four inherited labels",
+  "in the all-owner endpoint pattern, an explicit K7, a strict compatible donor reduction, or one common literal portal for all three owner labels",
+]
+does_not_prove = [
+  "that the five endpoints realize the all-owner pattern",
+  "preservation of the bichromatic colour assigned to each response path",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.operation_coupled_exact7_response"
 title = "The returned exact seven-separation has two operation-coupled Hall-deficient orientations"
 kind = "theorem"
@@ -3937,7 +4010,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "69e8b0e717632dc2ed21478ed1711be38b0b553b588e030ff76fa4b2d74c5925"
+evidence_sha256 = "b57c1879bca54749491f53ca7fd366934a2a07868355b801fb241b4e562a6e85"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3959,7 +4032,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "69e8b0e717632dc2ed21478ed1711be38b0b553b588e030ff76fa4b2d74c5925"
+evidence_sha256 = "b57c1879bca54749491f53ca7fd366934a2a07868355b801fb241b4e562a6e85"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3968,9 +4041,9 @@ kind = "uses"
 note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
 evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
-evidence_start_line = 1004
-evidence_end_line = 1023
-evidence_sha256 = "5037b7b44b77e6349db5ddee30a7b6a1749af4d98d17008fafdcddd64044c33a"
+evidence_start_line = 1068
+evidence_end_line = 1095
+evidence_sha256 = "bb71519583170dc29b1a561c81cfcd5e0df004a6d70c56835b7eca0e9b0c4410"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4434,6 +4507,46 @@ kind = "uses"
 source = "hc7.three_owner_order8_exact7_reduction"
 target = "hc7.first_hit_rank_preserving_transfer"
 kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_exact7_reduction"
+target = "hc7.endpoint_k4_transfer_or_order7"
+kind = "supersedes"
+
+[[relations]]
+source = "hc7.three_owner_order8_exact7_reduction"
+target = "hc7.distinct_boundary_spoke_owner_transfer"
+kind = "supersedes"
+
+[[relations]]
+source = "hc7.endpoint_k4_transfer_or_order7"
+target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.endpoint_k4_transfer_or_order7"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.distinct_boundary_spoke_owner_transfer"
+target = "hc7.order8_prescribed_spoke_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.distinct_boundary_spoke_owner_transfer"
+target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.distinct_boundary_spoke_owner_transfer"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.five_contact_completion_classification"
+target = "hc7.reserved_component_linkage_completion"
+kind = "related_to"
 
 [[relations]]
 source = "hc7.operation_coupled_order8_fan"
