@@ -1,11 +1,27 @@
 # Independent audit: adaptive exact-seven `(1,2)` boundary closure
 
-**Verdict:** GREEN.
+**Verdict:** GREEN for Lemmas 2.1, 3.1, and 3.2 and for both finite
+censuses, after one diagnostic correction.
 
-## Verdict
+**Audited source:**
+[`hc7_exact7_adaptive_12_boundary_closure.md`](hc7_exact7_adaptive_12_boundary_closure.md)
+at SHA-256
 
-**GREEN for Lemmas 2.1, 3.1, and 3.2 and for both finite censuses, after one
-diagnostic correction.**
+```text
+df8d47261337659ade312bf8a6dfab22453c92bae5841bbb6b6fd303eadf6533
+```
+
+This is a separate internal mathematical audit, not external peer review.
+The deterministic verifiers were rerun at this audit revision with source
+hashes
+
+```text
+hc7_exact7_adaptive_12_boundary_verify.py
+9e988ecc2daf2849850f540d549719b03bd0896c7bceeda47ac28e6dfcc632d8
+
+hc7_exact7_adaptive_12_packet_quotient_probe.py
+0c44a69f09e560d8122e776c3f7c14f6a60a71dc6fd3e166ab6c259d50be4833
+```
 
 The robust independent-block argument never lifts a colouring through a
 packet on the shore where that packet was contracted.  Its first contraction

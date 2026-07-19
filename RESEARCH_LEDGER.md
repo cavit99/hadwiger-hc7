@@ -675,6 +675,77 @@ connected subgraphs used for reflection lie on the shore where that
 partition is legal; they cannot be combined as one Hall system without a
 new trace-preserving transfer theorem.
 
+The two vertices of the failed three-fan cut can now be coupled rather than
+treated one at a time.  Either the exposed open shore is a single
+degree-seven vertex, in which case the opposite shore is connected and has
+full-subgraph packing number one, or the two cut vertices have
+vertex-disjoint entrance edges into the exposed shore.  In the latter case
+the common two-edge deletion has all three nonterminal endpoint signatures
+`(equal,proper)`, `(proper,equal)` and `(equal,equal)`, but never
+`(proper,proper)`.  Every induced boundary partition is legal on the
+opposite closed shore, rejected on the exposed closed shore, has demand
+above the opposite full-subgraph capacity, and has a Hall-deficient family
+for every admissible named support system.
+
+Simultaneous contraction of the two entrance edges gives a connected
+induced two-root list-critical subgraph `K` in the exposed shore.  Its full
+neighbourhood is an actual separation boundary of order at least seven.  A
+proper `K` is strictly smaller than the exposed shore; if `K` fills the
+shore, every vertex satisfies the exact identity
+
+\[
+                  d_G(v)=6+\varepsilon(v)+\rho(v),
+\]
+
+where `\varepsilon` is list-degree excess and `\rho` counts repeated
+boundary-neighbour colours.  Low total excess gives a singleton-side
+separation of order seven or eight, while zero list-degree excess makes the
+shore a Gallai tree.  This is a genuine host-level reduction, but not yet a
+recursive copy of the special interface: a proper core may have boundary
+order greater than seven, one failed edge may lie on each side or in the
+new boundary, and the double-contraction partition need not equal either
+selected one-edge partition.
+
+There is now a well-founded descent in one infinite subfamily of these
+interfaces.  Suppose the connected one-full-subgraph shore has a bridge,
+the opposite shore contains two disjoint boundary-full connected
+subgraphs, and the seven-vertex boundary is bipartite.  Exact two-list
+parity forces one distinct boundary vertex to attach only to each bridge
+side, with the two forced vertices at even boundary distance; the other
+five boundary vertices attach to both sides.  Each bridge side consequently
+has a literal full neighbourhood of order exactly seven.  Its new near
+packing number is one, its opposite packing number is one or two, and
+deleting the bridge gives a complete partition legal on the opposite shore,
+rejected on the bridge side and of excessive demand.  Both bridge sides are
+strictly smaller than the old shore.  Thus a minimum-order
+operation-specific exact-seven interface in this bipartite `(1,2)` branch
+is bridgeless.  The move deliberately recomputes the new packing vector; it
+does not preserve the old partition, boundary bipartition or inherited
+minor-model labels.
+
+The shore-filling two-root list-critical branch now has a substantially
+sharper density bound.  Let `r` be the shore order, `E` the total internal
+list-degree excess and
+`\Delta=\sum_v(d_G(v)-9)`.  Unless a degree-seven or degree-eight vertex
+already gives a singleton-side separation,
+
+\[
+                         11r+9\Delta\le128+5E.
+\]
+
+The new coefficient comes from the operation-specific high-demand boundary
+partition: no boundary colour class has order six or seven, so repeated
+boundary-neighbour colours are at most four times the distinct-colour
+incidences.  In the all-tight case `E=0`, the entire shore has order at most
+eleven.  Its Gallai-tree structure is also exact: an endblock lobe with six
+boundary contacts gives an order-seven separation; otherwise every
+endblock lobe is boundary-full, so the block-cutvertex tree is a path.  If
+there is only one block, it is `K_4` or `K_5`.  The remaining unbounded
+obstruction is therefore positive total list-degree excess, not the
+all-tight branch.  Existing odd-wheel examples show that this excess cannot
+be bounded from the local two-root list data alone; the next exchange must
+use global `K_7`-minor exclusion or further proper-minor responses.
+
 The existing exact-block and Hall-reflection theorems apply once the
 returned boundary carries the required operation-specific response; the new
 three-fan reduction by itself does not supply that decoration.  Outside this
@@ -715,6 +786,9 @@ The newly promoted sources are the
 [three-owner component concentration and its two-edge response substrate](results/hc7_three_owner_reserved_component_concentration.md),
 [three-owner order-eight reduction to an actual order-seven separation](results/hc7_three_owner_order8_exact7_reduction.md),
 [operation responses at the resulting special five-plus-two exact-seven boundary](results/hc7_special_five_plus_two_exact7_response.md),
+[two-boundary-vertex reduction to a singleton shore or two-root list-critical core](results/hc7_special_exact7_two_edge_list_core.md),
+[bipartite-boundary bridge response descent](results/hc7_exact7_bipartite_bridge_response_descent.md),
+[special shore-filling density and block structure](results/hc7_special_shore_filling_density.md),
 [operation-coupled colouring responses at a boundary-full order-eight separation](results/hc7_operation_coupled_order8_response.md),
 [Hall obstruction at a label-transversal critical pinch](results/hc7_label_transversal_pinch_hall_obstruction.md),
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),

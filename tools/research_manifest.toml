@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "38ea560029c0abb8637aa75caf3cbde24ae0b739325a32d41bacd5977147952a"
+expected_source_sha256 = "4f4927763648c408f04c9dd02265f01169dc5409c5dca4399136f60e06516ff5"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -296,10 +296,11 @@ does_not_prove = [
 id = "hc7.exact7_adaptive_12_boundary_closure"
 title = "Adaptive (1,2) boundary closure"
 kind = "theorem"
-status = "written-unaudited"
+status = "audited-green"
 source = "results/hc7_exact7_adaptive_12_boundary_closure.md"
 source_heading = "Theorem 4.1"
 active = false
+audit = "results/hc7_exact7_adaptive_12_boundary_closure_audit.md"
 expected_source_sha256 = "df8d47261337659ade312bf8a6dfab22453c92bae5841bbb6b6fd303eadf6533"
 scope = "computer-assisted boundary classification within an actual exact-seven (1,2) full-subgraph packing separation"
 hypotheses = [
@@ -2823,6 +2824,111 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.special_exact7_two_edge_list_core"
+title = "Two boundary vertices yield a singleton shore or a two-root list-critical core"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_special_exact7_two_edge_list_core.md"
+source_heading = "Two distinguished boundary vertices yield a singleton shore or a two-root list-critical core"
+active = true
+audit = "results/hc7_special_exact7_two_edge_list_core_audit.md"
+expected_source_sha256 = "c59ce7f61df334635c3a8bda6b8528774b4687e06203786b747175dd61ca3e08"
+scope = "the special five-plus-two exact-seven separation returned by the concentrated three-owner reduction"
+separator_order = "the input boundary has order seven; a proper list-critical core returns its full neighbourhood of order at least seven; low excess in the shore-filling case gives order seven or eight"
+colour_compatibility = "the equal/proper, proper/equal and equal/equal response partitions are legal on the opposite closed shore and rejected on the exposed shore, but no common repaired complete partition is produced"
+label_fidelity = "the two distinguished cut vertices and their distinct exposed-shore neighbours remain literal through the simultaneous contraction and list-critical reduction"
+strict_parameter = "a proper list-critical core K has strictly fewer vertices than the exposed shore A, but the returned separation is not yet a recursive copy of the special interface"
+conclusions = [
+  "either the exposed shore is one degree-seven vertex and the opposite shore is connected with full-subgraph packing number one",
+  "or the two distinguished boundary vertices have vertex-disjoint entrance edges into the exposed shore",
+  "the common two-edge deletion realizes exactly the three non-proper/proper endpoint signatures and every induced boundary partition has excessive demand and a Hall-deficient support family",
+  "simultaneous contraction produces a connected two-root list-critical core and an actual full-neighbourhood separation",
+  "a shore-filling core satisfies the exact degree identity d_G(v)=6+epsilon(v)+rho(v) and is a Gallai tree when epsilon vanishes everywhere",
+]
+does_not_prove = [
+  "an order-seven upper bound for the list-critical core boundary",
+  "repair of failed edges on opposite sides or in the boundary",
+  "a recursive descent preserving either selected one-edge partition",
+  "a K7 minor or a six-colouring",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.exact7_two_carrier_list_obstruction"
+title = "Exact two-connected-subgraph list obstruction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_two_carrier_list_obstruction.md"
+source_heading = "Exact two-carrier clique-OCT obstruction and gate reassignment"
+active = false
+audit = "results/hc7_exact7_two_carrier_list_obstruction_audit.md"
+expected_source_sha256 = "f8b52b9e4f0b18a0bfcf8ee5458d9f18f4b55f9789edf4e94f3aaaa7b738d113"
+scope = "two disjoint adjacent connected subgraphs on one shore and two disjoint boundary-full connected subgraphs on the other"
+colour_compatibility = "a proper colouring from the literal two-carrier lists reproduces the same one- or two-block boundary partition on both shores"
+conclusions = [
+  "nonspanning two-connected-subgraph synchronization",
+  "an exact parity characterization of uncolourable two-list instances on a bipartite boundary",
+  "literal update criteria under one connected-piece reassignment",
+]
+does_not_prove = [
+  "existence of a geometric reassignment",
+  "closure by a different proper-minor construction when the named list instance fails",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.exact7_bipartite_bridge_response_descent"
+title = "A bridge in the thin shore gives a strict exact-seven response descent"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_bipartite_bridge_response_descent.md"
+source_heading = "A bridge in the thin shore gives a strict exact-seven response descent"
+active = true
+audit = "results/hc7_exact7_bipartite_bridge_response_descent_audit.md"
+expected_source_sha256 = "638adad4e58de96f59918d8ebf13d224f1cff9b61889ef7f9a0ee6a44f7f94e1"
+scope = "an exact-seven separation with connected boundary-full thin shore, two full connected subgraphs on the other shore, bipartite boundary and a bridge in the thin shore"
+separator_order = "each bridge side has a literal full neighbourhood of order exactly seven"
+colour_compatibility = "deleting the bridge gives a complete boundary partition legal on the opposite closed shore, rejected on the bridge-side shore and of demand above the opposite packing number"
+strict_parameter = "each returned connected bridge side has fewer vertices than the original thin shore"
+conclusions = [
+  "a unique pair of forced boundary vertices at even distance and five vertices contacting both bridge sides",
+  "two smaller exact-seven interfaces whose near full-subgraph packing number is one and whose opposite packing number is one or two",
+  "a strict response-carrying connected-side descent",
+]
+does_not_prove = [
+  "preservation of the old boundary partition or bipartiteness",
+  "preservation of special five-plus-two or inherited minor-model labels",
+  "a six-colouring or K7 minor",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.special_shore_filling_density"
+title = "Density and block structure in the special shore-filling list-critical core"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_special_shore_filling_density.md"
+source_heading = "Density and block structure in the special shore-filling list-critical core"
+active = true
+audit = "results/hc7_special_shore_filling_density_audit.md"
+expected_source_sha256 = "eae97b46408659849c246d58c8d05f741d758df4b1df59f631380013d594ee08"
+scope = "the shore-filling two-root list-critical branch of the special five-plus-two exact-seven interface"
+separator_order = "low degree gives order seven or eight; a six-contact endblock lobe gives order exactly seven"
+strict_parameter = "the all-tight shore has at most eleven vertices and, absent an exact-seven endblock, has a path block-cutvertex tree"
+conclusions = [
+  "the exact inequality 11r+9Delta <= 128+5E unless a degree-seven/eight singleton separator exists",
+  "an all-tight shore has at most eleven vertices",
+  "a multi-block all-tight shore is a block path unless an endblock gives an exact order-seven separation",
+  "the one-block all-tight case is K4 or K5",
+]
+does_not_prove = [
+  "a bound on positive total list-degree excess",
+  "colour compatibility at the returned separator",
+  "elimination of the bounded block paths",
+  "a K7 minor or HC7",
+]
+
+[[claims]]
 id = "hc7.transported_partition_hall_reflection"
 title = "Hall reflection of a boundary partition through mixed connected supports"
 kind = "theorem"
@@ -4037,7 +4143,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "38ea560029c0abb8637aa75caf3cbde24ae0b739325a32d41bacd5977147952a"
+evidence_sha256 = "4f4927763648c408f04c9dd02265f01169dc5409c5dca4399136f60e06516ff5"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4059,7 +4165,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "38ea560029c0abb8637aa75caf3cbde24ae0b739325a32d41bacd5977147952a"
+evidence_sha256 = "4f4927763648c408f04c9dd02265f01169dc5409c5dca4399136f60e06516ff5"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4070,7 +4176,25 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 1068
 evidence_end_line = 1095
-evidence_sha256 = "6e1f00c71d7cda4fcc0f04a15304bbe90413aa576d8435784b360de45a88e368"
+evidence_sha256 = "9ba14bf4b5c613bdb898990d9b7337fb9ece561aeb9ad5c76090f65a86b6cac2"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.special_exact7_two_edge_list_core"
+kind = "uses"
+note = "Normalizes the special five-plus-two exact-seven response branch to a singleton shore or a two-root list-critical core."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_bipartite_bridge_response_descent"
+kind = "uses"
+note = "Supplies a strict host-level descent whenever the thin shore of a bipartite exact-seven response interface has a bridge."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.special_shore_filling_density"
+kind = "uses"
+note = "Bounds and classifies the all-tight shore-filling branch and isolates positive list-degree excess as its remaining unbounded obstruction."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4633,6 +4757,61 @@ kind = "uses"
 [[relations]]
 source = "hc7.special_five_plus_two_exact7_response"
 target = "hc7.exact7_critical_edge_fan_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_two_edge_list_core"
+target = "hc7.special_five_plus_two_exact7_response"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_two_edge_list_core"
+target = "hc7.exact7_adaptive_12_boundary_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_two_edge_list_core"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_two_edge_list_core"
+target = "hc7.transported_partition_hall_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_exact7_two_edge_list_core"
+target = "hc7.direct_entry_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_bipartite_bridge_response_descent"
+target = "hc7.exact7_two_carrier_list_obstruction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_bipartite_bridge_response_descent"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.exact7_bipartite_bridge_response_descent"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_shore_filling_density"
+target = "hc7.special_exact7_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_shore_filling_density"
+target = "hc7.direct_entry_surplus_density"
+kind = "uses"
+
+[[relations]]
+source = "hc7.special_shore_filling_density"
+target = "hc7.exact_seven_packet_packing"
 kind = "uses"
 
 [[verifiers]]

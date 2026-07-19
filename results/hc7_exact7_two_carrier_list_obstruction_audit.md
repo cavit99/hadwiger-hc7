@@ -1,7 +1,15 @@
 # Audit: exact two-carrier clique-OCT obstruction and gate reassignment
 
-**Verdict:** GREEN at frozen source SHA-256
-`3cdeea2b434cf9a957d481862671566bca094dd86b52d3532b8dad629d906bec`.
+**Verdict:** GREEN at source SHA-256
+`f8b52b9e4f0b18a0bfcf8ee5458d9f18f4b55f9789edf4e94f3aaaa7b738d113`.
+
+The source and this audit entered Git together in commit `7862505`, and the
+source has not changed since.  The hash formerly printed here was a stale
+pre-finalization hash; the present value is the Git blob audited by the
+section-by-section checks below.  Theorems 2.1 and 3.1 were also rechecked
+independently when they entered the active bridge-descent proof on
+2026-07-19.  This is an internal mathematical audit, not external peer
+review.
 
 The nonspanning synchronization, exact two-list parity criterion, literal
 reassignment criterion, retained-clique duty theorem, automatic-duty

@@ -861,6 +861,69 @@ support system, use the fan to construct an explicit labelled `K_7` model,
 or make a strict descent retaining the complete partition and inherited
 labels.
 
+The two vertices of the failed three-fan cut now admit one joint
+host-level reduction.  Either the exposed shore is a single degree-seven
+vertex, with connected opposite shore and full-subgraph packing number one,
+or the two cut vertices have vertex-disjoint entrance edges into the
+exposed shore.  In the second alternative the common two-edge deletion
+realizes the three signatures `(equal,proper)`, `(proper,equal)` and
+`(equal,equal)`, but not `(proper,proper)`.  Every returned complete
+boundary partition is legal on the opposite closed shore, rejected on the
+exposed shore, and Hall-deficient beyond the opposite full-subgraph
+capacity.
+
+The simultaneous contraction response produces a connected induced
+two-root list-critical subgraph `K` in the exposed shore.  Its full
+neighbourhood is an actual separator of order at least seven.  A proper
+`K` is strictly smaller than the shore.  If `K` fills the shore, then
+
+\[
+                       d_G(v)=6+\varepsilon(v)+\rho(v)
+\]
+
+at every vertex, and low total excess yields a singleton-side separator of
+order seven or eight.  This does not yet preserve the special exact-seven
+normal form: the new boundary can be larger than seven, the two failed
+edges can lie on opposite closed sides or one can lie in the boundary, and
+the double-contraction partition can differ from both one-edge responses.
+The immediate operation-specific residue is therefore the singleton
+`(1,1)` case, a proper list-critical core with boundary order greater than
+seven or misaligned failed edges, or a shore-filling high-excess core.
+
+One infinite subfamily now has a well-founded response-carrying move.  If
+the connected one-full-subgraph shore has a bridge, the opposite shore has
+two disjoint boundary-full connected subgraphs, and the boundary graph is
+bipartite, exact two-list parity forces one distinct boundary vertex to
+attach only to each bridge side.  The two forced vertices have even
+boundary distance and the other five boundary vertices attach to both
+sides.  Each bridge side therefore has a literal full neighbourhood of
+order exactly seven.  The new near packing number is one, the opposite
+number is one or two, and the bridge-deletion partition is legal on the
+opposite closed shore, rejected on the bridge side and of excessive
+demand.  Both new connected shores are strictly smaller.  Consequently a
+minimum-order interface in this bipartite `(1,2)` branch is bridgeless.
+The old partition, boundary bipartition and inherited model labels are not
+preserved and must not be inferred at the new boundary.
+
+The shore-filling list-critical branch now has an exact palette-incidence
+density improvement.  With shore order `r`, total list-degree excess `E`
+and `\Delta=\sum_v(d_G(v)-9)`, either a degree-seven/eight vertex exposes
+a singleton-side separation or
+
+\[
+                         11r+9\Delta\le128+5E.
+\]
+
+In particular the all-tight branch has order at most eleven, improving the
+previous bound eighteen.  Its Gallai-tree structure is also restricted:
+six boundary contacts at an endblock lobe give an exact order-seven
+separation; otherwise the block-cutvertex tree is a path with two
+boundary-full end lobes, and a one-block shore is only `K_4` or `K_5`.
+Thus the all-tight infinite family is no longer the live unbounded
+obstruction.  The remaining shore-filling theorem must control positive
+total list-degree excess using the global minor exclusion or additional
+proper-minor responses; the local two-root list data alone cannot do so.
+
 The immediate theorem must close one of the following four literal forks,
 with the first-hit rank providing the primary mechanism.
 
@@ -973,6 +1036,9 @@ cannot supply the missing labelled allocation.
 - [three-owner component concentration and two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
 - [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
 - [operation-specific normal form at the resulting special five-plus-two exact-seven boundary](../results/hc7_special_five_plus_two_exact7_response.md)
+- [two boundary vertices give a singleton shore or a two-root list-critical core](../results/hc7_special_exact7_two_edge_list_core.md)
+- [a bridge in the bipartite-boundary thin shore gives a strict exact-seven response descent](../results/hc7_exact7_bipartite_bridge_response_descent.md)
+- [density and block structure in the special shore-filling list-critical core](../results/hc7_special_shore_filling_density.md)
 - [exact completion classification for two connected subgraphs at a near-complete six-branch-set model](../results/hc7_five_contact_completion_classification.md)
 - [endpoint-`K_4` transfer or an actual order-seven separation](../results/hc7_endpoint_k4_transfer_or_order7.md)
 - [distinct-boundary prescribed-spoke transfer](../results/hc7_distinct_boundary_spoke_owner_transfer.md)
