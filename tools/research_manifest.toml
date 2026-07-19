@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "2173abe43786e401f29bc8c43c981b74826c46dd025cbc7304c8a274f423b4d4"
+expected_source_sha256 = "ef45de6e9eeb1c9e5a0e22bdd1a16993a45afe8fe17764cb67e851ad77c1772b"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3917,6 +3917,76 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.order8_root_connector_reflection"
+title = "A root connector and two boundary-class supports force the split-root response"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_root_connector_reflection.md"
+source_heading = "2. Root-connector reflection theorem"
+active = true
+audit = "results/hc7_order8_root_connector_reflection_audit.md"
+expected_source_sha256 = "15f6fe1052426a0ccc0ee96a02d377370acfc00f0826d73c7ba5f1076106ddcc"
+scope = "an exact two-shore interface with nonadjacent roots, two independent nonempty boundary classes and proper-minor six-colourability"
+label_fidelity = "the roots, boundary blocks, connected root connector and two disjoint boundary-block supports are literal host objects"
+conclusions = [
+  "a root connector disjoint from supports for both boundary classes forces the four-block split-root response on the opposite closed shore",
+  "in an opposite-response survivor every root connector intersects at least one of every disjoint pair of boundary-class supports",
+  "after deleting a common root neighbour, the component-incidence graph cannot contain a connected component supporting an entire boundary class",
+]
+does_not_prove = [
+  "a three-support packing in every connected shore",
+  "an order-seven separation",
+  "a K7 minor",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_common_two_vertex_transversal_descent"
+title = "Two-part connected-shore normal form and common two-vertex-transversal descent"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_common_two_vertex_transversal_descent.md"
+source_heading = "2. Two-part normal form and common-transversal descent"
+active = true
+audit = "results/hc7_order8_common_two_vertex_transversal_descent_audit.md"
+expected_source_sha256 = "8b34b36bf7c0da847453b7ba2683b5d470c4ca31bc5c6c6c5ff63c4af35befea"
+scope = "the connected split-response shore of an exact order-eight opposite-response interface containing two disjoint boundary-full connected subgraphs"
+label_fidelity = "the two induced connected parts, three connected-support families, transversal vertices and every returned boundary vertex are literal host objects"
+separator_order = "a common transversal of order at most two has order exactly two and returns an actual full-neighbourhood separation of order seven"
+colour_compatibility = "one selected closed-shore response is preserved; the opposite response remains open"
+conclusions = [
+  "the whole connected shore partitions into two adjacent induced connected boundary-full parts",
+  "inside either part every root connector intersects every support for each boundary class",
+  "a common transversal of order at most two gives an exact order-seven full-neighbourhood separation",
+  "every complementary component is adjacent to all seven new boundary vertices and the selected split colouring restricts to one closed shore",
+]
+does_not_prove = [
+  "existence of a common transversal of order at most two",
+  "a complete equality partition on the opposite closed shore",
+  "a K7 minor in the high-transversal case",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.order8_three_support_packing"
+title = "Opposite responses and eight-connectivity do not force three disjoint supports"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order8_three_support_packing_barrier.md"
+active = true
+audit = "barriers/hc7_order8_three_support_packing_barrier_audit.md"
+expected_source_sha256 = "11a0b37c657a9663b9809fc681b1014483a98e6098768b7b950db72ea3bf36e8"
+scope = "a finite order-eight opposite-response interface with two disjoint boundary-full connected subgraphs in an eight-connected seven-chromatic host"
+refutes = [
+  "connectivity, opposite responses and a two-part full cover force three disjoint supports or an order-seven separator",
+]
+does_not_prove = [
+  "a counterexample under K7-minor exclusion",
+  "a counterexample under proper-minor six-colourability",
+  "a counterexample to HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.minimum_generic_exact7_relative_connectivity"
@@ -4041,6 +4111,18 @@ kind = "uses"
 note = "This eliminates the complete two-lobe two-cut residue for arbitrary component sizes, leaving only three-connected or singleton selected components in the exact three-component branch."
 
 [[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_root_connector_reflection"
+kind = "uses"
+note = "This converts a root connector and two disjoint boundary-class supports in a connected split-response shore into the missing opposite-shore response."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_common_two_vertex_transversal_descent"
+kind = "uses"
+note = "This normalizes the connected split-response shore to two adjacent full parts and turns any common two-vertex support transversal into an actual order-seven separation with one preserved response."
+
+[[relations]]
 source = "hc7.order8_two_cut_completion"
 target = "hc7.order8_two_cut_response_orientation"
 kind = "uses"
@@ -4078,6 +4160,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.order8_adjacent_defect_one_carriers"
 kind = "guarded_by"
 note = "This rules out closing the exact two-lobe residue from two full contacts and two adjacent defect-one contacts without using the proper-minor colouring response or internal lobe structure."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order8_three_support_packing"
+kind = "guarded_by"
+note = "This shows that even eight-connectivity, exact opposite responses and two disjoint full connected subgraphs do not force the desired three-support packing or an order-seven separator; the live theorem must use K7-minor exclusion or dynamic proper-minor responses."
 
 [[relations]]
 source = "hc7.minimum_generic_exact7_relative_connectivity"
@@ -5109,7 +5197,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "2173abe43786e401f29bc8c43c981b74826c46dd025cbc7304c8a274f423b4d4"
+evidence_sha256 = "ef45de6e9eeb1c9e5a0e22bdd1a16993a45afe8fe17764cb67e851ad77c1772b"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5131,7 +5219,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "2173abe43786e401f29bc8c43c981b74826c46dd025cbc7304c8a274f423b4d4"
+evidence_sha256 = "ef45de6e9eeb1c9e5a0e22bdd1a16993a45afe8fe17764cb67e851ad77c1772b"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6145,4 +6233,19 @@ expected_stdout = [
   "elimination_order=0,6,7,1,2,3,4,5,8,9,10,11",
   "elimination_width=5",
   "K7_minor=no (treewidth at most 5)",
+]
+
+[[verifiers]]
+id = "order8-three-support-packing-barrier"
+path = "barriers/hc7_order8_three_support_packing_barrier_verify.py"
+sha256 = "2a6da666118e856e121bee34f8da37ec70bc68145aaf3d7fc1801364d22690f3"
+timeout = 60
+expected_stdout = [
+  "GREEN exact-order-eight three-support packing barrier",
+  "host: vertices=17 edges=88 connectivity=8 cuts_tested=41226",
+  "chromatic_number=7; responses: left=merged-only right=split-only",
+  "right_shore: two disjoint S-full connected subgraphs; three-support packing=none",
+  "relative_connected_set_boundary_min=8",
+  "K7 minor: explicit seven branch sets verified inside S union R",
+  "scope: K7-minor exclusion and contraction-criticality deliberately absent",
 ]

@@ -183,6 +183,36 @@ order-eight residue.  The remaining three-component modes have a
 three-connected or singleton selected component; the genuinely
 two-component path/allocation obstruction remains open.
 
+The connected two-component opposite-response branch now has a sharper
+normal form.  Its split-response shore can be partitioned into two adjacent
+induced connected subgraphs, each adjacent to every one of the eight
+boundary vertices.  More generally, a connected subgraph meeting both root
+vertices, together with disjoint vertex sets which become connected after
+the two independent boundary classes are adjoined, forces the split-root
+partition on the opposite closed shore by three simultaneous contractions.
+Thus, inside either part of the two-part cover, every root connector
+intersects every support for each boundary class.
+
+If the three resulting families of connected supports have a common vertex
+transversal of order at most two, then the transversal has order exactly two
+and every component behind it has an actual full neighbourhood of order
+seven.  The selected split-response colouring restricts to one closed shore
+of that separation, and every complementary component is adjacent to all
+seven new boundary vertices.  The opposite closed shore is not yet known to
+induce the same complete equality partition, so this is a structural descent
+rather than a terminal colouring argument.
+
+The complementary high-transversal case cannot be closed from connectivity
+and the two local response types alone.  A verified eight-connected,
+seven-chromatic example has the exact opposite responses and the two-part
+full cover, but has neither the required three-support packing nor an
+order-seven separator.  It contains an explicit `K_7` minor, formed by a
+saturated edge complete to a `K_5`-minor model.  Hence the next theorem must
+use global `K_7`-minor exclusion or operation-specific proper-minor
+colourings: it must turn transversal number at least three into an explicit
+`K_7` model, a colour-compatible order-seven separation, or a strict
+selected-response descent.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains
