@@ -968,30 +968,59 @@ coordinates.  A shortest connection is internally confined to one open
 shore.  This is pairwise support only; simultaneous disjointness and literal
 branch-set ownership remain the missing packaging step.
 
-The immediate theorem must close one of the following four literal forks,
-with the first-hit rank providing the primary mechanism.
+The separator-excess branch now has a host-level minimum normal form.  Let
+`R` be an eligible connected set with `|N_G(R)|>=8`, chosen with minimum
+boundary order.  Either a component of the complement has an exact
+order-seven full neighbourhood and restarts the generic recursion, or the
+complement has exactly two or three components and every component is
+adjacent to every literal boundary vertex.  In a minimum generic response
+shore every proper connected subset has at least eight literal neighbours;
+the boundary-completed shore is consequently eight-connected.  These are
+literal statements in `G`, not counts of contracted model bags.
 
-1. **Owner-circuit dynamic closure.**  At the exact-seven separation now
-   forced by the concentrated three-owner order-eight reduction, use a
-   deletion or contraction response to preserve one complete equality
-   partition through both shores, construct an explicit `K_7` model, or
-   make a strict response- and label-preserving descent.  Apply the same
-   operation-specific test to the remaining incident, repeated-contact and
-   bounded-separator owner-circuit outcomes.
-2. **Minimum oriented interface.**  At the minimum two-full-component
-   boundary, eliminate a boundary-edge pinch, lower separator excess to
-   zero while retaining the opposite response partitions, or split the
-   two full components into correctly labelled branch sets.
-3. **Exact order seven.**  In the demand-three residue, combine the forced
-   bichromatic path with the two boundary-full connected subgraphs to meet
-   the three exact demand sets, or extend one boundary partition through
-   both closed shores.  Merely obtaining another unlabelled separator is
-   not terminal.
-4. **Dominating bounded-chromatic subgraph.**  Use the surviving labelled
-   near-complete model and proper-minor responses to split a connected
-   dominating bipartite, three-chromatic or four-chromatic subgraph into
-   the missing named branch sets, or return one of the preceding separator
-   outcomes.
+At boundary order eight the two- and three-component cases have a uniform
+operation-specific alternative.  Deleting one selected
+boundary-to-component edge gives either a clean five-path fan or an exact
+order-seven generic restart with a strictly smaller connected shore.  The
+restart cannot occur inside the minimum shore.  Independently, the
+boundary-labelled near-`K_7` model supplies two disjoint boundary edges
+leading to different common labels and a paired-source five-fan or another
+strict order-seven restart.  What remains is not path existence: the paths
+may have repeated boundary ends or first meet the wrong inherited branch
+sets.
+
+The exact partition side is now uniform over the complete frozen
+129-boundary residual.  Given a connected subgraph missing at most two
+boundary vertices, one can choose a nontrivial independent boundary block
+before the proper-minor colouring so that two disjoint boundary-full
+connected subgraphs plus that third subgraph realize every returned
+partition on one shore.  A boundary-full connected subgraph on the other
+shore then reflects the same complete partition and six-colours `G`.
+Accordingly, the live geometric obligation is to construct that third
+subgraph from the clean fan or to allocate the fan to the five literal
+branch-set labels.
+
+The immediate order-eight theorem is therefore the following.  In the
+minimum positive-excess boundary-full interface, with either two
+complementary components or one of the audited 82 three-component boundary
+types, use the selected proper-minor response and literal first-hit
+locations to obtain one of:
+
+1. two disjoint correctly rooted connected subgraphs meeting complementary
+   sets of the five named branch sets and hence an explicit `K_7`-minor
+   model;
+2. an actual order-seven separation on which one complete labelled equality
+   partition extends through both closed shores;
+3. a strict full-neighbourhood-separator descent preserving the paired
+   traces, selected boundary-edge response and every model label used by
+   the claimed construction; or
+4. the complete hypotheses of the audited cyclic-contact allocation
+   theorem.
+
+The two component counts should be treated uniformly up to the point where
+the 82-type classification supplies additional boundary information.  A
+palette colour is never a branch-set label, and an unlabelled fan or another
+unlabelled near-clique model is not a terminal outcome.
 
 The contracted five-chromatic branch has an independent split-planar
 reduction: a spanning `\overline{P_7}` model leaves at least two empty
@@ -1029,6 +1058,19 @@ separator-excess and shore-filling outcomes by producing either an explicit
 `K_7`-minor model or an actual order-seven separation whose two closed
 shores realize one common complete equality partition.  Equivalently, any
 nonterminal operation must return a strictly smaller generic interface.
+
+The terminal modes have now been sharpened as follows.
+
+1. In the singleton mode, cutvertices and bridges return exact order-seven
+   interfaces; the surviving opposite exterior is nonbipartite and
+   two-connected.
+2. In the proper-core mode, a minimum positive-excess separator has two or
+   three boundary-full complementary components.  At order eight it lies in
+   the clean-fan/label-allocation problem above.
+3. In the shore-filling mode, every all-tight core with at least two Gallai
+   blocks is eliminated by the uniform defect-two reflection theorem.  The
+   all-tight residue consists only of the bounded one-block `K_4,K_5`
+   cases; positive total list-degree excess remains unbounded.
 
 The tempting contracted-terminal fan proof does not establish this theorem.
 A cut in a graph in which branch sets have been contracted counts connected
@@ -1122,6 +1164,17 @@ one of the three literal host configurations above.
 - [six almost-boundary-complete neighbours force a `K_7` minor](../results/hc7_six_spoke_boundary_completion.md)
 - [a selected response pulls back through a retained exact-seven boundary](../results/hc7_special_exact7_selected_response_pullback.md)
 - [generic selected-response restart at every exact order-seven core boundary](../results/hc7_generic_exact7_response_restart.md)
+- [relative eight-connectivity of a minimum exact-seven response shore](../results/hc7_minimum_generic_exact7_relative_connectivity.md)
+- [minimum positive-excess separator: exact-seven restart or two/three full components](../results/hc7_minimum_positive_separator_normal_form.md)
+- [boundary-full order-eight response: clean fan or generic exact-seven restart](../results/hc7_order8_clean_fan_or_generic_restart.md)
+- [common-label paired paths at a boundary-full order-eight separation](../results/hc7_order8_common_label_paired_fan.md)
+- [paired-source path transfer or exact order-seven separation](../results/hc7_paired_source_path_transfer.md)
+- [componentwise exchange at a forced boundary path](../results/hc7_componentwise_path_residual_exchange.md)
+- [uniform defect-two reflection on all residual seven-boundaries](../results/hc7_exact7_all_residual_defect2_carrier.md)
+- [closure of every all-tight multiblock exact-seven shore](../results/hc7_all_tight_block_path_internal_segment_closure.md)
+- [singleton exact-seven terminal normal form](../results/hc7_singleton_exact7_terminal_normal_form.md)
+- [two-shore Kempe-incidence bridge criterion](../results/hc7_two_shore_kempe_incidence_cycle.md)
+- [two independent critical edges: opposite-shore placement or rooted four-terminal model](../results/hc7_two_edge_opposite_shore_or_rooted_k4.md)
 - [Kempe-minimal boundary traces have pairwise bichromatic support](../results/hc7_kempe_minimal_boundary_trace.md)
 - [the singleton-shore exterior is nonbipartite](../results/hc7_singleton_shore_nonbipartite.md)
 - [exact completion classification for two connected subgraphs at a near-complete six-branch-set model](../results/hc7_five_contact_completion_classification.md)
@@ -1155,6 +1208,8 @@ one of the three literal host configurations above.
 - [critical-triangle responses can remain Kempe-separated](../barriers/hc7_critical_triangle_kempe_separation_barrier.md)
 - [clean bichromatic-path geometry alone does not force a clique minor](../barriers/hc7_exact7_clean_path_geometry_barrier.md)
 - [the direct bichromatic-path/full-subgraph obstruction at connectivity six](../barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier.md)
+- [a common-label paired fan is not terminal without dynamic response data](../barriers/hc7_common_label_paired_fan_k7_barrier.md)
+- [same-shore edge responses and six-colourable closed shores need not synchronize](../barriers/hc7_exact7_crossing_disjoint_languages_barrier.md)
 - [stable-theta/three-path matching-defect barrier](../barriers/hc7_stable_theta_three_path_matching_barrier.md)
 - [paired-block exact-trace parity barrier](../barriers/hc7_exact7_paired_block_trace_parity_barrier.md)
 - [boundary-local operation parity barrier](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)

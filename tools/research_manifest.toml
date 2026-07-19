@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "d457a355132b89e29c57e7cf06c9b642cec959b4eb73b0d65c6730a25891aa92"
+expected_source_sha256 = "ea391afccd28323ad3dbd17b3f61a00b32dfec0e49bc4a04acd6a8f012ce61e4"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -43,8 +43,8 @@ allowed_exits = [
 does_not_prove = [
   "HC7",
   "elimination of the singleton nonbipartite exterior",
-  "reduction of a proper list-critical core's boundary from order at least eight to a compatible order-seven interface",
-  "closure of the shore-filling positive-list-excess obstruction",
+  "label allocation or colour synchronization in the boundary-full two-/three-component minimum positive-excess interface",
+  "closure of the shore-filling positive-list-excess obstruction or the one-block K4/K5 all-tight residue",
   "the degree-eight and degree-nine bounded-interface cases",
 ]
 keywords = ["degree seven", "exact seven-separator", "selected response", "list-critical core", "colour gluing"]
@@ -2351,7 +2351,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_labelled_first_hit_rado_reduction.md"
 source_heading = "Theorem 1.1 (Rado--gammoid first-hit alternative)"
-active = false
+active = true
 audit = "results/hc7_labelled_first_hit_rado_reduction_audit.md"
 expected_source_sha256 = "2bde8b468d236f26322d0072a503183efbc93f6bec9fa67f4a1a9fd101c9174f"
 scope = "a terminal-avoiding graph with source ports and five named terminal classes"
@@ -2832,7 +2832,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_special_exact7_two_edge_list_core.md"
 source_heading = "Two distinguished boundary vertices yield a singleton shore or a two-root list-critical core"
-active = true
+active = false
 audit = "results/hc7_special_exact7_two_edge_list_core_audit.md"
 expected_source_sha256 = "c59ce7f61df334635c3a8bda6b8528774b4687e06203786b747175dd61ca3e08"
 scope = "the special five-plus-two exact-seven separation returned by the concentrated three-owner reduction"
@@ -2911,7 +2911,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_special_shore_filling_density.md"
 source_heading = "Density and block structure in the special shore-filling list-critical core"
-active = true
+active = false
 audit = "results/hc7_special_shore_filling_density_audit.md"
 expected_source_sha256 = "4f4dae9db11ed51ce33fe1054550cab8588360c1398e0954d76c9c3b0c3c65d9"
 scope = "the shore-filling two-root list-critical branch of the special five-plus-two exact-seven interface"
@@ -2986,7 +2986,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_six_spoke_boundary_completion.md"
 source_heading = "Boundary completion from six almost-full neighbours"
-active = true
+active = false
 audit = "results/hc7_six_spoke_boundary_completion_audit.md"
 expected_source_sha256 = "b56fc75d796976e084ea7b94642d96419e620ca7c564a2b427be9359d580a8d3"
 scope = "an order-seven separation with one opposite boundary-full connected subgraph and a common centre with five or six almost-boundary-complete neighbours"
@@ -3062,7 +3062,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_kempe_minimal_boundary_trace.md"
 source_heading = "Kempe-minimal boundary traces have pairwise bichromatic support"
-active = true
+active = false
 audit = "results/hc7_kempe_minimal_boundary_trace_audit.md"
 expected_source_sha256 = "1a2779dd1a5a5cfdc7e576cdb422c7c06839c01cabcc55a9202e123101bb6d35"
 scope = "lexicographically minimal double-contraction colourings in the shore-filling two-root exact-seven setting"
@@ -3087,7 +3087,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_singleton_shore_nonbipartite.md"
 source_heading = "A singleton degree-seven shore forces a nonbipartite opposite shore"
-active = true
+active = false
 audit = "results/hc7_singleton_shore_nonbipartite_audit.md"
 expected_source_sha256 = "dbdae8295af908bce6101bd4d28d48a8f7e1de442f3749c9a7163d1d023ced4d"
 scope = "the singleton alternative of the special exact-seven two-boundary-vertex reduction"
@@ -3315,6 +3315,248 @@ does_not_prove = [
   "a counterexample under the proper-minor response constraints",
   "a counterexample to HC7",
 ]
+
+[[claims]]
+id = "hc7.minimum_generic_exact7_relative_connectivity"
+title = "A minimum exact-seven response shore is relatively eight-connected"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_minimum_generic_exact7_relative_connectivity.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_minimum_generic_exact7_relative_connectivity_audit.md"
+expected_source_sha256 = "71af2fc88f52e32388fe13b140faf69978ca6faf226433610da2aadd806fddcb"
+scope = "a minimum connected shore among generic exact order-seven selected-response interfaces in one fixed host"
+separator_order = "every nonempty proper part has at least eight literal neighbours"
+does_not_prove = ["an order-seven reduction", "a common boundary colouring", "HC7"]
+
+[[claims]]
+id = "hc7.minimum_positive_separator_normal_form"
+title = "A minimum positive-excess separator has two or three boundary-full components"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_minimum_positive_separator_normal_form.md"
+source_heading = "Theorem 4.1"
+active = true
+audit = "results/hc7_minimum_positive_separator_normal_form_audit.md"
+expected_source_sha256 = "4b6a4d7a434cb255229fcf4fe12e1393d7b0dadad27985e8528b0535d4cf64ba"
+scope = "a minimum-order literal full-neighbourhood separator of order at least eight"
+conclusions = ["an exact order-seven generic restart", "or exactly two or three components each adjacent to every boundary vertex"]
+does_not_prove = ["that the boundary has order eight", "a common boundary colouring", "HC7"]
+
+[[claims]]
+id = "hc7.order8_clean_fan_or_generic_restart"
+title = "An operated full order-eight component gives a clean fan or strict exact-seven restart"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_clean_fan_or_generic_restart.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_order8_clean_fan_or_generic_restart_audit.md"
+expected_source_sha256 = "ea3fce6948917b3cee0829421424752777f224f84834196323ef471b74b4080c"
+scope = "two- or three-component boundary-full order-eight interfaces with one selected edge-deletion response"
+strict_parameter = "order of the connected selected shore"
+conclusions = ["a clean five-path fan retaining five prescribed first edges", "or a smaller generic exact-seven response shore"]
+does_not_prove = ["five distinct first-hit branch-set labels", "a compatible separator", "HC7"]
+
+[[claims]]
+id = "hc7.order8_common_label_paired_fan"
+title = "Common-label paired paths at a boundary-full order-eight separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_common_label_paired_fan.md"
+source_heading = "Theorem 3.1 (paired-source alternative)"
+active = true
+audit = "results/hc7_order8_common_label_paired_fan_audit.md"
+expected_source_sha256 = "560dced4ba8ee95833e316978a7d8352f92670261194d68d3b203551cf1e09b3"
+scope = "a boundary-full order-eight interface carrying the inherited five common near-clique labels"
+label_fidelity = "two selected boundary edges lead to different common labels; fan paths keep literal first hits"
+conclusions = ["a paired-source five-fan", "or a strict exact-seven response descent preserving the selected labels"]
+does_not_prove = ["an explicit K7 minor", "a common complete equality partition", "HC7"]
+
+[[claims]]
+id = "hc7.paired_source_path_transfer"
+title = "A paired source path gives a labelled transfer or an order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_paired_source_path_transfer.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_paired_source_path_transfer_audit.md"
+expected_source_sha256 = "f4d36ad58b3ea690a4e77a58cd9f912e2cbf235b2427d1e82dcaf38b0e5ae943"
+scope = "the complete three-owner paired-source concentration geometry"
+label_fidelity = "preserves the relaxed first-hit rank and named owner contacts in the transfer branch"
+does_not_prove = ["the general two-/three-component order-eight interface", "colour compatibility", "HC7"]
+
+[[claims]]
+id = "hc7.componentwise_path_residual_exchange"
+title = "Componentwise exchange at a forced boundary path"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_componentwise_path_residual_exchange.md"
+source_heading = "Theorem 3.1"
+active = true
+audit = "results/hc7_componentwise_path_residual_exchange_audit.md"
+expected_source_sha256 = "ea1467caf64aa3019d7d86f4d0aa118f73b79f04d7fe7284e61a3addb36900b9"
+scope = "each residual component of a forced boundary path in an exact-seven selected-response interface"
+conclusions = ["partition reflection", "a literal separator-excess certificate", "or a strict generic exact-seven restart"]
+does_not_prove = ["that some residual component has zero excess", "preservation of inherited labels", "HC7"]
+
+[[claims]]
+id = "hc7.exact7_all_residual_defect2_carrier"
+title = "Defect-two reflection on all 129 residual exact-seven boundaries"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_all_residual_defect2_carrier.md"
+source_heading = "Theorem 2.1 (two full subgraphs and one defect-two subgraph)"
+active = true
+audit = "results/hc7_exact7_all_residual_defect2_carrier_audit.md"
+expected_source_sha256 = "7957de3aeb635a9f48e1e1668e34f43abbba15cac270c0f716821b2925af3fd8"
+scope = "all frozen 129 adaptive (1,2) residual boundaries and every defect set of order at most two"
+colour_compatibility = "terminal once the two full connected subgraphs and the defect-two connected subgraph exist"
+does_not_prove = ["existence of the third connected subgraph", "HC7"]
+
+[[claims]]
+id = "hc7.all_tight_multiblock_closure"
+title = "Every all-tight multiblock exact-seven shore closes"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_all_tight_block_path_internal_segment_closure.md"
+source_heading = "Theorem 2.1 (all multiblock cores close)"
+active = true
+audit = "results/hc7_all_tight_block_path_internal_segment_closure_audit.md"
+expected_source_sha256 = "28825bfc646bc0ff805b117c90c1ef4f21eee7332a1af676e249960cbc7dc7ba"
+scope = "the all-tight Gallai-tree branch of the surviving adaptive exact-seven (1,2) cell"
+conclusions = ["a six-colouring", "or an explicit K7-minor model"]
+does_not_prove = ["the one-block K4 or K5 cases", "positive total list-degree excess", "HC7"]
+
+[[claims]]
+id = "hc7.singleton_exact7_terminal_normal_form"
+title = "Singleton exact-seven terminal normal form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_singleton_exact7_terminal_normal_form.md"
+source_heading = "Theorem 3.1 (cutvertex reduction)"
+active = true
+audit = "results/hc7_singleton_exact7_terminal_normal_form_audit.md"
+expected_source_sha256 = "f9af9b8edc55af116151cc7c7e3b4d30532fb44c338faee6239b888f36297feb"
+scope = "the singleton-shore mode of a generic exact-seven selected-response interface"
+conclusions = ["cutvertices and bridges return exact order-seven interfaces", "the unresolved opposite exterior is nonbipartite and two-connected"]
+does_not_prove = ["closure of the two-connected singleton mode", "HC7"]
+
+[[claims]]
+id = "hc7.two_edge_opposite_shore_or_rooted_k4"
+title = "Two independent critical edges give opposite-shore placement or a rooted four-terminal model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_edge_opposite_shore_or_rooted_k4.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_two_edge_opposite_shore_or_rooted_k4_audit.md"
+expected_source_sha256 = "acedd318665d68c1d03ef0efd463db2897dc3e6d131f1da8f112d74094308e15"
+scope = "two independent edges in a seven-connected minor-minimal seven-chromatic host"
+separator_order = "an order-five cut in the double-deletion host lifts to an order-seven separation placing the edges on opposite shores"
+does_not_prove = ["label-preserving absorption", "a common boundary partition", "HC7"]
+
+[[claims]]
+id = "hc7.two_shore_kempe_incidence_cycle"
+title = "Bridge criterion for one Kempe transition across two shores"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_shore_kempe_incidence_cycle.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_two_shore_kempe_incidence_cycle_audit.md"
+expected_source_sha256 = "efd281de3d162f1aeb831503a093fd5651a6199bb0e4fac02ae9db660db262c3"
+scope = "one exact boundary-colouring transition supported in two anticomplete open shores"
+conclusions = ["a bridge in the incidence graph", "or a literal odd-cycle certificate of alternating shore supports"]
+does_not_prove = ["allocation to five branch-set labels", "a K7 minor", "HC7"]
+
+[[claims]]
+id = "hc7.barrier.common_label_paired_fan_k7"
+title = "A common-label paired fan is not terminal without the critical response restriction"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_common_label_paired_fan_k7_barrier.md"
+active = true
+audit = "barriers/hc7_common_label_paired_fan_k7_barrier_audit.md"
+expected_source_sha256 = "c1edb8451f6dba881f417055fe79564b1cf2e117cbfb786f80aa434ea84f9438"
+scope = "a seven-connected K7-minor-free boundary-full order-eight host with the labelled paired fan but also a proper/proper response"
+refutes = ["the paired fan and three allowed response signatures alone force a K7 minor"]
+does_not_prove = ["a counterexample under the no-proper/proper criticality law", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.barrier.exact7_crossing_disjoint_languages"
+title = "Same-shore edge responses do not synchronize two six-colourable closed shores"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_exact7_crossing_disjoint_languages_barrier.md"
+active = true
+audit = "barriers/hc7_exact7_crossing_disjoint_languages_barrier_audit.md"
+expected_source_sha256 = "5698af94146e423bb62945ed2aec904cbff4f15f8eac4ba23811c2c02a51e3ad"
+scope = "a seven-connected seven-chromatic exact-seven (2,1) host with EE/EP/PE and no PP, but containing K7 and a proper seven-chromatic subgraph"
+refutes = ["the response profile, packing vector, common demand-three partition and separate six-colourability of both closed shores force a common partition"]
+does_not_prove = ["a counterexample under K7-minor exclusion and full minor-criticality", "a counterexample to HC7"]
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.minimum_generic_exact7_relative_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.minimum_positive_separator_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_clean_fan_or_generic_restart"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_common_label_paired_fan"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_all_residual_defect2_carrier"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.all_tight_multiblock_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.singleton_exact7_terminal_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.componentwise_path_residual_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.paired_source_path_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.labelled_first_hit_rado"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.common_label_paired_fan_k7"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.exact7_crossing_disjoint_languages"
+kind = "guarded_by"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4213,7 +4455,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "d457a355132b89e29c57e7cf06c9b642cec959b4eb73b0d65c6730a25891aa92"
+evidence_sha256 = "ea391afccd28323ad3dbd17b3f61a00b32dfec0e49bc4a04acd6a8f012ce61e4"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4235,7 +4477,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "d457a355132b89e29c57e7cf06c9b642cec959b4eb73b0d65c6730a25891aa92"
+evidence_sha256 = "ea391afccd28323ad3dbd17b3f61a00b32dfec0e49bc4a04acd6a8f012ce61e4"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4251,7 +4493,7 @@ evidence_sha256 = "f87ddcf7e4bd33b0fc107033033d9a8ebb2f6e32533b1b9c4538c0bf4bd13
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.special_exact7_two_edge_list_core"
-kind = "uses"
+kind = "related_to"
 note = "Normalizes the special five-plus-two exact-seven response branch to a singleton shore or a two-root list-critical core."
 
 [[relations]]
@@ -4263,7 +4505,7 @@ note = "Supplies a strict host-level descent whenever the thin shore of a bipart
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.special_shore_filling_density"
-kind = "uses"
+kind = "related_to"
 note = "Bounds and classifies the all-tight shore-filling branch and isolates positive list-degree excess as its remaining unbounded obstruction."
 
 [[relations]]
@@ -4275,7 +4517,7 @@ note = "Normalizes every internal edge of the positive-excess shore-filling core
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.six_spoke_boundary_completion"
-kind = "uses"
+kind = "related_to"
 note = "Eliminates the unbounded wheel-shaped positive-excess family under the actual host degree and boundary-full opposite-shore hypotheses."
 
 [[relations]]
@@ -4287,13 +4529,13 @@ note = "Makes every proper exact-seven list-critical core a strict generic selec
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.kempe_minimal_boundary_trace"
-kind = "uses"
+kind = "related_to"
 note = "Normalizes the shore-filling double-contraction trace so that every pair of boundary colours has shore-confined quotient Kempe support."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.singleton_shore_nonbipartite"
-kind = "uses"
+kind = "related_to"
 note = "Eliminates every bipartite and tree exterior in the singleton exact-seven branch."
 
 [[relations]]
@@ -5190,4 +5432,50 @@ timeout = 30
 requires = ["networkx==3.6.1"]
 expected_stdout = [
   "GREEN multi-owner static first-hit barrier: kappa=7, lambda=6, minimum U and local boundary orders verified",
+]
+
+[[verifiers]]
+id = "exact7-all-residual-defect2-carrier"
+path = "results/hc7_exact7_all_residual_defect2_probe.py"
+sha256 = "20ef45d8235dd6ad12b3688545473cc0bed98b4231945ef0be54c7d13c033a6b"
+timeout = 120
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "boundaries=129",
+  "cells=3741",
+  "witnesses=3741",
+  "failures=0",
+  "CERTIFIED full-residual defect-two carrier reflection",
+]
+
+[[verifiers]]
+id = "singleton-exact7-boundary-census"
+path = "results/hc7_singleton_exact7_boundary_census.py"
+sha256 = "2702e9546a8f17cb9b99cb314b7a7ca06627fb0f5d6999d1c9ef9ed212049a21"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "VERIFIED singleton_exact7_boundary_types=20 degree_two_complement=18 exceptional=2 moser_types=2_not_exhaustive",
+]
+
+[[verifiers]]
+id = "common-label-paired-fan-k7-barrier"
+path = "barriers/hc7_common_label_paired_fan_k7_barrier_verify.py"
+sha256 = "a4a8c30a657dcc8855547cf9b9f162f879fdb1167a6b85b1f55b0d1ce2cccfcc"
+timeout = 30
+expected_stdout = [
+  "GREEN paired-fan stress test: exact labels, five direct limbs, EE/EP/PE/PP responses and compatible order-seven boundary verified",
+]
+
+[[verifiers]]
+id = "exact7-crossing-disjoint-languages-barrier"
+path = "barriers/hc7_exact7_crossing_disjoint_languages_barrier_verify.py"
+sha256 = "2641e614f0c443fdd98e2ed01492ef24fc938d9e1ae3255cd742b004c456fd64"
+timeout = 30
+expected_stdout = [
+  "GREEN exact-seven crossing disjoint-languages barrier",
+  "order=22 size=124 kappa=7 boundary=7 chi_boundary=3 packing=(2,1)",
+  "common signatures=EE,EP,PE; PP absent; one five-block partition of demand=3",
+  "both intact closed shores are exactly 6-colourable and their languages are disjoint",
+  "full host contains explicit K7 minor; deleting y3 leaves a 7-chromatic graph",
 ]

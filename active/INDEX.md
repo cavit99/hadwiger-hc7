@@ -19,24 +19,34 @@ Immediate proved inputs, each with an adjacent audit:
 
 ### Special exact-seven normal form
 
-- [singleton shore or two-root list-critical core](../results/hc7_special_exact7_two_edge_list_core.md)
 - [generic selected-response restart at every exact order-seven core boundary](../results/hc7_generic_exact7_response_restart.md)
-- [density and block structure in the shore-filling core](../results/hc7_special_shore_filling_density.md)
+- [relative eight-connectivity of a minimum exact-seven response shore](../results/hc7_minimum_generic_exact7_relative_connectivity.md)
+- [minimum positive-excess separator: exact-seven restart or two/three full components](../results/hc7_minimum_positive_separator_normal_form.md)
+- [boundary-full order-eight response: clean fan or generic exact-seven restart](../results/hc7_order8_clean_fan_or_generic_restart.md)
+- [common-label paired paths at a boundary-full order-eight separation](../results/hc7_order8_common_label_paired_fan.md)
+- [singleton exact-seven terminal normal form](../results/hc7_singleton_exact7_terminal_normal_form.md)
+- [uniform defect-two reflection on all residual seven-boundaries](../results/hc7_exact7_all_residual_defect2_carrier.md)
+- [closure of every all-tight multiblock exact-seven shore](../results/hc7_all_tight_block_path_internal_segment_closure.md)
 - [fixed-trace internal-edge dichotomy](../results/hc7_fixed_trace_internal_edge_dichotomy.md)
-- [six almost-boundary-complete neighbours force a `K_7` minor](../results/hc7_six_spoke_boundary_completion.md)
-- [Kempe-minimal boundary traces have pairwise bichromatic support](../results/hc7_kempe_minimal_boundary_trace.md)
-- [the singleton-shore exterior is nonbipartite](../results/hc7_singleton_shore_nonbipartite.md)
+- [componentwise exchange at a forced boundary path](../results/hc7_componentwise_path_residual_exchange.md)
 
 ### Label-preserving response machinery
 
+- [Rado--gammoid reduction for labelled first-hit paths](../results/hc7_labelled_first_hit_rado_reduction.md)
 - [compression of repeated labelled first-hit exposure](../results/hc7_labelled_first_hit_exposure_compression.md)
 - [first-hit rank preservation under branch-set transfer](../results/hc7_first_hit_rank_preserving_branch_set_transfer.md)
+- [paired-source path transfer or exact order-seven separation](../results/hc7_paired_source_path_transfer.md)
 
 ### Terminal constructions
 
 - [Hall reflection through mixed connected supports](../results/hc7_transported_partition_hall_reflection.md)
 - [opposite-shore critical-edge linkage](../results/hc7_cross_shore_critical_edge_linkage.md)
 - [five-contact rejection-component absorption](../results/hc7_five_contact_rejection_component_absorption.md)
+
+Live exploratory constructions:
+
+- [paired-fan literal model decoder](hc7_paired_fan_literal_decoder.md)
+- [paired-fan incidence-cycle composition](hc7_paired_fan_incidence_cycle_composition.md)
 
 Immediate barriers:
 
@@ -46,6 +56,8 @@ Immediate barriers:
 - [two same-branch-set critical edges do not allocate first-hit labels](../barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md)
 - [a forced bichromatic path need not augment two boundary-full subgraphs](../barriers/hc7_exact7_bichromatic_path_full_subgraphs_barrier.md)
 - [boundary-local operations do not synchronize an exact-seven interface](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)
+- [a common-label paired fan is not terminal without dynamic response data](../barriers/hc7_common_label_paired_fan_k7_barrier.md)
+- [same-shore edge responses and six-colourable shores need not synchronize](../barriers/hc7_exact7_crossing_disjoint_languages_barrier.md)
 
 ## General bounded-interface continuation
 

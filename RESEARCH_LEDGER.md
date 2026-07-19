@@ -64,13 +64,35 @@ There are two present subbranches.
    neighbourhood is now always a strictly smaller generic exact-seven
    selected-response interface.  No inherited boundary vertex, old
    equality partition or old model label must be retained for this generic
-   recursion.  The remaining placement obstruction for a proper core is
-   separator excess: a full neighbourhood of order at least eight.
+   recursion.  In a minimum-order generic interface, every nonempty proper
+   part of the selected connected shore has at least eight literal
+   neighbours; after completing the seven boundary vertices to a clique,
+   that shore is eight-connected.  For a minimum positive-excess
+   full-neighbourhood separator, either a component already gives an exact
+   order-seven restart, or the complement has exactly two or three
+   components and every one is adjacent to every boundary vertex.  Thus the
+   remaining placement obstruction for a proper core is a boundary-full
+   two- or three-component interface of order at least eight.
+
+At order eight, deletion of a selected boundary-to-component edge gives a
+clean five-path fan or a strict generic exact-seven restart.  The restart is
+impossible inside the minimum selected shore.  The resulting fan is still
+not terminal: its paths need not first meet five distinct inherited branch
+sets, and a fan failure does not by itself synchronize the two closed-shore
+colourings.
 
 If the list-critical core fills its shore, its total list-degree excess is
 the remaining unbounded scalar.  The all-tight case has at most eleven
-vertices and a restricted Gallai block structure.  Actual wheel shores are
-excluded by an explicit `K_7`-minor construction.  Every internal edge
+vertices and a restricted Gallai block structure.  A uniform finite
+boundary theorem now says that, for every one of the 129 surviving
+seven-vertex boundary graphs and every defect set of order at most two, one
+independent boundary block can be selected before the colouring so that two
+boundary-full connected subgraphs plus one connected subgraph missing at
+most those two boundary vertices reflect every returned partition.  Using
+that theorem, every all-tight shore having at least two Gallai blocks is
+eliminated.  Only the bounded one-block `K_4` and `K_5` all-tight cases
+remain.  Actual wheel shores are excluded by an explicit `K_7`-minor
+construction.  Every internal edge
 either lowers the fixed-list excess by two after one edge deletion or has a
 fixed-trace Kempe certificate; if every edge has the latter form, the core
 is subgraph-minimal non-list-colourable.  A lexicographically minimal
@@ -82,9 +104,16 @@ confined to one open shore in the quotient.
 
 Choose a generic exact-seven selected-response interface with minimum
 connected-shore order.  The audited restart theorem leaves exactly three
-terminal modes: a singleton shore with nonbipartite opposite exterior, a
-proper two-root list-critical core whose full neighbourhood has order at
-least eight, or a shore-filling positive-excess list-critical core.
+terminal modes:
+
+1. a singleton shore whose opposite exterior is nonbipartite and whose
+   unresolved core is two-connected after the proved cutvertex/bridge
+   reductions;
+2. a proper two-root list-critical core whose minimum positive-excess
+   boundary has order at least eight, with exactly two or three
+   boundary-full complementary components; or
+3. a shore-filling positive-excess list-critical core, together with the
+   bounded one-block `K_4` and `K_5` all-tight residue.
 
 The current missing theorem must use the operation-specific proper-minor
 responses and literal host attachments to obtain one of:
@@ -93,6 +122,16 @@ responses and literal host attachments to obtain one of:
 2. an actual order-seven separation on which one complete equality
    partition is realized by both closed shores; or
 3. a strictly smaller generic exact-seven selected-response interface.
+
+In the surviving adaptive `(1,2)` exact-seven cell, once one shore contains
+two disjoint boundary-full connected subgraphs and a third disjoint
+connected subgraph missing at most two boundary vertices, the new uniform
+reflection theorem supplies the common complete equality partition and
+six-colours `G`.  The remaining task is therefore geometric and
+operation-specific: construct that third connected subgraph, allocate the
+clean fan to five literal branch-set labels, or force an exact compatible
+order-seven boundary.  A contracted-terminal cut is not enough, because
+its branch-set preimages can contain arbitrarily many literal vertices.
 
 Old near-clique labels need be preserved only when they are used to claim a
 particular minor-model construction; they are not part of the recursion
