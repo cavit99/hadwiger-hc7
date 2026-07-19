@@ -83,6 +83,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [multi-owner portal linkage gives a strict label-preserving branch-set transfer](../results/hc7_multi_owner_portal_linkage_transfer.md)
 - [reserved-component linkage completion and the exact three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [three-owner component concentration and the two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
+- [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
 - [operation-coupled colouring responses at a boundary-full order-eight separation](../results/hc7_operation_coupled_order8_response.md)
 - [a label-transversal critical pinch has an exact Hall-deficient opposite-shore residue](../results/hc7_label_transversal_pinch_hall_obstruction.md)
 - [repeated contacts and the exact component-defect change](../results/hc7_repeated_contact_component_defect.md)

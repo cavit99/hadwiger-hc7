@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "ca38a1460aa43dbb55e7fb0b6aa8a23a70eed456d5967a1e8c4ad959e468070e"
+expected_source_sha256 = "69e8b0e717632dc2ed21478ed1711be38b0b553b588e030ff76fa4b2d74c5925"
 scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
 separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
@@ -44,6 +44,7 @@ hypotheses = [
   "a reserved component plus a proper-subfamily owner linkage avoiding it gives an explicit K7, uniformly for two through five owners",
   "the three-owner no-repeated-contact equality case has a literal order-eight boundary or returns an actual order-seven separation",
   "in the extremal three-owner equality case all three owner portal sets are concentrated in the distinguished component and any owner pair gives two differently labelled critical contact edges",
+  "the concentrated boundary-full three-owner order-eight case always has an actual order-seven separation",
   "every boundary-full order-eight interface with two or three components gives a clean five-path fan or an operation-decorated exact order-seven separation with bilateral Hall deficiency",
   "at a label-transversal critical pinch, the legal opposite-shore partition has an exact Hall-deficient support family with one or two full supports",
   "one critical edge in each opposite shore gives an endpoint-rooted K4 minor or a universally orientable exact order-seven separator",
@@ -63,7 +64,8 @@ does_not_prove = [
   "realization of one legally transported partition by five named connected contraction supports on the opposite shore",
   "dynamic closure of the incident differently labelled, repeated model-preserving, and bounded-separator owner-circuit outcomes",
   "a proper-minor response which reroutes a proper-subfamily linkage away from the reserved component, preserves a six-contact residual, or synchronizes the returned boundary",
-  "allocation of the clean five-path fan to five distinct inherited branch-set labels while preserving a connected six-contact residual",
+  "operation-specific colour compatibility at the exact order-seven separator returned by the concentrated three-owner reduction",
+  "allocation of a clean five-path fan in order-eight branches outside the concentrated three-owner equality case",
   "a complete common equality partition or a complete Hall-duty support at the returned exact order-seven separation",
   "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
 ]
@@ -2650,6 +2652,32 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.three_owner_order8_exact7_reduction"
+title = "A concentrated three-owner order-eight interface has an actual order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_three_owner_order8_exact7_reduction.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_three_owner_order8_exact7_reduction_audit.md"
+expected_source_sha256 = "b13976c72c59e4d25a697bc390f6fda92364b0efe945bcf29f466d0e12e088e2"
+scope = "the lexicographically extremal concentrated three-owner, boundary-full order-eight normal form"
+strict_parameter = "maximize the relaxed literal first-hit rank, then minimize the donor branch-set order"
+label_fidelity = "the fan ends are the three literal owner representatives; every transfer preserves the selected response, roots and inherited branch-set labels"
+separator_order = "exactly seven"
+colour_compatibility = "open: the theorem returns a literal order-seven boundary but no common complete equality partition"
+conclusions = [
+  "failure of the three-owner fan gives an actual order-seven full-neighbourhood separation",
+  "a nontrivial fan arm gives a strict rank-preserving donor reduction",
+  "the all-direct fan case also gives a strict reduction unless the concentrated component is a singleton, which contradicts two distinct owner-contact endpoints",
+]
+does_not_prove = [
+  "a common equality partition on the two closed shores",
+  "that every degree-seven configuration enters the concentrated three-owner hypotheses",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.operation_coupled_order8_fan"
 title = "An operated full order-eight component gives a clean five-path fan or an exact seven-separation"
 kind = "theorem"
@@ -3909,7 +3937,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "ca38a1460aa43dbb55e7fb0b6aa8a23a70eed456d5967a1e8c4ad959e468070e"
+evidence_sha256 = "69e8b0e717632dc2ed21478ed1711be38b0b553b588e030ff76fa4b2d74c5925"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3931,7 +3959,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "ca38a1460aa43dbb55e7fb0b6aa8a23a70eed456d5967a1e8c4ad959e468070e"
+evidence_sha256 = "69e8b0e717632dc2ed21478ed1711be38b0b553b588e030ff76fa4b2d74c5925"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3942,7 +3970,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 1004
 evidence_end_line = 1023
-evidence_sha256 = "9db7e55883e0a1c6a14cbe51fa044535139a20f284eebf2b9ac0f6cc618eed84"
+evidence_sha256 = "5037b7b44b77e6349db5ddee30a7b6a1749af4d98d17008fafdcddd64044c33a"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4359,6 +4387,11 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.three_owner_order8_exact7_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.operation_coupled_order8_fan"
 kind = "uses"
 
@@ -4385,6 +4418,21 @@ kind = "uses"
 [[relations]]
 source = "hc7.three_owner_two_edge_response"
 target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_exact7_reduction"
+target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_exact7_reduction"
+target = "hc7.three_owner_order8_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_order8_exact7_reduction"
+target = "hc7.first_hit_rank_preserving_transfer"
 kind = "uses"
 
 [[relations]]

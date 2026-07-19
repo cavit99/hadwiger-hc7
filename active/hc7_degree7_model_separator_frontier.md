@@ -748,6 +748,20 @@ signatures `(equal,equal)`, `(equal,proper)` and `(proper,equal)`, never
 `(proper,proper)`, and returns either a `K_4` on the four endpoints or a
 six-chromatic common host with a spanning `K_6` model.
 
+This concentrated order-eight geometry now has a complete host-level
+reduction to order seven.  From a vertex of the distinguished component
+adjacent to the retained donor, a three-fan to the three owner
+representatives either fails behind two vertices, giving a full
+neighbourhood of order at most `5+2=7`, or exists.  In the latter case its
+arms split the component among the donor and the three owners.  A nontrivial
+arm gives a rank-preserving strict donor reduction.  If all three arms are
+edges, absorbing the remaining components into outside branch sets again
+strictly shrinks the donor unless the distinguished component is a
+singleton; that singleton contradicts the two distinct component-ends in
+the proved differently-labelled contact-edge pair.  Hence the boundary-full
+concentrated three-owner order-eight case always returns an actual
+order-seven separation.  The separation is not yet colour-compatible.
+
 The order-eight side is now operation-decorated as well.  For both two and
 three boundary-full complementary components, a selected edge-deletion
 colouring is legal on all unchanged components and rejected on the operated
@@ -810,29 +824,27 @@ endpoints or a universally orientable exact order-seven separation.  On the
 same three-edge deletion host, the selected fixed-partition response is
 coupled to a different opposite-shore boundary trace.
 
-The first-hit rank therefore leaves one precise label-faithful composition
-step.  In the clean-fan outcome, its five paths must first hit five distinct
-inherited branch sets while leaving a connected part of the concentrated
-component adjacent to all six outside branch sets.  That conclusion feeds
-directly into the reserved-component completion theorem.  In the exact
-order-seven outcome, one named support must meet a complete Hall duty, or one
-complete equality partition must survive through both shores.  In the
-endpoint-rooted `K_4` outcome, three inherited branch sets must still be
-reserved as named completing branch sets.  No further unlabelled path or
-static boundary partition closes any of these alternatives.
+The concentrated three-owner order-eight branch therefore no longer leaves
+a clean-fan label-allocation problem: it has already reached an actual
+order-seven separation.  The precise missing step there is now dynamic
+colour compatibility.  One must apply a proper-minor operation at that
+literal boundary and obtain a common complete equality partition, an
+explicit `K_7`-minor model from the resulting named paths and supports, or a
+strict state- and label-preserving host descent.  In the other owner-circuit
+branches, incident or repeated contacts and bounded separators still require
+the corresponding label-faithful operation-specific closure.  No further
+unlabelled path or static boundary partition closes these alternatives.
 
 The immediate theorem must close one of the following four literal forks,
 with the first-hit rank providing the primary mechanism.
 
-1. **Owner-circuit dynamic closure.**  Apply the operation-specific
-   colouring at the incident differently labelled pair, repeated
-   model-preserving pair, or returned order-seven-through-ten separator.
-   Prove that it gives a new named first hit, a strict compatible model
-   reduction, an exact-seven descent, or a new opposite-shore support which
-   violates the displayed Hall deficiency.  In the reserved-component
-   normal form it is enough to reroute one proper-subfamily linkage away
-   from the reserved component, leave a connected six-contact residual after
-   the linkage, or return one compatible exact-seven boundary partition.
+1. **Owner-circuit dynamic closure.**  At the exact-seven separation now
+   forced by the concentrated three-owner order-eight reduction, use a
+   deletion or contraction response to preserve one complete equality
+   partition through both shores, construct an explicit `K_7` model, or
+   make a strict response- and label-preserving descent.  Apply the same
+   operation-specific test to the remaining incident, repeated-contact and
+   bounded-separator owner-circuit outcomes.
 2. **Minimum oriented interface.**  At the minimum two-full-component
    boundary, eliminate a boundary-edge pinch, lower separator excess to
    zero while retaining the opposite response partitions, or split the
@@ -933,6 +945,7 @@ cannot supply the missing labelled allocation.
 - [two-contact label-preserving branch-set transfer](../results/hc7_response_aligned_two_contact_lobe_transfer.md)
 - [reserved-component linkage completion and three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [three-owner component concentration and two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
+- [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
 - [operation-coupled colouring responses at a boundary-full order-eight separation](../results/hc7_operation_coupled_order8_response.md)
 - [repeated contacts and component defect](../results/hc7_repeated_contact_component_defect.md)
 - [opposite-shore critical edges give a rooted four-vertex model or exact seven-separation](../results/hc7_cross_shore_critical_edge_linkage.md)

@@ -551,6 +551,23 @@ has a `K_4` on the four endpoints or is six-chromatic with a spanning
 `K_6`-minor model.  Palette colours are still not model labels, so this
 two-edge response substrate is not yet terminal.
 
+The concentrated boundary-full order-eight outcome is now eliminated by an
+unbounded host-level argument.  Choose a vertex of the distinguished
+component adjacent to the retained donor and seek a three-fan from it to the
+three owner representatives.  Failure gives a two-vertex fan separator; the
+five remaining vertices of the literal order-eight boundary then bound the
+full neighbourhood of the source component by seven, and
+seven-connectivity makes it an actual order-seven separation.  If the fan
+exists, split the distinguished component along its three arms.  Any
+nontrivial arm gives a rank-preserving model transfer with a strictly smaller
+donor.  If all three arms are edges, every other component can be absorbed
+into an outside branch set; extremality then forces the distinguished
+component to be a singleton, contradicting the already proved existence of
+two owner-contact edges with distinct ends there.  Thus every extremal
+concentrated three-owner order-eight configuration has an actual order-seven
+separation.  The theorem does not yet synchronize the two closed-shore
+colourings on that boundary.
+
 Independently, every remaining boundary-full order-eight interface with two
 or three complementary components now has one operation-coupled normal
 form.  A deletion response at an edge from the boundary into one component
@@ -617,21 +634,24 @@ three-edge-deletion host is the first theorem here which converts arbitrary
 opposite-shore colour drift into literal host geometry.
 
 The immediate open theorem is consequently narrower than the original
-first-hit proposal.  It must compose the concentrated three-owner response
-with one of the two operation-coupled outcomes:
+first-hit proposal.  The concentrated three-owner order-eight geometry no
+longer needs a five-label clean-fan allocation: it already descends to an
+actual order-seven boundary.  The next theorem must decorate that returned
+boundary with a proper-minor colouring response and prove one of:
 
-1. in the clean-fan branch, allocate five pairwise disjoint response paths to
-   five distinct inherited branch-set labels while retaining a connected
-   subgraph adjacent to all six outside branch sets; the reserved-component
-   theorem then supplies an explicit `K_7`-minor model; or
-2. in the exact order-seven branch, make one named support meet a complete
-   Hall duty, or preserve one complete equality partition through both
-   closed shores and glue their six-colourings.
+1. one complete boundary equality partition is realized by both closed
+   shores, so their six-colourings glue;
+2. the operation-specific Kempe paths and named connected supports repair a
+   missing branch-set adjacency and give an explicit `K_7`-minor model; or
+3. a strict host-level descent preserves the selected response, the five
+   inherited labels and the exact order-seven interface.
 
-A strict compatible model reduction preserving the selected response and
-all literal labels is also a valid exit.  The two-edge endpoint-`K_4` fork
-may close the first alternative only after its four branches are shown to
-reserve the three required inherited completing branch sets.
+The existing exact-block and Hall-reflection theorems apply once the
+returned boundary carries the required operation-specific response; the new
+three-fan reduction by itself does not supply that decoration.  Outside this
+concentrated equality case, the incident/repeated-contact and bounded-
+separator owner-circuit outcomes still require the same label-faithful
+operation-specific closure.
 
 An unlabelled rooted model, an internal portal cut, or an order-seven
 boundary without one legal matching of blocks to literal connected supports
@@ -664,6 +684,7 @@ The newly promoted sources are the
 [multi-owner portal-linkage transfer](results/hc7_multi_owner_portal_linkage_transfer.md),
 [reserved-component linkage completion and the three-label order-eight normal form](results/hc7_reserved_component_linkage_completion.md),
 [three-owner component concentration and its two-edge response substrate](results/hc7_three_owner_reserved_component_concentration.md),
+[three-owner order-eight reduction to an actual order-seven separation](results/hc7_three_owner_order8_exact7_reduction.md),
 [operation-coupled colouring responses at a boundary-full order-eight separation](results/hc7_operation_coupled_order8_response.md),
 [Hall obstruction at a label-transversal critical pinch](results/hc7_label_transversal_pinch_hall_obstruction.md),
 [repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),
