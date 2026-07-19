@@ -56,6 +56,15 @@ Immediate proved inputs, each with an adjacent audit:
 - [fixed-trace list-critical transfer](../results/hc7_boundary_list_critical_transfer.md)
 - [spanning near-complete model with a deletion-persistent edge](../results/hc7_single_portal_amplification.md)
 - [persistent model edge: fixed-trace alignment or total trace rejection](../results/hc7_persistent_edge_fixed_trace_alignment.md)
+- [rooted incident-edge persistence with a protected singleton](../results/hc7_rooted_persistent_model_edge.md)
+- [persistent incident edges with several protected singleton branch sets](../results/hc7_multi_protected_persistent_model_edge.md)
+- [jointly persistent incident edges or an exact order-seven separation](../results/hc7_joint_persistent_edge_or_exact_seven.md)
+- [persistent-edge support classes and dense-alternative degree bound](../results/hc7_persistent_support_class_refinement.md)
+- [colouring fork for a jointly persistent incident pair](../results/hc7_joint_persistent_incident_colour_fork.md)
+- [one-extra-colour critical kernel at a boundary edge](../results/hc7_one_extra_colour_boundary_kernel.md)
+- [boundary-crossing persistent-edge reduction](../results/hc7_boundary_crossing_persistent_edge_reduction.md)
+- [total rejection of a fixed boundary trace](../results/hc7_total_trace_rejection_kernel.md)
+- [aligned two-edge bypass or labelled donor separation](../results/hc7_aligned_two_edge_bypass_separator.md)
 - [degree-eight first-entry singleton peel](../results/hc7_first_entry_singleton_peel.md)
 - [fixed three-path quotient completion](../results/hc7_atomic_three_path_quotient_completion.md)
 - [root-protected double-loss closure](../results/hc7_root_protected_double_loss_closure.md)
@@ -82,6 +91,9 @@ Immediate barriers:
 - [three colour-indexed paths need not have one common bottleneck](../barriers/hc7_three_kempe_paths_common_bottleneck_barrier.md)
 - [universal obstructing-edge responses need not diversify named first hits](../barriers/hc7_degree8_blocker_first_hit_concentration_barrier.md)
 - [the three responses of a two-edge star do not force a fourth boundary partition](../barriers/hc7_two_edge_deletion_lattice_barrier.md)
+- [persistent edges need not have tight list-critical endpoints](../barriers/hc7_persistent_edge_tight_endpoint_barrier.md)
+- [seven-connected static alignment still need not yield a tight endpoint](../barriers/hc7_persistent_edge_tight_endpoint_shadow.md)
+- [three persistent edges need not have two nonadjacent outer endpoints](../barriers/hc7_persistent_induced_star_barrier.md)
 - [stable-theta allocation and three packed paths do not force matching cross-defect](../barriers/hc7_stable_theta_three_path_matching_barrier.md)
 - [one- and two-block exact traces do not synchronize the new seven-boundary](../barriers/hc7_exact7_paired_block_trace_parity_barrier.md)
 - [boundary-local operations do not synchronize an exact-seven interface](../barriers/hc7_exact7_separator_boundary_operation_parity_barrier.md)
@@ -97,6 +109,8 @@ Immediate barriers:
 [Adjacent-pair rooted-model and component-defect frontier](hc7_adjacent_pair_palette_model_frontier.md)
 
 [Paired colourful-set rooted-`K_4` frontier](hc7_two_colorful_sets_rooted_k4_frontier.md)
+
+[Split-planar `\overline{P_7}` model-reselection reduction](hc7_split_planar_pbar7_reduction.md)
 
 ## Frozen programmes
 

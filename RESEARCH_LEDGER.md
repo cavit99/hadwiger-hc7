@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 18 July 2026
+**Last updated:** 19 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
 This file records the current mathematical dependency chain. The concise
@@ -1940,6 +1940,48 @@ classification or computation as well as a written reduction.
     edge preserves the model through the other, so all five bichromatic
     endpoint paths occur in the same graph as the fixed labelled model.
 
+    The model selection is now rooted at the actual critical boundary
+    endpoint.  Minimize the common branch set containing `v` while retaining
+    the protected singleton branch set `{x}` and the model edge `xv`.
+    A parameter-uniform branch-set reassignment theorem gives at least two
+    deletion-persistent incident edges for this same model and bounds
+    `G[R]-v` by two components.  Several protected singleton branch sets can
+    be retained simultaneously, with a correspondingly sharper component
+    bound.  Thus singleton placement, the common endpoint and the need for
+    an edge distinct from `xv` are no longer open.
+
+    More strongly, either two incident edges can be deleted simultaneously
+    while that same spanning labelled near-complete model survives, or
+    `R={v}`, `d_G(v)=7`, and `N_G(v)` is an actual order-seven separation.
+    In the first branch the common deletion is a proper subgraph of the
+    hypothetical counterexample, so it is six-colourable and contains the
+    fixed labelled model at the same time.  In the second branch the
+    remaining task is exactly shore-colouring synchronization.
+
+    The persistent edges themselves now have a sharp support-class
+    structure.  Their number is given by an exact rooted-component and
+    foreign-label count, and is at least `d_G(v)-5` in the common-label
+    `HC_7` case.  Two persistent edges fail to be jointly deletable only
+    when they form one fragile two-edge support class; consequently all
+    such forbidden pairs form a matching.  If no jointly persistent pair
+    has nonadjacent outer endpoints, those endpoints induce a complete
+    graph minus a matching.  `K_7`-minor exclusion then bounds their number
+    by seven and gives `d_G(v)<=12`; degree at least thirteen forces a
+    jointly persistent induced two-edge path.
+
+    The colouring geometry of every jointly persistent pair is also
+    exhaustive.  Nonadjacent outer endpoints give the exact star-
+    contraction trace and the saturation-or-bypass alternative.  Adjacent
+    endpoints form a critical triangle: every colouring of the common
+    deletion has exactly one of the two exclusive one-edge responses.  The
+    response families are either in different Kempe components, or a first
+    transition gives a connected bichromatic subgraph whose open
+    neighbourhood carries the same colouring from both sides.  If that
+    subgraph does not dominate, its full neighbourhood is an actual
+    separator; if it dominates, its complement is five-chromatic and
+    `K_6`-minor-free.  These conclusions retain the same labelled model but
+    deliberately make no palette-to-label inference.
+
     On the colouring side, shortest Kempe distance between the two shore
     extension sets gives either one common obstructed boundary move, with a
     path through each shore, or one list-critical subgraph in each shore for
@@ -1949,6 +1991,32 @@ classification or computation as well as a written reduction.
     responses on the fixed trace.  A persistent edge whose deletion attains
     that trace belongs to every such obstruction.  Otherwise the entire
     edge-deletion response set rejects the trace.
+
+    The boundary-crossing placement of a persistent edge is also reduced.
+    If it ends in the branch set anticomplete to `{x}`, simultaneous
+    contraction of the induced two-edge path gives a common
+    saturation-or-bypass colouring.  A six-colouring after deleting the
+    persistent edge produces a one-extra-colour critical kernel in the full
+    shore.  A proper kernel gives a strict component-order descent retaining
+    the same oriented boundary partition and the model in the edge-deleted
+    graph.  A shore-filling kernel gives an order-seven or order-eight
+    singleton-side separation unless every vertex has list-degree excess
+    plus repeated-boundary-colour count at least three; the surviving shore
+    then has minimum degree at least nine.  At such a root the support count
+    gives at least four persistent incident edges.  The dense alternative
+    can avoid a forced induced two-edge path only in degrees nine through
+    twelve; above that range the induced path and its exact contraction
+    trace are forced, although their label allocation remains open.
+
+    When the selected edge attains the fixed trace, two aligned critical
+    edges give a boundary-to-boundary bypass and then an explicit `K_7`
+    model or a donor-side full-neighbourhood separator carrying the exact
+    lost branch-set label and opposite proper-minor responses.  When no
+    colouring after deleting the edge attains the trace, total rejection
+    gives paired list-critical kernels along a shortest boundary Kempe
+    sequence.  Two verified counterexamples rule out the tempting claim
+    that persistence forces a tight kernel endpoint, even under the static
+    seven-connected aligned geometry.
 
     Contracting the distinguished boundary edge gives two full shores on a
     seven-vertex boundary.  The boundary is four-degenerate, and its only
@@ -1962,21 +2030,29 @@ classification or computation as well as a written reduction.
     open component and returns another order-seven boundary with one exact
     colour block attained on both shores.
 
-    The precise open theorem is now a **label-preserving model alignment or
-    separator synchronization**.  One must first align the persistent model
-    edge and a critical boundary edge at a common shore vertex.  The aligned
-    fixed-trace obstruction or the paired rejection responses must then be
-    decoded through clean traces of the five inherited branch sets, or the
-    normalized contraction-image branch set must be split and every lost
-    contact repaired.  In the separator branch the common exact class must
-    be extended to a common full equality partition.  The alternatives are
-    to lower `epsilon` while retaining the named subgraphs, labelled model
-    and boundary trace, synchronize an exact order-seven boundary, or
-    construct an explicit `K_7`-minor model.
-    At minimal positive excess it may equivalently close the remaining
-    two- or three-component boundary-full order-eight interface.  Separator order alone is
-    insufficient because the new boundary can cut through one of the named
-    subgraphs and four-colourability does not synchronize shore extensions.
+    The precise open theorem is now a **label-allocation or compatible-
+    separator theorem in one common model-preserving deletion**.  In the
+    simultaneous-deletion branch, decode a six-colouring through the same
+    labelled near-complete model.  If the two outer endpoints are
+    nonadjacent, the induced two-edge path already gives the audited
+    saturation-or-bypass alternative; if they are adjacent, the critical
+    triangle has only the two exclusive one-edge responses.  One must
+    either connect their Kempe components label-faithfully or use their
+    separation to obtain the common full boundary partition; the possibility
+    that the response families are Kempe-separated is still open.  In both
+    endpoint cases the literal first hits must yield an explicit `K_7`
+    model, a colour-compatible order-seven separation, or a strict descent
+    retaining the labelled model and boundary response.  In the shore-
+    filling branch, the extra persistent edges forced by minimum degree at
+    least nine must perform the same allocation.  In the degree-seven branch
+    the separator already has exact order and only synchronization remains.
+
+    The split-planar `\overline{P_7}` reduction is retained as a secondary
+    route.  Six contacted quotient bags give an explicit `K_7`; every
+    survivor has at least two empty bags and a collision bag.  A verified
+    example shows that fixed-bag root transfer is false, so any completion
+    must globally reselect the model or return a compatible exact
+    separation.
 
     The written sources are the
     [exact-seven orientation theorem](results/hc7_exact7_packet_orientation_corollary.md),
@@ -1999,6 +2075,15 @@ classification or computation as well as a written reduction.
     [fixed-trace list-critical transfer](results/hc7_boundary_list_critical_transfer.md),
     [single-portal amplification](results/hc7_single_portal_amplification.md),
     [persistent-edge fixed-trace alignment](results/hc7_persistent_edge_fixed_trace_alignment.md),
+    [rooted persistent incident edges](results/hc7_rooted_persistent_model_edge.md),
+    [multi-protected rooted persistence](results/hc7_multi_protected_persistent_model_edge.md),
+    [joint persistence or exact-seven separation](results/hc7_joint_persistent_edge_or_exact_seven.md),
+    [persistent support-class structure](results/hc7_persistent_support_class_refinement.md),
+    [joint-pair colouring fork](results/hc7_joint_persistent_incident_colour_fork.md),
+    [one-extra-colour critical kernel](results/hc7_one_extra_colour_boundary_kernel.md),
+    [boundary-crossing persistent-edge reduction](results/hc7_boundary_crossing_persistent_edge_reduction.md),
+    [total trace rejection](results/hc7_total_trace_rejection_kernel.md),
+    [aligned two-edge bypass or donor separation](results/hc7_aligned_two_edge_bypass_separator.md),
     [two-full-shore boundary absorption](results/hc7_two_full_shore_boundary_absorption.md),
     and [cycle-boundary completion](results/hc7_cycle_boundary_completion.md),
     each with an adjacent internal audit.  The fixed compressed three-path

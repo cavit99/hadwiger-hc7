@@ -74,23 +74,45 @@ separation.  Across such a separation, five named pairwise adjacent rows
 reflect any boundary colouring whose intersection with each row is
 monochromatic.
 
-The remaining one-edge obstruction is therefore exact: every far-shore
-colouring multicolours a named boundary intersection.  Simultaneous losses
-do not form a separate geometric case.  Independent row traces close when
-they have disjoint connected realizations through the other shore.  If two
-paired traces have no such linkage, the resulting disk configuration now
-gives either an explicit $K_7$ model or nested full-neighbourhood
-separations retaining one boundary root and one missed branch-set label.
-Curvature reduces that disk to degree seven or eight, and a new cyclic
-contact-allocation theorem closes the degree-eight case whenever its three-
-by-five missing-contact graph is a matching of order at most two.
+The common-endpoint rooted model-reselection gap is now solved.  After minimizing
+the branch set containing a selected critical boundary endpoint, while
+retaining the singleton deficient branch set, a parameter-uniform theorem
+gives at least two incident edges whose individual deletion preserves the
+same spanning labelled near-clique model.  Either two such edges can be
+deleted simultaneously while that model survives, or the rooted branch set
+is one degree-seven vertex and its neighbourhood is an actual order-seven
+separator.  The theorem also bounds the number of rooted components and has
+a version preserving several singleton branch sets.
 
-The immediate target is a reserved-cycle or compatible-separator theorem:
-proper-minor colourings must either produce that cyclic allocation or
-compress one of the returned separators to exact order seven with a common
-boundary colour partition.  Static web structure, curvature and Hall
-counting are provably insufficient.  The two-adjacent-edge and remaining
-degree-eight/nine branches remain after this one-edge case.
+When one persistent edge crosses into the deficient branch set, a
+one-extra-colour list-critical reduction gives a strict full-neighbourhood
+descent, an order-seven/eight singleton-side separation, or a shore-filling
+normal form of minimum degree at least nine.  Fixed-trace attainment and
+total rejection are handled by separate audited theorems.  Explicit
+counterexamples show that persistence alone cannot force a tight
+list-critical endpoint.
+
+The immediate target is therefore label allocation in one common
+two-edge-deletion graph.  That graph is both six-colourable and contains the
+same labelled $K_7$-minus-one-edge model.  Nonjoint persistent pairs form
+only a matching among the persistent edges; in the dense alternative the
+outer endpoints induce a complete graph minus a matching, and degree at
+least thirteen forces a jointly persistent induced two-edge path.  For any
+jointly persistent pair, the nonadjacent-end case has an exact contraction
+trace and a saturation-or-bypass alternative.  In the adjacent-end case,
+the two critical-triangle response families are either Kempe-separated or
+a first transition gives a common-coloured separator or a connected
+dominating bipartite subgraph whose complement is five-chromatic and
+$K_6$-minor-free.
+
+The required theorem must now turn these literal transition components and
+first-hit locations into an explicit $K_7$ model, a common full colour
+partition on an exact order-seven separator, or a strict label-preserving
+full-neighbourhood descent.  Palette colours still do not identify
+branch-set labels, Kempe-separated response families remain possible, and
+obtaining an order-seven separator without synchronizing its shores is not
+terminal.  The split-planar $\overline{P_7}$ model-reselection route remains
+an independent secondary approach.
 
 ## Start here
 

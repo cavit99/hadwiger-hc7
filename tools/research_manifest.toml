@@ -16,13 +16,13 @@ pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
 id = "hc7.target.degree7_model_separator"
-title = "Persistent-edge fixed-trace alignment or compatible-separator completion"
+title = "Joint model-preserving deletion: label allocation or compatible separator"
 kind = "target"
 status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
-source_heading = "Persistent-edge fixed-trace alignment or compatible separator"
+source_heading = "Rooted model persistence and the remaining label-allocation fork"
 active = true
-expected_source_sha256 = "4f7ab837c52d8779e6595b8023c4914b9a9550ff4a47d5b4145402669860247c"
+expected_source_sha256 = "3287618888d56ac0ff4f5d549e3a29a0b7b3ba895ec7edce0786284656d414f0"
 scope = "the exact asymmetric order-eight and descended exact-seven interfaces arising in the degree-seven boundary-labelled branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
 separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
@@ -48,6 +48,11 @@ hypotheses = [
   "a critical exact-seven boundary edge gives a six-ended fan, clean five-spoke packing or strict component descent",
   "contracting the distinguished asymmetric-interface edge gives two exact-seven full shores and a split-planar normal form in the five-chromatic boundary case",
   "a persistent edge attaining the fixed trace belongs to every list-critical obstruction for that trace, while failure means total trace rejection",
+  "rooted minimization retaining the protected singleton gives at least two persistent incident edges and at most two rooted components",
+  "either two incident edges are jointly model-persistent or the rooted vertex has an actual order-seven neighbourhood boundary",
+  "nonjoint persistent pairs form a matching of fragile support classes, while degree at least thirteen forces a jointly persistent induced two-edge path",
+  "a jointly persistent pair gives an exact nonadjacent-end trace or two critical-triangle response families separated by Kempe components, a common-coloured transition boundary, or a dominating five-chromatic K6-minor-free complement",
+  "a boundary-crossing persistent edge gives a strict one-extra-colour component descent or a shore-filling minimum-degree-nine normal form",
 ]
 allowed_exits = [
   "explicit K7-minor model",
@@ -62,7 +67,10 @@ does_not_prove = [
   "elimination of the concentrated low-cut residue after the component-deleted reserved-cycle fork",
   "label-preserving use of the three-path packing through the five named connected subgraphs",
   "extension of the concrete one-sided equality partition returned by the Kempe-path separation through the opposite closed shore",
-  "existence of a persistent model edge sharing the selected boundary-component endpoint and fixed-trace list-critical kernel",
+  "placement of a persistent model edge in the selected fixed-trace critical kernel and deficient branch set simultaneously",
+  "label allocation in the common model-preserving two-edge deletion",
+  "connection or terminal use of Kempe-separated critical-triangle response families",
+  "synchronization of the exact-seven separator returned by the joint-persistence equality case",
   "closure of the adjacent-vertex-split planar residue after contracting the distinguished edge",
   "a disjoint seven-contact residual after one named connected subgraph is used as a repair connector",
   "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
@@ -1950,6 +1958,177 @@ label_fidelity = "exact equality of the labelled boundary trace"
 conclusions = ["either every colouring of the edge deletion rejects the trace", "or the edge lies in every induced list-critical obstruction for that trace and every spanning edge-minimal obstruction"]
 does_not_prove = ["existence of an aligned persistent edge", "palette-to-branch-set alignment", "a K7-minor model", "a compatible separator", "HC7"]
 
+[[claims]]
+id = "hc7.rooted_persistent_model_edge"
+title = "Rooted incident-edge persistence with a protected singleton"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_rooted_persistent_model_edge.md"
+active = true
+audit = "results/hc7_rooted_persistent_model_edge_audit.md"
+expected_source_sha256 = "05548e80573736ea1f56b23db7372b2487eacdcda32dd5633a0af63be65212b7"
+scope = "parameter-uniform spanning labelled K_t-minus-one-edge models in t-connected K_t-minor-free hosts"
+label_fidelity = "retains the root label, fixed root vertex and one protected singleton branch set"
+conclusions = ["at least t-m+1 deletion-persistent incident edges for one rooted-minimal model", "at most floor((m-1)/2) components after deleting the root vertex"]
+does_not_prove = ["placement of a persistent edge in a prescribed shore", "boundary-colouring synchronization", "a K7-minor model", "HC7"]
+
+[[claims]]
+id = "hc7.multi_protected_persistent_model_edge"
+title = "Persistent incident edges with several protected singleton branch sets"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_multi_protected_persistent_model_edge.md"
+active = true
+audit = "results/hc7_multi_protected_persistent_model_edge_audit.md"
+expected_source_sha256 = "db70c8487c0561ab88d88cf08efc96c63c11c645f79ddd634a50c3505ee7d161"
+scope = "parameter-uniform rooted-minimal spanning labelled K_t-minus-one-edge models with a prescribed family of singleton neighbours"
+label_fidelity = "all prescribed singleton branch sets and their incident root edges are retained"
+conclusions = ["the same persistent-edge lower bound", "at most floor((m-|A|)/2) rooted components"]
+does_not_prove = ["existence of the protected singleton family", "prescribed placement of a persistent edge", "colour synchronization", "HC7"]
+
+[[claims]]
+id = "hc7.joint_persistent_edge_or_exact_seven"
+title = "Jointly persistent incident edges or an exact order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_joint_persistent_edge_or_exact_seven.md"
+active = true
+audit = "results/hc7_joint_persistent_edge_or_exact_seven_audit.md"
+expected_source_sha256 = "b78989355a006501d91c3732e3231e99d85fc01e6558259fdcb6b447d0845fcd"
+scope = "protected common-label K7-minus-one-edge models in a seven-connected K7-minor-free graph"
+label_fidelity = "the same spanning labelled model survives simultaneous deletion"
+separator_order = "exactly seven in the exceptional branch"
+conclusions = ["two jointly deletion-persistent incident edges", "or a singleton degree-seven rooted branch set whose neighbourhood is an actual order-seven boundary"]
+does_not_prove = ["a prescribed six-colouring of the common deletion", "a common shore partition", "a K7-minor model", "HC7"]
+
+[[claims]]
+id = "hc7.persistent_support_class_refinement"
+title = "Persistent-edge support classes and the dense-alternative degree bound"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_persistent_support_class_refinement.md"
+active = true
+audit = "results/hc7_persistent_support_class_refinement_audit.md"
+expected_source_sha256 = "4218dea7a7d02c571078dd7b2f1fc34e0fad1abab57dcc4e0f14e6503afa3629"
+scope = "persistent incident edges in one rooted-minimal spanning labelled K_t-minus-one-edge model, with the common-label HC7 specialization"
+label_fidelity = "the same spanning labelled model is retained under every asserted individual or joint deletion"
+conclusions = ["an exact persistent-edge count and p(v) at least d(v)-m+1", "nonjoint pairs form a matching of fragile two-edge support classes", "the dense HC7 alternative has p(v) at most seven and d(v) at most twelve", "degree at least thirteen forces a jointly persistent induced two-edge path"]
+does_not_prove = ["the induced-path conclusion in degrees eight through twelve", "placement in a prescribed shore", "palette-to-branch-set allocation", "HC7"]
+
+[[claims]]
+id = "hc7.joint_persistent_incident_colour_fork"
+title = "Colouring fork for a jointly persistent incident pair"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_joint_persistent_incident_colour_fork.md"
+active = true
+audit = "results/hc7_joint_persistent_incident_colour_fork_audit.md"
+expected_source_sha256 = "21b5fd5c523efb673ca11b0e604e0e81d173a5dbda677baa235efd8924d4b865"
+scope = "two incident edges in a (q+1)-chromatic graph all of whose proper minors are q-colourable, with a fixed model-preserving common deletion"
+label_fidelity = "the same spanning labelled model remains fixed, but colours are not identified with labels"
+separator_order = "a nondominating transition component exposes an actual boundary of order at least the host connectivity"
+colour_compatibility = "the opposite one-edge responses agree on the transition-component boundary"
+conclusions = ["nonadjacent ends give an exact star trace and saturation-or-bypass", "adjacent ends give Kempe-separated response families or one saturated transition component", "a dominating transition component in HC7 has five-chromatic K6-minor-free complement"]
+does_not_prove = ["Kempe connectivity of the two response families", "an upper bound of seven on the separator", "palette-to-label allocation", "HC7"]
+
+[[claims]]
+id = "hc7.one_extra_colour_boundary_kernel"
+title = "One-extra-colour critical kernel at a boundary edge"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_one_extra_colour_boundary_kernel.md"
+active = true
+audit = "results/hc7_one_extra_colour_boundary_kernel_audit.md"
+expected_source_sha256 = "6317f20d0307b00ceec9ad1290f08e81e211f2dd34a85b975400381bb08c5c07"
+scope = "vertex-minimal boundary-list obstruction after deleting one boundary edge"
+conclusions = ["Gallai-tree, one-root exceptional, or positive-excess trichotomy", "exact degree identity", "tight vertices at a one-pair exact-seven boundary expose an actual order-seven separation"]
+does_not_prove = ["a K7-minor model", "a common full boundary partition", "HC7"]
+
+[[claims]]
+id = "hc7.boundary_crossing_persistent_edge_reduction"
+title = "Boundary-crossing persistent edge gives a strict one-extra-colour descent"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_boundary_crossing_persistent_edge_reduction.md"
+active = true
+audit = "results/hc7_boundary_crossing_persistent_edge_reduction_audit.md"
+expected_source_sha256 = "f57949ded3c17962004cbe1c7f1a36bb5ec9667cc79a901326b44234dfa41326"
+scope = "the asymmetric order-eight branch when a deletion-persistent edge crosses into the branch set deficient from the protected singleton"
+strict_parameter = "order of the one-extra-colour critical component inside the fixed host"
+conclusions = ["simultaneous saturation-or-bypass colouring", "strict full-neighbourhood descent with one exact oriented response", "order-seven/eight singleton separation or shore-filling minimum degree at least nine"]
+does_not_prove = ["placement of every persistent edge", "preservation of every branch-set location after descent", "a common full boundary partition", "HC7"]
+
+[[claims]]
+id = "hc7.total_trace_rejection_kernel"
+title = "Total rejection of a fixed boundary trace at an internal edge"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_total_trace_rejection_kernel.md"
+active = true
+audit = "results/hc7_total_trace_rejection_kernel_audit.md"
+expected_source_sha256 = "1bb4fff7f050cf4349ee46d612949c8ddfc07d51d69f65f2406fc7fa6ff6b258"
+scope = "one fixed boundary trace rejected by every colouring after deleting an internal shore edge"
+conclusions = ["a second spanning edge-minimal list-critical graph", "simultaneous opposite-shore paths or paired rejected kernels", "strict transfer when a paired kernel is proper"]
+does_not_prove = ["trace preservation after transfer", "model-label preservation", "a K7-minor model", "HC7"]
+
+[[claims]]
+id = "hc7.aligned_two_edge_bypass_separator"
+title = "Aligned critical edges give a bypass or labelled donor separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_aligned_two_edge_bypass_separator.md"
+active = true
+audit = "results/hc7_aligned_two_edge_bypass_separator_audit.md"
+expected_source_sha256 = "de9e974aa71a2372933a65b01835d2543664ebe63ca637591b50b63cfb50efae"
+scope = "two aligned critical edges in a spanning labelled K7-minus-one-edge model"
+label_fidelity = "retains the deficient singleton, donor branch set and exact lost foreign label"
+conclusions = ["a two-edge-avoiding bypass", "an explicit K7 or actual donor-side separator", "oppositely oriented proper-minor responses at named edges"]
+does_not_prove = ["an upper bound on the returned boundary", "palette-to-branch-set allocation", "a common full boundary partition", "HC7"]
+
+[[claims]]
+id = "hc7.barrier.persistent_tight_endpoint"
+title = "Persistence does not force a tight list-critical endpoint"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_persistent_edge_tight_endpoint_barrier.md"
+active = true
+scope = "abstract vertex-minimal list-critical graphs before and after one edge deletion"
+refutes = ["a deletion-persistent edge in a vertex-minimal list obstruction must have a tight endpoint after deletion"]
+does_not_prove = ["a counterexample under the full HC7 host geometry", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.barrier.persistent_tight_endpoint_shadow"
+title = "Static seven-connected alignment does not force a tight endpoint"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_persistent_edge_tight_endpoint_shadow.md"
+active = true
+scope = "a seven-connected K7-minor-free but six-colourable aligned shadow with a compatible exact-seven terminal"
+refutes = ["the full current static alignment data force a tight persistent endpoint, a K7 minor, or a proper rejected kernel"]
+does_not_prove = ["a counterexample in a seven-chromatic contraction-critical host", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.barrier.persistent_induced_star"
+title = "Three persistent edges need not have two nonadjacent outer endpoints"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_persistent_induced_star_barrier.md"
+active = true
+scope = "a seven-connected K7-minor-free host with a spanning labelled K7-minus-one-edge model and three persistent incident edges"
+refutes = ["three deletion-persistent incident edges force two with nonadjacent outer endpoints"]
+does_not_prove = ["a counterexample with no actual order-seven separation", "a counterexample to the degree-at-least-thirteen corollary", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.target.split_planar_pbar7_reselection"
+title = "Split-planar complement-P7 model reselection"
+kind = "target"
+status = "written-unaudited"
+source = "active/hc7_split_planar_pbar7_reduction.md"
+active = true
+scope = "the contracted five-chromatic split-planar boundary residue"
+allowed_exits = ["six contacted quotient bags and an explicit K7", "global model reselection", "a colour-compatible exact separation"]
+does_not_prove = ["fixed-bag root transfer", "a K7-minor model in every residue", "HC7"]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.epsilon_one_labelled_descent"
@@ -2024,6 +2203,101 @@ kind = "uses"
 source = "hc7.target.degree7_model_separator"
 target = "hc7.persistent_edge_fixed_trace_alignment"
 kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.rooted_persistent_model_edge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.multi_protected_persistent_model_edge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.joint_persistent_edge_or_exact_seven"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.persistent_support_class_refinement"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.joint_persistent_incident_colour_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.one_extra_colour_boundary_kernel"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.boundary_crossing_persistent_edge_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.total_trace_rejection_kernel"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.aligned_two_edge_bypass_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.persistent_tight_endpoint"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.persistent_tight_endpoint_shadow"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.persistent_induced_star"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.boundary_crossing_persistent_edge_reduction"
+target = "hc7.rooted_persistent_model_edge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.boundary_crossing_persistent_edge_reduction"
+target = "hc7.one_extra_colour_boundary_kernel"
+kind = "uses"
+
+[[relations]]
+source = "hc7.joint_persistent_edge_or_exact_seven"
+target = "hc7.rooted_persistent_model_edge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.persistent_support_class_refinement"
+target = "hc7.rooted_persistent_model_edge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.persistent_support_class_refinement"
+target = "hc7.barrier.persistent_induced_star"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.joint_persistent_incident_colour_fork"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+
+[[relations]]
+source = "hc7.multi_protected_persistent_model_edge"
+target = "hc7.rooted_persistent_model_edge"
+kind = "strengthens"
 
 [[relations]]
 source = "hc7.contracted_five_chromatic_boundary"
@@ -2717,7 +2991,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "4f7ab837c52d8779e6595b8023c4914b9a9550ff4a47d5b4145402669860247c"
+evidence_sha256 = "3287618888d56ac0ff4f5d549e3a29a0b7b3ba895ec7edce0786284656d414f0"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2739,7 +3013,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "4f7ab837c52d8779e6595b8023c4914b9a9550ff4a47d5b4145402669860247c"
+evidence_sha256 = "3287618888d56ac0ff4f5d549e3a29a0b7b3ba895ec7edce0786284656d414f0"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -2750,7 +3024,7 @@ evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
 evidence_start_line = 770
 evidence_end_line = 797
-evidence_sha256 = "77b7f5f018f73c03726f0b5279ac0d99b9126015c1081a7181a57744319098af"
+evidence_sha256 = "ff42c4fa4042da826803506ead7f20f1a658f8517cca86c5a679d66b4311b2e1"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3022,4 +3296,47 @@ sha256 = "36535074ea67044bc5ec7977f65f191a5a0b6428235a27e2962c9af884e5557a"
 timeout = 30
 expected_stdout = [
   "GREEN: exact-seven multicoloured-carrier barrier; all seven spoke contractions have saturated nonextendible responses",
+]
+
+[[verifiers]]
+id = "persistent-edge-tight-endpoint-shadow"
+path = "barriers/hc7_persistent_edge_tight_endpoint_shadow_verify.py"
+sha256 = "480de056011e88ac387078a68bddadf1a21be9ff0d36551b746170e9cb5c5e39"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN: seven-connected K7-free aligned persistent-edge shadow",
+  "fixed trace: shore-filling vertex-minimal obstruction, all excess one",
+  "spanning K7^- model: three deletion-persistent edges at r2",
+  "responses: two attain the trace, one totally rejects it",
+  "boundary edge: five disjoint bichromatic paths and explicit six-fan",
+  "trust boundary: six-colourable; compatible exact-seven/apex-pair terminal",
+]
+
+[[verifiers]]
+id = "persistent-edge-tight-endpoint-abstract"
+path = "barriers/hc7_persistent_edge_tight_endpoint_barrier_verify.py"
+sha256 = "4ae6abf59c397213308913dc9513327751caebf4938126237ce91d83e6c2eac2"
+timeout = 30
+expected_stdout = [
+  "verified Grötzsch-plus-chord persistent-edge barrier",
+]
+
+[[verifiers]]
+id = "split-planar-fixed-bag-barrier"
+path = "active/hc7_split_planar_fixed_bag_barrier_verify.py"
+sha256 = "fcc5837c27ad403993a16a6fff91aad0b614049ed3ed28b9ba020618b348b78d"
+timeout = 30
+expected_stdout = [
+  "split-planar fixed-bag barrier: verified",
+]
+
+[[verifiers]]
+id = "persistent-induced-star-barrier"
+path = "barriers/hc7_persistent_induced_star_barrier_verify.py"
+sha256 = "c56d29fec3fb0f23d6fe08b25137bac069a21fc2d178150d290f06c3d7b47a4a"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "verified persistent induced-star barrier",
 ]
