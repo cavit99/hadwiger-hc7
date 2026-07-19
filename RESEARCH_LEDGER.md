@@ -60,11 +60,12 @@ There are two present subbranches.
    every tree and every bipartite exterior is eliminated.  Binary
    cutvertices and nonbipartite two-connected exteriors remain.
 2. **Two entrance edges.**  Simultaneous contraction gives a connected
-   two-root list-critical core.  If a proper core has an order-seven full
-   neighbourhood retaining all five inherited literal vertices, one
-   original edge-deletion colouring pulls back to a strict generic
-   five-plus-two response interface.  The remaining placement obstructions
-   are separator excess and loss of an inherited boundary vertex.
+   two-root list-critical core.  A proper core with an order-seven full
+   neighbourhood is now always a strictly smaller generic exact-seven
+   selected-response interface.  No inherited boundary vertex, old
+   equality partition or old model label must be retained for this generic
+   recursion.  The remaining placement obstruction for a proper core is
+   separator excess: a full neighbourhood of order at least eight.
 
 If the list-critical core fills its shore, its total list-degree excess is
 the remaining unbounded scalar.  The all-tight case has at most eleven
@@ -79,21 +80,30 @@ confined to one open shore in the quotient.
 
 ### Exact live gap
 
-The current missing theorem is simultaneous and label-sensitive.  It must
-use the operation-specific proper-minor responses and literal first-hit
-locations to obtain one of:
+Choose a generic exact-seven selected-response interface with minimum
+connected-shore order.  The audited restart theorem leaves exactly three
+terminal modes: a singleton shore with nonbipartite opposite exterior, a
+proper two-root list-critical core whose full neighbourhood has order at
+least eight, or a shore-filling positive-excess list-critical core.
+
+The current missing theorem must use the operation-specific proper-minor
+responses and literal host attachments to obtain one of:
 
 1. an explicit `K_7`-minor model;
 2. an actual order-seven separation on which one complete equality
    partition is realized by both closed shores; or
-3. a strict host-level descent retaining the selected response and the
-   required inherited literal vertices.
+3. a strictly smaller generic exact-seven selected-response interface.
 
-Pairwise Kempe connectivity is not enough: the paths may intersect, use
-different shores, or first meet the wrong branch sets.  A separator without
-compatible shore colourings is also not terminal.  Outside the special
-degree-seven branch, the bounded degree-eight and degree-nine interfaces
-remain global obligations.
+Old near-clique labels need be preserved only when they are used to claim a
+particular minor-model construction; they are not part of the recursion
+rank.  Pairwise Kempe connectivity is still insufficient: paths may
+intersect, use different shores, or first meet the wrong branch sets.  A
+separator without compatible shore colourings is also not terminal.
+Contracted branch sets cannot be counted as single literal separator
+vertices, positive list-degree excess does not make the whole core a
+Gallai tree, and pruning a fixed-list obstruction is not a descent in the
+seven-chromatic host.  Outside degree seven, the bounded degree-eight and
+degree-nine interfaces remain global obligations.
 
 This is meaningful progress, not a proof of `HC_7`.
 

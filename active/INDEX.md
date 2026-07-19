@@ -20,7 +20,7 @@ Immediate proved inputs, each with an adjacent audit:
 ### Special exact-seven normal form
 
 - [singleton shore or two-root list-critical core](../results/hc7_special_exact7_two_edge_list_core.md)
-- [selected-response pullback through a retained exact-seven boundary](../results/hc7_special_exact7_selected_response_pullback.md)
+- [generic selected-response restart at every exact order-seven core boundary](../results/hc7_generic_exact7_response_restart.md)
 - [density and block structure in the shore-filling core](../results/hc7_special_shore_filling_density.md)
 - [fixed-trace internal-edge dichotomy](../results/hc7_fixed_trace_internal_edge_dichotomy.md)
 - [six almost-boundary-complete neighbours force a `K_7` minor](../results/hc7_six_spoke_boundary_completion.md)

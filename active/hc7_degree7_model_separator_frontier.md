@@ -1,9 +1,8 @@
 # Degree-seven boundary-labelled near-clique composition
 
 **Status:** active conjectural target.  Every result described below as
-proved has a separate adjacent audit.  The boundary-edge contact-exchange
-or compatible-separator theorem in Section 7 is open.  Nothing here proves
-`HC_7`.
+proved has a separate adjacent audit.  The generic exact-seven terminal
+theorem in Section 7 is open.  Nothing here proves `HC_7`.
 
 ## 1. The degree-seven interface is a single connected exterior
 
@@ -950,16 +949,15 @@ seven-chromatic host, so this is a normalization rather than a completed
 induction.
 
 For a proper list-critical core, the original one-edge deletion colouring
-now gives the correct response pullback.  It is legal on the opposite
-closed shore and rejected by the core side.  If the core has an exact
-order-seven full neighbourhood containing all five inherited literal
-vertices, that boundary is forced to be the five old vertices plus the
-chosen entrance vertex and one old-shore vertex.  This gives a strict
-generic five-plus-two response descent.  In the bridge branch one of the
-two orientations retains the five inherited vertices unless both exclusive
-contacts are among those five.  Thus the remaining placement obstructions
-are separator excess and literal inherited-vertex loss, not the earlier
-double-contraction response chambers.
+now gives the correct response pullback.  More generally, if the core has
+an exact order-seven full neighbourhood, it is always a strictly smaller
+generic selected-response interface.  Seven-connectivity retains the
+originally selected entrance edge and supplies a second vertex-disjoint
+entrance edge unless the connected shore is a singleton, so the two-edge
+reduction can be restarted without the special five-plus-two provenance.
+The old partition and model labels need not survive.  Thus literal
+inherited-vertex loss is no longer an obstruction to generic recursion;
+the remaining proper-core placement obstruction is separator excess.
 
 In the shore-filling branch, choose a double-contraction colouring which
 lexicographically minimizes total boundary-colour incidence, boundary
@@ -1008,6 +1006,41 @@ preserve.  The fixed compressed quotient and the finite boundary cases are
 already exhausted.  One response colouring, an abstract response language,
 shortest-path rerouting, or web structure without contraction-criticality
 cannot supply the missing labelled allocation.
+
+### Generic exact-seven restart and the remaining terminal theorem
+
+The generic restart theorem gives a simpler well-founded spine.  At any
+actual order-seven separation with a selected boundary-to-shore edge
+deletion response, either the connected operated shore is a singleton, or
+the selected edge can be retained and paired with a second vertex-disjoint
+entrance edge.  The resulting two-root list-critical core gives one of:
+
+1. a strictly smaller generic exact-seven selected-response interface;
+2. a proper core with full-neighbourhood order at least eight; or
+3. a shore-filling two-root list-critical obstruction.
+
+Consequently old five-plus-two vertices and old near-clique labels are not
+part of the recursion invariant.  They remain useful only for a particular
+explicit minor-model construction.
+
+The exact open theorem is now the following.  In a minimum-order generic
+exact-seven selected-response interface, eliminate the singleton,
+separator-excess and shore-filling outcomes by producing either an explicit
+`K_7`-minor model or an actual order-seven separation whose two closed
+shores realize one common complete equality partition.  Equivalently, any
+nonterminal operation must return a strictly smaller generic interface.
+
+The tempting contracted-terminal fan proof does not establish this theorem.
+A cut in a graph in which branch sets have been contracted counts connected
+objects, not literal separator vertices; a branch-set preimage may expose
+arbitrarily many vertices.  Contracting a connected kernel also does not
+give five prescribed-port paths disjoint outside one root.  On the colouring
+side, a positive-excess list-critical core need not be a Gallai tree,
+Kempe-minimality gives pairwise support rather than a unique boundary
+partition, and edge pruning lowers fixed-list excess without shrinking the
+host shore.  Any successful terminal theorem must spend the actual
+`K_7`-minor exclusion and all operation-specific proper-minor responses at
+one of the three literal host configurations above.
 
 ## Dependencies
 
@@ -1088,6 +1121,7 @@ cannot supply the missing labelled allocation.
 - [fixed-trace responses at every internal edge of the shore-filling core](../results/hc7_fixed_trace_internal_edge_dichotomy.md)
 - [six almost-boundary-complete neighbours force a `K_7` minor](../results/hc7_six_spoke_boundary_completion.md)
 - [a selected response pulls back through a retained exact-seven boundary](../results/hc7_special_exact7_selected_response_pullback.md)
+- [generic selected-response restart at every exact order-seven core boundary](../results/hc7_generic_exact7_response_restart.md)
 - [Kempe-minimal boundary traces have pairwise bichromatic support](../results/hc7_kempe_minimal_boundary_trace.md)
 - [the singleton-shore exterior is nonbipartite](../results/hc7_singleton_shore_nonbipartite.md)
 - [exact completion classification for two connected subgraphs at a near-complete six-branch-set model](../results/hc7_five_contact_completion_classification.md)

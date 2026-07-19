@@ -16,60 +16,38 @@ pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
 id = "hc7.target.degree7_model_separator"
-title = "Label-preserving rooted four-vertex model or compatible exact seven-separator"
+title = "Generic exact-seven terminal theorem"
 kind = "target"
 status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
-source_heading = "First-hit compression and the remaining label-preserving exit"
+source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c318e"
-scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
-label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
-separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
+expected_source_sha256 = "d457a355132b89e29c57e7cf06c9b642cec959b4eb73b0d65c6730a25891aa92"
+scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
+label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
+separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
 colour_compatibility = "open"
+strict_parameter = "order of the connected operated shore in the fixed host graph"
 hypotheses = [
-  "connected degree-seven anti-neighbourhood",
-  "exact one-edge versus size-at-least-two matching languages",
-  "spanning boundary-labelled K7-minus-one-edge model with singleton centre",
-  "the simultaneous direct-entry contraction gives a list-critical descent or a shore-filling normal form",
-  "Rado's strict-gammoid criterion exactly characterizes five paths with five distinct literal first-hit labels",
-  "rank failure with at most three fixed response vertices yields an exact order-seven separator or repeated exposure of an unused label",
-  "repeated exposure compresses to a persistent edge pair, a small connected source subgraph, or an exact order-seven separator",
-  "the fixed-partition two-edge fork and paired-boundary footprint calculus eliminate every demand-at-most-two switch",
-  "a root-free connected split between two contacts gives K7, a strict label-preserving branch-set reduction, or a multi-owner piece",
-  "the relaxed connected-kernel first-hit rank is preserved under every zero- or one-owner transfer",
-  "a full labelled owner-portal linkage gives K7 or a strict model-and-rank descent; failure gives an internal transversal of order at most four",
-  "for two owners, portal-linkage failure gives concentrated incident contacts, a label-transversal order-seven boundary, or a repeated model-preserving contact pair",
-  "every minimal owner circuit gives an incident differently labelled contact pair, a repeated model-preserving contact pair, or an actual separator of order at most ten",
-  "a reserved component plus a proper-subfamily owner linkage avoiding it gives an explicit K7, uniformly for two through five owners",
-  "the three-owner no-repeated-contact equality case has a literal order-eight boundary or returns an actual order-seven separation",
-  "in the extremal three-owner equality case all three owner portal sets are concentrated in the distinguished component and any owner pair gives two differently labelled critical contact edges",
-  "the concentrated boundary-full three-owner order-eight case always has an actual order-seven separation",
-  "every boundary-full order-eight interface with two or three components gives a clean five-path fan or an operation-decorated exact order-seven separation with bilateral Hall deficiency",
-  "at a label-transversal critical pinch, the legal opposite-shore partition has an exact Hall-deficient support family with one or two full supports",
-  "one critical edge in each opposite shore gives an endpoint-rooted K4 minor or a universally orientable exact order-seven separator",
-  "a transported boundary partition reflects exactly when the named connected contraction supports exist on the opposite closed shore",
-  "mixed boundary-full and named supports satisfy an exact Hall duty criterion for reflecting a transported partition",
+  "a hypothetical minor-minimal seven-chromatic K7-minor-free graph",
+  "an actual order-seven separation with nonempty open shores and a selected boundary-to-shore edge-deletion six-colouring",
+  "the generic restart theorem gives a singleton shore, strict smaller restart, separator excess or a shore-filling two-root list obstruction",
+  "the singleton opposite exterior is nonbipartite",
+  "proper-minor responses and literal host attachments are retained at every claimed terminal construction",
 ]
 allowed_exits = [
   "explicit K7-minor model",
   "one equality partition realised by both closed shores of an actual order-seven separation",
-  "an endpoint-rooted K4 whose four branches reserve three inherited completing branch sets",
-  "a strict host-level descent preserving the selected partition and all five branch-set labels",
+  "a strictly smaller generic exact-seven selected-response interface in the same host graph",
 ]
 does_not_prove = [
   "HC7",
-  "existence of a degree-seven vertex in every hypothetical counterexample",
-  "reservation of three inherited branch sets in the endpoint-rooted K4 outcome",
-  "realization of one legally transported partition by five named connected contraction supports on the opposite shore",
-  "dynamic closure of the incident differently labelled, repeated model-preserving, and bounded-separator owner-circuit outcomes",
-  "a proper-minor response which reroutes a proper-subfamily linkage away from the reserved component, preserves a six-contact residual, or synchronizes the returned boundary",
-  "operation-specific colour compatibility at the exact order-seven separator returned by the concentrated three-owner reduction",
-  "allocation of a clean five-path fan in order-eight branches outside the concentrated three-owner equality case",
-  "a complete common equality partition or a complete Hall-duty support at the returned exact order-seven separation",
-  "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
+  "elimination of the singleton nonbipartite exterior",
+  "reduction of a proper list-critical core's boundary from order at least eight to a compatible order-seven interface",
+  "closure of the shore-filling positive-list-excess obstruction",
+  "the degree-eight and degree-nine bounded-interface cases",
 ]
-keywords = ["degree seven", "labelled first hit", "strict gammoid", "rooted K4", "exact seven-separator", "colour gluing"]
+keywords = ["degree seven", "exact seven-separator", "selected response", "list-critical core", "colour gluing"]
 
 [[claims]]
 id = "hc7.target.bounded_interface_bridge"
@@ -2726,6 +2704,30 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.five_contact_reserved_completion"
+title = "Uniform five-contact completion at a K6-minus-one-edge model"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_five_contact_reserved_completion.md"
+source_heading = "Completing a near-clique model from two connected subgraphs with five outside contacts"
+active = false
+audit = "results/hc7_five_contact_reserved_completion_audit.md"
+expected_source_sha256 = "4b691b627cac8102663a3f32a5d9dfc37cacbdcedd3dfa58ad480f7cdcc77baa"
+scope = "two adjacent connected subgraphs, each adjacent to at least five of six outside branch sets forming a K6-minus-one-edge model"
+label_fidelity = "all eight connected subgraphs and every merger retain their displayed labels"
+conclusions = [
+  "an explicit K7-minor model outside two exact quotient exceptions",
+  "the exceptions are crossed misses at the old absent pair and two distinct ordinary missed labels",
+  "both exceptional quotient graphs are K7-minor-free",
+]
+does_not_prove = [
+  "existence of the two connected subgraphs with five outside contacts",
+  "repair of either exceptional quotient geometry",
+  "a colour-compatible exact order-seven separation",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.endpoint_k4_transfer_or_order7"
 title = "An endpoint K4 gives a strict labelled transfer or an order-seven separation"
 kind = "theorem"
@@ -3006,7 +3008,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_special_exact7_selected_response_pullback.md"
 source_heading = "Pulling one selected edge-deletion response through a proper list-critical core"
-active = true
+active = false
 audit = "results/hc7_special_exact7_selected_response_pullback_audit.md"
 expected_source_sha256 = "993af43382b88c10ba75566e2e588c9486cd28908aeaf9bfe35805508dfb895b"
 scope = "a proper two-root list-critical core whose full neighbourhood has order seven and retains the five literal inherited boundary vertices"
@@ -3021,7 +3023,35 @@ conclusions = [
 does_not_prove = [
   "preservation of the old equality partition or full-subgraph identities",
   "preservation of five branch-set labels or concentrated-order-eight provenance",
-  "recovery after literal inherited-vertex loss",
+  "label-preserving recovery after literal inherited-vertex loss",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.generic_exact7_response_restart"
+title = "Generic selected-response restart at an exact order-seven boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_generic_exact7_response_restart.md"
+source_heading = "Restarting the two-edge reduction at an arbitrary exact order-seven response boundary"
+active = true
+audit = "results/hc7_generic_exact7_response_restart_audit.md"
+expected_source_sha256 = "e689c96686a936c27e58c2cba22d699c62ad649092eebfcdfc9c5db95a8e7b5a"
+scope = "every actual order-seven separation in a hypothetical minor-minimal HC7 counterexample with one selected boundary-to-shore edge response"
+label_fidelity = "retains one selected literal entrance edge; deliberately forgets the old boundary partition and near-clique labels after restart"
+separator_order = "a proper core of boundary order seven is recursive; boundary order at least eight remains open"
+colour_compatibility = "the fresh selected edge-deletion partition is legal on the opposite shore and rejected on the connected core shore"
+strict_parameter = "order of the connected operated shore"
+conclusions = [
+  "a singleton operated shore",
+  "a strictly smaller generic exact-seven selected-response interface",
+  "a proper list-critical core with boundary order at least eight",
+  "a shore-filling two-root list-critical obstruction",
+]
+does_not_prove = [
+  "preservation of the old complete equality partition",
+  "preservation of inherited boundary vertices or old near-clique branch-set labels",
+  "closure of separator excess, singleton or shore-filling outcomes",
   "HC7",
 ]
 
@@ -4183,7 +4213,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c318e"
+evidence_sha256 = "d457a355132b89e29c57e7cf06c9b642cec959b4eb73b0d65c6730a25891aa92"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4205,7 +4235,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "c06c5accf84ae2eb9156b475eb1b2ce0215e986b15504f8691134ea1405c318e"
+evidence_sha256 = "d457a355132b89e29c57e7cf06c9b642cec959b4eb73b0d65c6730a25891aa92"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4250,9 +4280,9 @@ note = "Eliminates the unbounded wheel-shaped positive-excess family under the a
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
-target = "hc7.special_exact7_selected_response_pullback"
+target = "hc7.generic_exact7_response_restart"
 kind = "uses"
-note = "Makes a proper exact-seven list-critical core recursive precisely when all five inherited literal boundary vertices are retained."
+note = "Makes every proper exact-seven list-critical core a strict generic selected-response restart without inherited-label retention."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4861,6 +4891,43 @@ kind = "uses"
 source = "hc7.special_exact7_selected_response_pullback"
 target = "hc7.exact7_bipartite_bridge_response_descent"
 kind = "uses"
+
+[[relations]]
+source = "hc7.generic_exact7_response_restart"
+target = "hc7.direct_entry_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.generic_exact7_response_restart"
+target = "hc7.exact_seven_packet_packing"
+kind = "uses"
+
+[[relations]]
+source = "hc7.generic_exact7_response_restart"
+target = "hc7.exact7_adaptive_packet_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.generic_exact7_response_restart"
+target = "hc7.exact7_boundary_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.generic_exact7_response_restart"
+target = "hc7.cycle_boundary_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.generic_exact7_response_restart"
+target = "hc7.special_exact7_selected_response_pullback"
+kind = "related_to"
+note = "The special pullback retains more old boundary structure; the generic restart removes that retention hypothesis for recursion."
+
+[[relations]]
+source = "hc7.five_contact_reserved_completion"
+target = "hc7.five_contact_completion_classification"
+kind = "related_to"
+note = "Uniformizes the same two sharp quotient obstructions when either new connected subgraph may miss any outside label."
 
 [[relations]]
 source = "hc7.kempe_minimal_boundary_trace"
