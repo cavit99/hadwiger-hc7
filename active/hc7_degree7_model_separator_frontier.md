@@ -546,7 +546,7 @@ leaves one adjacent vertex split of the planar graph, and every relevant
 split-planar alternative is a normalized residue, not a two-apex conclusion
 in the original graph.
 
-### Rooted model persistence and the remaining label-allocation fork
+### First-hit compression and the remaining label-preserving exit
 
 The common-endpoint rooted model-reselection part of the former alignment
 problem is now solved.
@@ -644,50 +644,82 @@ next operation must compose that path with the two disjoint boundary-full
 connected subgraphs; further enumeration of boundary partitions is no
 longer relevant.
 
-The boundary-crossing placement is reduced unboundedly.  If a persistent
-edge `f=vu` ends in the branch set anticomplete to `{x}`, then `x-v-u` is an
-induced two-edge path.  Simultaneous contraction gives the audited
-bichromatic saturation-or-bypass alternative.  Independently, every
-six-colouring of `G-f` produces a vertex-minimal one-extra-colour critical
-subgraph `K` in the full shore.  If `K` is proper, its full neighbourhood is
-a strict component-order descent carrying the same oriented boundary
-partition and the same model in `G-f`.  If `K` fills the shore, every vertex
-with list-degree excess plus repeated-boundary-colour count at most two
-gives an order-seven or order-eight singleton-side separation.  The only
-surviving shore-filling normal form has that sum at least three at every
-vertex and hence minimum degree at least nine.
+The direct-entry equality has an independent host-level reduction.
+Simultaneously contracting the two direct-entry edges and expanding a
+six-colouring makes the rich shore uncolourable from its
+boundary-forbidden lists.  A vertex-minimal induced obstruction is
+connected.  If it is proper, its full neighbourhood is a strict
+connected-side descent with the two failed edges placed exactly on the
+returned closed sides.  If it fills the shore, every vertex satisfies
 
-For an edge whose deletion attains the selected trace, the aligned
-two-edge theorem gives an `x-u` bypass and then either an explicit `K_7`
-minor or a connected part of the donor branch set behind its full
-neighbourhood, with the exact lost model label and the two opposite
-proper-minor response languages recorded.  If the trace is never attained,
-the total-rejection theorem instead gives paired list-critical kernels
-along a shortest boundary Kempe sequence.  A proper kernel transfers to a
-smaller rejected component, but the new trace and model placement may
-drift.  Two explicit counterexamples show that neither deletion persistence
-nor all of this static alignment forces a tight endpoint; that route is
-closed.  In the proper-kernel branch there is now a label-preserving
-absorption theorem.  If the selected connected component retains its five
-required contacts, every omitted component can be reassigned to another
-branch set, giving an explicit `K_7`, a full-neighbourhood separator, or a
-strictly smaller common branch set in the same spanning labelled model.
-The sole equality case is an induced shortest private connector; a
-nonpath rejected kernel excludes it.  What remains is to force the five
-contacts or close that private-path residue.
+\[
+ d_G(v)=6+\varepsilon(v)+\rho(v).
+\]
 
-The immediate theorem must now close one of the following four literal
-forks.
+Low list-degree excess plus repeated boundary-colour count gives an
+order-seven or order-eight singleton-side separation.  An all-tight shore is
+a Gallai tree, and the surplus-sensitive density inequality bounds many of
+the remaining shores.  None of these conclusions by itself preserves the
+five inherited branch-set labels.
 
-1. **Common model-preserving deletion.**  Decode a six-colouring of the
-   joint two-edge deletion through the same labelled near-complete model.
-   For nonadjacent outer endpoints, decode the saturated first exits or the
-   strict two-terminal rejected kernel through the five named common branch
-   sets.  For adjacent endpoints, decode the transition separator or the
-   three-chromatic Kempe-separated component through those same labels.
-   The required conclusion is an explicit `K_7` model, a colour-compatible
-   exact-seven separation, or a strict label-preserving full-neighbourhood
-   descent.
+Literal first-hit ownership is now an exact, rather than conjectural,
+invariant.  In the terminal-avoiding graph, Rado's theorem for a strict
+gammoid gives five response paths with distinct first-hit labels exactly
+when every label subset satisfies the corresponding rank inequality.
+Failure gives a deficient label set and a minimum separator.  With five
+labels and at most three fixed response vertices, that certificate yields
+an actual order-seven separation or two contacts with the same unused
+label.  Repeating the exposure argument produces an order-seven separation,
+two independent or incident persistent edges, or a connected source
+subgraph of order at most four.
+
+For the returned edge pair, the fixed-partition theorem gives exactly three
+possibilities: single-side attainment; common rejection with a strict
+same-partition critical subgraph; or common equality at both edge pairs.
+In the common-equality branch every partition-changing two-colour component
+meets the literal boundary.  The paired-boundary footprint calculation
+eliminates every switch of demand at most two, including the exceptional
+nonedge.  A proper total-rejection component retaining all five named
+contacts is already absorbable; the unresolved branch is the one in which
+contacts collide in inherited branch sets.
+
+The collision geometry is also sharply constrained.  A connected split
+separating two contacts in one branch set gives an explicit `K_7`, a strict
+label-preserving reduction, or a piece owning at least two foreign
+adjacencies.  Repeated contacts alone do not lower component defect: after a
+split the exact value is
+
+\[
+                    \Delta'=\kappa_2+\kappa_3+\kappa_4-3.
+\]
+
+Thus the old-contact components must be retained, not merely hit twice.
+Selecting one critical edge in each anticomplete open shore now supplies the
+missing host geometry.  The common deletion host is six-chromatic and
+five-connected; it contains either a `K_4` minor rooted at the four edge
+endpoints or a universally orientable exact order-seven separation.  On the
+same three-edge deletion host, the selected fixed-partition response is
+coupled to a different opposite-shore boundary trace.
+
+The first-hit rank therefore leaves one precise label-faithful step.  In the
+rooted-`K_4` outcome, three inherited branch sets must be reserved as named
+completing branch sets.  In the separator outcome, one legally transported
+partition on the new boundary must be realized on the opposite shore by
+five named connected contraction supports.  The two partitions transported
+automatically by the opposite colouring chambers are incompatible, and the
+old partition is not literally a partition of the new seven-boundary.  The
+exact selected-partition preservation criterion is proved; what is missing
+is the operation-coupled theorem forcing one of those two certificates.
+
+The immediate theorem must close one of the following four literal forks,
+with the first-hit rank providing the primary mechanism.
+
+1. **Common model-preserving deletion.**  Couple the fixed first-hit rank to
+   the opposite-shore theorem.  Either reserve three inherited branch sets
+   outside its endpoint-rooted `K_4`, or lift its universal order-seven
+   separator with one legal transported partition and all five named
+   connected contraction supports on its opposite shore.  These give,
+   respectively, an explicit `K_7` model or a valid colour gluing.
 2. **Minimum oriented interface.**  At the minimum two-full-component
    boundary, eliminate a boundary-edge pinch, lower separator excess to
    zero while retaining the opposite response partitions, or split the
@@ -774,6 +806,20 @@ cannot supply the missing labelled allocation.
 - [clique-star response transition or higher-chromatic connected subgraph](../results/hc7_clique_star_kempe_separation.md)
 - [full-subgraph demand at an exact-seven transition](../results/hc7_exact7_critical_triangle_full_subgraph_demand.md)
 - [demand-set reflection and strict full-neighbourhood descent](../results/hc7_exact7_demand_set_separator_descent.md)
+- [simultaneous direct-entry contraction and two-root list-critical descent](../results/hc7_direct_entry_two_edge_list_core.md)
+- [surplus-sensitive density at an exact seven-boundary](../results/hc7_direct_entry_surplus_density.md)
+- [tight-shore order bound](../results/hc7_tight_shore_order_bound.md)
+- [Rado--gammoid criterion for labelled first-hit paths](../results/hc7_labelled_first_hit_rado_reduction.md)
+- [rainbow first-hit linkage to a partitioned minimum boundary](../results/hc7_literal_boundary_rainbow_linkage.md)
+- [rank defect gives a tight separator or a repeated literal exposure](../results/hc7_labelled_first_hit_exposure_collision.md)
+- [compression of repeated labelled exposure](../results/hc7_labelled_first_hit_exposure_compression.md)
+- [fixed-partition alternatives for two persistent edges](../results/hc7_repeated_exposure_fixed_trace_fork.md)
+- [boundary-forced Kempe locks](../results/hc7_paired_boundary_forced_kempe_locks.md)
+- [paired-boundary partial-switch calculus](../results/hc7_paired_boundary_partial_switch_calculus.md)
+- [exact selected-partition preservation at a seven-separator](../results/hc7_exact7_selected_response_preservation.md)
+- [two-contact label-preserving branch-set transfer](../results/hc7_response_aligned_two_contact_lobe_transfer.md)
+- [repeated contacts and component defect](../results/hc7_repeated_contact_component_defect.md)
+- [opposite-shore critical edges give a rooted four-vertex model or exact seven-separation](../results/hc7_cross_shore_critical_edge_linkage.md)
 - [label-preserving absorption of a five-contact rejection component](../results/hc7_five_contact_rejection_component_absorption.md)
 - [one-extra-colour critical kernel at a boundary edge](../results/hc7_one_extra_colour_boundary_kernel.md)
 - [boundary-crossing persistent-edge reduction](../results/hc7_boundary_crossing_persistent_edge_reduction.md)
@@ -807,4 +853,8 @@ cannot supply the missing labelled allocation.
 - [persistent edges need not have tight endpoints](../barriers/hc7_persistent_edge_tight_endpoint_barrier.md)
 - [seven-connected static alignment still need not give tight endpoints](../barriers/hc7_persistent_edge_tight_endpoint_shadow.md)
 - [three persistent edges need not have two nonadjacent outer endpoints](../barriers/hc7_persistent_induced_star_barrier.md)
+- [seven-connectivity and `K_7`-minor exclusion do not bound first-hit exposure](../barriers/hc7_labelled_first_hit_k2_planar_exposure_barrier.md)
+- [a fixed response can rotate between repeated contacts](../barriers/hc7_fixed_trace_edge_rotation_barrier.md)
+- [two same-branch-set critical edges do not allocate labels](../barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md)
+- [repeated contacts need not lower component defect](../barriers/hc7_repeated_contact_component_defect_barrier.md)
 - [split-planar `\overline{P_7}` model-reselection reduction](hc7_split_planar_pbar7_reduction.md)

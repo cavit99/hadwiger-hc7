@@ -16,75 +16,45 @@ pattern = "HC_7.{0,20}not proved"
 
 [[claims]]
 id = "hc7.target.degree7_model_separator"
-title = "Label-preserving first-entry or compatible separator"
+title = "Label-preserving rooted four-vertex model or compatible exact seven-separator"
 kind = "target"
 status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
-source_heading = "Rooted model persistence and the remaining label-allocation fork"
+source_heading = "First-hit compression and the remaining label-preserving exit"
 active = true
-expected_source_sha256 = "a0a932a83f1984c0f36d867b28ef85538c8aa806f07823362a59a5da6ff98081"
-scope = "the exact asymmetric order-eight and descended exact-seven interfaces arising in the degree-seven boundary-labelled branch of a hypothetical minor-minimal HC7 counterexample"
-label_fidelity = "spanning boundary-labelled K7-minus-one-edge model, five named pairwise-adjacent connected subgraphs on the far shore, two paired traces, nested rooted separators and literal proper-minor contacts"
-separator_order = "nested full neighbourhoods of a tree part and its rooted expansion; order at least seven, with exact order seven and compatible colouring the target"
+expected_source_sha256 = "24c015853e7057d0b424aabdcdca1b3dbac21ae93e4d40aadc984e93f655c866"
+scope = "the degree-seven boundary-labelled K7-minus-one-edge branch of a hypothetical minor-minimal HC7 counterexample"
+label_fidelity = "five named common branch sets, the selected boundary equality partition, literal first-hit vertices, and operation-specific proper-minor responses"
+separator_order = "an exact order-seven separator is terminal only when one legally transported partition is realized by named connected contraction supports on the opposite shore"
 colour_compatibility = "open"
 hypotheses = [
   "connected degree-seven anti-neighbourhood",
   "exact one-edge versus size-at-least-two matching languages",
   "spanning boundary-labelled K7-minus-one-edge model with singleton centre",
-  "two-mark split gives K7 or a full-neighbourhood separator with a multicoloured named trace",
-  "boundary-full-subgraph reflection closes every independent-trace conflict graph within the available disjoint full-side capacity",
-  "disjoint two-trace linkage closes by simultaneous contraction",
-  "the rural alternative returns nested labelled separators and a degree-seven/eight curvature vertex",
-  "a reserved cyclic degree-eight allocation with at most two independent cross-defects gives K7",
-  "deleting three vertices preserves five-cyclability and a component-deleted degree-eight residue yields a reserved cycle or an order-at-most-two cut",
-  "a stable four-path system in the rooted disk always allocates the four roots and all five centre neighbours among five cyclically adjacent connected sets",
-  "two safe paired-trace supports reflect, while a nonempty boundary-edge obstruction forces at least three simultaneous far-shore Kempe connections",
-  "those three Kempe connections either pack disjointly away from their prescribed terminals or expose an actual order-seven boundary carrying a concrete one-sided equality partition",
-  "cutvertices and two-vertex separators inside a boundary-full component give an exact-seven boundary or an explicit repair support disjoint from a boundary-full residual, apart from a classified contact-concentration list",
-  "a universal boundary-contact vertex in a three-connected component gives the same split or an exact-seven boundary by Tutte's nonseparating-path theorem",
-  "an already-disjoint configuration of boundary-rooted connected subgraphs and cyclic connected sets gives K7, an exact order-seven separator or a strict separator-order descent",
-  "safe absorption gives a spanning labelled K7-minus-one-edge model with a deletion-persistent model edge and two donor-side attachment vertices",
-  "shortest boundary Kempe distance gives either simultaneous opposite-shore paths or paired list-critical subgraphs",
-  "a critical exact-seven boundary edge gives a six-ended fan, clean five-spoke packing or strict component descent",
-  "contracting the distinguished asymmetric-interface edge gives two exact-seven full shores and a split-planar normal form in the five-chromatic boundary case",
-  "a persistent edge attaining the fixed trace belongs to every list-critical obstruction for that trace, while failure means total trace rejection",
-  "at the deficient singleton a maximum common model-preserving incident-edge deletion has exact order d(x)-5 and can contain any prescribed persistent edge",
-  "nonjoint persistent pairs form a matching of two-contact branch-set classes; degree seven is an actual order-seven boundary and degree at least nine forces a jointly persistent nonadjacent pair",
-  "the remaining dense degree-eight case gives a clique-star Kempe transition or a connected four-chromatic subgraph, followed by a separator or a dominating K6-minor-free complement",
-  "a common two-edge deletion can be aligned with a branch-set split and globally minimized to an oriented boundary with both endpoint components boundary-full",
-  "a jointly persistent pair gives an exact nonadjacent-end trace or two critical-triangle response families separated by Kempe components, a common-coloured transition boundary, or a dominating five-chromatic K6-minor-free complement",
-  "Kempe-separated critical-triangle responses force a connected three-chromatic subgraph containing the triangle, followed by a separator or a dominating bounded-chromatic K6-minor-free complement",
-  "at an exact order-seven transition boundary every unresolved boundary partition has full-subgraph demand greater than the opposite packing number and every merge-critical singleton pair forces a literal bichromatic path",
-  "demand-set reflection closes a third disjoint demand representative and every non-direct path end gives a strictly smaller connected side behind its full neighbourhood",
-  "a proper rejection component retaining all five other model contacts gives K7, a full-neighbourhood separator, or a strictly smaller labelled common branch set",
-  "a boundary-crossing persistent edge gives a strict one-extra-colour component descent or a shore-filling minimum-degree-nine normal form",
+  "the simultaneous direct-entry contraction gives a list-critical descent or a shore-filling normal form",
+  "Rado's strict-gammoid criterion exactly characterizes five paths with five distinct literal first-hit labels",
+  "rank failure with at most three fixed response vertices yields an exact order-seven separator or repeated exposure of an unused label",
+  "repeated exposure compresses to a persistent edge pair, a small connected source subgraph, or an exact order-seven separator",
+  "the fixed-partition two-edge fork and paired-boundary footprint calculus eliminate every demand-at-most-two switch",
+  "a root-free connected split between two contacts gives K7, a strict label-preserving branch-set reduction, or a multi-owner piece",
+  "one critical edge in each opposite shore gives an endpoint-rooted K4 minor or a universally orientable exact order-seven separator",
+  "a transported boundary partition reflects exactly when the named connected contraction supports exist on the opposite closed shore",
 ]
 allowed_exits = [
   "explicit K7-minor model",
   "one equality partition realised by both closed shores of an actual order-seven separation",
-  "a label-preserving configuration satisfying every hypothesis of the audited connected-subgraph cyclic-contact allocation theorem, with cross-nonadjacency graph a matching of order at most two",
-  "a strict full-neighbourhood-separator descent preserving the paired traces, selected boundary-edge response and five named pairwise-adjacent connected subgraphs",
-  "a new aligned persistent-edge instance in the same host with a strictly smaller open component and the fixed trace and labelled near-complete model preserved",
-  "a smaller connected side behind a full-neighbourhood separator with the attained boundary partition and five named common branch sets preserved",
+  "an endpoint-rooted K4 whose four branches reserve three inherited completing branch sets",
+  "a strict host-level descent preserving the selected partition and all five branch-set labels",
 ]
 does_not_prove = [
   "HC7",
   "existence of a degree-seven vertex in every hypothetical counterexample",
-  "elimination of the concentrated low-cut residue after the component-deleted reserved-cycle fork",
-  "label-preserving use of the three-path packing through the five named connected subgraphs",
-  "extension of the concrete one-sided equality partition returned by the Kempe-path separation through the opposite closed shore",
-  "placement of a persistent model edge in the selected fixed-trace critical kernel and deficient branch set simultaneously",
-  "label allocation in the common model-preserving two-edge deletion",
-  "connection or terminal use of Kempe-separated critical-triangle response families",
-  "composition of the direct bichromatic path with the two selected boundary-full connected subgraphs",
-  "preservation of the old boundary partition and model labels under the strict demand-set separator descent",
-  "elimination of the five-contact absorption equality case when the retained component is a private induced path",
-  "synchronization of the exact-seven separator returned by the joint-persistence equality case",
-  "closure of the adjacent-vertex-split planar residue after contracting the distinguished edge",
-  "a disjoint seven-contact residual after one named connected subgraph is used as a repair connector",
+  "reservation of three inherited branch sets in the endpoint-rooted K4 outcome",
+  "realization of one legally transported partition by five named connected contraction supports on the opposite shore",
+  "elimination of the multi-owner branch-set split residue",
   "the general degree-eight and degree-nine bounded-interface cases outside this degree-seven-derived disk configuration",
 ]
-keywords = ["degree seven", "two paired traces", "nested full-neighbourhood separator", "facial cycle", "degree eight", "colour gluing"]
+keywords = ["degree seven", "labelled first hit", "strict gammoid", "rooted K4", "exact seven-separator", "colour gluing"]
 
 [[claims]]
 id = "hc7.target.bounded_interface_bridge"
@@ -2301,6 +2271,223 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.direct_entry_two_edge_list_core"
+title = "Simultaneous direct-entry contraction gives a list-critical descent or a shore-filling normal form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_direct_entry_two_edge_list_core.md"
+source_heading = "Theorem 2.1 (two-edge list-critical descent)"
+active = true
+audit = "results/hc7_direct_entry_two_edge_list_core_audit.md"
+expected_source_sha256 = "2a1f41bd8214e1e6abc34882e71a22fae302c421e9c13d4cd9fb06354405b74f"
+scope = "two vertex-disjoint direct-entry edges crossing the same side of a separation in a minor-minimal non-q-colourable graph"
+strict_parameter = "order of the connected open side containing a vertex-minimal boundary-list obstruction"
+colour_compatibility = "the simultaneous-contraction assignment is literal on the returned boundary, with every failed edge placement identified"
+conclusions = [
+  "a proper list-critical core gives a strict connected-side full-neighbourhood descent",
+  "a shore-filling core satisfies the exact degree identity q plus list excess plus repeated boundary-colour count",
+  "low excess gives an order-seven or order-eight singleton-side separation in the HC7 application",
+  "the all-tight shore is a Gallai tree and five or six boundary colours force small singleton-side separations",
+  "the simultaneous-contraction boundary partition differs from the old attained partition",
+]
+does_not_prove = [
+  "preservation of the old five branch-set labels under the strict descent",
+  "closure of the shore-filling high-degree core or Gallai block chain",
+  "a common proper boundary partition on both original closed shores",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.direct_entry_surplus_density"
+title = "Surplus-sensitive density at an exact seven-boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_direct_entry_surplus_density.md"
+source_heading = "Theorem 2.1 (surplus-sensitive shore bound)"
+active = true
+audit = "results/hc7_direct_entry_surplus_density_audit.md"
+expected_source_sha256 = "59b12bb3ee5b1215fa054e468553154e884c978e0cee8af6ce54a5e7f12cf3e9"
+scope = "a list-critical open shore at an exact seven-boundary"
+conclusions = ["an exact inequality retaining internal excess, boundary edges, colour incidences, repeated colours and full-shore packing"]
+does_not_prove = ["colour synchronization", "HC7"]
+
+[[claims]]
+id = "hc7.tight_shore_order_bound"
+title = "Order bound for a tight exact-seven shore"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_tight_shore_order_bound.md"
+source_heading = "Theorem 1 (tight-shore order bound)"
+active = true
+audit = "results/hc7_tight_shore_order_bound_audit.md"
+expected_source_sha256 = "88b7a9329c3a3a4170022cd1b0a54cef6305e22809d3cc932ccca9d24afc066f"
+conclusions = ["an order-seven or order-eight singleton-side separation, or an open shore of order at most eighteen"]
+does_not_prove = ["closure of the bounded residue", "colour synchronization", "HC7"]
+
+[[claims]]
+id = "hc7.paired_boundary_forced_kempe_locks"
+title = "Boundary-forced Kempe locks in the paired exact-seven response"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_paired_boundary_forced_kempe_locks.md"
+source_heading = "Lemma 2.1"
+active = true
+audit = "results/hc7_paired_boundary_forced_kempe_locks_audit.md"
+expected_source_sha256 = "d7a7f3788928f5ddb9fee1ef4776bcc0ffe9c8751a925f505a9774665eba2c08"
+conclusions = ["an unlocked response forces a disconnected literal two-colour boundary graph", "exact paired lock counts"]
+does_not_prove = ["allocation of colours to branch-set labels", "HC7"]
+
+[[claims]]
+id = "hc7.paired_boundary_partial_switch_calculus"
+title = "Partial Kempe switches at a paired exact-seven boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_paired_boundary_partial_switch_calculus.md"
+source_heading = "Theorem 3.1 (exact singleton-merge response criterion)"
+active = true
+audit = "results/hc7_paired_boundary_partial_switch_calculus_audit.md"
+expected_source_sha256 = "bdbb02aa94b413a2ed68fd448f29385669a89f2cd4e1bde49da31aec592085b4"
+conclusions = ["exact boundary footprint and demand formulae", "the exceptional nonedge cannot support a selected partition-changing response", "all surviving responses have demand at least three"]
+does_not_prove = ["a common partition by static switching", "HC7"]
+
+[[claims]]
+id = "hc7.labelled_first_hit_rado"
+title = "Rado--gammoid criterion for labelled first-hit paths"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_labelled_first_hit_rado_reduction.md"
+source_heading = "Theorem 1.1 (Rado--gammoid first-hit alternative)"
+active = true
+audit = "results/hc7_labelled_first_hit_rado_reduction_audit.md"
+expected_source_sha256 = "2bde8b468d236f26322d0072a503183efbc93f6bec9fa67f4a1a9fd101c9174f"
+scope = "a terminal-avoiding graph with source ports and five named terminal classes"
+label_fidelity = "labels are determined by literal first model-bag hits, never by palette colours"
+conclusions = [
+  "five disjoint paths with five different first-hit labels exactly when every Rado rank inequality holds",
+  "failure gives a deficient label subset and a minimum separator in the terminal-avoiding graph",
+]
+does_not_prove = [
+  "that the relative separator has order seven in the original host",
+  "preservation of a selected boundary colouring",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.labelled_first_hit_exposure_collision"
+title = "A labelled first-hit rank defect gives a tight separator or repeated exposure"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_labelled_first_hit_exposure_collision.md"
+source_heading = "Theorem 2.1"
+active = true
+audit = "results/hc7_labelled_first_hit_exposure_collision_audit.md"
+expected_source_sha256 = "78c8f35c75a652ed97b0263a16bad5f782089c46a652ec43d8989e30303b7911"
+scope = "five first-hit labels with at most three fixed response vertices"
+separator_order = "an actual order-seven separation or a repeated unused-label exposure"
+does_not_prove = ["response preservation", "HC7"]
+
+[[claims]]
+id = "hc7.labelled_first_hit_exposure_compression"
+title = "Compression of repeated labelled first-hit exposure"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_labelled_first_hit_exposure_compression.md"
+source_heading = "Theorem 2.1 (matching, exact separation, or atomic source component)"
+active = true
+audit = "results/hc7_labelled_first_hit_exposure_compression_audit.md"
+expected_source_sha256 = "9e70ca705870eaf4bba5694dd84825f402f6f97e26d9c5605584685630b53244"
+scope = "repeated unused-label exposure in the five-label direct-entry configuration"
+conclusions = [
+  "an actual order-seven separation",
+  "two independent or incident persistent contact edges",
+  "or a connected source component on at most four vertices",
+]
+does_not_prove = ["preservation of the selected boundary partition", "HC7"]
+
+[[claims]]
+id = "hc7.repeated_exposure_fixed_partition_fork"
+title = "Fixed-partition alternatives for two repeated-exposure edges"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_repeated_exposure_fixed_trace_fork.md"
+source_heading = "Theorem 2.1 (single attainment, common equality, or common rejection)"
+active = true
+audit = "results/hc7_repeated_exposure_fixed_trace_fork_audit.md"
+expected_source_sha256 = "1df977201ca009336eb1393f2407d16e3258747ba55bd64f2af7be6844cd610e"
+colour_compatibility = "the same selected boundary partition is used throughout the trichotomy"
+conclusions = [
+  "single-side attainment",
+  "common equality with boundary-crossing partition-changing Kempe components",
+  "or common rejection with a strict same-partition critical subgraph unless the whole shore is required",
+]
+does_not_prove = ["allocation of boundary hits to five named branch sets", "HC7"]
+
+[[claims]]
+id = "hc7.exact7_selected_partition_preservation"
+title = "Exact preservation criterion for a selected boundary partition"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_exact7_selected_response_preservation.md"
+source_heading = "Theorem 1.1 (exact response reflection)"
+active = true
+audit = "results/hc7_exact7_selected_response_preservation_audit.md"
+expected_source_sha256 = "94c154ce0d8d9bebaaff2ff97df66beb3e2381bb242378df38d9620ed8ec36e0"
+scope = "an actual seven-vertex separator and one selected boundary equality partition"
+colour_compatibility = "a legal transported partition reflects exactly through named disjoint connected contraction supports on the opposite shore"
+does_not_prove = ["existence of the required supports", "HC7"]
+
+[[claims]]
+id = "hc7.two_contact_branch_set_transfer"
+title = "Label-preserving transfer from two contacts into one branch set"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_response_aligned_two_contact_lobe_transfer.md"
+source_heading = "Theorem 2.1 (response-aligned lobe transfer)"
+active = true
+audit = "results/hc7_response_aligned_two_contact_lobe_transfer_audit.md"
+expected_source_sha256 = "ec3f24c3d7de083542603bf05716c62b0ce0c1b5e9e705538c26e691cc1047dd"
+strict_parameter = "order of the receiving labelled branch set"
+label_fidelity = "the protected roots, selected partition, source subgraph, and all inherited branch labels are preserved"
+conclusions = ["explicit K7", "strict branch-set descent", "or a multi-owner connected piece"]
+does_not_prove = ["elimination of the multi-owner residue", "HC7"]
+
+[[claims]]
+id = "hc7.repeated_contact_component_defect"
+title = "Repeated contacts and the exact component-defect change"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_repeated_contact_component_defect.md"
+source_heading = "Theorem 3.1"
+active = true
+audit = "results/hc7_repeated_contact_component_defect_audit.md"
+expected_source_sha256 = "1e1e67661628b700997ad3c0a847260a7ad213840d32587cebfc98a519ccd9f4"
+conclusions = [
+  "the split defect is kappa_2 plus kappa_3 plus kappa_4 minus three",
+  "defect zero occurs exactly when all three old contact components are retained",
+  "defect one occurs exactly for replacement-component counts one, one, two",
+]
+does_not_prove = ["that repeated edge multiplicity retains old contact components", "HC7"]
+
+[[claims]]
+id = "hc7.cross_shore_critical_edge_linkage"
+title = "Opposite-shore critical edges give a rooted four-vertex model or exact seven-separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_cross_shore_critical_edge_linkage.md"
+source_heading = "Theorem 3.1"
+active = true
+audit = "results/hc7_cross_shore_critical_edge_linkage_audit.md"
+expected_source_sha256 = "05314416338b3fe7128a4fbe88a28e084cee258d1d64f895f22334f078356872"
+scope = "one critical edge in each of two anticomplete open shores"
+separator_order = "a universally endpoint-orientable exact order-seven separation"
+conclusions = ["an endpoint-rooted K4 minor", "or an exact order-seven separator for every endpoint orientation"]
+does_not_prove = [
+  "reservation of three inherited completing branch sets in the rooted K4",
+  "realization of a legal transported partition by five connected contraction supports on the opposite shore",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.five_contact_rejection_component_absorption"
 title = "Absorbing a five-contact rejection component into a labelled near-complete model"
 kind = "theorem"
@@ -2325,6 +2512,58 @@ does_not_prove = [
   "elimination of the private-path equality case",
   "HC7",
 ]
+
+[[claims]]
+id = "hc7.barrier.labelled_first_hit_planar_exposure"
+title = "Seven-connectivity and K7-minor exclusion do not bound first-hit exposure"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_labelled_first_hit_k2_planar_exposure_barrier.md"
+active = true
+audit = "barriers/hc7_labelled_first_hit_k2_planar_exposure_barrier_audit.md"
+expected_source_sha256 = "3740bb30892da5e38c3baa3b851dd307a349576c7e61d41a96daaf0927ba8835"
+scope = "a seven-connected K7-minor-free but six-colourable join-planar family"
+refutes = ["a relative first-hit rank defect plus connectivity and K7-minor exclusion automatically yields a bounded host separator"]
+does_not_prove = ["a counterexample under seven-contraction-criticality", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.barrier.fixed_partition_contact_rotation"
+title = "A fixed boundary response can rotate between repeated contacts"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_fixed_trace_edge_rotation_barrier.md"
+active = true
+audit = "barriers/hc7_fixed_trace_edge_rotation_barrier_audit.md"
+expected_source_sha256 = "0305e20528bf3dccc829a5f9c654f17353f375a69526fdf0277c47610564803d"
+scope = "an unbounded seven-connected seven-chromatic family containing K7"
+refutes = ["fixed-partition repeated contacts give a strictly decreasing local rotation measure"]
+does_not_prove = ["a counterexample under K7-minor exclusion and minor-minimality", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.barrier.same_branch_two_critical_edges"
+title = "Two same-branch-set critical edges do not allocate first-hit labels"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_same_bag_two_critical_edges_exact7_barrier.md"
+active = true
+audit = "barriers/hc7_same_bag_two_critical_edges_exact7_barrier_audit.md"
+expected_source_sha256 = "75993b8655219126151c0b985388d766a9b4efb95b966a82ea745d22a1611753"
+scope = "a seven-connected seven-chromatic exact-seven host containing K7 and not minor-minimal"
+refutes = ["same-branch-set operation-specific responses alone allocate five distinct first-hit labels"]
+does_not_prove = ["a counterexample under K7-minor exclusion and minor-minimality", "a counterexample to HC7"]
+
+[[claims]]
+id = "hc7.barrier.repeated_contact_component_defect"
+title = "Repeated contacts do not by themselves lower component defect"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_repeated_contact_component_defect_barrier.md"
+active = true
+audit = "barriers/hc7_repeated_contact_component_defect_barrier_audit.md"
+expected_source_sha256 = "a4a194219a8cdc917f421501daddb86fef6acb11172b16e7fa7f6c790a23a9a5"
+scope = "seven-connected K7-minor-free but six-colourable static labelled models"
+refutes = ["two literal contacts between the same branch sets lower component defect"]
+does_not_prove = ["a counterexample with the selected dynamic boundary response", "a counterexample to HC7"]
 
 [[claims]]
 id = "hc7.barrier.joint_pair_first_hit_hall"
@@ -3251,7 +3490,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "a0a932a83f1984c0f36d867b28ef85538c8aa806f07823362a59a5da6ff98081"
+evidence_sha256 = "24c015853e7057d0b424aabdcdca1b3dbac21ae93e4d40aadc984e93f655c866"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3273,7 +3512,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "a0a932a83f1984c0f36d867b28ef85538c8aa806f07823362a59a5da6ff98081"
+evidence_sha256 = "24c015853e7057d0b424aabdcdca1b3dbac21ae93e4d40aadc984e93f655c866"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3282,9 +3521,9 @@ kind = "uses"
 note = "Conditionally, when an exact-seven exit has the K2-join-C5 boundary, two connected full shores and the required K5 minor, cycle-boundary completion eliminates that five-chromatic branch; it is not a general order-eight state-transfer dependency."
 evidence_source = "RESEARCH_LEDGER.md"
 evidence_heading = "Secondary structural laboratory: adjacent-pair colouring and rooted models"
-evidence_start_line = 827
-evidence_end_line = 854
-evidence_sha256 = "789747cb249802473eda058c54aa50b7c99466d5fb8b8e74f8472966c649dd59"
+evidence_start_line = 900
+evidence_end_line = 925
+evidence_sha256 = "f1a4b9bca3ba8104556ee58cdeadac22fb8b4e7d7eb35af4607f7e381705ea76"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -3441,6 +3680,71 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.direct_entry_two_edge_list_core"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.direct_entry_surplus_density"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.tight_shore_order_bound"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.paired_boundary_forced_kempe_locks"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.paired_boundary_partial_switch_calculus"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.labelled_first_hit_rado"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.labelled_first_hit_exposure_collision"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.labelled_first_hit_exposure_compression"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.repeated_exposure_fixed_partition_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.exact7_selected_partition_preservation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_contact_branch_set_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.repeated_contact_component_defect"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.cross_shore_critical_edge_linkage"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.five_contact_rejection_component_absorption"
 kind = "uses"
 
@@ -3462,6 +3766,26 @@ kind = "guarded_by"
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.exact7_bichromatic_path_full_subgraphs"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.labelled_first_hit_planar_exposure"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.fixed_partition_contact_rotation"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.same_branch_two_critical_edges"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.repeated_contact_component_defect"
 kind = "guarded_by"
 
 [[relations]]
@@ -3533,6 +3857,51 @@ kind = "uses"
 source = "hc7.exact7_demand_set_separator_descent"
 target = "hc7.exact7_critical_triangle_full_subgraph_demand"
 kind = "uses"
+
+[[relations]]
+source = "hc7.direct_entry_two_edge_list_core"
+target = "hc7.exact7_demand_set_separator_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.direct_entry_two_edge_list_core"
+target = "hc7.barrier.exact7_bichromatic_path_full_subgraphs"
+kind = "guarded_by"
+
+[[relations]]
+source = "hc7.labelled_first_hit_exposure_collision"
+target = "hc7.labelled_first_hit_rado"
+kind = "uses"
+
+[[relations]]
+source = "hc7.labelled_first_hit_exposure_compression"
+target = "hc7.labelled_first_hit_exposure_collision"
+kind = "uses"
+
+[[relations]]
+source = "hc7.repeated_exposure_fixed_partition_fork"
+target = "hc7.labelled_first_hit_exposure_compression"
+kind = "uses"
+
+[[relations]]
+source = "hc7.two_contact_branch_set_transfer"
+target = "hc7.repeated_exposure_fixed_partition_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.repeated_contact_component_defect"
+target = "hc7.two_contact_branch_set_transfer"
+kind = "strengthens"
+
+[[relations]]
+source = "hc7.cross_shore_critical_edge_linkage"
+target = "hc7.repeated_exposure_fixed_partition_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.cross_shore_critical_edge_linkage"
+target = "hc7.exact7_selected_partition_preservation"
+kind = "guarded_by"
 
 [[relations]]
 source = "hc7.exact7_demand_set_separator_descent"

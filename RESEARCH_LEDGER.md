@@ -442,21 +442,85 @@ while every admissible seven-connected augmentation of its fixed skeleton
 contains a `K_7`; seven-connectivity and contraction-critical state transfer
 must therefore be used together.
 
-Finally, a proper total-rejection kernel which retains all five required
-model contacts can be absorbed label-preservingly.  The result is an
-explicit `K_7`, a full-neighbourhood separator, or the same spanning
-labelled near-complete model with a strictly smaller common branch set.
-The only equality case is an induced shortest private connector, so the
-open work is to force the five contacts or eliminate that path residue.
+That proper-minor response can be spent simultaneously at the two direct
+entries.  Contracting their two vertex-disjoint crossing edges and expanding
+a six-colouring gives a common double-equality assignment.  A
+vertex-minimal boundary-list obstruction in the rich open shore is
+connected.  If it is proper, its full neighbourhood is an actual separation
+with a strictly smaller connected open side and an exact placement of both
+failed edges.  If it fills the shore, then every vertex satisfies
 
-The immediate open theorem is now a **label-preserving first-entry or
-compatible-separator theorem**.  It must turn the direct path/full-subgraph
-intersection, the minimum oriented interface, or one of the connected
-dominating bounded-chromatic subgraphs into an explicit `K_7` model, a
-common full equality partition on an actual order-seven separation, or a
-strict descent which retains both the selected response and all five named
-common branch sets.  Merely regenerating another unlabelled near-complete
-minor or another boundary of unknown colouring state is not sufficient.
+\[
+ d_G(v)=6+\varepsilon(v)+\rho(v),
+\]
+
+where `epsilon` is internal list-degree excess and `rho` counts repeated
+boundary-neighbour colours.  Low total excess gives an order-seven or
+order-eight singleton-side separation.  An all-tight shore is a Gallai tree,
+and the sharper surplus-sensitive inequality bounds many remaining shores.
+These are genuine unbounded host-side reductions, but their smaller
+separations do not automatically preserve the old five branch-set labels.
+
+The first-hit allocation problem is now separated from that list theory.
+Rado's theorem for a strict gammoid gives an exact criterion for five
+pairwise disjoint response paths to reach five different named branch sets
+at their first model contact.  Failure returns a deficient label set and a
+small separator in the terminal-avoiding graph.  With at most three fixed
+response vertices, the certificate yields either an actual order-seven
+separation or two literal contacts with the same unused label.  Iterating
+this observation compresses every repeated exposure to one of: an
+order-seven separation, two independent or incident persistent edges, or a
+connected source subgraph on at most four vertices.
+
+The resulting two-edge response has an exact fixed-partition trichotomy.  It
+either attains the selected partition on only one side, rejects it on both
+sides with a strict same-partition critical subgraph, or makes both edge
+endpoints monochromatic on both sides.  In the last case every
+partition-changing Kempe component meets the literal boundary.  The exact
+boundary-footprint calculation eliminates all demand-at-most-two switches;
+static switches alone cannot synchronize the two shores.
+
+Two host-level theorems further constrain the remaining geometry.  A
+root-free connected split separating two contacts into one branch set gives
+an explicit `K_7`, a strict label-preserving branch-set reduction, or a
+piece which carries at least two foreign branch-set adjacencies.  Repeated
+contacts lower the component defect only when all old contact components
+are retained; the exact defect change is
+
+\[
+             \Delta'=\kappa_2+\kappa_3+\kappa_4-3.
+\]
+
+Thus multiplicity alone is not a descent invariant.  Finally, selecting one
+critical edge from each anticomplete open shore gives a six-chromatic,
+five-connected deletion host.  It contains either a `K_4` minor rooted at
+the four edge endpoints or a universally orientable exact order-seven
+separation.  Coupling this with the repeated-pair response on one
+three-edge-deletion host is the first theorem here which converts arbitrary
+opposite-shore colour drift into literal host geometry.
+
+The immediate open theorem is consequently narrower than the original
+first-hit proposal.  It must prove one of two label-preserving exits:
+
+1. the endpoint-rooted `K_4` can be chosen so that three inherited branch
+   sets remain as named completing branch sets, yielding an explicit
+   `K_7`-minor model; or
+2. one legally transported partition on the universally orientable
+   order-seven separation is realized on the opposite shore by five named
+   connected contraction supports, so that the two six-colourings glue.
+
+Equivalently, the first-hit rank must be coupled to the opposite-shore
+critical-edge theorem.  An unlabelled rooted model, an order-seven boundary
+without the selected partition, or another persistent contact pair is not a
+terminal conclusion.  The exact preservation criterion is already known:
+a selected partition reflects precisely when the required connected
+contraction supports exist on both shores.  The two partitions transported
+automatically by the opposite colouring chambers are in fact incompatible;
+the old partition is not literally a partition of the new seven-boundary.
+Moreover, audited static examples show that even a lexicographically
+maximum first-hit rank can remain four with a neighbourhood larger than
+seven.  The missing theorem must therefore spend contraction-criticality
+and `K_7`-minor exclusion together, not only the gammoid rank.
 
 The newly promoted sources are the
 [deficient-singleton deletion theorem](results/hc7_deficient_singleton_joint_persistence.md),
@@ -465,7 +529,15 @@ The newly promoted sources are the
 [clique-star response theorem](results/hc7_clique_star_kempe_separation.md),
 [exact-seven full-subgraph-demand theorem](results/hc7_exact7_critical_triangle_full_subgraph_demand.md),
 [five-contact component absorption](results/hc7_five_contact_rejection_component_absorption.md),
-and [demand-set separator descent](results/hc7_exact7_demand_set_separator_descent.md),
+[demand-set separator descent](results/hc7_exact7_demand_set_separator_descent.md),
+[two-edge list-critical direct-entry descent](results/hc7_direct_entry_two_edge_list_core.md),
+[labelled first-hit Rado reduction](results/hc7_labelled_first_hit_rado_reduction.md),
+[repeated-exposure compression](results/hc7_labelled_first_hit_exposure_compression.md),
+[fixed-partition two-edge fork](results/hc7_repeated_exposure_fixed_trace_fork.md),
+[selected-partition preservation criterion](results/hc7_exact7_selected_response_preservation.md),
+[two-contact branch-set transfer](results/hc7_response_aligned_two_contact_lobe_transfer.md),
+[repeated-contact defect calculation](results/hc7_repeated_contact_component_defect.md),
+and [opposite-shore critical-edge linkage](results/hc7_cross_shore_critical_edge_linkage.md),
 each with an adjacent internal audit.
 
 This does not prove `HC_7`.  It closes the one-hole donor splitting problem,
@@ -474,11 +546,10 @@ families, the entire rooted cycle-allocation problem, the cutvertex and
 generic two-cut component geometry, the universal-contact three-connected
 family, the reserved-cycle/high-connectivity branch and the two-safe-support
 branch by unbounded theorems.  The residual is now the label-preserving
-allocation at one minimum full-neighbourhood interface, direct
-path/full-subgraph intersection, or dominating bounded-chromatic subgraph,
-not a finite web census.  The two-adjacent-edge exceptional complements and
-the remaining degree-eight bounded-interface continuation remain after this
-branch.  The older
+allocation at one minimum full-neighbourhood interface, sharpened to the two
+exits above, not a finite web census.  The two-adjacent-edge exceptional
+complements and the remaining degree-eight bounded-interface continuation
+remain after this branch.  The older
 component-defect programme below is retained as a secondary source of
 explicit branch-set splits, not as a competing primary spine.
 
