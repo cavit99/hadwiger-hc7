@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "5aa7b96ebe072d80cd56e3ba57a6ceee202b704dc37a6d105c88f74ac64d6ab5"
+expected_source_sha256 = "484ed3eeff02824a524a34b98b4260568509b6b17629ed6928dd2f2590c0d480"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3699,6 +3699,33 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_small_boundary_lobe_descent"
+title = "Small-boundary lobe descent at an order-eight interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_small_boundary_lobe_descent.md"
+active = true
+audit = "results/hc7_order8_small_boundary_lobe_descent_audit.md"
+expected_source_sha256 = "de980671b3053459e4e11845e510e5d96bb0a4f18d1a8bd50fe4b9dfae996d52"
+scope = "a nonempty connected proper subset of one component behind an order-eight boundary in a hypothetical minor-minimal HC7 counterexample, with another complementary component present and total internal-plus-boundary neighbourhood order at most eight; additionally, the two-cut residue in the exact three-component boundary-triangle interface"
+separator_order = "the lobe's full neighbourhood has order seven or eight; order seven is an actual separation, while order eight is a strict smaller-component return with exactly two or three boundary-full complementary components"
+label_fidelity = "every returned edge-deletion response uses a literal edge from the smaller component to its new boundary; no inherited boundary partition, demand pairs, minor-model labels, or compatible shore colourings are preserved"
+conclusions = [
+  "every connected proper lobe with total internal-plus-boundary neighbourhood order at most eight returns an actual order-seven separation or a strict boundary-full order-eight descent",
+  "deleting any edge from the smaller returned component to its new boundary gives a proper six-colouring in which the two ends have the same colour",
+  "behind a two-cut in the two-connected selected component of the exact three-component boundary-triangle interface, every lobe either has at least seven boundary neighbours or triggers the descent, and at most one lobe is boundary-full",
+  "absent a descent, every two-cut lobe except possibly one boundary-full lobe has exactly seven boundary neighbours",
+]
+does_not_prove = [
+  "that a lobe satisfying the small-neighbourhood hypothesis always exists",
+  "elimination of the nearly-full two-cut residue",
+  "closure of a two-component order-eight return",
+  "a common boundary equality partition or compatible colourings at a returned order-seven separation",
+  "preservation of inherited demand pairs, minor-model labels, or interval data",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.order8_three_full_one_defect2_quotient"
 title = "Three boundary-full connected subgraphs and one defect-two subgraph do not force a K7 minor"
 kind = "barrier"
@@ -3811,6 +3838,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_leaf_block_descent"
 kind = "uses"
 note = "This eliminates cutvertex selected components by a strict smaller-component descent until an actual order-seven separation, a two-component order-eight return, or a cutvertex-free selected component remains."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_small_boundary_lobe_descent"
+kind = "uses"
+note = "This turns every sufficiently small lobe behind the selected order-eight component into an actual order-seven separation or a strict smaller-component return, leaving only the defect-one two-cut residue."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4863,7 +4896,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "5aa7b96ebe072d80cd56e3ba57a6ceee202b704dc37a6d105c88f74ac64d6ab5"
+evidence_sha256 = "484ed3eeff02824a524a34b98b4260568509b6b17629ed6928dd2f2590c0d480"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4885,7 +4918,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "5aa7b96ebe072d80cd56e3ba57a6ceee202b704dc37a6d105c88f74ac64d6ab5"
+evidence_sha256 = "484ed3eeff02824a524a34b98b4260568509b6b17629ed6928dd2f2590c0d480"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

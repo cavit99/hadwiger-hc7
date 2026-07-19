@@ -28,6 +28,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [exact rooted split and critical-edge normal forms for an induced-path component](../results/hc7_order8_overlapping_interval_normal_form.md)
 - [completion of every overlap outcome for a nontrivial induced-path component in the exact three-component interface](../results/hc7_order8_endpoint_shared_portal_completion.md)
 - [leaf-block descent for a selected order-eight component with a cutvertex](../results/hc7_order8_leaf_block_descent.md)
+- [small-boundary lobe descent and the defect-one two-cut residue](../results/hc7_order8_small_boundary_lobe_descent.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)

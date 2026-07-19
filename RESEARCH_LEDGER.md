@@ -128,6 +128,15 @@ three-component interface whose selected component is a singleton, an edge,
 or two-connected.  It does not preserve the older boundary partition or
 branch-set labels.
 
+The same neighbourhood calculation extends beyond cutvertices.  Any proper
+connected lobe whose internal and boundary neighbourhoods have total order
+at most eight gives the same order-seven-or-strict-order-eight alternative.
+In particular, behind a two-vertex cut of a two-connected selected
+component, every surviving lobe must meet at least seven of the eight
+boundary vertices; at most one lobe is boundary-full.  Thus the unresolved
+two-cut geometry consists only of one possible full lobe and otherwise
+defect-one lobes.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains

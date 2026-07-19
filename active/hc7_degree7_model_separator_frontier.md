@@ -1048,6 +1048,15 @@ order seven, a two-component order-eight interface, or a three-component
 interface whose selected component is a singleton, an edge, or
 two-connected.  The move does not preserve the old partition or labels.
 
+More generally, any proper connected lobe for which the sum of its internal
+and boundary neighbourhood orders is at most eight has the same
+order-seven-or-strict-order-eight outcome.  Applied behind a two-vertex cut
+of a two-connected selected component, this shows that every unresolved
+lobe meets seven or eight boundary vertices, and at most one lobe is
+boundary-full.  Hence every other surviving lobe has exactly one missing
+boundary contact.  The placement and colouring response of those defects,
+not low connectivity alone, is the remaining two-cut obstruction.
+
 The induced-path-component hypothesis is essential: the seven-connected,
 `K_7`-minor-free graph obtained as the join of `K_2` and the icosahedral
 graph has an all-boundary path fan with strictly reversed demands but no
@@ -1310,6 +1319,7 @@ one of the three literal host configurations above.
 - [exact rooted split and critical-edge normal forms for an induced-path component](../results/hc7_order8_overlapping_interval_normal_form.md)
 - [completion of every overlap outcome for a nontrivial induced-path component in the exact three-component interface](../results/hc7_order8_endpoint_shared_portal_completion.md)
 - [leaf-block descent for a selected order-eight component with a cutvertex](../results/hc7_order8_leaf_block_descent.md)
+- [small-boundary lobe descent and the defect-one two-cut residue](../results/hc7_order8_small_boundary_lobe_descent.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)
