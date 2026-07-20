@@ -57,6 +57,29 @@ order-eight response, or a sharp residual attachment inequality.  A
 two-connected boundary-full shore cannot be entirely tight, so the
 all-tight spanning family is eliminated.
 
+Every remaining tight vertex now has an operation-specific host-level
+interpretation.  It has degree nine and every incident-edge deletion gives
+an exact full-six-colour singleton response on its literal neighbourhood.
+An internal tight edge also replaces the missed singleton boundary vertices
+one-for-one by colour-matched internal neighbours.  Under the full host
+hypotheses, the tight pole yields either an order-seven/eight response or a
+four-colourable order-nine boundary with a connected boundary-full subgraph
+on each side.  This is a strict one-step response reduction; it need not
+preserve the old trace or re-enter the paired spanning-kernel class.
+The same pole can be aligned with an exterior component.  Either its
+full-neighbourhood response has order seven or eight, or the order-nine
+boundary is the whole neighbourhood of the pole and deleting the selected
+boundary vertex leaves a `K_5`-minor-free graph.  If an exterior component
+is adjacent to all nine neighbours, Mader's bound forces at most twenty-two
+edges in the boundary graph; a boundary vertex of internal degree at most
+four then gives a non-double-critical pole edge, at least two exterior
+neighbours, and an explicit rooted minor of the form `K_2` joined with a
+`K_5`-minor-free base.  This is a sparse, host-labelled normal form, not yet
+a global two-apex conclusion or a common boundary colouring.
+An audited four-cycle list obstruction shows that positive excess plus a
+nonempty tight forest alone does not force a tight block with boundary at
+most nine; the host-level response is essential.
+
 The one-move branch also closes whenever its obstruction path can be
 separated from a boundary-full residual component and its two ends lie in
 one component of the inherited boundary forest.  Otherwise its residual
@@ -65,17 +88,42 @@ spanning shore gives a strictly smaller fresh connected response side, but
 this transfer does not preserve the fixed trace or model labels and is not
 yet a recursive descent.
 
-The exact open gate is now the positive-excess order-nine spanning endpoint
-(together with the path-spanning/location-collision residue of the one-move
-branch): first force or reduce to a full-six-colour trace, then use an
-internal proper-minor operation at a non-tight vertex or a tight-block
-attachment to obtain an explicit `K_7`-minor model or a colour-compatible
-order-seven separation.  A finite audited barrier shows
+When the obstruction path spans its shore, shortestness gives a complete
+interval normal form: a full--full path split yields an explicit `K_7`
+model, and every survivor is a shared boundary portal or two adjacent path
+parts with opposite one-vertex contact defects.  A second completion theorem
+shows that any such defects avoiding the distinguished boundary triangle
+also yield `K_7`.  The residual one-move cases are therefore triangle-owned
+defects or an endpoint/atomic shared portal, to be composed with the second
+shore's obstruction path.
+
+The maximum-palette theorem now gives an exhaustive full-trace fork.  Some
+full-six-colour exact trace is rejected by both shores, in which case the
+paired list-critical endpoint applies, or every full-six-colour exact trace
+extends through exactly one shore.  In particular, if the largest palette
+attained by either shore has fewer than six colours, the first outcome is
+forced by splitting repeated boundary colour classes with unused colours.
+No surjectivity-preserving Kempe connectivity is required.
+
+The exact open gate is therefore the positive-excess order-nine spanning
+endpoint together with this one-sided full-trace alternative (and the
+path-spanning/location-collision residue of the one-move branch).  It must
+use an internal proper-minor operation at a non-tight vertex or a
+tight-block attachment to obtain an explicit `K_7`-minor model or a
+colour-compatible order-seven separation.  A finite audited barrier shows
 that attaining every independent exact block, even on both connected full
 shores, cannot alone force a one-move transition or a common trace.  The
 remaining proof must visibly use global `K_7`-minor exclusion and operations
 inside the shores.  No palette colour may be identified with an inherited
 branch-set label without a literal first-hit argument.
+
+The tempting shortcut through only surjective five-colour traces remains
+false:
+even an eight-vertex `K_5`-minor-free boundary matching the static forest,
+two-edge and simplicial-root data can have two surjective Kempe components.
+The maximum-palette theorem bypasses that graph in the non-full branch, but
+the residual one-sided full-trace case still requires host-level response
+and minor-criticality.
 
 ### Degree-seven compression
 

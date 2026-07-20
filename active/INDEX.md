@@ -49,9 +49,14 @@ Immediate proved inputs, each with an adjacent audit:
 - [star-contraction traces and the exact three-support Hall obstruction](../results/hc7_order8_star_contraction_trace_and_lobe_hall.md)
 - [exact-block Kempe transitions across two full shores](../results/hc7_two_full_shore_exact_block_kempe_transition.md)
 - [large `K_5`-minor-free boundaries force an exact-seven or smaller singleton response](../results/hc7_large_boundary_singleton_response_descent.md)
+- [maximum boundary palette gives a paired full-six obstruction or an exact one-sided trace language](../results/hc7_order9_maximum_boundary_palette.md)
 - [tight cycles complete an unbounded full-six-colour order-nine family](../results/hc7_order9_full_trace_tight_cycle_completion.md)
 - [tight Gallai blocks give exact separators and force positive list-degree excess](../results/hc7_order9_tight_gallai_block_separator.md)
+- [tight vertices give exact singleton responses and rainbow replacements](../results/hc7_order9_tight_vertex_singleton_response.md)
+- [a tight degree-nine pole gives boundary-order descent or a sparse rooted double-cone minor](../results/hc7_tight_degree9_boundary_alignment.md)
 - [a separated distance-one obstruction path gives a `K_7` model](../results/hc7_distance_one_path_split_response.md)
+- [a shore-spanning obstruction path has an exact interval normal form](../results/hc7_distance_one_spanning_path_normal_form.md)
+- [near-full path pieces force triangle-owned contact defects](../results/hc7_distance_one_reversal_triangle_collision.md)
 - [cutvertices give smaller fresh full-neighbourhood responses](../results/hc7_spanning_kernel_cutvertex_response_descent.md)
 - [symmetric two--three allocation in the endpoint-reversal case](../results/hc7_order8_strict_reversal_d_side_allocation.md)
 - [small-side closure and exact Hall-response reduction in the endpoint-reversal case](../results/hc7_order8_strict_reversal_small_side_closure.md)
@@ -102,6 +107,8 @@ Immediate barriers:
 - [symmetric positive-excess cuts do not uncross by neighbourhood submodularity](../barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier.md)
 - [`K_5`-minor-free boundary structure and two full shores do not force a common colouring](../barriers/hc7_k5minor_boundary_full_shores_common_colouring_barrier.md)
 - [even all independent exact blocks do not force a one-move shore transition](../barriers/hc7_simplicial_boundary_all_exact_blocks_distance_barrier.md)
+- [surjective five-colour traces need not form one Kempe component](../barriers/hc7_surjective_five_colour_kempe_connectivity_barrier.md)
+- [a positive-excess tight forest need not expose a small block boundary](../barriers/hc7_order9_tight_forest_block_descent_barrier.md)
 
 ## General bounded-interface continuation
 

@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "ea5dda46246b04e1563d8c1e35edc5b5f9eb8494a9af437c6c8a75c445ab699f"
+expected_source_sha256 = "a463767247c91aae562dc91529de5870423edd735c9abc6443e5af9620b02b92"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4374,6 +4374,30 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order9_maximum_boundary_palette"
+title = "Maximum boundary palette gives a paired full-six obstruction or an exact one-sided trace language"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order9_maximum_boundary_palette.md"
+active = true
+audit = "results/hc7_order9_maximum_boundary_palette_audit.md"
+expected_source_sha256 = "261ebe7a6c19c8b8c45b3bc7a2119305c025e8e493b8733069222e26da41ebfa"
+scope = "two anticomplete nonempty shores over a boundary with at least five vertices outside one prescribed exact independent colour class"
+label_fidelity = "the exact boundary colour class and each recoloured boundary vertex are literal; no palette colour is identified with a minor-model label"
+colour_compatibility = "either one full-six exact trace is rejected by both shores or every full-six exact trace extends through exactly one shore"
+conclusions = [
+  "a full-six exact boundary trace always exists by splitting repeated boundary colour classes with unused colours",
+  "if the largest palette attained by either shore has fewer than six colours, a full-six trace is rejected by both shores",
+  "a trace rejected by both shores gives simultaneous connected vertex-minimal list-uncolourable subgraphs",
+  "the sole residual is that every full-six exact trace extends through exactly one shore",
+]
+does_not_prove = [
+  "closure of the one-sided full-six trace alternative",
+  "that the paired list-critical subgraphs span without the separate proper-kernel normalization",
+  "a common boundary colouring, inherited model-label allocation, or HC7",
+]
+
+[[claims]]
 id = "hc7.order9_full_trace_tight_cycle_completion"
 title = "Tight cycles complete an unbounded full-six-colour order-nine family"
 kind = "theorem"
@@ -4423,6 +4447,58 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order9_tight_vertex_singleton_response"
+title = "Tight vertices give exact singleton responses and rainbow replacements"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order9_tight_vertex_singleton_response.md"
+active = true
+audit = "results/hc7_order9_tight_vertex_singleton_response_audit.md"
+expected_source_sha256 = "88fb6b91b66c72aa9ce23e0b259117b96467f6a336d6598985abd1798893c8df"
+scope = "tight vertices in the order-nine full-six-colour spanning list-critical endpoint, with a host-level strengthening under the minimal HC7 hypotheses"
+strict_parameter = "the rejected open response side decreases to one vertex in the single transfer"
+label_fidelity = "the singleton boundary, missed singleton vertices, internal rainbow neighbours and selected exterior component are literal; old model labels may be lost"
+separator_order = "the aligned exterior component gives an order-seven/eight response or an order-nine four-colourable boundary with two connected full sides"
+colour_compatibility = "the returned trace extends through one intact side and one edge-deleted side and is rejected by the opposite intact side; it need not equal the old paired trace"
+conclusions = [
+  "every tight vertex has degree nine and every incident-edge deletion gives an exact full-six-colour singleton response",
+  "an internal tight edge bijects the missed singleton boundary vertices with colour-matched internal neighbours",
+  "the full host hypotheses align a tight pole with a four-colourable boundary of order seven through nine and connected full sides at order nine",
+]
+does_not_prove = [
+  "re-entry into the paired exact-block spanning-kernel endpoint",
+  "preservation of the old trace or inherited minor-model labels",
+  "a common intact-shore boundary colouring or HC7",
+]
+
+[[claims]]
+id = "hc7.tight_degree9_boundary_alignment"
+title = "A tight degree-nine pole gives descent or a sparse rooted double-cone minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_tight_degree9_boundary_alignment.md"
+active = true
+audit = "results/hc7_tight_degree9_boundary_alignment_audit.md"
+expected_source_sha256 = "1ea36e3e3ba933c5d15b9fa6577005cc4ae7d584907fe55d0b52b35a40508f12"
+scope = "a degree-nine vertex with nonempty exterior in a hypothetical minor-minimal HC7 counterexample, including the tight-vertex application in the order-nine full-six-colour endpoint"
+strict_parameter = "the full-neighbourhood boundary order drops from nine to seven or eight; the full-component equality case instead has a sparse boundary graph"
+label_fidelity = "the pole edge, exterior component, full neighbourhood, singleton boundary block and rooted double-cone minor are literal host objects"
+separator_order = "an exterior component gives a full-neighbourhood response of order seven through nine"
+colour_compatibility = "the pole-edge deletion trace extends through one closed side and is rejected by the opposite intact side; it need not be the old paired trace"
+conclusions = [
+  "an exterior-contacting neighbour x has chi(G-{v,x})=6 and G[N(C)-x] is K5-minor-free",
+  "boundary order at most eight is a strict operation-aligned response reduction",
+  "a full exterior component forces at most twenty-two boundary edges and yields x of internal degree at most four with at least two exterior neighbours",
+  "the full-component case contains a rooted K2 join a K5-minor-free base and carries the adjacent-pair palette linkage",
+]
+does_not_prove = [
+  "that an exterior component is full to all nine neighbours",
+  "a global two-apex pair or a K7-minor model in the sparse full-component case",
+  "preservation of the old exact boundary trace or inherited branch-set labels",
+  "a common intact-shore boundary colouring or HC7",
+]
+
+[[claims]]
 id = "hc7.distance_one_path_split_response"
 title = "A separated distance-one obstruction path gives a K7 model"
 kind = "theorem"
@@ -4443,6 +4519,54 @@ does_not_prove = [
   "that the obstruction-path ends lie in one boundary-tree component",
   "that deletion of the path interior leaves a boundary-full component",
   "the simultaneous split required in the remaining collision case",
+]
+
+[[claims]]
+id = "hc7.distance_one_spanning_path_normal_form"
+title = "A shore-spanning obstruction path has an exact interval normal form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_distance_one_spanning_path_normal_form.md"
+active = true
+audit = "results/hc7_distance_one_spanning_path_normal_form_audit.md"
+expected_source_sha256 = "7a0ebf669e8fe47d7f609c662879905bf198e67a04677ab132f399e908ce15a9"
+scope = "the shore-spanning subcase of the distance-one exact-block Kempe branch at boundary order nine"
+strict_parameter = "proper prefixes and suffixes of the literal shortest obstruction path"
+label_fidelity = "the path order, boundary attachments, anchored branch sets and response boundaries are literal"
+separator_order = "a prefix or suffix with at most seven boundary contacts gives an order-seven/eight response"
+colour_compatibility = "the response is operation-specific; compatibility with the opposite intact shore remains open"
+conclusions = [
+  "a full-full path cut gives an explicit K7-minor model",
+  "every survivor is an exact shared portal or strict reversal of two one-defect path pieces",
+]
+does_not_prove = [
+  "elimination of the shared-portal or strict-reversal residues",
+  "that every distance-one obstruction path spans its shore",
+  "a common boundary colouring or HC7",
+]
+
+[[claims]]
+id = "hc7.distance_one_reversal_triangle_collision"
+title = "Near-full path pieces force triangle-owned contact defects"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_distance_one_reversal_triangle_collision.md"
+active = true
+audit = "results/hc7_distance_one_reversal_triangle_collision_audit.md"
+expected_source_sha256 = "b8896ebe1d25cedee9cc8f5bb56e477d2c5b4e344bbddbe60219a55c436f6bdd"
+scope = "the shared-portal and strict-reversal outputs of the shore-spanning distance-one normal form"
+label_fidelity = "the two path pieces, four anchors, distinguished triangle and seven branch sets are literal"
+separator_order = "inherits the order-seven/eight response exclusions of the path normal form"
+colour_compatibility = "not used in the explicit minor construction"
+conclusions = [
+  "two adjacent near-full path pieces whose defects avoid the distinguished boundary triangle give an explicit K7-minor model",
+  "a surviving strict reversal has a triangle-owned defect",
+  "a surviving internal shared portal has both extremal witnesses in the triangle",
+]
+does_not_prove = [
+  "elimination of triangle-owned defects",
+  "closure of an endpoint or atomic shared portal",
+  "composition with the opposite-shore obstruction path",
 ]
 
 [[claims]]
@@ -4592,6 +4716,45 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.barrier.surjective_five_colour_kempe_connectivity"
+title = "Surjective five-colour traces need not form one Kempe component"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_surjective_five_colour_kempe_connectivity_barrier.md"
+active = true
+audit = "barriers/hc7_surjective_five_colour_kempe_connectivity_barrier_audit.md"
+expected_source_sha256 = "319c53e51a7acc2027eb2c0238e5251219552a941b3eb817faee5fa97cd137dd"
+scope = "surjectivity-preserving Kempe reconfiguration on eight-vertex K5-minor-free boundaries, including one boundary matching the live static forest and simplicial-root data"
+refutes = [
+  "surjective labelled five-colourings of every eight-vertex K5-minor-free four-colourable graph induce a connected Kempe graph",
+  "the static live boundary forest, two-edge and simplicial-root data repair that connectivity assertion",
+]
+does_not_prove = [
+  "a counterexample with full host shores, seven-connectivity, contraction-criticality or K7-minor exclusion",
+  "failure of a theorem allowing non-surjective intermediate traces",
+  "a counterexample to HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.order9_tight_forest_block_descent"
+title = "A positive-excess tight forest need not expose a small block boundary"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order9_tight_forest_block_descent_barrier.md"
+active = true
+audit = "barriers/hc7_order9_tight_forest_block_descent_barrier_audit.md"
+expected_source_sha256 = "82dfef088a2ab572415a2c59cb68f712ac5da976d068c020475a708af16f1a79"
+scope = "a four-vertex, two-connected, boundary-full vertex-minimal list obstruction under a full-six-colour order-nine boundary trace"
+refutes = [
+  "positive list-degree excess plus a nonempty tight forest forces a nontrivial tight block with full neighbourhood of order at most nine",
+]
+does_not_prove = [
+  "a counterexample with seven-connectivity, seven-chromaticity, contraction-criticality or K7-minor exclusion",
+  "failure of the tight-vertex singleton-response theorem",
+  "a counterexample to HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_positive_excess_frozen_outer_shore"
@@ -4636,6 +4799,12 @@ note = "This removes every live enlarged boundary of order at least ten and isol
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.order9_maximum_boundary_palette"
+kind = "uses"
+note = "This forces the non-full maximum-palette branch into the paired full-six endpoint and isolates the exact one-sided full-trace alternative."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.order9_full_trace_tight_cycle_completion"
 kind = "uses"
 note = "This closes the full-six-colour order-nine family whenever both tight-vertex subgraphs contain a cycle."
@@ -4648,9 +4817,33 @@ note = "This converts every nontrivial tight Gallai block into an exact separato
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.order9_tight_vertex_singleton_response"
+kind = "uses"
+note = "This turns every remaining tight vertex into an exact singleton response or an aligned smaller/four-colourable boundary while retaining a literal rainbow replacement under the old trace."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.tight_degree9_boundary_alignment"
+kind = "uses"
+note = "This aligns the same tight pole with a literal exterior component and reduces the full-component case to a sparse rooted double-cone over a K5-minor-free base."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.distance_one_path_split_response"
 kind = "uses"
 note = "This closes the separated boundary-full residual subfamily of the one-move obstruction-path branch."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.distance_one_spanning_path_normal_form"
+kind = "uses"
+note = "This reduces a shore-spanning one-move obstruction path to a shared portal or a strict one-defect reversal."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.distance_one_reversal_triangle_collision"
+kind = "uses"
+note = "This confines every surviving spanning-path reversal or internal shared portal to the distinguished boundary triangle."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -4671,10 +4864,52 @@ kind = "uses"
 note = "The live order-nine spanning list-critical endpoint supplies the lists and degree lower bound."
 
 [[relations]]
+source = "hc7.order9_tight_vertex_singleton_response"
+target = "hc7.order9_tight_gallai_block_separator"
+kind = "uses"
+note = "The tight-vertex saturation and degree identity supply the local response and rainbow replacement."
+
+[[relations]]
+source = "hc7.order9_tight_vertex_singleton_response"
+target = "hc7.low_degree_boundary_edge_alignment"
+kind = "uses"
+note = "The host-level strengthening reruns the audited degree-nine pole and boundary-four-colourability argument at the tight pole."
+
+[[relations]]
+source = "hc7.tight_degree9_boundary_alignment"
+target = "hc7.order9_tight_vertex_singleton_response"
+kind = "uses"
+note = "The live application starts from a tight degree-nine vertex and its exact singleton response."
+
+[[relations]]
+source = "hc7.tight_degree9_boundary_alignment"
+target = "hc7.low_degree_boundary_edge_alignment"
+kind = "uses"
+note = "The low-degree pole argument supplies the aligned non-double-critical edge and the four-colourable response boundary."
+
+[[relations]]
+source = "hc7.tight_degree9_boundary_alignment"
+target = "hc7.adjacent_pair_palette_linkage"
+kind = "uses"
+note = "The selected pole edge with chi(G-{v,x})=6 carries the five disjoint palette paths in the sparse full-component residue."
+
+[[relations]]
 source = "hc7.distance_one_path_split_response"
 target = "hc7.two_full_shore_exact_block_kempe_transition"
 kind = "uses"
 note = "The one-move branch supplies the paired obstruction paths used by the path-splitting theorem."
+
+[[relations]]
+source = "hc7.distance_one_spanning_path_normal_form"
+target = "hc7.distance_one_path_split_response"
+kind = "uses"
+note = "This treats the path-spanning survivor of the earlier path-splitting theorem."
+
+[[relations]]
+source = "hc7.distance_one_reversal_triangle_collision"
+target = "hc7.distance_one_spanning_path_normal_form"
+kind = "uses"
+note = "This completes every near-full two-piece outcome whose omitted contacts avoid the distinguished triangle."
 
 [[relations]]
 source = "hc7.spanning_kernel_cutvertex_response_descent"
@@ -4687,6 +4922,12 @@ source = "hc7.large_boundary_singleton_response_descent"
 target = "hc7.two_full_shore_exact_block_kempe_transition"
 kind = "uses"
 note = "The order-nine endpoint is the long-transition branch of the fixed-block Kempe dichotomy."
+
+[[relations]]
+source = "hc7.order9_maximum_boundary_palette"
+target = "hc7.large_boundary_singleton_response_descent"
+kind = "uses"
+note = "The live corollary uses the proper-kernel transfer only to normalize selected paired list-critical subgraphs to spanning shores."
 
 [[relations]]
 source = "hc7.two_full_shore_exact_block_kempe_transition"
@@ -4705,6 +4946,24 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.simplicial_boundary_all_exact_blocks_distance"
 kind = "guarded_by"
 note = "This prevents using the collection of all exact-independent-block cylinders alone to force distance one or a common trace."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.surjective_five_colour_kempe_connectivity"
+kind = "guarded_by"
+note = "This prevents restricting the full-six reduction to the induced reconfiguration graph on surjective five-colour traces without using host-level dynamics."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order9_tight_forest_block_descent"
+kind = "guarded_by"
+note = "This prevents replacing the host-level tight-vertex response by a local assertion that a tight Gallai block must already have boundary at most nine."
+
+[[relations]]
+source = "hc7.order9_tight_vertex_singleton_response"
+target = "hc7.barrier.order9_tight_forest_block_descent"
+kind = "sharpness_witness"
+note = "The local example shows why the theorem uses a singleton response at the tight vertex rather than a small full neighbourhood of its tight block."
 
 [[relations]]
 source = "hc7.order8_rooted_partition_contact_concentration"
@@ -6092,7 +6351,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "ea5dda46246b04e1563d8c1e35edc5b5f9eb8494a9af437c6c8a75c445ab699f"
+evidence_sha256 = "a463767247c91aae562dc91529de5870423edd735c9abc6443e5af9620b02b92"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6114,7 +6373,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "ea5dda46246b04e1563d8c1e35edc5b5f9eb8494a9af437c6c8a75c445ab699f"
+evidence_sha256 = "a463767247c91aae562dc91529de5870423edd735c9abc6443e5af9620b02b92"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -7183,4 +7442,13 @@ expected_stdout = [
   "left_states=16 right_states=17 cross_kempe_edges=0",
   "exact_block_quotient_distances: 2=>33 3=>6",
   "PASS: every independent exact block occurs on both sides at distance at least two",
+]
+
+[[verifiers]]
+id = "surjective-five-colour-kempe-connectivity-barrier"
+path = "barriers/hc7_surjective_five_colour_kempe_connectivity_barrier_verify.py"
+sha256 = "b8cc59ecb5fc2dffd21a49ce38da6519ca8564b26e1c130e32789b26d71762f0"
+timeout = 30
+expected_stdout = [
+  "PASS K26=G??F~w components=7800,10800 static=G?`F~w components=5520,5520 invariant=twin_equality",
 ]

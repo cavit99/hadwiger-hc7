@@ -1304,6 +1304,34 @@ vertices as missed boundary vertices.  In particular, a two-connected
 boundary-full spanning shore cannot be entirely tight; the remaining
 full-six endpoint has genuine positive list-degree excess in each shore.
 
+Every tight vertex itself has a stronger dynamic consequence.  It has
+degree nine, and deleting any incident edge gives an exact full-six-colour
+singleton response on its literal neighbourhood.  Deleting an internal
+tight edge under the old fixed trace bijects its internal neighbours with
+the missed singleton boundary colours, giving a literal one-for-one rainbow
+replacement.  With the full host hypotheses, one can select an adjacent
+pair and exterior component so that the returned boundary has order seven
+or eight, or has order nine, is four-colourable, and has connected
+boundary-full subgraphs on both sides.  This remains a one-step response:
+the old exact block and inherited minor-model labels need not survive.
+At the same tight pole, an exterior component can be selected so that its
+literal full neighbourhood has order seven through nine and deleting the
+aligned pole edge returns an exact singleton boundary block.  Deleting that
+singleton from the boundary leaves a `K_5`-minor-free graph.  If the exterior
+component is adjacent to all nine neighbours, the boundary graph has at most
+twenty-two edges; hence one can choose the same pole edge at a boundary
+vertex of internal degree at most four.  That vertex has at least two
+exterior neighbours, and the host contains a rooted minor of the form
+`K_2` joined with the resulting `K_5`-minor-free boundary base.  This
+compresses the full-component case to a sparse labelled near-clique
+obstruction but does not yet give a global two-apex pair or compatible
+shore colourings.
+There is no purely local replacement by a small tight-block separator: an
+audited four-cycle list obstruction is two-connected, boundary-full and of
+positive excess, yet its unique tight block has full neighbourhood of order
+ten.  Any further descent must use the host response or global minor
+exclusion.
+
 In the distance-one branch, an obstruction path whose ends lie in one
 component of the inherited boundary forest and whose deletion leaves a
 boundary-full residual component gives an explicit `K_7`-minor model.
@@ -1318,17 +1346,40 @@ occurs.  A cutvertex in either spanning shore similarly gives a strictly
 smaller fresh connected response side, but that response need not retain
 the selected exact block or inherited model labels.
 
+If the one-move obstruction path spans its shore, every proper prefix and
+suffix meets at least eight of the nine boundary vertices outside the same
+response exits.  A full--full split gives an explicit `K_7` model; otherwise
+the attachment intervals have one shared portal or opposite one-vertex
+defects.  Four anchored branch sets and the distinguished boundary triangle
+then complete `K_7` whenever those possible defects avoid the triangle.
+Thus the shore-spanning residue is confined to triangle-owned defects or an
+endpoint/atomic shared portal.
+
 These are genuine host-level reductions, but not yet label allocation.  A
 separate finite barrier realizes every independent exact block on both
 connected full shores while keeping all fixed-block Kempe distances at
 least two.  It deliberately lacks `K_7`-minor exclusion and full
 minor-criticality.  Consequently varying the fixed block cannot by itself
-close the endpoint.  The next theorem must first force or reduce to the
-full-six trace and then use an internal operation at the positive-excess
-vertices or the literal tight-block attachments.  In the one-move branch it
-must resolve the path-spanning or boundary-location collision.  Either route
-must terminate in the labelled construction or a compatible order-seven
-separator below.
+close the endpoint.  A maximum-palette argument now supplies an exact
+full-trace dichotomy: either one full-six-colour exact trace is rejected by
+both shores and gives the paired list-critical endpoint, or every such trace
+extends through exactly one shore.  If neither shore attains six boundary
+colours, splitting a repeated boundary colour class with an unused colour
+forces the first outcome.  Thus the next theorem must close the paired
+positive-excess endpoint or the one-sided full-trace alternative by an
+internal operation at a non-tight vertex or the literal tight-block
+attachments.  In the one-move branch it must resolve the path-spanning or
+boundary-location collision.  Either route must terminate in the labelled
+construction or a compatible order-seven separator below.
+
+One possible full-six reduction is now ruled out.  The graph of surjective
+five-colourings under surjectivity-preserving component swaps can be
+disconnected even for an eight-vertex `K_5`-minor-free graph carrying the
+static forest, two prescribed edges, two added contacts and simplicial-root
+data of this boundary.  The maximum-palette argument bypasses this obstacle
+when fewer than six colours are attained, but the one-sided full-trace
+alternative still requires an operation in the seven-connected
+minor-critical host; boundary Kempe connectivity alone is insufficient.
 
 The immediate order-eight theorem is therefore the following.  In the
 minimum positive-excess boundary-full interface, with either two
