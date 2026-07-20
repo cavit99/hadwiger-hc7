@@ -2,18 +2,25 @@
 
 **Verdict:** **GREEN**.  The graph is a full-hypothesis counterexample to the
 formally stated four-outcome bridge exhaustion, and its surviving
-three-column chained absorption is valid.  It is not a counterexample to
-Conjectural Theorem 3.1.
+three-column chained absorption is valid.  The exhaustive root-placement
+sweep proves that this fixed graph is paired-rooted-positive for every
+admissible pair of root sets.  It is not a counterexample to Conjectural
+Theorem 3.1.
 
 **Audited barrier:**
 [`hc7_pentagonal_bipyramid_singleton_web_cell_barrier.md`](hc7_pentagonal_bipyramid_singleton_web_cell_barrier.md),
 SHA-256
-`300e3fd42b5a712008b2e27eacb732b7ffcc391175cc10245913cc924f847305`.
+`5ab012b23aa1706af86c8a7e04cf3d226b1ec30c0cd570b1c31ee99a4b46ac61`.
 
 **Audited verifier:**
 [`hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py`](hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py),
 SHA-256
 `333561d9b942ab8ac63b8ba0e1f45dbc3874ba369a3f73c27d478f178a0d43f7`.
+
+**Audited root-placement sweep:**
+[`hc7_pentagonal_bipyramid_singleton_root_sweep_verify.py`](hc7_pentagonal_bipyramid_singleton_root_sweep_verify.py),
+SHA-256
+`76d06ad6c3dceaa123e08c51acf95d86f301b63e402a988602e875120a13ef1f`.
 
 **Imported chained theorem:**
 [`hc7_pentagonal_bipyramid_three_column_chained_absorption.md`](../results/hc7_pentagonal_bipyramid_three_column_chained_absorption.md),
@@ -65,6 +72,39 @@ independent cross-check on the three older mechanisms, each of which would
 produce such a model.  The displayed model with four distinct owners is
 valid, so the asserted maximum is exact.
 
+## Exhaustive root-placement sweep
+
+The seven column sizes are `2,3,2,3,2,2,2`, so there are exactly `288`
+minimal root transversals and `288^2=82,944` ordered pairs, with overlap
+allowed.  Independent reconstruction reproduced the overlap counts
+
+```text
+0:1152, 1:6912, 2:17568, 3:24480, 4:20160, 5:9792, 6:2592, 7:288.
+```
+
+The retained sweep enumerates all twenty oriented pentagonal-bipyramid
+frames and all six theorem pieces.  It audits their locations and
+disjointness, the connectedness of `D_1,D_2,D_3`, all seven literal contacts,
+the five resulting branch sets, and their incidence with both root
+transversals.  Exactly `98` distinct chained-absorption models survive.  Every
+one of the `82,944` placements is covered by between four and ninety-eight
+of them, including all `1,152` columnwise-disjoint placements.
+
+An independent NetworkX implementation reconstructed the graph and the
+theorem search without importing the retained code.  It reproduced the 98
+models, every placement count, the certificate-catalogue digest
+`2690d4c1f8b8f2add17849c5b76ce432694a3d57e7b64497ec77c51fc8ca6642`,
+and the canonical-witness digest
+`cb92d3289e6fe067ed56b911af5f4c17752ff3436fed6717c0714f0972cf890e`.
+It also checked the three fixed models used as a compact cover.  Every
+one-root transversal is covered by at least two of those models, so every
+ordered pair shares one.
+
+The extension from minimal transversals to arbitrary admissible root sets is
+valid: choose one root in every column from each set, use the certified model
+for those choices, and apply root-set inclusion.  This is a finite theorem
+about the one retained graph, not an unbounded conclusion.
+
 ## Web and surviving mechanism
 
 The pre-insertion rib has 8 vertices, 17 edges, and the 11 displayed faces.
@@ -87,6 +127,9 @@ The retained checks were rerun with the repository environment:
 .venv/bin/python barriers/hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py
 env PYTHONHASHSEED=1 .venv/bin/python barriers/hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py
 .venv/bin/python -m py_compile barriers/hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py
+.venv/bin/python barriers/hc7_pentagonal_bipyramid_singleton_root_sweep_verify.py
+env PYTHONHASHSEED=987654 .venv/bin/python barriers/hc7_pentagonal_bipyramid_singleton_root_sweep_verify.py
+.venv/bin/python -m py_compile barriers/hc7_pentagonal_bipyramid_singleton_root_sweep_verify.py
 .venv/bin/python barriers/hc7_pentagonal_bipyramid_four_colour_combined_negative_verify.py
 python3 tools/research_index.py check
 ```
@@ -96,6 +139,11 @@ Both new-verifier runs reported:
 ```text
 singleton web-cell PB barrier: PASS order=16 size=47 connectivity=5 five_owner_models=0 maximum_distinct_owner_bags=4 shortest_residual_paths=6
 ```
+
+Both root-sweep runs reported `placements=82944`, `chained=82944`,
+`negative=0`, `disjoint=1152`, `certificates=98`, and
+`compact_covered=82944`; their complete output was byte-identical under the
+two hash seeds.
 
 The imported base verifier and repository integrity check also passed.
 

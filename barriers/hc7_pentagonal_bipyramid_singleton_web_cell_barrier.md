@@ -3,8 +3,10 @@
 **Status:** barrier/counterexample to an intermediate structural claim;
 [separately audited **GREEN**](hc7_pentagonal_bipyramid_singleton_web_cell_barrier_audit.md).
 The audit is internal, not external peer review.  Computer-assisted finite
-checks are reproduced by
-[`hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py`](hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py).
+checks are reproduced by the
+[`structural verifier`](hc7_pentagonal_bipyramid_singleton_web_cell_barrier_verify.py)
+and the
+[`root-placement sweep`](hc7_pentagonal_bipyramid_singleton_root_sweep_verify.py).
 It is not a counterexample to the paired-rooted target.
 
 ## 1. Sufficient bridge exhaustion refuted
@@ -209,11 +211,30 @@ every column.  This is the application of the separately stated
 
 The same bags do not work for arbitrary endpoint choices: the last three
 bags contain no five distinct whole-column owners and must literally meet
-the chosen root sets.  Therefore this example is not a target
-counterexample.  It shows instead that the first irreducible singleton cell
-already requires more than the three named local mechanisms.  The example
-decisively falsifies the sufficient four-outcome bridge exhaustion in
-Section 1 and exposes a fifth, reusable terminal mechanism: a root-sensitive
-multi-column allocation such as (5.2).  The remaining alternatives are a
-compatible whole-graph web/colouring argument or a strict colour-extending
-reduction.
+the chosen root sets.  The exact finite root sweep therefore enumerates all
+
+\[
+ (2\cdot3\cdot2\cdot3\cdot2\cdot2\cdot2)^2=82,944
+\]
+
+ordered choices of one `A`-vertex and one `B`-vertex in every column,
+including all `1,152` choices that are columnwise disjoint.  It independently
+enumerates all twenty oriented PB frames and verifies every hypothesis of the
+three-column theorem for each candidate.  Exactly `98` distinct chained
+models result, and between four and ninety-eight of them cover every root
+placement.  A separate compact certificate of three fixed `K_5` models also
+covers all `82,944` placements.
+
+Consequently this fixed graph has the paired-rooted outcome for **every**
+admissible root sets `A,B`: choose one vertex of each set in every column,
+use the certified model for those minimal choices, and then apply
+monotonicity.  This is a computer-assisted finite result, not an unbounded
+theorem.
+
+The example is therefore not a target counterexample for any root placement.
+It shows instead that the first irreducible singleton cell already requires
+more than the three older local mechanisms.  It decisively falsifies the
+sufficient four-outcome bridge exhaustion in Section 1 and exposes a fifth,
+reusable terminal mechanism: a root-sensitive multi-column allocation such
+as (5.2).  The remaining alternatives are a compatible whole-graph
+web/colouring argument or a strict colour-extending reduction.
