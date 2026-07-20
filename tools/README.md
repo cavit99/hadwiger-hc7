@@ -99,8 +99,11 @@ CONFIG=tools/independent_labs/hc7_pentagonal_bipyramid.toml
 LAB_ID=$(python tools/independent_labs.py prepare "$CONFIG")
 python tools/independent_labs.py provision "$LAB_ID" codex
 python tools/independent_labs.py provision "$LAB_ID" grok
+python tools/independent_labs.py runtime "$LAB_ID" codex
+python tools/independent_labs.py runtime "$LAB_ID" grok
 python tools/independent_labs.py commands "$LAB_ID"
 python tools/independent_labs.py status "$LAB_ID"
+python tools/independent_labs.py goal "$LAB_ID" grok
 ```
 
 Provisioning Codex does not require Grok to be installed or available, and
@@ -116,7 +119,24 @@ comparison stage, or dependency between completion of the two laboratories.
 
 Generated laboratories live below
 `.cache/research/labs/<lab-id>/{codex,grok}/`.  Preserve or export a useful
-result before cleaning this ignored directory.  Cleanup is marker-gated:
+result before cleaning this ignored directory.
+
+Each new laboratory also contains a persistent `.independent-lab-goal.md`.
+The provider must maintain its evidence log and complete explicit corpus,
+literature, mechanism, computational and cold-audit gates before returning
+`no_result`.  Ordinary primary-literature web research is permitted, but
+searching for a solution to the exact frozen benchmark is not.  Nontrivial
+Python experiments must be retained with their invocation, output and finite
+scope.  The optional `runtime` command creates an isolated `.venv` in that
+provider's clone and installs the repository-pinned verifier dependency.
+The `goal` command displays the current objective and evidence checklist.
+
+The Grok `strict` sandbox permits writes in its own workspace and blocks child
+process networking.  Grok's built-in web research remains available; Python
+and shell downloads do not.  This keeps experiments local while still allowing
+source-based literature research through the provider's native web tools.
+
+Cleanup remains marker-gated:
 
 ```bash
 python tools/independent_labs.py cleanup "$LAB_ID"

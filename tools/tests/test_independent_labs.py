@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import hashlib
+import io
 from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from contextlib import redirect_stdout
+from unittest.mock import patch
 
 from tools import independent_labs as labs
 from tools import proof_round as proof
@@ -82,11 +85,13 @@ effort = "high"
         self.assertEqual(manifest["base_commit"], git(self.repo, "rev-parse", "HEAD"))
 
         prompts = []
+        goals = []
         workspaces = {}
         for provider in labs.PROVIDERS:
             workspace = root / provider / "workspace"
             workspaces[provider] = workspace
             prompts.append((workspace / labs.PROMPT).read_bytes())
+            goals.append((workspace / labs.GOAL).read_bytes())
             self.assertEqual(git(workspace, "remote"), "")
             self.assertEqual(
                 git(workspace, "branch", "--show-current"),
@@ -97,8 +102,12 @@ effort = "high"
             self.assertEqual(git(workspace, "status", "--porcelain"), "")
 
         self.assertEqual(prompts[0], prompts[1])
+        self.assertEqual(goals[0], goals[1])
         self.assertNotIn(b"structural", prompts[0])
         self.assertNotIn(b"falsifier", prompts[0])
+        self.assertIn(b"Public web research is permitted", prompts[0])
+        self.assertIn(b"Python experiments", prompts[0])
+        self.assertIn(b"Evidence gates required before `no_result`", goals[0])
 
         (workspaces["codex"] / "private-note.md").write_text("codex only\n", encoding="utf-8")
         self.assertFalse((workspaces["grok"] / "private-note.md").exists())
@@ -133,8 +142,36 @@ effort = "high"
         self.assertIn("workspace-write", codex)
         self.assertIn("strict", grok)
         self.assertEqual(codex[-1], grok[-1])
+        self.assertIn(labs.GOAL, codex[-1])
         self.assertNotIn("review", codex[-1].lower())
         self.assertNotIn("fals", grok[-1].lower())
+
+        output = io.StringIO()
+        with redirect_stdout(output):
+            labs.show_goal("commands", "grok")
+        self.assertIn("**Status:** active", output.getvalue())
+        self.assertIn("- [ ] Search relevant primary literature", output.getvalue())
+
+        grok_workspace = root / manifest["lanes"]["grok"]["workspace"]
+        (grok_workspace / labs.RESULT).write_text(
+            "# Result\n\n**Outcome:** `no_result`\n", encoding="utf-8"
+        )
+        output = io.StringIO()
+        with redirect_stdout(output):
+            labs.show_status("commands")
+        self.assertIn("premature no_result: evidence gates incomplete", output.getvalue())
+
+        goal = grok_workspace / labs.GOAL
+        goal.write_text(
+            goal.read_text(encoding="utf-8")
+            .replace("**Status:** active", "**Status:** exhausted")
+            .replace("- [ ]", "- [x]"),
+            encoding="utf-8",
+        )
+        output = io.StringIO()
+        with redirect_stdout(output):
+            labs.show_status("commands")
+        self.assertNotIn("premature no_result", output.getvalue())
 
     def test_each_provider_can_be_provisioned_without_the_other(self) -> None:
         lab_id = labs.prepare(self.repo / "config.toml", "one-lane")
@@ -146,6 +183,41 @@ effort = "high"
         labs.provision(lab_id, "grok")
         _, manifest = labs.load_lab(lab_id)
         self.assertEqual(set(manifest["lanes"]), {"codex", "grok"})
+
+    def test_legacy_lab_command_does_not_reference_missing_goal(self) -> None:
+        lab_id = labs.prepare(self.repo / "config.toml", "legacy")
+        labs.provision(lab_id, "grok")
+        root, manifest = labs.load_lab(lab_id)
+        workspace = root / manifest["lanes"]["grok"]["workspace"]
+        (workspace / labs.GOAL).unlink()
+
+        output = io.StringIO()
+        with redirect_stdout(output):
+            labs.show_commands("legacy", "grok")
+        self.assertIn(f"Read {labs.PROMPT} completely", output.getvalue())
+        self.assertNotIn(labs.GOAL, output.getvalue())
+
+    def test_runtime_prepares_isolated_python_environment(self) -> None:
+        lab_id = labs.prepare(self.repo / "config.toml", "runtime")
+        labs.provision(lab_id, "grok")
+        root, manifest = labs.load_lab(lab_id)
+        workspace = root / manifest["lanes"]["grok"]["workspace"]
+
+        with patch.object(labs.subprocess, "run") as run:
+            output = io.StringIO()
+            with redirect_stdout(output):
+                labs.setup_runtime(lab_id, "grok")
+
+        self.assertEqual(run.call_count, 2)
+        self.assertEqual(
+            run.call_args_list[0].args[0],
+            [labs.sys.executable, "-m", "venv", str(workspace / ".venv")],
+        )
+        self.assertEqual(
+            run.call_args_list[1].args[0][0],
+            str(workspace / ".venv" / "bin" / "python"),
+        )
+        self.assertIn(str(workspace / ".venv"), output.getvalue())
 
     def test_cleanup_requires_marker_and_removes_only_one_pair(self) -> None:
         first = labs.prepare(self.repo / "config.toml", "first")

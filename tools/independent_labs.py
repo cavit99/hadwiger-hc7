@@ -14,6 +14,7 @@ from pathlib import Path
 import secrets
 import shlex
 import shutil
+import subprocess
 import sys
 import time
 import tomllib
@@ -30,6 +31,7 @@ LAB_ROOT = REPO_ROOT / ".cache" / "research" / "labs"
 MARKER = ".independent-labs"
 MANIFEST = "manifest.json"
 PROMPT = ".independent-lab-prompt.md"
+GOAL = ".independent-lab-goal.md"
 RESULT = ".independent-lab-result.md"
 PROVIDERS = ("codex", "grok")
 CONFIG_KEYS = {
@@ -124,12 +126,29 @@ relationship to another researcher is assigned.  Choose and develop whichever
 proof strategy you judge strongest, and use native tools and subagents as
 useful.
 
-Use only this workspace and the repository sources listed below.  Do not seek,
-inspect, or infer output from any other research process.  Preserve every
-literal graph-theoretic hypothesis, branch-set label, colouring condition, and
-separation order.  A complete proof, a full-hypothesis counterexample, or a
-proved unbounded strict reduction is substantive; an unproved intermediate
-lemma or another finite residue is not.
+Use this workspace as the only local research corpus.  Do not seek, inspect, or
+infer output from any other research process.  Public web research is permitted
+for ordinary mathematical background and primary literature, but not to search
+for a solution to this exact target or benchmark.  Record exact sources and
+theorem numbers.  Preserve every literal graph-theoretic hypothesis, branch-set
+label, colouring condition, and separation order.
+
+The research objective is persistent across turns.  Read and maintain
+`{GOAL}` as the live objective and evidence log.  An unresolved inference is a
+checkpoint, not by itself a reason to stop.  Use native web tools, subagents,
+retained verifiers, and Python experiments when they can test a concrete
+mechanism.  Use `.venv/bin/python` when the laboratory runtime has been
+prepared.  Keep every nontrivial new experiment script and record its command,
+output, and exact finite scope.
+
+Before returning `no_result`, complete every evidence gate in `{GOAL}` with
+specific references.  In particular, read the full frozen context, investigate
+relevant primary literature, test at least two materially different proof
+mechanisms, perform a targeted computational or adversarial test (or prove why
+no such test can distinguish the live inference), and cold-audit the strongest
+candidate.  Do not mark a gate complete with a generic summary.  A complete
+proof, a full-hypothesis counterexample, or a proved unbounded strict reduction
+is substantive; an unproved intermediate lemma or another finite residue is not.
 
 First read `AGENTS.md`, `RESEARCH_LEDGER.md`, `active/INDEX.md`, the frozen
 brief below, and every listed context file.  Work from frozen commit `{commit}`.
@@ -148,10 +167,51 @@ status documents unless a claim is genuinely proved and separately audited.
 """
 
 
+def persistent_goal(config: dict[str, Any], commit: str) -> str:
+    target = config["target"]
+    return f"""# Persistent independent research goal
+
+**Status:** active
+**Frozen commit:** `{commit}`
+**Target:** `{target["file"]}` — `{target["heading"]}`
+
+## Objective
+
+Resolve the exact frozen target by a complete proof, a full-hypothesis
+counterexample, or a proved unbounded strict reduction with a well-founded
+host-level parameter and an explicit induction back to the target.
+
+## Evidence gates required before `no_result`
+
+- [ ] Read `AGENTS.md`, the authoritative status/navigation documents, the
+      frozen brief, and every frozen context file completely.
+- [ ] Search relevant primary literature and record exact citations and what
+      each result does or does not supply. Do not search for a solution to the
+      exact target or benchmark.
+- [ ] Develop and test at least two materially different proof mechanisms.
+- [ ] Run a targeted Python/computational or adversarial experiment, retaining
+      every nontrivial new script and its invocation/output; or give a rigorous
+      reason computation cannot distinguish the live inference.
+- [ ] Cold-audit the strongest candidate against every literal hypothesis,
+      branch-set label, colouring condition, and separation order.
+- [ ] State the first unresolved inference and explain, with concrete evidence,
+      why another research cycle would repeat rather than advance the work.
+
+## Research log
+
+Record each mechanism, experiment, literature connection, failure certificate,
+and pivot here while working. Update `Status` to `complete` only for a proved
+allowed outcome, or to `exhausted` only after every evidence gate above is
+honestly complete.
+"""
+
+
 def add_local_excludes(workspace: Path) -> None:
     exclude = workspace / ".git" / "info" / "exclude"
     existing = exclude.read_text(encoding="utf-8") if exclude.exists() else ""
-    additions = [name for name in (PROMPT, RESULT) if name not in existing.splitlines()]
+    additions = [
+        name for name in (PROMPT, GOAL, RESULT) if name not in existing.splitlines()
+    ]
     if additions:
         with exclude.open("a", encoding="utf-8") as handle:
             if existing and not existing.endswith("\n"):
@@ -197,6 +257,8 @@ def prepare(config_path: Path, requested_id: str | None) -> str:
     _, context_records = proof.build_context(config, commit)
     prompt = neutral_prompt(config, brief, commit)
     prompt_hash = proof.sha256_bytes(prompt.encode("utf-8"))
+    goal = persistent_goal(config, commit)
+    goal_hash = proof.sha256_bytes(goal.encode("utf-8"))
 
     lab_id = requested_id or make_lab_id(config["id_prefix"])
     root = safe_lab_path(lab_id)
@@ -205,6 +267,7 @@ def prepare(config_path: Path, requested_id: str | None) -> str:
     root.mkdir(parents=True)
     (root / MARKER).write_text("independent-labs-v1\n", encoding="utf-8")
     (root / "prompt.md").write_text(prompt, encoding="utf-8")
+    (root / "goal.md").write_text(goal, encoding="utf-8")
     proof.write_json(
         root / MANIFEST,
         {
@@ -222,6 +285,7 @@ def prepare(config_path: Path, requested_id: str | None) -> str:
             },
             "context": context_records,
             "prompt_sha256": prompt_hash,
+            "goal_sha256": goal_hash,
             "provider_settings": config["providers"],
             "lanes": {},
         },
@@ -250,6 +314,12 @@ def provision(lab_id: str, provider: str) -> None:
             if proof.sha256_bytes(prompt) != manifest["prompt_sha256"]:
                 raise LabError("frozen neutral prompt has drifted")
             (workspace / PROMPT).write_bytes(prompt)
+            goal_path = root / "goal.md"
+            if goal_path.exists():
+                goal = goal_path.read_bytes()
+                if proof.sha256_bytes(goal) != manifest.get("goal_sha256"):
+                    raise LabError("frozen persistent goal has drifted")
+                (workspace / GOAL).write_bytes(goal)
             verify_clone(workspace, manifest["base_commit"], branch)
             manifest["lanes"][provider] = {
                 "branch": branch,
@@ -278,8 +348,20 @@ def load_lab(lab_id: str) -> tuple[Path, dict[str, Any]]:
     return root, manifest
 
 
-def provider_command(provider: str, workspace: Path, settings: dict[str, Any]) -> list[str]:
-    instruction = f"Read {PROMPT} completely and carry out its instructions."
+def provider_command(
+    provider: str,
+    workspace: Path,
+    settings: dict[str, Any],
+    *,
+    goal_enabled: bool = True,
+) -> list[str]:
+    if goal_enabled:
+        instruction = (
+            f"Read {PROMPT} and {GOAL} completely. Pursue the persistent goal and "
+            "carry out the evidence-gated research protocol."
+        )
+    else:
+        instruction = f"Read {PROMPT} completely and carry out the research task."
     model = settings.get("model", "")
     if provider == "codex":
         command = ["codex", "-C", str(workspace), "--sandbox", "workspace-write"]
@@ -325,7 +407,10 @@ def show_commands(lab_id: str, provider: str | None) -> None:
             continue
         workspace = root / manifest["lanes"][name]["workspace"]
         command = provider_command(
-            name, workspace, manifest["provider_settings"].get(name, {})
+            name,
+            workspace,
+            manifest["provider_settings"].get(name, {}),
+            goal_enabled=(workspace / GOAL).exists(),
         )
         print(f"{name.upper()}\n  {shlex.join(command)}\n")
 
@@ -347,10 +432,76 @@ def show_status(lab_id: str) -> None:
             ["status", "--porcelain=v1", "--untracked-files=all"], cwd=workspace
         )
         result = workspace / RESULT
+        goal = workspace / GOAL
+        goal_status = "legacy"
+        completed = 0
+        total = 0
         print(f"{provider}: branch={branch} head={head}")
         print(f"  workspace: {workspace}")
         print(f"  status: {'modified' if status else 'clean'}")
-        print(f"  result: {result if result.exists() else 'not written'}")
+        if goal.exists():
+            goal_text = goal.read_text(encoding="utf-8")
+            completed = goal_text.count("- [x]") + goal_text.count("- [X]")
+            total = completed + goal_text.count("- [ ]")
+            goal_status = next(
+                (
+                    line.removeprefix("**Status:**").strip()
+                    for line in goal_text.splitlines()
+                    if line.startswith("**Status:**")
+                ),
+                "unknown",
+            )
+            print(f"  goal: {goal_status} ({completed}/{total} evidence gates)")
+        else:
+            print("  goal: legacy laboratory without a persistent goal")
+        result_status = str(result) if result.exists() else "not written"
+        if result.exists() and goal.exists():
+            result_text = result.read_text(encoding="utf-8")
+            if "`no_result`" in result_text[:2000] and (
+                goal_status != "exhausted" or completed != total
+            ):
+                result_status += " (premature no_result: evidence gates incomplete)"
+        print(f"  result: {result_status}")
+
+
+def show_goal(lab_id: str, provider: str) -> None:
+    root, manifest = load_lab(lab_id)
+    if provider not in manifest["lanes"]:
+        raise LabError(f"{provider} laboratory is not provisioned")
+    goal = root / manifest["lanes"][provider]["workspace"] / GOAL
+    if not goal.exists():
+        raise LabError("laboratory has no persistent goal file")
+    print(goal.read_text(encoding="utf-8"), end="")
+
+
+def setup_runtime(lab_id: str, provider: str) -> None:
+    root, manifest = load_lab(lab_id)
+    if provider not in manifest["lanes"]:
+        raise LabError(f"{provider} laboratory is not provisioned")
+    workspace = root / manifest["lanes"][provider]["workspace"]
+    runtime = workspace / ".venv"
+    requirements = workspace / "tools" / "requirements-verifiers.txt"
+    try:
+        subprocess.run(
+            [sys.executable, "-m", "venv", str(runtime)],
+            cwd=workspace,
+            check=True,
+        )
+        subprocess.run(
+            [
+                str(runtime / "bin" / "python"),
+                "-m",
+                "pip",
+                "install",
+                "-r",
+                str(requirements),
+            ],
+            cwd=workspace,
+            check=True,
+        )
+    except subprocess.CalledProcessError as exc:
+        raise LabError(f"could not prepare {provider} Python runtime") from exc
+    print(runtime)
 
 
 def cleanup(lab_id: str) -> None:
@@ -375,6 +526,14 @@ def parser() -> argparse.ArgumentParser:
     commands_parser.add_argument("provider", nargs="?", choices=PROVIDERS)
     status_parser = commands.add_parser("status", help="inspect both independent workspaces")
     status_parser.add_argument("lab_id")
+    goal_parser = commands.add_parser("goal", help="show one provider's persistent goal")
+    goal_parser.add_argument("lab_id")
+    goal_parser.add_argument("provider", choices=PROVIDERS)
+    runtime_parser = commands.add_parser(
+        "runtime", help="prepare one provider's isolated Python environment"
+    )
+    runtime_parser.add_argument("lab_id")
+    runtime_parser.add_argument("provider", choices=PROVIDERS)
     cleanup_parser = commands.add_parser("cleanup", help="remove one marked laboratory pair")
     cleanup_parser.add_argument("lab_id")
     return result
@@ -391,6 +550,10 @@ def main(argv: list[str] | None = None) -> int:
             show_commands(args.lab_id, args.provider)
         elif args.command == "status":
             show_status(args.lab_id)
+        elif args.command == "goal":
+            show_goal(args.lab_id, args.provider)
+        elif args.command == "runtime":
+            setup_runtime(args.lab_id, args.provider)
         elif args.command == "cleanup":
             cleanup(args.lab_id)
     except (LabError, proof.RoundError) as exc:
