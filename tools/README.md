@@ -106,7 +106,18 @@ Use a dedicated, non-privileged account or disposable VM containing no
 unrelated secrets and no GitHub credentials.  The repository is public, so
 the worker does not need push access.  Install provider CLIs from their
 official distributions; the project deliberately does not install or pin
-them.
+them.  With Node.js 18 or newer, the current official package names are:
+
+```bash
+npm install -g @openai/codex
+npm install -g @anthropic-ai/claude-code
+npm install -g @xai-official/grok
+```
+
+See the official [Codex CLI](https://github.com/openai/codex),
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code/getting-started),
+and [Grok CLI](https://docs.x.ai/build/overview) installation pages if a
+package-manager installation is unsuitable for the worker.
 
 ```bash
 git clone https://github.com/cavit99/hadwiger-hc7.git
