@@ -82,7 +82,57 @@ Run the infrastructure tests with
 python3 -m unittest discover -s tools/tests -p 'test_*.py' -v
 ```
 
-## Bounded multi-provider proof rounds
+## Independent Codex and Grok laboratories
+
+[`independent_labs.py`](independent_labs.py) prepares two symmetric research
+environments for the same mathematical target.  Codex and Grok receive the
+same frozen commit and byte-identical, method-neutral prompt, but work in
+different standalone writable clones with different local branches and no
+Git remotes.  Neither provider is assigned a role, shown the other's output,
+selected over the other, or asked to review the other.
+
+Freeze the common task from a clean checkout, then provision either or both
+providers independently:
+
+```bash
+CONFIG=tools/independent_labs/hc7_pentagonal_bipyramid.toml
+LAB_ID=$(python tools/independent_labs.py prepare "$CONFIG")
+python tools/independent_labs.py provision "$LAB_ID" codex
+python tools/independent_labs.py provision "$LAB_ID" grok
+python tools/independent_labs.py commands "$LAB_ID"
+python tools/independent_labs.py status "$LAB_ID"
+```
+
+Provisioning Codex does not require Grok to be installed or available, and
+vice versa.  Omitting one `provision` command creates a one-provider research
+environment without changing the frozen task seen by the other.
+
+The `commands` output gives one native interactive command for Codex and one
+for Grok.  Run either command, both commands simultaneously in separate
+terminals or `tmux` sessions, or run them days apart.  Each provider
+may use its native tools and subagents and may edit or commit only within its
+own disposable clone.  There is no pair-wide process, retry, stopping rule,
+comparison stage, or dependency between completion of the two laboratories.
+
+Generated laboratories live below
+`.cache/research/labs/<lab-id>/{codex,grok}/`.  Preserve or export a useful
+result before cleaning this ignored directory.  Cleanup is marker-gated:
+
+```bash
+python tools/independent_labs.py cleanup "$LAB_ID"
+```
+
+Exit any provider sessions using those workspaces before cleanup.
+
+Standalone clones prevent accidental branch, worktree, object-store, and
+output sharing.  They are not a confidentiality boundary when both providers
+run as the same operating-system user: either process may in principle read
+other accessible paths.  For adversarial read isolation, run the two prepared
+laboratories under separate disposable users, containers, or virtual
+machines.  In ordinary use the protocol rule is simple: do not point either
+provider at the sibling laboratory.
+
+## Optional bounded multi-provider proof rounds
 
 [`proof_round.py`](proof_round.py) runs the repository's bounded `3-1-2`
 research protocol: three blind laboratories, at most one provider-neutral
