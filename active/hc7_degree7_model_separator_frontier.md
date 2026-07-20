@@ -1407,6 +1407,42 @@ symmetric repartition: the remaining theorem must split the single
 `e`-rooted owner using an operation-specific response, or synchronize a
 complete boundary partition.
 
+There is now an additional unbounded restriction on the enlarged boundary
+`B`.  The two components `E,C` of `G-B` are anticomplete, connected and
+`B`-full.  The double-cone vertex-deletion equivalence, together with the
+fact that `d` has exact boundary neighbourhood `{x_d,y_d}` and
+`x_dy_d` is an edge, shows that every hypothetical `K_5` model in `G[B]`
+can be rerouted into `G[B]-d` and lifted with the two full components to an
+explicit `K_7` model.  Consequently
+
+\[
+                    K_5\not\preccurlyeq G[B],
+                    \qquad \chi(G[B])\le4.             \tag{8.18}
+\]
+
+This conclusion is independent of `|W|`.  It strengthens the previous
+finite-order colourability statements, but it does not by itself align the
+two closed-shore colourings.
+
+The operation-specific response family is also explicit.  Contracting `E`
+together with any nonempty independent set of `G[B]` makes that set one
+exact boundary colour class on the `C`-side, rejected by the intact
+`E`-side.  For the exact singleton class `{d}`, either one Kempe interchange
+strictly decreases the number of boundary blocks or each eligible alternate
+colour supplies a bichromatic path whose first internal vertex lies in
+`R`.  If the sole nonempty component `D-W` has equality neighbourhood
+`(S-{d}) union W`, the three supports `P_0,P_1,(D-W) union {e}` reduce every
+demand-at-most-three Hall failure to one of the following literal patterns:
+
+1. one required boundary set meets both `d` and `W`;
+2. at least two required boundary sets meet `W`; or
+3. the demand is three and all three required sets contain `d`.
+
+The unresolved theorem must eliminate these concentrated patterns using
+the associated proper-minor paths, produce a colour-compatible order-seven
+separation, or give an explicit `K_7` model.  Static star-contraction traces
+alone do not force any of those outcomes.
+
 In the exact three-vertex endpoint-reversal pattern, the
 [symmetric allocation theorem](../results/hc7_order8_strict_reversal_d_side_allocation.md)
 and its

@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "369477713bb11bbd8b83b7f3d13c9c229375ad36c36172321eb35103e1c73f8f"
+expected_source_sha256 = "d8f4faf0159e2c7f5ef1070d33fe5d738aab6ae9b2b276321d0c64123dc20872"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4275,6 +4275,54 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.double_cone_vertex_deletion_equivalence"
+title = "Double-cone vertex-deletion equivalence and simplicial-boundary corollary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_double_cone_vertex_deletion_equivalence.md"
+active = true
+audit = "results/hc7_double_cone_vertex_deletion_equivalence_audit.md"
+expected_source_sha256 = "0a70d3a8bdbfc6655f7a405165eb138ef07d423f44a6f25b55c88f722bb427b3"
+scope = "a general double cone and its application to the enlarged boundary in the ordered positive-excess interface"
+label_fidelity = "the two cone images, deleted boundary vertex and five clique-minor branch sets are explicit"
+colour_compatibility = "the live boundary is four-colourable; extension compatibility across the two full shores remains open"
+conclusions = [
+  "I2 joined with J contains a K7 minor if and only if J-v contains a K5 minor for some vertex v",
+  "two anticomplete connected B-full shores force G[B]-v to be K5-minor-free for every boundary vertex v",
+  "a simplicial boundary vertex with adjacent neighbours makes the whole boundary K5-minor-free and four-colourable",
+]
+does_not_prove = [
+  "a common boundary colouring on the two closed shores",
+  "the conjectural classification of all vertex-5-critical double-cone boundaries",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_star_contraction_trace_lobe_hall"
+title = "Star-contraction traces and the three-support Hall obstruction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_star_contraction_trace_and_lobe_hall.md"
+active = true
+audit = "results/hc7_order8_star_contraction_trace_and_lobe_hall_audit.md"
+expected_source_sha256 = "8eb309036157ab63c4cf3d4fd2d27a886e4bcc90743589fbb32790aa495a0644"
+scope = "the final ordered positive-excess interface after rooted contact concentration"
+label_fidelity = "every exact independent-set block, support contact set and bichromatic path is literal in the host"
+separator_order = "the result uses the existing exact-seven or strict boundary-order component descent"
+colour_compatibility = "the star-contraction response is legal on the C-side and rejected by the intact E-side; synchronization remains open"
+conclusions = [
+  "every nonempty independent boundary set is attained as one exact colour block",
+  "the singleton-d response gives a block-count decrease or colour-indexed paths first entering R",
+  "with one full D-W lobe, every demand-at-most-three Hall failure has one of three explicit d/W concentration patterns",
+]
+does_not_prove = [
+  "that any attained response has demand at most three",
+  "elimination of the three concentrated Hall patterns",
+  "a common complete boundary partition",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.order8_strict_reversal_d_side_allocation"
 title = "Symmetric two--three allocation in the endpoint-reversal case"
 kind = "theorem"
@@ -4370,6 +4418,24 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_rooted_partition_contact_concentration"
 kind = "uses"
 note = "This removes the symmetric/crossed Hall geometry and reduces the ordered positive-excess survivor to one e-rooted owner with at most one full internal lobe."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.double_cone_vertex_deletion_equivalence"
+kind = "uses"
+note = "In the live two-full-shore setting this makes the enlarged boundary K5-minor-free and four-colourable for arbitrary W."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_star_contraction_trace_lobe_hall"
+kind = "uses"
+note = "This supplies the exact independent-set response family and reduces every low-demand Hall failure to three literal concentration patterns."
+
+[[relations]]
+source = "hc7.order8_star_contraction_trace_lobe_hall"
+target = "hc7.order8_rooted_partition_contact_concentration"
+kind = "uses"
+note = "The star-contraction theorem starts from the concentrated two-piece contact pattern and the sole full internal lobe."
 
 [[relations]]
 source = "hc7.order8_rooted_partition_contact_concentration"
@@ -5757,7 +5823,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "369477713bb11bbd8b83b7f3d13c9c229375ad36c36172321eb35103e1c73f8f"
+evidence_sha256 = "d8f4faf0159e2c7f5ef1070d33fe5d738aab6ae9b2b276321d0c64123dc20872"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5779,7 +5845,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "369477713bb11bbd8b83b7f3d13c9c229375ad36c36172321eb35103e1c73f8f"
+evidence_sha256 = "d8f4faf0159e2c7f5ef1070d33fe5d738aab6ae9b2b276321d0c64123dc20872"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

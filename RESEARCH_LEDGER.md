@@ -327,6 +327,30 @@ proper-minor response to split this single `e`-rooted owner or synchronize
 the two closed-shore colourings; repartitioning the two rooted pieces cannot
 improve their `W` contacts.
 
+The enlarged boundary itself is now much more restricted.  The two
+components `E,C` of `G-B` are anticomplete, connected and each adjacent to
+every vertex of `B`.  Contracting them gives the double cone
+`I_2 \vee G[B]`.  The audited double-cone equivalence says that this graph
+contains a `K_7` minor exactly when `G[B]-v` contains a `K_5` minor for some
+`v`.  In the live two-triangle forest normal form, `d` has boundary
+neighbourhood exactly `{x_d,y_d}` and `x_dy_d` is an edge, so any `K_5`
+model in `G[B]` can be rerouted off `d`.  It would then lift with `E,C` to a
+`K_7` model.  Therefore `G[B]` is `K_5`-minor-free and is four-colourable,
+for arbitrary `|W|`.
+
+Proper-minor colourings also attain every nonempty independent set of
+`G[B]` as one exact boundary colour class by contracting it together with
+`E`.  The singleton-`d` response either decreases its block count by one
+Kempe interchange or supplies simultaneous colour-indexed paths whose first
+internal vertices lie in `R`.  When the unique component `D-W` is nonempty
+and full to `(S-{d}) union W`, the three connected supports
+`P_0,P_1,(D-W) union {e}` leave only three explicit Hall obstructions for a
+response of demand at most three: one required set meets both `d` and `W`,
+two required sets meet `W`, or all three required sets contain `d`.  These
+are dynamic concentration patterns, not a closure; the next theorem must
+couple them to a proper-minor transition or a smaller full-neighbourhood
+separator.
+
 The endpoint-reversal subcase is also smaller.  A symmetric two--three
 allocation inside its opposite connected part gives an explicit `K_7`
 whenever the five portal sets have distinct representatives and the
