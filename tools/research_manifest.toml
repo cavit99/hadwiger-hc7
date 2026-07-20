@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "556672d25511ee67936ab0e059add97310a40e36ae144e5ab8956f11646d4379"
+expected_source_sha256 = "ee89118f6002b2478af53d6812d7f056327fb053da2049faeccb1cb06f95607f"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4517,6 +4517,30 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.barrier.order9_operation_response_reconfiguration"
+title = "Designated deletion and contraction responses need not connect opposite full-shore extension languages"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order9_operation_response_reconfiguration_barrier.md"
+active = true
+audit = "barriers/hc7_order9_operation_response_reconfiguration_barrier_audit.md"
+expected_source_sha256 = "f49fbcbb454c5001763c4bfea0c045ffa475ed0f397c7fa2dbac230bf305d27d"
+scope = "actual connected boundary-full shore realizers over K1 joined with 3K2 plus 2K1, with designated deletion and contraction responses; not a seven-connected K7-minor-free contraction-critical host"
+label_fidelity = "all nine boundary vertices, both shore extension languages and every designated control edge are literal"
+colour_compatibility = "each designated operation returns a trace from the opposite language, but the intact languages are disjoint and no one-vertex transition joins them"
+conclusions = [
+  "both shore languages answer every nonempty independent exact-block query",
+  "the full five-colouring reconfiguration graph of the eight-vertex residual is connected",
+  "designated internal edge deletions and contractions return every opposite-language anchor trace",
+  "isolated operation-specific responses do not force a common trace or an ownership-changing one-vertex transition",
+]
+does_not_prove = [
+  "a barrier under seven-connectivity, global K7-minor exclusion or full contraction-criticality",
+  "failure of a theorem whose alternatives include a K7 model or a full-neighbourhood separator of order at most seven",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.order9_root_mobile_singleton_restart"
 title = "Every boundary vertex gives an exact-singleton reconfiguration restart across two full shores"
 kind = "theorem"
@@ -5113,6 +5137,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.one_sided_full_trace_static_anchor"
 kind = "guarded_by"
 note = "This prevents closing the one-sided orientation from abstract exact-block-complete partition families without shore realizability and operation-specific host data."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order9_operation_response_reconfiguration"
+kind = "guarded_by"
+note = "This shows that even actual full-shore realizers and designated deletion/contraction responses remain insufficient unless the proof uses seven-connectivity, global K7-minor exclusion or full contraction-criticality to obtain host geometry."
 
 [[relations]]
 source = "hc7.order8_full_five_colour_reconfiguration"
@@ -6518,7 +6548,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "556672d25511ee67936ab0e059add97310a40e36ae144e5ab8956f11646d4379"
+evidence_sha256 = "ee89118f6002b2478af53d6812d7f056327fb053da2049faeccb1cb06f95607f"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6540,7 +6570,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "556672d25511ee67936ab0e059add97310a40e36ae144e5ab8956f11646d4379"
+evidence_sha256 = "ee89118f6002b2478af53d6812d7f056327fb053da2049faeccb1cb06f95607f"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -7627,4 +7657,13 @@ sha256 = "75cb3fe6d6fad3ec01d0929d5533de2799ba673797e446791eb58f43d31ce002"
 timeout = 30
 expected_stdout = [
   "PASS partitions=309 full_partitions=155 left=97 right=123 anchors=66 full_colourings=18600 moves=194400",
+]
+
+[[verifiers]]
+id = "order9-operation-response-reconfiguration-barrier"
+path = "barriers/hc7_order9_operation_response_reconfiguration_barrier_verify.py"
+sha256 = "646abb832e9c97819f575324a2e75dfd329082390920d949ed0a88a7c4152fef"
+timeout = 30
+expected_stdout = [
+  "PASS partitions=1834 full=674 maximum_independent=8 left=682 right=300 anchors=107 adjacencies=20232",
 ]

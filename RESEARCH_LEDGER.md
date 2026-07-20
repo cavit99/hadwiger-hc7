@@ -159,6 +159,19 @@ surjectivity-preserving one-vertex component.  The construction is not
 claimed to be realizable by actual shores; it isolates the need for
 operation-coupled host information.
 
+A stronger audited barrier realizes the same obstruction by actual
+connected open shores adjacent to every vertex of a nine-vertex boundary.
+Each nonempty independent boundary set is attained exactly from both
+orientations, and designated internal edge deletions and contractions
+return every opposite-language anchor trace, yet the two shore languages
+remain disjoint and have no one-vertex transition between them.  The host
+is seven-chromatic, but is not asserted to be seven-connected,
+`K_7`-minor-free or six-colourable after every proper minor.  Thus isolated
+operation-specific responses still do not supply the missing global
+coupling: the next positive theorem must use those full host hypotheses to
+produce a labelled first-hit augmentation, a `K_7` model or a small
+full-neighbourhood separator.
+
 The exact open gate is therefore the positive-excess order-nine spanning
 endpoint together with the two outcomes of this shortest full
 reconfiguration path (and the path-spanning/location-collision residue of

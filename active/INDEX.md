@@ -113,6 +113,7 @@ Immediate barriers:
 - [even all independent exact blocks do not force a one-move shore transition](../barriers/hc7_simplicial_boundary_all_exact_blocks_distance_barrier.md)
 - [surjective five-colour traces need not form one Kempe component](../barriers/hc7_surjective_five_colour_kempe_connectivity_barrier.md)
 - [abstract exact-block-complete boundary families need not change orientation along a full-trace recolouring component](../barriers/hc7_one_sided_full_trace_static_anchor_barrier.md)
+- [even designated deletion/contraction responses need not connect two actual full-shore extension languages](../barriers/hc7_order9_operation_response_reconfiguration_barrier.md)
 - [a positive-excess tight forest need not expose a small block boundary](../barriers/hc7_order9_tight_forest_block_descent_barrier.md)
 
 ## General bounded-interface continuation

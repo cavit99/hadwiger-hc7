@@ -1440,6 +1440,19 @@ families are not asserted to be shore-realizable.  The example rules out
 only a static partition-language proof and leaves operation-specific shore
 responses as the required additional input.
 
+Even isolated operation-specific responses are not sufficient.  There are
+actual connected boundary-full shores over a nine-vertex boundary whose
+disjoint extension languages each answer every independent exact-block
+query.  Designated internal edge deletions and contractions on either shore
+return all anchor traces from the opposite language, but no one-vertex
+transition joins the two languages.  This realized barrier is
+seven-chromatic, but it deliberately lacks the asserted combination of
+seven-connectivity, global `K_7`-minor exclusion and six-colourability of
+every proper minor.  Those host hypotheses must therefore enter the next
+positive argument through a full-neighbourhood separator, a labelled
+first-hit allocation or an explicit `K_7`-minor model; a collection of
+operation witnesses cannot be treated as a connected response space.
+
 The immediate order-eight theorem is therefore the following.  In the
 minimum positive-excess boundary-full interface, with either two
 complementary components or one of the audited 82 three-component boundary
