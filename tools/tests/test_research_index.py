@@ -41,7 +41,7 @@ class MiniRepository:
         self.write(
             "active/INDEX.md",
             "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
-            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "Selected audited inputs used across the active programme:\n\n"
             "- [Theorem](../results/theorem.md)\n\n"
             "Immediate barriers:\n\n## Other work\n",
         )
@@ -190,7 +190,7 @@ class IntegrityTests(unittest.TestCase):
         self.repo.write(
             "active/INDEX.md",
             "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
-            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "Selected audited inputs used across the active programme:\n\n"
             "- [Theorem](../results/theorem.md)\n"
             "- [Untracked](untracked.md)\n\n"
             "Immediate barriers:\n\n## Other work\n",
@@ -200,7 +200,7 @@ class IntegrityTests(unittest.TestCase):
         self.repo.write(
             "active/INDEX.md",
             "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
-            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "Selected audited inputs used across the active programme:\n\n"
             "- [Theorem](../results/theorem.md)\n\n"
             "Immediate barriers:\n\n## Other work\n",
         )
@@ -368,11 +368,11 @@ class IntegrityTests(unittest.TestCase):
             "active/INDEX.md",
             "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
             "Immediate barriers:\n\n"
-            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "Selected audited inputs used across the active programme:\n\n"
             "- [Theorem](../results/theorem.md)\n\n## Other work\n",
         )
         self.assertIn(
-            "Immediate proved inputs must precede Immediate barriers",
+            "Selected audited inputs must precede Immediate barriers",
             "\n".join(self.errors()),
         )
 
@@ -380,7 +380,7 @@ class IntegrityTests(unittest.TestCase):
         self.repo.write(
             "active/INDEX.md",
             "# Index\n\n## Primary target\n\n[Target](target.md)\n\n"
-            "Immediate proved inputs, each with an adjacent audit:\n\n"
+            "Selected audited inputs used across the active programme:\n\n"
             "Immediate barriers:\n\n## Other work\n",
         )
         self.assertIn(

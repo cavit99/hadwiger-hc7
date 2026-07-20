@@ -6,18 +6,27 @@ is stated in the technical frontier linked below. Transitive dependencies
 and historical connections are available through the generated research
 index; they are not duplicated here.
 
-## Primary target
+## Verification map
+
+[Exhaustive global chain and conditional refinements](hc7_live_case_dag.md)
+
+[Verification-gate cold audit and go/no-go reassessment](hc7_verification_gate_report.md)
+
+## Primary degree-seven target
 
 [Degree-seven boundary-labelled near-clique composition](hc7_degree7_model_separator_frontier.md)
 
-Immediate proved inputs, each with an adjacent audit:
+Selected audited inputs used across the active degree-seven programme:
+
+The list is grouped by proof stage; the generated dependency graph should be
+used for transitive closure.
 
 ### Global entry
 
 - [boundary-aligned low-degree adjacent pair](../results/hc7_low_degree_boundary_edge_alignment.md)
 - [boundary-labelled one-/two-edge-deficient `K_7` model](../results/hc7_degree7_aligned_near_k7_model.md)
 
-### Special exact-seven normal form
+### Generic exact-seven restart and bounded response reductions
 
 - [generic selected-response restart at every exact order-seven core boundary](../results/hc7_generic_exact7_response_restart.md)
 - [relative eight-connectivity of a minimum exact-seven response shore](../results/hc7_minimum_generic_exact7_relative_connectivity.md)

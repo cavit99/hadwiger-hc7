@@ -1244,9 +1244,10 @@ simultaneous vertex-minimal list-uncolourable shore subgraphs for the same
 boundary trace.  Mader's bound together with the equality classification
 now removes every boundary of order at least ten: it returns an exact
 order-seven singleton response or a strictly smaller boundary response.
-Thus the live enlarged boundary has order nine, `|W|=2`, and the unresolved
-long-transition endpoint has both list-critical subgraphs spanning their
-shores.  At that endpoint every opposite pair deletion is six-colourable
+Thus, after separately excluding the fresh-response alternative returned by
+a proper list-critical kernel, the unresolved long-transition endpoint has
+boundary order nine, `|W|=2`, and both list-critical subgraphs spanning
+their shores. At that endpoint every opposite pair deletion is six-colourable
 with the same boundary trace and saturates both deleted vertices; moreover
 every shore vertex has list-degree excess plus repeated-boundary-colour
 count at least three, with the tight vertices inducing a Gallai forest.

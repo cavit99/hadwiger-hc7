@@ -4,9 +4,13 @@
 **Authoritative status:** $HC_7$ is not proved here.
 
 This file records the current mathematical dependency chain. The concise
-list of live files is [`active/INDEX.md`](active/INDEX.md), and the current
-technical statement is
-[`active/hc7_degree7_model_separator_frontier.md`](active/hc7_degree7_model_separator_frontier.md).
+list of live files is [`active/INDEX.md`](active/INDEX.md), and the
+[live case verification map](active/hc7_live_case_dag.md) distinguishes the
+exhaustive global chain from its conditional degree-seven, order-eight and
+order-nine refinements. The exact primary degree-seven statement is in
+[`active/hc7_degree7_model_separator_frontier.md`](active/hc7_degree7_model_separator_frontier.md),
+while the exhaustive all-degree open composition theorem is in
+[`active/hc7_bounded_interface_synchronization_frontier.md`](active/hc7_bounded_interface_synchronization_frontier.md).
 If an archived note conflicts with this ledger, this ledger governs the
 current programme. The balanced order-eight, two-root, and support-six
 sections retain developed dependency chains but are not by themselves the
@@ -14,8 +18,8 @@ current engine.
 
 ## Current status
 
-The exact live theorem and its hypotheses are maintained in the
-[degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md).
+The exact primary degree-seven theorem and its hypotheses are maintained in
+the [degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md).
 This section records only the current dependency chain and trust boundary;
 the detailed programme snapshots below are frozen research history.
 
@@ -23,13 +27,41 @@ the detailed programme snapshots below are frozen research history.
 
 Assume `G` is a hypothetical minor-minimal counterexample to `HC_7`.
 Thus `G` is seven-connected, `chi(G)=7`, `G` has no `K_7` minor, and every
-proper minor is six-colourable.  Audited reductions give a vertex of degree
-seven, eight, or nine and an actual full separation whose boundary has the
-same order.  The adjacent-pair colouring framework can be aligned with that
-boundary.  The boundary is four-colourable, and both closed shores realize
-strong operation-specific boundary-colouring constraints.
+proper minor is six-colourable. Audited reductions give a vertex `u` of
+degree seven, eight, or nine and an actual separation with boundary `S`
+satisfying `7<=|S|<=d_G(u)<=9`. Each open side contains a connected
+subgraph adjacent to every vertex of `S`. The adjacent-pair colouring
+framework can be aligned with a boundary edge. The boundary is
+four-colourable, and both closed shores realize strong operation-specific
+boundary-colouring constraints.
 
-### Current narrowed endpoint
+### Verification-gate conclusion
+
+The [live case map](active/hc7_live_case_dag.md) gives the only presently
+justified exhaustive all-degree chain. It runs from the low-degree
+separation through the audited pole-free path construction and then stops
+at the open bounded-interface bridge-composition theorem. Relative to the
+entry reduction, that theorem is sufficient for `HC_7` and therefore
+contains essentially the whole remaining global difficulty.
+
+The detailed exact-seven, order-eight and order-nine results form a
+conditional refinement of this chain, not an exhaustive fine-grained DAG
+for arbitrary original degree-eight or degree-nine entries. In the
+exact-seven refinement, strict descent is proved only when a proper core
+again has boundary order seven. A minimum positive-excess separator can
+return a fresh exact-seven interface without a proved decrease, and the
+singleton, two-/three-full-component and shore-filling modes remain open.
+
+A fresh internal cold audit found no mathematical error in the low-degree
+entry, exact-block Kempe reduction, generic exact-seven restart, minimum
+positive-excess normal form, cycle-boundary completion or large-boundary
+density descent. The exact revisions and remaining joins are recorded in
+the [verification-gate report](active/hc7_verification_gate_report.md).
+Further proof work should test one host-level response-coupling theorem in
+the two-component order-eight positive-excess case before expanding any
+further labelled residue analysis.
+
+### Order-nine positive-excess subbranch
 
 In the connected two-shore positive-excess branch, the two extension
 languages now lie in one Kempe-reconfiguration graph while any prescribed
@@ -201,7 +233,8 @@ coupling: the next positive theorem must use those full host hypotheses to
 produce a labelled first-hit augmentation, a `K_7` model or a small
 full-neighbourhood separator.
 
-The exact open gate is therefore the positive-excess order-nine spanning
+The exact open gate in this order-nine positive-excess subbranch is therefore
+the positive-excess order-nine spanning
 endpoint with three sharply bounded colouring outcomes: one oppositely
 owned move; a common rejected four-colour trace, possible only over a
 three-colourable residual; or the low-palette response cube and its paired
@@ -661,7 +694,7 @@ double-contraction colouring gives one common bichromatic component for
 every pair of boundary colours, with a shortest connection internally
 confined to one open shore in the quotient.
 
-### Exact live gap
+### Exact live degree-seven gap
 
 Choose a generic exact-seven selected-response interface with minimum
 connected-shore order.  The audited restart theorem leaves exactly three

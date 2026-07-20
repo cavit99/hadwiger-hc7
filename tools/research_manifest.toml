@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "af5fa3e53f8ea3f5e89e3bf089037b67f7d5b71cba7b8fa3f93c81e30a3a3552"
+expected_source_sha256 = "4df2a6cc3428f8b11e33b7ab5ad7d35a86d10bf15fdca53ee3fcf6683ddb01cd"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -6670,7 +6670,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "af5fa3e53f8ea3f5e89e3bf089037b67f7d5b71cba7b8fa3f93c81e30a3a3552"
+evidence_sha256 = "4df2a6cc3428f8b11e33b7ab5ad7d35a86d10bf15fdca53ee3fcf6683ddb01cd"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6692,7 +6692,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "af5fa3e53f8ea3f5e89e3bf089037b67f7d5b71cba7b8fa3f93c81e30a3a3552"
+evidence_sha256 = "4df2a6cc3428f8b11e33b7ab5ad7d35a86d10bf15fdca53ee3fcf6683ddb01cd"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

@@ -34,9 +34,10 @@ proper minor is six-colourable.
 
 The main internally audited reductions currently establish that:
 
-- every hypothetical counterexample has a degree-seven, degree-eight, or
-  degree-nine vertex giving a full graph separation with boundary order
-  between seven and nine;
+- every hypothetical counterexample has a vertex `u` of degree seven,
+  eight, or nine and an actual separation of order between seven and
+  `d(u)`, with each open side containing a connected subgraph adjacent to
+  every boundary vertex;
 - in the degree-seven case the exterior of the closed neighbourhood is
   connected, and its boundary-colouring constraints admit an exact
   matching description;
@@ -67,7 +68,8 @@ than duplicated here.
 |---|---|
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current research status |
 | [`active/INDEX.md`](active/INDEX.md) | Concise navigation to live proof work |
-| [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Exact live theorem, residual cases, and trust boundary |
+| [Live case verification map](active/hc7_live_case_dag.md) | Exhaustive global chain, conditional refinements, and every missing descent arrow |
+| [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Exact primary degree-seven theorem, residual cases, and trust boundary |
 | [Degree-eight/nine bounded-interface frontier](active/hc7_bounded_interface_synchronization_frontier.md) | General bounded-interface continuation |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Degree-seven boundary-labelled near-clique model](results/hc7_degree7_aligned_near_k7_model.md) | Principal degree-seven structural compression |

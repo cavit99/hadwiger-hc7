@@ -1157,7 +1157,7 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
         input_markers = [
             line_number
             for line_number, line in enumerate(navigation_text.splitlines(), start=1)
-            if line.strip().startswith("Immediate proved inputs")
+            if line.strip().startswith("Selected audited inputs")
         ]
         barrier_markers = [
             line_number
@@ -1166,7 +1166,7 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
         ]
         if len(active_targets) == 1 and (len(input_markers) != 1 or len(barrier_markers) != 1):
             errors.append(
-                "active/INDEX.md must contain exactly one Immediate proved inputs section and one Immediate barriers section"
+                "active/INDEX.md must contain exactly one Selected audited inputs section and one Immediate barriers section"
             )
         if (
             len(input_markers) == 1
@@ -1174,7 +1174,7 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
             and input_markers[0] >= barrier_markers[0]
         ):
             errors.append(
-                "active/INDEX.md Immediate proved inputs must precede Immediate barriers"
+                "active/INDEX.md Selected audited inputs must precede Immediate barriers"
             )
         if (
             len(active_targets) == 1
