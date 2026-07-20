@@ -1,0 +1,78 @@
+schema_version = 1
+id_prefix = "hc7-pb"
+brief_file = "tools/proof_rounds/hc7_pentagonal_bipyramid_brief.md"
+timeout_seconds = 14400
+max_output_bytes = 1048576
+max_context_bytes = 2097152
+max_repairs = 1
+
+context_files = [
+  "active/hc7_pentagonal_bipyramid_paired_rooted_target.md",
+  "results/hc7_pentagonal_bipyramid_spanning_core.md",
+  "results/hc7_pentagonal_bipyramid_spanning_core_audit.md",
+  "results/hc7_seven_column_contact_structure.md",
+  "results/hc7_seven_column_contact_structure_audit.md",
+  "results/hc7_spanning_two_sided_five_partition.md",
+  "results/hc7_spanning_two_sided_five_partition_audit.md",
+  "results/hc7_one_defect_two_root_k5_separator.md",
+  "results/hc7_one_defect_two_root_k5_separator_audit.md",
+  "results/hc7_pentagonal_bipyramid_adjacent_rim_linkage.md",
+  "results/hc7_pentagonal_bipyramid_adjacent_rim_linkage_audit.md",
+  "results/hc7_pentagonal_bipyramid_tree_expansion_dichotomy.md",
+  "results/hc7_pentagonal_bipyramid_tree_expansion_dichotomy_audit.md",
+  "results/hc7_pentagonal_bipyramid_single_contact_societies.md",
+  "results/hc7_pentagonal_bipyramid_single_contact_societies_audit.md",
+  "results/hc7_pentagonal_bipyramid_four_connected_column.md",
+  "results/hc7_pentagonal_bipyramid_four_connected_column_audit.md",
+  "results/hc7_pentagonal_bipyramid_two_column_absorption.md",
+  "results/hc7_pentagonal_bipyramid_two_column_absorption_audit.md",
+  "results/hc7_pentagonal_bipyramid_type5_endpoint_allocation.md",
+  "results/hc7_pentagonal_bipyramid_type5_endpoint_allocation_audit.md",
+  "results/hc7_pentagonal_bipyramid_type5_one_defect_allocation.md",
+  "results/hc7_pentagonal_bipyramid_type5_one_defect_allocation_audit.md",
+  "barriers/hc7_pentagonal_bipyramid_split_linkage_planarity_barrier.md",
+  "barriers/hc7_pentagonal_bipyramid_split_linkage_planarity_barrier_audit.md",
+  "barriers/hc7_hegde_thomas_pentagonal_bipyramid_label_gap.md",
+  "barriers/hc7_hegde_thomas_pentagonal_bipyramid_label_gap_audit.md",
+  "barriers/hc7_root_contacts_do_not_form_a_feasible_mold.md",
+  "barriers/hc7_root_contacts_do_not_form_a_feasible_mold_audit.md",
+]
+
+[target]
+file = "active/hc7_pentagonal_bipyramid_paired_rooted_target.md"
+heading = "Conjectural Theorem 3.1 (chromatic or paired-rooted `K_5`)"
+sha256 = "3cdb59d0920462521d60ba5d1647e753c8427d84e66f0f5b43bf684263c8e21c"
+
+[providers.codex]
+model = "gpt-5.6-sol"
+effort = "ultra"
+
+[providers.claude]
+model = "opus"
+effort = "max"
+claude_max_budget_usd = 20.0
+
+[providers.grok]
+model = "grok-4.5"
+effort = "high"
+grok_max_turns = 60
+
+[[labs]]
+provider = "codex"
+role = "structural"
+
+[[labs]]
+provider = "claude"
+role = "colouring"
+
+[[labs]]
+provider = "grok"
+role = "falsifier"
+
+[selector]
+provider = "codex"
+
+[review]
+provider_pool = ["codex", "claude", "grok"]
+required = 2
+exclude_selected_author = true

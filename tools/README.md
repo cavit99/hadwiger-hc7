@@ -82,6 +82,122 @@ Run the infrastructure tests with
 python3 -m unittest discover -s tools/tests -p 'test_*.py' -v
 ```
 
+## Bounded multi-provider proof rounds
+
+[`proof_round.py`](proof_round.py) runs the repository's bounded `3-1-2`
+research protocol: three blind laboratories, at most one provider-neutral
+selection prompt, and two cold referees from providers other than the selected
+candidate's author. It is an orchestration and evidence-capture tool, not a
+proof checker. Provider identity is omitted from the selector prompt, but this
+is protocol-level blinding rather than an operating-system security boundary.
+A GREEN result is an internal audit only.
+
+The first frozen brief targets the
+[paired-rooted pentagonal-bipyramid theorem](proof_rounds/hc7_pentagonal_bipyramid_brief.md).
+Its configuration is
+[`proof_rounds/hc7_pentagonal_bipyramid.toml`](proof_rounds/hc7_pentagonal_bipyramid.toml).
+The runner verifies the exact theorem-heading hash and every context file,
+resolves the clean checkout to a full commit, and then works only from that
+frozen snapshot.
+
+### Remote worker setup
+
+Use a dedicated, non-privileged account or disposable VM containing no
+unrelated secrets and no GitHub credentials.  The repository is public, so
+the worker does not need push access.  Install provider CLIs from their
+official distributions; the project deliberately does not install or pin
+them.
+
+```bash
+git clone https://github.com/cavit99/hadwiger-hc7.git
+cd hadwiger-hc7
+git switch main
+git pull --ff-only
+
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r tools/requirements-verifiers.txt
+python -m unittest discover -s tools/tests -p 'test_*.py' -v
+python tools/research_index.py ci
+```
+
+Python 3.11 or newer is required.  Authenticate each provider interactively;
+do not put tokens in this repository, a command line, or a committed `.env`.
+
+```bash
+codex login --device-auth
+claude auth login
+grok login --device-auth
+
+codex login status
+claude auth status
+grok models
+```
+
+The default pilot uses `gpt-5.6-sol` at `ultra` effort, Claude Opus at `max`
+effort with a USD 20 per-invocation ceiling, and `grok-4.5` at `high` effort
+with a 60-turn ceiling. A normal round makes six provider calls in total; a
+vetoed candidate plus the single permitted repair makes at most nine. Depending
+on which provider authored the selected candidate, Codex can be called at most
+four times, Claude three times, and Grok three times. The committed Claude
+ceiling therefore permits at most USD 60 in one repaired round. Review the
+configuration and account limits before starting.
+
+### Prepare and run
+
+```bash
+CONFIG=tools/proof_rounds/hc7_pentagonal_bipyramid.toml
+python tools/proof_round.py doctor "$CONFIG"
+python tools/proof_round.py dry-run "$CONFIG"
+ROUND_ID=$(python tools/proof_round.py prepare "$CONFIG")
+python tools/proof_round.py run "$ROUND_ID"
+python tools/proof_round.py status "$ROUND_ID"
+```
+
+The three laboratories—Codex, Claude, and Grok—run concurrently. This is the
+normal way to let all three providers work on the theorem at the same time;
+there is no need to start three commands manually. Provider-native nested
+agent behaviour is not relied upon by the protocol, so one provider invocation
+always counts as one laboratory regardless of its internal implementation.
+The selector sees opaque candidate identifiers, not their provider mapping.
+If either referee returns a concrete RED finding, one repair is available:
+
+```bash
+python tools/proof_round.py repair "$ROUND_ID"
+```
+
+Run the command inside `tmux` or another remote supervisor so an SSH disconnect
+does not interrupt paid calls. Version 1 deliberately has no retry or resume
+operation: interruption or provider failure terminates that round rather than
+silently repeating paid laboratories or referees. Inspect it with `status`,
+then preserve it or clean it up and prepare a new ID.
+
+Different round IDs have independent locks and can run concurrently, but use
+that only for deliberately different frozen briefs or role rotations. Running
+duplicate copies of the same target multiplies cost without satisfying the
+project's bounded-round stopping rule.
+
+Generated prompts, one standalone detached snapshot, raw outputs, normalized JSON,
+and summaries live only under `.cache/research/rounds/<round-id>/`.  The
+directory is ignored by Git.  The runner uses fixed provider adapters,
+argument-vector subprocesses with no shell interpolation, process-group
+timeouts, a per-round lock, closed configuration and response contracts, and
+a sanitized environment that does not forward common API or GitHub token
+variables.  Provider authentication still makes the provider process trusted;
+the dedicated worker account is the actual credential boundary.
+
+Raw logs can contain provider or account metadata. They are ignored by Git and
+must be inspected before being copied or shared.
+
+The runner never stages, commits, pushes, merges, opens a pull request, or
+promotes a mathematical claim.  A human must inspect any selected package and
+move it through the ordinary theorem-plus-audit workflow on a new short-lived
+branch.  To remove only one marked generated round:
+
+```bash
+python tools/proof_round.py cleanup "$ROUND_ID"
+```
+
 The integrity check fails on audit/source hash drift, broken inline Markdown
 links in current-spine documents, non-GREEN `uses` dependencies,
 device-specific paths in the selected tracked prose, source, configuration,
