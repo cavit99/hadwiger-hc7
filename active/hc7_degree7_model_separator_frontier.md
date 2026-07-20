@@ -1389,6 +1389,24 @@ boundary partitions differ.  At least one of the two switched components
 meets `B-\{w\}`.  This closes every multiple-complementary-component case
 and leaves one exact two-piece Hall-deficient response obstruction.
 
+The
+[rooted-partition contact-concentration theorem](../results/hc7_order8_rooted_partition_contact_concentration.md)
+uses the literal ancestry of this interface to sharpen that obstruction.
+In every connected partition `C=Q_0 dotcup Q_1` retaining `P_0,P_1`, the
+part containing `e` contains all of `D-W` and is full to `B`, whereas the
+other part lies in `R`, has exact boundary contact `S-{e}`, and misses every
+vertex of `W`.  Consequently the isolated/crossed Hall alternative is
+absent; at demand two both duties meet `W` and have the same unique owner.
+Every component of `D-W` returns an exact order-seven response or a strict
+boundary-order response descent unless it is full to
+`(S-{d}) union W`, and two equality components give an explicit `K_7`
+model.  Hence the final structural survivor has `D-W` empty or one connected
+equality component.  The already-audited cycle-completion theorem makes
+`G[S-{d,e}]` a forest.  This rules out improving the configuration by a
+symmetric repartition: the remaining theorem must split the single
+`e`-rooted owner using an operation-specific response, or synchronize a
+complete boundary partition.
+
 In the exact three-vertex endpoint-reversal pattern, the
 [symmetric allocation theorem](../results/hc7_order8_strict_reversal_d_side_allocation.md)
 and its
@@ -1505,6 +1523,7 @@ one of the three literal host configurations above.
 ## Dependencies
 
 - [positive boundary excess reduces to one partitioned opposite shore](../results/hc7_order8_positive_excess_frozen_outer_shore.md)
+- [rooted connected partitions concentrate the enlarged-boundary contacts](../results/hc7_order8_rooted_partition_contact_concentration.md)
 - [symmetric two--three allocation in the endpoint-reversal case](../results/hc7_order8_strict_reversal_d_side_allocation.md)
 - [small-side closure and Hall-response reduction in the endpoint-reversal case](../results/hc7_order8_strict_reversal_small_side_closure.md)
 - [connected-piece transfers do not canonically induce permutation holonomy](../barriers/hc7_order8_transfer_holonomy_barrier.md)

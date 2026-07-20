@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "42c9f304c512080838a8d2cad0373864c5e8c5fdcea1ec87c74fe62caebb4cb4"
+expected_source_sha256 = "369477713bb11bbd8b83b7f3d13c9c229375ad36c36172321eb35103e1c73f8f"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4249,6 +4249,32 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_rooted_partition_contact_concentration"
+title = "Rooted partitions concentrate the enlarged-boundary contacts"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_rooted_partition_contact_concentration.md"
+active = true
+audit = "results/hc7_order8_rooted_partition_contact_concentration_audit.md"
+expected_source_sha256 = "86f53c727b7855b8ddea420a957320a188b61570924d8508f5dd8806ab138d20"
+scope = "the final partitioned positive-boundary-excess outcome in the ordered order-eight opposite-response interface"
+label_fidelity = "the original shores, roots, enlarged-boundary vertices, rooted full subgraphs, components and operation-specific equality partitions are literal host objects"
+separator_order = "each component of D-W gives order seven, a strict boundary-order descent, or the full reversed enlarged boundary"
+colour_compatibility = "the component response is operation-specific; common closed-shore compatibility remains open"
+conclusions = [
+  "the rooted part containing e owns every W contact and the other rooted part lies in R and misses all W",
+  "demand-two Hall failure occurs exactly when both literal duty sets meet W and have the same unique owner",
+  "outside an exact-seven response, strict boundary descent or explicit K7-minor model, D-W is empty or one connected subgraph full to (S-d) union W",
+  "the existing cycle-completion theorem makes the six-vertex residual boundary a forest",
+]
+does_not_prove = [
+  "a split of the sole e-rooted owner",
+  "a common complete boundary partition",
+  "a recursive labelled order-eight interface on D-W",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.order8_strict_reversal_d_side_allocation"
 title = "Symmetric two--three allocation in the endpoint-reversal case"
 kind = "theorem"
@@ -4338,6 +4364,18 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_positive_excess_frozen_outer_shore"
 kind = "uses"
 note = "This closes every multiple-complementary-component positive-excess instance and isolates one partitioned two-piece Hall obstruction."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_rooted_partition_contact_concentration"
+kind = "uses"
+note = "This removes the symmetric/crossed Hall geometry and reduces the ordered positive-excess survivor to one e-rooted owner with at most one full internal lobe."
+
+[[relations]]
+source = "hc7.order8_rooted_partition_contact_concentration"
+target = "hc7.order8_positive_excess_frozen_outer_shore"
+kind = "uses"
+note = "The contact-concentration theorem starts from the unique partitioned complementary component supplied by the positive-excess normal form."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5719,7 +5757,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "42c9f304c512080838a8d2cad0373864c5e8c5fdcea1ec87c74fe62caebb4cb4"
+evidence_sha256 = "369477713bb11bbd8b83b7f3d13c9c229375ad36c36172321eb35103e1c73f8f"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5741,7 +5779,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "42c9f304c512080838a8d2cad0373864c5e8c5fdcea1ec87c74fe62caebb4cb4"
+evidence_sha256 = "369477713bb11bbd8b83b7f3d13c9c229375ad36c36172321eb35103e1c73f8f"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

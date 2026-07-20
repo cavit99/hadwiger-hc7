@@ -309,6 +309,24 @@ one-edge responses with different boundary partitions.  Thus the remaining
 positive-excess obstruction is precisely this final two-piece Hall-deficient
 configuration, not the existence or coverage of the two pieces.
 
+The original `L`--`S`--`R` separation makes that final cover strictly
+one-sided.  In every rooted connected partition of `C` retaining the two
+prescribed full subgraphs, the part containing `e` contains all of `D-W`
+and owns every contact with `W`; the other part lies wholly in `R`, meets
+exactly `S-{e}` on the enlarged boundary, and misses all of `W`.  Hence the
+previous isolated or crossed Hall witness cannot occur.  At demand two,
+failure means exactly that both literal duty sets meet `W` and have the same
+unique supporting part.  Moreover every component of `D-W` has full
+neighbourhood between seven and `|B|`: it returns an exact-seven response or
+a strict boundary-order descent unless it is full to
+`(S-{d}) union W`; two equality components give an explicit `K_7` model.
+Thus the sole nonterminal form has `D-W` empty or one connected equality
+component.  The existing cycle-completion theorem also makes
+`G[S-{d,e}]` a forest.  The live problem is now to use an operation-specific
+proper-minor response to split this single `e`-rooted owner or synchronize
+the two closed-shore colourings; repartitioning the two rooted pieces cannot
+improve their `W` contacts.
+
 The endpoint-reversal subcase is also smaller.  A symmetric two--three
 allocation inside its opposite connected part gives an explicit `K_7`
 whenever the five portal sets have distinct representatives and the

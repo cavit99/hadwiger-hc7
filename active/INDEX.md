@@ -44,6 +44,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [two--three portal allocation or a confined full-neighbourhood separation](../results/hc7_order8_ordered_two_three_allocation.md)
 - [small five-terminal completions lift to descent or positive boundary excess](../results/hc7_order8_small_completion_host_lift.md)
 - [positive boundary excess reduces to one partitioned opposite shore](../results/hc7_order8_positive_excess_frozen_outer_shore.md)
+- [rooted partitions concentrate the enlarged-boundary contacts and isolate one full internal lobe](../results/hc7_order8_rooted_partition_contact_concentration.md)
 - [symmetric two--three allocation in the endpoint-reversal case](../results/hc7_order8_strict_reversal_d_side_allocation.md)
 - [small-side closure and exact Hall-response reduction in the endpoint-reversal case](../results/hc7_order8_strict_reversal_small_side_closure.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
