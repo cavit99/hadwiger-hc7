@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "4274340aa61f026f6143610a4c3e1b9e9733a8795f7eab009a895ad34e8a3349"
+expected_source_sha256 = "ab8bba8351d990d0e569c03a06a0478a69b40aecf6c5b730c2d5e5fdd7c3850c"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -3467,7 +3467,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_two_shore_kempe_incidence_cycle.md"
 source_heading = "Theorem 2.1"
-active = false
+active = true
 audit = "results/hc7_two_shore_kempe_incidence_cycle_audit.md"
 expected_source_sha256 = "efd281de3d162f1aeb831503a093fd5651a6199bb0e4fac02ae9db660db262c3"
 scope = "one exact boundary-colouring transition supported in two anticomplete open shores"
@@ -5070,6 +5070,12 @@ note = "This replaces the low-palette residual by one opposite boundary move or 
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.two_shore_kempe_incidence_cycle"
+kind = "uses"
+note = "A full-to-full one-vertex move gives an alternating cycle of literal bichromatic connections; unlike a palette drop, it does not automatically give the direct-entry separator trichotomy."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.order9_root_mobile_singleton_restart"
 kind = "uses"
 note = "This makes the two-shore reconfiguration fork available with every literal boundary vertex as the exact singleton root."
@@ -6646,7 +6652,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "4274340aa61f026f6143610a4c3e1b9e9733a8795f7eab009a895ad34e8a3349"
+evidence_sha256 = "ab8bba8351d990d0e569c03a06a0478a69b40aecf6c5b730c2d5e5fdd7c3850c"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6668,7 +6674,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "4274340aa61f026f6143610a4c3e1b9e9733a8795f7eab009a895ad34e8a3349"
+evidence_sha256 = "ab8bba8351d990d0e569c03a06a0478a69b40aecf6c5b730c2d5e5fdd7c3850c"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

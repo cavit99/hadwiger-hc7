@@ -55,6 +55,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [colour-permutation invariance collapses every such shortest transition to at most two moves](../results/hc7_order8_two_step_reconfiguration_collapse.md)
 - [surjective equality partitions are connected for every four-chromatic, `K_5`-minor-free graph of order eight](../results/hc7_order8_surjective_partition_connectivity.md)
 - [a low-palette shore yields a finite response cube and coupled bichromatic paths through both shores](../results/hc7_order8_low_palette_response_cube.md)
+- [one oppositely owned Kempe move gives an alternating incidence cycle of literal shore-supported bichromatic connections](../results/hc7_two_shore_kempe_incidence_cycle.md)
 - [an opposite one-vertex boundary recolouring forces shore-owned paths and exact separator orders](../results/hc7_order9_opposite_single_vertex_flip.md)
 - [every boundary vertex gives an exact-singleton reconfiguration restart across two full shores](../results/hc7_order9_root_mobile_singleton_restart.md)
 - [tight cycles complete an unbounded full-six-colour order-nine family](../results/hc7_order9_full_trace_tight_cycle_completion.md)

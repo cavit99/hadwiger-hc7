@@ -1381,14 +1381,17 @@ Choose a shortest path from one shore-extension set to the other.  If its
 length is at least two, every internal trace is rejected by both shores;
 in the present one-sided residual it uses at most four colours on `H` and
 therefore gives paired list-critical subgraphs with an unused colour.  If
-the length is one, one literal boundary vertex is recoloured to a previously
-unused colour.  Gluing the opposite shore extensions after deleting that
-vertex forces one bichromatic path through each shore, an odd cycle crossing
-the two shores, and on each side an actual order-seven or order-eight
-separation or a boundary-full connected component at the order-nine
-boundary.  These conclusions preserve the operated boundary vertex and the
-two colour classes, but they do not align the remote path endpoints with the
-five inherited branch-set labels.
+the length is one, one literal boundary vertex changes colour.  When the
+new colour was absent from the boundary, gluing the opposite shore
+extensions after deleting that vertex forces one bichromatic path through
+each shore, an odd cycle crossing the two shores, and on each side an actual
+order-seven or order-eight separation or a boundary-full connected
+component at the order-nine boundary.  When both endpoint traces are
+surjective, the general two-shore incidence theorem instead gives an
+alternating cycle of shore-supported bichromatic connections.  These
+conclusions preserve the operated boundary vertex and the two colour
+classes, but they do not align the remote path endpoints with the five
+inherited branch-set labels.
 
 If both shore-extension sets meet the four-or-five-colour subgraph, the
 shortest path may be chosen there.  Every paired-rejected internal trace

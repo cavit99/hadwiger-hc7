@@ -114,12 +114,15 @@ reconfiguration graph is connected.  A shortest path between the two
 shore-extension sets therefore has one of two exact forms.  A path of
 length at least two contains a boundary colouring rejected by both shores;
 in the one-sided full-trace residual every such internal colouring uses at
-most four of the five available colours.  A path of length one recolours one
-literal boundary vertex to a previously unused colour.  The two opposite
-shore extensions then glue on deleting that vertex, force bichromatic paths
-through both shores and an odd cycle crossing them, and return on each side
-an actual separation of order seven or eight or a connected subgraph
-adjacent to all nine boundary vertices.
+most four of the five available colours.  A path of length one changes one
+literal boundary vertex.  When the new colour was absent from the boundary,
+the two opposite shore extensions glue after deleting that vertex, force
+bichromatic paths through both shores and an odd cycle crossing them, and
+return on each side an actual separation of order seven or eight or a
+connected subgraph adjacent to all nine boundary vertices.  In the
+full-to-full case, the general two-shore incidence theorem instead gives an
+alternating cycle of literal bichromatic connections.  It does not by
+itself give the stronger direct-entry separator trichotomy.
 
 If both shore-extension sets contain a trace using at least four colours on
 the eight-vertex residual, the shortest path can be kept entirely in that
@@ -202,8 +205,10 @@ The exact open gate is therefore the positive-excess order-nine spanning
 endpoint with three sharply bounded colouring outcomes: one oppositely
 owned move; a common rejected four-colour trace, possible only over a
 three-colourable residual; or the low-palette response cube and its paired
-shore path systems.  The one-step outcome has a common literal root, two
-opposite-shore paths and the order-seven/eight/full-boundary trichotomy.
+shore path systems.  A palette-dropping one-step outcome has a common
+literal root, two opposite-shore paths and the order-seven/eight/full-
+boundary trichotomy; a full-to-full one-step outcome has the audited
+alternating incidence-cycle certificate instead.
 The proof must use an internal proper-minor operation or literal first-hit
 contacts to obtain an explicit `K_7`-minor model, a colour-compatible
 order-seven separation, or a strict host-level descent.  A finite audited
