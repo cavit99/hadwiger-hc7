@@ -24,10 +24,17 @@ and no larger than the mathematical task requires.
 
 - `README.md` is the stable public overview.
 - `RESEARCH_LEDGER.md` is the sole authoritative current research status.
-- `active/INDEX.md` is a navigation map only: it names each live proof
-  target, links to its exact statement, and lists immediate dependencies.
-  It does not restate the research status, proof history, or residual case
-  analysis owned by the ledger and technical frontier.
+  Keep a short three-level frontier at its top: the exhaustive global
+  obligation, the principal conditional refinement, and the immediate
+  structural laboratory. Put detailed live residues in their technical
+  frontiers and move superseded ledger snapshots to `archive/`; never append
+  new live updates beneath a frozen historical section.
+- `active/INDEX.md` is a navigation map only. It names exactly one primary
+  target, its genuinely direct proved inputs and nearest barriers, followed
+  by concise links to conditional refinements or current laboratories. A
+  dependency is direct only when the target invokes it without passing
+  through another listed theorem. Do not put transitive closure, frozen
+  programmes, proof history, or residual case analysis in this file.
 - `results/` contains written proofs and adjacent audit notes.
 - `barriers/` contains counterexamples to intermediate claims.
 - `archive/` preserves superseded work; do not delete it.
@@ -40,8 +47,9 @@ whichever technical frontier or coverage files `active/INDEX.md` currently
 designates.  Update `active/INDEX.md` only when the set of live targets or
 their immediate dependencies changes.
 
-Keep the README stable.  Change it only when the project scope, navigation,
-headline result, claim policy, or repository structure changes.
+Keep the README stable. Change it only when the project scope, navigation,
+durable headline result, claim policy, or repository structure changes. Do
+not name a fast-moving immediate lemma there.
 
 Every live proof direction must be reachable from `active/INDEX.md`, either
 directly or through one of the technical files it designates.  An unlisted
@@ -49,10 +57,15 @@ file in `active/` is not thereby false or obsolete, but it must not be treated
 as part of the current proof spine until it is classified.
 
 The generated research index is a retrieval and integrity aid, not a status
-authority.  Its dependency closure is curated rather than presumed complete.
-When the primary target, its immediate proved inputs, or its immediate
-barriers change, update `tools/research_manifest.toml` in the same focused
-commit.  The integrity check enforces this navigation-to-manifest alignment.
+authority. Its dependency closure is curated rather than presumed complete.
+In `tools/research_manifest.toml`, use `active = true` only for the sole
+primary target and the small set of direct proved inputs and immediate
+barriers displayed in `active/INDEX.md`; historical relevance alone is not
+active status. The manifest may retain non-active claims and richer
+relations for retrieval. When the primary target changes, update the ledger
+frontier block, `active/INDEX.md`, manifest active flags and direct target
+relations atomically in one focused commit. The integrity check enforces
+this navigation-to-manifest alignment.
 Run `python3 tools/research_index.py check` and
 `python3 tools/research_index.py report`, then inspect the regenerated target
 context pack.  Agents must still consult `RESEARCH_LEDGER.md`, `active/INDEX.md`, and

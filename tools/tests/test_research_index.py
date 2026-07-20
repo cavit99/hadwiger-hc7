@@ -363,6 +363,63 @@ class IntegrityTests(unittest.TestCase):
             "\n".join(self.errors()),
         )
 
+    def test_conditional_target_does_not_compete_with_primary_target(self) -> None:
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        self.repo.manifest.write_text(
+            manifest
+            + textwrap.dedent(
+                """
+
+                [[claims]]
+                id = "conditional"
+                title = "Conditional refinement"
+                kind = "target"
+                status = "conditional-target"
+                source = "active/target.md"
+                active = false
+
+                [[claims]]
+                id = "nested-conditional"
+                title = "Nested conditional laboratory"
+                kind = "target"
+                status = "conditional-target"
+                source = "active/target.md"
+                active = false
+
+                [[relations]]
+                source = "conditional"
+                target = "target"
+                kind = "subproblem_of"
+
+                [[relations]]
+                source = "nested-conditional"
+                target = "conditional"
+                kind = "subproblem_of"
+                """
+            ),
+            encoding="utf-8",
+        )
+        self.assertEqual([], self.errors())
+        context = index.context_pack(index.load_manifest(self.repo.manifest), "target")
+        self.assertIn("## Conditional refinements and laboratories", context)
+        self.assertIn("`conditional`", context)
+        self.assertIn("`nested-conditional`", context)
+        self.assertEqual(context.count("conditional-target"), 2)
+
+        manifest = self.repo.manifest.read_text(encoding="utf-8")
+        self.repo.manifest.write_text(
+            manifest.replace(
+                'status = "conditional-target"\nsource = "active/target.md"\nactive = false',
+                'status = "conditional-target"\nsource = "active/target.md"\nactive = true',
+                1,
+            ),
+            encoding="utf-8",
+        )
+        self.assertIn(
+            "conditional target conditional must have active=false",
+            "\n".join(self.errors()),
+        )
+
     def test_primary_navigation_markers_must_be_ordered(self) -> None:
         self.repo.write(
             "active/INDEX.md",

@@ -67,6 +67,7 @@ ALLOWED_KINDS = {"theorem", "lemma", "target", "barrier", "laboratory"}
 ALLOWED_STATUSES = {
     "audited-green",
     "active-target",
+    "conditional-target",
     "written-unaudited",
     "barrier",
     "frozen",
@@ -1016,6 +1017,10 @@ def validate_repository(root: Path = ROOT, manifest_path: Path = MANIFEST_PATH) 
             errors.append(f"claim {claim_id} has invalid kind {claim['kind']!r}")
         if claim["status"] not in ALLOWED_STATUSES:
             errors.append(f"claim {claim_id} has invalid status {claim['status']!r}")
+        if claim["status"] == "conditional-target" and claim["active"]:
+            errors.append(
+                f"conditional target {claim_id} must have active=false"
+            )
         for key in LIST_ATTRIBUTES:
             if key in claim and not isinstance(claim[key], list):
                 errors.append(f"claim {claim_id}.{key} must be a list")
@@ -1986,6 +1991,37 @@ def context_pack(manifest: dict, claim_id: str, database: Path | None = None) ->
         for relation in sorted(parents, key=lambda item: item["target"]):
             parent = claims[relation["target"]]
             lines.append(f"- Subproblem of `{parent['id']}` — {parent['title']} ({parent['status']})")
+    refinements: list[tuple[int, str]] = []
+    refinement_queue = deque(
+        (1, relation["source"])
+        for relation in sorted(incoming.get(claim_id, []), key=lambda item: item["source"])
+        if relation["kind"] == "subproblem_of"
+        and claims[relation["source"]]["status"] == "conditional-target"
+    )
+    seen_refinements: set[str] = set()
+    while refinement_queue:
+        depth, refinement_id = refinement_queue.popleft()
+        if refinement_id in seen_refinements:
+            continue
+        seen_refinements.add(refinement_id)
+        refinements.append((depth, refinement_id))
+        refinement_queue.extend(
+            (depth + 1, relation["source"])
+            for relation in sorted(
+                incoming.get(refinement_id, []), key=lambda item: item["source"]
+            )
+            if relation["kind"] == "subproblem_of"
+            and claims[relation["source"]]["status"] == "conditional-target"
+        )
+    if refinements:
+        lines.extend(["", "## Conditional refinements and laboratories", ""])
+        for depth, refinement_id in refinements:
+            refinement = claims[refinement_id]
+            indent = "  " * (depth - 1)
+            lines.append(
+                f"{indent}- `{refinement_id}` — {refinement['title']} "
+                f"({refinement['status']})"
+            )
     barriers = [relation for relation in outgoing.get(claim_id, []) if relation["kind"] in {"refuted_by", "sharpness_witness", "related_to", "guarded_by"} and claims[relation["target"]]["kind"] == "barrier"]
     barriers.extend(relation for relation in incoming.get(claim_id, []) if claims[relation["source"]]["kind"] == "barrier")
     if barriers:

@@ -53,9 +53,10 @@ The main internally audited reductions currently establish that:
 These results substantially constrain a counterexample, but they do not yet
 synchronize the required branch-set labels and boundary colourings. The
 remaining work is to turn proper-minor colouring responses into either an
-explicit $K_7$-minor model or a colour-compatible order-seven separation,
-with a genuine host-graph descent when neither is immediate. Degree-eight
-and degree-nine bounded interfaces also remain part of the global programme.
+explicit $K_7$-minor model, a common complete boundary partition on the
+resulting order-seven, -eight, or -nine separation, or a genuine same-host
+descent. The degree-seven programme is a sharper conditional refinement of
+this exhaustive bounded-interface problem.
 
 The exact live theorem changes as new reductions are proved. Its
 authoritative status is maintained in the research ledger, and its full
@@ -69,8 +70,8 @@ than duplicated here.
 | [`RESEARCH_LEDGER.md`](RESEARCH_LEDGER.md) | Sole authority for current research status |
 | [`active/INDEX.md`](active/INDEX.md) | Concise navigation to live proof work |
 | [Live case verification map](active/hc7_live_case_dag.md) | Exhaustive global chain, conditional refinements, and every missing descent arrow |
-| [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Exact primary degree-seven theorem, residual cases, and trust boundary |
-| [Degree-eight/nine bounded-interface frontier](active/hc7_bounded_interface_synchronization_frontier.md) | General bounded-interface continuation |
+| [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Primary all-degree theorem, direct inputs, and trust boundary |
+| [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Degree-seven boundary-labelled near-clique model](results/hc7_degree7_aligned_near_k7_model.md) | Principal degree-seven structural compression |
 | [Research integrity tools](tools/README.md) | Search, curated dependency metadata, audit hashes, and CI checks |
@@ -102,7 +103,7 @@ a disposable SQLite/FTS index:
 ```bash
 python3 tools/research_index.py build
 python3 tools/research_index.py search '"bounded interface"'
-python3 tools/research_index.py context hc7.target.degree7_model_separator
+python3 tools/research_index.py context hc7.target.bounded_interface_bridge
 python3 tools/research_index.py check
 python3 tools/research_index.py report
 ```
