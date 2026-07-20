@@ -170,8 +170,8 @@ and [Grok CLI](https://docs.x.ai/build/overview) installation pages if a
 package-manager installation is unsuitable for the worker.
 
 ```bash
-git clone https://github.com/cavit99/hadwiger-hc7.git
-cd hadwiger-hc7
+git clone https://github.com/cavit99/hadwiger-k7.git
+cd hadwiger-k7
 git switch main
 git pull --ff-only
 

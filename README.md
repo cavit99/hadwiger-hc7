@@ -1,4 +1,4 @@
-# Hadwiger's Conjecture at $t=7$
+# Hadwiger's Conjecture for $K_7$-minor-free graphs
 
 > **Research status:** $HC_7$ is not proved in this repository.
 
@@ -7,6 +7,11 @@ of Hadwiger's Conjecture. It contains written partial results, conjectural
 proof targets, computer-assisted finite results, internal audits, and
 counterexamples to intermediate claims. Internal audits are not external
 peer review.
+
+The notation `$HC_7$` used in historical filenames and internal claim IDs
+indexes the excluded clique `K_7`. In Seymour's convention, where `HC(t)`
+means that every `K_{t+1}`-minor-free graph is `t`-colourable, this is
+`HC(6)`.
 
 ## The problem
 
