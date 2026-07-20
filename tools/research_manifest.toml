@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "749e3ecaa3d1098a2d71066d87e58ba12231e1a60df272134dda51784d725637"
+expected_source_sha256 = "556672d25511ee67936ab0e059add97310a40e36ae144e5ab8956f11646d4379"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4423,24 +4423,26 @@ does_not_prove = [
 
 [[claims]]
 id = "hc7.order8_full_five_colour_reconfiguration"
-title = "Full five-colouring reconfiguration is connected for K5-minor-free graphs of order at most eight"
+title = "Four-or-five-colour reconfiguration is connected for K5-minor-free graphs of order four through eight"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_order8_full_five_colour_reconfiguration.md"
 active = true
 audit = "results/hc7_order8_full_five_colour_reconfiguration_audit.md"
-expected_source_sha256 = "c15e2a66b6926d926ff269c79a8abb33a9ee5e75ecbf925b4c43315a3c46dd07"
-scope = "computer-assisted finite theorem for all K5-minor-free graphs on at most eight vertices, plus a shortest-path consequence for two opposite shore-extension sets"
+expected_source_sha256 = "ca51586f29412fc8f861ad8bb22c79cecf2f2c063060bc1d20e5d6b0459c0d71"
+scope = "computer-assisted finite theorem for all K5-minor-free graphs of order four through eight, plus a conditional shortest-path consequence when both shore-extension sets attain at least four colours"
 label_fidelity = "a one-step transition operates at one literal boundary vertex; no remote endpoint is identified with an inherited branch-set label"
 colour_compatibility = "a shortest full recolouring path gives either one oppositely owned one-vertex step or an intermediate trace rejected by both shores"
 conclusions = [
-  "the full labelled five-colouring reconfiguration graph is connected when unused colours are allowed",
+  "the labelled five-colouring reconfiguration graph induced by colourings using at least four colours is connected",
+  "the full labelled five-colouring reconfiguration graph is consequently connected",
   "a one-edge transition gives two shore-internal obstruction paths rooted at the same boundary vertex",
   "a longer transition gives paired connected vertex-minimal list-uncolourable subgraphs",
-  "in the one-sided full-trace residual every internal paired-rejected trace uses at most four of the five colours",
+  "when both extension sets attain at least four colours, every internal paired-rejected trace in the one-sided residual uses exactly four colours and leaves one common unused list colour",
 ]
 does_not_prove = [
   "connectivity of the induced graph on surjective colourings",
+  "that both shore-extension sets attain at least four colours",
   "which shore extends a palette-deficient intermediate trace",
   "alignment of remote path endpoints with inherited branch-set labels, a K7 minor, or a compatible separator",
 ]
@@ -4471,6 +4473,29 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_shortest_path_hole_transport"
+title = "Internal moves of a shortest four-or-five-colour shore transition transport the unique missing colour"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_shortest_path_hole_transport.md"
+active = true
+audit = "results/hc7_order8_shortest_path_hole_transport_audit.md"
+expected_source_sha256 = "638c01d475bb8a18451fb982c7bcd648071db5768cee3db4b651d3b31a4b32c3"
+scope = "a shortest path in the four-or-five-colour reconfiguration graph between two disjoint extension sets when every full trace belongs to exactly one set"
+label_fidelity = "each move and its uniquely operated boundary vertex are literal; colours remain palette coordinates rather than branch-set labels"
+colour_compatibility = "every internal trace is rejected by both shores and every internal-to-internal move changes the unique missing colour"
+conclusions = [
+  "both ends of every internal-to-internal transition use exactly four colours",
+  "consecutive internal missing colours differ",
+  "the operated vertex uniquely transports the old hole while its old unique colour becomes the new hole",
+]
+does_not_prove = [
+  "anything about the first or last edge or a path of length at most two",
+  "global nonrepetition of missing colours",
+  "branch-set label allocation, a compatible separator, a K7 minor, or HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.one_sided_full_trace_static_anchor"
 title = "Abstract exact-block-complete partition families need not change orientation along a full-trace recolouring component"
 kind = "barrier"
@@ -4489,6 +4514,30 @@ does_not_prove = [
   "existence of shore graphs realizing the abstract families",
   "a counterexample under seven-connectivity, contraction-criticality or K7-minor exclusion",
   "failure of an operation-coupled host theorem",
+]
+
+[[claims]]
+id = "hc7.order9_root_mobile_singleton_restart"
+title = "Every boundary vertex gives an exact-singleton reconfiguration restart across two full shores"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order9_root_mobile_singleton_restart.md"
+active = true
+audit = "results/hc7_order9_root_mobile_singleton_restart_audit.md"
+expected_source_sha256 = "4a432a4e78605bda6a85e59f83c246aad598011aa5dffa54377877d62acb6f31"
+scope = "two anticomplete connected open shores each adjacent to every vertex of a nine-vertex boundary in a K7-minor-free non-six-colourable graph whose proper minors are six-colourable"
+label_fidelity = "the root is any selected literal boundary vertex; the contractions, boundary deletion and returned obstruction paths use literal host vertices"
+colour_compatibility = "each root has nonempty extension sets on both shores and a one-step-or-paired-rejection fork, but forks for different roots are not synchronized"
+conclusions = [
+  "deleting any boundary vertex leaves a K5-minor-free boundary graph",
+  "contracting either full shore with a selected root gives an exact-singleton trace through the opposite shore",
+  "every literal root supplies a one-step opposite transition or paired list-critical kernels",
+  "every pair of roots can be simultaneous distinct singleton colour classes in one full boundary partition",
+]
+does_not_prove = [
+  "that the restart outcomes for different roots use one proper-minor colouring or common branch-set labels",
+  "that both root extension sets attain at least four colours",
+  "a common boundary colouring, strict descent, K7 minor, or HC7",
 ]
 
 [[claims]]
@@ -4884,6 +4933,30 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.order9_opposite_single_vertex_flip"
 kind = "uses"
 note = "This converts an oppositely owned adjacent trace into literal shore paths, an odd cycle and order-seven/eight/full-boundary responses."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_shortest_path_hole_transport"
+kind = "uses"
+note = "This gives an exact operated-vertex normal form for every internal move once both shore languages attain four-or-five-colour traces."
+
+[[relations]]
+source = "hc7.order8_shortest_path_hole_transport"
+target = "hc7.order8_full_five_colour_reconfiguration"
+kind = "uses"
+note = "The finite reconfiguration theorem supplies the connected four-or-five-colour state space containing the selected shortest path."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order9_root_mobile_singleton_restart"
+kind = "uses"
+note = "This makes the two-shore reconfiguration fork available with every literal boundary vertex as the exact singleton root."
+
+[[relations]]
+source = "hc7.order9_root_mobile_singleton_restart"
+target = "hc7.order8_full_five_colour_reconfiguration"
+kind = "uses"
+note = "For each root, full five-colouring connectivity of the deleted eight-vertex boundary joins the two nonempty shore-extension sets."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6445,7 +6518,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "749e3ecaa3d1098a2d71066d87e58ba12231e1a60df272134dda51784d725637"
+evidence_sha256 = "556672d25511ee67936ab0e059add97310a40e36ae144e5ab8956f11646d4379"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6467,7 +6540,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "749e3ecaa3d1098a2d71066d87e58ba12231e1a60df272134dda51784d725637"
+evidence_sha256 = "556672d25511ee67936ab0e059add97310a40e36ae144e5ab8956f11646d4379"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

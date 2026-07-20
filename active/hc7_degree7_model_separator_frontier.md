@@ -1373,9 +1373,10 @@ boundary-location collision.  Either route must terminate in the labelled
 construction or a compatible order-seven separator below.
 
 The one-sided full-trace alternative now has a canonical dynamic form.
-For every `K_5`-minor-free graph `H` of order at most eight, the graph of all
-proper labelled five-colourings under single-vertex recolourings is
-connected, provided non-surjective intermediate colourings are allowed.
+For every `K_5`-minor-free graph `H` of order four through eight, the graph
+of proper labelled five-colourings using at least four colours is connected
+under single-vertex recolourings.  Hence the full recolouring graph is also
+connected.
 Choose a shortest path from one shore-extension set to the other.  If its
 length is at least two, every internal trace is rejected by both shores;
 in the present one-sided residual it uses at most four colours on `H` and
@@ -1388,6 +1389,36 @@ separation or a boundary-full connected component at the order-nine
 boundary.  These conclusions preserve the operated boundary vertex and the
 two colour classes, but they do not align the remote path endpoints with the
 five inherited branch-set labels.
+
+If both shore-extension sets meet the four-or-five-colour subgraph, the
+shortest path may be chosen there.  Every paired-rejected internal trace
+then uses exactly four colours and leaves one common boundary-absent colour
+in all lists on both kernels.  The finite theorem does not force this
+endpoint condition.  The complementary low-palette case, in which one shore
+attains at most three colours on `H`, remains part of the open gate.  If
+`H` is four-chromatic, every trace already uses at least four colours and
+the endpoint condition is automatic.  Thus the low-palette case occurs only
+when `H` is three-colourable.
+
+On a shortest transition in the four-or-five-colour subgraph, each edge
+whose two ends are internal rejected traces transports the unique missing
+colour.  The old hole becomes the operated vertex's new colour, while its
+old uniquely carried colour becomes the new hole.  Consecutive internal
+holes therefore differ.  The statement is deliberately local: a hole may
+repeat nonconsecutively, and the first and last transition edges still
+require the host-level one-step analysis.
+
+There is also a root-mobile restart family.  When the two open shores are
+connected and boundary-full, `G[B-{s}]` is `K_5`-minor-free for every
+literal `s in B`; otherwise a `K_5` model there together with the two shores
+gives seven explicit branch sets.  Contracting either shore together with
+`s` yields an exact-`{s}` trace through the opposite shore.  Hence every
+boundary vertex supplies a full reconfiguration fork, and every pair of
+boundary vertices occurs as two singleton classes in some full boundary
+partition.  Colour-permutation-invariant abstract orientations show that
+this pairwise overlap alone does not synchronize the shores.  A positive
+use of root mobility must couple two roots through one literal host
+operation, one shared first-hit configuration or one compatible separator.
 
 One possible full-six reduction is now ruled out.  The graph of surjective
 five-colourings under surjectivity-preserving component swaps can be

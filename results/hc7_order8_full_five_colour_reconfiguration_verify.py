@@ -72,10 +72,14 @@ def proper_colourings(graph: nx.Graph) -> set[tuple[int, ...]]:
     return answer
 
 
-def component_sizes(graph: nx.Graph, *, surjective: bool = False) -> tuple[int, ...]:
+def component_sizes(
+    graph: nx.Graph, *, surjective: bool = False, minimum_colours: int = 0
+) -> tuple[int, ...]:
     states = proper_colourings(graph)
     if surjective:
         states = {state for state in states if len(set(state)) == 5}
+    if minimum_colours:
+        states = {state for state in states if len(set(state)) >= minimum_colours}
     unseen = set(states)
     sizes: list[int] = []
     while unseen:
@@ -113,13 +117,13 @@ def degeneracy(graph: nx.Graph) -> int:
 def main() -> None:
     expected = {
         5: [],
-        6: [("E]~o", 12, (780,), Counter({1: 360}))],
-        7: [("FUZ~o", 15, (1800,), Counter({15: 40, 20: 30}))],
+        6: [("E]~o", 12, (780,), (720,), Counter({1: 360}))],
+        7: [("FUZ~o", 15, (1800,), (1800,), Counter({15: 40, 20: 30}))],
         8: [
-            ("GEhf~w", 18, (4980,), Counter({1: 120, 54: 20, 480: 5})),
-            ("GQyurg", 16, (6120,), Counter({5280: 1})),
-            ("GQyurw", 17, (4440,), Counter({3960: 1})),
-            ("GQyuzw", 18, (3480,), Counter({1560: 2})),
+            ("GEhf~w", 18, (4980,), (4920,), Counter({1: 120, 54: 20, 480: 5})),
+            ("GQyurg", 16, (6120,), (6120,), Counter({5280: 1})),
+            ("GQyurw", 17, (4440,), (4440,), Counter({3960: 1})),
+            ("GQyuzw", 18, (3480,), (3480,), Counter({1560: 2})),
         ],
     }
     for order in range(5, 9):
@@ -132,12 +136,14 @@ def main() -> None:
             if has_k5_minor(graph):
                 continue
             full_sizes = component_sizes(graph)
+            ge4_sizes = component_sizes(graph, minimum_colours=4)
             surjective_sizes = component_sizes(graph, surjective=True)
             survivors.append(
                 (
                     raw.decode(),
                     graph.number_of_edges(),
                     full_sizes,
+                    ge4_sizes,
                     surjective_sizes,
                 )
             )
@@ -146,34 +152,37 @@ def main() -> None:
             f"k5_minor_free_min_degree4={len(survivors)}"
         )
         observed = [
-            (code, edges, full_sizes, Counter(surjective_sizes))
-            for code, edges, full_sizes, surjective_sizes in survivors
+            (code, edges, full_sizes, ge4_sizes, Counter(surjective_sizes))
+            for code, edges, full_sizes, ge4_sizes, surjective_sizes in survivors
         ]
         assert observed == expected[order]
         for survivor in survivors:
-            code, edges, full_sizes, surjective_sizes = survivor
+            code, edges, full_sizes, ge4_sizes, surjective_sizes = survivor
             print(
                 code,
                 f"edges={edges}",
                 f"full={Counter(full_sizes)}",
+                f"ge4={Counter(ge4_sizes)}",
                 f"surjective={Counter(surjective_sizes)}",
             )
 
     static_expected = {
-        "G??F~w": ((35060,), Counter({540: 20, 1560: 5})),
-        "G?`F~w": ((18000,), Counter({276: 20, 1104: 5})),
+        "G??F~w": ((35060,), (33120,), Counter({540: 20, 1560: 5})),
+        "G?`F~w": ((18000,), (17520,), Counter({276: 20, 1104: 5})),
     }
     for code, wanted in static_expected.items():
         graph = nx.from_graph6_bytes(code.encode())
         full_sizes = component_sizes(graph)
+        ge4_sizes = component_sizes(graph, minimum_colours=4)
         surjective_sizes = component_sizes(graph, surjective=True)
-        assert (full_sizes, Counter(surjective_sizes)) == wanted
+        assert (full_sizes, ge4_sizes, Counter(surjective_sizes)) == wanted
         print(
             code,
             f"full={Counter(full_sizes)}",
+            f"ge4={Counter(ge4_sizes)}",
             f"surjective={Counter(surjective_sizes)}",
         )
-    print("PASS full_R5_connected_for_every_K5_minor_free_graph_of_order_at_most_8")
+    print("PASS R5_ge4_connected_for_every_K5_minor_free_graph_of_order_4_through_8")
 
 
 if __name__ == "__main__":

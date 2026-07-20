@@ -107,9 +107,10 @@ No surjectivity-preserving Kempe connectivity is required.
 
 The remaining one-sided alternative now lies in one connected
 single-vertex reconfiguration graph.  A computer-assisted theorem proves
-that the full five-colouring reconfiguration graph of every
-`K_5`-minor-free graph on at most eight vertices is connected; intermediate
-colourings need not use all five colours.  A shortest path between the two
+more sharply that, for every `K_5`-minor-free graph on four through eight
+vertices, the subgraph induced by the five-colourings using at least four
+colours is connected.  In particular the unrestricted five-colouring
+reconfiguration graph is connected.  A shortest path between the two
 shore-extension sets therefore has one of two exact forms.  A path of
 length at least two contains a boundary colouring rejected by both shores;
 in the one-sided full-trace residual every such internal colouring uses at
@@ -119,6 +120,35 @@ shore extensions then glue on deleting that vertex, force bichromatic paths
 through both shores and an odd cycle crossing them, and return on each side
 an actual separation of order seven or eight or a connected subgraph
 adjacent to all nine boundary vertices.
+
+If both shore-extension sets contain a trace using at least four colours on
+the eight-vertex residual, the shortest path can be kept entirely in that
+four-or-five-colour subgraph.  Every paired-rejected internal trace then
+uses exactly four colours and leaves one common colour in every list on both
+shore kernels.  This strengthening does not prove the endpoint hypothesis:
+one shore may still attain only three colours on the residual.  In
+particular, the endpoint hypothesis is automatic when the residual is
+four-chromatic.  The genuinely low-palette alternative is confined to a
+three-colourable residual.
+
+Within the four-or-five-colour branch, every genuinely internal move of a
+shortest transition has an exact normal form.  Consecutive internal traces
+have different missing colours, and the operated vertex is the unique
+carrier of the new missing colour before the move and of the old missing
+colour afterward.  Thus the boundary operation transports one colour hole.
+This gives a canonical nonstationary transition, but missing colours may
+repeat later and the two endpoint edges remain outside the conclusion.
+
+The same two-full-shore geometry is mobile over the boundary.  For every
+literal boundary vertex `s`, deleting `s` from the nine-vertex boundary
+leaves a `K_5`-minor-free graph; contracting either full shore together with
+`s` gives an exact-singleton trace through the opposite closed shore.
+Consequently every root supplies its own one-step-or-paired-kernel
+reconfiguration fork.  Any two roots can occur simultaneously as distinct
+singleton colour classes in one full boundary partition.  Static overlap of
+these root systems is insufficient—the next use must couple two roots
+through one host operation, shared first-hit geometry or a common
+full-neighbourhood separator.
 
 This dynamic use of the full reconfiguration graph cannot be replaced by
 static exact-block data.  On `K_{2,6}` there are two disjoint,
