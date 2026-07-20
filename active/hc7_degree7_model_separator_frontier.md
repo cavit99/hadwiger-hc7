@@ -1287,14 +1287,47 @@ with the same boundary trace and saturates both deleted vertices; moreover
 every shore vertex has list-degree excess plus repeated-boundary-colour
 count at least three, with the tight vertices inducing a Gallai forest.
 
-This is a genuine host-level reduction, but not yet label allocation.  A
+For a trace using all six colours, tight vertices now have a literal
+description: each is adjacent to every boundary vertex in every
+nonsingleton colour class.  Cycles in both tight subgraphs therefore give
+an explicit `K_7`-minor model.  Every nontrivial tight Gallai block has a
+common missed set of singleton boundary vertices and satisfies the exact
+full-neighbourhood formula
+
+\[
+ |N_G(H)|=|N_{G[Z]}(H)-V(H)|+9-|B-N_G(H)|.
+\]
+
+This gives an order-seven response, an order-eight response, or the sharp
+residual inequality that the block has at least as many internal attachment
+vertices as missed boundary vertices.  In particular, a two-connected
+boundary-full spanning shore cannot be entirely tight; the remaining
+full-six endpoint has genuine positive list-degree excess in each shore.
+
+In the distance-one branch, an obstruction path whose ends lie in one
+component of the inherited boundary forest and whose deletion leaves a
+boundary-full residual component gives an explicit `K_7`-minor model.
+Otherwise the surviving components satisfy the exact inequality
+
+\[
+ |N_G(H)\cap V(P^\circ)|\ge |B-N_G(H)|,
+\]
+
+unless an order-seven or order-eight full-neighbourhood response already
+occurs.  A cutvertex in either spanning shore similarly gives a strictly
+smaller fresh connected response side, but that response need not retain
+the selected exact block or inherited model labels.
+
+These are genuine host-level reductions, but not yet label allocation.  A
 separate finite barrier realizes every independent exact block on both
 connected full shores while keeping all fixed-block Kempe distances at
 least two.  It deliberately lacks `K_7`-minor exclusion and full
 minor-criticality.  Consequently varying the fixed block cannot by itself
-close the endpoint; the next theorem must use an internal operation or
-global minor exclusion to turn the paired spanning obstruction (or the
-one-move pair of paths) into the labelled construction or compatible
+close the endpoint.  The next theorem must first force or reduce to the
+full-six trace and then use an internal operation at the positive-excess
+vertices or the literal tight-block attachments.  In the one-move branch it
+must resolve the path-spanning or boundary-location collision.  Either route
+must terminate in the labelled construction or a compatible order-seven
 separator below.
 
 The immediate order-eight theorem is therefore the following.  In the

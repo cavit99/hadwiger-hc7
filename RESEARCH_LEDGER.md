@@ -47,10 +47,30 @@ Every opposite pair deletion then has a fixed-trace six-colouring saturating
 both deleted vertices, and each shore vertex satisfies the exact excess
 inequality `epsilon(v)+rho(v)>=3`; tight vertices induce a Gallai forest.
 
-The exact open gate is now the order-nine spanning endpoint (together with
-the one-move obstructed-path endpoint): convert its operation-specific,
-literal first-hit data into an explicit `K_7`-minor model or a
-colour-compatible order-seven separation.  A finite audited barrier shows
+For a boundary trace using all six colours, every tight vertex is now known
+to be adjacent to every literal vertex in every nonsingleton boundary colour
+class.  If both tight subgraphs contain a cycle, those contacts give an
+explicit `K_7`-minor model.  More generally, every nontrivial tight Gallai
+block has one common missed set of singleton boundary vertices and an exact
+full-neighbourhood formula.  It therefore gives an order-seven response, an
+order-eight response, or a sharp residual attachment inequality.  A
+two-connected boundary-full shore cannot be entirely tight, so the
+all-tight spanning family is eliminated.
+
+The one-move branch also closes whenever its obstruction path can be
+separated from a boundary-full residual component and its two ends lie in
+one component of the inherited boundary forest.  Otherwise its residual
+components satisfy an exact path-attachment inequality.  A cutvertex in a
+spanning shore gives a strictly smaller fresh connected response side, but
+this transfer does not preserve the fixed trace or model labels and is not
+yet a recursive descent.
+
+The exact open gate is now the positive-excess order-nine spanning endpoint
+(together with the path-spanning/location-collision residue of the one-move
+branch): first force or reduce to a full-six-colour trace, then use an
+internal proper-minor operation at a non-tight vertex or a tight-block
+attachment to obtain an explicit `K_7`-minor model or a colour-compatible
+order-seven separation.  A finite audited barrier shows
 that attaining every independent exact block, even on both connected full
 shores, cannot alone force a one-move transition or a common trace.  The
 remaining proof must visibly use global `K_7`-minor exclusion and operations
