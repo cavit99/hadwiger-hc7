@@ -106,6 +106,43 @@ order-seven separation, or a strict generic selected-response descent.
 Ordinary connectivity, a single fan, or the excess inequality alone is
 insufficient.
 
+The seven-column subbranch has a sharper global normalization.  Its only
+exceptional edge-maximal `K_5`-minor-free contact graph is the pentagonal
+bipyramid.  Maximizing those columns makes them span outside the two fixed
+root branch sets and leaves a four-connected nonplanar core `F` with
+`chi(F)>=5`.  A four-cut of `F` is an actual order-seven separator; otherwise
+`F` is five-connected.  Alternating column splits, positive adjacent-rim
+linkages and suitable two-column absorptions give explicit `K_7` models,
+while compatible portal orders give planar, hence four-colourable, cores in
+several unbounded expansion families.
+
+Local tests are not exhaustive: audited fourteen-vertex examples require
+simultaneous multi-column allocation, and requiring five whole old columns
+is too strong.  The correct remaining model is a `K_5` minor in `F` whose
+every branch set meets both literal root-neighbourhood sets.  Such a model
+joins the two fixed roots to give `K_7`; a four-colouring of `F` six-colours
+the host.  Five two-sided connected subgraphs can now be chosen to partition
+all of `F` while maximizing their mutual contact graph.  The open theorem is
+to complete that contact graph, return a colour-compatible order-seven
+separation, or prove the core four-colourable.
+
+Full paired rooting is no longer required for a structural exit.  A `K_5`
+model whose five bags meet one root-neighbourhood set and whose at least four
+bags meet the other gives `K_7` or a genuine full-neighbourhood separation.
+An exact type-5 enlargement census discharges 320 of the 340 paired-rooted
+failures in this way.  Its only finite residue consists of 20 doubly confined
+assignments, in which both root sets use the retained-edge side of both split
+fibres.  The separation returned by the one-defect theorem may have order
+greater than seven and does not yet carry synchronized shore colourings.
+
+Persistent conforming planar reroutings are therefore treated as the
+prospective structural/colourable alternative rather than as another local
+obstruction.  Hegde--Thomas enlargement theory does not preserve the two
+root sets, and Norin--Thomas mold theory requires a feasible cast not implied
+by ordinary root-to-column adjacency.  The exact target and trust boundary
+are recorded in the
+[paired-rooted pentagonal-bipyramid frontier](active/hc7_pentagonal_bipyramid_paired_rooted_target.md).
+
 ### Order-nine positive-excess subbranch
 
 In the connected two-shore positive-excess branch, the two extension

@@ -108,6 +108,7 @@ used for transitive closure.
 
 Live exploratory constructions:
 
+- [pentagonal-bipyramid paired-rooted `K_5` or four-colouring target](hc7_pentagonal_bipyramid_paired_rooted_target.md)
 - [paired-fan terminal minor-model constructions](hc7_paired_fan_literal_decoder.md)
 - [paired-fan incidence-cycle composition](hc7_paired_fan_incidence_cycle_composition.md)
 

@@ -1766,6 +1766,69 @@ already exhausted.  One response colouring, an abstract response language,
 shortest-path rerouting, or web structure without contraction-criticality
 cannot supply the missing labelled allocation.
 
+### Pentagonal-bipyramid column obstruction
+
+The seven-column contact graph arising in the exceptional two-component
+order-eight response has now been classified.  Unless a low-degree column
+gives the previously listed separator or exchange outcomes, the sole
+edge-maximal `K_5`-minor-free contact graph is the pentagonal bipyramid
+
+\[
+                         C_5\vee\overline {K_2}.
+\]
+
+Maximizing the seven columns makes them span the graph outside the two fixed
+root branch sets.  The induced core `F` is four-connected, nonplanar, and
+has chromatic number at least five.  A four-cut of `F` lifts to an actual
+order-seven separation; compatibility of the two boundary colourings is
+still open.  With no four-cut, `F` is five-connected.
+
+Several unbounded expansion families are closed.  A four-distinct-label
+alternating connected split gives an explicit `K_7` model.  Compatible
+portal orders give a planar core for tree expansions, and the single-contact
+tree and four-connected-column families therefore satisfy the exact
+minor-or-six-colouring dichotomy.  A positive adjacent-rim Two Paths
+instance and a suitable simultaneous two-column absorption also give
+explicit `K_7` models.
+
+The attempted converse based only on those local tests is false.  A
+five-connected fourteen-vertex expansion has all five local linkage
+instances negative and has no alternating column split, but is nonplanar;
+it closes by a distributed multi-column `K_5` model.  A second example has
+no `K_5` model containing five distinct whole columns, but is four-colourable
+and has a `K_5` model whose every branch set meets both literal
+root-neighbourhood sets.  An exact finite census proves that every
+two-vertex-path column expansion satisfying the same negative tests is
+four-colourable.  This is evidence for, not a reduction of, the unbounded
+case.
+
+The correct no-four-cut target is therefore the
+[paired-rooted `K_5` dichotomy](hc7_pentagonal_bipyramid_paired_rooted_target.md):
+either `F` is four-colourable or it has a `K_5` model whose every branch set
+meets both root-neighbourhood sets.  The latter model joins the two fixed
+roots to give `K_7`; the former six-colours the host.  Five such two-sided
+connected subgraphs may now be chosen to partition all of `F` while
+maximizing their contact graph.  What remains is to prove that a missing
+contact in this spanning five-part normalization forces the four-colourable
+planar-expansion alternative, an exact colour-compatible order-seven
+separation, or a new paired-rooted contact.
+
+The positive model requirement has also been weakened.  It is enough that
+all five `K_5` bags meet one root-neighbourhood set and at least four meet the
+other: the resulting one-defect `K_7` model gives `K_7` or a genuine
+full-neighbourhood separation.  In the exact type-5 enlargement census this
+closes 320 of the 340 paired-rooted-negative endpoint assignments.  The 20
+remaining assignments are precisely doubly confined at the retained-edge
+sides of both split fibres.  This is the sole finite type-5 label residue,
+but it is not a host-level closure: the returned separation is not bounded
+above by seven and its two closed-shore colourings are not synchronized.
+
+Persistent conforming planar reroutings are accordingly part of the
+prospective colourable outcome, not another obstruction to enumerate.
+The available enlargement and mold theorems do not yet close the argument:
+the former loses the selected root labels, while ordinary root-to-column
+adjacency does not provide the feasible cast required by the latter.
+
 ### Generic exact-seven restart and the remaining terminal theorem
 
 The generic restart theorem gives a simpler well-founded spine.  At any
