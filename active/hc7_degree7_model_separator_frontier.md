@@ -1404,9 +1404,36 @@ On a shortest transition in the four-or-five-colour subgraph, each edge
 whose two ends are internal rejected traces transports the unique missing
 colour.  The old hole becomes the operated vertex's new colour, while its
 old uniquely carried colour becomes the new hole.  Consecutive internal
-holes therefore differ.  The statement is deliberately local: a hole may
-repeat nonconsecutively, and the first and last transition edges still
-require the host-level one-step analysis.
+holes therefore differ.  In fact no such internal edge can survive on a
+shortest opposite-shore path.  It is exactly a global transposition of the
+old and new missing colours, so applying that transposition to the entire
+remaining suffix removes one path edge while preserving the target shore
+language.  Thus the shortest path has length at most two: it is one
+oppositely owned move, or it has one four-colour trace rejected by both
+shores.  The first and last transition edges still require host-level
+analysis, but arbitrary transport chains and missing-colour cycles are
+eliminated.
+
+For a four-chromatic residual the distance is exactly one.  A deterministic
+exhaustive check of all order-eight graphs proves that the surjective
+five-colour equality-partition graph is connected whenever the residual is
+`K_5`-minor-free and not three-colourable.  Each shore owns a surjective
+trace, and ownership is invariant under colour-name permutations, so some
+one-vertex quotient edge crosses between the two shore languages.  Hence
+the common rejected four-colour trace can survive only when the residual is
+three-colourable.
+
+If one shore has no residual trace using four or five colours, choose a
+maximum-palette trace with `p<=3` colours.  Splitting `5-p`
+nonrepresentative vertices with the absent colours gives a Boolean response
+cube.  A minimal face extending through the opposite shore is either a
+one-vertex transition or has every proper nonempty face rejected by both
+shores.  In the latter outcome each coordinate supplies a boundary-to-
+boundary bichromatic path through each open shore.  When the residual is
+three-chromatic this cube is a square; unless the colour-class sizes are
+`(6,1,1)`, its two paths in each shore use disjoint colour pairs and are
+therefore vertex-disjoint.  These paths still require literal first-hit
+allocation to the inherited branch-set labels.
 
 There is also a root-mobile restart family.  When the two open shores are
 connected and boundary-full, `G[B-{s}]` is `K_5`-minor-free for every

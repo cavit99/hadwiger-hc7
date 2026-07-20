@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "ee89118f6002b2478af53d6812d7f056327fb053da2049faeccb1cb06f95607f"
+expected_source_sha256 = "4274340aa61f026f6143610a4c3e1b9e9733a8795f7eab009a895ad34e8a3349"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4496,6 +4496,74 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_two_step_reconfiguration_collapse"
+title = "Colour-permutation invariance collapses opposite shore transitions to at most two moves"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_two_step_reconfiguration_collapse.md"
+active = true
+audit = "results/hc7_order8_two_step_reconfiguration_collapse_audit.md"
+expected_source_sha256 = "133a9b0fcb3df6dccf71239ba5b431283d75a63c2c133e6cc223c21c7e73ca70"
+scope = "permutation-invariant disjoint extension languages in a four-or-five-colour reconfiguration graph, with exact ownership of every surjective trace"
+label_fidelity = "the one or two operated boundary vertices are literal; the proof uses only global permutations of palette names and does not identify them with branch-set labels"
+colour_compatibility = "a shortest opposite-shore path has one move, or one four-colour trace rejected by both shores"
+conclusions = [
+  "every shortest transition has length at most two",
+  "the sole internal state in the two-step case uses exactly four colours",
+  "no endpoint edge is merely a global colour renaming",
+  "the four-chromatic residual automatically satisfies the endpoint palette hypothesis",
+]
+does_not_prove = [
+  "closure of the remaining one-step or two-step host configurations",
+  "label allocation, a common order-seven boundary colouring, a K7 minor, or HC7",
+]
+
+[[claims]]
+id = "hc7.order8_surjective_partition_connectivity"
+title = "Surjective equality partitions are connected on every four-chromatic K5-minor-free graph of order eight"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_surjective_partition_connectivity.md"
+active = true
+audit = "results/hc7_order8_surjective_partition_connectivity_audit.md"
+expected_source_sha256 = "7256b95862bd4a8e0e626682cbd9988436698b1285125ae5df9c451b7d401f2f"
+scope = "computer-assisted exhaustive order-eight theorem for graphs of chromatic number at least four with no K5 minor, followed by an abstract invariant-language corollary"
+label_fidelity = "quotient vertices retain literal equality blocks and quotient edges lift to one-vertex labelled recolourings; colour names remain gauge coordinates"
+colour_compatibility = "two nonempty disjoint permutation-invariant shore languages with exhaustive surjective ownership contain oppositely owned traces differing at one vertex"
+conclusions = [
+  "the surjective five-colour equality-partition graph is nonempty and connected",
+  "the four-chromatic live residual has an oppositely owned one-vertex move",
+  "the two-step rejected-trace outcome is absent in that branch",
+]
+does_not_prove = [
+  "the corresponding result for a three-colourable residual",
+  "remote branch-set label allocation, a compatible separator, a K7 minor, or HC7",
+]
+
+[[claims]]
+id = "hc7.order8_low_palette_response_cube"
+title = "A low-palette shore yields a finite response cube and coupled bichromatic paths"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_low_palette_response_cube.md"
+active = true
+audit = "results/hc7_order8_low_palette_response_cube_audit.md"
+expected_source_sha256 = "c0d1bf31330246c99ab57d4d7d42784a9c21e481df53ac809aebaec75a2fac9e"
+scope = "two anticomplete shores with exact-root extension languages, exhaustive surjective ownership, and one language attaining at most three colours on an eight-vertex residual"
+label_fidelity = "all operated boundary vertices and both shore-internal bichromatic path systems are literal; no palette colour is identified with a minor-model branch set"
+colour_compatibility = "a minimal opposite-owned cube face is a one-vertex transition or has every proper nonempty face rejected by both shores"
+conclusions = [
+  "the low-palette response space reduces to a Boolean cube of dimension at most four",
+  "every coordinate of a nontrivial minimal face forces one bichromatic path through each shore",
+  "for a three-chromatic residual the cube is a square and distinct repeated colour classes give disjoint path pairs",
+]
+does_not_prove = [
+  "existence of distinct repeated classes without an additional independence bound",
+  "alignment of remote path ends across shores or with inherited branch-set labels",
+  "a compatible separator, a K7 minor, strict host descent, or HC7",
+]
+
+[[claims]]
 id = "hc7.barrier.one_sided_full_trace_static_anchor"
 title = "Abstract exact-block-complete partition families need not change orientation along a full-trace recolouring component"
 kind = "barrier"
@@ -4969,6 +5037,36 @@ source = "hc7.order8_shortest_path_hole_transport"
 target = "hc7.order8_full_five_colour_reconfiguration"
 kind = "uses"
 note = "The finite reconfiguration theorem supplies the connected four-or-five-colour state space containing the selected shortest path."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_two_step_reconfiguration_collapse"
+kind = "uses"
+note = "This removes every long palette-deficient transition chain and leaves only one oppositely owned move or one common rejected four-colour trace."
+
+[[relations]]
+source = "hc7.order8_two_step_reconfiguration_collapse"
+target = "hc7.order8_shortest_path_hole_transport"
+kind = "uses"
+note = "The missing-colour theorem identifies an internal edge as a global transposition, which the collapse proof removes by permuting the remaining suffix."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_surjective_partition_connectivity"
+kind = "uses"
+note = "This eliminates the two-step rejected-trace outcome when the eight-vertex residual is four-chromatic and leaves one oppositely owned boundary move."
+
+[[relations]]
+source = "hc7.order8_surjective_partition_connectivity"
+target = "hc7.order8_two_step_reconfiguration_collapse"
+kind = "strengthens"
+note = "Under the extra order-eight, four-chromatic and K5-minor-free hypotheses, quotient connectivity improves distance at most two to distance one."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_low_palette_response_cube"
+kind = "uses"
+note = "This replaces the low-palette residual by one opposite boundary move or a finite response cube with coupled bichromatic path systems through both shores."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6548,7 +6646,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "ee89118f6002b2478af53d6812d7f056327fb053da2049faeccb1cb06f95607f"
+evidence_sha256 = "4274340aa61f026f6143610a4c3e1b9e9733a8795f7eab009a895ad34e8a3349"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6570,7 +6668,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "ee89118f6002b2478af53d6812d7f056327fb053da2049faeccb1cb06f95607f"
+evidence_sha256 = "4274340aa61f026f6143610a4c3e1b9e9733a8795f7eab009a895ad34e8a3349"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -7666,4 +7764,17 @@ sha256 = "646abb832e9c97819f575324a2e75dfd329082390920d949ed0a88a7c4152fef"
 timeout = 30
 expected_stdout = [
   "PASS partitions=1834 full=674 maximum_independent=8 left=682 right=300 anchors=107 adjacencies=20232",
+]
+
+[[verifiers]]
+id = "order8-surjective-partition-connectivity"
+path = "results/hc7_order8_surjective_partition_connectivity_verify.py"
+sha256 = "a4a0dbbc5e4950587a3d58e3a999d498a14cfd1efac9c8d7cd2fe796501aefb9"
+timeout = 60
+requires = ["networkx==3.6.1", "nauty"]
+expected_stdout = [
+  "order8 graphs=12346 not_3_colourable=6322 nonconnected_five_block_partition_graph=236 empty=89",
+  "positive_control G?aN~w components=27,37 has_K5_minor=yes",
+  "low_chromatic_control G??F~w components=65,90",
+  "PASS order8_K5_minor_free_chromatic_at_least_four_partition_graph_connected",
 ]

@@ -136,8 +136,34 @@ shortest transition has an exact normal form.  Consecutive internal traces
 have different missing colours, and the operated vertex is the unique
 carrier of the new missing colour before the move and of the old missing
 colour afterward.  Thus the boundary operation transports one colour hole.
-This gives a canonical nonstationary transition, but missing colours may
-repeat later and the two endpoint edges remain outside the conclusion.
+Colour-permutation invariance now collapses that apparent transport chain.
+Every internal hole move is itself a global transposition of the two colour
+names; applying that transposition to the remaining suffix deletes one edge
+of a shortest path.  Hence every shortest opposite-shore transition in the
+four-or-five-colour graph has length at most two.  The only remaining cases
+are one oppositely owned one-vertex move or one four-colour boundary trace
+rejected by both shores.  In particular there is no longer a missing-colour
+cycle or an arbitrarily long paired-kernel chain.
+
+The four-chromatic residual is sharper.  An exhaustive verifier over all
+`12,346` unlabelled graphs of order eight proves that, whenever `H` is
+four-chromatic and `K_5`-minor-free, its proper surjective five-colour
+equality partitions form one connected graph under single-vertex moves.
+Colour-permutation-invariant exhaustive shore ownership must therefore
+change across one such move.  Thus the two-step rejected-trace outcome is
+impossible in the four-chromatic branch: it has a single oppositely owned
+boundary move.  The earlier at-most-two theorem remains necessary only when
+`H` is three-colourable.
+
+The complementary low-palette branch also has a finite-dimensional normal
+form.  Maximize the number `p<=3` of residual colours attained through the
+low-palette shore and independently recolour `5-p` nonrepresentative
+vertices with the absent colours.  A minimal opposite-owned face of this
+Boolean response cube either gives a one-vertex transition or makes every
+proper nonempty face rejected by both shores.  Each cube coordinate then
+forces one bichromatic path through each open shore.  When `chi(H)=3` this
+is a square; except for colour-class sizes `(6,1,1)`, the two paths in each
+shore can be chosen vertex-disjoint.
 
 The same two-full-shore geometry is mobile over the boundary.  For every
 literal boundary vertex `s`, deleting `s` from the nine-vertex boundary
@@ -173,15 +199,15 @@ produce a labelled first-hit augmentation, a `K_7` model or a small
 full-neighbourhood separator.
 
 The exact open gate is therefore the positive-excess order-nine spanning
-endpoint together with the two outcomes of this shortest full
-reconfiguration path (and the path-spanning/location-collision residue of
-the older one-move branch).  The long outcome has paired list-critical
-shores under a boundary trace with an unused colour; the one-step outcome
-has a common literal root, two opposite-shore paths and the
-order-seven/eight/full-boundary trichotomy.  The proof must use an internal
-proper-minor operation or literal first-hit contacts to obtain an explicit
-`K_7`-minor model, a colour-compatible order-seven separation, or a strict
-host-level descent.  A finite audited barrier shows
+endpoint with three sharply bounded colouring outcomes: one oppositely
+owned move; a common rejected four-colour trace, possible only over a
+three-colourable residual; or the low-palette response cube and its paired
+shore path systems.  The one-step outcome has a common literal root, two
+opposite-shore paths and the order-seven/eight/full-boundary trichotomy.
+The proof must use an internal proper-minor operation or literal first-hit
+contacts to obtain an explicit `K_7`-minor model, a colour-compatible
+order-seven separation, or a strict host-level descent.  A finite audited
+barrier shows
 that attaining every independent exact block, even on both connected full
 shores, cannot alone force a one-move transition or a common trace.  The
 remaining proof must visibly use global `K_7`-minor exclusion and operations
