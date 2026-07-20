@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "ab8bba8351d990d0e569c03a06a0478a69b40aecf6c5b730c2d5e5fdd7c3850c"
+expected_source_sha256 = "af5fa3e53f8ea3f5e89e3bf089037b67f7d5b71cba7b8fa3f93c81e30a3a3552"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -2633,6 +2633,30 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.three_owner_concentration_elimination"
+title = "The concentrated three-owner order-eight configuration is impossible"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_three_owner_concentration_elimination.md"
+source_heading = "Theorem 3.1"
+active = true
+audit = "results/hc7_three_owner_concentration_elimination_audit.md"
+expected_source_sha256 = "ba23b59ee96c43b98bdb8e6c35e3fe36e5ccf191ff451f6ae4508253e11635e3"
+scope = "the lexicographically extremal concentrated three-owner no-repeated-contact equality-eight branch"
+strict_parameter = "maximize the relaxed literal first-hit rank, then minimize the donor branch-set order"
+label_fidelity = "each transfer preserves every branch-set label, prescribed root, the selected boundary partition, the fixed response subgraph and the relaxed literal first-hit rank"
+conclusions = [
+  "a connected-transversal transfer gives an explicit K7 or strictly shrinks the donor when every owner has at least two portals",
+  "a unique owner portal can be transferred after seven-connectivity proves that the reduced donor remains connected",
+  "therefore the complete concentrated three-owner configuration cannot occur",
+]
+does_not_prove = [
+  "entry of every order-eight interface into the concentrated three-owner configuration",
+  "closure of the two-owner, repeated-contact or non-branch-set-contained cases",
+  "HC7",
+]
+
+[[claims]]
 id = "hc7.three_owner_order8_exact7_reduction"
 title = "A concentrated three-owner order-eight interface has an actual order-seven separation"
 kind = "theorem"
@@ -3543,7 +3567,7 @@ title = "Three opposite-shore edge probes eliminate simultaneous five-chromatic 
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_three_edge_owner_saturation_elimination.md"
-active = true
+active = false
 audit = "results/hc7_three_edge_owner_saturation_elimination_audit.md"
 expected_source_sha256 = "779b6ce18ae3ba9761648ff7cacdbb33b62510cee6b550e502f379468da0fee1"
 scope = "the concentrated three-owner configuration with a suitable opposite-shore edge anticomplete to the selected owner-contact endpoints"
@@ -5406,12 +5430,6 @@ note = "This closes the donor-contained non-singleton order-eight component up t
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
-target = "hc7.three_edge_owner_saturation_elimination"
-kind = "uses"
-note = "This eliminates the simultaneous five-chromatic three-owner probe branch and identifies the remaining unlabelled six-chromatic probe."
-
-[[relations]]
-source = "hc7.target.degree7_model_separator"
 target = "hc7.four_boundary_full_subgraphs_triangle_completion"
 kind = "uses"
 note = "This is a guardrail: at the raw three-component order-eight boundary, a fourth boundary-full connected subgraph is already terminal, so defect-two reflection must be entered only after producing an actual order-seven boundary."
@@ -6652,7 +6670,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "ab8bba8351d990d0e569c03a06a0478a69b40aecf6c5b730c2d5e5fdd7c3850c"
+evidence_sha256 = "af5fa3e53f8ea3f5e89e3bf089037b67f7d5b71cba7b8fa3f93c81e30a3a3552"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6674,7 +6692,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "ab8bba8351d990d0e569c03a06a0478a69b40aecf6c5b730c2d5e5fdd7c3850c"
+evidence_sha256 = "af5fa3e53f8ea3f5e89e3bf089037b67f7d5b71cba7b8fa3f93c81e30a3a3552"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -7082,6 +7100,11 @@ kind = "related_to"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.three_owner_concentration_elimination"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.three_owner_order8_exact7_reduction"
 kind = "related_to"
 
@@ -7119,6 +7142,21 @@ kind = "uses"
 source = "hc7.three_owner_two_edge_response"
 target = "hc7.three_owner_component_concentration"
 kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_concentration_elimination"
+target = "hc7.three_owner_component_concentration"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_concentration_elimination"
+target = "hc7.first_hit_rank_preserving_transfer"
+kind = "uses"
+
+[[relations]]
+source = "hc7.three_owner_concentration_elimination"
+target = "hc7.three_owner_order8_exact7_reduction"
+kind = "supersedes"
 
 [[relations]]
 source = "hc7.three_owner_order8_exact7_reduction"

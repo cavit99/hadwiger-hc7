@@ -245,11 +245,15 @@ boundary partition across both shores.
 
 ### Special exact-seven branch
 
-The concentrated order-eight owner configuration reduces to a special
-order-seven boundary consisting of five inherited literal vertices and two
-cut vertices.  Its full-subgraph packing vector is `(1,1)` or `(1,2)`, its
-boundary is four-colourable, and deleting an entrance edge gives a complete
-partition which is legal on one closed shore and rejected on the other.
+The concentrated three-owner order-eight configuration is now impossible
+under the maximum-first-hit-rank/minimum-donor normalization.  A connected
+transversal either gives a strict label- and response-preserving transfer,
+or one owner has a unique portal; the exact eight-neighbour count and
+seven-connectivity then make deletion of that portal another strict
+transfer.  Thus this owner branch no longer produces a special order-seven
+colour-compatibility obligation.  The exact-seven programme below remains
+live for interfaces returned by the generic restart and by other owner or
+positive-excess branches.
 
 There are two present subbranches.
 
@@ -632,14 +636,11 @@ missing at most two boundary vertices is false: a quotient with boundary
 `2K_3` plus two isolated vertices has treewidth at most five.  That example
 does not have seven-connectivity, contraction-critical colouring responses,
 or internal connected-subgraph structure, so those remain possible
-mechanisms for the host-level theorem.  Separately, in the concentrated
-configuration with three designated branch sets, the three
-opposite-shore edge probes cannot all have five-chromatic deletion hosts.
-If they did, their endpoint `K_4` conclusions would give a strict
-label-preserving reduction of `U`.  Thus some common three-edge deletion
-host is six-chromatic and contains a spanning `K_6` minor.  That regenerated
-model is not aligned with the five inherited labels or with a common
-boundary partition, so this is not yet a terminal construction.
+mechanisms for the host-level theorem.  Separately, the concentrated
+configuration with three designated branch sets is eliminated outright by
+the strict connected-transversal transfer above.  The earlier opposite-shore
+three-edge probes and their unlabelled spanning `K_6` model are therefore no
+longer part of the live proof obligation in that branch.
 
 If the list-critical core fills its shore, its total list-degree excess is
 the remaining unbounded scalar.  The all-tight case has at most eleven
@@ -705,9 +706,11 @@ six-colours `G`.  The remaining task is therefore geometric and
 operation-specific: construct that third connected subgraph, allocate the
 all-boundary fan to five literal branch-set labels with disjoint required
 attachment intervals, or force an exact compatible order-seven boundary.
-The surviving six-chromatic three-edge probe supplies only an unlabelled
-`K_6` model.  A contracted-terminal cut is not enough, because its
-branch-set preimages can contain arbitrarily many literal vertices.
+The eliminated three-owner concentration no longer contributes a live
+probe.  The remaining two-owner, repeated-contact and generic order-eight
+responses still do not allocate first hits to inherited branch-set labels.
+A contracted-terminal cut is not enough, because its branch-set preimages
+can contain arbitrarily many literal vertices.
 
 Old near-clique labels need be preserved only when they are used to claim a
 particular minor-model construction; they are not part of the recursion

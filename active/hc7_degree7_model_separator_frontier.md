@@ -754,25 +754,21 @@ component is connected.  If zero, one or two owner portal sets were
 concentrated in the component, moving it wholesale or splitting it along a
 proper two-owner linkage would preserve all labels and the selected response
 while strictly shrinking the donor.  Therefore all three owner portal sets
-are concentrated there.  Any two owners supply disjoint, differently
-labelled contact edges.  Their common deletion admits exactly the three
-signatures `(equal,equal)`, `(equal,proper)` and `(proper,equal)`, never
-`(proper,proper)`, and returns either a `K_4` on the four endpoints or a
-six-chromatic common host with a spanning `K_6` model.
+are concentrated there.
 
-This concentrated order-eight geometry now has a complete host-level
-reduction to order seven.  From a vertex of the distinguished component
-adjacent to the retained donor, a three-fan to the three owner
-representatives either fails behind two vertices, giving a full
-neighbourhood of order at most `5+2=7`, or exists.  In the latter case its
-arms split the component among the donor and the three owners.  A nontrivial
-arm gives a rank-preserving strict donor reduction.  If all three arms are
-edges, absorbing the remaining components into outside branch sets again
-strictly shrinks the donor unless the distinguished component is a
-singleton; that singleton contradicts the two distinct component-ends in
-the proved differently-labelled contact-edge pair.  Hence the boundary-full
-concentrated three-owner order-eight case always returns an actual
-order-seven separation.  The separation is not yet colour-compatible.
+That final concentrated configuration is now impossible.  If every owner
+has at least two portals in the distinguished component, a minimal connected
+transversal leaves a proper connected piece which can be moved to one owner
+while the reduced donor remains connected and retains all three owner
+contacts.  If some owner has a unique portal `s`, pairwise owner linkages
+leave the other two contacts outside `s`; the exact eight-neighbour count
+and seven-connectivity force every component after deleting `s` to attach
+to the retained donor.  Moving `s` to its owner again preserves every
+label, prescribed root, the selected response and the maximum first-hit
+rank while strictly shrinking the donor.  Either move repairs the unique
+missing adjacency and gives a `K_7` minor, or contradicts the minimum donor
+choice.  Thus the three-owner no-repeated-contact equality-eight branch is
+eliminated before any colour-compatibility problem at a returned separator.
 
 The order-eight side is now operation-decorated as well.  For both two and
 three boundary-full complementary components, a selected edge-deletion
@@ -846,45 +842,14 @@ endpoints or a universally orientable exact order-seven separation.  On the
 same three-edge deletion host, the selected fixed-partition response is
 coupled to a different opposite-shore boundary trace.
 
-The concentrated three-owner order-eight branch therefore no longer leaves
-a clean-fan label-allocation problem: it has already reached an actual
-order-seven separation.  The precise missing step there is now dynamic
-colour compatibility.  One must apply a proper-minor operation at that
-literal boundary and obtain a common complete equality partition, an
-explicit `K_7`-minor model from the resulting named paths and supports, or a
-strict state- and label-preserving host descent.  In the other owner-circuit
-branches, incident or repeated contacts and bounded separators still require
-the corresponding label-faithful operation-specific closure.  No further
-unlabelled path or static boundary partition closes these alternatives.
+The earlier three-fan, two-edge and special `5+2` exact-seven descendants
+remain valid conditional theorems, but the new strict transfer shows that
+they are not live descendants of the concentrated three-owner branch.  In
+the other owner-circuit branches, incident or repeated contacts and bounded
+separators still require a label-faithful operation-specific closure.
 
-For this returned boundary, the five surviving vertices of the order-eight
-interface together with the two vertices of the failed three-fan cut form a
-special `5+2` exact-seven normal form.  Every off-boundary component is full,
-the packing vector is `(1,1)` or `(1,2)`, and the induced boundary is
-four-colourable.  A cut-to-shore edge deletion supplies a partition legal on
-the far closed shore and rejected on the near one, with demand above the far
-shore's full-subgraph capacity and a corresponding Hall-deficient block
-family.  The near shore supplies either a six-ended fan, a clean five-path
-packing, or a smaller exact-seven separation with one synchronized block.
-This does not yet reflect the complete partition: the fan and the full
-connected subgraphs occupy opposite orientations.  The live theorem must
-either transfer the selected legal partition together with a complete
-support system, use the fan to construct an explicit labelled `K_7` model,
-or make a strict descent retaining the complete partition and inherited
-labels.
-
-The two vertices of the failed three-fan cut now admit one joint
-host-level reduction.  Either the exposed shore is a single degree-seven
-vertex, with connected opposite shore and full-subgraph packing number one,
-or the two cut vertices have vertex-disjoint entrance edges into the
-exposed shore.  In the second alternative the common two-edge deletion
-realizes the three signatures `(equal,proper)`, `(proper,equal)` and
-`(equal,equal)`, but not `(proper,proper)`.  Every returned complete
-boundary partition is legal on the opposite closed shore, rejected on the
-exposed shore, and Hall-deficient beyond the opposite full-subgraph
-capacity.
-
-The singleton alternative also has a new unbounded closure.  Its boundary
+In the independent generic exact-seven restart, the singleton alternative
+has an unbounded closure.  Its boundary
 has independence number at most two and chromatic number at most four, so
 it is exactly four-chromatic.  A bipartite opposite exterior, coloured with
 two fresh colours, could then be combined with the boundary colouring and
@@ -1247,18 +1212,17 @@ response.  Seven-connectivity, such proper-minor responses, and a split
 using the internal structure of a connected subgraph remain available
 extra mechanisms.
 
-Finally, the concentrated alternative with three designated branch sets
-has a new operation-specific gain.  Probe each of the three pairs by deleting
-its two contact edges together with one suitable edge in the opposite
-shore.  The three deletion hosts cannot all be five-chromatic: the three
-endpoint-`K_4` conclusions would force pairwise portal intersections and a
-connected-transversal transfer strictly reducing `U` while preserving the
-selected response data and relaxed first-hit rank.  Hence at least one
-probe is six-chromatic and contains a spanning `K_6`-minor model.  This
-eliminates the all-five-chromatic branch, but the surviving `K_6` model is
-unlabelled.  It is not known to respect the selected equality partition,
-contain prescribed endpoints in prescribed branch sets, or combine with a
-deleted edge to form a `K_7`-minor model.
+Finally, the concentrated alternative with three designated branch sets is
+now eliminated without regenerating an unlabelled minor model.  A connected
+transversal either supplies a proper connected transfer which retains all
+three owner contacts, or one owner has a unique portal.  In the latter case
+the exact order-eight contact count and seven-connectivity make the donor
+minus that portal connected.  Moving the selected piece or the unique
+portal to its owner preserves the selected response, every branch-set label
+and the maximum first-hit rank while strictly shrinking `U`; repairing the
+old missing pair instead gives a `K_7` minor.  Thus the earlier three-edge
+probe is superseded in this branch.  The two-owner, repeated-contact and
+non-branch-set-contained interface cases remain live.
 
 The exact partition side is now uniform over the complete frozen
 129-boundary residual.  Given a connected subgraph missing at most two
@@ -1880,7 +1844,7 @@ one of the three literal host configurations above.
 - [two-contact label-preserving branch-set transfer](../results/hc7_response_aligned_two_contact_lobe_transfer.md)
 - [reserved-component linkage completion and three-label order-eight normal form](../results/hc7_reserved_component_linkage_completion.md)
 - [three-owner component concentration and two-edge response substrate](../results/hc7_three_owner_reserved_component_concentration.md)
-- [concentrated three-owner order-eight interface reduces to an actual order-seven separation](../results/hc7_three_owner_order8_exact7_reduction.md)
+- [the concentrated three-owner order-eight configuration is impossible](../results/hc7_three_owner_concentration_elimination.md)
 - [operation-specific normal form at the resulting special five-plus-two exact-seven boundary](../results/hc7_special_five_plus_two_exact7_response.md)
 - [two boundary vertices give a singleton shore or a two-root list-critical core](../results/hc7_special_exact7_two_edge_list_core.md)
 - [a bridge in the bipartite-boundary thin shore gives a strict exact-seven response descent](../results/hc7_exact7_bipartite_bridge_response_descent.md)

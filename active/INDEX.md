@@ -83,7 +83,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [compression of repeated labelled first-hit exposure](../results/hc7_labelled_first_hit_exposure_compression.md)
 - [first-hit rank preservation under branch-set transfer](../results/hc7_first_hit_rank_preserving_branch_set_transfer.md)
 - [paired-source path transfer or exact order-seven separation](../results/hc7_paired_source_path_transfer.md)
-- [three opposite-shore edge probes eliminate simultaneous five-chromatic saturation](../results/hc7_three_edge_owner_saturation_elimination.md)
+- [the concentrated three-owner order-eight configuration is impossible](../results/hc7_three_owner_concentration_elimination.md)
 
 ### Terminal constructions
 
