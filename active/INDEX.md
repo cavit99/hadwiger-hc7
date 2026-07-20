@@ -50,6 +50,8 @@ Immediate proved inputs, each with an adjacent audit:
 - [exact-block Kempe transitions across two full shores](../results/hc7_two_full_shore_exact_block_kempe_transition.md)
 - [large `K_5`-minor-free boundaries force an exact-seven or smaller singleton response](../results/hc7_large_boundary_singleton_response_descent.md)
 - [maximum boundary palette gives a paired full-six obstruction or an exact one-sided trace language](../results/hc7_order9_maximum_boundary_palette.md)
+- [full five-colouring reconfiguration is connected on every `K_5`-minor-free graph of order at most eight](../results/hc7_order8_full_five_colour_reconfiguration.md)
+- [an opposite one-vertex boundary recolouring forces shore-owned paths and exact separator orders](../results/hc7_order9_opposite_single_vertex_flip.md)
 - [tight cycles complete an unbounded full-six-colour order-nine family](../results/hc7_order9_full_trace_tight_cycle_completion.md)
 - [tight Gallai blocks give exact separators and force positive list-degree excess](../results/hc7_order9_tight_gallai_block_separator.md)
 - [tight vertices give exact singleton responses and rainbow replacements](../results/hc7_order9_tight_vertex_singleton_response.md)
@@ -108,6 +110,7 @@ Immediate barriers:
 - [`K_5`-minor-free boundary structure and two full shores do not force a common colouring](../barriers/hc7_k5minor_boundary_full_shores_common_colouring_barrier.md)
 - [even all independent exact blocks do not force a one-move shore transition](../barriers/hc7_simplicial_boundary_all_exact_blocks_distance_barrier.md)
 - [surjective five-colour traces need not form one Kempe component](../barriers/hc7_surjective_five_colour_kempe_connectivity_barrier.md)
+- [abstract exact-block-complete boundary families need not change orientation along a full-trace recolouring component](../barriers/hc7_one_sided_full_trace_static_anchor_barrier.md)
 - [a positive-excess tight forest need not expose a small block boundary](../barriers/hc7_order9_tight_forest_block_descent_barrier.md)
 
 ## General bounded-interface continuation

@@ -1372,14 +1372,42 @@ attachments.  In the one-move branch it must resolve the path-spanning or
 boundary-location collision.  Either route must terminate in the labelled
 construction or a compatible order-seven separator below.
 
+The one-sided full-trace alternative now has a canonical dynamic form.
+For every `K_5`-minor-free graph `H` of order at most eight, the graph of all
+proper labelled five-colourings under single-vertex recolourings is
+connected, provided non-surjective intermediate colourings are allowed.
+Choose a shortest path from one shore-extension set to the other.  If its
+length is at least two, every internal trace is rejected by both shores;
+in the present one-sided residual it uses at most four colours on `H` and
+therefore gives paired list-critical subgraphs with an unused colour.  If
+the length is one, one literal boundary vertex is recoloured to a previously
+unused colour.  Gluing the opposite shore extensions after deleting that
+vertex forces one bichromatic path through each shore, an odd cycle crossing
+the two shores, and on each side an actual order-seven or order-eight
+separation or a boundary-full connected component at the order-nine
+boundary.  These conclusions preserve the operated boundary vertex and the
+two colour classes, but they do not align the remote path endpoints with the
+five inherited branch-set labels.
+
 One possible full-six reduction is now ruled out.  The graph of surjective
 five-colourings under surjectivity-preserving component swaps can be
 disconnected even for an eight-vertex `K_5`-minor-free graph carrying the
 static forest, two prescribed edges, two added contacts and simplicial-root
-data of this boundary.  The maximum-palette argument bypasses this obstacle
-when fewer than six colours are attained, but the one-sided full-trace
-alternative still requires an operation in the seven-connected
-minor-critical host; boundary Kempe connectivity alone is insufficient.
+data of this boundary.  Full single-vertex reconfiguration is nevertheless
+connected at this order, so the obstruction is exactly the passage through
+palette-deficient traces rather than the absence of all transitions.  The
+orientation of those intermediate traces still requires an operation in the
+seven-connected minor-critical host; boundary reconfiguration alone is
+insufficient.
+
+Nor do static exact-block queries determine that orientation.  On
+`K_{2,6}` two disjoint abstract, colour-permutation-invariant families of
+proper boundary partitions cover all full traces and each realize every
+nonempty independent set as an exact block, yet their full-trace ownership
+is constant on every surjectivity-preserving one-vertex component.  These
+families are not asserted to be shore-realizable.  The example rules out
+only a static partition-language proof and leaves operation-specific shore
+responses as the required additional input.
 
 The immediate order-eight theorem is therefore the following.  In the
 minimum positive-excess boundary-full interface, with either two

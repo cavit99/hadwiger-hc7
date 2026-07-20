@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "a463767247c91aae562dc91529de5870423edd735c9abc6443e5af9620b02b92"
+expected_source_sha256 = "749e3ecaa3d1098a2d71066d87e58ba12231e1a60df272134dda51784d725637"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4422,6 +4422,76 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.order8_full_five_colour_reconfiguration"
+title = "Full five-colouring reconfiguration is connected for K5-minor-free graphs of order at most eight"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_full_five_colour_reconfiguration.md"
+active = true
+audit = "results/hc7_order8_full_five_colour_reconfiguration_audit.md"
+expected_source_sha256 = "c15e2a66b6926d926ff269c79a8abb33a9ee5e75ecbf925b4c43315a3c46dd07"
+scope = "computer-assisted finite theorem for all K5-minor-free graphs on at most eight vertices, plus a shortest-path consequence for two opposite shore-extension sets"
+label_fidelity = "a one-step transition operates at one literal boundary vertex; no remote endpoint is identified with an inherited branch-set label"
+colour_compatibility = "a shortest full recolouring path gives either one oppositely owned one-vertex step or an intermediate trace rejected by both shores"
+conclusions = [
+  "the full labelled five-colouring reconfiguration graph is connected when unused colours are allowed",
+  "a one-edge transition gives two shore-internal obstruction paths rooted at the same boundary vertex",
+  "a longer transition gives paired connected vertex-minimal list-uncolourable subgraphs",
+  "in the one-sided full-trace residual every internal paired-rejected trace uses at most four of the five colours",
+]
+does_not_prove = [
+  "connectivity of the induced graph on surjective colourings",
+  "which shore extends a palette-deficient intermediate trace",
+  "alignment of remote path endpoints with inherited branch-set labels, a K7 minor, or a compatible separator",
+]
+
+[[claims]]
+id = "hc7.order9_opposite_single_vertex_flip"
+title = "An opposite one-vertex boundary recolouring forces shore-owned paths and exact separator orders"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order9_opposite_single_vertex_flip.md"
+active = true
+audit = "results/hc7_order9_opposite_single_vertex_flip_audit.md"
+expected_source_sha256 = "4388a3c1fc27f3e490db43df191ac1871eec729525c0b5d11933a5dde63209d7"
+scope = "two anticomplete open shores whose boundary traces differ at one vertex by introducing a previously unused colour and extend through opposite shores"
+label_fidelity = "the operated boundary vertex, both colour classes, the two open shores and the full neighbourhoods of the supporting components are literal"
+separator_order = "at a nine-vertex boundary each shore returns an actual order-seven or order-eight separation or a boundary-full connected component"
+colour_compatibility = "the two opposite shore extensions glue on deleting the operated vertex but do not yet induce a common colouring of the original boundary"
+conclusions = [
+  "every colour saturates the neighbourhood of the operated vertex in the glued colouring of G-b",
+  "the old and new colours occur on neighbours in prescribed opposite shores",
+  "forced bichromatic paths through both shores yield an odd cycle crossing them",
+  "every palette-dropping boundary Kempe step is a singleton recolouring of this form",
+]
+does_not_prove = [
+  "existence of oppositely owned adjacent traces",
+  "alignment of the remote endpoints or inherited model labels",
+  "a common separator colouring, strict descent, a K7 minor, or HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.one_sided_full_trace_static_anchor"
+title = "Abstract exact-block-complete partition families need not change orientation along a full-trace recolouring component"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_one_sided_full_trace_static_anchor_barrier.md"
+active = true
+audit = "barriers/hc7_one_sided_full_trace_static_anchor_barrier_audit.md"
+expected_source_sha256 = "28440ff45233f523947c5ae18503d3248cbee075c3eae584bb78705a06c4d270"
+scope = "two abstract colour-permutation-invariant families of proper boundary partitions on K2,6; no claim of realization by connected shores or an HC7 host"
+conclusions = [
+  "the two abstract families partition all full five-colour traces",
+  "each family realizes every nonempty independent set as an exact block",
+  "orientation is constant on every surjectivity-preserving one-vertex reconfiguration component",
+]
+does_not_prove = [
+  "existence of shore graphs realizing the abstract families",
+  "a counterexample under seven-connectivity, contraction-criticality or K7-minor exclusion",
+  "failure of an operation-coupled host theorem",
+]
+
+[[claims]]
 id = "hc7.order9_tight_gallai_block_separator"
 title = "Tight Gallai blocks give exact separators and positive excess"
 kind = "theorem"
@@ -4805,6 +4875,18 @@ note = "This forces the non-full maximum-palette branch into the paired full-six
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_full_five_colour_reconfiguration"
+kind = "uses"
+note = "This puts the one-sided full-trace residual in one full one-vertex recolouring graph and returns either paired rejected kernels or an oppositely owned adjacent trace."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order9_opposite_single_vertex_flip"
+kind = "uses"
+note = "This converts an oppositely owned adjacent trace into literal shore paths, an odd cycle and order-seven/eight/full-boundary responses."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
 target = "hc7.order9_full_trace_tight_cycle_completion"
 kind = "uses"
 note = "This closes the full-six-colour order-nine family whenever both tight-vertex subgraphs contain a cycle."
@@ -4952,6 +5034,18 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.surjective_five_colour_kempe_connectivity"
 kind = "guarded_by"
 note = "This prevents restricting the full-six reduction to the induced reconfiguration graph on surjective five-colour traces without using host-level dynamics."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.one_sided_full_trace_static_anchor"
+kind = "guarded_by"
+note = "This prevents closing the one-sided orientation from abstract exact-block-complete partition families without shore realizability and operation-specific host data."
+
+[[relations]]
+source = "hc7.order8_full_five_colour_reconfiguration"
+target = "hc7.order9_maximum_boundary_palette"
+kind = "uses"
+note = "The live corollary uses the one-sided full-trace fork to show that every paired-rejected internal recolouring trace is palette-deficient."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6351,7 +6445,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "a463767247c91aae562dc91529de5870423edd735c9abc6443e5af9620b02b92"
+evidence_sha256 = "749e3ecaa3d1098a2d71066d87e58ba12231e1a60df272134dda51784d725637"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6373,7 +6467,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "a463767247c91aae562dc91529de5870423edd735c9abc6443e5af9620b02b92"
+evidence_sha256 = "749e3ecaa3d1098a2d71066d87e58ba12231e1a60df272134dda51784d725637"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -7451,4 +7545,13 @@ sha256 = "b8cc59ecb5fc2dffd21a49ce38da6519ca8564b26e1c130e32789b26d71762f0"
 timeout = 30
 expected_stdout = [
   "PASS K26=G??F~w components=7800,10800 static=G?`F~w components=5520,5520 invariant=twin_equality",
+]
+
+[[verifiers]]
+id = "one-sided-full-trace-static-anchor-barrier"
+path = "barriers/hc7_one_sided_full_trace_static_anchor_barrier_verify.py"
+sha256 = "75cb3fe6d6fad3ec01d0929d5533de2799ba673797e446791eb58f43d31ce002"
+timeout = 30
+expected_stdout = [
+  "PASS partitions=309 full_partitions=155 left=97 right=123 anchors=66 full_colourings=18600 moves=194400",
 ]

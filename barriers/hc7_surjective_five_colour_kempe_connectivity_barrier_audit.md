@@ -16,11 +16,11 @@ barriers/hc7_surjective_five_colour_kempe_connectivity_barrier_verify.py
 SHA-256 b8cc59ecb5fc2dffd21a49ce38da6519ca8564b26e1c130e32789b26d71762f0
 
 barriers/hc7_surjective_five_colour_kempe_connectivity_barrier_census.cpp
-SHA-256 59d9b9bfcfadb6360021fc5242752a26856380ce7ad7bb5e77121f7409679922
+SHA-256 232bca3ced7bf8bce58373d38c6a1fb13c82ddd369e186d18c4ab207d864cf56
 ```
 
-The final revision changes only the source status paragraph to link this
-audit; the audited mathematics is unchanged.
+This audit covers both the original `K_{2,6}` counterexample and the final
+static live-boundary variant in the pinned source revision.
 
 ## Mathematical audit
 

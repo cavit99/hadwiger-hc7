@@ -105,12 +105,40 @@ attained by either shore has fewer than six colours, the first outcome is
 forced by splitting repeated boundary colour classes with unused colours.
 No surjectivity-preserving Kempe connectivity is required.
 
+The remaining one-sided alternative now lies in one connected
+single-vertex reconfiguration graph.  A computer-assisted theorem proves
+that the full five-colouring reconfiguration graph of every
+`K_5`-minor-free graph on at most eight vertices is connected; intermediate
+colourings need not use all five colours.  A shortest path between the two
+shore-extension sets therefore has one of two exact forms.  A path of
+length at least two contains a boundary colouring rejected by both shores;
+in the one-sided full-trace residual every such internal colouring uses at
+most four of the five available colours.  A path of length one recolours one
+literal boundary vertex to a previously unused colour.  The two opposite
+shore extensions then glue on deleting that vertex, force bichromatic paths
+through both shores and an odd cycle crossing them, and return on each side
+an actual separation of order seven or eight or a connected subgraph
+adjacent to all nine boundary vertices.
+
+This dynamic use of the full reconfiguration graph cannot be replaced by
+static exact-block data.  On `K_{2,6}` there are two disjoint,
+colour-permutation-invariant abstract families of boundary partitions which
+cover all full traces and each realize every nonempty independent set as an
+exact block, while the full-trace orientation is constant on every
+surjectivity-preserving one-vertex component.  The construction is not
+claimed to be realizable by actual shores; it isolates the need for
+operation-coupled host information.
+
 The exact open gate is therefore the positive-excess order-nine spanning
-endpoint together with this one-sided full-trace alternative (and the
-path-spanning/location-collision residue of the one-move branch).  It must
-use an internal proper-minor operation at a non-tight vertex or a
-tight-block attachment to obtain an explicit `K_7`-minor model or a
-colour-compatible order-seven separation.  A finite audited barrier shows
+endpoint together with the two outcomes of this shortest full
+reconfiguration path (and the path-spanning/location-collision residue of
+the older one-move branch).  The long outcome has paired list-critical
+shores under a boundary trace with an unused colour; the one-step outcome
+has a common literal root, two opposite-shore paths and the
+order-seven/eight/full-boundary trichotomy.  The proof must use an internal
+proper-minor operation or literal first-hit contacts to obtain an explicit
+`K_7`-minor model, a colour-compatible order-seven separation, or a strict
+host-level descent.  A finite audited barrier shows
 that attaining every independent exact block, even on both connected full
 shores, cannot alone force a one-move transition or a common trace.  The
 remaining proof must visibly use global `K_7`-minor exclusion and operations
@@ -118,12 +146,12 @@ inside the shores.  No palette colour may be identified with an inherited
 branch-set label without a literal first-hit argument.
 
 The tempting shortcut through only surjective five-colour traces remains
-false:
-even an eight-vertex `K_5`-minor-free boundary matching the static forest,
-two-edge and simplicial-root data can have two surjective Kempe components.
-The maximum-palette theorem bypasses that graph in the non-full branch, but
-the residual one-sided full-trace case still requires host-level response
-and minor-criticality.
+false: even an eight-vertex `K_5`-minor-free boundary matching the static
+forest, two-edge and simplicial-root data can have several surjective Kempe
+components.  The full reconfiguration theorem bypasses that obstruction by
+allowing palette-deficient intermediate traces.  It does not control which
+shore extends those intermediates, so host-level response and
+minor-criticality remain essential.
 
 ### Degree-seven compression
 
