@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "d8f4faf0159e2c7f5ef1070d33fe5d738aab6ae9b2b276321d0c64123dc20872"
+expected_source_sha256 = "41cc10923b8f30975d82f476688d5bbb126d1df6559f96c002afc3df7b1b2b3a"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4323,6 +4323,31 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.two_full_shore_exact_block_kempe_transition"
+title = "Exact-block Kempe transitions across two full shores"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_two_full_shore_exact_block_kempe_transition.md"
+active = true
+audit = "results/hc7_two_full_shore_exact_block_kempe_transition_audit.md"
+expected_source_sha256 = "b9b1c08af789a08c3259f899cd821058d78bfd023e161ee5597a6eabaf127feb"
+scope = "two anticomplete connected boundary-full shores over an unbounded K5-minor-free boundary in a proper-minor six-colourable host"
+label_fidelity = "a prescribed independent boundary set remains the exact sixth colour class; shore kernels and obstruction paths are literal"
+separator_order = "no neighbourhood bound is automatic for the returned list-critical subgraphs"
+colour_compatibility = "the two extension languages lie in one fixed-block Kempe space but remain disjoint"
+conclusions = [
+  "each shore attains every nonempty independent boundary set as the exact sixth colour class",
+  "a distance-one transition gives the same boundary Kempe move obstructed by a path in each shore",
+  "a longer transition gives simultaneous connected vertex-minimal list-uncolourable induced subgraphs under one boundary trace",
+]
+does_not_prove = [
+  "that the distance between extension sets is one",
+  "a full-neighbourhood bound for either list-critical subgraph",
+  "allocation of the obstruction paths to inherited minor-model labels",
+  "a common boundary colouring or HC7",
+]
+
+[[claims]]
 id = "hc7.order8_strict_reversal_d_side_allocation"
 title = "Symmetric two--three allocation in the endpoint-reversal case"
 kind = "theorem"
@@ -4407,6 +4432,25 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.barrier.k5minor_boundary_full_shores_common_colouring"
+title = "A K5-minor-free boundary and two full shores need not have a common colouring"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_k5minor_boundary_full_shores_common_colouring_barrier.md"
+active = true
+audit = "barriers/hc7_k5minor_boundary_full_shores_common_colouring_barrier_audit.md"
+expected_source_sha256 = "18a3f084fd92610090b8f478787a200e9c0610ee914d0eeed52c1e8833959da1"
+scope = "a static two-full-shore construction with a K5-minor-free boundary and a simplicial triangle vertex"
+refutes = [
+  "boundary K5-minor exclusion, a simplicial triangle vertex, shore fullness and separate six-colourability force a common labelled boundary colouring",
+]
+does_not_prove = [
+  "a counterexample with seven-connectivity or contraction-criticality",
+  "a counterexample with K7-minor exclusion",
+  "a counterexample to HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_positive_excess_frozen_outer_shore"
@@ -4436,6 +4480,24 @@ source = "hc7.order8_star_contraction_trace_lobe_hall"
 target = "hc7.order8_rooted_partition_contact_concentration"
 kind = "uses"
 note = "The star-contraction theorem starts from the concentrated two-piece contact pattern and the sole full internal lobe."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.two_full_shore_exact_block_kempe_transition"
+kind = "uses"
+note = "This supplies the canonical fixed-root Kempe-distance dichotomy for the final two-full-shore boundary."
+
+[[relations]]
+source = "hc7.two_full_shore_exact_block_kempe_transition"
+target = "hc7.double_cone_vertex_deletion_equivalence"
+kind = "uses"
+note = "The live application uses the double-cone corollary to make the enlarged boundary K5-minor-free."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.k5minor_boundary_full_shores_common_colouring"
+kind = "guarded_by"
+note = "This prevents replacing the fixed-block transition analysis by a static common-colouring assertion."
 
 [[relations]]
 source = "hc7.order8_rooted_partition_contact_concentration"
@@ -5823,7 +5885,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "d8f4faf0159e2c7f5ef1070d33fe5d738aab6ae9b2b276321d0c64123dc20872"
+evidence_sha256 = "41cc10923b8f30975d82f476688d5bbb126d1df6559f96c002afc3df7b1b2b3a"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5845,7 +5907,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "d8f4faf0159e2c7f5ef1070d33fe5d738aab6ae9b2b276321d0c64123dc20872"
+evidence_sha256 = "41cc10923b8f30975d82f476688d5bbb126d1df6559f96c002afc3df7b1b2b3a"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

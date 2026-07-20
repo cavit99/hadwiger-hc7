@@ -1443,6 +1443,40 @@ the associated proper-minor paths, produce a colour-compatible order-seven
 separation, or give an explicit `K_7` model.  Static star-contraction traces
 alone do not force any of those outcomes.
 
+The boundary minor exclusion also supplies a canonical dynamic comparison
+between the two closed shores.  For every nonempty independent set
+`I subseteq B`, contracting one full shore together with `I` gives a
+colouring of the opposite closed shore in which `I` is exactly the sixth
+colour class.  Since `G[B-I]` is `K_5`-minor-free, all resulting labelled
+five-colour boundary traces lie in one Kempe class while `I` stays fixed.
+
+Apply this with `I={d}`.  A shortest path between the disjoint extension
+sets of the two shores has the following exact dichotomy.
+
+1. If its length is one, the same boundary two-colour component and colour
+   pair are obstructed by a path through `E` and a path through `C`; their
+   nonempty interiors are disjoint.
+2. If its length is at least two, every internal boundary trace is rejected
+   by both shores.  Under one such trace, each shore contains a connected
+   induced vertex-minimal list-uncolourable subgraph.  For a vertex `v` of
+   either subgraph `K`,
+
+   \[
+       d_K(v)\ge 6-
+       |\phi(N_G(v)\cap B)|.                           \tag{8.19}
+   \]
+
+This fixed-block shortest-distance theorem is the canonical global
+transition invariant available in the two-shore residue.  It does not yet
+bound the full neighbourhood of either list-critical subgraph or allocate
+the two obstruction paths to inherited minor-model labels.  The next
+proof-closing theorem must use `K_7`-minor exclusion and the operation-
+specific response to close one of these two outcomes.  Boundary structure
+and shore fullness alone are insufficient: an audited counterexample has
+disjoint extension languages under those static hypotheses, although it
+deliberately contains an explicit `K_7` minor and is not contraction-
+critical.
+
 In the exact three-vertex endpoint-reversal pattern, the
 [symmetric allocation theorem](../results/hc7_order8_strict_reversal_d_side_allocation.md)
 and its

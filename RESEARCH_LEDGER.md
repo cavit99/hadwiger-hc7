@@ -351,6 +351,31 @@ are dynamic concentration patterns, not a closure; the next theorem must
 couple them to a proper-minor transition or a smaller full-neighbourhood
 separator.
 
+The four-colourable boundary can now be used without choosing a finite
+boundary type.  For every nonempty independent set `I` of `G[B]`, both
+closed shores have a six-colouring in which `I` is exactly the sixth colour
+class.  The remaining boundary is `K_5`-minor-free, so the Las
+Vergnas--Meyniel theorem connects all such traces by five-colour Kempe
+interchanges while `I` stays fixed.  With `I={d}`, a shortest path between
+the two disjoint shore-extension sets therefore has one of two outcomes:
+
+1. one boundary Kempe interchange is obstructed by a literal bichromatic
+   path in each open shore, for the same colours and operated boundary
+   component; or
+2. one intermediate trace is rejected by both shores and yields a connected
+   vertex-minimal list-uncolourable induced subgraph in each shore, under
+   the same literal boundary colouring.
+
+This is the rigorous replacement for a permutation-valued “gauge
+holonomy”: the fixed colour class and Kempe distance are canonical, whereas
+branch-set permutations are not.  A separate audited example shows that a
+`K_5`-minor-free boundary, a simplicial triangle vertex and two full shores
+do not force a common colouring by themselves; that example contains a
+`K_7` minor and lacks the live host hypotheses.  The immediate gate is now
+to use global `K_7`-minor exclusion and the selected proper-minor responses
+to close the common-move outcome or turn the two simultaneous list-critical
+subgraphs into an exact-seven compatible separation or strict descent.
+
 The endpoint-reversal subcase is also smaller.  A symmetric two--three
 allocation inside its opposite connected part gives an explicit `K_7`
 whenever the five portal sets have distinct representatives and the
