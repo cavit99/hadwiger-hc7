@@ -43,6 +43,9 @@ Immediate proved inputs, each with an adjacent audit:
 - [opposite colouring responses across the exact two-lobe series separation](../results/hc7_order8_cutvertex_lobe_response_propagation.md)
 - [two--three portal allocation or a confined full-neighbourhood separation](../results/hc7_order8_ordered_two_three_allocation.md)
 - [small five-terminal completions lift to descent or positive boundary excess](../results/hc7_order8_small_completion_host_lift.md)
+- [positive boundary excess reduces to one partitioned opposite shore](../results/hc7_order8_positive_excess_frozen_outer_shore.md)
+- [symmetric two--three allocation in the endpoint-reversal case](../results/hc7_order8_strict_reversal_d_side_allocation.md)
+- [small-side closure and exact Hall-response reduction in the endpoint-reversal case](../results/hc7_order8_strict_reversal_small_side_closure.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
 - [lost-label obstruction at the degree-eight singleton](../results/hc7_order8_singleton_label_obstruction.md)
 - [four boundary-full connected subgraphs and a boundary triangle give a `K_7` minor](../results/hc7_four_boundary_full_subgraphs_triangle_completion.md)
@@ -86,6 +89,8 @@ Immediate barriers:
 - [a common-label paired fan is not terminal without dynamic response data](../barriers/hc7_common_label_paired_fan_k7_barrier.md)
 - [same-shore edge responses and six-colourable shores need not synchronize](../barriers/hc7_exact7_crossing_disjoint_languages_barrier.md)
 - [the three-vertex endpoint-reversal portal pattern survives all static contacts and three Kempe paths](../barriers/hc7_order8_three_vertex_portal_reversal_barrier.md)
+- [connected-piece transfers do not canonically induce permutation holonomy](../barriers/hc7_order8_transfer_holonomy_barrier.md)
+- [symmetric positive-excess cuts do not uncross by neighbourhood submodularity](../barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier.md)
 
 ## General bounded-interface continuation
 

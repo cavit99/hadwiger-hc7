@@ -1356,6 +1356,68 @@ obtain a label-preserving split, a common complete boundary partition, or a
 strict selected-response descent.  Ordinary uncrossing of symmetric low
 cuts is insufficient without that colouring data.
 
+The audited
+[positive-excess component theorem](../results/hc7_order8_positive_excess_frozen_outer_shore.md)
+now gives a complete component normal form.  Write
+
+\[
+ B=N_G(E)=(S-\{e\})\mathbin{\dot\cup}W,
+ \qquad |W|\ge2.
+\]
+
+If a component of `G-B` other than `E` misses a vertex of `B`, its full
+neighbourhood gives a response interface of strictly smaller boundary
+order.  If there are two such complementary components in addition to
+`E`, four connected boundary-full subgraphs and the triangle
+`d x_d y_d d` give an explicit `K_7`-minor model.  Otherwise `G-B` consists
+exactly of `E` and one connected component `C`.  Choosing two disjoint
+connected `S`-full subgraphs of `C`, containing the prescribed `P_0,P_1`,
+with maximum total coverage yields an induced adjacent partition
+
+\[
+                         C=Q_0\mathbin{\dot\cup}Q_1.
+\]
+
+For every boundary partition returned by deleting an `E-B` edge, the
+literal required-set incidence graph between `Q_0,Q_1` and the nonsingleton blocks
+has no saturating matching; each absent incidence is witnessed by a vertex
+of `W`.  If both parts are `B`-full, every returned partition has demand at
+least three.  Contracting an incident two-edge path `u-w-q`, with
+`u in E`, `w in W`, `q in C`, gives either five-colour bichromatic
+saturation at one incident edge or two coupled one-edge responses whose
+boundary partitions differ.  At least one of the two switched components
+meets `B-\{w\}`.  This closes every multiple-complementary-component case
+and leaves one exact two-piece Hall-deficient response obstruction.
+
+In the exact three-vertex endpoint-reversal pattern, the
+[symmetric allocation theorem](../results/hc7_order8_strict_reversal_d_side_allocation.md)
+and its
+[small-side closure](../results/hc7_order8_strict_reversal_small_side_closure.md)
+control the five portal sets on the opposite part.  Distinct
+representatives and a six-connected completion give an explicit `K_7`
+model; Hall failure gives a connected proper subgraph with boundary order
+seven through nine.  The opposite part has order at least five.  At order
+nine the Hall equality types reduce to a four-colourable boundary or
+`K_2\vee C_7`, with the universal pair localized.  The unresolved cases
+are the distinct-representative parts of orders five and six, compatible
+transfer at the four-colourable order-nine boundary, and promotion of the
+localized cyclic pair to a global terminal conclusion.
+
+The audited
+[transfer barrier](../barriers/hc7_order8_transfer_holonomy_barrier.md)
+shows that connected-piece transfers do not canonically induce a
+permutation on the named branch sets.  Their literal inheritance relation
+is not a function; with anchored boundary-full parts the canonical label
+action is the identity, while a centre/donor transposition is
+convention-dependent.  A
+permutation-only holonomy invariant is therefore unavailable.  The live
+transition data are the literal portal ownership, required-set incidences and
+proper-minor boundary responses displayed above.
+Likewise, the
+[symmetric-cut barrier](../barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier.md)
+rules out obtaining the needed strict descent from neighbourhood
+submodularity alone.
+
 Within the three-component branch, the selected component may now be
 assumed singleton or three-connected: induced-path overlap, cutvertices,
 and the complete two-lobe two-cut normal form have been eliminated or
@@ -1414,7 +1476,15 @@ The terminal modes have now been sharpened as follows.
    lie in the all-boundary-fan/label-allocation problem above.  In the
    branch-set-contained labelled subcase a non-singleton component already
    returns an exact order-seven separation, leaving the degree-eight
-   singleton; this containment has not been proved for every component.
+   singleton; this containment has not been proved for every component.  In
+   the ordered positive-excess subbranch, every instance with more than one
+   complementary component now descends or gives an explicit `K_7` model.
+   The exact survivor has one connected opposite component partitioned into
+   two adjacent boundary-full pieces, with every operated response failing
+   the corresponding required-set Hall matching.  In the endpoint-reversal
+   subcase the opposite part has order at least five; the remaining bounded
+   distinct-representative cases have orders five and six, while Hall
+   failures have boundary order seven through nine.
 3. In the shore-filling mode, every all-tight core with at least two Gallai
    blocks is eliminated by the uniform defect-two reflection theorem.  The
    all-tight residue consists only of the bounded one-block `K_4,K_5`
@@ -1433,6 +1503,12 @@ host shore.  Any successful terminal theorem must spend the actual
 one of the three literal host configurations above.
 
 ## Dependencies
+
+- [positive boundary excess reduces to one partitioned opposite shore](../results/hc7_order8_positive_excess_frozen_outer_shore.md)
+- [symmetric two--three allocation in the endpoint-reversal case](../results/hc7_order8_strict_reversal_d_side_allocation.md)
+- [small-side closure and Hall-response reduction in the endpoint-reversal case](../results/hc7_order8_strict_reversal_small_side_closure.md)
+- [connected-piece transfers do not canonically induce permutation holonomy](../barriers/hc7_order8_transfer_holonomy_barrier.md)
+- [symmetric positive-excess cuts do not uncross by neighbourhood submodularity](../barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier.md)
 
 - [connected degree-seven anti-neighbourhood](../results/hc7_degree7_anti_neighbourhood_connectivity.md)
 - [exact matching languages and simultaneous Kempe paths](../results/hc7_degree7_matching_bridge_bundle.md)

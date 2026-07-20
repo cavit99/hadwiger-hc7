@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "e9bd76a29bd7998e4d35530639de1424b65f20c9360142097c6d4ba69dbd57ee"
+expected_source_sha256 = "42c9f304c512080838a8d2cad0373864c5e8c5fdcea1ec87c74fe62caebb4cb4"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -44,7 +44,8 @@ does_not_prove = [
   "HC7",
   "elimination of the singleton nonbipartite exterior",
   "strictness of the exact order-seven component returned by a minimum positive-excess separator",
-  "label allocation or colour synchronization in the boundary-full two-/three-component minimum positive-excess interface",
+  "repair of the final two-piece Hall obstruction in the ordered positive-excess subbranch",
+  "label allocation or colour synchronization in the other boundary-full two-/three-component minimum positive-excess interfaces",
   "closure of the shore-filling positive-list-excess obstruction or the one-block K4/K5 all-tight residue",
   "the degree-eight and degree-nine bounded-interface cases",
 ]
@@ -4221,6 +4222,198 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.order8_positive_excess_frozen_outer_shore"
+title = "Positive boundary excess reduces to one partitioned opposite shore"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_positive_excess_frozen_outer_shore.md"
+active = true
+audit = "results/hc7_order8_positive_excess_frozen_outer_shore_audit.md"
+expected_source_sha256 = "b9e913fbece2258d4a9d8448c2ea414a5f2b76df7ab895ffe3a13a115becc9f3"
+scope = "the positive-boundary-excess outcome of the ordered order-eight opposite-response interface"
+label_fidelity = "all boundary vertices, complementary components, prescribed boundary-full subgraphs, required-set witnesses and operated edges are literal host objects"
+separator_order = "a complementary component missing one boundary vertex gives a strictly smaller full-neighbourhood response boundary"
+colour_compatibility = "the final two-piece shore has exact Hall-deficient operation-specific boundary responses; compatibility remains open"
+conclusions = [
+  "a third complementary component gives an explicit K7-minor model",
+  "otherwise the opposite shore is one connected component partitioned into two adjacent connected subgraphs retaining the prescribed boundary-full subgraphs",
+  "every operated boundary response has an exact Hall-deficient required-set incidence whose missing contacts lie in the internal boundary part",
+  "an incident two-edge contraction gives bichromatic saturation or two coupled one-edge responses with distinct boundary partitions",
+]
+does_not_prove = [
+  "repair of the final two-piece Hall obstruction",
+  "a common complete boundary partition",
+  "allocation of palette colours to inherited branch-set labels",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_strict_reversal_d_side_allocation"
+title = "Symmetric two--three allocation in the endpoint-reversal case"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_strict_reversal_d_side_allocation.md"
+active = true
+audit = "results/hc7_order8_strict_reversal_d_side_allocation_audit.md"
+expected_source_sha256 = "5a506ab80f1a32a0d0e7097c248c626369a16a28cad044e19f4bd220ca8a4335"
+scope = "the exact three-vertex endpoint-reversal subcase of the ordered order-eight interface"
+label_fidelity = "the path vertices, five portal sets, representatives, Xie terminals and K7 branch sets are literal"
+separator_order = "Hall failure gives an opposite part of order at most four or a connected proper subgraph with full neighbourhood of order seven through nine"
+conclusions = [
+  "distinct portal representatives and a six-connected five-terminal completion give an explicit K7-minor model",
+  "failure of distinct representatives gives a side of order at most four or an actual separator of order seven through nine",
+  "if the selected completion is not six-connected and the opposite part has order at least seven, a strict literal connected proper subset is returned with an operation-specific incompatible boundary response",
+]
+does_not_prove = [
+  "elimination of the bounded opposite-part orders at most six",
+  "colour compatibility at every returned separator",
+  "reproduction of the labelled order-eight interface on the strict connected subset",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_strict_reversal_small_side_closure"
+title = "Small-side closure and Hall-response reduction in the endpoint-reversal case"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_strict_reversal_small_side_closure.md"
+active = true
+audit = "results/hc7_order8_strict_reversal_small_side_closure_audit.md"
+expected_source_sha256 = "f69a8b40e92c200b22b4d0afb566c00ba1711d3c046d9b18bdb01e16df3392d4"
+scope = "the endpoint-reversal branch with the merged-root closed-shore colouring and explicit rejection of the split boundary partition"
+label_fidelity = "the Hall portal sets, selected component, operated edge and returned boundary response remain literal"
+separator_order = "Hall failure gives order seven through nine; order seven and order eight enter existing host-level reductions"
+conclusions = [
+  "every opposite part of order at most four is eliminated by a boundary colouring or an explicit K7-minor model",
+  "order-nine Hall equality reduces to a four-colourable boundary or K2 joined with C7",
+  "in the cyclic order-nine case the universal pair is explicitly localized",
+]
+does_not_prove = [
+  "the distinct-representative cases of orders five and six",
+  "compatible transfer at the remaining four-colourable order-nine boundary",
+  "a global terminal conclusion from the localized cyclic pair",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.order8_transfer_holonomy"
+title = "Connected-piece transfers do not canonically induce permutation holonomy"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_order8_transfer_holonomy_barrier.md"
+active = true
+audit = "barriers/hc7_order8_transfer_holonomy_barrier_audit.md"
+expected_source_sha256 = "f65d81020e03b4af9121b43fcddb970efb362fb23b3944253e21020f296a264f"
+scope = "the connected-piece transfers used in the order-eight opposite-response programme"
+refutes = [
+  "legal connected-piece transfers canonically induce permutations of the seven named branch-set labels whose product is a host invariant",
+]
+does_not_prove = [
+  "failure of a transition system retaining literal supports, portals and operation-specific responses",
+  "a counterexample to HC7",
+]
+
+[[claims]]
+id = "hc7.barrier.symmetric_xie_positive_excess_uncrossing"
+title = "Symmetric positive-excess cuts do not uncross by neighbourhood submodularity"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier.md"
+active = true
+audit = "barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier_audit.md"
+expected_source_sha256 = "6c5c54530d6d82cb143601cf58cdf7084ac6340338e20cf78ba21d140235cf04"
+scope = "a computer-assisted finite symmetric positive-excess construction without the live proper-minor response and full-subgraph geometry"
+refutes = [
+  "seven-connectivity, K7-minor exclusion and two symmetric low positive-excess cuts force a smaller full-neighbourhood boundary by submodularity alone",
+]
+does_not_prove = [
+  "a counterexample retaining the two prescribed boundary-full connected subgraphs",
+  "a counterexample with contraction-critical operation-specific responses",
+  "a counterexample to HC7",
+]
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_positive_excess_frozen_outer_shore"
+kind = "uses"
+note = "This closes every multiple-complementary-component positive-excess instance and isolates one partitioned two-piece Hall obstruction."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_strict_reversal_d_side_allocation"
+kind = "uses"
+note = "This gives the symmetric five-portal allocation and the order-seven-through-nine Hall separator in the endpoint-reversal subcase."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_strict_reversal_small_side_closure"
+kind = "uses"
+note = "This eliminates every endpoint-reversal opposite part of order at most four and classifies the order-nine Hall equality types."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.order8_transfer_holonomy"
+kind = "guarded_by"
+note = "This prevents treating convention-dependent branch-set renaming as a canonical global descent invariant."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.symmetric_xie_positive_excess_uncrossing"
+kind = "guarded_by"
+note = "This shows that symmetric low cuts and neighbourhood submodularity do not close positive boundary excess without the operation-specific response and full-subgraph geometry."
+
+[[relations]]
+source = "hc7.order8_positive_excess_frozen_outer_shore"
+target = "hc7.order8_ordered_two_three_allocation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_positive_excess_frozen_outer_shore"
+target = "hc7.order8_small_completion_host_lift"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_positive_excess_frozen_outer_shore"
+target = "hc7.transported_partition_hall_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_positive_excess_frozen_outer_shore"
+target = "hc7.shared_interface_bichromatic_bypass"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_positive_excess_frozen_outer_shore"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+note = "Used only to identify the boundary-order-seven special case; this theorem does not claim the recursive strictness of that returned interface."
+
+[[relations]]
+source = "hc7.order8_strict_reversal_d_side_allocation"
+target = "hc7.order8_ordered_two_three_allocation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_strict_reversal_small_side_closure"
+target = "hc7.order8_strict_reversal_d_side_allocation"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_strict_reversal_small_side_closure"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_strict_reversal_small_side_closure"
+target = "hc7.order8_small_boundary_lobe_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_strict_reversal_small_side_closure"
+target = "hc7.two_full_shore_boundary_absorption"
+kind = "uses"
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.minimum_generic_exact7_relative_connectivity"
@@ -5526,7 +5719,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "e9bd76a29bd7998e4d35530639de1424b65f20c9360142097c6d4ba69dbd57ee"
+evidence_sha256 = "42c9f304c512080838a8d2cad0373864c5e8c5fdcea1ec87c74fe62caebb4cb4"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5548,7 +5741,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "e9bd76a29bd7998e4d35530639de1424b65f20c9360142097c6d4ba69dbd57ee"
+evidence_sha256 = "42c9f304c512080838a8d2cad0373864c5e8c5fdcea1ec87c74fe62caebb4cb4"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6590,4 +6783,19 @@ expected_stdout = [
   "three-piece packing=none; common transversal number=3",
   "treewidth upper bounds: tw(G[S union R])<=5, tw(G[S])<=2",
   "scope: no opposite merged shore, seven-connectivity, or minor-criticality",
+]
+
+[[verifiers]]
+id = "symmetric-xie-positive-excess-uncrossing-barrier"
+path = "barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier_verify.py"
+sha256 = "e9a50b3d8548d19b5a9f265942e00cb851fa4bf2cbc9ae31e7f68d80b461da25"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN symmetric Xie positive-excess uncrossing barrier",
+  "H: vertices=32 edges=90 connectivity=5 degrees(0,4)=(7,7)",
+  "G: vertices=34 edges=155 connectivity=7; exact order-8 separator with component sizes 1,25",
+  "Xie cuts: east=5 terminal-free {0}; west=3 terminal-free {4}",
+  "full boundaries: b(0)=9 b(4)=9 b({0,4})=16 common={p,q}",
+  "scope: no proper-minor response or two-full-subgraph claim",
 ]

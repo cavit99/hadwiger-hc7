@@ -286,6 +286,49 @@ a common complete boundary partition, or a strict selected-response
 descent.  Symmetric low cuts and neighbourhood submodularity alone do not
 supply that conclusion.
 
+The positive-excess outcome now has an unbounded host-level normal form.
+Either a complementary component misses a boundary vertex and gives a
+strict boundary-order response descent, or a third boundary-full component
+combines with the two named full connected subgraphs and a boundary triangle
+to give an explicit `K_7`-minor model.  In the sole surviving case the
+complement of the selected side is one connected component `C`.  A
+maximum-coverage choice partitions
+
+\[
+                     C=Q_0\mathbin{\dot\cup}Q_1
+\]
+
+into adjacent connected subgraphs, each retaining one prescribed
+boundary-full subgraph.  Hence no ambient leftover component remains.  For
+every proper-minor boundary response, exact Hall failure on the literal
+required boundary sets prevents `Q_0,Q_1` from transporting that response to the
+opposite closed shore; every missing contact is witnessed in the internal
+part of the enlarged boundary.  Contracting a two-edge path through any
+such witness gives either full bichromatic saturation or two coupled
+one-edge responses with different boundary partitions.  Thus the remaining
+positive-excess obstruction is precisely this final two-piece Hall-deficient
+configuration, not the existence or coverage of the two pieces.
+
+The endpoint-reversal subcase is also smaller.  A symmetric two--three
+allocation inside its opposite connected part gives an explicit `K_7`
+whenever the five portal sets have distinct representatives and the
+five-terminal completion is six-connected.  Hall failure gives an actual
+separator of order seven through nine.  The entire case in which that
+opposite part has at most four vertices is eliminated; order nine reduces
+to a four-colourable boundary or the cyclic boundary `K_2\vee C_7`, with
+the universal pair explicitly located.  The distinct-representative cases
+of orders five and six and the remaining order-nine colouring transfer are
+not closed.
+
+A permutation-valued transfer “holonomy” is not a valid replacement for
+the literal Hall data.  A connected-piece transfer has a many-to-many
+inheritance relation on branch sets; anchored boundary-full labels are
+fixed, while any centre/donor transposition depends on a naming convention.
+The audited rotation triangle can therefore be assigned either trivial or
+nontrivial permutation product without changing the host configuration.
+Any useful global transition invariant must retain literal supports,
+portals and operation-specific colouring responses.
+
 One important labelled subcase of the order-eight residue is also reduced.
 Suppose a boundary-full component `C` lies wholly in one branch set `U` of
 an extremal spanning labelled `K_7`-minus-one-edge model, `U-C` remains
@@ -372,7 +415,12 @@ terminal modes:
    separation or a terminal minor/colouring outcome, while every selected
    component with a cutvertex strictly descends to order seven, a
    two-component interface, or a singleton, edge, or two-connected
-   three-component residue; or
+   three-component residue; in the ordered positive-excess subbranch,
+   every multiple-complementary-component case now descends or gives a
+   `K_7` minor, leaving one connected opposite component partitioned into
+   two adjacent boundary-full pieces with an exact Hall-deficient response;
+   the endpoint-reversal opposite part has order at least five, with its
+   Hall failures reduced to boundary orders seven through nine; or
 3. a shore-filling positive-excess list-critical core, together with the
    bounded one-block `K_4` and `K_5` all-tight residue.
 
