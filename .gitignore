@@ -11,3 +11,6 @@ archive/runtime_cache/
 # Bulky generated certificates remain preserved in archive/ locally.  Their
 # generating scripts and mathematical summaries are versioned instead.
 archive/*.json
+
+# Project-local virtual environments are reproducible developer state.
+.venv/
