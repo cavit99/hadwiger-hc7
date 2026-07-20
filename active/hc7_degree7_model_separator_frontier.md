@@ -1465,6 +1465,66 @@ locations to obtain one of:
 4. the complete hypotheses of the audited cyclic-contact allocation
    theorem.
 
+The two-component case now has an additional unbounded host-level
+compression.  Seven prescribed response edges at a vertex in either open
+component can be routed while prescribing the omitted boundary vertex; a
+failure gives an actual order-seven response or a strict order-eight
+crossing-edge response descent.  Independently, apply the all-boundary fan
+theorem on both sides while retaining the two edges to one common boundary
+vertex `p`.  Pairing the two fan tails through each member of `S-{p}` gives
+seven disjoint connected columns, including when a fan limb is a direct
+edge.  Together with the root sets `{v,p}` and `{w}` they form a
+`K_2 join J` minor, where `J` is the literal seven-vertex column-contact
+graph.  A `K_5` minor in `J` lifts to seven explicit branch sets, so every
+such contact graph is `K_5`-minor-free in a survivor.  The columns need not
+span the shores, and no connectedness of either side's induced contact
+graph is asserted.
+
+Choose one boundary vertex and adjacent centres in the two full open
+components.  In the absence of an order-seven full-neighbourhood
+separation, deletion of either centre leaves at most three components and
+the two deletions leave at most five components altogether.  The
+four-component case is excluded by an explicit `K_7`-minor construction;
+this uses no bound on the component orders.  Thus the remaining component
+count pairs are
+
+\[
+                    (1,1),(1,2),(1,3),(2,2),
+\]
+
+up to interchanging the shores.
+
+The omitted `(2,3)` pair is now closed.  If one of its five components has
+two neighbours at its deleted centre, a two-path Menger split gives either
+an exact order-seven separation or seven explicit branch sets.  Otherwise
+Dirac's neighbourhood-independence inequality and a complete
+boundary-representative allocation give the seven branch sets directly.
+The argument is unbounded in the component orders.
+
+There is also a scalar obstruction in the branch where one boundary
+colouring produces spanning vertex-minimal list-uncolourable kernels on both
+nontrivial shores.  If `s` is their total order, `C` the total number of
+boundary colours seen at shore vertices, `E` their total list-degree excess
+and `h=|E(G[S])|`, then either a degree-seven singleton-side exact response
+exists or
+
+\[
+                 s\ge24,
+       \qquad E\ge2s+C+2h-48\ge C+2h.                \tag{8.20}
+\]
+
+Consequently the entire paired all-tight family is eliminated.  Positive
+excess remains unbounded and (8.20) is not itself a branch-set allocation
+or a common boundary colouring.
+
+The remaining two-component theorem is therefore sharply response-coupled:
+use the complete family of proper-minor nonextension witnesses to force a
+`K_5` minor in one common literal column/contact system, a complete equality
+partition extending through both shores of an actual order-seven
+separation, or a strict generic selected-response descent.  Contact graphs
+from unrelated fan systems cannot be pooled, and neither ordinary
+connectivity nor one response colouring supplies this conclusion.
+
 In the connected two-component opposite-response subbranch, the same target
 can equivalently be entered through the two-part cover above.  Either the
 two boundary-class-support families have a common transversal of order at
@@ -1749,7 +1809,13 @@ The terminal modes have now been sharpened as follows.
    the corresponding required-set Hall matching.  In the endpoint-reversal
    subcase the opposite part has order at least five; the remaining bounded
    distinct-representative cases have orders five and six, while Hall
-   failures have boundary order seven through nine.
+   failures have boundary order seven through nine.  In the two-component
+   order-eight subbranch, paired prescribed fans, centre deletion and the
+   paired excess inequality further reduce every survivor to one of the
+   four component-count pairs displayed in (8.20)'s preceding paragraph,
+   with a `K_5`-minor-free common column-contact graph and strictly positive
+   spanning list-degree excess.  The operation-specific response families
+   are not yet synchronized.
 3. In the shore-filling mode, every all-tight core with at least two Gallai
    blocks is eliminated by the uniform defect-two reflection theorem.  The
    all-tight residue consists only of the bounded one-block `K_4,K_5`

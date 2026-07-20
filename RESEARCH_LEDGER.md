@@ -57,9 +57,54 @@ entry, exact-block Kempe reduction, generic exact-seven restart, minimum
 positive-excess normal form, cycle-boundary completion or large-boundary
 density descent. The exact revisions and remaining joins are recorded in
 the [verification-gate report](active/hc7_verification_gate_report.md).
-Further proof work should test one host-level response-coupling theorem in
-the two-component order-eight positive-excess case before expanding any
-further labelled residue analysis.
+The current proof wave tests one host-level response-coupling theorem in the
+two-component order-eight positive-excess case.  It has produced the
+checkpoint below; the complete coupling theorem remains open, so no further
+labelled residue expansion is presently justified.
+
+### Order-eight response-coupling checkpoint
+
+Six new audited, unbounded reductions compress the two-component
+order-eight branch.
+
+1. Seven prescribed edges at a vertex in one open component can be routed
+   while prescribing the one omitted boundary vertex, or they return an
+   actual order-seven response or strict order-eight response descent.
+   Independently, two all-boundary fans pair through the seven boundary
+   vertices other than one common root to give seven literal columns.  A
+   `K_5` minor in their contact graph lifts to an explicit `K_7`-minor
+   model.
+2. After choosing one boundary vertex and adjacent centres in the two full
+   components, absence of an order-seven full-neighbourhood separation
+   leaves at most three components behind either centre and at most five
+   components in total.  The entire four-component case is eliminated by
+   an explicit minor-model construction, without bounding component order.
+3. If one fixed boundary colouring produces spanning vertex-minimal
+   list-uncolourable kernels on both nontrivial shores, then either a
+   degree-seven singleton-side response exists or, writing `s` for the
+   total shore order and `E` for the total list-degree excess,
+
+   \[
+        s\ge24,\qquad E\ge2s+C+2|E(G[S])|-48\ge C+2|E(G[S])|.
+   \]
+
+   In particular, the whole paired all-tight family is eliminated.
+4. The mixed `(2,3)` centre-component configuration always gives an actual
+   order-seven separation or an explicit `K_7`-minor model, with no bound on
+   the five component orders.
+5. The sharp remaining component-count pairs are `(1,1)`, `(1,2)`,
+   `(1,3)` and `(2,2)`, up to interchanging the shores.  Every
+   paired fan contact graph is `K_5`-minor-free, and any spanning paired
+   list-critical residue has positive excess satisfying the displayed
+   bound.
+
+These statements do not synchronize the two proper-minor response families.
+The exact remaining theorem must use the complete operation-specific
+nonextension data to force a `K_5` minor in one common literal contact graph,
+one equality partition extending through both closed shores of an actual
+order-seven separation, or a strict generic selected-response descent.
+Ordinary connectivity, a single fan, or the excess inequality alone is
+insufficient.
 
 ### Order-nine positive-excess subbranch
 

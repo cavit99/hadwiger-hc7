@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "4df2a6cc3428f8b11e33b7ab5ad7d35a86d10bf15fdca53ee3fcf6683ddb01cd"
+expected_source_sha256 = "10cba49147b94e7befb0ad1e96632c99d8e3a24a64a8a714e18103dbd787f103"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4990,11 +4990,183 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.relative_prescribed_seven_spoke_fan"
+title = "Prescribed seven-spoke fan or exact order-seven separation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_relative_prescribed_seven_spoke_fan.md"
+active = true
+audit = "results/hc7_relative_prescribed_seven_spoke_fan_audit.md"
+expected_source_sha256 = "86ba00c00f4ffe900db1e991f95ca3907b3b63342e0ca3c665cb9c267c381bd5"
+scope = "one or two components behind an eight-vertex separator in a seven-connected host"
+label_fidelity = "prescribed first edges, literal boundary endpoints and one common paired column system"
+separator_order = "exact seven"
+does_not_prove = [
+  "that the returned order-seven separation has compatible closed-shore colourings",
+  "a K5 minor in every paired column-contact graph",
+  "the complete two-component response-coupling theorem",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_center_component_clique_decoder"
+title = "Centre-component clique decoder at an order-eight boundary"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_center_component_clique_decoder.md"
+active = true
+audit = "results/hc7_order8_center_component_clique_decoder_audit.md"
+expected_source_sha256 = "23cf75d1aa0d64866fa2c33e6a53579bbf1d4153d8137d7bbe57d80baf2c5189"
+scope = "one or two selected centres in the two-full-component order-eight interface"
+label_fidelity = "literal centre paths, component branch sets and distinct boundary representatives"
+separator_order = "exact seven when a centre-deleted component misses at least two boundary vertices"
+does_not_prove = [
+  "closure when at most four centre-deleted components remain",
+  "compatible colourings on a returned order-seven separation",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_four_centre_components_closure"
+title = "Four components behind a response centre force a K7 minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_four_centre_components_closure.md"
+active = true
+audit = "results/hc7_order8_four_centre_components_closure_audit.md"
+expected_source_sha256 = "ab00e80d7a36d10b18ce16c343f2289a2b92281ca49917ea4b04bea5514f0eb8"
+scope = "a response centre whose deletion has four nearly boundary-full components"
+label_fidelity = "explicit connected branch sets and literal boundary representatives"
+does_not_prove = [
+  "closure when deletion of the centre leaves one, two or three components",
+  "compatible colourings on a returned order-seven separation",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_paired_spanning_excess_density"
+title = "Excess density for paired spanning list-critical kernels"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_paired_all_tight_closure.md"
+active = true
+audit = "results/hc7_order8_paired_all_tight_closure_audit.md"
+expected_source_sha256 = "9a3473314f9e57e09b9bee26fce830e6b3d252f0d8ce52c8537051fcfdf418b5"
+scope = "a minimum order-eight two-component interface with one fixed boundary colouring and spanning list-critical kernels on both nontrivial shores"
+strict_parameter = "lexicographic boundary order and selected shore order"
+does_not_prove = [
+  "existence of spanning paired list-critical kernels under one boundary colouring in every interface",
+  "conversion of positive list-degree excess into labelled branch sets",
+  "synchronization of the two response families",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_two_three_centre_component_closure"
+title = "Two--three centre-component configuration closes"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_two_three_centre_component_closure.md"
+active = true
+audit = "results/hc7_order8_two_three_centre_component_closure_audit.md"
+expected_source_sha256 = "b29c5aeabe36d406b7817c851d976cad544d19f9f325aac4435ec8d86878dd69"
+scope = "two boundary-full order-eight components whose selected centre deletions have two and three components"
+label_fidelity = "literal centre roots, connected components and distinct boundary representatives"
+separator_order = "exact seven"
+does_not_prove = [
+  "closure of the remaining component-count pairs (1,1), (1,2), (1,3) and (2,2)",
+  "compatible colourings on the returned order-seven separation",
+  "the complete order-eight response-coupling theorem",
+  "HC7",
+]
+
+[[claims]]
+id = "hc7.order8_prescribed_omission_paired_columns"
+title = "Prescribed omission and paired all-boundary columns"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_order8_prescribed_omission_paired_column_decoder.md"
+active = true
+audit = "results/hc7_order8_prescribed_omission_paired_column_decoder_audit.md"
+expected_source_sha256 = "7ea7d3a9558113b2143369bd936950918e71dec454c5ae22c5e90f85adb01160"
+scope = "two boundary-full components behind an eight-vertex separator in a seven-connected host"
+label_fidelity = "prescribed first edges, a prescribed omitted boundary vertex and seven literal paired columns"
+separator_order = "seven, or a strict crossing-edge response side of order eight"
+does_not_prove = [
+  "a K5 minor in the seven-vertex column-contact graph",
+  "that the columns span either shore",
+  "a common boundary equality partition",
+  "the complete response-coupling theorem",
+  "HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_positive_excess_frozen_outer_shore"
 kind = "uses"
 note = "This closes every multiple-complementary-component positive-excess instance and isolates one partitioned two-piece Hall obstruction."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.relative_prescribed_seven_spoke_fan"
+kind = "uses"
+note = "This gives a literal paired column system or an actual exact order-seven full-neighbourhood separation."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_center_component_clique_decoder"
+kind = "uses"
+note = "This bounds the total number of centre-deleted components and supplies explicit clique-based K7 decoders."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_four_centre_components_closure"
+kind = "uses"
+note = "This removes the entire four-component centre-deletion family without bounding component order."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_paired_spanning_excess_density"
+kind = "uses"
+note = "This eliminates every paired spanning all-tight residue and gives the sharp current positive-excess lower bound."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_two_three_centre_component_closure"
+kind = "uses"
+note = "This removes the full mixed (2,3) centre-component family, leaving total centre-deleted component count at most four."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.order8_prescribed_omission_paired_columns"
+kind = "uses"
+note = "This controls the omitted endpoint of prescribed response fans and supplies one seven-column K2-join contact model."
+
+[[relations]]
+source = "hc7.order8_prescribed_omission_paired_columns"
+target = "hc7.order8_all_boundary_source_fan"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_two_three_centre_component_closure"
+target = "hc7.order8_center_component_clique_decoder"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_four_centre_components_closure"
+target = "hc7.order8_center_component_clique_decoder"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_paired_spanning_excess_density"
+target = "hc7.minimum_positive_separator_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.order8_paired_spanning_excess_density"
+target = "hc7.large_boundary_singleton_response_descent"
+kind = "uses"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6670,7 +6842,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "4df2a6cc3428f8b11e33b7ab5ad7d35a86d10bf15fdca53ee3fcf6683ddb01cd"
+evidence_sha256 = "10cba49147b94e7befb0ad1e96632c99d8e3a24a64a8a714e18103dbd787f103"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6692,7 +6864,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "4df2a6cc3428f8b11e33b7ab5ad7d35a86d10bf15fdca53ee3fcf6683ddb01cd"
+evidence_sha256 = "10cba49147b94e7befb0ad1e96632c99d8e3a24a64a8a714e18103dbd787f103"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
