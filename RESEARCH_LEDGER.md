@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 19 July 2026
+**Last updated:** 20 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
 This file records the current mathematical dependency chain. The concise
@@ -28,6 +28,34 @@ seven, eight, or nine and an actual full separation whose boundary has the
 same order.  The adjacent-pair colouring framework can be aligned with that
 boundary.  The boundary is four-colourable, and both closed shores realize
 strong operation-specific boundary-colouring constraints.
+
+### Current narrowed endpoint
+
+In the connected two-shore positive-excess branch, the two extension
+languages now lie in one Kempe-reconfiguration graph while any prescribed
+nonempty independent boundary set remains the exact sixth colour class.  A
+shortest transition gives either the same obstructed boundary interchange
+through both shores or simultaneous vertex-minimal list-uncolourable
+subgraphs under one fixed boundary trace.
+
+A new audited density theorem removes every boundary of order at least ten:
+such a boundary forces a singleton-side response of order seven or a
+strictly smaller boundary response.  Hence the live enlarged boundary has
+exactly nine vertices, the enlarged contact set has order two, and in the
+long-transition branch both list-critical subgraphs span their shores.
+Every opposite pair deletion then has a fixed-trace six-colouring saturating
+both deleted vertices, and each shore vertex satisfies the exact excess
+inequality `epsilon(v)+rho(v)>=3`; tight vertices induce a Gallai forest.
+
+The exact open gate is now the order-nine spanning endpoint (together with
+the one-move obstructed-path endpoint): convert its operation-specific,
+literal first-hit data into an explicit `K_7`-minor model or a
+colour-compatible order-seven separation.  A finite audited barrier shows
+that attaining every independent exact block, even on both connected full
+shores, cannot alone force a one-move transition or a common trace.  The
+remaining proof must visibly use global `K_7`-minor exclusion and operations
+inside the shores.  No palette colour may be identified with an inherited
+branch-set label without a literal first-hit argument.
 
 ### Degree-seven compression
 

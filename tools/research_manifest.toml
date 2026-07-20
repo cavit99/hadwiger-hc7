@@ -22,7 +22,7 @@ status = "active-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = true
-expected_source_sha256 = "41cc10923b8f30975d82f476688d5bbb126d1df6559f96c002afc3df7b1b2b3a"
+expected_source_sha256 = "c1d20f2cdea551c2d7eb250a64d37f4ac89e1f359230773682c872d5799fdb30"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -4348,6 +4348,32 @@ does_not_prove = [
 ]
 
 [[claims]]
+id = "hc7.large_boundary_singleton_response_descent"
+title = "Large K5-minor-free boundaries force a smaller singleton response"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_large_boundary_singleton_response_descent.md"
+active = true
+audit = "results/hc7_large_boundary_singleton_response_descent_audit.md"
+expected_source_sha256 = "bce97974e2d3d543aaf9ae2f07ff13b61684ddc9cb6bdf08bacdb750c2be2c97"
+scope = "two nonempty anticomplete shores separated by an unbounded K5-minor-free boundary in a seven-connected seven-chromatic K7-minor-free host"
+strict_parameter = "boundary order for the singleton response; a proper paired kernel gives only a fresh smaller connected side, not a labelled recursive instance"
+label_fidelity = "the singleton response and its full neighbourhood are literal; the old exact block and inherited model labels need not survive"
+separator_order = "every boundary of order at least ten returns an exact order-seven or strictly smaller singleton response; the live endpoint has boundary order nine"
+colour_compatibility = "the order-nine spanning endpoint retains one exact boundary trace but still lacks a common shore extension"
+conclusions = [
+  "a K5-minor-free boundary of order at least ten forces a shore vertex of degree between seven and one less than the boundary order",
+  "the live enlarged boundary reduces to order nine with the added contact set of order two",
+  "the residual long-transition endpoint has two spanning list-critical shores with simultaneous fixed-trace saturated opposite-pair deletions",
+  "every residual shore vertex has list-degree excess plus repeated-boundary-colour count at least three and the tight vertices induce a Gallai forest",
+]
+does_not_prove = [
+  "closure of the order-nine spanning endpoint",
+  "preservation of the old exact block or branch-set labels under a fresh component transfer",
+  "a common boundary colouring or HC7",
+]
+
+[[claims]]
 id = "hc7.order8_strict_reversal_d_side_allocation"
 title = "Symmetric two--three allocation in the endpoint-reversal case"
 kind = "theorem"
@@ -4451,6 +4477,25 @@ does_not_prove = [
   "a counterexample to HC7",
 ]
 
+[[claims]]
+id = "hc7.barrier.simplicial_boundary_all_exact_blocks_distance"
+title = "All independent exact blocks need not yield a one-move shore transition"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_simplicial_boundary_all_exact_blocks_distance_barrier.md"
+active = true
+audit = "barriers/hc7_simplicial_boundary_all_exact_blocks_distance_barrier_audit.md"
+expected_source_sha256 = "b2366c61be349ae398529896a65449f7c42db1e974efbb7a83255b292e3f4a2f"
+scope = "a computer-assisted finite extension-language construction on a K5-minor-free nine-vertex boundary with a simplicial triangle vertex and two connected full shores"
+refutes = [
+  "attaining every nonempty independent set as an exact block on both shores forces a common trace or a one-move fixed-block Kempe transition",
+]
+does_not_prove = [
+  "a counterexample with K7-minor exclusion, seven-connectivity or full minor-criticality",
+  "a counterexample to a theorem using operations internal to the shores",
+  "a counterexample to HC7",
+]
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_positive_excess_frozen_outer_shore"
@@ -4488,6 +4533,18 @@ kind = "uses"
 note = "This supplies the canonical fixed-root Kempe-distance dichotomy for the final two-full-shore boundary."
 
 [[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.large_boundary_singleton_response_descent"
+kind = "uses"
+note = "This removes every live enlarged boundary of order at least ten and isolates the order-nine spanning paired-kernel endpoint."
+
+[[relations]]
+source = "hc7.large_boundary_singleton_response_descent"
+target = "hc7.two_full_shore_exact_block_kempe_transition"
+kind = "uses"
+note = "The order-nine endpoint is the long-transition branch of the fixed-block Kempe dichotomy."
+
+[[relations]]
 source = "hc7.two_full_shore_exact_block_kempe_transition"
 target = "hc7.double_cone_vertex_deletion_equivalence"
 kind = "uses"
@@ -4498,6 +4555,12 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.k5minor_boundary_full_shores_common_colouring"
 kind = "guarded_by"
 note = "This prevents replacing the fixed-block transition analysis by a static common-colouring assertion."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.simplicial_boundary_all_exact_blocks_distance"
+kind = "guarded_by"
+note = "This prevents using the collection of all exact-independent-block cylinders alone to force distance one or a common trace."
 
 [[relations]]
 source = "hc7.order8_rooted_partition_contact_concentration"
@@ -5885,7 +5948,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 436
 evidence_end_line = 444
-evidence_sha256 = "41cc10923b8f30975d82f476688d5bbb126d1df6559f96c002afc3df7b1b2b3a"
+evidence_sha256 = "c1d20f2cdea551c2d7eb250a64d37f4ac89e1f359230773682c872d5799fdb30"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -5907,7 +5970,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 61
 evidence_end_line = 84
-evidence_sha256 = "41cc10923b8f30975d82f476688d5bbb126d1df6559f96c002afc3df7b1b2b3a"
+evidence_sha256 = "c1d20f2cdea551c2d7eb250a64d37f4ac89e1f359230773682c872d5799fdb30"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -6964,4 +7027,16 @@ expected_stdout = [
   "Xie cuts: east=5 terminal-free {0}; west=3 terminal-free {4}",
   "full boundaries: b(0)=9 b(4)=9 b({0,4})=16 common={p,q}",
   "scope: no proper-minor response or two-full-subgraph claim",
+]
+
+[[verifiers]]
+id = "simplicial-boundary-all-exact-blocks-distance-barrier"
+path = "barriers/hc7_simplicial_boundary_all_exact_blocks_distance_barrier_verify.py"
+sha256 = "830cd896d155e973f96a09318cea5809e0ac6406a649a703d206fb49a891ce0f"
+timeout = 30
+expected_stdout = [
+  "states=744 kempe_edges=6708 independent_blocks=39",
+  "left_states=16 right_states=17 cross_kempe_edges=0",
+  "exact_block_quotient_distances: 2=>33 3=>6",
+  "PASS: every independent exact block occurs on both sides at distance at least two",
 ]

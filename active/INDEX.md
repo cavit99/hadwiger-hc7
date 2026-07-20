@@ -48,6 +48,7 @@ Immediate proved inputs, each with an adjacent audit:
 - [double-cone deletion equivalence makes the enlarged boundary `K_5`-minor-free and four-colourable](../results/hc7_double_cone_vertex_deletion_equivalence.md)
 - [star-contraction traces and the exact three-support Hall obstruction](../results/hc7_order8_star_contraction_trace_and_lobe_hall.md)
 - [exact-block Kempe transitions across two full shores](../results/hc7_two_full_shore_exact_block_kempe_transition.md)
+- [large `K_5`-minor-free boundaries force an exact-seven or smaller singleton response](../results/hc7_large_boundary_singleton_response_descent.md)
 - [symmetric two--three allocation in the endpoint-reversal case](../results/hc7_order8_strict_reversal_d_side_allocation.md)
 - [small-side closure and exact Hall-response reduction in the endpoint-reversal case](../results/hc7_order8_strict_reversal_small_side_closure.md)
 - [six-label branch-set-contained component reduction to an exact order-seven separation or a degree-eight singleton](../results/hc7_order8_six_label_donor_fan_reduction.md)
@@ -96,6 +97,7 @@ Immediate barriers:
 - [connected-piece transfers do not canonically induce permutation holonomy](../barriers/hc7_order8_transfer_holonomy_barrier.md)
 - [symmetric positive-excess cuts do not uncross by neighbourhood submodularity](../barriers/hc7_symmetric_xie_positive_excess_uncrossing_barrier.md)
 - [`K_5`-minor-free boundary structure and two full shores do not force a common colouring](../barriers/hc7_k5minor_boundary_full_shores_common_colouring_barrier.md)
+- [even all independent exact blocks do not force a one-move shore transition](../barriers/hc7_simplicial_boundary_all_exact_blocks_distance_barrier.md)
 
 ## General bounded-interface continuation
 

@@ -1271,6 +1271,32 @@ Accordingly, the live geometric obligation is to construct that third
 subgraph from the clean fan or to allocate the fan to the five literal
 branch-set labels.
 
+For the final two-full-shore positive-excess configuration, exact-block
+Kempe reconfiguration gives a second uniform entry.  Fixing any nonempty
+independent boundary set as the exact sixth colour class, a shortest path
+between the two shore-extension languages gives either one boundary
+interchange obstructed by a literal path through each shore, or two
+simultaneous vertex-minimal list-uncolourable shore subgraphs for the same
+boundary trace.  Mader's bound together with the equality classification
+now removes every boundary of order at least ten: it returns an exact
+order-seven singleton response or a strictly smaller boundary response.
+Thus the live enlarged boundary has order nine, `|W|=2`, and the unresolved
+long-transition endpoint has both list-critical subgraphs spanning their
+shores.  At that endpoint every opposite pair deletion is six-colourable
+with the same boundary trace and saturates both deleted vertices; moreover
+every shore vertex has list-degree excess plus repeated-boundary-colour
+count at least three, with the tight vertices inducing a Gallai forest.
+
+This is a genuine host-level reduction, but not yet label allocation.  A
+separate finite barrier realizes every independent exact block on both
+connected full shores while keeping all fixed-block Kempe distances at
+least two.  It deliberately lacks `K_7`-minor exclusion and full
+minor-criticality.  Consequently varying the fixed block cannot by itself
+close the endpoint; the next theorem must use an internal operation or
+global minor exclusion to turn the paired spanning obstruction (or the
+one-move pair of paths) into the labelled construction or compatible
+separator below.
+
 The immediate order-eight theorem is therefore the following.  In the
 minimum positive-excess boundary-full interface, with either two
 complementary components or one of the audited 82 three-component boundary
