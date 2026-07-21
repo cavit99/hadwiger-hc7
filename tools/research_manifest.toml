@@ -5476,6 +5476,31 @@ does_not_prove = [
 keywords = ["shared hub", "two-apex", "Kuratowski subdivision", "icosahedron", "dirty path"]
 
 [[claims]]
+id = "hc7.atomic_subdivision_first_hit_boundary"
+title = "First-hit boundaries in an arbitrary atomic H0 subdivision"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_subdivision_first_hit_boundary.md"
+active = false
+audit = "results/hc7_atomic_subdivision_first_hit_boundary_audit.md"
+expected_source_sha256 = "3e359812caa2fa7fe9206b1be8e44f7b530fd714a06f0a6cba68a648feb15640"
+scope = "an arbitrary labelled H0 subdivision with marked vertices on ad, bc and fg and literal eh,hx contacts in a seven-connected host"
+label_fidelity = "the marked route points, complete clean first-hit regions, endpoint supports, route-star ownership and every explicit K7 branch-set contact remain literal"
+separator_order = "an actual order-seven first-hit boundary at equality; otherwise an order-eight or order-nine branch-set separator if the normalized root-to-h path is absent"
+conclusions = [
+  "the two first-hit regions are anticomplete, have at least seven attachments and lie in complementary bridge quadrants",
+  "two first-hit contacts on the common fg route give an explicit K7 model",
+  "one T-bridge joining the open f- and g-incident route stars gives an explicit K7 model, so every bridge in the K7-free residue is one-sided",
+  "the remaining root-to-h path first returns to T outside fg and may be normalized to meet every elementary route interval in one connected subpath, or its absence gives a separator of order eight or nine",
+]
+does_not_prove = [
+  "that the surviving one-sided bridges form a laminar or bounded chain decomposition",
+  "compatible proper-minor responses on the returned separators or a strict same-host component reduction",
+  "closure of the normalized multi-bridge central-interval residue, the single-collision disjunction, or HC7",
+]
+keywords = ["first hit", "quadrant bridge", "route interval", "one-sided bridge", "bounded separator"]
+
+[[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
 title = "Atomic weak-immersion guardrail in the two-apex icosahedron"
 kind = "barrier"
@@ -5682,6 +5707,24 @@ source = "hc7.atomic_shared_hub_two_apex_exclusion"
 target = "hc7.target.bounded_interface_bridge"
 kind = "related_to"
 note = "The result eliminates the standard two-apex falsification family for the exact labelled residue but does not decode a less literal dirty path into the active terminal outcomes."
+
+[[relations]]
+source = "hc7.atomic_subdivision_first_hit_boundary"
+target = "hc7.atomic_h0_bridge_quadrant_normal_form"
+kind = "uses"
+note = "Clean paths from the marked roots invoke the audited cross-pair closure, while every surviving first-hit boundary is confined to the corresponding complementary quadrant."
+
+[[relations]]
+source = "hc7.atomic_subdivision_first_hit_boundary"
+target = "hc7.atomic_shared_hub_seven_fan_closure"
+kind = "related_to"
+note = "The first-hit theorem works in an arbitrary subdivision and replaces the exact finite core by literal boundary regions, but leaves a multi-bridge interval chain that the exact fan certificates do not cover."
+
+[[relations]]
+source = "hc7.atomic_subdivision_first_hit_boundary"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "It returns an actual order-seven separator or narrows the dirty path to a normalized one-sided bridge chain; compatible responses or a strict component descent remain the active obligation."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"

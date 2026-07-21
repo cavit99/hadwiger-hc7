@@ -214,7 +214,19 @@ this target. It does not change the authoritative hierarchy above.
   subdivision, so no subdivision of that graph occurs in any two-apex host.
   In particular, the standard `K_2`-joined planar guardrails cannot falsify the
   exact shared-hub extension; a counterexample must weaken its literal
-  subdivision structure or leave the two-apex class.  The adjacent
+  subdivision structure or leave the two-apex class.  The audited
+  [arbitrary-subdivision first-hit theorem](results/hc7_atomic_subdivision_first_hit_boundary.md)
+  now advances that less literal case.  The two marked first-hit regions are
+  anticomplete, have at least seven attachments in complementary quadrants,
+  and expose an actual order-seven separator at equality.  Contacts from both
+  regions inside the common `fg` route give an explicit `K_7`, as does any
+  single `T`-bridge joining the open `f`- and `g`-incident route stars.  Hence
+  every surviving bridge is one-sided.  A missing branch-avoiding path returns
+  a separator of order eight or nine; an existing path has a normalized trace
+  meeting each elementary route interval in at most one connected subpath and
+  first returns outside `T_fg`.  The remaining configuration is therefore a
+  genuinely multi-bridge chain through intervening route intervals, not an
+  arbitrary dirty path.  The adjacent
   [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
   shows that individually two-apex bridge certificates need not share an
   apex pair and that normalized dominating `K_5` models may regenerate
@@ -265,9 +277,12 @@ this target. It does not change the authoritative hierarchy above.
   lift or improve the lexicographic collision potential.  The exact sparse
   example is nevertheless excluded from every seven-connected `K_7`-minor-free
   host by the new fan-saturation theorem, and no subdivision of it occurs in a
-  two-apex host.  What remains open is the general dirty-path case, where extra
-  intersections with subdivision-route interiors need not retain the exact
-  labelled subgraph or its finite endpoint certificates.  The
+  two-apex host.  In an arbitrary subdivision, the first-hit theorem closes
+  two-sided `fg` contacts and every single bridge spanning the two clean route
+  stars.  What remains open is a normalized one-sided multi-bridge chain through
+  central route intervals, or the order-eight/order-nine separator obtained
+  when the corresponding branch-avoiding path is absent.  Neither alternative
+  yet carries a compatible response or a strict host reduction.  The
   six-connected barrier also rules out intersecting individual two-apex
   certificates or invoking bare dominating-model regeneration.  The
   single-collision gate therefore remains open, and this route does not
