@@ -12,21 +12,28 @@ consequences.
 - theorem note:
   [`hc7_atomic_two_bridge_exact_core_seven_fan_closure.md`](hc7_atomic_two_bridge_exact_core_seven_fan_closure.md),
   SHA-256
-  `dc5536fa551f1445fc002b54222cf3fa0199f0b68fe095371a9dcfcbf386cca0`;
+  `8b9f49194481008bdbae246b439ed1a47a3a8919209e3787e87c1f5767fb1b86`;
 - retained verifier:
   [`hc7_atomic_two_bridge_exact_core_seven_fan_closure_verify.py`](hc7_atomic_two_bridge_exact_core_seven_fan_closure_verify.py),
   SHA-256
   `4d82cc207c05c1d6a5bf9495ad130acbe4495a47c4b7d600d08b6aec0ed6d319`.
 
-The theorem is the promoted revision.  Its only change from the audited
-draft is the status line from audit pending to GREEN: replacing that line
+The mathematically promoted revision changed only the status line from audit
+pending to GREEN: replacing that line
 by the former text reproduces the draft SHA-256
 `b0861b4debbf040c42b0965b68fc8f752dd0128cfc61847e0188914c161302a8`.
-The verifier is byte-identical.  I did not alter either audited file.  In
-addition to rerunning the retained verifier, I reconstructed the graph
+The verifier is byte-identical.  The original audit did not alter either
+audited file.  In addition to rerunning the retained verifier, I reconstructed the graph
 independently from its literal edge description, rechecked every branch-set
 pair in the five augmented models, and derived the surviving route skeleton
 directly from the edge set.
+
+The current theorem-note hash above includes one later documentation-only
+correction: the displayed verifier command now uses the tracked `results/`
+path instead of the stale former `active/` path.  The mathematical statement,
+proof, certificates, and verifier are unchanged; the immediately preceding
+promoted source hash was
+`dc5536fa551f1445fc002b54222cf3fa0199f0b68fe095371a9dcfcbf386cca0`.
 
 ## 1. Exact graph and five positive certificates
 

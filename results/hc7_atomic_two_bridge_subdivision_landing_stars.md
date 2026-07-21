@@ -172,7 +172,7 @@ incident with `b,d,f`, or `h`.
 If neither alternative in (3.2) held, `Omega_q` would meet both regions in
 (1.1), and Theorem 2.1 would give a `K_7` minor.  \(\square\)
 
-## 4. Boundaries of order at most nine carry the full response
+## 4. A minimum separator of order at most nine carries the full response
 
 ### Theorem 4.1 (first-hit response dichotomy)
 
@@ -236,11 +236,12 @@ the five displayed landing arms.  The surviving case avoids every internal
 point and the centre of one complete subdivided star, not merely the two
 literal endpoints.
 
-Theorem 4.1 removes every first-hit separator of order at most nine by
-returning it to the audited response machinery.  In the exact unresolved
-case, every `q`--`b` separator contained in `Omega_q` has order at least ten,
-and `Omega_q` avoids the centre and every internal route vertex of one
-complete subdivided star.  Seven-connectivity alone has not yet forced
+Theorem 4.1 chooses a minimum-cardinality `q`--`b` separator contained in
+`Omega_q` and returns that separator to the audited response machinery when
+its order is at most nine.  In the exact unresolved case, every such
+separator has order at least ten, and `Omega_q` avoids the centre and every
+internal route vertex of one complete subdivided star.  Seven-connectivity
+alone has not yet forced
 the first-hit region to meet both stars.  A path from `q` to the avoided star
 can traverse other labelled vertices or core-route intervals, and putting
 those vertices in the common branch set can destroy one of the contacts in

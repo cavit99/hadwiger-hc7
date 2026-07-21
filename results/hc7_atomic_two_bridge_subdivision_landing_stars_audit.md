@@ -29,6 +29,18 @@ replacement has expected promoted SHA-256
 No theorem statement, proof text, construction, or dependency citation changes
 under that replacement.
 
+On 21 July 2026, documentation synchronization narrowed the Section 4
+heading and its later summary from the ambiguous phrase "every first-hit
+separator" to the exact quantifier already stated and audited in Theorem
+4.1: one minimum-cardinality contained separator carries the response when
+its order is at most nine; otherwise all contained separators have order at
+least ten.  The theorem statement and proof are unchanged.  The resulting
+current source SHA-256 is
+
+```text
+4430ad1bdb42e9de8f89080dbd4e99e0e5c23389a3dc14b3e02ba2259440bc32
+```
+
 ## 1. Setup and clean first-hit paths
 
 I reconstructed the thirteen-vertex graph `C` from its literal description:
@@ -168,11 +180,11 @@ The exact dependency revisions checked were:
 - exact-core theorem
   [`hc7_atomic_two_bridge_exact_core_seven_fan_closure.md`](hc7_atomic_two_bridge_exact_core_seven_fan_closure.md),
   SHA-256
-  `dc5536fa551f1445fc002b54222cf3fa0199f0b68fe095371a9dcfcbf386cca0`;
+  `8b9f49194481008bdbae246b439ed1a47a3a8919209e3787e87c1f5767fb1b86`;
 - adjacent exact-core audit
   [`hc7_atomic_two_bridge_exact_core_seven_fan_closure_audit.md`](hc7_atomic_two_bridge_exact_core_seven_fan_closure_audit.md),
   SHA-256
-  `9b83f0cf261859770c552495a46d09da8c076302f3b95b63207bef9762053216`;
+  `c5326e4e3f7d68d241c885e3cfde7afe3dbf2bae9630a52b12c5420f2c5917ea`;
 - retained exact-core verifier
   [`hc7_atomic_two_bridge_exact_core_seven_fan_closure_verify.py`](hc7_atomic_two_bridge_exact_core_seven_fan_closure_verify.py),
   SHA-256
@@ -189,6 +201,9 @@ The exact dependency revisions checked were:
 The retained exact-core verifier reran GREEN under `.venv/bin/python`.  This
 audit checks the hypotheses and exact use of the two promoted dependencies;
 it does not reopen the proofs internal to those hash-matched audited results.
+The exact-core source differs from the originally audited promoted revision
+only by correcting the displayed verifier command from its former `active/`
+path to its tracked `results/` path; its theorem and proof are unchanged.
 The landing-star theorem does not force the first-hit boundary to meet both
 stars and does not turn the surviving large one-star-avoidance case into a
 strict same-form reduction.  Those are explicit scope limits, not gaps in

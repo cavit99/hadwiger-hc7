@@ -42,7 +42,7 @@ the final model together with one named edge for each of its 21
 adjacencies.  Run it from the repository root with
 
 ```text
-.venv/bin/python -B active/hc7_atomic_two_bridge_exact_core_seven_fan_closure_verify.py
+.venv/bin/python -B results/hc7_atomic_two_bridge_exact_core_seven_fan_closure_verify.py
 ```
 
 ## 2. Five terminal fan endpoints at `q`

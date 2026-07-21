@@ -85,28 +85,34 @@ independent-block contraction and colour gluing. It does **not** supply a
 small transversal, an apex pair, or a common boundary partition in the
 remaining cases.
 
-### 3. Immediate pentagonal-bipyramid laboratory
+### 3. Immediate global response-composition laboratory
 
-In the seven-column subbranch, the only `K_5`-minor-free seven-vertex
-contact graph of minimum degree at least four is the pentagonal bipyramid;
-it is edge-maximal `K_5`-minor-free. After the audited spanning and
-connectivity reductions, the immediate
-[paired-rooted target](active/hc7_pentagonal_bipyramid_paired_rooted_target.md#3-exact-no-four-cut-target)
-is:
+The audited
+[endpoint-pair theorem](results/hc7_bounded_interface_endpoint_pair_selection.md)
+eliminates raw endpoint overlap as the sole obstruction.  Choices for the
+singleton roots either contain two disjoint boundary endpoint pairs, or all
+pairs concentrate on the three edges of one independent set `Q` of order
+three.  Under robust concentration, the audited
+[independent-triple theorem](results/hc7_bounded_interface_robust_triple_response.md)
+returns an exact-`Q` response whose endpoint pair lies in `S-Q`, disjoint
+from every concentrated singleton pair.
 
-> For the five-connected spanning core `F` and its two literal
-> root-neighbourhood sets, prove that `F` is four-colourable or contains a
-> `K_5`-minor model whose five branch sets each meet both root sets.
+These results do not control the open shore containing each path, place the
+paths in one colouring operation, make same-shore interiors disjoint, or
+decode the paths into a minor or a strict restart.  The immediate
+[opposite-shore response target](active/hc7_bounded_interface_synchronization_frontier.md#5-immediate-opposite-shore-response-target)
+therefore asks for one exact-block transition whose first failed lift has
+interior in `C`, whose last failed lift is pole-free with interior in the
+opposite open shore, and whose two boundary endpoint pairs are disjoint.
+The only accepted conclusions remain the three global outcomes in Section
+1; compatible paths alone are nonterminal.
 
-Either conclusion closes that conditional branch. Within several audited
-unbounded expansion families, incompatible cyclic orders give explicit
-minor models, while compatible orders give planar or four-colourable cores.
-The full paired-rooted dichotomy remains conjectural;
-persistent planar reroutings are treated as the prospective structural
-alternative, not as another finite residue to enumerate.
-
-The independent Codex and Grok laboratory configuration currently freezes
-this target. It does not change the authoritative hierarchy above.
+This laboratory is deliberately bounded to tagged response-family
+classification and operation-specific transition surgery.  The audited
+[fixed-colouring degree-eight certificate](results/hc7_degree8_simultaneous_p5_certificate.md)
+is a controlled stress test, not an exhaustive entry theorem.  Further
+pentagonal-bipyramid taxonomy, finite atomic-core enumeration, and the
+general weak-immersion-to-atomicity problem are frozen during this attempt.
 
 ## Headline audited advances
 
@@ -114,6 +120,10 @@ this target. It does not change the authoritative hierarchy above.
   order-`7`, `8`, or `9` full separation described above, with a
   four-colourable boundary and exact independent-block responses on both
   closed shores.
+- **Endpoint-pair concentration.** Audited endpoint selection and robust
+  independent-triple globalization always provide disjoint boundary
+  endpoint pairs.  They do not provide compatible path interiors,
+  opposite-shore provenance, one common colouring, or a terminal model.
 - **Exact-seven packing.** In the hypothetical counterexample setup, the
   displayed inequalities orient every exact order-seven interface toward
   one shore with packing number one.
@@ -131,6 +141,9 @@ this target. It does not change the authoritative hierarchy above.
 - **Atomic weak-immersion classification.** The
   [atomic rounding theorem](results/hc7_atomic_weak_k7_immersion_rounding.md)
   classifies a weak `K_7` immersion having exactly one binary collision.
+  This frozen conditional direction and one exact two-bridge large
+  one-star descendant are summarized in the
+  [atomic frontier](active/hc7_atomic_weak_immersion_frontier.md).
   The common-end case gives an explicit `K_7` minor; every other case gives
   a spanning exact `K_7`-minus-one-edge model with singleton deficient
   roots.  In the disjoint-demand case it also retains a common frame with an
@@ -272,8 +285,9 @@ this target. It does not change the authoritative hierarchy above.
   retained labels in the exact core, only `p` can be absorbed into the
   prescribed `q,x` branch set while the other clean connection is retained.
   Hence there are not two distinct safe labels under that ownership rule.
-  The exact remaining atomic gate is therefore an unbounded large-boundary
-  one-star-avoidance configuration.  Closing it requires a label-preserving
+  The exact remaining gate in this two-bridge descendant is therefore an
+  unbounded large-boundary one-star-avoidance configuration.  Closing it
+  requires a label-preserving
   dirty-path/bridge-composition theorem that either reroutes into the avoided
   star, produces a response boundary, or gives strict component descent;
   further finite local enumeration does not address that inference.  The earlier
@@ -289,6 +303,10 @@ this target. It does not change the authoritative hierarchy above.
 
 - Exact attainment of every independent boundary block is separate on the
   two shores; it does not synchronize the rest of either colouring.
+- Disjoint endpoint pairs can arise from different colourings and from
+  uncontrolled shores.  Even the robust independent-triple response does
+  not make the corresponding paths internally disjoint or preserve the
+  labelled data needed for a minor or strict restart.
 - A colour name is not a branch-set label. Any claimed minor construction
   must use literal first-hit vertices or another explicit label-preserving
   lift.
@@ -334,10 +352,11 @@ this target. It does not change the authoritative hierarchy above.
   existing-path alternative, the exact two-bridge core closes at
   seven-connectivity and every surviving first hit is confined to the displayed
   eight-vertex skeleton.  A common first-hit component meeting both complete
-  landing stars now gives an explicit model even when its two paths intersect,
-  and every contained `q`--`b` separator of order at most nine carries the full
-  response.  The exact survivor has every such literal separator of order at
-  least ten and avoids one whole open star.  The one-label forced-hub census
+  landing stars now gives an explicit model even when its two paths intersect.
+  A minimum-cardinality contained `q`--`b` separator carries the full response
+  when its order is at most nine; otherwise every such literal separator has
+  order at least ten and the boundary avoids one whole open star.  The
+  one-label forced-hub census
   supplies only `p`, so the proposed two-label shortcut cannot close it.  The
   order-ten assertion concerns separators contained in `Omega_q`; it is not a
   global ten-path linkage statement.  The
@@ -355,7 +374,8 @@ this target. It does not change the authoritative hierarchy above.
 | [`active/hc7_live_case_dag.md`](active/hc7_live_case_dag.md) | Exhaustive global chain and exact missing arrow |
 | [`active/hc7_bounded_interface_synchronization_frontier.md`](active/hc7_bounded_interface_synchronization_frontier.md) | Full all-degree theorem and guardrails |
 | [`active/hc7_degree7_model_separator_frontier.md`](active/hc7_degree7_model_separator_frontier.md) | Conditional degree-seven terminal theorem |
-| [`active/hc7_pentagonal_bipyramid_paired_rooted_target.md`](active/hc7_pentagonal_bipyramid_paired_rooted_target.md) | Immediate structural laboratory |
+| [`active/hc7_atomic_weak_immersion_frontier.md`](active/hc7_atomic_weak_immersion_frontier.md) | Frozen conditional one-collision laboratory |
+| [`active/hc7_pentagonal_bipyramid_paired_rooted_target.md`](active/hc7_pentagonal_bipyramid_paired_rooted_target.md) | Frozen conditional structural laboratory |
 | [`active/INDEX.md`](active/INDEX.md) | Concise live navigation only |
 | [`README.md`](README.md) | Durable public overview |
 

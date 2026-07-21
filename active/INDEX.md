@@ -21,6 +21,8 @@ Selected audited inputs:
 - [boundary-aligned low-degree adjacent pair](../results/hc7_low_degree_boundary_edge_alignment.md)
 - [split-boundary colour synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction and pole-free path](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
+- [bounded-interface endpoint-pair selection](../results/hc7_bounded_interface_endpoint_pair_selection.md)
+- [robust independent-triple response](../results/hc7_bounded_interface_robust_triple_response.md)
 - [two-connected boundary-core completion](../results/hc7_two_connected_boundary_completion.md)
 
 Immediate barriers:
@@ -28,12 +30,17 @@ Immediate barriers:
 - [static four-colour boundary languages need not synchronize](../barriers/hc7_four_colour_parity_language_barrier.md)
 - [static order-eight transition data need not align the two shores](../barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md)
 
-## Conditional refinement and current laboratory
+## Conditional refinements and frozen laboratories
 
 - [generic exact-seven degree-seven terminal theorem](hc7_degree7_model_separator_frontier.md#generic-exact-seven-restart-and-the-remaining-terminal-theorem)
 - [exact-seven full-connected-subgraph packing theorem](../results/hc7_exact_seven_packet_packing.md)
+- [fixed-colouring degree-eight `P_5` stress test](../results/hc7_degree8_simultaneous_p5_certificate.md)
+- [dirty-path local-uncrossing barrier](../barriers/hc7_degree8_dirty_path_local_uncrossing_barrier.md)
+- [prescribed deleted-colour contact barrier](../barriers/hc7_degree8_deleted_colour_k4_contact_barrier.md)
+- [atomic one-collision weak-immersion frontier](hc7_atomic_weak_immersion_frontier.md)
 - [pentagonal-bipyramid paired-rooted `K_5` or four-colouring target](hc7_pentagonal_bipyramid_paired_rooted_target.md#3-exact-no-four-cut-target)
 
-Frozen programmes and superseded proof spines remain searchable in
+These laboratories are not substitutes for the primary all-degree target.
+Other frozen programmes and superseded proof spines remain searchable in
 [`../archive/`](../archive/); they are not part of this live navigation
 view.

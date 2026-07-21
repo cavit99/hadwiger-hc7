@@ -75,6 +75,33 @@ does_not_prove = [
 keywords = ["pentagonal bipyramid", "paired rooted K5", "four-colourable core", "planar rerouting"]
 
 [[claims]]
+id = "hc7.target.atomic_one_collision_bridge"
+title = "Atomic one-collision large one-star bridge composition"
+kind = "target"
+status = "frozen"
+source = "active/hc7_atomic_weak_immersion_frontier.md"
+source_heading = "4. Frozen conditional target"
+active = false
+expected_source_sha256 = "dfb6f0484c277d59cdb77558f33c67d0543d5d8ee7a42d7009dbeb36b7840f64"
+scope = "a weak K7 immersion with exactly one binary collision, reduced to the arbitrary-subdivision two-bridge landing-star residue"
+label_fidelity = "the common frame, deficient roots, first-hit boundary, avoided landing star and branch-set ownership remain literal"
+separator_order = "a minimum contained q-b separator gives a response interface at order seven through nine; the survivor has every such separator of order at least ten"
+strict_parameter = "a strict outcome must decrease a declared literal component parameter in the unchanged host"
+allowed_exits = [
+  "an explicit K7-minor model by rerouting into the avoided landing star",
+  "a bounded full response interface composable through the primary bounded-interface theorem",
+  "a strict same-host response-preserving component descent",
+]
+does_not_prove = [
+  "that an arbitrary guaranteed weak K7 immersion has one binary collision",
+  "a collision vertex of degree at most nine",
+  "that every atomic disjoint-demand collision reaches the exact two-bridge landing-star descendant",
+  "closure of the large one-star-avoidance residue",
+  "HC7",
+]
+keywords = ["weak immersion", "binary collision", "landing star", "dirty bridge", "frozen laboratory"]
+
+[[claims]]
 id = "hc7.target.bounded_interface_bridge"
 title = "Bounded-interface pole-free bridge composition"
 kind = "target"
@@ -82,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "729c0e070c1bc9f0e5e8aec7e4a22777580be92bf79c692c33ef96e803281499"
+expected_source_sha256 = "c97e9f77725179cd4d59f81b7cc83596031001324344248e951a953496f8820a"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints and host paths"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -92,6 +119,7 @@ hypotheses = [
   "low-degree boundary-aligned adjacent pair",
   "nonsplit four-colourable boundary of order seven, eight or nine",
   "pole-free bichromatic paths returned by failed exact-singleton Kempe lifts",
+  "disjoint boundary endpoint pairs, either directly or by the robust independent-triple response",
 ]
 allowed_exits = [
   "explicit K7-minor model",
@@ -102,6 +130,7 @@ does_not_prove = [
   "HC7",
   "compatibility of arbitrary abstract boundary-extension languages",
   "a branch-set split from one unlabelled bichromatic path",
+  "simultaneous opposite-shore provenance or internally disjoint same-shore paths from endpoint disjointness alone",
 ]
 keywords = ["bounded separator", "Kempe path", "colour gluing", "low degree"]
 
@@ -239,6 +268,100 @@ source = "results/hc7_bounded_interface_exact_block_kempe_reduction.md"
 active = true
 audit = "results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md"
 expected_source_sha256 = "2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9"
+
+[[claims]]
+id = "hc7.bounded_interface_endpoint_pair_selection"
+title = "Endpoint-pair selection for bounded-interface Kempe paths"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_bounded_interface_endpoint_pair_selection.md"
+source_heading = "2. The endpoint-pair alternative"
+active = true
+audit = "results/hc7_bounded_interface_endpoint_pair_selection_audit.md"
+expected_source_sha256 = "3494dbf62978115012ff195533f5320fd90affe1d71b52d1b2d62dc3624dc1e3"
+scope = "the order-seven through nine bounded interface in a hypothetical minor-minimal HC7 counterexample"
+conclusions = [
+  "arbitrary singleton response choices contain two disjoint boundary endpoint pairs",
+  "or all selected pairs lie on one independent boundary triple with the forced root-avoidance pattern",
+  "an aligned smaller anti-neighbourhood component gives the exact strict restart",
+]
+does_not_prove = [
+  "internally disjoint response paths",
+  "one operation-specific colouring for two paths",
+  "opposite-shore provenance",
+  "the bounded-interface bridge-composition theorem or HC7",
+]
+keywords = ["endpoint pair", "Kempe path", "independent triple", "strict restart"]
+
+[[claims]]
+id = "hc7.bounded_interface_robust_triple_response"
+title = "Robust independent-triple response at a bounded interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_bounded_interface_robust_triple_response.md"
+source_heading = "3. Robust singleton families have one global triple"
+active = true
+audit = "results/hc7_bounded_interface_robust_triple_response_audit.md"
+expected_source_sha256 = "42d50b8027bd5acabf986b803cffef9fe5bf402add892d58778d5a2d0bc2d064"
+scope = "all attainable exact-singleton response endpoint families at the bounded interface"
+conclusions = [
+  "robust cross-intersection concentrates every singleton response on one independent boundary triple Q",
+  "the exact-Q response has both endpoints outside Q and is disjoint from every concentrated singleton pair",
+]
+does_not_prove = [
+  "internally disjoint response paths",
+  "control of the open shore or colouring producing either path",
+  "a common boundary partition, K6 boundary model, strict restart or HC7",
+]
+keywords = ["robust response", "independent triple", "cross-intersection", "endpoint pair"]
+
+[[claims]]
+id = "hc7.degree8_simultaneous_p5_certificate"
+title = "Fixed-colouring simultaneous P5 certificate at degree eight"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_simultaneous_p5_certificate.md"
+source_heading = "1. Setting and statement"
+active = false
+audit = "results/hc7_degree8_simultaneous_p5_certificate_audit.md"
+expected_source_sha256 = "da00186a910c7ef9ffcc230bfbc0e45362b91ead74bb34b909022e8938e99d55"
+scope = "the degree-eight independent-triple boundary type whose five remaining roots induce 2K2 plus an isolated vertex"
+conclusions = [
+  "one fixed colouring gives two vertex-disjoint bichromatic paths forming a rooted P5 subdivision",
+  "the same five-colour core gives a rooted near-complete certificate",
+]
+does_not_prove = [
+  "that the two paths avoid the rooted certificate bags",
+  "a terminal K7-minor model, common partition or strict restart",
+  "an exhaustive degree-eight reduction or HC7",
+]
+keywords = ["degree eight", "fixed colouring", "P5", "rooted certificate", "stress test"]
+
+[[claims]]
+id = "hc7.barrier.degree8_dirty_path_local_uncrossing"
+title = "Dirty Kempe paths need not locally uncross a rooted certificate"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_degree8_dirty_path_local_uncrossing_barrier.md"
+active = false
+audit = "barriers/hc7_degree8_dirty_path_local_uncrossing_barrier_audit.md"
+expected_source_sha256 = "3bbe964e26d4b689978433cf3de717d249884b46aedc1272c819510c5746543b"
+refutes = ["purely local reallocation of two disjoint dirty Kempe paths always reduces a rooted K5 certificate to at most one missing adjacency"]
+lacks = ["global K7-minor exclusion", "contraction-criticality", "complete five-root routing"]
+keywords = ["dirty path", "local uncrossing", "rooted certificate", "finite barrier"]
+
+[[claims]]
+id = "hc7.barrier.degree8_deleted_colour_k4_contact"
+title = "Prescribed deleted colour need not expose three rooted-K4 contacts"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_degree8_deleted_colour_k4_contact_barrier.md"
+active = false
+audit = "barriers/hc7_degree8_deleted_colour_k4_contact_barrier_audit.md"
+expected_source_sha256 = "6d3fad97f6507192bfce9559d56879b92e783f094fc52748c022c3165ac9db77"
+refutes = ["complete five-root routing forces three contacts to a rooted K4 model after deleting any prescribed root colour"]
+lacks = ["the full bounded-interface host hypotheses", "a counterexample to existential root selection", "a counterexample to HC7"]
+keywords = ["deleted colour", "rooted K4", "contact barrier", "finite verification"]
 
 [[claims]]
 id = "hc7.degree7_antineighbourhood_connectivity"
@@ -5560,7 +5683,7 @@ status = "audited-green"
 source = "results/hc7_atomic_two_bridge_exact_core_seven_fan_closure.md"
 active = false
 audit = "results/hc7_atomic_two_bridge_exact_core_seven_fan_closure_audit.md"
-expected_source_sha256 = "dc5536fa551f1445fc002b54222cf3fa0199f0b68fe095371a9dcfcbf386cca0"
+expected_source_sha256 = "8b9f49194481008bdbae246b439ed1a47a3a8919209e3787e87c1f5767fb1b86"
 scope = "arbitrary seven-connected supergraphs containing the exact labelled thirteen-vertex two-bridge core as a subgraph, with first-hit consequences for arbitrary subdivisions"
 label_fidelity = "all thirteen core labels, five terminal endpoint certificates, clean fan paths to e and x, and all twenty-one final branch-set contacts are explicit"
 conclusions = [
@@ -5584,13 +5707,13 @@ status = "audited-green"
 source = "results/hc7_atomic_two_bridge_subdivision_landing_stars.md"
 active = false
 audit = "results/hc7_atomic_two_bridge_subdivision_landing_stars_audit.md"
-expected_source_sha256 = "2f0156a2ec45b01265703b120b3eb18ad0560bbeaa1cebf0bfb665812efc67c7"
+expected_source_sha256 = "4430ad1bdb42e9de8f89080dbd4e99e0e5c23389a3dc14b3e02ba2259440bc32"
 scope = "arbitrary subdivisions of the labelled thirteen-vertex two-bridge core in a seven-connected host, with the minor-minimal HC7 hypotheses only for the response-boundary conclusion"
 label_fidelity = "the first-hit component at q, both open landing stars, the literal q-b separator, seven branch sets and all twenty-one contacts are explicit"
 conclusions = [
   "one common first-hit component meeting both the open x-star and open e-star gives an explicit K7-minor model even when its two clean paths intersect",
   "in every K7-minor-free host the first-hit boundary avoids one complete open subdivided star at e or x",
-  "a q-b separator of order at most nine contained in the first-hit boundary is a full four-colourable response interface with exact-block and selected-edge responses",
+  "a minimum-cardinality q-b separator contained in the first-hit boundary is a full four-colourable response interface with exact-block and selected-edge responses when its order is at most nine",
   "otherwise every q-b separator contained in that boundary has order at least ten",
 ]
 does_not_prove = [
@@ -7474,8 +7597,38 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
+target = "hc7.bounded_interface_endpoint_pair_selection"
+kind = "uses"
+note = "The endpoint alternative removes raw pair overlap, leaving simultaneous path geometry and provenance open."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.bounded_interface_robust_triple_response"
+kind = "uses"
+note = "Robust concentration supplies an exact-triple endpoint pair outside the concentrated triple, but does not control either path's shore or colouring."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
 target = "hc7.two_connected_boundary_completion"
 kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_simultaneous_p5_certificate"
+target = "hc7.barrier.degree8_dirty_path_local_uncrossing"
+kind = "guarded_by"
+note = "The fixed-colouring paths may be dirty against the rooted certificate, and local reallocation is not sufficient."
+
+[[relations]]
+source = "hc7.degree8_simultaneous_p5_certificate"
+target = "hc7.barrier.degree8_deleted_colour_k4_contact"
+kind = "guarded_by"
+note = "A rooted-K4 repair cannot prescribe the deleted root without additional global structure."
+
+[[relations]]
+source = "hc7.target.atomic_one_collision_bridge"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "A small first-hit separator returns the atomic residue to the primary bounded response interface; the large one-star case remains conditional."
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"

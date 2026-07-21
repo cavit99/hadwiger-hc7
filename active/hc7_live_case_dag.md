@@ -46,6 +46,7 @@ flowchart TD
   SP["Split boundary"]
   CY["Induced-cycle / universal-pair family"]
   KP["Pole-free paths from failed exact-block Kempe lifts"]
+  EP["Disjoint endpoint pairs, directly or via one robust independent triple"]
   M["OPEN: pole-free bridge composition theorem"]
   K7["Explicit K7-minor model"]
   CP["One boundary partition extends through both shores"]
@@ -56,7 +57,8 @@ flowchart TD
   E -->|"if split"| SP --> CP
   E -->|"if the displayed cycle family occurs"| CY --> K7
   E -->|"in every remaining case; for each root x"| KP
-  KP --> M
+  KP --> EP
+  EP --> M
   M -.-> K7
   M -.-> CP
   M -.-> R
@@ -71,6 +73,15 @@ The displayed cycle family is closed by the
 and its bounded-interface applications.  In all cases, the
 [exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 returns literal pole-free paths with bounded boundary-contact defect.
+The audited
+[endpoint-pair theorem](../results/hc7_bounded_interface_endpoint_pair_selection.md)
+then gives disjoint terminal pairs unless all choices concentrate on one
+independent triple.  In the robust concentration case, the
+[independent-triple response theorem](../results/hc7_bounded_interface_robust_triple_response.md)
+gives an exact-triple response with endpoints outside that triple.  These
+results settle endpoint overlap only: they do not put the paths in opposite
+shores or one operation, make same-shore interiors disjoint, or produce a
+terminal labelled construction.
 
 The dashed arrows are precisely the open
 [pole-free bridge composition theorem](hc7_bounded_interface_synchronization_frontier.md#4-primary-open-theorem).
@@ -174,6 +185,7 @@ compression, not by itself a recursive arrow in the labelled programme.
 | Split boundary to common partition | Literal boundary and both extension languages | terminal | proved and audited |
 | Cycle-boundary family to `K_7` | Two universal vertices, induced cycle, connected full shores | terminal | proved and audited |
 | Exact-block transition to pole-free path | Boundary root, selected edge deletion, exact singleton block, literal path and first hits | none | proved and audited |
+| Pole-free responses to disjoint boundary endpoint pairs | Boundary roots and literal nonedge endpoint pairs; robust concentration records one independent triple | none | proved and audited; path geometry and operation compatibility remain open |
 | Pole-free paths to global conclusion | Must preserve the complete bounded-interface data | required decrease `|C'|<|C|` in recursive outcome | **open; relative to the entry reduction this is `HC_7`-strength** |
 | Exact-seven proper core with boundary seven to restart | Fixed host, new literal seven-boundary, selected crossing edge and one operation-specific colouring | smaller connected operated shore | proved and audited |
 | Minimum positive-excess boundary to exact-seven response | Fixed host and a fresh selected response | no decrease proved | proved response; **not** an induction arrow |
