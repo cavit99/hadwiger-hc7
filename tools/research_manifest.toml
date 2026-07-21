@@ -5454,6 +5454,28 @@ does_not_prove = [
 keywords = ["fan lemma", "endpoint saturation", "shared hub", "first intersection", "unbounded host"]
 
 [[claims]]
+id = "hc7.atomic_shared_hub_two_apex_exclusion"
+title = "Two-apex exclusion for the atomic shared-hub graph"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_shared_hub_two_apex_exclusion.md"
+active = false
+audit = "results/hc7_atomic_shared_hub_two_apex_exclusion_audit.md"
+expected_source_sha256 = "46da8f85aab2377516135937a5fbb35caa71ac10b53ed90125240f8acbfd191c"
+scope = "subdivisions of the exact labelled thirteen-vertex shared-hub graph in arbitrary two-apex ambient graphs"
+label_fidelity = "the exact shared-hub graph is retained up to subdivision; a deleted apex records its literal branch vertex or unique route edge object"
+conclusions = [
+  "deleting any set of at most two vertex or edge objects leaves a nonplanar graph, certified in all 1129 cases by a checked TK5 or TK3,3",
+  "no subdivision of the exact shared-hub graph occurs in any two-apex graph, hence none occurs in K2 joined with a planar graph",
+  "in the K2-icosahedron guardrail degree forces f and g to the two apices, while deleting them leaves a displayed rooted TK5",
+]
+does_not_prove = [
+  "exclusion of a shared-hub minor, weak immersion or dirty-path configuration that does not contain the exact graph as a subdivision",
+  "closure of arbitrary route-interior intersections, the single-collision disjunction, or HC7",
+]
+keywords = ["shared hub", "two-apex", "Kuratowski subdivision", "icosahedron", "dirty path"]
+
+[[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
 title = "Atomic weak-immersion guardrail in the two-apex icosahedron"
 kind = "barrier"
@@ -5642,6 +5664,24 @@ source = "hc7.atomic_shared_hub_seven_fan_closure"
 target = "hc7.target.bounded_interface_bridge"
 kind = "related_to"
 note = "Endpoint saturation is a reusable host-level lift, but the general dirty-path residue still must return the active target's explicit model, compatible response, or strict component descent."
+
+[[relations]]
+source = "hc7.atomic_shared_hub_two_apex_exclusion"
+target = "hc7.barrier.atomic_shared_hub_defect_rotation"
+kind = "uses"
+note = "The two-apex theorem retains the barrier's exact labelled thirteen-vertex graph and proves that every subdivision of it lies outside the two-apex class."
+
+[[relations]]
+source = "hc7.atomic_shared_hub_two_apex_exclusion"
+target = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
+kind = "related_to"
+note = "The seven-connected K2-icosahedron guardrail cannot contain the exact shared-hub residue as a subdivision; its atomic collision examples therefore exit before this dirty-path pattern."
+
+[[relations]]
+source = "hc7.atomic_shared_hub_two_apex_exclusion"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The result eliminates the standard two-apex falsification family for the exact labelled residue but does not decode a less literal dirty path into the active terminal outcomes."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -8616,4 +8656,18 @@ expected_stdout = [
   "forced_edges: h-p_ad,h-p_bc",
   "two_edge_K7_model: branch_sets=7 contact_edges=21 verified",
   "conclusion: same_vertex_minimum_degree_7_K7_free_supergraph=no",
+]
+
+[[verifiers]]
+id = "atomic-shared-hub-two-apex-exclusion"
+path = "results/hc7_atomic_shared_hub_two_apex_exclusion_verify.py"
+sha256 = "6b8b6483b8576eeb6fc552a93f866f182332ee6ab30d1b06d4d8c9b16df9bd08"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN shared-hub two-apex exclusion",
+  "deletion_cases=1129 none=1 v=13 e=34 vv=78 ve=442 ee=561",
+  "kuratowski_certificates={'TK3,3': 974, 'TK5': 155}",
+  "icosahedral_sharpening=G_*-{f,g} contains the displayed TK5",
+  "consequence=no subdivision of G_* embeds in a two-apex graph",
 ]

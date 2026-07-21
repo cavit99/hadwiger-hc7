@@ -207,7 +207,14 @@ this target. It does not change the authoritative hierarchy above.
   vertices saturate the possible fan endpoints, force two clean paths to the
   common hub, and yield an explicit `K_7` model by a first-intersection split.
   This reusable fan-saturation mechanism does not yet reduce an arbitrary
-  dirty replacement path to that thirteen-vertex labelled subgraph.  The adjacent
+  dirty replacement path to that thirteen-vertex labelled subgraph.  The audited
+  [two-apex exclusion](results/hc7_atomic_shared_hub_two_apex_exclusion.md)
+  gives an independent unbounded restriction: deleting any two vertex or edge
+  objects from the exact thirteen-vertex graph leaves a checked Kuratowski
+  subdivision, so no subdivision of that graph occurs in any two-apex host.
+  In particular, the standard `K_2`-joined planar guardrails cannot falsify the
+  exact shared-hub extension; a counterexample must weaken its literal
+  subdivision structure or leave the two-apex class.  The adjacent
   [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
   shows that individually two-apex bridge certificates need not share an
   apex pair and that normalized dominating `K_5` models may regenerate
@@ -257,9 +264,10 @@ this target. It does not change the authoritative hierarchy above.
   the rotated near-clique quotient need not have a labelled strong-immersion
   lift or improve the lexicographic collision potential.  The exact sparse
   example is nevertheless excluded from every seven-connected `K_7`-minor-free
-  host by the new fan-saturation theorem.  What remains open is the general
-  dirty-path case, where extra intersections with subdivision-route interiors
-  prevent those finite endpoint certificates from being retained literally.  The
+  host by the new fan-saturation theorem, and no subdivision of it occurs in a
+  two-apex host.  What remains open is the general dirty-path case, where extra
+  intersections with subdivision-route interiors need not retain the exact
+  labelled subgraph or its finite endpoint certificates.  The
   six-connected barrier also rules out intersecting individual two-apex
   certificates or invoking bare dominating-model regeneration.  The
   single-collision gate therefore remains open, and this route does not
