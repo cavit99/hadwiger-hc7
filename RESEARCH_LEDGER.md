@@ -122,6 +122,21 @@ must close either the `K_6`-minor-free augmented-boundary path case or the
 tight pole case by an explicit `K_7` model, one common complete boundary
 partition, or the exact strict component restart.
 
+A gated marked-edge experiment has now been completed. The audited
+[response-coupling theorem](results/hc7_marked_edge_response_coupling.md)
+shows that deletion and contraction of one endpoint edge have identical
+colouring responses. Simultaneously contracting the two anticomplete path
+interiors gives one common six-colouring with a full five-colour split on at
+least one interior, but the audited
+[bilateral-exposure barrier](barriers/hc7_simultaneous_bipartite_bilateral_exposure_barrier.md)
+shows that both interiors need not be blocked. A weighted marked-edge cut
+does produce literal separators of order seven through nine with the deletion
+operations on their correct shores, but it need not produce a separator
+different from the original and it carries fresh boundary partitions rather
+than the original exact-block response. This is not strict monotonicity or a
+response-preserving restart, so the declared gate stopped the proposed second
+cycle before any order-eight/nine or tight-pole taxonomy was started.
+
 The audited
 [pole-star barrier](barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
 shows that exact-block attainability, every independent pole-star response,

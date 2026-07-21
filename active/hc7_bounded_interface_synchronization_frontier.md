@@ -190,6 +190,36 @@ splicing cannot close the decoder by itself.  A successful proof must use
 one of those two global host hypotheses while preserving the displayed path
 or pole labels.
 
+### Marked-edge coupling gate
+
+The audited
+[marked-edge response-coupling theorem](../results/hc7_marked_edge_response_coupling.md)
+tests proper-minor colourings on endpoint edges of the two retained paths.
+Deletion and contraction of one edge give the same response family. A common
+simultaneous contraction of two anticomplete bipartite path interiors is
+exactly six-chromatic and gives a full five-colour split on at least one
+interior in one fixed colouring. The adjacent
+[bilateral-exposure barrier](../barriers/hc7_simultaneous_bipartite_bilateral_exposure_barrier.md)
+shows that the other interior need not be blocked in that colouring, even in
+a seven-connected seven-chromatic host.
+
+Deleting one endpoint edge on each path also gives a submodular weighted
+separation order: separator size plus the number of marked edges crossing the
+open sides. Its minimum lies between seven and `|S|`, the minimum separations
+form a lattice, and every member lifts to a literal separation of `G` of the
+same order with the three deletion operations assigned to the correct shore.
+This does not pass the continuation gate. The minimum lift may be the original
+separation, distinct deleted-edge separations can lift back to that same
+separation, and a new separator carries only fresh boundary partitions rather
+than the original exact-block response on `S`. In the actual degree-seven
+branch the opposite-shore path input is absent altogether.
+
+Consequently no order-eight/nine or tight-pole continuation was begun from
+this mechanism. A valid continuation must first force a strictly different
+lifted host separation or preserve the original complete boundary partition
+and literal component rank; an unbounded path neighbourhood or a one-sided
+palette split is insufficient.
+
 ## Dependencies and guardrails
 
 - [bounded low-degree entry](../results/hc7_low_degree_adjacent_pair_alignment.md)
@@ -207,6 +237,8 @@ or pole labels.
 - [degree-eight deleted-colour contact barrier](../barriers/hc7_degree8_deleted_colour_k4_contact_barrier.md)
 - [four-colour parity-language barrier](../barriers/hc7_four_colour_parity_language_barrier.md)
 - [eight-boundary state-transfer barrier](../barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md)
+- [marked-edge response coupling](../results/hc7_marked_edge_response_coupling.md)
+- [simultaneous bilateral-exposure barrier](../barriers/hc7_simultaneous_bipartite_bilateral_exposure_barrier.md)
 
 Do not identify a colour class with a branch set without an explicit lift.
 Do not treat a path as an extra branch set while simultaneously retaining

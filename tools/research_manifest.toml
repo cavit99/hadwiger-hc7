@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "dc013f92edd15eb764e939a82a21bb1e3508923c1213b5468e9ed87ecd0b2787"
+expected_source_sha256 = "ececc91e90d4421fda561e821e76ea3c9a5569a6fbdb8e92fadbf91754c37582"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints and host paths"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -317,6 +317,32 @@ does_not_prove = [
   "HC7",
 ]
 keywords = ["exact block", "opposite-shore paths", "boundary augmentation", "terminal decoder"]
+
+[[claims]]
+id = "hc7.marked_edge_response_coupling"
+title = "Marked-edge common-state coupling and weighted separation lattice"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_marked_edge_response_coupling.md"
+active = false
+audit = "results/hc7_marked_edge_response_coupling_audit.md"
+expected_source_sha256 = "e27d4ddaa733a9a09e72bfa8e7fc79f525be6fb56829626d6e1add0130ab96d1"
+scope = "endpoint edges and nontrivial anticomplete interiors of the two-transition path outcome"
+separator_order = "a weighted minimum lifts to a literal separation of order seven through nine"
+colour_compatibility = "one common double-contraction state blocks at least one interior; new separator traces are fresh"
+conclusions = [
+  "one-edge deletion and contraction responses coincide",
+  "a simultaneous contraction gives a bilateral full-palette cut on at least one path interior",
+  "minimum marked-edge separations form a lattice and lift with operation-side ownership",
+]
+does_not_prove = [
+  "bilateral blocking of both interiors",
+  "a separator distinct from the original interface",
+  "preservation of the original exact-block boundary language",
+  "a strict same-host component descent",
+  "HC7",
+]
+keywords = ["marked edge", "simultaneous contraction", "weighted separation", "continuation gate"]
 
 [[claims]]
 id = "hc7.bounded_interface_endpoint_pair_selection"
@@ -1398,6 +1424,20 @@ lacks = [
   "six-colourability of every proper minor",
 ]
 keywords = ["pole move", "shortest transition", "state realization", "host-level obstruction"]
+
+[[claims]]
+id = "hc7.barrier.simultaneous_bipartite_bilateral_exposure"
+title = "A common double-contraction colouring need not block both bipartite expansions"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_simultaneous_bipartite_bilateral_exposure_barrier.md"
+active = false
+audit = "barriers/hc7_simultaneous_bipartite_bilateral_exposure_barrier_audit.md"
+expected_source_sha256 = "c211e32a2987d7e82ed639bc79e75735fd871a576d6d1a7064499b47c66b547e"
+refutes = ["unconditional bilateral list-uncolourability in every common double-contraction colouring"]
+satisfies = ["seven-connectivity", "chromatic number seven", "an exactly six-chromatic simultaneous contraction"]
+lacks = ["global K7-minor exclusion", "full proper-minor six-colourability"]
+keywords = ["simultaneous contraction", "list colouring", "mechanism barrier"]
 
 [[claims]]
 id = "hc7.barrier.three_common_profile"
@@ -7692,6 +7732,18 @@ kind = "uses"
 source = "hc7.target.bounded_interface_bridge"
 target = "hc7.bounded_interface_two_transition_disjoint_response"
 kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.marked_edge_response_coupling"
+kind = "related_to"
+note = "This gated experiment preserves operation-side ownership on a bounded weighted separation but not the original boundary language or a strict component rank."
+
+[[relations]]
+source = "hc7.marked_edge_response_coupling"
+target = "hc7.barrier.simultaneous_bipartite_bilateral_exposure"
+kind = "guarded_by"
+note = "The common contraction blocks at least one path interior, but bilateral blocking of both interiors is false without stronger global hypotheses."
 
 [[relations]]
 source = "hc7.bounded_interface_two_transition_disjoint_response"
