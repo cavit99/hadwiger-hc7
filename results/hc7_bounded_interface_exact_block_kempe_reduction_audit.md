@@ -1,6 +1,6 @@
 # Independent audit: exact-block Kempe reduction
 
-**Verdict:** **GREEN** at the exact revision below, conditional on the
+**Verdict:** **GREEN** at the corrected exact revision below, conditional on the
 GREEN-audited low-degree adjacent-pair theorem and its exact independent-block
 trace conclusion.  The reduction does not prove `HC_7`, a common boundary
 partition, or a labelled clique-minor model.
@@ -8,14 +8,15 @@ partition, or a labelled clique-minor model.
 ## Exact revision audited
 
 ```text
-bfde93b7b4b2b3eae2597e0ae3275a2ac46ae60cac4ab3f303c1b3e8de778550  audited theorem content before status-only promotion
+19382ff7bc0065bc18a7caaeffd5c5fff46cf4ddc226d40036c751081a9853ff  results/hc7_bounded_interface_exact_block_kempe_reduction.md
 ```
 
-Promotion changed only the status line.  The promoted source hash is
-
-```text
-2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9  results/hc7_bounded_interface_exact_block_kempe_reduction.md
-```
+The preceding promoted revision incorrectly claimed that two labelled
+exact-`I` colourings with different colour names on `I` could be connected
+without changing that colour.  The corrected corollary fixes one colour
+`gamma`, requires both endpoints to assign `gamma` exactly to `I`, and
+states separately that arbitrary endpoints may first be globally relabelled
+to align this name.  Theorem 4.1 now records that normalization explicitly.
 
 This audit includes Lemma 2.1, Corollary 2.2, Lemma 3.1, Theorems 4.1 and
 5.1, and the stated localization bounds.  Any mathematical change to the
@@ -77,10 +78,12 @@ Williams, *Intrinsic knotting and linking of almost complete graphs*.
 
 ## 3. Corollary 2.2: exact use of Las Vergnas--Meyniel
 
-After a global colour permutation, both boundary colourings assign colour six
-exactly to `I`.  Their restrictions to `G[S-I]` are proper colourings from the
-same palette of five colours.  Surjectivity onto all five colours is not
-required in the definition of a five-colouring.
+Corollary 2.2 now assumes that both boundary colourings assign one fixed
+colour `gamma` exactly to `I`.  Applying one common global colour
+permutation sends `gamma` to colour six.  Their restrictions to `G[S-I]`
+are then proper colourings from the same palette of five colours.
+Surjectivity onto all five colours is not required in the definition of a
+five-colouring.
 
 The cited Las Vergnas--Meyniel result is applicable exactly as stated: every
 pair of `k`-colourings of a `(k-1)`-degenerate graph are `k`-Kempe equivalent.
@@ -93,6 +96,13 @@ The corresponding two-colour components in `G[S]` are unchanged by adjoining
 the colour-six independent set `I`.  Hence the same interchanges are genuine
 boundary Kempe interchanges, keep `I` fixed, and never put colour six on
 `S-I`.
+
+If the original exact-`I` endpoints use different names on `I`, a global
+permutation of one complete endpoint colouring first aligns those names.
+This preserves shore extension, but the Kempe sequence ends at the relabelled
+endpoint.  The corrected source makes this distinction explicit and no
+longer claims a fixed-`I` sequence between the two original labelled
+endpoints.
 
 ## 4. Lemma 3.1: lift or interior path
 
@@ -111,9 +121,11 @@ localization are valid.
 ## 5. Theorem 4.1: shortest-sequence endpoints
 
 For a fixed nonempty independent `I`, exact-block trace gives nonempty sets
-of exact-`I` boundary colourings extending to `A` and to `B`; Corollary 2.2
-puts all of them in one Kempe component.  Choose endpoint colourings and a
-shortest sequence globally over those choices.
+of exact-`I` boundary colourings extending to `A` and to `B`.  Global
+colour permutations preserve extension through either shore, so normalize
+each endpoint to give `I` colour six.  Corollary 2.2 puts these normalized
+fixed-colour endpoints in one Kempe component.  Choose endpoint colourings
+and a shortest sequence globally over those normalized choices.
 
 The shore languages are disjoint, so the sequence has positive length.  If a
 later sequence vertex extended to `A`, the suffix from the latest such vertex
@@ -198,3 +210,6 @@ while preserving its endpoint colouring, that the path can be split into a
 new branch set, that the two shores have a common equality partition, or that
 the conditional boundary interface occurs without the audited low-degree
 alignment theorem.  The source states these limitations correctly.
+It also does not connect differently labelled exact-`I` endpoints while
+leaving the colour on `I` unchanged; one endpoint must first be globally
+relabelled.

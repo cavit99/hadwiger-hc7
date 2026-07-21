@@ -40,9 +40,10 @@ and the contraction-critical neighbourhood bound
 
 For every nonempty independent set `I` of `G[S]`, each closed shore
 has a proper six-colouring in which `I` is exactly one boundary colour
-class.  Any two labelled boundary colourings in this exact-`I` cylinder
-are joined by boundary Kempe interchanges which never use the colour on
-`I`.  In particular, every such `I` satisfies
+class.  Any two such labelled boundary colourings which give `I` the same
+colour name are joined by boundary Kempe interchanges which never use that
+colour.  Equivalently, arbitrary endpoints may first be globally relabelled
+to align the colour on `I`.  In particular, every such `I` satisfies
 `|S-I|\ge |S|-4\ge3`.
 
 ## 2. A pole-free response for every independent block

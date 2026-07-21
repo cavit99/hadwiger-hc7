@@ -1,6 +1,7 @@
 # Verification-gate report and research reassessment
 
-**Status:** point-in-time internal verification report, 20 July 2026.  This
+**Status:** point-in-time internal verification report, 20 July 2026;
+labelled-colour normalization corrected and re-audited 21 July 2026.  This
 is not a status authority, a new theorem or external peer review.  Current
 status remains governed by [`RESEARCH_LEDGER.md`](../RESEARCH_LEDGER.md),
 and the reconstructed case graph is
@@ -20,13 +21,12 @@ This gate asked three questions before another proof campaign:
 
 ## 2. Exact revisions cold-audited
 
-The following source revisions were checked without changing their theorem
-statements.
+The following exact source revisions were checked.
 
 | Result | SHA-256 | Cold verdict |
 |---|---|---|
 | [Low-degree adjacent-pair alignment](../results/hc7_low_degree_adjacent_pair_alignment.md) | `263611a40dc7829788967250e031a3f3170e1c7a6c8c9a3fbfbb358231b1f9ca` | GREEN |
-| [Bounded-interface exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md) | `2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9` | GREEN, conditional on its promoted inputs |
+| [Bounded-interface exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md) | `19382ff7bc0065bc18a7caaeffd5c5fff46cf4ddc226d40036c751081a9853ff` | GREEN after the fixed-colour normalization correction, conditional on its promoted inputs |
 | [Generic exact-seven response restart](../results/hc7_generic_exact7_response_restart.md) | `e689c96686a936c27e58c2cba22d699c62ad649092eebfcdfc9c5db95a8e7b5a` | GREEN, conditional on its promoted inputs |
 | [Minimum positive-excess separator normal form](../results/hc7_minimum_positive_separator_normal_form.md) | `4b6a4d7a434cb255229fcf4fe12e1393d7b0dadad27985e8528b0535d4cf64ba` | GREEN, conditional on existence of the stated eligible set |
 | [Cycle-boundary completion](../results/hc7_cycle_boundary_completion.md) | `f87ddcf7e4bd33b0fc107033033d9a8ebb2f6e32533b1b9c4538c0bf4bd137db` | GREEN |
@@ -36,6 +36,14 @@ The existing adjacent audits already pin these revisions and accurately
 state their trust boundaries.  Because the cold audit found no mathematical
 change or new gap in the source theorems, their audit files were not rewritten
 merely to record a second internal reading.
+
+The exact-block correction is the one exception to the preceding historical
+sentence.  Its former Corollary 2.2 was false for two labelled endpoints
+giving the fixed block different colour names.  The corrected revision
+requires a common fixed name, permits a global endpoint relabelling before
+the Kempe sequence, and has a renewed adjacent audit.  Every promoted use
+already aligned that name or used existential endpoints, so no downstream
+theorem was retracted.
 
 The finite degree-nine completion was rerun over all `4,608` recorded
 instances with matching catalogue and witness hashes.  The order-eight/nine

@@ -1,23 +1,19 @@
 # Independent audit: robust independent-triple concentration
 
-**Verdict:** **GREEN** at the exact revision below, conditional on the
+**Verdict:** **GREEN** at the corrected exact revision below, conditional on the
 GREEN-audited low-degree alignment and exact-block Kempe reduction used in
 the setup.  The audit found one omitted inherited hypothesis in the first
 revision: the proof uses the contraction-critical bound
 `alpha(G[S])<=4`.  That bound is now stated explicitly as (1.3), together
-with `|S-I|>=3` for every independent block under consideration.
+with `|S-I|>=3` for every independent block under consideration.  The
+current correction also restricts exact-block connectivity to endpoints
+whose colour names on `I` have first been aligned; the proof already did
+this explicitly.
 
 ## Exact revision audited
 
 ```text
-821903be3a374ccf69552a4f0209cc82ac7e466f7fcea04b97123c17c8ce94db  audited theorem content before status-only promotion
-```
-
-Promotion changed only the status paragraph and audit link.  The promoted
-source hash is
-
-```text
-42d50b8027bd5acabf986b803cffef9fe5bf402add892d58778d5a2d0bc2d064  results/hc7_bounded_interface_robust_triple_response.md
+34e8bcef8895965c23f775ee9494ac72e9203d0d0b9fe7f0dc4532535d864883  results/hc7_bounded_interface_robust_triple_response.md
 ```
 
 The verdict covers Theorem 2.1, Theorem 3.1, Corollary 4.1, the sentence
@@ -35,8 +31,8 @@ interface programme:
 - every proper minor of `G` is six-colourable;
 - every nonempty independent `I subseteq S` occurs as one exact boundary
   colour class on each closed shore; and
-- the labelled exact-`I` boundary cylinder is Kempe-connected by moves
-  avoiding the colour on `I`.
+- after aligning the colour name on `I`, the labelled fixed-colour
+  exact-`I` boundary slice is Kempe-connected by moves avoiding that colour.
 
 The contraction-critical neighbourhood bound gives
 
@@ -75,6 +71,10 @@ Choose an exact-`I` six-colouring of the original closed shore `B` and align
 the name of the colour on `I` with `gamma`.  Exact-cylinder connectivity
 then supplies a labelled boundary sequence all of whose moves avoid
 `gamma`.
+
+This uses precisely the corrected fixed-`gamma` form of Corollary 2.2.
+It does not require, and no longer asserts, a Kempe sequence fixing `I`
+between endpoints which retain different original colour names on `I`.
 
 Starting from the expanded colouring of `G-E_I`, a requested boundary move
 on a two-colour component `W` lifts by swapping the full two-colour

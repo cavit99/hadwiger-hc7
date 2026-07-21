@@ -73,20 +73,32 @@ nonempty subgraph of `G[S-I]` has a vertex of degree at most four.  \(\square\)
 
 ### Corollary 2.2 (connected exact-block cylinder)
 
-Fix a nonempty independent set `I` of `G[S]`.  Any two labelled proper
-six-colourings of `G[S]` in which `I` is exactly one colour class are
-joined by a sequence of boundary Kempe interchanges that never changes
-the colour on `I` and never assigns that colour to `S-I`.
+Fix a nonempty independent set `I` of `G[S]` and a colour `gamma`.  Any
+two labelled proper six-colourings `c,c'` of `G[S]` satisfying
+
+\[
+                       c^{-1}(\gamma)=c'^{-1}(\gamma)=I
+\]
+
+are joined by a sequence of boundary Kempe interchanges using only colours
+different from `gamma`.  In particular, the sequence never changes the
+colour on `I` and never assigns `gamma` to `S-I`.
 
 ### Proof
 
-Rename the common colour on `I` to colour six in both colourings.  Their
-restrictions to `S-I` are proper colourings with the other five colours.
+Apply one common global colour permutation sending `gamma` to colour six.
+The restrictions to `S-I` are proper colourings with the other five colours.
 By Lemma 2.1, `G[S-I]` is four-degenerate.  The Las Vergnas--Meyniel
 degeneracy theorem says that all `k`-colourings of a `(k-1)`-degenerate
 graph are Kempe equivalent.  Apply it with `k=5`.  Each interchange is on
 colours different from six and is therefore also a Kempe interchange of
 `G[S]` leaving the exact block `I` fixed.  \(\square\)
+
+Consequently, given any two labelled exact-`I` colourings, one may first
+apply a global colour permutation to one endpoint so that the colour names
+on `I` agree, and then apply the corollary.  The resulting Kempe sequence
+ends at the relabelled endpoint, not at the original differently labelled
+colouring.
 
 The cited theorem is the standard result of Las Vergnas and Meyniel,
 *Kempe classes and the Hadwiger Conjecture*, J. Combin. Theory Ser. B 31
@@ -125,8 +137,9 @@ For every nonempty independent set `I` of `G[S]`, there are:
 
 1. an exact-`I` boundary colouring extending to `A`;
 2. an exact-`I` boundary colouring extending to `B`; and
-3. a shortest Kempe sequence between such choices, entirely within the
-   exact-`I` cylinder of Corollary 2.2,
+3. after aligning the colour name on `I`, a shortest Kempe sequence between
+   such choices, entirely within the fixed-colour exact-`I` cylinder of
+   Corollary 2.2,
 
 with the following properties.
 
@@ -158,9 +171,11 @@ of `G-N[u]` other than `C`.  Every such component `D` satisfies
 
 ### Proof
 
-The exact-block trace theorem supplies the two endpoint colourings.  After
-renaming the exact block to colour six, Corollary 2.2 supplies a Kempe
-sequence.  Minimize its length over all endpoint choices.  The two shore
+The exact-block trace theorem supplies the two endpoint colourings.
+Independently apply a global colour permutation to each endpoint colouring
+so that its exact block `I` has colour six.  This preserves extension through
+the corresponding shore.  Corollary 2.2 then supplies a Kempe sequence.
+Minimize its length over all such normalized endpoint choices.  The two shore
 extension sets are disjoint, so its length is positive.  Minimality says
 that only the first vertex of the sequence extends to `A` and only the
 last extends to `B`; otherwise a shorter pair of endpoints could be used.

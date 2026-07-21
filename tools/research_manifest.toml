@@ -268,7 +268,7 @@ status = "audited-green"
 source = "results/hc7_bounded_interface_exact_block_kempe_reduction.md"
 active = true
 audit = "results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md"
-expected_source_sha256 = "2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9"
+expected_source_sha256 = "19382ff7bc0065bc18a7caaeffd5c5fff46cf4ddc226d40036c751081a9853ff"
 
 [[claims]]
 id = "hc7.bounded_interface_pole_move_normal_form"
@@ -351,7 +351,7 @@ source = "results/hc7_bounded_interface_robust_triple_response.md"
 source_heading = "3. Robust singleton families have one global triple"
 active = false
 audit = "results/hc7_bounded_interface_robust_triple_response_audit.md"
-expected_source_sha256 = "42d50b8027bd5acabf986b803cffef9fe5bf402add892d58778d5a2d0bc2d064"
+expected_source_sha256 = "34e8bcef8895965c23f775ee9494ac72e9203d0d0b9fe7f0dc4532535d864883"
 scope = "all attainable exact-singleton response endpoint families at the bounded interface"
 conclusions = [
   "robust cross-intersection concentrates every singleton response on one independent boundary triple Q",

@@ -19,14 +19,17 @@ change is status-only: the theorem statement, proof, cited input revisions,
 and trust boundary are unchanged.
 
 Corollary 2 is also correct.  Its final “Audited inputs” paragraph records
-the GREEN-audited exact-block Kempe reduction at source hash
+the corrected GREEN-audited exact-block Kempe reduction at source hash
 
 ```text
-2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9  results/hc7_bounded_interface_exact_block_kempe_reduction.md
+19382ff7bc0065bc18a7caaeffd5c5fff46cf4ddc226d40036c751081a9853ff  results/hc7_bounded_interface_exact_block_kempe_reduction.md
 ```
 
-The audit of that result is pinned to the displayed promoted hash.  The present theorem
-does not prove `HC_7`; it proves that the anti-neighbourhood of a
+The audit of that result is pinned to the displayed corrected hash.  Its
+fixed-colour qualification does not affect Corollary 2: the application uses
+Theorem 5.1, whose endpoint colour names are explicitly aligned before the
+Kempe sequence.  The present theorem does not prove `HC_7`; it proves that
+the anti-neighbourhood of a
 degree-seven vertex is one nonempty connected component under the stated
 hypothetical-counterexample assumptions.
 
@@ -290,11 +293,11 @@ Consequently all internal vertices lie in `C`, as claimed.
 The current exact-block source hash and audit hash are
 
 ```text
-2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9  results/hc7_bounded_interface_exact_block_kempe_reduction.md
-e4f4583186f31382b0354d6a9fc04bb6541ac6cefa3b29faaf7fd7d91a859b81  results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md
+19382ff7bc0065bc18a7caaeffd5c5fff46cf4ddc226d40036c751081a9853ff  results/hc7_bounded_interface_exact_block_kempe_reduction.md
+45aad8373ed15a2ba961df4079ac8858b5332a01257b19d31f750d54fa444e20  results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md
 ```
 
-The source audit explicitly pins the promoted source hash.
+The source audit explicitly pins the corrected source hash.
 
 ## 8. Reproduced finite checks
 
@@ -379,7 +382,7 @@ The direct repository dependencies checked in this audit are:
 | singleton-component closure | `a68b0f0efe5b526d050261fbec3e0c3df47a96d022cb90f95ae5b3ca9616d8d4` | `db70f6f55328f4cf51043b4b49cf30e1a4ffb8f82e91144abc320c9e8ff2c942` | audit pinned; application rechecked GREEN |
 | pure-Moser two-component closure | `c0336db32657a971dd42cb73f45c449136af61eeaf74764de470cef38e9f6463` | `498e6587741ef4421dd747abd784e23830509fa163a8e8bde90ef5878dac5426` | transitive singleton-closure branch rechecked GREEN |
 | low-degree adjacent-pair interface | `263611a40dc7829788967250e031a3f3170e1c7a6c8c9a3fbfbb358231b1f9ca` | `001e27eecf24c938d2e93f70e428e5c82e39d1a2835bcaa49450aa0132f4f027` | exact bounded-interface setup for Corollary 2 |
-| exact-block Kempe reduction | `2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9` | `e4f4583186f31382b0354d6a9fc04bb6541ac6cefa3b29faaf7fd7d91a859b81` | audit pinned; corollary application GREEN |
+| exact-block Kempe reduction | `19382ff7bc0065bc18a7caaeffd5c5fff46cf4ddc226d40036c751081a9853ff` | `45aad8373ed15a2ba961df4079ac8858b5332a01257b19d31f750d54fa444e20` | corrected audit pinned; fixed-colour Corollary 2 application rechecked GREEN |
 
 The first three legacy audits did not themselves record their current source
 hashes.  This audit checked the displayed current sources directly and pins
