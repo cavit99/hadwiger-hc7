@@ -1,6 +1,7 @@
 # Critical completion of a singleton-root `K_7`-minus-one-edge model
 
-**Status:** active theorem programme. The main completion theorem is
+**Status:** frozen conditional theorem programme; this file is not part of
+the current authoritative proof spine. The main completion theorem is
 conjectural. The inputs explicitly identified as proved have written proofs
 and separate internal audits. Nothing here proves `HC_7`.
 
@@ -17,10 +18,11 @@ sets incident with the missing edge are nonadjacent singleton vertices
 `a,b`. Then `G` contains a `K_7` minor or has an actual separation of order
 seven.
 
-This is the current clean target. It is narrower than `HC_7`: it assumes a
+This is the clean target of this frozen programme. It is narrower than
+`HC_7`: it assumes a
 spanning near-complete model with two already specified singleton branch
 sets, and it permits a separation outcome. It would eliminate the
-unbounded no-order-seven branch of the current near-`K_7` programme.
+unbounded no-order-seven branch of this near-`K_7` programme.
 
 Write `J=G-{a,b}`. The remaining branch sets
 
@@ -80,8 +82,9 @@ of `J-S`, and let `R_E` be the subset of `{a,b}` having a neighbour in
 Equality is an actual order-seven separation. This weighted boundary order,
 not `|S|` alone, is the correct rank.
 
-This is the first general, label-aware rooted-model principle in the live
-spine. Its exact proof and scope are in the adjacent result and audit.
+This is the first general, label-aware rooted-model principle among this
+programme's proved inputs. Its exact proof and scope are in the adjacent
+result and audit.
 
 ### Complete-factor join theorem
 
@@ -153,7 +156,15 @@ near-`K_7` model. It is six-colourable and fails the universal two-root
 colouring cover. Thus the weighted terminal is sharp, and every strict
 compression step must use contraction-critical colouring data.
 
-### Immediate theorem to prove
+### Frozen conjectural compression target
+
+The following is a conjectural compression target, not a proved transition.
+In particular, the displayed tuple becomes a usable rank only after a new
+outcome in the original graph has been constructed with the same roots and
+prescribed path. The
+[root-contraction rank barrier](../barriers/hc7_normalized_root_contraction_rank_barrier.md)
+shows that contracting a root--`E` edge does not automatically preserve the
+comparison class or decrease any coordinate.
 
 **High-connectivity compression of a normalized dominating-model
 separator.** In the clean target setup, let `X` be the internal vertices of
@@ -170,8 +181,10 @@ where `C_X` is the component of `J-S` containing `X`. Then either
 3. a proper-minor colouring transition gives another normalized outcome
    with a strictly smaller displayed signature.
 
-When `R_E` is nonempty, the first concrete transition to exploit is the
-six-colouring after contracting an edge from a root in `R_E` into `E`.
+When `R_E` is nonempty, a six-colouring after contracting an edge from a
+root in `R_E` into `E` is only response data. A proof still needs a
+response-to-regeneration lemma producing a comparable normalized outcome
+in the original graph; lifting the colouring alone is insufficient.
 When `R_E` is empty, `S` already separates `G`; the task is to compress that
 larger separator or glue proper-minor colourings across it.
 
@@ -180,9 +193,9 @@ inside `S`. Seven-connectivity alone is not enough, and merely restating a
 generic branch-set splitter is not progress. A proof must exhibit the
 branch sets, the separator, or the strict replacement explicitly.
 
-This is the primary constructive mechanism. The older support-six and web
-programmes are frozen unless they supply an explicit construction needed in
-one of these two branches.
+This mechanism is frozen after the contraction transition failed its impact
+gate. The older support-six and web programmes remain frozen unless they
+supply an explicit construction needed in one of these two branches.
 
 ## 5. Trust boundary
 
