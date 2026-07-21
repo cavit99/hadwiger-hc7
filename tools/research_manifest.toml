@@ -5533,13 +5533,13 @@ status = "audited-green"
 source = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier.md"
 active = false
 audit = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier_audit.md"
-expected_source_sha256 = "8e5bd1998a40b765b0180e88cac43bba3c0ad0986c4559c1266441db5e6c8d2a"
+expected_source_sha256 = "cc52fd1f9fc08d31f28ab9ccd2191028eb06f719d32326d6c6225f0bc54ee918"
 scope = "the exact thirteen-vertex H0 subdivision with shared-hub edges eh,hx and separate bridges pr,sq composed through the frame interval rs"
 satisfies = [
   "a dirty two-bridge replacement chain f-p-r-s-q-g on the exact atomic common frame",
   "a structural K7-minor exclusion through a width-five decomposition of the graph after deleting e",
-  "vertex-connectivity three, chromatic number four and no planarizing vertex pair",
-  "no subdivision embedding in K2 joined with the icosahedron, and a complete low-degree single-edge saturation profile",
+  "vertex-connectivity three, chromatic number four and nonplanarity after deletion of any two vertex-or-edge objects",
+  "no subdivision embedding in any two-apex host, and a complete low-degree single-edge saturation profile",
 ]
 refutes = [
   "that two one-sided bridges composed through one intervening route interval already force a K7 minor",
@@ -5550,7 +5550,7 @@ lacks = [
   "an arbitrary long subdivision or a counterexample to the first-hit theorem",
   "a counterexample to the single-collision terminal disjunction or HC7",
 ]
-keywords = ["dirty path", "two bridges", "tree decomposition", "saturation", "icosahedron"]
+keywords = ["dirty path", "two bridges", "tree decomposition", "saturation", "two-apex"]
 
 [[claims]]
 id = "hc7.atomic_two_bridge_exact_core_seven_fan_closure"
@@ -5575,6 +5575,53 @@ does_not_prove = [
   "the arbitrary-subdivision single-collision disjunction or HC7",
 ]
 keywords = ["two-bridge core", "seven-fan", "endpoint saturation", "first hit", "route skeleton"]
+
+[[claims]]
+id = "hc7.atomic_two_bridge_subdivision_landing_stars"
+title = "Landing-star closure in an arbitrary two-bridge subdivision"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_two_bridge_subdivision_landing_stars.md"
+active = false
+audit = "results/hc7_atomic_two_bridge_subdivision_landing_stars_audit.md"
+expected_source_sha256 = "2f0156a2ec45b01265703b120b3eb18ad0560bbeaa1cebf0bfb665812efc67c7"
+scope = "arbitrary subdivisions of the labelled thirteen-vertex two-bridge core in a seven-connected host, with the minor-minimal HC7 hypotheses only for the response-boundary conclusion"
+label_fidelity = "the first-hit component at q, both open landing stars, the literal q-b separator, seven branch sets and all twenty-one contacts are explicit"
+conclusions = [
+  "one common first-hit component meeting both the open x-star and open e-star gives an explicit K7-minor model even when its two clean paths intersect",
+  "in every K7-minor-free host the first-hit boundary avoids one complete open subdivided star at e or x",
+  "a q-b separator of order at most nine contained in the first-hit boundary is a full four-colourable response interface with exact-block and selected-edge responses",
+  "otherwise every q-b separator contained in that boundary has order at least ten",
+]
+does_not_prove = [
+  "that seven-connectivity forces the first-hit boundary to meet both landing stars",
+  "a bounded response or strict same-form descent in the large one-star-avoidance case",
+  "the single-collision terminal disjunction or HC7",
+]
+keywords = ["landing star", "two-bridge subdivision", "first hit", "response boundary", "dirty path"]
+
+[[claims]]
+id = "hc7.barrier.atomic_two_safe_transit_label"
+title = "Barrier to two forced-hub transit labels in the atomic core"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_atomic_two_safe_transit_label_barrier.md"
+active = false
+audit = "barriers/hc7_atomic_two_safe_transit_label_barrier_audit.md"
+expected_source_sha256 = "38263278bc25f1b0dd3005ee5ee11ac24158799d3fe33a56a55cb9513202dd9c"
+scope = "the exact thirteen-vertex two-bridge core augmented by q-v-x and q-e, with q,v,x prescribed to one branch set"
+satisfies = [
+  "an exact exhaustive classification of all eleven possible single retained transit labels",
+  "p is the unique forced-hub admissible label, with an explicit seven-bag model and all twenty-one contacts",
+]
+refutes = [
+  "that two distinct retained labels support the proposed order-nine forced-hub continuation under this ownership rule",
+]
+lacks = [
+  "a negative conclusion for unrestricted K7 models, paths with several retained labels, or alternative branch-set ownership",
+  "seven-connected ambient-host structure, a strict descent, or a counterexample to HC7",
+]
+keywords = ["forced hub", "transit label", "finite barrier", "branch-set ownership"]
 
 [[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
@@ -5843,6 +5890,30 @@ source = "hc7.atomic_two_bridge_exact_core_seven_fan_closure"
 target = "hc7.target.bounded_interface_bridge"
 kind = "related_to"
 note = "Endpoint saturation supplies an unbounded host closure for the exact core; the remaining subdivision-level fan obstruction must still return the active target's explicit model, common response or strict descent."
+
+[[relations]]
+source = "hc7.atomic_two_bridge_subdivision_landing_stars"
+target = "hc7.atomic_two_bridge_exact_core_seven_fan_closure"
+kind = "uses"
+note = "The landing theorem uses the five terminal endpoint certificates and exact eight-vertex route confinement of the seven-fan result."
+
+[[relations]]
+source = "hc7.atomic_two_bridge_subdivision_landing_stars"
+target = "hc7.atomic_path_absence_response_boundary"
+kind = "uses"
+note = "A minimum literal q-b separator of order at most nine is promoted using the audited full response-boundary theorem."
+
+[[relations]]
+source = "hc7.atomic_two_bridge_subdivision_landing_stars"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The theorem closes two-star landings and all small literal separators; the surviving large one-star case still needs the target's compatible response or strict component descent."
+
+[[relations]]
+source = "hc7.barrier.atomic_two_safe_transit_label"
+target = "hc7.atomic_two_bridge_subdivision_landing_stars"
+kind = "sharpness_witness"
+note = "The exact core has only one single-label forced-hub absorption, so the large one-star residue cannot be closed by the proposed two-label order-nine shortcut."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -8848,9 +8919,23 @@ expected_stdout = [
 ]
 
 [[verifiers]]
+id = "atomic-two-safe-transit-label-barrier"
+path = "barriers/hc7_atomic_two_safe_transit_label_barrier_verify.py"
+sha256 = "4f9e9727a27202a207d8bcf25831928e2f3933cbb7010721813c0d54cc5d12a4"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN atomic two-safe-transit-label barrier",
+  "candidates=a,b,c,d,e,f,g,h,p,r,s",
+  "forced_hub_safe=p",
+  "forced_hub_unsafe=a,b,c,d,e,f,g,h,r,s",
+  "explicit_positive_hub={p,q,x}",
+]
+
+[[verifiers]]
 id = "atomic-dirty-two-bridge-chain-barrier"
 path = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier_verify.py"
-sha256 = "5037c1e198eefe3be17873f0a3ea50ab632d7a729f9ff417520a02ebff41370c"
+sha256 = "7334fd62e0dc25ec4fae4109714e24e155d0b0d972325449461fa80603d9af8b"
 timeout = 60
 requires = ["networkx==3.6.1"]
 expected_stdout = [
@@ -8858,11 +8943,11 @@ expected_stdout = [
   "host: vertices=13 edges=32 connectivity=3 chromatic=4 K7_minor=no",
   "connectivity_checks=92 cut=N(p)=['a', 'f', 'r']",
   "K7_exclusion=G-e width-5 decomposition and no spanning K6 model",
-  "two_apex=no pairs=78 kuratowski={'TK3,3': 46, 'TK5': 32}",
+  "object_deletion_nonplanar=yes objects=45 cases=1036 kuratowski={'TK3,3': 587, 'TK5': 449}",
   "saturation_h: K7=p,q,r survives=a,b,c,d,s",
   "saturation_p: K7=b,d,g,h,q survives=c,e,s,x",
   "saturation_q: K7=b,d,f,h,p survives=c,e,r,x",
   "saturation_r: K7=b,d,g,h survives=c,e,f,q,x",
   "saturation_s: K7=b,d survives=a,e,f,g,h,p,x",
-  "K2_join_icosahedron_subdivision=no cases=33 search_states=377661",
+  "two_apex_subdivision_exclusion=yes",
 ]

@@ -170,12 +170,11 @@ to the preceding conclusion.  \(\square\)
 The verifier checks the tree decomposition directly and independently
 exhausts every spanning six-bag model in `D_*-e`.
 
-## 3. Connectivity, colouring, and two-apex status
+## 3. Connectivity and colouring
 
 ### Proposition 3.1
 
-The graph `D_*` has vertex-connectivity three and chromatic number four.  It
-is not two-apex.
+The graph `D_*` has vertex-connectivity three and chromatic number four.
 
 #### Proof
 
@@ -193,49 +192,61 @@ sets
 
 partition the vertices, proving `chi(D_*)=4`.
 
-For each of the seventy-eight vertex pairs, the verifier deletes the pair,
-obtains a Kuratowski subgraph, checks that it is a literal subgraph of the
-remainder, and suppresses its degree-two paths to `K_5` or `K_{3,3}`.  It
-finds 32 subdivisions of `K_5` and 46 subdivisions of `K_{3,3}`.  Hence no
-pair planarizes `D_*`; a planarizing set of smaller order would remain
-planar after one more deletion, so none exists.  \(\square\)
+\(\square\)
 
-Thus the familiar two-apex certificate for several atomic barriers is
-genuinely unavailable here.
+## 4. Two-object nonplanarity and two-apex exclusion
 
-## 4. The `K_2`-joined icosahedron does not contain the chain
-
-Let `I` be the icosahedral graph and put `A=K_2\vee I`.  This is a
-seven-connected `K_7`-minor-free graph: `I` is five-connected and planar,
-and discarding the at most two branch sets containing the complete-factor
-vertices from a hypothetical `K_7` model would leave a `K_5` model in `I`.
-Unlike the earlier shared-hub graph, all vertices of `D_*` have degree at
-most seven, so ambient degrees do not exclude a subdivision.
+Call each vertex and each edge of `D_*` an **object**.  If `Z` is a set of
+objects, let `D_*-Z` denote the graph obtained by deleting every vertex
+object and every edge object in `Z`.
 
 ### Proposition 4.1 (computer-assisted finite result)
 
-The graph `A` contains no subdivision of `D_*`.
+For every set `Z` of at most two objects of `D_*`, the graph `D_*-Z` is
+nonplanar.
 
 #### Finite proof
 
-Every one of the thirteen vertices of `D_*` has degree at least three and
-must have a distinct image in a subdivision.  The host `A` has fourteen
-vertices.  There is therefore room for at most one internal vertex on all
-subdivided edge paths together.  An embedding is exactly one of the
-following:
+There are thirteen vertex objects and thirty-two edge objects.  The verifier
+checks all
 
-1. an injective edge-preserving map of `D_*` into `A`; or
-2. for one of the thirty-two edges of `D_*`, an injective edge-preserving
-   map after subdividing that edge once.
+\[
+ {45\choose0}+{45\choose1}+{45\choose2}=1036
+\]
 
-The verifier performs a deterministic injective-map backtracking search in
-the literal case and in all thirty-two one-edge cases.  It checks all
-adjacencies against the standard fourteen-vertex `K_2\vee I` and finds no
-map in the thirty-three exhaustive cases.  \(\square\)
+object sets of order at most two.  In every remainder it obtains a
+Kuratowski subgraph, checks that every reported vertex and edge is literally
+present in the remainder, and suppresses its degree-two paths.  Each
+suppressed graph is checked to be `K_5` or `K_{3,3}`.  The retained run's
+1036 certificates split as 449 subdivisions of `K_5` and 587 subdivisions
+of `K_{3,3}`.
+Thus every checked remainder is nonplanar.  \(\square\)
 
-This targeted check rules out the standard seven-connected two-apex
-guardrail as an exact host for the canonical chain.  It does not rule out a
-longer subdivision in a larger seven-connected host.
+### Theorem 4.2
+
+No two-apex graph contains a subdivision of `D_*`.
+
+#### Proof
+
+Suppose that a graph `J` contains a subdivision `S` of `D_*` and that
+`J-Z_0` is planar for some `Z_0` with `|Z_0|\leq 2`.  Associate an object of
+`D_*` with each vertex of `Z_0\cap V(S)`: a branch vertex of `S` records the
+corresponding vertex object, while an internal vertex on a subdivided edge
+route records that edge object.  Vertices outside `S` record nothing, and
+repeated objects are recorded only once.  This gives a set `Z` of at most
+two objects.
+
+After discarding from `S` every branch vertex recorded by `Z`, all routes
+incident with such a vertex, and every route whose edge object is recorded,
+the remaining subgraph contains a subdivision of `D_*-Z`.  It lies in the
+planar graph `J-Z_0`, contradicting Proposition 4.1.  \(\square\)
+
+In particular, `K_2\vee P` contains no subdivision of `D_*` for any planar
+graph `P`.  When `P` is five-connected this is the standard seven-connected,
+`K_7`-minor-free guardrail: deleting fewer than seven vertices leaves either
+a complete-factor vertex or a connected remainder of `P`, and a `K_7` model
+would leave a `K_5` model in `P` after discarding the at most two branch sets
+containing the complete-factor vertices.
 
 ## 5. Exact single-edge saturation
 

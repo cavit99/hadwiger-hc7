@@ -239,8 +239,10 @@ this target. It does not change the authoritative hierarchy above.
   [dirty two-bridge-chain barrier](barriers/hc7_atomic_dirty_two_bridge_chain_barrier.md)
   refutes the bare inference that two one-sided bridges composed through one
   route interval already give a `K_7` minor.  Its exact thirteen-vertex graph
-  is three-connected and four-chromatic, and the standard
-  `K_2`-joined-icosahedron guardrail contains no subdivision of it.  The
+  is three-connected and four-chromatic.  The strengthened audited finite
+  theorem checks that deleting any two vertex-or-edge objects leaves a
+  Kuratowski subdivision; consequently no subdivision of this graph occurs
+  in any two-apex host, not only in the standard joined-planar guardrail.  The
   audited
   [exact-core seven-fan theorem](results/hc7_atomic_two_bridge_exact_core_seven_fan_closure.md)
   nevertheless closes that same unsplit core in every seven-connected host:
@@ -253,9 +255,28 @@ this target. It does not change the authoritative hierarchy above.
    qa,qg,qs,ar,rs,sc,ae,ax,ce,cg,cx,eg.
   \]
 
-  The exact remaining local gate is to extract one fan containing both
-  literal endpoints `e,x`, or convert the obstruction to such a fan into a
-  bounded response interface or strict host-component descent.  The earlier
+  The audited
+  [landing-star theorem](results/hc7_atomic_two_bridge_subdivision_landing_stars.md)
+  now closes much of that route skeleton without requiring disjoint exterior
+  paths.  If the common first-hit component meets both the open subdivided
+  stars at `e` and `x`, their possibly intersecting paths belong to one branch
+  set and give an explicit `K_7` model.  Thus a `K_7`-minor-free survivor
+  avoids one entire open star.  In a hypothetical minor-minimal counterexample,
+  a minimum `q`--`b` separator contained in the first-hit boundary either has
+  order seven to nine and carries the full audited exact-block and selected-edge
+  responses, or every such literal separator has order at least ten.
+
+  The adjacent
+  [forced-hub transit-label barrier](barriers/hc7_atomic_two_safe_transit_label_barrier.md)
+  closes off the most direct small-boundary continuation: among all eleven
+  retained labels in the exact core, only `p` can be absorbed into the
+  prescribed `q,x` branch set while the other clean connection is retained.
+  Hence there are not two distinct safe labels under that ownership rule.
+  The exact remaining atomic gate is therefore an unbounded large-boundary
+  one-star-avoidance configuration.  Closing it requires a label-preserving
+  dirty-path/bridge-composition theorem that either reroutes into the avoided
+  star, produces a response boundary, or gives strict component descent;
+  further finite local enumeration does not address that inference.  The earlier
   [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
   shows that individually two-apex bridge certificates need not share an
   apex pair and that normalized dominating `K_5` models may regenerate
@@ -312,8 +333,14 @@ this target. It does not change the authoritative hierarchy above.
   need not synchronize the shore colourings or give strict descent.  In the
   existing-path alternative, the exact two-bridge core closes at
   seven-connectivity and every surviving first hit is confined to the displayed
-  eight-vertex skeleton.  Extracting clean paths to both `e,x`, or deriving a
-  response-bearing separator from their obstruction, remains open.  The
+  eight-vertex skeleton.  A common first-hit component meeting both complete
+  landing stars now gives an explicit model even when its two paths intersect,
+  and every contained `q`--`b` separator of order at most nine carries the full
+  response.  The exact survivor has every such literal separator of order at
+  least ten and avoids one whole open star.  The one-label forced-hub census
+  supplies only `p`, so the proposed two-label shortcut cannot close it.  The
+  order-ten assertion concerns separators contained in `Omega_q`; it is not a
+  global ten-path linkage statement.  The
   six-connected barrier also rules out intersecting individual two-apex
   certificates or invoking bare dominating-model regeneration.  The
   single-collision gate therefore remains open, and this route does not

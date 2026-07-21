@@ -248,85 +248,31 @@ def verify_saturation(graph: nx.Graph) -> dict[str, tuple[list[str], list[str]]]
     return table
 
 
-def build_icosahedral_join() -> nx.Graph:
-    host = nx.relabel_nodes(nx.icosahedral_graph(), lambda vertex: f"i{vertex}")
-    host.add_edge("u", "v")
-    core = tuple(vertex for vertex in host if vertex not in ("u", "v"))
-    host.add_edges_from((apex, vertex) for apex in ("u", "v") for vertex in core)
-    assert (len(host), host.number_of_edges()) == (14, 55)
-    assert Counter(dict(host.degree()).values()) == Counter({7: 12, 13: 2})
-    return host
+def verify_object_deletion_nonplanarity(graph: nx.Graph) -> Counter[str]:
+    """Check every deletion of at most two vertex-or-edge objects."""
 
+    edge_objects = tuple(
+        edge(left, right) for left, right in sorted(tuple(sorted(pair)) for pair in graph.edges())
+    )
+    objects: tuple[str | frozenset[str], ...] = tuple(graph) + edge_objects
+    assert len(objects) == 45 and len(set(objects)) == 45
 
-def monomorphism_exists(pattern: nx.Graph, host: nx.Graph) -> tuple[bool, int]:
-    """Exact injective edge-preserving map search with dynamic branching."""
-
-    mapping: dict[str, str] = {}
-    used: set[str] = set()
-    states = 0
-
-    def feasible(vertex: str) -> list[str]:
-        candidates = []
-        unassigned_neighbours = sum(neighbour not in mapping for neighbour in pattern[vertex])
-        for image in host:
-            if image in used or host.degree(image) < pattern.degree(vertex):
-                continue
-            if any(
-                neighbour in mapping and not host.has_edge(image, mapping[neighbour])
-                for neighbour in pattern[vertex]
-            ):
-                continue
-            available_neighbours = sum(neighbour not in used for neighbour in host[image])
-            if available_neighbours < unassigned_neighbours:
-                continue
-            candidates.append(image)
-        return candidates
-
-    def search() -> bool:
-        nonlocal states
-        states += 1
-        if len(mapping) == len(pattern):
-            return True
-        choices = []
-        for vertex in pattern:
-            if vertex in mapping:
-                continue
-            candidates = feasible(vertex)
-            if not candidates:
-                return False
-            mapped_neighbours = sum(neighbour in mapping for neighbour in pattern[vertex])
-            choices.append((len(candidates), -mapped_neighbours, -pattern.degree(vertex), str(vertex), vertex, candidates))
-        _, _, _, _, vertex, candidates = min(choices)
-        for image in candidates:
-            mapping[vertex] = image
-            used.add(image)
-            if search():
-                return True
-            used.remove(image)
-            del mapping[vertex]
-        return False
-
-    return search(), states
-
-
-def verify_icosahedral_exclusion(graph: nx.Graph) -> int:
-    host = build_icosahedral_join()
-    assert min(dict(graph.degree()).values()) >= 3
-    cases = [("literal", graph)]
-    for left, right in sorted(tuple(sorted(pair)) for pair in graph.edges()):
-        pattern = graph.copy()
-        pattern.remove_edge(left, right)
-        internal = "w"
-        assert internal not in pattern
-        pattern.add_edges_from(((left, internal), (internal, right)))
-        cases.append((f"{left}{right}", pattern))
-    assert len(cases) == 33
-    total_states = 0
-    for _, pattern in cases:
-        exists, states = monomorphism_exists(pattern, host)
-        total_states += states
-        assert not exists
-    return total_states
+    certificates: Counter[str] = Counter()
+    cases = 0
+    for size in range(3):
+        for deleted in combinations(objects, size):
+            remainder = graph.copy()
+            remainder.remove_nodes_from(obj for obj in deleted if isinstance(obj, str))
+            remainder.remove_edges_from(
+                tuple(obj) for obj in deleted if isinstance(obj, frozenset)
+            )
+            planar, certificate = nx.check_planarity(remainder, counterexample=True)
+            assert not planar
+            certificates[certificate_type(remainder, certificate)] += 1
+            cases += 1
+    assert cases == 1036
+    assert certificates == Counter({"TK5": 449, "TK3,3": 587})
+    return certificates
 
 
 def main() -> None:
@@ -357,27 +303,21 @@ def main() -> None:
     validate_width_five_decomposition(k6_remainder)
     assert spanning_clique_model(k6_remainder, 6) is None
 
-    certificates: Counter[str] = Counter()
-    for deleted in combinations(tuple(graph), 2):
-        remainder = graph.copy()
-        remainder.remove_nodes_from(deleted)
-        planar, certificate = nx.check_planarity(remainder, counterexample=True)
-        assert not planar
-        certificates[certificate_type(remainder, certificate)] += 1
-    assert sum(certificates.values()) == 78
-
+    certificates = verify_object_deletion_nonplanarity(graph)
     table = verify_saturation(graph)
-    embedding_states = verify_icosahedral_exclusion(graph)
 
     print("GREEN atomic dirty two-bridge-chain barrier")
     print("host: vertices=13 edges=32 connectivity=3 chromatic=4 K7_minor=no")
     print(f"connectivity_checks={connectivity_cases} cut=N(p)={sorted(cut)}")
     print("K7_exclusion=G-e width-5 decomposition and no spanning K6 model")
-    print(f"two_apex=no pairs=78 kuratowski={dict(sorted(certificates.items()))}")
+    print(
+        "object_deletion_nonplanar=yes objects=45 cases=1036 "
+        f"kuratowski={dict(sorted(certificates.items()))}"
+    )
     for vertex in SPECIAL:
         terminal, surviving = table[vertex]
         print(f"saturation_{vertex}: K7={','.join(terminal)} survives={','.join(surviving)}")
-    print(f"K2_join_icosahedron_subdivision=no cases=33 search_states={embedding_states}")
+    print("two_apex_subdivision_exclusion=yes")
 
 
 if __name__ == "__main__":
