@@ -5306,6 +5306,33 @@ lacks = [
 keywords = ["bridge compatibility", "two-apex", "dominating K5", "K3,2,2,2", "six-connectivity"]
 
 [[claims]]
+id = "hc7.barrier.atomic_shared_hub_defect_rotation"
+title = "Shared connector/provenance vertex does not orient collision descent"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_atomic_shared_hub_defect_rotation_barrier.md"
+active = false
+audit = "barriers/hc7_atomic_shared_hub_defect_rotation_barrier_audit.md"
+expected_source_sha256 = "2f42d9f133f9ba37e674c8c53688a60a9e86b180d5d51d3a8b59b58dd705b180"
+scope = "the exact thirteen-vertex H0 subdivision in which the xe connector shares the sole internal vertex of the fg provenance route"
+label_fidelity = "all seven immersion branch labels, the collision vertex, the three absent quotient pairs and every demand route are retained"
+satisfies = [
+  "a globally lexicographically minimum atomic strong K7 immersion with unique potential (1,0,0,28)",
+  "an exact spanning K8-{ab,cd,fg} rotated quotient partition",
+  "no K7 minor and no labelled strong-immersion lift of the rotated quotient",
+]
+refutes = [
+  "treating a change of absent quotient pairs as a strict collision-potential descent without an ownership-preserving immersion lift",
+  "recovering the rotated labelled strong immersion merely by choosing either vertex of the shared two-vertex quotient bag as its literal root",
+]
+lacks = [
+  "seven-connectivity, seven-chromaticity and strong contraction-criticality",
+  "a counterexample to the single-collision terminal disjunction or HC7",
+  "closure of the host-level dirty replacement path which meets another provenance-route interior",
+]
+keywords = ["atomic collision", "shared connector", "quotient rotation", "ownership lift", "dirty replacement"]
+
+[[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
 title = "Atomic weak-immersion guardrail in the two-apex icosahedron"
 kind = "barrier"
@@ -5416,6 +5443,18 @@ source = "hc7.atomic_weak_k7_immersion_rounding"
 target = "hc7.target.bounded_interface_bridge"
 kind = "related_to"
 note = "A low-degree disjoint-demand atomic collision recovers the bounded full-interface geometry, but not atomicity, a low-degree collision anchor, the named response or strict host-component descent required by the active target."
+
+[[relations]]
+source = "hc7.barrier.atomic_shared_hub_defect_rotation"
+target = "hc7.atomic_h0_clean_three_arm_closure"
+kind = "sharpness_witness"
+note = "The common-hub example has only two clean-support owners and shows that moving the shared provenance vertex between bags does not replace a saturating clean-root attachment matching."
+
+[[relations]]
+source = "hc7.barrier.atomic_shared_hub_defect_rotation"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "Seven-connectivity turns the common-hub pattern into a clean replacement, an actual order-seven separator, or a dirty replacement path whose ownership must be decoded into the active target's explicit model, compatible response, or strict component descent."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -8357,4 +8396,20 @@ expected_stdout = [
   "missed_clean_bag: paired_linkage=no",
   "branch_transit: collision=p degree=13 minimum_excess_M=1 length=29",
   "terminal: pair=p,q hits_every_K5_model; exact_order7_separator=yes",
+]
+
+[[verifiers]]
+id = "atomic-shared-hub-defect-rotation-barrier"
+path = "barriers/hc7_atomic_shared_hub_defect_rotation_verify.py"
+sha256 = "b7b637dae7d8ce61d94f2ac6b8ef11735a40ad7f449306582b7c1672d5521627"
+timeout = 60
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN atomic shared-hub defect-rotation barrier",
+  "host: vertices=13 edges=34 connectivity=3 K7_minor=no",
+  "original: potential=(1,0,0,28) collision=x demands=ab,cd",
+  "rotated_partition: defects=ab,cd,fg bag_X={x,h}",
+  "atomic_search: branch_sets=1716 L<=27=0 L=28=1",
+  "minimum_witness: branches=abcdefg collision=x demands=ab,cd",
+  "rotated_strong_lifts: collision_f=no collision_g=no",
 ]

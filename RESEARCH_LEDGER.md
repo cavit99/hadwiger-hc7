@@ -170,14 +170,23 @@ this target. It does not change the authoritative hierarchy above.
   the quotient six-cut expands to a boundary of order `6+|F_0|`, unbounded
   in the original host.  The barrier family is itself six-colourable and has
   a displayed `K_7`, so it does not survive the full hypotheses.  The adjacent
+  [shared-hub defect-rotation barrier](barriers/hc7_atomic_shared_hub_defect_rotation_barrier.md)
+  is an exact finite obstruction to a different shortcut: moving a common
+  connector/provenance vertex changes the three absent quotient pairs, but
+  need not lift to another labelled strong immersion or decrease the global
+  collision potential.  Its thirteen-vertex host is only three-connected and
+  three-colourable.  In a seven-connected host, the corresponding common-hub
+  configuration instead gives an actual order-seven separator, a clean
+  replacement path and explicit `K_7` model, or the now-isolated case in which
+  every replacement path meets another provenance-route interior.  The adjacent
   [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
   shows that individually two-apex bridge certificates need not share an
   apex pair and that normalized dominating `K_5` models may regenerate
   after every two-vertex deletion without yielding the needed exchange.
-  The remaining local inference is now the interaction of Hall-deficient
-  high-attachment quadrant bridges with the first bad partial quotient:
-  it must preserve named ownership, return a literal bounded response
-  interface, or give a strict host-component descent.
+  The remaining local inference is therefore the interaction of dirty
+  replacement paths and Hall-deficient high-attachment quadrant bridges with
+  the first bad partial quotient: it must preserve named ownership, return a
+  literal bounded response interface, or give a strict host-component descent.
 
 ## Exact trust boundary
 
@@ -205,7 +214,12 @@ this target. It does not change the authoritative hierarchy above.
   has not been decoded.  Likewise the exact-`J` all-subsets forest landing is
   closed, but an earlier partial connectivity loss can have an unbounded
   literal lift and needs bridge ownership or chromatic response to control
-  it.  The
+  it.  Bare reassignment of a shared connector/provenance vertex also fails:
+  the rotated near-clique quotient need not have a labelled strong-immersion
+  lift or improve the lexicographic collision potential.  Seven-connectivity
+  reduces that pattern to an exact order-seven separator, a provenance-clean
+  replacement and explicit `K_7` model, or a replacement path which meets
+  another subdivision-route interior; the last case remains open.  The
   six-connected barrier also rules out intersecting individual two-apex
   certificates or invoking bare dominating-model regeneration.  The
   single-collision gate therefore remains open, and this route does not
