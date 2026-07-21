@@ -226,15 +226,43 @@ this target. It does not change the authoritative hierarchy above.
   meeting each elementary route interval in at most one connected subpath and
   first returns outside `T_fg`.  The remaining configuration is therefore a
   genuinely multi-bridge chain through intervening route intervals, not an
-  arbitrary dirty path.  The adjacent
+  arbitrary dirty path.  The audited
+  [path-absence response theorem](results/hc7_atomic_path_absence_response_boundary.md)
+  now upgrades the missing-path branch: an inclusion-minimal separator in
+  the nine named vertices is full on both distinguished sides, has order
+  seven, eight or nine and a four-colourable boundary, realizes every
+  independent boundary set as an exact block on each closed shore, and
+  retains a selected edge-deletion response.  It is a bounded response
+  interface, but not yet a strict same-form descent.
+
+  The adjacent
+  [dirty two-bridge-chain barrier](barriers/hc7_atomic_dirty_two_bridge_chain_barrier.md)
+  refutes the bare inference that two one-sided bridges composed through one
+  route interval already give a `K_7` minor.  Its exact thirteen-vertex graph
+  is three-connected and four-chromatic, and the standard
+  `K_2`-joined-icosahedron guardrail contains no subdivision of it.  The
+  audited
+  [exact-core seven-fan theorem](results/hc7_atomic_two_bridge_exact_core_seven_fan_closure.md)
+  nevertheless closes that same unsplit core in every seven-connected host:
+  five terminal endpoint certificates force clean fan paths to `e,x` and an
+  explicit `K_7` model.  For an arbitrary subdivision, the same certificates
+  confine every surviving first hit to the subdivision of the eight-vertex
+  graph with edges
+
+  \[
+   qa,qg,qs,ar,rs,sc,ae,ax,ce,cg,cx,eg.
+  \]
+
+  The exact remaining local gate is to extract one fan containing both
+  literal endpoints `e,x`, or convert the obstruction to such a fan into a
+  bounded response interface or strict host-component descent.  The earlier
   [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
   shows that individually two-apex bridge certificates need not share an
   apex pair and that normalized dominating `K_5` models may regenerate
   after every two-vertex deletion without yielding the needed exchange.
-  The remaining local inference is therefore the interaction of dirty
-  replacement paths and Hall-deficient high-attachment quadrant bridges with
-  the first bad partial quotient: it must preserve named ownership, return a
-  literal bounded response interface, or give a strict host-component descent.
+  The wider remaining inference is still the interaction of dirty replacement
+  paths and Hall-deficient high-attachment quadrant bridges with the first bad
+  partial quotient, retaining named ownership throughout.
 
 ## Exact trust boundary
 
@@ -279,10 +307,13 @@ this target. It does not change the authoritative hierarchy above.
   host by the new fan-saturation theorem, and no subdivision of it occurs in a
   two-apex host.  In an arbitrary subdivision, the first-hit theorem closes
   two-sided `fg` contacts and every single bridge spanning the two clean route
-  stars.  What remains open is a normalized one-sided multi-bridge chain through
-  central route intervals, or the order-eight/order-nine separator obtained
-  when the corresponding branch-avoiding path is absent.  Neither alternative
-  yet carries a compatible response or a strict host reduction.  The
+  stars.  The path-absence alternative now carries complete separate
+  exact-block responses and a selected edge-deletion response, although it
+  need not synchronize the shore colourings or give strict descent.  In the
+  existing-path alternative, the exact two-bridge core closes at
+  seven-connectivity and every surviving first hit is confined to the displayed
+  eight-vertex skeleton.  Extracting clean paths to both `e,x`, or deriving a
+  response-bearing separator from their obstruction, remains open.  The
   six-connected barrier also rules out intersecting individual two-apex
   certificates or invoking bare dominating-model regeneration.  The
   single-collision gate therefore remains open, and this route does not

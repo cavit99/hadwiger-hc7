@@ -5501,6 +5501,82 @@ does_not_prove = [
 keywords = ["first hit", "quadrant bridge", "route interval", "one-sided bridge", "bounded separator"]
 
 [[claims]]
+id = "hc7.atomic_path_absence_response_boundary"
+title = "Response boundary when the atomic return path is absent"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_path_absence_response_boundary.md"
+active = false
+audit = "results/hc7_atomic_path_absence_response_boundary_audit.md"
+expected_source_sha256 = "d6fc8e0024b31439fbdd7fe4f2e20593ba5e01553bef937e2d26aec0032da036"
+scope = "an inclusion-minimal separator of order at most nine in a hypothetical minor-minimal HC7 counterexample, applied to the absent q'-to-h return path in the atomic first-hit setup"
+label_fidelity = "the separator is contained in the nine named atomic vertices; its distinguished full components and every selected entrance edge remain literal host objects"
+separator_order = "seven, eight or nine; the boundary is four-colourable and both closed shores realize every nonempty independent boundary set as an exact colour block"
+conclusions = [
+  "minimality makes both distinguished components full to the separator and gives an actual bounded separation",
+  "the K2 joined C7 order-nine exception closes by cycle completion or an explicit third-component K7 model",
+  "every selected boundary entrance-edge deletion gives a partition accepted by the far shore and rejected by the unchanged near shore",
+  "absence of the normalized atomic return path therefore yields a literal bounded response interface",
+]
+does_not_prove = [
+  "synchronization of the two closed-shore colourings or reduction to order seven",
+  "preservation of the old atomic subdivision inside one component",
+  "a strict same-form host-component descent, the single-collision disjunction or HC7",
+]
+keywords = ["minimal separator", "exact-block response", "selected edge", "order nine", "atomic path absence"]
+
+[[claims]]
+id = "hc7.barrier.atomic_dirty_two_bridge_chain"
+title = "A dirty two-bridge replacement chain need not close locally"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier.md"
+active = false
+audit = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier_audit.md"
+expected_source_sha256 = "8e5bd1998a40b765b0180e88cac43bba3c0ad0986c4559c1266441db5e6c8d2a"
+scope = "the exact thirteen-vertex H0 subdivision with shared-hub edges eh,hx and separate bridges pr,sq composed through the frame interval rs"
+satisfies = [
+  "a dirty two-bridge replacement chain f-p-r-s-q-g on the exact atomic common frame",
+  "a structural K7-minor exclusion through a width-five decomposition of the graph after deleting e",
+  "vertex-connectivity three, chromatic number four and no planarizing vertex pair",
+  "no subdivision embedding in K2 joined with the icosahedron, and a complete low-degree single-edge saturation profile",
+]
+refutes = [
+  "that two one-sided bridges composed through one intervening route interval already force a K7 minor",
+  "that every canonical two-bridge chain is two-apex",
+]
+lacks = [
+  "seven-connectivity, seven-chromaticity and contraction-critical proper-minor responses",
+  "an arbitrary long subdivision or a counterexample to the first-hit theorem",
+  "a counterexample to the single-collision terminal disjunction or HC7",
+]
+keywords = ["dirty path", "two bridges", "tree decomposition", "saturation", "icosahedron"]
+
+[[claims]]
+id = "hc7.atomic_two_bridge_exact_core_seven_fan_closure"
+title = "Seven-fan closure of the exact two-bridge atomic core"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_two_bridge_exact_core_seven_fan_closure.md"
+active = false
+audit = "results/hc7_atomic_two_bridge_exact_core_seven_fan_closure_audit.md"
+expected_source_sha256 = "dc5536fa551f1445fc002b54222cf3fa0199f0b68fe095371a9dcfcbf386cca0"
+scope = "arbitrary seven-connected supergraphs containing the exact labelled thirteen-vertex two-bridge core as a subgraph, with first-hit consequences for arbitrary subdivisions"
+label_fidelity = "all thirteen core labels, five terminal endpoint certificates, clean fan paths to e and x, and all twenty-one final branch-set contacts are explicit"
+conclusions = [
+  "five positive single-edge certificates force every seven-fan at q onto the seven complementary labelled endpoints in the exact core",
+  "the forced clean q-e and q-x paths give an explicit K7-minor model in every seven-connected host of the unsplit core",
+  "in an arbitrary subdivision every surviving first hit lies on the twelve-edge skeleton induced by q,a,c,e,g,r,s,x",
+  "an order-seven first-hit boundary is an actual separation, while any K7-free seven-fan must omit e or x",
+]
+does_not_prove = [
+  "selection of a subdivision-clean fan containing both e and x",
+  "laminarity of the remaining route attachments or a response consequence of the fan obstruction",
+  "the arbitrary-subdivision single-collision disjunction or HC7",
+]
+keywords = ["two-bridge core", "seven-fan", "endpoint saturation", "first hit", "route skeleton"]
+
+[[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
 title = "Atomic weak-immersion guardrail in the two-apex icosahedron"
 kind = "barrier"
@@ -5725,6 +5801,48 @@ source = "hc7.atomic_subdivision_first_hit_boundary"
 target = "hc7.target.bounded_interface_bridge"
 kind = "related_to"
 note = "It returns an actual order-seven separator or narrows the dirty path to a normalized one-sided bridge chain; compatible responses or a strict component descent remain the active obligation."
+
+[[relations]]
+source = "hc7.atomic_path_absence_response_boundary"
+target = "hc7.atomic_subdivision_first_hit_boundary"
+kind = "uses"
+note = "The application starts from the first-hit theorem's nine named separator vertices and upgrades path absence to a full response-bearing boundary."
+
+[[relations]]
+source = "hc7.atomic_path_absence_response_boundary"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The returned order-seven-to-nine interface has separate exact-block and selected-edge responses, but still needs synchronization or strict same-host component descent."
+
+[[relations]]
+source = "hc7.barrier.atomic_dirty_two_bridge_chain"
+target = "hc7.atomic_subdivision_first_hit_boundary"
+kind = "sharpness_witness"
+note = "The exact two-bridge chain survives locally, so the normalized multi-bridge residue must spend seven-connectivity, first-hit ownership or chromatic response rather than bridge count alone."
+
+[[relations]]
+source = "hc7.barrier.atomic_dirty_two_bridge_chain"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The local obstruction lacks the active host hypotheses; its surviving augmentations delimit which fan endpoints must be converted into a response or strict component descent."
+
+[[relations]]
+source = "hc7.atomic_two_bridge_exact_core_seven_fan_closure"
+target = "hc7.atomic_subdivision_first_hit_boundary"
+kind = "related_to"
+note = "The fan theorem closes the unsplit two-bridge core and confines arbitrary-subdivision first hits to an explicit eight-vertex route skeleton."
+
+[[relations]]
+source = "hc7.atomic_two_bridge_exact_core_seven_fan_closure"
+target = "hc7.barrier.atomic_dirty_two_bridge_chain"
+kind = "related_to"
+note = "Seven-connectivity turns the barrier's exact K7-free core into a terminal configuration through five positive endpoint certificates and a forced fan."
+
+[[relations]]
+source = "hc7.atomic_two_bridge_exact_core_seven_fan_closure"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "Endpoint saturation supplies an unbounded host closure for the exact core; the remaining subdivision-level fan obstruction must still return the active target's explicit model, common response or strict descent."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -8713,4 +8831,38 @@ expected_stdout = [
   "kuratowski_certificates={'TK3,3': 974, 'TK5': 155}",
   "icosahedral_sharpening=G_*-{f,g} contains the displayed TK5",
   "consequence=no subdivision of G_* embeds in a two-apex graph",
+]
+
+[[verifiers]]
+id = "atomic-two-bridge-exact-core-seven-fan-closure"
+path = "results/hc7_atomic_two_bridge_exact_core_seven_fan_closure_verify.py"
+sha256 = "4d82cc207c05c1d6a5bf9495ad130acbe4495a47c4b7d600d08b6aec0ed6d319"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN exact two-path atomic-core seven-fan closure",
+  "core: vertices=13 edges=32 q_neighbours=a,g,s",
+  "terminal_endpoints: b,d,f,h,p; five K7 models verified",
+  "forced_fan_endpoints: a,c,e,g,r,s,x",
+  "final_model: seven branch sets and 21 named contacts verified",
+]
+
+[[verifiers]]
+id = "atomic-dirty-two-bridge-chain-barrier"
+path = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier_verify.py"
+sha256 = "5037c1e198eefe3be17873f0a3ea50ab632d7a729f9ff417520a02ebff41370c"
+timeout = 60
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN atomic dirty two-bridge-chain barrier",
+  "host: vertices=13 edges=32 connectivity=3 chromatic=4 K7_minor=no",
+  "connectivity_checks=92 cut=N(p)=['a', 'f', 'r']",
+  "K7_exclusion=G-e width-5 decomposition and no spanning K6 model",
+  "two_apex=no pairs=78 kuratowski={'TK3,3': 46, 'TK5': 32}",
+  "saturation_h: K7=p,q,r survives=a,b,c,d,s",
+  "saturation_p: K7=b,d,g,h,q survives=c,e,s,x",
+  "saturation_q: K7=b,d,f,h,p survives=c,e,r,x",
+  "saturation_r: K7=b,d,g,h survives=c,e,f,q,x",
+  "saturation_s: K7=b,d survives=a,e,f,g,h,p,x",
+  "K2_join_icosahedron_subdivision=no cases=33 search_states=377661",
 ]
