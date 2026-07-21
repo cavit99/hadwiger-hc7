@@ -153,14 +153,31 @@ this target. It does not change the authoritative hierarchy above.
   vertex gives an explicit `K_7` model or an exact order-seven separator;
   under strong seven-contraction-criticality that separator has the named
   proper-minor responses.  It also proves that `K_{3,2,2,2}` cannot occur as
-  a subgraph of a seven-connected `K_7`-minor-free host.  The adjacent
+  a subgraph of a seven-connected `K_7`-minor-free host.  The audited
+  [clean-root attachment theorem](results/hc7_atomic_h0_clean_three_arm_closure.md)
+  now closes every connected collision-side piece whose attachments admit
+  three disjoint arms from `e,f,g`; equivalently, every surviving component
+  bridge has a Hall-deficient clean-support incidence graph.  In particular,
+  one contact at the third clean root and two distinct ordered contacts on
+  the opposite clean--clean segment are terminal.  The audited
+  [exact-quotient forest theorem](results/hc7_atomic_exact_j_minimal_forest_landing.md)
+  also closes a spanning common-frame contraction when every proper
+  subforest quotient remains seven-connected: only the two universal fibres
+  can be nontrivial, and the host has an explicit `K_7` model or an exact
+  order-seven separator with the standard proper-minor responses.  Its
+  [partial-contraction barrier](barriers/hc7_atomic_exact_j_partial_contraction_lift_barrier.md)
+  proves why an earlier first loss cannot be lifted by connectivity alone:
+  the quotient six-cut expands to a boundary of order `6+|F_0|`, unbounded
+  in the original host.  The barrier family is itself six-colourable and has
+  a displayed `K_7`, so it does not survive the full hypotheses.  The adjacent
   [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
   shows that individually two-apex bridge certificates need not share an
   apex pair and that normalized dominating `K_5` models may regenerate
   after every two-vertex deletion without yielding the needed exchange.
-  The remaining local inference is the interaction of arbitrary
-  high-attachment quadrant bridges while preserving named ownership or a
-  strict response-bearing host-component descent.
+  The remaining local inference is now the interaction of Hall-deficient
+  high-attachment quadrant bridges with the first bad partial quotient:
+  it must preserve named ownership, return a literal bounded response
+  interface, or give a strict host-component descent.
 
 ## Exact trust boundary
 
@@ -183,7 +200,12 @@ this target. It does not change the authoritative hierarchy above.
   exclude the multipartite saturation at seven-connectivity.  They do not
   yet combine arbitrary high-attachment quadrant bridges while retaining
   an `xe`, `ab`, or `cd` ownership augmentation, or return a strictly
-  smaller full component with its named proper-minor response.  The
+  smaller full component with its named proper-minor response.  A saturating
+  clean-root attachment matching is now terminal, but Hall deficiency alone
+  has not been decoded.  Likewise the exact-`J` all-subsets forest landing is
+  closed, but an earlier partial connectivity loss can have an unbounded
+  literal lift and needs bridge ownership or chromatic response to control
+  it.  The
   six-connected barrier also rules out intersecting individual two-apex
   certificates or invoking bare dominating-model regeneration.  The
   single-collision gate therefore remains open, and this route does not

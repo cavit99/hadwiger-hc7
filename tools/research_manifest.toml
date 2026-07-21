@@ -5205,6 +5205,79 @@ does_not_prove = [
 keywords = ["H0 subdivision", "T-bridge", "quadrant confinement", "order-seven separator", "K3,2,2,2"]
 
 [[claims]]
+id = "hc7.atomic_h0_clean_three_arm_closure"
+title = "Atomic H0 clean-root attachment matching closure"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_h0_clean_three_arm_closure.md"
+active = false
+audit = "results/hc7_atomic_h0_clean_three_arm_closure_audit.md"
+expected_source_sha256 = "6071c020cb7aa9fa2c963c13718a02db2b29a218fa742d924b460d540a5fc869"
+scope = "connected x-rooted off-subdivision pieces in the labelled H0 frame and their incidence with the three clean roots e,f,g"
+label_fidelity = "the literal collision vertex, all eight H0 branch labels, subdivision segments, clean-root arms and attachment vertices are retained"
+separator_order = "no separator conclusion; a seven-connected component bridge supplies at least six non-x attachments"
+conclusions = [
+  "three pairwise disjoint clean-root arms from e, f and g give an explicit K7-minor model",
+  "a saturating clean-support attachment matching is terminal, so every K7-free x-rooted component bridge is Hall-deficient",
+  "adjacency to one clean root and two distinct ordered contacts on the opposite clean-clean segment is terminal",
+]
+does_not_prove = [
+  "that seven-connectivity forces a saturating clean-root matching",
+  "a separator, planar deletion or strict response-bearing descent from Hall deficiency",
+  "alignment of a regenerated dominating K5 model or completion of atomic rounding",
+]
+keywords = ["H0 subdivision", "clean-root arms", "Hall deficiency", "bridge attachments"]
+
+[[claims]]
+id = "hc7.atomic_exact_j_minimal_forest_landing"
+title = "Inclusion-minimal forest landing on the exact atomic quotient"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_exact_j_minimal_forest_landing.md"
+active = false
+audit = "results/hc7_atomic_exact_j_minimal_forest_landing_audit.md"
+expected_source_sha256 = "f80a94ee8dd03e48b7ecec5f5a87016492f022436b6ade40531a316197a55bb4"
+scope = "forest contractions landing exactly on J=K8-{xe,ab,cd} when every proper forest-edge subset quotient remains seven-connected"
+label_fidelity = "all eight labelled quotient fibres and the six literal octahedral vertices are preserved in the host-level outcomes"
+separator_order = "exactly seven in the unique cross-fibre-edge outcome"
+conclusions = [
+  "all nontrivial forest fibres localize to the two universal labels f and g",
+  "every side of every universal-fibre tree edge meets all six literal octahedral vertices",
+  "the host contains an explicit K7 model or an actual order-seven separator carrying exact independent-block responses under strong contraction-criticality",
+]
+does_not_prove = [
+  "the case where connectivity first fails at a proper partial expansion of J",
+  "preservation of an extra named support spread across several quotient fibres",
+  "the atomic collision theorem or HC7",
+]
+keywords = ["K8-3K2", "forest contraction", "minimal landing", "order-seven separator"]
+
+[[claims]]
+id = "hc7.barrier.atomic_exact_j_partial_contraction_lift"
+title = "Unbounded lift of a first connectivity-losing contraction"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_atomic_exact_j_partial_contraction_lift_barrier.md"
+active = false
+audit = "barriers/hc7_atomic_exact_j_partial_contraction_lift_barrier_audit.md"
+expected_source_sha256 = "3c6d899bb9dc4225cad6b19e473aef59f86a9b88676b28d4bebdff26ac6ee6ec"
+scope = "the family P_r joined with J-f and the general inclusion-minimal first partial connectivity-loss boundary"
+satisfies = [
+  "an exact final quotient J and seven-connectivity of every proper subset contraction",
+  "an immediate-predecessor order-seven cut whose literal host expansion has order r+5",
+  "host connectivity eight and hence no host separator of order seven",
+]
+refutes = [
+  "lifting a first quotient order-seven separator to a bounded host separator using connectivity and contraction minimality alone",
+]
+lacks = [
+  "K7-minor exclusion, seven-chromaticity and strong contraction-criticality",
+  "quadrant confinement or a counterexample to the exact minimal-forest landing theorem",
+  "a strict response-preserving reduction for the genuine partial-quotient residue",
+]
+keywords = ["partial contraction", "unbounded separator lift", "forest fibre", "K8-3K2"]
+
+[[claims]]
 id = "hc7.barrier.atomic_h0_multipartite_bridge_guardrail"
 title = "Atomic H0 multipartite bridge guardrail"
 kind = "barrier"
@@ -5271,6 +5344,36 @@ source = "hc7.atomic_h0_bridge_quadrant_normal_form"
 target = "hc7.atomic_octahedral_frame_augmentation"
 kind = "uses"
 note = "The bridge theorem starts from the labelled H0 subdivision and exact octahedral common frame supplied by the augmentation result."
+
+[[relations]]
+source = "hc7.atomic_h0_clean_three_arm_closure"
+target = "hc7.atomic_h0_bridge_quadrant_normal_form"
+kind = "uses"
+note = "The clean-arm closure uses the labelled H0 subdivision and attachment-support framework of the bridge normal form."
+
+[[relations]]
+source = "hc7.atomic_exact_j_minimal_forest_landing"
+target = "hc7.atomic_octahedral_frame_augmentation"
+kind = "uses"
+note = "The forest theorem lands on the exact J quotient and labelled octahedral factor isolated by the augmentation result."
+
+[[relations]]
+source = "hc7.barrier.atomic_exact_j_partial_contraction_lift"
+target = "hc7.atomic_exact_j_minimal_forest_landing"
+kind = "related_to"
+note = "The path-fibre family is terminal by the theorem's K7 branch but proves that the immediate-predecessor separator alone can have an unbounded host lift."
+
+[[relations]]
+source = "hc7.atomic_h0_clean_three_arm_closure"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The surviving Hall-deficient bridge pattern must be converted into the same literal bounded response or strict component descent required by the active target."
+
+[[relations]]
+source = "hc7.atomic_exact_j_minimal_forest_landing"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The exact landing returns a host order-seven response; the first bad partial quotient leaves the bounded-interface lifting problem."
 
 [[relations]]
 source = "hc7.atomic_h0_bridge_quadrant_normal_form"
