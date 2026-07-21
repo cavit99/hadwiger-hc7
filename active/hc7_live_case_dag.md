@@ -45,9 +45,9 @@ flowchart TD
   E["Low-degree boundary-aligned separation: 7 <= |S| <= d(u) <= 9"]
   SP["Split boundary"]
   CY["Induced-cycle / universal-pair family"]
-  KP["Pole-free paths from failed exact-block Kempe lifts"]
-  EP["Disjoint endpoint pairs, directly or via one robust independent triple"]
-  M["OPEN: pole-free bridge composition theorem"]
+  KP["Exact-block failed lifts and last-pole normal form"]
+  TT["Two transitions: disjoint opposite-shore paths or tight pole"]
+  M["OPEN: terminal bridge/pole decoder"]
   K7["Explicit K7-minor model"]
   CP["One boundary partition extends through both shores"]
   R["Same response interface with smaller literal component C"]
@@ -57,8 +57,8 @@ flowchart TD
   E -->|"if split"| SP --> CP
   E -->|"if the displayed cycle family occurs"| CY --> K7
   E -->|"in every remaining case; for each root x"| KP
-  KP --> EP
-  EP --> M
+  KP --> TT
+  TT --> M
   M -.-> K7
   M -.-> CP
   M -.-> R
@@ -72,16 +72,27 @@ The displayed cycle family is closed by the
 [cycle-boundary completion theorem](../results/hc7_cycle_boundary_completion.md)
 and its bounded-interface applications.  In all cases, the
 [exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
-returns literal pole-free paths with bounded boundary-contact defect.
+returns literal failed-lift paths with bounded boundary-contact defect.  The
+audited
+[last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
+makes a final response pole-free unless it has one exact five-block/six-block
+form.  The audited
+[two-transition theorem](../results/hc7_bounded_interface_two_transition_disjoint_response.md)
+uses the endpoint nonedge of a first `C`-path as the exact block for a second
+transition.  It produces vertex-disjoint paths in opposite open shores with
+disjoint boundary nonedges, or the tight pole residue.  In the path case a
+`K_6` minor in the boundary augmented by those two nonedges lifts to an
+explicit `K_7` model, so the surviving augmented boundary is necessarily
+`K_6`-minor-free.
+
+The paths need not arise from one colouring operation, and neither the
+`K_6`-minor-free augmented-boundary case nor the tight pole case is terminal.
 The audited
-[endpoint-pair theorem](../results/hc7_bounded_interface_endpoint_pair_selection.md)
-then gives disjoint terminal pairs unless all choices concentrate on one
-independent triple.  In the robust concentration case, the
-[independent-triple response theorem](../results/hc7_bounded_interface_robust_triple_response.md)
-gives an exact-triple response with endpoints outside that triple.  These
-results settle endpoint overlap only: they do not put the paths in opposite
-shores or one operation, make same-shore interiors disjoint, or produce a
-terminal labelled construction.
+[pole-star barrier](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
+shows that local exact-block responses, all pole-star deletions,
+shortest-transition minimality and seven-connectivity do not eliminate the
+second case.  It lacks global `K_7`-minor exclusion and full proper-minor
+criticality, which are therefore the remaining available host-level inputs.
 
 The dashed arrows are precisely the open
 [pole-free bridge composition theorem](hc7_bounded_interface_synchronization_frontier.md#4-primary-open-theorem).
@@ -184,9 +195,10 @@ compression, not by itself a recursive arrow in the labelled programme.
 | Hypothetical counterexample to low-degree interface | Fixed host `G`; `u,z,C,S`; actual separation; two boundary-full connected subgraphs; edge-deletion response | none needed | proved and audited |
 | Split boundary to common partition | Literal boundary and both extension languages | terminal | proved and audited |
 | Cycle-boundary family to `K_7` | Two universal vertices, induced cycle, connected full shores | terminal | proved and audited |
-| Exact-block transition to pole-free path | Boundary root, selected edge deletion, exact singleton block, literal path and first hits | none | proved and audited |
-| Pole-free responses to disjoint boundary endpoint pairs | Boundary roots and literal nonedge endpoint pairs; robust concentration records one independent triple | none | proved and audited; path geometry and operation compatibility remain open |
-| Pole-free paths to global conclusion | Must preserve the complete bounded-interface data | required decrease `|C'|<|C|` in recursive outcome | **open; relative to the entry reduction this is `HC_7`-strength** |
+| Exact-block transition to failed-lift path | Boundary root, selected edge deletion, exact block, literal path and first hits | none | proved and audited |
+| Last pole move to a pole-free path or the tight pole residue | Exact final trace, moved vertex, merged independent block, operation colours and all final opposite-shore extensions | none | proved and audited |
+| Two exact-block transitions to disjoint opposite-shore paths or the tight pole residue | Literal boundary nonedges, paths and shore ownership; operation provenance remains separate | none | proved and audited; the path survivor has `K_6 not minor G[S]+e+f` |
+| Disjoint paths or tight pole to global conclusion | Must preserve the complete bounded-interface data and displayed path or pole labels | required decrease `|C'|<|C|` in recursive outcome | **open; relative to the entry reduction this is `HC_7`-strength** |
 | Exact-seven proper core with boundary seven to restart | Fixed host, new literal seven-boundary, selected crossing edge and one operation-specific colouring | smaller connected operated shore | proved and audited |
 | Minimum positive-excess boundary to exact-seven response | Fixed host and a fresh selected response | no decrease proved | proved response; **not** an induction arrow |
 | Minimum positive-excess boundary to two/three full components | Fixed host, literal minimum boundary, operation-specific exclusive responses | minimum boundary is a normalization, not a recursive rank | proved and audited normal form; terminal coupling open |

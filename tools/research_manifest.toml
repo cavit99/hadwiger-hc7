@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "c97e9f77725179cd4d59f81b7cc83596031001324344248e951a953496f8820a"
+expected_source_sha256 = "dc013f92edd15eb764e939a82a21bb1e3508923c1213b5468e9ed87ecd0b2787"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints and host paths"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -118,8 +118,8 @@ strict_parameter = "order of the chosen literal anti-neighbourhood component in 
 hypotheses = [
   "low-degree boundary-aligned adjacent pair",
   "nonsplit four-colourable boundary of order seven, eight or nine",
-  "pole-free bichromatic paths returned by failed exact-singleton Kempe lifts",
-  "disjoint boundary endpoint pairs, either directly or by the robust independent-triple response",
+  "literal failed-lift paths returned by exact-block Kempe transitions",
+  "the audited last-pole normal form and two-transition opposite-shore reduction",
 ]
 allowed_exits = [
   "explicit K7-minor model",
@@ -130,7 +130,8 @@ does_not_prove = [
   "HC7",
   "compatibility of arbitrary abstract boundary-extension languages",
   "a branch-set split from one unlabelled bichromatic path",
-  "simultaneous opposite-shore provenance or internally disjoint same-shore paths from endpoint disjointness alone",
+  "a terminal conclusion from disjoint opposite-shore paths when the twice-augmented boundary is K6-minor-free",
+  "elimination of the tight pole residue from local exact-block and pole-star responses alone",
 ]
 keywords = ["bounded separator", "Kempe path", "colour gluing", "low degree"]
 
@@ -270,13 +271,61 @@ audit = "results/hc7_bounded_interface_exact_block_kempe_reduction_audit.md"
 expected_source_sha256 = "2c0db7cf9b646597f73a2b5c6fa5e4199f98ced44800b3a60f521cbbdb7372a9"
 
 [[claims]]
+id = "hc7.bounded_interface_pole_move_normal_form"
+title = "Last-pole move normal form at a bounded interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_bounded_interface_pole_move_normal_form.md"
+source_heading = "2. Pole-move normal form"
+active = true
+audit = "results/hc7_bounded_interface_pole_move_normal_form_audit.md"
+expected_source_sha256 = "01fa19f3a58a232a92a7479877b786d55341990cd3dd81af92a384231d99794f"
+scope = "the last move of a shortest exact-block transition at the bounded interface"
+conclusions = [
+  "the same last transition has a pole-free opposite-shore path in some extension of the final trace",
+  "or the transition has the exact five-block/six-block tight pole form with universal isolation after deleting the pole",
+]
+does_not_prove = [
+  "a common boundary partition",
+  "disjointness from the first-shore failed-lift path",
+  "an anchored proper-minor colouring with the same boundary trace",
+  "HC7",
+]
+keywords = ["Kempe transition", "pole move", "five-block trace", "operation provenance"]
+
+[[claims]]
+id = "hc7.bounded_interface_two_transition_disjoint_response"
+title = "Two exact-block transitions give disjoint opposite-shore paths"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_bounded_interface_two_transition_disjoint_response.md"
+source_heading = "2. The two-transition reduction"
+active = true
+audit = "results/hc7_bounded_interface_two_transition_disjoint_response_audit.md"
+expected_source_sha256 = "5b4a03822ba54efba3a71a3cdabb9f9a8a227d72bed4293ea24081d5cc5d549a"
+scope = "the order-seven through nine bounded interface in a hypothetical minor-minimal HC7 counterexample"
+conclusions = [
+  "a common complete boundary partition or exact aligned smaller-component restart",
+  "or vertex-disjoint opposite-shore paths with disjoint boundary nonedges e and f",
+  "or the exact tight pole residue",
+  "the path survivor satisfies K6 not minor G[S]+e+f",
+]
+does_not_prove = [
+  "that the two paths arise from one colouring operation",
+  "a terminal construction in the K6-minor-free augmented-boundary case",
+  "elimination of the tight pole residue",
+  "HC7",
+]
+keywords = ["exact block", "opposite-shore paths", "boundary augmentation", "terminal decoder"]
+
+[[claims]]
 id = "hc7.bounded_interface_endpoint_pair_selection"
 title = "Endpoint-pair selection for bounded-interface Kempe paths"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_bounded_interface_endpoint_pair_selection.md"
 source_heading = "2. The endpoint-pair alternative"
-active = true
+active = false
 audit = "results/hc7_bounded_interface_endpoint_pair_selection_audit.md"
 expected_source_sha256 = "3494dbf62978115012ff195533f5320fd90affe1d71b52d1b2d62dc3624dc1e3"
 scope = "the order-seven through nine bounded interface in a hypothetical minor-minimal HC7 counterexample"
@@ -300,7 +349,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_bounded_interface_robust_triple_response.md"
 source_heading = "3. Robust singleton families have one global triple"
-active = true
+active = false
 audit = "results/hc7_bounded_interface_robust_triple_response_audit.md"
 expected_source_sha256 = "42d50b8027bd5acabf986b803cffef9fe5bf402add892d58778d5a2d0bc2d064"
 scope = "all attainable exact-singleton response endpoint families at the bounded interface"
@@ -1317,11 +1366,38 @@ kind = "barrier"
 status = "barrier"
 source = "barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md"
 source_heading = "6. Exact scope"
-active = true
+active = false
 expected_source_sha256 = "76666dbd1a748f6f4b1048d16eb959bf96524ed1604f38227aea1c3c1618ab16"
 refutes = ["alignment of two shore colouring languages from static Gallai--Edmonds data and two named boundary-edge transitions alone"]
 satisfies = ["seven-connectivity and chromatic number seven", "connected full shores", "target-free two-shore quotient", "exact named-edge and independent-block responses"]
 lacks = ["global K7-minor exclusion in the host", "six-colourability of every proper minor", "specified literal minor-model branch sets"]
+
+[[claims]]
+id = "hc7.barrier.shortest_transition_pole"
+title = "Every shortest exact-block transition can end at the pole"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md"
+source_heading = "1. Statement"
+active = true
+audit = "barriers/hc7_opposite_shore_shortest_transition_pole_barrier_audit.md"
+expected_source_sha256 = "afc736d98452dc260354a35b3a3db5cdcb90b2332a4516fc7ddf5a8d6f7d15f0"
+refutes = [
+  "eliminating the last pole move from exact independent-block responses, every pole-star response, transition shortestness and seven-connectivity alone",
+  "splicing an anchored pole-star colouring into the same shortest transition from local response data alone",
+]
+satisfies = [
+  "a nonsplit order-eight boundary with the sharp independence bound",
+  "seven-connectivity and chromatic number seven",
+  "complete exact-independent-block responses on both closed shores",
+  "every independent pole-star edge-deletion response",
+  "absence of the exact aligned smaller-component restart",
+]
+lacks = [
+  "global K7-minor exclusion in the uncontracted host",
+  "six-colourability of every proper minor",
+]
+keywords = ["pole move", "shortest transition", "state realization", "host-level obstruction"]
 
 [[claims]]
 id = "hc7.barrier.three_common_profile"
@@ -7598,14 +7674,45 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
 target = "hc7.bounded_interface_endpoint_pair_selection"
-kind = "uses"
-note = "The endpoint alternative removes raw pair overlap, leaving simultaneous path geometry and provenance open."
+kind = "related_to"
+note = "This earlier set-system result remains valid, but the direct two-transition reduction now bypasses it."
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
 target = "hc7.bounded_interface_robust_triple_response"
+kind = "related_to"
+note = "This earlier robust-concentration result remains valid, but is no longer a direct input to the live reduction."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.bounded_interface_pole_move_normal_form"
 kind = "uses"
-note = "Robust concentration supplies an exact-triple endpoint pair outside the concentrated triple, but does not control either path's shore or colouring."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.bounded_interface_two_transition_disjoint_response"
+kind = "uses"
+
+[[relations]]
+source = "hc7.bounded_interface_two_transition_disjoint_response"
+target = "hc7.exact_block_kempe_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.bounded_interface_two_transition_disjoint_response"
+target = "hc7.bounded_interface_pole_move_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.bounded_interface_two_transition_disjoint_response"
+target = "hc7.bounded_interface_endpoint_pair_selection"
+kind = "uses"
+note = "Only the previously audited exact aligned strict-restart proposition is used."
+
+[[relations]]
+source = "hc7.bounded_interface_pole_move_normal_form"
+target = "hc7.exact_block_kempe_reduction"
+kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
@@ -7637,10 +7744,16 @@ kind = "guarded_by"
 note = "Exact independent-block attainability and four-colourability alone do not synchronize the two shore colourings."
 
 [[relations]]
+source = "hc7.barrier.eight_boundary_state_transfer"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "This earlier static barrier remains relevant historically, but the live residue is now sharper."
+
+[[relations]]
 source = "hc7.target.bounded_interface_bridge"
-target = "hc7.barrier.eight_boundary_state_transfer"
+target = "hc7.barrier.shortest_transition_pole"
 kind = "guarded_by"
-note = "Static order-eight transition data do not replace the operation-coupled host paths required by the target."
+note = "Local exact-block and pole-star response data do not eliminate the tight pole residue; a decoder must use global host hypotheses."
 
 [[relations]]
 source = "hc7.low_degree_adjacent_pair_alignment"

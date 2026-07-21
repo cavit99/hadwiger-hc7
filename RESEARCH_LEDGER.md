@@ -85,34 +85,52 @@ independent-block contraction and colour gluing. It does **not** supply a
 small transversal, an apex pair, or a common boundary partition in the
 remaining cases.
 
-### 3. Immediate global response-composition laboratory
+### 3. Immediate global terminal-decoder laboratory
 
 The audited
-[endpoint-pair theorem](results/hc7_bounded_interface_endpoint_pair_selection.md)
-eliminates raw endpoint overlap as the sole obstruction.  Choices for the
-singleton roots either contain two disjoint boundary endpoint pairs, or all
-pairs concentrate on the three edges of one independent set `Q` of order
-three.  Under robust concentration, the audited
-[independent-triple theorem](results/hc7_bounded_interface_robust_triple_response.md)
-returns an exact-`Q` response whose endpoint pair lies in `S-Q`, disjoint
-from every concentrated singleton pair.
+[last-pole normal form](results/hc7_bounded_interface_pole_move_normal_form.md)
+proves that a shortest exact-block transition has a pole-free last path
+unless it ends in one precise six-block-to-five-block move: a singleton
+merges into a nonsingleton independent block, and after deleting `u` its
+two-colour component cannot reach another boundary vertex in any final
+opposite-shore extension.
 
-These results do not control the open shore containing each path, place the
-paths in one colouring operation, make same-shore interiors disjoint, or
-decode the paths into a minor or a strict restart.  The immediate
-[opposite-shore response target](active/hc7_bounded_interface_synchronization_frontier.md#5-immediate-opposite-shore-response-target)
-therefore asks for one exact-block transition whose first failed lift has
-interior in `C`, whose last failed lift is pole-free with interior in the
-opposite open shore, and whose two boundary endpoint pairs are disjoint.
-The only accepted conclusions remain the three global outcomes in Section
-1; compatible paths alone are nonterminal.
+The audited
+[two-transition theorem](results/hc7_bounded_interface_two_transition_disjoint_response.md)
+then bypasses the former same-transition and endpoint-family bottleneck.
+The endpoint nonedge `e` of a first failed lift in `C` is used as the exact
+block for a second transition.  Unless a common boundary partition, the
+exact aligned smaller-component restart, or the tight pole residue occurs,
+this gives vertex-disjoint paths in opposite open shores with disjoint
+boundary nonedges `e,f`.  Moreover,
 
-This laboratory is deliberately bounded to tagged response-family
-classification and operation-specific transition surgery.  The audited
-[fixed-colouring degree-eight certificate](results/hc7_degree8_simultaneous_p5_certificate.md)
-is a controlled stress test, not an exhaustive entry theorem.  Further
-pentagonal-bipyramid taxonomy, finite atomic-core enumeration, and the
-general weak-immersion-to-atomicity problem are frozen during this attempt.
+\[
+                         K_6\not\preccurlyeq G[S]+e+f,
+\]
+
+because a `K_6` model in the augmented boundary would lift through the two
+paths and join the singleton `{u}` to form an explicit `K_7` model.  The two
+paths may come from different colouring operations; this is no obstacle to
+the proved literal path construction, but compatible paths remain
+nonterminal.
+
+The earlier audited endpoint-pair and robust-independent-triple theorems
+remain valid supporting results, but they are no longer direct inputs to the
+live reduction.  The exact remaining
+[terminal decoder](active/hc7_bounded_interface_synchronization_frontier.md#6-immediate-terminal-decoder)
+must close either the `K_6`-minor-free augmented-boundary path case or the
+tight pole case by an explicit `K_7` model, one common complete boundary
+partition, or the exact strict component restart.
+
+The audited
+[pole-star barrier](barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
+shows that exact-block attainability, every independent pole-star response,
+shortest-transition minimality, seven-connectivity and the sharp order-eight
+independence bound do not remove the tight pole residue.  Its host is not
+asserted `K_7`-minor-free or fully minor-critical.  The next proof must
+therefore use global minor exclusion or proper-minor colouring while
+preserving the path or pole labels; more local transition taxonomy is not a
+credible next step.
 
 ## Headline audited advances
 
@@ -120,10 +138,12 @@ general weak-immersion-to-atomicity problem are frozen during this attempt.
   order-`7`, `8`, or `9` full separation described above, with a
   four-colourable boundary and exact independent-block responses on both
   closed shores.
-- **Endpoint-pair concentration.** Audited endpoint selection and robust
-  independent-triple globalization always provide disjoint boundary
-  endpoint pairs.  They do not provide compatible path interiors,
-  opposite-shore provenance, one common colouring, or a terminal model.
+- **Two-transition opposite-shore geometry.** Audited pole normalization
+  and a second exact-block transition give two vertex-disjoint paths in
+  opposite open shores with disjoint boundary nonedges, unless the exact
+  tight pole residue occurs.  A `K_6` minor after adding those two nonedges
+  lifts to an explicit `K_7` model.  The surviving augmented boundary is
+  therefore `K_6`-minor-free, and terminal decoding remains open.
 - **Exact-seven packing.** In the hypothetical counterexample setup, the
   displayed inequalities orient every exact order-seven interface toward
   one shore with packing number one.
@@ -303,10 +323,15 @@ general weak-immersion-to-atomicity problem are frozen during this attempt.
 
 - Exact attainment of every independent boundary block is separate on the
   two shores; it does not synchronize the rest of either colouring.
-- Disjoint endpoint pairs can arise from different colourings and from
-  uncontrolled shores.  Even the robust independent-triple response does
-  not make the corresponding paths internally disjoint or preserve the
-  labelled data needed for a minor or strict restart.
+- The two-transition theorem now gives vertex-disjoint paths in opposite
+  open shores with disjoint boundary endpoints.  They may arise from
+  different colouring operations, and when `G[S]+e+f` is `K_6`-minor-free
+  their existence alone does not give a terminal model, common partition or
+  strict restart.
+- The tight pole residue survives all local exact-block and pole-star
+  response axioms in an audited seven-connected seven-chromatic barrier.
+  That barrier lacks global `K_7`-minor exclusion and full proper-minor
+  six-colourability, so it does not refute the live theorem.
 - A colour name is not a branch-set label. Any claimed minor construction
   must use literal first-hit vertices or another explicit label-preserving
   lift.

@@ -1,7 +1,8 @@
 # Bounded-interface bridge composition
 
-**Status:** sole exhaustive all-degree target.  Sections 1--3 summarize
-separately audited results and the theorem in Section 4 remains open.  The
+**Status:** sole exhaustive all-degree target.  Sections 1--3 and 5 summarize
+separately audited results; the theorem in Section 4 and the terminal decoder
+in Section 6 remain open.  The
 degree-seven branch has a sharper conditional refinement in
 [`hc7_degree7_model_separator_frontier.md`](hc7_degree7_model_separator_frontier.md),
 but it does not replace this global obligation.  Nothing here proves `HC_7`.
@@ -122,52 +123,72 @@ in a six-colouring of the opposite shore, the colour of `u` is absent from
 `S` and can be assigned to that one vertex, six-colouring `G`.  Hence this
 theorem, together with the audited entry reduction, would prove `HC_7`.
 
-## 5. Immediate opposite-shore response target
+## 5. Audited two-transition response reduction
 
-The audited endpoint-pair theorem proves that arbitrary singleton choices
-either contain two disjoint endpoint pairs or concentrate on the three edges
-of one independent set `Q` of order three.  The robust-triple theorem
-strengthens the latter case: an exact-`Q` response has both endpoints in
-`S-Q`, disjoint from every concentrated singleton pair.  Thus raw endpoint
-overlap is no longer the missing inference.  The choices can still arise
-from different colourings, have intersecting same-shore interiors, or carry
-incompatible operation provenance.
+The former same-transition target was too restrictive.  The audited
+[last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
+shows that the last move of a shortest exact-block transition is pole-free
+unless it is a precise six-block-to-five-block move: one singleton merges
+into a nonsingleton independent block, and in every final `B`-extension the
+relevant two-colour component cannot reach another boundary vertex after
+deleting `u`.
 
-The immediate intermediate target is the following **opposite-shore
-two-ended response lemma**.  Under the setup in Section 1, obtain at least
-one of:
+The audited
+[two-transition theorem](../results/hc7_bounded_interface_two_transition_disjoint_response.md)
+then removes both the shore-tag mismatch and boundary-endpoint overlap.  A
+first failed lift in any exact-singleton transition gives a `C`-path with
+boundary nonedge `e` as its endpoint pair.  Prescribe `e` itself as the
+exact block for a second shortest transition.  Its pole-free last failed
+lift has endpoints in `S-e` and interior in `B-(S union {u})`.  Consequently,
+after excluding a common partition and the exact aligned smaller-component
+restart, one obtains either:
 
-1. one complete equality partition of `S` induced by six-colourings of both
-   `A` and `B`;
-2. a component `D` of `G-N[u]` with
+1. two vertex-disjoint opposite-shore paths with disjoint boundary nonedges
+   `e,f`, where
 
    \[
-                         z\in N_G(D),\qquad |V(D)|<|V(C)|,
+                         K_6\not\preccurlyeq G[S]+e+f; \tag{5.1}
    \]
 
-   so the fixed aligned pair `u,z` gives the exact strict same-form restart;
    or
-3. a nonempty independent block `I subseteq S` and a shortest exact-`I`
-   boundary transition whose first failed lift gives a path `P_A` with
-   interior in `C`, whose last failed lift gives a pole-free path `P_B` with
-   interior in `B-(S union {u})`, and whose boundary endpoint pairs are
-   disjoint.
+2. the tight five-block/six-block pole residue above.
 
-Singleton blocks are the first case to test; in the robust-concentration
-case, `I=Q` is also permitted.  In outcome 3 the path interiors are disjoint
-because they lie in opposite open shores, but the outcome is still
-nonterminal.  It must immediately be decoded into an explicit `K_7` model,
-a common complete boundary partition, or the exact strict restart above.
+If the augmented boundary in outcome 1 had a `K_6` minor, replacing its two
+added edges by the two paths and adding the singleton branch set `{u}` would
+give an explicit `K_7`-minor model.  The paths may arise from different
+colouring operations; no same-operation assertion is needed for this literal
+geometric reduction.
 
-The bounded proof attempt has two mechanisms.  First classify attainable
-endpoint pairs tagged by `C`-first, pole-free-`B`-last, and pole-move
-provenance.  If that does not settle the joint choice, minimize one
-transition lexicographically by its length, pole ends, and endpoint overlap,
-and splice an anchored edge-deletion transition at a last pole move.  The
-degree-eight simultaneous-`P_5` theorem may be used only as a stress test
-under its stated hypotheses.  A same-shore dirty certificate, an unbounded
-separator, or an arbitrary connected residual piece is not an allowed
-conclusion.
+The earlier endpoint-pair and robust-independent-triple theorems remain
+valid, but they are no longer direct inputs to this reduction.  Their
+set-system classification has been bypassed by using the first endpoint pair
+as the second exact block.
+
+## 6. Immediate terminal decoder
+
+The primary open theorem is now reduced to two explicit inputs:
+
+1. disjoint opposite-shore paths with endpoint nonedges `e,f` satisfying
+   (5.1); or
+2. the tight pole residue, with its literal moved vertex, merged independent
+   block, and universal quantifier over final `B`-extensions.
+
+For either input, prove one of the three conclusions in Section 4.  In the
+recursive conclusion the returned set must be an actual component `D` of
+`G-N[u]` with `z in N_G(D)` and `|D|<|C|`; an arbitrary smaller connected
+piece, quotient, fresh response, or unbounded separator is not enough.
+
+The audited
+[independent-block pole-star barrier](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
+realizes every local exact-block response, every pole-star edge-deletion
+response, shortest transitions, seven-connectivity and the sharp order-eight
+independence bound, while forcing every shortest transition to end at the
+pole.  It deliberately lacks global `K_7`-minor exclusion and full
+proper-minor six-colourability.  Therefore further static language
+classification, lexicographic transition minimization, or anchored pole-star
+splicing cannot close the decoder by itself.  A successful proof must use
+one of those two global host hypotheses while preserving the displayed path
+or pole labels.
 
 ## Dependencies and guardrails
 
@@ -175,9 +196,12 @@ conclusion.
 - [boundary-edge alignment](../results/hc7_low_degree_boundary_edge_alignment.md)
 - [split-boundary synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
-- [endpoint-pair selection](../results/hc7_bounded_interface_endpoint_pair_selection.md)
-- [robust independent-triple response](../results/hc7_bounded_interface_robust_triple_response.md)
+- [last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
+- [two-transition opposite-shore response](../results/hc7_bounded_interface_two_transition_disjoint_response.md)
 - [two-connected boundary-core completion](../results/hc7_two_connected_boundary_completion.md)
+- [independent-block pole-star barrier](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
+- [earlier endpoint-pair selection](../results/hc7_bounded_interface_endpoint_pair_selection.md)
+- [earlier robust independent-triple response](../results/hc7_bounded_interface_robust_triple_response.md)
 - [fixed-colouring degree-eight `P_5` stress test](../results/hc7_degree8_simultaneous_p5_certificate.md)
 - [degree-eight dirty-path local-uncrossing barrier](../barriers/hc7_degree8_dirty_path_local_uncrossing_barrier.md)
 - [degree-eight deleted-colour contact barrier](../barriers/hc7_degree8_deleted_colour_k4_contact_barrier.md)
