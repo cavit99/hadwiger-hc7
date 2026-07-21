@@ -5178,6 +5178,61 @@ does_not_prove = [
 keywords = ["octahedral frame", "one-edge augmentation", "rooted K4 minor", "planar cofacial alternative"]
 
 [[claims]]
+id = "hc7.atomic_h0_bridge_quadrant_normal_form"
+title = "Atomic H0 bridge quadrant normal form"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_h0_bridge_quadrant_normal_form.md"
+active = false
+audit = "results/hc7_atomic_h0_bridge_quadrant_normal_form_audit.md"
+expected_source_sha256 = "821e79b0a7fbe77a23a77ce15eddb1257c29ebf04d35d7f5c3b8ab0f2458ca0e"
+scope = "one path through, and whole bridges of, a labelled subdivision of H0=(K7-{ab,cd})+{xa,xb,xc,xd}, together with sparse seven-connected augmentations and the K3,2,2,2 saturation"
+label_fidelity = "the eight branch labels, all subdivision segments, endpoint supports, missing pairs and literal separator vertices are retained"
+separator_order = "exactly seven in the one-interior-vertex residue; six for the forbidden multipartite saturation"
+conclusions = [
+  "a T-path whose endpoint supports cross ab or cd gives an explicit K7-minor model",
+  "the exact 488-placement classification finds 96 such terminal paths and 392 two-apex cases",
+  "every whole T-bridge in a K7-minor-free host is confined to one of four attachment regions",
+  "with at most one internal subdivision vertex, seven-connectivity gives a K7 model or an exact order-seven separator carrying the proper-minor responses under strong seven-contraction-criticality",
+  "every seven-connected graph containing K3,2,2,2 as a subgraph has a K7 minor",
+]
+does_not_prove = [
+  "a common planarizing pair for multiple individually two-apex bridges",
+  "an ownership-preserving xe, ab or cd augmentation from arbitrary high-attachment quadrant bridges",
+  "a strict response-preserving host-component reduction in the general residue",
+  "atomicity of a collision-minimal weak K7 immersion, the single-collision terminal disjunction, or HC7",
+]
+keywords = ["H0 subdivision", "T-bridge", "quadrant confinement", "order-seven separator", "K3,2,2,2"]
+
+[[claims]]
+id = "hc7.barrier.atomic_h0_multipartite_bridge_guardrail"
+title = "Atomic H0 multipartite bridge guardrail"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md"
+active = false
+audit = "barriers/hc7_atomic_h0_multipartite_bridge_guardrail_audit.md"
+expected_source_sha256 = "ed78d9076f114a58504b3d3e192312dc6ce778626dc24d538dae5410b8a3cccb"
+scope = "a minimum nine-vertex two-bridge compatibility failure and its six-connected complete-multipartite saturation K3,2,2,2"
+satisfies = [
+  "two individually two-apex H0 bridge paths with no common planarizing pair among their one-path certificates",
+  "an exact atomic common-frame partition with absent adjacencies xe, ab and cd",
+  "a six-connected edge-maximal K7-minor-free saturation carrying an atomic weak K7 immersion",
+  "after every two-vertex deletion, a normalized dominating K5 model whose final three branch sets are singleton vertices inducing a triangle",
+]
+refutes = [
+  "forcing a K7 minor merely from incompatible planarizing pairs obtained one bridge at a time",
+  "deriving a two-vertex dominating-K5 transversal from bare normalized-model regeneration after every pair deletion",
+]
+lacks = [
+  "seven-connectivity, seven-chromaticity and strong seven-contraction-criticality",
+  "actual proper-minor colour responses or a strict response-preserving reduction",
+  "a counterexample to atomic rounding, the single-collision terminal disjunction, or HC7",
+  "a derivation of the multipartite saturation from every family of quadrant-confined bridges",
+]
+keywords = ["bridge compatibility", "two-apex", "dominating K5", "K3,2,2,2", "six-connectivity"]
+
+[[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
 title = "Atomic weak-immersion guardrail in the two-apex icosahedron"
 kind = "barrier"
@@ -5210,6 +5265,30 @@ source = "hc7.atomic_octahedral_frame_augmentation"
 target = "hc7.atomic_weak_k7_immersion_rounding"
 kind = "uses"
 note = "The exact J quotient and H0-subdivision provenance are supplied by the audited atomic collision classification."
+
+[[relations]]
+source = "hc7.atomic_h0_bridge_quadrant_normal_form"
+target = "hc7.atomic_octahedral_frame_augmentation"
+kind = "uses"
+note = "The bridge theorem starts from the labelled H0 subdivision and exact octahedral common frame supplied by the augmentation result."
+
+[[relations]]
+source = "hc7.atomic_h0_bridge_quadrant_normal_form"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "Its exact order-seven alternative carries independent-block proper-minor responses, while the unresolved bridge interaction requires the same named response and strict host-component descent as the active target."
+
+[[relations]]
+source = "hc7.atomic_h0_bridge_quadrant_normal_form"
+target = "hc7.barrier.atomic_h0_multipartite_bridge_guardrail"
+kind = "sharpness_witness"
+note = "The six-connected saturation shows why individual two-apex certificates and unlabelled dominating-model regeneration do not complete the bridge theorem."
+
+[[relations]]
+source = "hc7.barrier.atomic_h0_multipartite_bridge_guardrail"
+target = "hc7.atomic_weak_k7_immersion_rounding"
+kind = "related_to"
+note = "The barrier carries the exact atomic common-frame immersion but lacks seven-connectivity and does not refute the terminal disjunction."
 
 [[relations]]
 source = "hc7.atomic_octahedral_frame_augmentation"
@@ -8144,6 +8223,22 @@ expected_stdout = [
   "positive_control G?aN~w components=27,37 has_K5_minor=yes",
   "low_chromatic_control G??F~w components=65,90",
   "PASS order8_K5_minor_free_chromatic_at_least_four_partition_graph_connected",
+]
+
+[[verifiers]]
+id = "atomic-h0-single-bridge-classification"
+path = "active/hc7_atomic_h0_single_bridge_falsifier.py"
+sha256 = "ba78a7f17e3685aeca3a4a4fd014f5cf8a69007d080e170ad2bd7158e09511a3"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN atomic H0 single-bridge classification",
+  "H0: branches=8 routes=23",
+  "placements: total=488 branch-branch=28 branch-route=184 route-route=276",
+  "terminal K7: total=96 branch-branch=2 branch-route=24 route-route=70",
+  "two-apex survivors: total=392 branch-branch=26 branch-route=160 route-route=206",
+  "planarizing certificates: ef=361 eg=26 fg=5",
+  "criterion: K7 iff the attachment supports cross ab or cd",
 ]
 
 [[verifiers]]

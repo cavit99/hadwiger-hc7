@@ -145,9 +145,22 @@ this target. It does not change the authoritative hierarchy above.
   absent adjacencies gives an explicit `K_7` model.  A clean missing-pair
   path and a noncofacial four-connected remainder also close, as do every
   nontrivial complete substitution and every monotone augmentation of the
-  icosahedral example by at most seven vertices.  The remaining local
-  inference is confined to ownership-preserving use of planar cofacial
-  bridge intervals or five paths through three named connected subgraphs.
+  icosahedral example by at most seven vertices.  The audited
+  [bridge normal form](results/hc7_atomic_h0_bridge_quadrant_normal_form.md)
+  gives the exact 488-case classification for one added `T`-path and
+  confines every whole `T`-bridge to one of four attachment regions.  In a
+  seven-connected host, the residue with at most one internal subdivision
+  vertex gives an explicit `K_7` model or an exact order-seven separator;
+  under strong seven-contraction-criticality that separator has the named
+  proper-minor responses.  It also proves that `K_{3,2,2,2}` cannot occur as
+  a subgraph of a seven-connected `K_7`-minor-free host.  The adjacent
+  [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
+  shows that individually two-apex bridge certificates need not share an
+  apex pair and that normalized dominating `K_5` models may regenerate
+  after every two-vertex deletion without yielding the needed exchange.
+  The remaining local inference is the interaction of arbitrary
+  high-attachment quadrant bridges while preserving named ownership or a
+  strict response-bearing host-component descent.
 
 ## Exact trust boundary
 
@@ -165,11 +178,16 @@ this target. It does not change the authoritative hierarchy above.
   immersion or a collision vertex of degree at most nine.
   Contact-preserving singletonization also shows that the missed-bag
   paired-linkage formulation requires a new label-preserving ownership
-  theorem.  The octahedral-frame refinement reduces that exact local
-  problem to a planar cofacial alternative or five paths through three
-  connected support subgraphs, but does not yet allocate either structure
-  while retaining all named contacts.  Thus this route does not replace
-  the primary bounded-interface obligation.
+  theorem.  The octahedral-frame and bridge refinements classify one path,
+  confine each whole bridge, close the one-internal-vertex residue and
+  exclude the multipartite saturation at seven-connectivity.  They do not
+  yet combine arbitrary high-attachment quadrant bridges while retaining
+  an `xe`, `ab`, or `cd` ownership augmentation, or return a strictly
+  smaller full component with its named proper-minor response.  The
+  six-connected barrier also rules out intersecting individual two-apex
+  certificates or invoking bare dominating-model regeneration.  The
+  single-collision gate therefore remains open, and this route does not
+  replace the primary bounded-interface obligation.
 - Internal audits establish the repository's current trust status; they are
   not external peer review.
 
