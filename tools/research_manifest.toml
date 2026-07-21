@@ -5302,6 +5302,31 @@ does_not_prove = [
 keywords = ["partial contraction", "attachment hull", "common fibre leaves", "exact-block response", "bipartite fibre"]
 
 [[claims]]
+id = "hc7.partial_loss_attachment_set_classification"
+title = "Attachment-set classification at a one-tree first loss"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_partial_loss_attachment_set_classification.md"
+active = false
+audit = "results/hc7_partial_loss_attachment_set_classification_audit.md"
+expected_source_sha256 = "328ac9bac738d4df60df6b1268e9a49b42924d5b507515a607551c69b2486eb5"
+scope = "an inclusion-minimal first connectivity loss with exactly one nontrivial forest fibre tree"
+label_fidelity = "literal fibre leaves, internal attachment vertices, lifted quotient components and clean-root supports on the fixed H0 subdivision are retained"
+separator_order = "exactly seven precisely when the fibre is a path and the selected attachment set is its two leaves"
+conclusions = [
+  "the fibre-hull condition is exactly containment of every leaf",
+  "an inclusion-minimal attachment set either is contained in another component attachment set or lies in an antichain of disconnected attachment sets with private internal vertices in both directions",
+  "a matching of three common leaves to distinct clean-root supports gives an explicit K7 model; otherwise the clean-support incidence is Hall-deficient",
+  "every common-leaf attachment family is realizable at a seven-connected inclusion-minimal first loss, so connectivity and contraction minimality alone impose no further comparison or interval structure",
+]
+does_not_prove = [
+  "that the arbitrary-antichain realization is K7-minor-free; its construction contains a literal K7",
+  "elimination of the Hall-deficient attachment antichain by labelled atomic geometry or contraction-critical colouring",
+  "a bounded two-sided response interface, strict host reduction, the single-collision disjunction, or HC7",
+]
+keywords = ["partial contraction", "common leaves", "attachment antichain", "Hall deficiency", "order-seven separator"]
+
+[[claims]]
 id = "hc7.barrier.partial_loss_chromatic_lift"
 title = "Partial-loss chromatic and clean-support lift barriers"
 kind = "barrier"
@@ -5491,6 +5516,24 @@ source = "hc7.partial_loss_attachment_hull"
 target = "hc7.barrier.atomic_exact_j_partial_contraction_lift"
 kind = "uses"
 note = "The attachment theorem starts from the audited minimal partial-loss six-cut and replaces its unbounded full fibre expansion by literal component-level attachment sets."
+
+[[relations]]
+source = "hc7.partial_loss_attachment_set_classification"
+target = "hc7.partial_loss_attachment_hull"
+kind = "uses"
+note = "The one-tree theorem sharpens the hull condition to an exact common-leaf set-system classification and identifies the comparison and antichain alternatives."
+
+[[relations]]
+source = "hc7.partial_loss_attachment_set_classification"
+target = "hc7.atomic_h0_clean_three_arm_closure"
+kind = "uses"
+note = "Three common leaves close only when their literal positions on the fixed subdivision admit a matching to the three clean-root supports."
+
+[[relations]]
+source = "hc7.partial_loss_attachment_set_classification"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The comparison and order-seven branches return two-sided responses; the Hall-deficient attachment antichain still requires the active target's explicit model, compatible response, or strict component descent."
 
 [[relations]]
 source = "hc7.barrier.partial_loss_chromatic_lift"

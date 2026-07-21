@@ -177,7 +177,19 @@ this target. It does not change the authoritative hierarchy above.
   colouring response automatically and the reverse response when another
   component has comparable attachment sets.  With one induced bipartite fibre,
   the bad quotient is exactly six-chromatic and both fibre sides meet all five
-  other colour classes.  The
+  other colour classes.  The audited
+  [one-tree attachment-set classification](results/hc7_partial_loss_attachment_set_classification.md)
+  makes this residue exact.  The hull condition is precisely a common-leaf
+  condition.  An inclusion-minimal attachment set either lies inside another
+  component's attachment set, giving the second full shore, or belongs to an
+  antichain of disconnected attachment sets with private internal contacts in
+  both directions.  Boundary order seven is exactly the path-fibre case with
+  the two leaves as the selected attachment set, when comparison is automatic.
+  Three distinctly supported common leaves close by the clean-arm theorem;
+  otherwise Hall deficiency remains.  A realization theorem produces arbitrary
+  such antichains under seven-connectivity and first-loss minimality alone, but
+  deliberately contains a `K_7`; hence the next inference must use `K_7`-free
+  labelled geometry or contraction-critical colouring.  The
   [adjacent barrier](barriers/hc7_partial_loss_chromatic_lift_barriers.md)
   shows sharply that a chorded fibre defeats the naive colour lift and that
   arbitrarily many common contacts may still occupy only two clean-support
@@ -232,8 +244,12 @@ this target. It does not change the authoritative hierarchy above.
   closed, but an earlier partial connectivity loss can have an unbounded
   literal lift and needs bridge ownership or chromatic response to control
   it.  Its attachment sets nevertheless span every contracted fibre tree and
-  share all fibre leaves.  This supplies only one closed-shore response unless
-  a second component is literally full to the same boundary, and common leaves
+  share all fibre leaves.  In the one-tree case, an inclusion-minimal set is
+  either contained in another attachment set or sits in an antichain of
+  disconnected sets with two-way private internal contacts; no stronger
+  interval or comparison conclusion follows from connectivity and first-loss
+  minimality alone.  This supplies only one closed-shore response unless a
+  second component is literally full to the same boundary, and common leaves
   need not have three distinct clean-root supports.  The induced-bipartite
   one-fibre case has a stronger six-colour contact condition, but its
   label-preserving conversion remains open.  Bare reassignment of a shared
