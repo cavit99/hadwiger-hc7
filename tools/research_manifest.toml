@@ -345,6 +345,30 @@ does_not_prove = [
 keywords = ["marked edge", "simultaneous contraction", "weighted separation", "continuation gate"]
 
 [[claims]]
+id = "hc7.double_critical_terminal_cycle_deletion_language"
+title = "Deletion language of an all-double-critical terminal cycle"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_double_critical_terminal_cycle_deletion_language.md"
+active = false
+audit = "results/hc7_double_critical_terminal_cycle_deletion_language_audit.md"
+expected_source_sha256 = "d4efb192d961c9fa00c2e43e56bb3ff26abf2146f950d0cede6931a4764dc4ad"
+scope = "an induced terminal cycle all of whose edges are double-critical in a strongly seven-contraction-critical graph"
+conclusions = [
+  "every nonempty proper independent cycle subset has six-chromatic deletion",
+  "every proper cycle subset containing an edge has five-chromatic deletion",
+  "an even cycle has a fixed five-chromatic exterior and a fixed exterior dominating K5 model",
+  "every cycle edge is a two-vertex transversal of all six-cores, with exact alternation if two disjoint cores exist",
+]
+does_not_prove = [
+  "a six-residual successor edge",
+  "label-preserving allocation of two cycle pieces to the exterior model",
+  "a strict same-host parameter",
+  "whole-sink closure or HC7",
+]
+keywords = ["double-critical edge", "terminal cycle", "deletion language", "six-core transversal", "continuation gate"]
+
+[[claims]]
 id = "hc7.bounded_interface_endpoint_pair_selection"
 title = "Endpoint-pair selection for bounded-interface Kempe paths"
 kind = "theorem"
@@ -1438,6 +1462,29 @@ refutes = ["unconditional bilateral list-uncolourability in every common double-
 satisfies = ["seven-connectivity", "chromatic number seven", "an exactly six-chromatic simultaneous contraction"]
 lacks = ["global K7-minor exclusion", "full proper-minor six-colourability"]
 keywords = ["simultaneous contraction", "list colouring", "mechanism barrier"]
+
+[[claims]]
+id = "hc7.barrier.six_residual_frame_selection"
+title = "Equal-extremum normalized frames can have opposite edge strata"
+kind = "barrier"
+status = "barrier"
+source = "barriers/hc7_six_residual_frame_selection_barrier.md"
+active = false
+expected_source_sha256 = "d16fb5bda39f183ebef0ddef17591bf985faf9605d52f9fd7908057f0c2b52eb"
+refutes = [
+  "selecting a six-residual successor from every minimum-support shortest-cycle normalized frame using only chromatic criticality and connectivity",
+]
+satisfies = [
+  "seven-vertex-criticality",
+  "eight-connectivity",
+  "a six-residual starting edge",
+  "equally extremal normalized frames with opposite terminal edge strata",
+]
+lacks = [
+  "strong seven-contraction-criticality",
+  "K7-minor exclusion",
+]
+keywords = ["six-residual edge", "frame selection", "shortest cycle", "minor-exclusion guardrail"]
 
 [[claims]]
 id = "hc7.barrier.three_common_profile"

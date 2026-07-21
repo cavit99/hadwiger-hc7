@@ -40,6 +40,8 @@ Immediate barriers:
 - [fixed-colouring degree-eight `P_5` stress test](../results/hc7_degree8_simultaneous_p5_certificate.md)
 - [dirty-path local-uncrossing barrier](../barriers/hc7_degree8_dirty_path_local_uncrossing_barrier.md)
 - [prescribed deleted-colour contact barrier](../barriers/hc7_degree8_deleted_colour_k4_contact_barrier.md)
+- [failed six-residual sink-closure gate: exact terminal-cycle deletion language](../results/hc7_double_critical_terminal_cycle_deletion_language.md)
+- [minimum-frame and shortest-cycle selection barrier](../barriers/hc7_six_residual_frame_selection_barrier.md)
 - [atomic one-collision weak-immersion frontier](hc7_atomic_weak_immersion_frontier.md)
 - [pentagonal-bipyramid paired-rooted `K_5` or four-colouring target](hc7_pentagonal_bipyramid_paired_rooted_target.md#3-exact-no-four-cut-target)
 

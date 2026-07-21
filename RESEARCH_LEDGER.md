@@ -147,6 +147,30 @@ therefore use global minor exclusion or proper-minor colouring while
 preserving the path or pole labels; more local transition taxonomy is not a
 credible next step.
 
+A gated return to the archived dominating-edge sink programme has also
+completed its first cycle. The
+[all-double-critical terminal-cycle theorem](results/hc7_double_critical_terminal_cycle_deletion_language.md)
+gives an exact unbounded invariant: for each nonempty proper $S\subsetneq V(C)$,
+`chi(G-S)=6` exactly when `S` is independent and `chi(G-S)=5` exactly when
+`S` contains an edge. An even cycle has a fixed five-chromatic exterior
+and one fixed dominating `K_5` model outside it. An odd cycle has either
+the same outcome or a four-chromatic exterior with singleton-rooted
+`K_5` models at each cycle vertex. Every cycle edge is a two-vertex
+transversal of all six-cores, while those cores rotate so that no cycle
+vertex is a common transversal.
+
+This whole-cycle structure does not prove a six-residual successor.
+Composing the exterior model with two cycle pieces, or aligning consecutive
+singleton-rooted models, is the paired-rooted branch-set allocation problem
+already open elsewhere. The
+[equal-extremum frame barrier](barriers/hc7_six_residual_frame_selection_barrier.md)
+also shows that minimum model order and shortest cycle length can select an
+all-double-critical frame when an equally extremal frame has a
+six-residual terminal edge. Its host deliberately has a `K_7` minor, so
+it shows why global minor exclusion is indispensable rather than refuting
+the full theorem. The closure gate failed and whole-sink classification
+was not started.
+
 ## Headline audited advances
 
 - **Bounded full interface.** Every hypothetical counterexample admits the

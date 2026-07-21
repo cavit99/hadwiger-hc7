@@ -1,5 +1,13 @@
 # Dominating-edge sink programme
 
+> **Archived status note (21 July 2026).** This is a superseded programme
+> snapshot, not the current proof spine. The later Cycle-1 gate produced
+> the exact terminal-cycle deletion language in
+> [this audited result](../results/hc7_double_critical_terminal_cycle_deletion_language.md),
+> but did not prove six-residual closure, so whole-sink classification was
+> not started. Historical uses of “literal `K_7`” below mean an explicit
+> `K_7`-minor model, not a `K_7` subgraph.
+
 **Status:** the transition system and terminal-cycle rotation are proved.
 The closure and sink-classification theorems in Section 4 are open.  This is
 the current global proof mechanism, not a proof of `HC_7`.
