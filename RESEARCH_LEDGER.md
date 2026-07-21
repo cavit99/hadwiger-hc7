@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 20 July 2026
+**Last updated:** 21 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
 This is the sole authority for the current status of the project. Exact
@@ -128,6 +128,18 @@ this target. It does not change the authoritative hierarchy above.
 - **First-hit reductions.** Rado--gammoid and transfer results convert much
   of the palette-to-label problem into literal first-hit geometry, but the
   final response-coupling step remains open.
+- **Atomic weak-immersion gate.** The
+  [atomic rounding theorem](results/hc7_atomic_weak_k7_immersion_rounding.md)
+  classifies a weak `K_7` immersion having exactly one binary collision.
+  The common-end case gives an explicit `K_7` minor; every other case gives
+  a spanning exact `K_7`-minus-one-edge model with singleton deficient
+  roots.  In the disjoint-demand case it also retains a common frame with an
+  octahedral residual quotient, and a collision vertex of degree at most
+  nine exposes a bounded full interface.  The
+  [icosahedral guardrail](barriers/hc7_atomic_weak_immersion_icosahedral_guardrail.md)
+  shows sharply that collision avoidance can relocate the collision at
+  equal potential, the deficient pairs need not identify the terminal pair,
+  and the proposed paired linkage can fail.
 
 ## Exact trust boundary
 
@@ -141,6 +153,12 @@ this target. It does not change the authoritative hierarchy above.
   every original low-degree entry.
 - The pentagonal-bipyramid theorems close several unbounded families, not
   all compatible cyclic-order expansions.
+- The minimum-degree weak-immersion theorem does not force an atomic
+  immersion or a collision vertex of degree at most nine.
+  Contact-preserving singletonization also shows that the missed-bag
+  paired-linkage formulation requires a new label-preserving ownership
+  theorem.  Thus this route does not replace the primary bounded-interface
+  obligation.
 - Internal audits establish the repository's current trust status; they are
   not external peer review.
 

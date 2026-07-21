@@ -5125,6 +5125,72 @@ does_not_prove = [
   "HC7",
 ]
 
+[[claims]]
+id = "hc7.atomic_weak_k7_immersion_rounding"
+title = "Atomic weak-K7 immersion rounding and common-frame interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_weak_k7_immersion_rounding.md"
+active = false
+audit = "results/hc7_atomic_weak_k7_immersion_rounding_audit.md"
+expected_source_sha256 = "67bb92bade54a9cf63dbe68015e598370ff16ff883d0b63450f7922c36bbf0be"
+scope = "atomic weak Kt immersions in t-connected simple graphs, specialized to the disjoint-demand K7 collision and its common-frame interface"
+label_fidelity = "literal immersion branch vertices, route interiors, singleton deficient roots and common-frame bags are retained"
+separator_order = "seven through nine only when the disjoint-demand collision vertex has degree at most nine"
+conclusions = [
+  "a common-end nonbranch collision gives an explicit Kt-minor model",
+  "every other atomic collision gives one or two spanning Kt-minus-one-edge models with singleton deficient roots",
+  "a K7-free disjoint-demand collision gives a common frame and a full anti-neighbourhood interface; proper-minor six-colourability supplies exact independent-block responses",
+  "a paired linkage in the missed clean bag gives an explicit K7 model, while a provenance frame can preserve the two collision contacts and make that bag a singleton",
+]
+does_not_prove = [
+  "that a guaranteed weak K7 immersion can be chosen atomic",
+  "that a collision-minimal immersion has a collision vertex of degree at most nine",
+  "completion of the resulting singleton-root near-K7 model or strict response-preserving descent",
+  "HC7",
+]
+keywords = ["weak K7 immersion", "atomic collision", "singleton-root near-K7", "bounded interface"]
+
+[[claims]]
+id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
+title = "Atomic weak-immersion guardrail in the two-apex icosahedron"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_atomic_weak_immersion_icosahedral_guardrail.md"
+active = false
+audit = "barriers/hc7_atomic_weak_immersion_icosahedral_guardrail_audit.md"
+expected_source_sha256 = "325d4c44181910a8154f2ff028202b4e3ab9befbd40eca55722d819148ebd65e"
+scope = "the explicit fourteen-vertex host K2 joined with the icosahedral graph"
+satisfies = [
+  "seven-connectivity and K7-minor exclusion",
+  "two equal-potential atomic weak K7 immersions whose collision vertices avoid one another",
+  "two spanning rounded near-K7 models with disjoint singleton deficient pairs",
+  "a global two-vertex K5-model transversal and an actual order-seven separator",
+]
+refutes = [
+  "strict decrease of (M,T,H,L) merely by choosing an immersion which avoids the old collision",
+  "identification of the global terminal pair from the two rounded deficient pairs",
+  "forcing the missed-clean-bag paired linkage from connectivity alone",
+  "forcing collision degree at most nine by minimizing M alone",
+]
+lacks = [
+  "seven-chromaticity and strong contraction-criticality",
+  "a counterexample to atomic rounding or HC7",
+  "a refutation of the fuller tie-break, since the high-degree branch-transit witness has T equal to one",
+]
+
+[[relations]]
+source = "hc7.atomic_weak_k7_immersion_rounding"
+target = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
+kind = "sharpness_witness"
+note = "The K2-icosahedron join realizes the exact K7-free atomic outputs while exposing equal-potential relocation, paired-linkage failure and a high-degree minimum-M collision."
+
+[[relations]]
+source = "hc7.atomic_weak_k7_immersion_rounding"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "A low-degree disjoint-demand atomic collision recovers the bounded full-interface geometry, but not atomicity, a low-degree collision anchor, the named response or strict host-component descent required by the active target."
+
 [[relations]]
 source = "hc7.target.degree7_model_separator"
 target = "hc7.order8_positive_excess_frozen_outer_shore"
@@ -8034,4 +8100,19 @@ expected_stdout = [
   "positive_control G?aN~w components=27,37 has_K5_minor=yes",
   "low_chromatic_control G??F~w components=65,90",
   "PASS order8_K5_minor_free_chromatic_at_least_four_partition_graph_connected",
+]
+
+[[verifiers]]
+id = "atomic-weak-k7-immersion-icosahedral-guardrail"
+path = "barriers/hc7_atomic_weak_immersion_icosahedral_guardrail_verify.py"
+sha256 = "e47526f82367eec474df29b8ed055fec1fd39190a0685890573be6846946a68c"
+timeout = 30
+expected_stdout = [
+  "GREEN atomic weak-K7 immersion icosahedral guardrail",
+  "host: vertices=14 edges=55 connectivity=7 cuts_tested=6476 planar_core=yes K7_minor=no",
+  "witnesses: potential=(M,T,H,L)=(1,0,0,26) Q=1 collisions=u2,w4 mutual_avoidance=yes",
+  "rounded_models: missing=t-w1,u1-u3 spanning=yes singleton_roots=yes",
+  "missed_clean_bag: paired_linkage=no",
+  "branch_transit: collision=p degree=13 minimum_excess_M=1 length=29",
+  "terminal: pair=p,q hits_every_K5_model; exact_order7_separator=yes",
 ]
