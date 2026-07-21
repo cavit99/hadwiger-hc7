@@ -5278,6 +5278,56 @@ lacks = [
 keywords = ["partial contraction", "unbounded separator lift", "forest fibre", "K8-3K2"]
 
 [[claims]]
+id = "hc7.partial_loss_attachment_hull"
+title = "Attachment hulls at a first connectivity-losing forest contraction"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_partial_loss_attachment_hull.md"
+active = false
+audit = "results/hc7_partial_loss_attachment_hull_audit.md"
+expected_source_sha256 = "faa777f7645cd3afcaa81c41338a12ec8b82f9e2b28a80a136c195b97a4afad2"
+scope = "a six-cut in an inclusion-minimal first non-seven-connected forest quotient of a seven-connected strongly contraction-critical host"
+label_fidelity = "ordinary cut vertices, every literal forest-fibre vertex, lifted quotient components and their exact host attachment sets are retained"
+separator_order = "the literal boundary of a lifted component has order 6-q plus the sum of its q fibre-attachment set sizes"
+conclusions = [
+  "every component attachment set meets both sides of every fibre-tree edge, equivalently spans the whole fibre tree, so every fibre leaf is a common literal neighbour of all lifted components",
+  "each lifted component supplies one exact-block six-colouring response; attachment-set containment in another component supplies the reverse response",
+  "with one induced bipartite fibre the bad quotient is exactly six-chromatic, and each fibre bipartition class has an external contact in every non-fibre colour",
+]
+does_not_prove = [
+  "a bounded two-sided full interface when attachment sets are large or incomparable",
+  "that common fibre leaves occupy three distinct clean-root support classes in the atomic H0 subdivision",
+  "a K7 model, dominating-K5 transversal, strict component reduction, the single-collision disjunction, or HC7",
+]
+keywords = ["partial contraction", "attachment hull", "common fibre leaves", "exact-block response", "bipartite fibre"]
+
+[[claims]]
+id = "hc7.barrier.partial_loss_chromatic_lift"
+title = "Partial-loss chromatic and clean-support lift barriers"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_partial_loss_chromatic_lift_barriers.md"
+active = false
+audit = "barriers/hc7_partial_loss_chromatic_lift_barriers_audit.md"
+expected_source_sha256 = "5cc7262a04a2e5782b39e76fc9829d612e21fad09e217901f4e6df7203f051b7"
+scope = "a chorded three-vertex contraction fibre and an unbounded H0 subdivision family with all selected clean contacts on the ef segment"
+satisfies = [
+  "a two-edge forest fibre whose suppressed host chord invalidates all-equal quotient-colour expansion",
+  "arbitrarily many distinct selected contacts with clean-support matching number two",
+  "K7-minor exclusion of the concentration family via planarity after deleting e and f",
+]
+refutes = [
+  "expanding a quotient colour equally over a multi-edge forest fibre without checking all induced fibre edges",
+  "deriving a saturating three-clean-root attachment matching from the number of common leaves or selected contacts alone",
+]
+lacks = [
+  "the first-loss, seven-connectivity and strong contraction-criticality hypotheses",
+  "a counterexample to the attachment-hull theorem, the atomic terminal disjunction, or HC7",
+  "a refutation of an argument which separately proves literal clean-support diversity",
+]
+keywords = ["chorded fibre", "colour lift", "support concentration", "two-apex", "Hall deficiency"]
+
+[[claims]]
 id = "hc7.barrier.atomic_h0_multipartite_bridge_guardrail"
 title = "Atomic H0 multipartite bridge guardrail"
 kind = "barrier"
@@ -5389,6 +5439,30 @@ source = "hc7.barrier.atomic_exact_j_partial_contraction_lift"
 target = "hc7.atomic_exact_j_minimal_forest_landing"
 kind = "related_to"
 note = "The path-fibre family is terminal by the theorem's K7 branch but proves that the immediate-predecessor separator alone can have an unbounded host lift."
+
+[[relations]]
+source = "hc7.partial_loss_attachment_hull"
+target = "hc7.barrier.atomic_exact_j_partial_contraction_lift"
+kind = "uses"
+note = "The attachment theorem starts from the audited minimal partial-loss six-cut and replaces its unbounded full fibre expansion by literal component-level attachment sets."
+
+[[relations]]
+source = "hc7.barrier.partial_loss_chromatic_lift"
+target = "hc7.partial_loss_attachment_hull"
+kind = "sharpness_witness"
+note = "The chorded fibre and support-concentration family delimit respectively the bipartite colour lift and any attempt to infer three clean supports from common attachment count."
+
+[[relations]]
+source = "hc7.partial_loss_attachment_hull"
+target = "hc7.atomic_h0_clean_three_arm_closure"
+kind = "related_to"
+note = "Common fibre leaves become terminal only after a separate ownership argument places them in three distinct clean-root support classes."
+
+[[relations]]
+source = "hc7.partial_loss_attachment_hull"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "A lifted component gives a literal boundary and one exact-block response; comparability supplies the second, while the remaining incomparable or large attachments need the active target's strict component or compatible-response conclusion."
 
 [[relations]]
 source = "hc7.atomic_h0_clean_three_arm_closure"

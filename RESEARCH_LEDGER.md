@@ -169,7 +169,17 @@ this target. It does not change the authoritative hierarchy above.
   proves why an earlier first loss cannot be lifted by connectivity alone:
   the quotient six-cut expands to a boundary of order `6+|F_0|`, unbounded
   in the original host.  The barrier family is itself six-colourable and has
-  a displayed `K_7`, so it does not survive the full hypotheses.  The adjacent
+  a displayed `K_7`, so it does not survive the full hypotheses.  The audited
+  [attachment-hull theorem](results/hc7_partial_loss_attachment_hull.md)
+  now extracts the exact literal information which does survive that lift:
+  every lifted component's attachment set spans each forest fibre, so every
+  fibre leaf is adjacent to every lifted component.  It gives one exact-block
+  colouring response automatically and the reverse response when another
+  component has comparable attachment sets.  With one induced bipartite fibre,
+  the bad quotient is exactly six-chromatic and both fibre sides meet all five
+  other colour classes.  The adjacent barrier shows sharply that a chorded
+  fibre defeats the naive colour lift and that arbitrarily many common contacts
+  may still occupy only two clean-support classes.  The adjacent
   [shared-hub defect-rotation barrier](barriers/hc7_atomic_shared_hub_defect_rotation_barrier.md)
   is an exact finite obstruction to a different shortcut: moving a common
   connector/provenance vertex changes the three absent quotient pairs, but
@@ -214,7 +224,13 @@ this target. It does not change the authoritative hierarchy above.
   has not been decoded.  Likewise the exact-`J` all-subsets forest landing is
   closed, but an earlier partial connectivity loss can have an unbounded
   literal lift and needs bridge ownership or chromatic response to control
-  it.  Bare reassignment of a shared connector/provenance vertex also fails:
+  it.  Its attachment sets nevertheless span every contracted fibre tree and
+  share all fibre leaves.  This supplies only one closed-shore response unless
+  a second component is literally full to the same boundary, and common leaves
+  need not have three distinct clean-root supports.  The induced-bipartite
+  one-fibre case has a stronger six-colour contact condition, but its
+  label-preserving conversion remains open.  Bare reassignment of a shared
+  connector/provenance vertex also fails:
   the rotated near-clique quotient need not have a labelled strong-immersion
   lift or improve the lexicographic collision potential.  Seven-connectivity
   reduces that pattern to an exact order-seven separator, a provenance-clean
