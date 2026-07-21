@@ -5152,6 +5152,32 @@ does_not_prove = [
 keywords = ["weak K7 immersion", "atomic collision", "singleton-root near-K7", "bounded interface"]
 
 [[claims]]
+id = "hc7.atomic_octahedral_frame_augmentation"
+title = "Atomic octahedral-frame adjacency augmentation"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_octahedral_frame_augmentation.md"
+active = false
+audit = "results/hc7_atomic_octahedral_frame_augmentation_audit.md"
+expected_source_sha256 = "a1b9992af5e7c18396583be0e183a71b62c3ff59cce5c5237b89ff7c640ae9b5"
+scope = "the exact eight-bag quotient of a disjoint-demand atomic weak K7 collision, its H0-subdivision provenance, complete substitutions, and monotone augmentations of the two-apex icosahedron"
+label_fidelity = "the literal collision vertex, seven immersion branch labels, route interiors, three connected support subgraphs and all three absent quotient pairs are retained"
+separator_order = "at most three in the auxiliary graph L; a host separator of order at most seven remains an unproved alternative"
+conclusions = [
+  "J=K8-3K2 has no K7 minor, while adding any one of its three absent edges gives an explicit K7 model",
+  "a provenance-clean path closes the model; the canonical connected-subgraph reduction gives a K7 model, a planar cofacial graph, or five paths through three named support subgraphs",
+  "every nontrivial complete substitution of J contains a K7 minor",
+  "an eight-connected monotone augmentation of the two-apex icosahedron by one through seven vertices contains a K7 minor",
+]
+does_not_prove = [
+  "an ownership-preserving realization of one absent quotient pair in every eight-connected host",
+  "a strict bounded-interface reduction from the planar cofacial or five-path alternatives",
+  "that a collision-minimal weak K7 immersion is atomic",
+  "the single-collision terminal disjunction or HC7",
+]
+keywords = ["octahedral frame", "one-edge augmentation", "rooted K4 minor", "planar cofacial alternative"]
+
+[[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
 title = "Atomic weak-immersion guardrail in the two-apex icosahedron"
 kind = "barrier"
@@ -5178,6 +5204,24 @@ lacks = [
   "a counterexample to atomic rounding or HC7",
   "a refutation of the fuller tie-break, since the high-degree branch-transit witness has T equal to one",
 ]
+
+[[relations]]
+source = "hc7.atomic_octahedral_frame_augmentation"
+target = "hc7.atomic_weak_k7_immersion_rounding"
+kind = "uses"
+note = "The exact J quotient and H0-subdivision provenance are supplied by the audited atomic collision classification."
+
+[[relations]]
+source = "hc7.atomic_octahedral_frame_augmentation"
+target = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
+kind = "related_to"
+note = "The augmentation count shows that retaining the fourteen-vertex barrier example while adding at most seven vertices cannot produce an eight-connected K7-minor-free host."
+
+[[relations]]
+source = "hc7.atomic_octahedral_frame_augmentation"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "The surviving ownership problem asks for the same kind of literal-contact preservation or strict bounded-interface response as the primary target."
 
 [[relations]]
 source = "hc7.atomic_weak_k7_immersion_rounding"

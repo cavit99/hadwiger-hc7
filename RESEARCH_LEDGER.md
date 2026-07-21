@@ -128,7 +128,7 @@ this target. It does not change the authoritative hierarchy above.
 - **First-hit reductions.** Rado--gammoid and transfer results convert much
   of the palette-to-label problem into literal first-hit geometry, but the
   final response-coupling step remains open.
-- **Atomic weak-immersion gate.** The
+- **Atomic weak-immersion classification.** The
   [atomic rounding theorem](results/hc7_atomic_weak_k7_immersion_rounding.md)
   classifies a weak `K_7` immersion having exactly one binary collision.
   The common-end case gives an explicit `K_7` minor; every other case gives
@@ -136,10 +136,18 @@ this target. It does not change the authoritative hierarchy above.
   roots.  In the disjoint-demand case it also retains a common frame with an
   octahedral residual quotient, and a collision vertex of degree at most
   nine exposes a bounded full interface.  The
-  [icosahedral guardrail](barriers/hc7_atomic_weak_immersion_icosahedral_guardrail.md)
+  [icosahedral barrier example](barriers/hc7_atomic_weak_immersion_icosahedral_guardrail.md)
   shows sharply that collision avoidance can relocate the collision at
   equal potential, the deficient pairs need not identify the terminal pair,
-  and the proposed paired linkage can fail.
+  and the proposed paired linkage can fail.  The audited
+  [octahedral-frame augmentation result](results/hc7_atomic_octahedral_frame_augmentation.md)
+  proves that the exact quotient is `K_8-3K_2` and any one of its three
+  absent adjacencies gives an explicit `K_7` model.  A clean missing-pair
+  path and a noncofacial four-connected remainder also close, as do every
+  nontrivial complete substitution and every monotone augmentation of the
+  icosahedral example by at most seven vertices.  The remaining local
+  inference is confined to ownership-preserving use of planar cofacial
+  bridge intervals or five paths through three named connected subgraphs.
 
 ## Exact trust boundary
 
@@ -157,8 +165,11 @@ this target. It does not change the authoritative hierarchy above.
   immersion or a collision vertex of degree at most nine.
   Contact-preserving singletonization also shows that the missed-bag
   paired-linkage formulation requires a new label-preserving ownership
-  theorem.  Thus this route does not replace the primary bounded-interface
-  obligation.
+  theorem.  The octahedral-frame refinement reduces that exact local
+  problem to a planar cofacial alternative or five paths through three
+  connected support subgraphs, but does not yet allocate either structure
+  while retaining all named contacts.  Thus this route does not replace
+  the primary bounded-interface obligation.
 - Internal audits establish the repository's current trust status; they are
   not external peer review.
 
