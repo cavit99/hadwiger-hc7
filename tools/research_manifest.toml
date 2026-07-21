@@ -5378,9 +5378,55 @@ refutes = [
 lacks = [
   "seven-connectivity, seven-chromaticity and strong contraction-criticality",
   "a counterexample to the single-collision terminal disjunction or HC7",
-  "closure of the host-level dirty replacement path which meets another provenance-route interior",
+  "closure of an arbitrary host-level dirty replacement path which meets other provenance-route interiors",
 ]
 keywords = ["atomic collision", "shared connector", "quotient rotation", "ownership lift", "dirty replacement"]
+
+[[claims]]
+id = "hc7.atomic_shared_hub_same_vertex_saturation"
+title = "Same-vertex saturation of the atomic shared-hub graph"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_shared_hub_same_vertex_saturation.md"
+active = false
+audit = "results/hc7_atomic_shared_hub_same_vertex_saturation_audit.md"
+expected_source_sha256 = "d315456f5189af245f2249d52aa6cd84d9eb35fedfbc0cc4e81ccb432dbad303"
+scope = "simple edge-supergraphs of the exact thirteen-vertex shared-hub graph on the same vertex set"
+label_fidelity = "the two symmetric degree-three subdivision vertices, all thirteen core vertices and every displayed K7 branch-set certificate are retained"
+conclusions = [
+  "five individually terminal edge additions at p_ad leave only four possible nonneighbours with which to raise its degree from three to seven",
+  "the exact core automorphism transfers the same forcing to p_bc without assuming symmetry of the ambient supergraph",
+  "the two forced hub edges give a spanning explicit K7-minor model, so no same-vertex minimum-degree-seven K7-free supergraph exists",
+]
+does_not_prove = [
+  "the result for supergraphs obtained by adding vertices",
+  "seven-connectivity of the sparse base graph or a general dirty-path theorem",
+  "the single-collision terminal disjunction or HC7",
+]
+keywords = ["shared hub", "edge saturation", "minimum degree seven", "explicit K7 model"]
+
+[[claims]]
+id = "hc7.atomic_shared_hub_seven_fan_closure"
+title = "Seven-fan closure of the atomic shared-hub graph"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_atomic_shared_hub_seven_fan_closure.md"
+active = false
+audit = "results/hc7_atomic_shared_hub_seven_fan_closure_audit.md"
+expected_source_sha256 = "1b14e893d9822e55d86016985f395428dac469bec2e5a04034ea4ebed5ad32f2"
+scope = "arbitrary seven-connected supergraphs containing the exact labelled thirteen-vertex shared-hub graph as a subgraph"
+label_fidelity = "all retained core vertices, the two saturated fan roots, the common hub, clean fan interiors and all twenty-one final branch-set contacts are explicit"
+conclusions = [
+  "a reusable saturated-endpoint fan lemma turns local terminal edge-addition certificates into clean paths to every one of exactly k unsaturated endpoints in a k-connected host",
+  "the two symmetric applications force clean paths from p_ad and p_bc to the common hub",
+  "a first-intersection split of those paths gives an explicit K7-minor model in every seven-connected supergraph of the labelled core",
+]
+does_not_prove = [
+  "that an arbitrary dirty replacement path contains the exact thirteen-vertex labelled core",
+  "retention of the endpoint certificates after uncontrolled intersections with other subdivision-route interiors",
+  "the full single-collision terminal disjunction or HC7",
+]
+keywords = ["fan lemma", "endpoint saturation", "shared hub", "first intersection", "unbounded host"]
 
 [[claims]]
 id = "hc7.barrier.atomic_weak_immersion_icosahedral_guardrail"
@@ -5528,7 +5574,31 @@ note = "The common-hub example has only two clean-support owners and shows that 
 source = "hc7.barrier.atomic_shared_hub_defect_rotation"
 target = "hc7.target.bounded_interface_bridge"
 kind = "related_to"
-note = "Seven-connectivity turns the common-hub pattern into a clean replacement, an actual order-seven separator, or a dirty replacement path whose ownership must be decoded into the active target's explicit model, compatible response, or strict component descent."
+note = "The bare quotient rotation is invalid.  The exact sparse core is closed by the adjacent fan theorem, while an arbitrary dirty replacement path still needs the active target's explicit model, compatible response, or strict component descent."
+
+[[relations]]
+source = "hc7.atomic_shared_hub_same_vertex_saturation"
+target = "hc7.barrier.atomic_shared_hub_defect_rotation"
+kind = "related_to"
+note = "The finite saturation theorem identifies and checks the one-edge K7 certificates hidden behind the sparse local barrier."
+
+[[relations]]
+source = "hc7.atomic_shared_hub_seven_fan_closure"
+target = "hc7.atomic_shared_hub_same_vertex_saturation"
+kind = "uses"
+note = "The unbounded host proof feeds the five audited one-edge certificates at each symmetric subdivision vertex into the saturated-endpoint fan lemma."
+
+[[relations]]
+source = "hc7.atomic_shared_hub_seven_fan_closure"
+target = "hc7.atomic_h0_bridge_quadrant_normal_form"
+kind = "related_to"
+note = "The fan argument closes one exact dirty shared-hub pattern; arbitrary route-interior intersections still require the bridge normal form's ownership-sensitive attachment analysis."
+
+[[relations]]
+source = "hc7.atomic_shared_hub_seven_fan_closure"
+target = "hc7.target.bounded_interface_bridge"
+kind = "related_to"
+note = "Endpoint saturation is a reusable host-level lift, but the general dirty-path residue still must return the active target's explicit model, compatible response, or strict component descent."
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -8486,4 +8556,21 @@ expected_stdout = [
   "atomic_search: branch_sets=1716 L<=27=0 L=28=1",
   "minimum_witness: branches=abcdefg collision=x demands=ab,cd",
   "rotated_strong_lifts: collision_f=no collision_g=no",
+]
+
+[[verifiers]]
+id = "atomic-shared-hub-same-vertex-saturation"
+path = "results/hc7_atomic_shared_hub_same_vertex_saturation_verify.py"
+sha256 = "ba17649fa24c8abceae189d4566ca145d996c247f73d203b4759741c86186e3d"
+timeout = 30
+requires = ["networkx==3.6.1"]
+expected_stdout = [
+  "GREEN atomic shared-hub same-vertex saturation",
+  "host: vertices=13 edges=34 degree(p_ad)=3 degree(p_bc)=3",
+  "automorphism: p_ad<->p_bc verified",
+  "one_edge_K7_models: p_ad-b,p_ad-c,p_ad-p_ac,p_ad-p_bd,p_ad-p_bc",
+  "remaining_incident_edges: p_ad-e,p_ad-f,p_ad-h,p_ad-x",
+  "forced_edges: h-p_ad,h-p_bc",
+  "two_edge_K7_model: branch_sets=7 contact_edges=21 verified",
+  "conclusion: same_vertex_minimum_degree_7_K7_free_supergraph=no",
 ]

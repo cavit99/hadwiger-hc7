@@ -177,18 +177,25 @@ this target. It does not change the authoritative hierarchy above.
   colouring response automatically and the reverse response when another
   component has comparable attachment sets.  With one induced bipartite fibre,
   the bad quotient is exactly six-chromatic and both fibre sides meet all five
-  other colour classes.  The adjacent barrier shows sharply that a chorded
-  fibre defeats the naive colour lift and that arbitrarily many common contacts
-  may still occupy only two clean-support classes.  The adjacent
+  other colour classes.  The
+  [adjacent barrier](barriers/hc7_partial_loss_chromatic_lift_barriers.md)
+  shows sharply that a chorded fibre defeats the naive colour lift and that
+  arbitrarily many common contacts may still occupy only two clean-support
+  classes.  The adjacent
   [shared-hub defect-rotation barrier](barriers/hc7_atomic_shared_hub_defect_rotation_barrier.md)
   is an exact finite obstruction to a different shortcut: moving a common
   connector/provenance vertex changes the three absent quotient pairs, but
   need not lift to another labelled strong immersion or decrease the global
   collision potential.  Its thirteen-vertex host is only three-connected and
-  three-colourable.  In a seven-connected host, the corresponding common-hub
-  configuration instead gives an actual order-seven separator, a clean
-  replacement path and explicit `K_7` model, or the now-isolated case in which
-  every replacement path meets another provenance-route interior.  The adjacent
+  three-colourable.  The audited
+  [seven-fan closure](results/hc7_atomic_shared_hub_seven_fan_closure.md)
+  now proves that this exact labelled obstruction is terminal in every
+  seven-connected supergraph, even with arbitrarily many added vertices.
+  Five checked one-edge `K_7` certificates at each of two subdivision
+  vertices saturate the possible fan endpoints, force two clean paths to the
+  common hub, and yield an explicit `K_7` model by a first-intersection split.
+  This reusable fan-saturation mechanism does not yet reduce an arbitrary
+  dirty replacement path to that thirteen-vertex labelled subgraph.  The adjacent
   [six-connected multipartite barrier](barriers/hc7_atomic_h0_multipartite_bridge_guardrail.md)
   shows that individually two-apex bridge certificates need not share an
   apex pair and that normalized dominating `K_5` models may regenerate
@@ -232,10 +239,11 @@ this target. It does not change the authoritative hierarchy above.
   label-preserving conversion remains open.  Bare reassignment of a shared
   connector/provenance vertex also fails:
   the rotated near-clique quotient need not have a labelled strong-immersion
-  lift or improve the lexicographic collision potential.  Seven-connectivity
-  reduces that pattern to an exact order-seven separator, a provenance-clean
-  replacement and explicit `K_7` model, or a replacement path which meets
-  another subdivision-route interior; the last case remains open.  The
+  lift or improve the lexicographic collision potential.  The exact sparse
+  example is nevertheless excluded from every seven-connected `K_7`-minor-free
+  host by the new fan-saturation theorem.  What remains open is the general
+  dirty-path case, where extra intersections with subdivision-route interiors
+  prevent those finite endpoint certificates from being retained literally.  The
   six-connected barrier also rules out intersecting individual two-apex
   certificates or invoking bare dominating-model regeneration.  The
   single-collision gate therefore remains open, and this route does not
