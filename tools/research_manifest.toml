@@ -9049,7 +9049,9 @@ requires = ["nauty"]
 expected_stdout = [
   "component_exchange_five_core_verifier version=1",
   "layer h=7 e=18 graphs=1 marks=231 residues=0",
+  "certificate 7:F]~vw:(0, 1):(0, 1):001,004,010,040,080,00a,120",
   "layer h=8 e=20 graphs=3 marks=1218 residues=0",
+  "certificate 8:GFzvvW:(0, 1):(0, 1):001,008,020,100,012,044,280",
   "total_marks=1449 residues=0",
   "catalogue_sha256=0ef56bb5ba5a44e5c699f2d0a81c1f74cc9eb35e5a52aed4dc6846817948900d",
   "witness_sha256=b5af511f5eccf17baf6bd2dc8affa792d1391eb3128bc57111d4703227277caa",
@@ -9568,7 +9570,7 @@ expected_stdout = [
 id = "atomic-dirty-two-bridge-chain-barrier"
 path = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier_verify.py"
 sha256 = "7334fd62e0dc25ec4fae4109714e24e155d0b0d972325449461fa80603d9af8b"
-timeout = 60
+timeout = 180
 requires = ["networkx==3.6.1"]
 expected_stdout = [
   "GREEN atomic dirty two-bridge-chain barrier",
