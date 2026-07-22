@@ -2,6 +2,8 @@ name: Research integrity
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 permissions:
