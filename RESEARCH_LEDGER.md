@@ -96,10 +96,19 @@ articulation with a connected side strictly smaller than the original
 exterior.  Boundary order seven on that side is a strict generic restart;
 otherwise its boundary has order at least eight.  A separating-edge witness
 additionally retains the exact named matching response.  In the doubled-
-route subcase, no proper-minor response preserving both a second boundary
-pair and the rooted-model labels has yet been proved from the route
-geometry.  This is a genuine narrowing of the residue rather than a proof
-of the degree-seven branch.
+route subcase, the
+[route-cycle response theorem](results/hc7_degree7_route_cycle_model_persistence.md)
+now identifies the exact next obstruction.  A minimal root-separating edge
+bond always has a simultaneous response with the prescribed boundary pairs;
+either a minimal aligned subset is one nonseparating edge, or it has at
+least two edges and every single-edge response at an edge of that subset
+omits `e_0` or `e_i`.  Relative to the fixed rooted `K_5`, a route-cycle
+edge may preserve the same labelled model while still returning the wrong
+matching; if no cycle edge preserves it, one layer reduces to a literal
+`C_3`, `C_4` or `C_5` of bridge sectors joined by unique bag contacts.
+Even an aligned persistent response does not identify palette colours with
+bag labels.  This is a genuine narrowing rather than a proof of the
+degree-seven branch.
 
 One particularly reusable input is the
 [exact-seven full-connected-subgraph packing theorem](results/hc7_exact_seven_packet_packing.md).
