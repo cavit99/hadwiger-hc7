@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "93b0b8e2b635401077b63735e6f101a67065e67cec845ea2976227d0fb2352ff"
+expected_source_sha256 = "c70f680c6107038b05bbcc2ed2fe2f67d5bcdd4626802c0d2dafe8bdfc76e56b"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -414,7 +414,7 @@ source = "results/hc7_common_root_parallel_two_cycle_normalization.md"
 source_heading = "Theorem 2.1 (minimal parallel-pair geometry)"
 active = true
 audit = "results/hc7_common_root_parallel_two_cycle_normalization_audit.md"
-expected_source_sha256 = "a26788b4a03e26c1ce75bcbf860a09ad1109259da58b7aa74471318061da87ea"
+expected_source_sha256 = "3717920f83ab38a59ed0a9486795b657cdc872ca7034781fba8f931bdee59d22"
 scope = "a parallel two-edge cycle in the two fixed shore extensions of the degree-eight or degree-nine common-root residue"
 label_fidelity = "the operated trace, both fixed extensions, full bichromatic components, literal shore ownership, connector sectors and conditional independent-block responses are retained"
 conclusions = [
@@ -432,6 +432,58 @@ does_not_prove = [
   "a bounded response-preserving separator or strict actual anti-neighbourhood-component descent",
 ]
 keywords = ["common root", "parallel trace cycle", "odd cycle", "clean connector", "incidence split"]
+
+[[claims]]
+id = "hc7.degree8_nonedge_bipartition_classification"
+title = "Every compact degree-eight boundary has an aligned nonedge or is the odd wheel"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_nonedge_bipartition_classification.md"
+source_heading = "Theorem 1 (nonedge bipartition classification)"
+active = true
+audit = "results/hc7_degree8_nonedge_bipartition_classification_audit.md"
+expected_source_sha256 = "e2483c23f73e786ce5a32693ef13810f9e3657511c6b178f5d5a1572e5adad9a"
+scope = "eight-vertex boundary graphs with independence number at most three and no K4 minor after any two-vertex deletion, including the full two-component common-root boundary"
+label_fidelity = "the selected nonedge and the two literal independent triples remain boundary vertices; no shore connector is asserted by the finite classification"
+conclusions = [
+  "184 of the 185 admissible unlabelled boundary graphs have a nonedge pq whose deletion is bipartite",
+  "the unique exception is K1 joined to C7",
+  "every supplied bipartition has two independent triples, all four root-to-block contacts and an edge between the triples",
+  "the dichotomy applies to the degree-eight full two-component common-root boundary",
+]
+does_not_prove = [
+  "HC7",
+  "that the aligned pair is an endpoint pair of a preselected normalized trace connector",
+  "a disjoint carrier for either independent triple",
+  "closure of the odd-wheel host case",
+]
+keywords = ["degree eight", "boundary classification", "aligned nonedge", "bipartite deletion", "odd wheel"]
+
+[[claims]]
+id = "hc7.degree8_aligned_pair_bilateral_cycle"
+title = "An aligned degree-eight pair forces a bilateral response cycle"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_aligned_pair_bilateral_cycle.md"
+source_heading = "Theorem 2.1 (aligned bilateral response cycle)"
+active = true
+audit = "results/hc7_degree8_aligned_pair_bilateral_cycle_audit.md"
+expected_source_sha256 = "cdb813d84a9eb980f1310f0d941c8c349e79988f965ea9a81b45d85d8ca4c8d9"
+scope = "the non-wheel degree-eight two-full-component boundary with an aligned nonedge and two independent triples"
+label_fidelity = "the literal aligned endpoints, both independent blocks, one named singleton boundary interchange, both fixed shore colourings and both literal shore paths are retained"
+conclusions = [
+  "opposite exact-block responses force boundary-clean pq paths in both shores from the same singleton boundary interchange",
+  "the two paths form a literal odd cycle",
+  "each fixed full two-colour component has a separating bridge with an aligned deletion/contraction response or two edge-disjoint pq routes",
+  "every surviving host splits both independent triples in both post-path component-incidence graphs",
+]
+does_not_prove = [
+  "HC7",
+  "a K7-minor model or one common intact boundary partition",
+  "a bounded response-preserving separator or smaller actual component of G-N[u]",
+  "closure of the fourfold incidence-split residue or the odd-wheel boundary",
+]
+keywords = ["degree eight", "aligned pair", "bilateral path", "odd cycle", "operation provenance", "incidence split"]
 
 [[claims]]
 id = "hc7.degree8_common_root_star_response"
@@ -8314,6 +8366,16 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
+target = "hc7.degree8_nonedge_bipartition_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.degree8_aligned_pair_bilateral_cycle"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
 target = "hc7.degree8_common_root_star_response"
 kind = "uses"
 
@@ -8393,6 +8455,31 @@ kind = "uses"
 [[relations]]
 source = "hc7.common_root_parallel_two_cycle_normalization"
 target = "hc7.order8_root_connector_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_nonedge_bipartition_classification"
+target = "hc7.full_exterior_component_common_root_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_nonedge_bipartition_classification"
+target = "hc7.low_degree_exterior_component_bounds"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_aligned_pair_bilateral_cycle"
+target = "hc7.degree8_nonedge_bipartition_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_aligned_pair_bilateral_cycle"
+target = "hc7.low_degree_concentrated_reserve_elimination"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_aligned_pair_bilateral_cycle"
+target = "hc7.common_root_parallel_two_cycle_normalization"
 kind = "uses"
 
 [[relations]]
@@ -9609,6 +9696,24 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.barrier.degree7_single_edge_response_alignment"
 kind = "guarded_by"
 note = "Matching languages and common-host equality signatures alone do not select an aligned single-edge response."
+
+[[verifiers]]
+id = "degree8-nonedge-bipartition-classification"
+path = "results/hc7_degree8_nonedge_bipartition_classification_verify.py"
+sha256 = "c01f145349831eb34f3af0ef772c6fe07d82b4b00f9630cabe9ba557eb0be8a9"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "order8_graphs 12346",
+  "compact_boundaries 185",
+  "compact_boundary_sha256 f01bd67668c56deab10ad02ae9c05fa58b38c1235d3b34bb1129880ccc5a1ff9",
+  "aligned_nonedge_boundaries 184",
+  "exceptions 1",
+  "exception_graph6 GCp`f{",
+  "exception_sha256 0637152b1890aa89c1ee354c0036dc0929715fcc94e182deb4b851279f66aab0",
+  "exception_structure K1_join_C7",
+  "PASS degree8_nonedge_bipartition_classification",
+]
 
 [[verifiers]]
 id = "component-exchange-five-core"

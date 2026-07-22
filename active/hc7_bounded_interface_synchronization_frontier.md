@@ -269,8 +269,9 @@ both shores.  There are at most three sectors in degree eight and four in
 degree nine; hence one degree-eight connector is boundary-clean, and the
 root-retaining choice puts `x` on the cycle.
 
-The clean connector is not automatically compatible with the independent-
-block response data.  If its endpoints do admit the required partition
+The clean connector produced by normalization is not automatically
+compatible with the independent-block response data.  If its endpoints do
+admit the required partition
 
 \[
                   S=I\mathbin{\dot\cup}T
@@ -291,9 +292,31 @@ deleted.  For a residual component `D`, seven-connectivity yields only
 where `m_D` is the number of missed boundary vertices and `h_D` the number
 of neighbours on the deleted connector.  These are lower bounds; they do
 not bound the separator or turn `D` into an actual component of `G-N[u]`.
-Accordingly, the next bilateral theorem must obtain operation-compatible
-endpoint/block alignment or replace that response mechanism.  A generic
-shortest-cycle bridge analysis is insufficient.
+This conditional statement is now unconditional outside one degree-eight
+boundary type.  The separately audited
+[nonedge-bipartition classification](../results/hc7_degree8_nonedge_bipartition_classification.md)
+proves that every admissible degree-eight boundary is either
+`K_1 vee C_7` or has a nonedge `pq` for which `S-{p,q}` is the disjoint
+union of independent triples `I,T`, with every root-to-block contact.
+
+The separately audited
+[aligned bilateral response-cycle theorem](../results/hc7_degree8_aligned_pair_bilateral_cycle.md)
+then supplies new, operation-compatible boundary-clean `p`--`q` paths in
+both literal shores.  They are the two failed directions of one singleton
+boundary interchange between the exact partitions
+
+\[
+       I\mid T\mid\{p,q\},\qquad I\mid T\mid\{p\}\mid\{q\},
+\]
+
+and form a literal odd cycle.  In each fixed full two-colour component,
+either a `p`--`q`-separating bridge gives an aligned deletion/contraction
+response retaining the opposite path, or there are two edge-disjoint
+`p`--`q` routes.  Every non-wheel survivor splits both triples in both
+post-path incidence graphs.  The remaining degree-eight task is therefore
+to close this fourfold incidence-split geometry or the unique odd-wheel
+boundary.  A generic shortest-cycle bridge analysis still does not by
+itself supply a terminal conclusion.
 
 The separately audited
 [degree-eight root-star response theorem](../results/hc7_degree8_common_root_star_response.md)

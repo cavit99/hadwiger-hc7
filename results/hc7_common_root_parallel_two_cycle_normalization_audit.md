@@ -10,7 +10,7 @@ Audited theorem:
 Audited source SHA-256:
 
 ```text
-c51c8c1ac47c2909cb58997dcd7d626ccf36ef5d709c1a539bb829eafc1cc04f
+3717920f83ab38a59ed0a9486795b657cdc872ca7034781fba8f931bdee59d22
 ```
 
 This is an internal mathematical audit, not external peer review.  I checked
@@ -18,6 +18,21 @@ the theorem against the cited audited inputs, with particular attention to
 the fixed-extension quantifiers, lexicographic shortcuts, the odd-cycle
 parity, and the fact that the conditional incidence test is not automatically
 aligned with the parallel connector.
+
+### Correction record
+
+The preceding source revision stated Corollary 3.2 by retaining all
+hypotheses of Sections 1--2 of the concentrated-reserve elimination.  That
+wording inadvertently imported the earlier connector and disjoint
+`T`-carrier whose coexistence is already ruled out by that result's Theorem
+2.1.  It made the corollary formally vacuous, despite the intended proof
+using only the ambient Section 1 setup, the independence bound, and the
+root-to-`T` contacts.  The earlier GREEN audit did not catch this scope
+defect and must not be relied upon for that formulation.
+
+The revision audited here states the intended hypotheses explicitly and
+expressly excludes any previously supplied connector or carrier.  The proof
+below was rechecked under this corrected, nonvacuous formulation.
 
 ## 1. Fixed extensions and minimization
 
@@ -103,13 +118,24 @@ connected after adjoining `B` and contains an edge.  Lemma 3.1 is therefore
 an equivalence, including when the carrier itself is disconnected before
 `B` is adjoined.
 
-Corollary 3.2 imports all hypotheses of Sections 1--2 of the audited
-concentrated-reserve elimination: in particular the exact partition,
-independence bound, root contacts, fullness, and proper-minor
-six-colourability.  The argument is genuinely symmetric in `I,T`.  If
-`B` is either block and `A` is the other, a common incidence component
-supplies a `B`-carrier `K` disjoint from the connector interior, while
-`{u}` is an `A`-carrier.
+Corollary 3.2 now imports only the Section 1 setup of the audited
+concentrated-reserve elimination, together with its independence bound and
+the explicit assumption that both roots contact `T`.  In particular it
+does **not** import the connector or carrier existence from that result's
+Section 2.  Section 1 supplies the full two-component shore structure,
+proper-minor six-colourability, the exact partition into independent blocks
+`I,T` and roots `p,q`, their prescribed sizes, and the conclusion that
+`pq` is a nonedge.
+
+These assumptions recover every remaining hypothesis actually used.  If
+there were no `I`--`T` edge, `I` together with one member of `T` would be
+an independent set of order `d-4>d-5`.  If either root missed `I`, that
+root together with `I` would have the same forbidden order.  Thus there is
+an edge between the blocks and both roots contact both blocks.  The
+argument is consequently symmetric in `I,T`: if `B` is either block and
+`A` is the other, a common incidence component supplies a `B`-carrier `K`
+disjoint from the newly assumed connector interior, while `{u}` is an
+`A`-carrier.
 
 For the merged response, the three sets
 
@@ -177,10 +203,4 @@ two cube coordinates, construct a `K_7`-minor model, produce a common
 complete boundary partition, or give a strict same-host
 anti-neighbourhood-component descent.
 
-The status-only promotion of the audited source has hash
-
-```text
-a26788b4a03e26c1ce75bcbf860a09ad1109259da58b7aa74471318061da87ea
-```
-
-and makes no mathematical change to the revision audited above.
+No gap was found in the corrected revision at the hash recorded above.

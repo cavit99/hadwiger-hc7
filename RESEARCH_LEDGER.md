@@ -245,17 +245,31 @@ and four in degree nine.  Thus one degree-eight connector is boundary-clean,
 and the root-retaining choice makes the cycle contain the literal common
 root `x`.
 
-This does not yet align that clean connector with the independent blocks
-needed by the reserve-response theorem.  Conditional on such an alignment,
-a carrier for either independent block forces both complementary-pair
-responses on the other shore and six-colours `G`.  Hence a survivor must
-split both blocks across the component-incidence graphs after deleting the
-connector interior.  Seven-connectivity gives exact lower bounds on how
-many connector vertices each residual component must contact, but no upper
-bound, bounded separator, or actual anti-neighbourhood-component descent.
-The next bilateral step must therefore create the missing operation-compatible
-block alignment or use a different response; ordinary cycle bridges alone
-do not supply a terminal conclusion.
+The separately audited
+[degree-eight boundary classification](results/hc7_degree8_nonedge_bipartition_classification.md)
+now removes the static alignment ambiguity in that degree.  Every admissible
+eight-vertex common-root boundary either is the single odd wheel
+`K_1 vee C_7`, or has a nonedge `pq` whose deletion leaves two independent
+triples `I,T`, with all required root contacts.
+
+In the non-wheel case, the separately audited
+[aligned bilateral response-cycle theorem](results/hc7_degree8_aligned_pair_bilateral_cycle.md)
+couples this pair to the colouring operations.  The two exact `I,T`
+responses have opposite equality types on `p,q`; one singleton boundary
+interchange therefore fails in both directions and gives boundary-clean
+`p`--`q` paths in the two literal shores.  Together they form an odd cycle
+with one fixed operation provenance.  In either shore its full two-colour
+component has a separating bridge, yielding an aligned one-edge
+deletion/contraction response, or has two edge-disjoint `p`--`q` routes.
+
+A carrier disjoint from either aligned path for either independent triple
+would six-colour `G`.  Thus every surviving non-wheel instance has four
+incidence splits: both `I` and `T` split after deleting the path interior in
+each shore.  Seven-connectivity gives lower bounds on the path contacts but
+still no bounded separator or actual anti-neighbourhood-component descent.
+The exact degree-eight residue is therefore the fourfold incidence-split
+geometry together with the separate odd-wheel boundary; endpoint alignment
+itself is no longer the obstruction.
 
 Audited response theorems now strengthen the tight cases.  In degree eight,
 the retained root `x` has nonempty opposite-shore leaf sets whose

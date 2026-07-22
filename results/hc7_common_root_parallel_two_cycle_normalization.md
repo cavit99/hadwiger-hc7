@@ -190,14 +190,24 @@ therefore supplies an edge. \(\square\)
 
 ### Corollary 3.2 (conditional incidence test)
 
-Retain the hypotheses of Sections 1--2 of the audited
+Retain the setup of Section 1 of the audited
 [low-degree concentrated-reserve elimination](hc7_low_degree_concentrated_reserve_elimination.md),
-with boundary partition
+including the full two-component shore structure, proper-minor
+six-colourability, and boundary partition
 
 \[
                          S=I\mathbin{\dot\cup}T
                               \mathbin{\dot\cup}\{p,q\}.          \tag{3.2}
 \]
+
+Assume additionally its independence bound
+
+\[
+                         \alpha(G[S])\le d_G(u)-5,                \tag{3.3}
+\]
+
+and that each of `p,q` has a neighbour in `T`.  No connector or carrier
+from Section 2 of that result is assumed.
 
 Let `B` be either `I` or `T`, and let `A` be the other block.  If `P` is a
 `p`--`q` connector through `E` and one component of `J_B(P)` contains all
@@ -215,7 +225,7 @@ For the merged response on the closed `F`-shore, simultaneously contract
 spanning trees of the three pairwise disjoint connected sets
 
 \[
-                  A\cup\{u\},\qquad B\cup K,\qquad V(P).         \tag{3.3}
+                  A\cup\{u\},\qquad B\cup K,\qquad V(P).         \tag{3.4}
 \]
 
 Their images form a triangle: the first meets the second through an edge
@@ -225,7 +235,7 @@ colouring on `F`, and expand the three image colours over `A,B,{p,q}`.
 This gives the exact boundary partition
 
 \[
-                              I\mid T\mid\{p,q\}.                 \tag{3.4}
+                              I\mid T\mid\{p,q\}.                 \tag{3.5}
 \]
 
 For the split response, apply the audited root-connector reflection theorem
@@ -234,11 +244,11 @@ with root connector `V(P^circ)`, carrier `{u}` for `A`, and carrier `K` for
 root in each block.  Reflection therefore gives the exact partition
 
 \[
-                         I\mid T\mid\{p\}\mid\{q\}               \tag{3.5}
+                         I\mid T\mid\{p\}\mid\{q\}               \tag{3.6}
 \]
 
 on the closed `F`-shore.  The opposite-response lemma in the cited result
-gives one of (3.4),(3.5) on the closed `E`-shore.  Choose the matching
+gives one of (3.5),(3.6) on the closed `E`-shore.  Choose the matching
 `F`-response; after permuting colour names, the two colourings glue and
 six-colour `G`. \(\square\)
 
@@ -249,14 +259,14 @@ hypotheses of Corollary 3.2 in a hypothetical counterexample.  For every
 component `D` of `G[E-V(P^circ)]`, put
 
 \[
- m_D=|S-N_G(D)|,\qquad h_D=|N_G(D)\cap V(P^circ)|.                \tag{3.6}
+ m_D=|S-N_G(D)|,\qquad h_D=|N_G(D)\cap V(P^circ)|.                \tag{3.7}
 \]
 
 Then `D` misses at least one vertex of each of `I,T`, so `m_D>=2`, and
 
 \[
  h_D\ge m_D-1\quad(d=8),\qquad
- h_D\ge m_D-2\quad(d=9).                                       \tag{3.7}
+ h_D\ge m_D-2\quad(d=9).                                       \tag{3.8}
 \]
 
 ### Proof
@@ -271,11 +281,11 @@ components of `E-V(P^circ)` are anticomplete, `E,F` are anticomplete, and
 `u` has no neighbour in `E`.  Thus
 
 \[
-                 |N_G(D)|=d-m_D+h_D.                            \tag{3.8}
+                 |N_G(D)|=d-m_D+h_D.                            \tag{3.9}
 \]
 
 The set `N_G(D)` separates the nonempty set `D` from `u`, so
-seven-connectivity gives `|N_G(D)|>=7`.  Rearranging (3.8) proves (3.7).
+seven-connectivity gives `|N_G(D)|>=7`.  Rearranging (3.9) proves (3.8).
 \(\square\)
 
 ## 4. Exact gain and trust boundary
