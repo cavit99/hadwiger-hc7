@@ -87,6 +87,20 @@ interface—in each of the remaining singleton, positive-separator-excess,
 and shore-filling modes. This is a sharper conditional laboratory, not an
 exhaustive replacement for the global obligation above.
 
+The audited
+[degree-seven tight-pole localization](results/hc7_degree7_tight_pole_edge_localization.md)
+removes the pole itself as a transition-selection mystery.  In two
+vertex-disjoint matching layers, each selected bichromatic component either
+has two internally vertex-disjoint root-to-root routes or an internal
+articulation with a connected side strictly smaller than the original
+exterior.  Boundary order seven on that side is a strict generic restart;
+otherwise its boundary has order at least eight.  A separating-edge witness
+additionally retains the exact named matching response.  In the doubled-
+route subcase, no proper-minor response preserving both a second boundary
+pair and the rooted-model labels has yet been proved from the route
+geometry.  This is a genuine narrowing of the residue rather than a proof
+of the degree-seven branch.
+
 One particularly reusable input is the
 [exact-seven full-connected-subgraph packing theorem](results/hc7_exact_seven_packet_packing.md).
 If `nu_i` is the maximum number of pairwise vertex-disjoint connected
