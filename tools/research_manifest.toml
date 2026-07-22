@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "bfe9424c1f09f30a96103cba1b6a81ad325dcf15c48642f8e1e4fbaacefbf9ba"
+expected_source_sha256 = "02ea034865b7d88c982397b9123e22b6603e94d66a9a1978e704f87875b35bf6"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -494,13 +494,14 @@ source = "results/hc7_degree8_two_defect_component_closure.md"
 source_heading = "Theorem 4.1"
 active = true
 audit = "results/hc7_degree8_two_defect_component_closure_audit.md"
-expected_source_sha256 = "3d7b868b33e76a4c383c6e91866073011ae0a595f8c6d4cdb754eea226738a22"
+expected_source_sha256 = "85e4f2d55545254f8a0bedc5e190f9299cf2f69afc960c0a4c186c9f00819857"
 scope = "the non-wheel degree-eight two-full-component aligned bilateral residue after deleting the two named path interiors"
 label_fidelity = "the two literal shores, aligned roots, independent triples, fixed operation paths, residual components and their exact boundary misses are retained"
 conclusions = [
   "every literal root connector meets every carrier for either independent boundary triple, so each carrier is a root separator",
   "all two-defect residual components in one shore have one coherent missed pair",
-  "two two-defect components in each shore give an explicit K7-minor model by a finite four-anchor allocation over all 97767 labelled cases",
+  "for every compact order-eight boundary and arbitrary common shore defects of order at most two, two adjacent connected bags in each shore give an explicit K7-minor model",
+  "the strengthened four-anchor allocation has certificates for all 253265 compact-boundary and ordered-defect instances, including the odd wheel",
   "in every surviving host one shore has at most one two-defect residual component and every other residual component there misses at least three boundary vertices",
 ]
 does_not_prove = [
@@ -511,6 +512,78 @@ does_not_prove = [
   "closure of the odd-wheel boundary",
 ]
 keywords = ["degree eight", "two-defect component", "root connector", "carrier separator", "finite K7 certificate"]
+
+[[claims]]
+id = "hc7.degree8_four_portal_reduction"
+title = "Four portal applications give tagged lobes or a bounded minimum-excess response interface"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_four_portal_reduction.md"
+source_heading = "Theorem 2.1 (portal reduction)"
+active = true
+audit = "results/hc7_degree8_four_portal_reduction_audit.md"
+expected_source_sha256 = "f619a3166654e3fb2f07b7448c317b026aa04d73322c21377f4dd858bdb43a3e"
+scope = "the aligned non-wheel degree-eight two-full-shore residue with independent triples I,T and one operation-compatible boundary-clean path in each shore"
+label_fidelity = "each selected confined lobe retains its literal shore, portal application, completed-cut terminal form and full-separator edge response; global minimum-boundary normalization deliberately loses those tags"
+conclusions = [
+  "universal connector-carrier intersection eliminates the positive two-three packing in all four shore-block portal applications",
+  "each application gives a generic exact-seven response, a shore of order at most six, a strict order-eight lobe, or a selected positive-excess lobe with boundary 9 through 13 and old-boundary defect at most four",
+  "any positive lobe yields a globally minimum boundary of order 8 through 13 with exactly two or three full components or a generic exact-seven response",
+  "a selected tagged lobe whose own boundary has three full complementary components gives two adjacent connected sets with its common old-boundary defect",
+]
+does_not_prove = [
+  "HC7",
+  "that the I- and T-indexed terminal-free lobes are distinct or retain different structural data",
+  "a common defect of order at most two in every confined-lobe case",
+  "closure of the two-component minimum-boundary response interface",
+  "closure of the small-shore or odd-wheel branch",
+]
+keywords = ["degree eight", "portal reduction", "positive excess", "minimum boundary", "response coupling", "confined lobe"]
+
+[[claims]]
+id = "hc7.barrier.degree8_portal_role_erasure"
+title = "A terminal-free portal cut can erase the independent-block role"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_degree8_portal_role_erasure_barrier.md"
+source_heading = "Lemma 1.1 (terminal-free role erasure)"
+active = true
+audit = "barriers/hc7_degree8_portal_role_erasure_barrier_audit.md"
+expected_source_sha256 = "f384c2666d7d805184abf119a270bfeb8596403429551c074259dfec36d05c95"
+scope = "a compact aligned degree-eight local two-shore interface retaining the bilateral paths, four incidence splits, universal entanglement and both five-terminal completion cuts, but not seven-connectivity or contraction-criticality"
+conclusions = [
+  "the same terminal-free positive-excess lobe and cut can witness both the I- and T-portal applications",
+  "the seven-vertex decorated shore has no two-defect residual component and no two disjoint connected sets with six common boundary contacts",
+  "independent portal minimization does not create coupling after the block role has been erased",
+]
+does_not_prove = [
+  "a counterexample to HC7",
+  "failure of a theorem spending seven-connectivity and contraction-critical entering-edge responses",
+  "K7-minor exclusion for the displayed local host",
+]
+keywords = ["degree eight", "portal cut", "role erasure", "terminal free", "counterexample", "common defect"]
+
+[[claims]]
+id = "hc7.barrier.degree8_independent_two_defect_four_bag"
+title = "Four bags with independent two-vertex defects need not force a K7 minor"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_degree8_independent_two_defect_four_bag_barrier.md"
+source_heading = "2. A thirteen-vertex counterexample"
+active = true
+audit = "barriers/hc7_degree8_independent_two_defect_four_bag_barrier_audit.md"
+expected_source_sha256 = "2135ac4c04ee8a592c997237be0dd103207761de95638b47c632b8f9577e5696"
+scope = "a compact order-eight boundary, one universal vertex and four singleton bags, each with its own two-vertex defect"
+conclusions = [
+  "the explicit 13-vertex host satisfies the relaxed four-bag hypotheses but has no K7 minor",
+  "there is no four-anchor plus two-singleton certificate",
+  "one common missed set for the two bags in each shore is essential without additional host geometry",
+]
+does_not_prove = [
+  "a counterexample to HC7",
+  "failure of a common-defect theorem using full host geometry and colouring responses",
+]
+keywords = ["degree eight", "four bags", "independent defects", "K7 minor", "counterexample", "finite verifier"]
 
 [[claims]]
 id = "hc7.degree8_common_root_star_response"
@@ -8434,6 +8507,23 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
+target = "hc7.degree8_four_portal_reduction"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.barrier.degree8_portal_role_erasure"
+kind = "guarded_by"
+note = "Independent terminal-free portal applications may return the same lobe, so the next theorem must spend seven-connectivity and proper-minor responses at a common lobe or use a joint completion."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.barrier.degree8_independent_two_defect_four_bag"
+kind = "guarded_by"
+note = "The finite K7 allocation needs one common defect set per shore; unrelated two-vertex defects are insufficient."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
 target = "hc7.degree8_common_root_star_response"
 kind = "uses"
 
@@ -8566,6 +8656,38 @@ source = "hc7.degree8_two_defect_component_closure"
 target = "hc7.barrier.degree8_fourfold_incidence_unbounded_attachment"
 kind = "guarded_by"
 note = "Seven-connectivity and the named responses do not by themselves reduce the literal path-port language to finitely many cases; K7 exclusion or full criticality must be spent."
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.degree8_two_defect_component_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.order8_small_boundary_lobe_descent"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.generic_exact7_response_restart"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.minimum_positive_separator_normal_form"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.barrier.degree8_portal_role_erasure"
+kind = "guarded_by"
+note = "A terminal-free completion cut can return the same literal lobe for both block applications, so independent minimization does not create tagged coupling."
+
+[[relations]]
+source = "hc7.degree8_four_portal_reduction"
+target = "hc7.barrier.degree8_independent_two_defect_four_bag"
+kind = "guarded_by"
+note = "The finite four-bag closure genuinely needs one common defect set for the two bags in each shore unless additional host geometry is supplied."
 
 [[relations]]
 source = "hc7.degree8_common_root_star_response"
@@ -9803,19 +9925,45 @@ expected_stdout = [
 [[verifiers]]
 id = "degree8-two-defect-component-closure"
 path = "results/hc7_degree8_two_defect_component_closure_verify.py"
-sha256 = "d090d63b3c70e32ed25cd3ecaf21b050658afe168d64025d7c2ec0ce6d2ea046"
+sha256 = "b93e9a55dda0b61f35ce925fafaf5fca42441ec8b2249e647740621fd6f0e48f"
 timeout = 30
 requires = ["nauty"]
 expected_stdout = [
   "order8_graphs 12346",
   "compact_boundaries 185",
-  "nonwheel_compact_boundaries 184",
-  "aligned_labelled_instances 1207",
-  "tested_missed_pair_orientations 97767",
-  "anchor_certificates 97767",
-  "anchor_certificate_sha256 04de5910bd2043f2b98a7901819a71664813bd07e9d064aeb81244a619834deb",
+  "missed_sets 37",
+  "tested_missed_set_orientations 253265",
+  "anchor_certificates 253265",
+  "anchor_certificate_sha256 882a558c46dfc7a6b68008a598dd0e30aed3d51b8b05f5e15bca1554ea863d44",
   "failures 0",
   "PASS degree8_two_defect_component_closure",
+]
+
+[[verifiers]]
+id = "degree8-independent-two-defect-four-bag-barrier"
+path = "barriers/hc7_degree8_independent_two_defect_four_bag_barrier_verify.py"
+sha256 = "051a718541ea0d7e2106cafe0f7e8dae807b3711fefaa3c260278616d80a1252"
+timeout = 30
+expected_stdout = [
+  "boundary GCOcaO: K3 + K3 + K2; alpha=3; compact",
+  "missed_sets E0=37 E1=05 F0=17 F1=16",
+  "anchor_certificates 0",
+  "solver_controls K7=True subdivided_K7=True K6=False",
+  "host vertices=13 edges=41 contraction_states=99925 K7_minor=False",
+  "PASS independent_two_defect_four_bag_barrier",
+]
+
+[[verifiers]]
+id = "degree8-portal-role-erasure-barrier"
+path = "barriers/hc7_degree8_portal_role_erasure_barrier_verify.py"
+sha256 = "047438792a76fe95d86e515080d34c38067e838079e4c6554af6dd5ba18f5d16"
+timeout = 10
+expected_stdout = [
+  "GREEN degree8 portal role-erasure local barrier",
+  "boundary: order=8 alpha=3; shores=(7,2); bilateral_cycle=7; Q_residual_components=4 two_defect=0",
+  "entanglement: QI=(17,40) QT=(17,40) FI=(1,3) FT=(1,3)",
+  "common_lobe: internal_boundary=5 full_boundary=9 defect=4; connected_subsets=65 adjacent_disjoint_pairs=200 max_common_contacts=2",
+  "scope: not seven-connected; globally five-colourable; no critical entering-edge responses",
 ]
 
 [[verifiers]]

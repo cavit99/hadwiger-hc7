@@ -320,12 +320,14 @@ The separately audited
 strengthens this in two ways.  Every literal root connector meets every
 carrier for either independent triple, making each carrier a `p`--`q`
 separator.  Moreover, post-path components missing exactly two boundary
-vertices have one coherent missed pair in each shore.  A complete finite
-allocation over all `97,767` labelled compact-boundary and ordered
-missed-pair instances proves that two such components in each shore yield
-an explicit `K_7`-minor model.  Thus, after orienting a surviving non-wheel
-instance, one shore has at most one two-defect component and all its other
-residual components miss at least three boundary vertices.
+vertices have one coherent missed pair in each shore.  The strengthened
+finite allocation now covers every one of the `185` compact order-eight
+boundaries, including the odd wheel, and every ordered pair of arbitrary
+boundary-defect sets of order at most two.  All `253,265` cases have an
+explicit `K_7`-minor certificate.  Thus two two-defect components in each
+shore close, and after orienting a surviving non-wheel instance one shore
+has at most one such component while all its other residual components miss
+at least three boundary vertices.
 
 This is the current non-wheel laboratory.  The
 [shore-filling barrier](../barriers/hc7_degree8_fourfold_incidence_bridge_interval_barrier.md)
@@ -337,26 +339,52 @@ the literal attachment language when `K_7` exclusion is omitted.  Hence a
 generic shortest-cycle bridge analysis or raw finite attachment search is
 insufficient.
 
-The highest-leverage next composition uses the audited
-[five-terminal two--three linkage reduction](../results/hc7_order8_three_portal_two_three_reduction.md)
-for each pair `(Q,B)` with `Q in {E,F}` and `B in {I,T}`.  Its positive
-packing is exactly a root connector disjoint from a `B`-carrier and is now
-forbidden by the universal entanglement theorem.  Its remaining outcomes
-are an actual order-seven response interface, a shore of order at most six,
-a strict order-eight lobe reduction, or a confined positive-excess lobe
-behind at most five internal vertices and with boundary order at least nine.
+The separately audited
+[four-portal reduction](../results/hc7_degree8_four_portal_reduction.md)
+now carries out the highest-leverage composition with the five-terminal
+two--three linkage theorem for all four pairs `(Q,B)`.  Universal
+entanglement forbids every positive packing.  The exact outputs are a fresh
+order-seven response interface, a shore of order at most six, a strict
+order-eight lobe, or four selected positive-excess lobes, possibly repeated.
+Each selected lobe is behind at most five internal vertices, has full
+boundary order from nine through thirteen and old-boundary defect at most
+four, retains its shore and completed-cut terminal form, and has
+full-separator edge-deletion responses incompatible with the fixed aligned
+shore colouring.  Globally minimizing boundary order gives either an
+exact-seven response or a boundary of order eight through thirteen with
+exactly two or three full components, the universal contraction profile,
+and operation-specific extension/rejection responses.
 
-The proposed **paired confined-lobe target** is to choose minimal `I`- and
-`T`-lobes in the oriented sparse-two-defect shore and prove that they give
-one of the three primary terminal outcomes, a generic exact-seven response
-interface, a strict response-preserving order-eight reduction, or two
-adjacent connected sets having one common boundary defect of order at most
-two.  The present four-bag theorem covers the case in which that defect has
-one vertex in each independent triple; extending its finite allocation to
-arbitrary defect sets of order at most two is a separate finite sublemma.
-The required host-level common-defect conclusion is open; mere positive
-boundary excess is not enough.  The unique odd-wheel boundary also remains
-separate.
+The block label can disappear in a terminal-free completion cut.  The
+[portal role-erasure barrier](../barriers/hc7_degree8_portal_role_erasure_barrier.md)
+has the compact boundary, bilateral operation paths, four incidence splits,
+universal entanglement and no two-defect residual component, yet both portal
+applications return the same lobe and no common-near-full pair.  It fails
+seven-connectivity and criticality, identifying exactly what a positive
+theorem must spend.  The
+[independent-defect barrier](../barriers/hc7_degree8_independent_two_defect_four_bag_barrier.md)
+separately shows that four bags with unrelated two-vertex misses need not
+give a `K_7` minor.  One common defect per shore is therefore essential for
+the present four-bag allocation unless additional host geometry couples the
+defects.
+
+The primary next theorem is **minimum-boundary response coupling**, first
+for an order-eight boundary with exactly two full components.  It must give
+an explicit `K_7` model, one common complete equality partition, or an
+exact-seven response on a strictly smaller literal connected shore.  The
+three-component order-eight case comes next; when the selected tagged lobe
+itself is minimum and has defect at most two, the proved third-component
+exit already supplies the required adjacent pair.  Orders nine through
+thirteen follow only after these base cases.  Split-terminal `I,T` cuts
+remain a conditional tagged fast route, and the strengthened four-bag
+theorem closes their finite allocation once one common defect is obtained.
+
+Computation on the bounded separator is presently a falsification and
+discovery tool.  A proof-producing exhaustive search first needs a finite-
+signature replacement lemma for the unbounded full components, retaining
+their colouring-extension languages, rooted-minor data and operation
+provenance with a certificate lift to the unchanged host.  The small-shore
+and unique odd-wheel branches also remain separate.
 
 The separately audited
 [degree-eight root-star response theorem](../results/hc7_degree8_common_root_star_response.md)

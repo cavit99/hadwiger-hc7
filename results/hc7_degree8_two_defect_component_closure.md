@@ -1,37 +1,30 @@
-# Two two-defect residual components on each aligned shore force a `K_7` minor
+# Two adjacent bag pairs with at most two boundary defects force a `K_7` minor
 
 **Status:** written proof; separate internal audit; computer-assisted finite
 result.  This result does not prove `HC_7`.
 
 ## 1. Boundary and four-bag setting
 
-Let `H` be a simple graph on
-
-\[
- S=I\mathbin{\dot\cup}T\mathbin{\dot\cup}\{p,q\},
- \qquad |I|=|T|=3,                                      \tag{1.1}
-\]
-
-where `I,T` are independent and `pq` is a nonedge.  Assume
+Let `H` be a simple graph on a set `S` of order eight.  Assume
 
 \[
  \alpha(H)\le3,
  \qquad K_4\not\preccurlyeq H-Z
-       \quad\text{for every two-set }Z\subseteq S.       \tag{1.2}
+       \quad\text{for every two-set }Z\subseteq S.       \tag{1.1}
 \]
 
-For \(j\in\{E,F\}\), choose one vertex \(i_j\in I\) and one vertex
-\(t_j\in T\), and put
+For \(j\in\{E,F\}\), choose an arbitrary set
 
 \[
-                         M_j=\{i_j,t_j\}.                \tag{1.3}
+                         M_j\subseteq S,
+                         \qquad |M_j|\le2.               \tag{1.2}
 \]
 
 Suppose a graph induces `H` on `S` and contains pairwise disjoint connected
 sets
 
 \[
-                         A_E^0,A_E^1,A_F^0,A_F^1         \tag{1.4}
+                         A_E^0,A_E^1,A_F^0,A_F^1         \tag{1.3}
 \]
 
 disjoint from \(S\cup\{u\}\) such that:
@@ -54,16 +47,14 @@ Every graph satisfying Section 1 contains a `K_7` minor.
 The verifier
 [`hc7_degree8_two_defect_component_closure_verify.py`](hc7_degree8_two_defect_component_closure_verify.py)
 reads the complete unlabelled order-eight graph catalogue from nauty
-`geng`.  It retains exactly the graphs satisfying (1.2); the unique
-retained odd wheel has no labelling satisfying Section 1 and is skipped.
-The verifier then ranges over every nonedge `pq`, every bipartition of
-`S-{p,q}` into independent triples, and every ordered choice of `M_E,M_F`
-in (1.3).
-The two independent triples and the two roots play symmetric roles in the
-statement, so retaining one orientation of each unordered bipartition and
-root pair loses no labelled case.
+`geng`.  It retains exactly the graphs satisfying (1.1), including the
+odd wheel, and ranges over all 37 subsets of order at most two for each of
+`M_E,M_F`.  An arbitrary labelled instance is isomorphic to one of these
+catalogue instances, and the isomorphism carries its missed sets and any
+resulting minor model with it.
 
-For each labelled instance it finds six distinct boundary vertices
+For each retained graph and ordered missed-set pair it finds six distinct
+boundary vertices
 
 \[
                     a_E^0,a_E^1,a_F^0,a_F^1,r,s          \tag{2.1}
@@ -79,7 +70,7 @@ such that the seven sets
 
 are connected and pairwise adjacent under only the assumptions of
 Section 1.  Concretely, the checker requires each anchor to avoid the
-missed pair of its own connected set.  For every cross-shore pair it then
+missed set of its own connected set.  For every cross-shore pair it then
 checks that one connected set sees the other anchor, or that the two
 anchors are adjacent in `H`.  It checks \(rs\in E(H)\) and, for each of the
 four connected sets, that it sees each singleton directly or through its
@@ -91,11 +82,10 @@ The exhaustive counts are:
 ```text
 order8_graphs 12346
 compact_boundaries 185
-nonwheel_compact_boundaries 184
-aligned_labelled_instances 1207
-tested_missed_pair_orientations 97767
-anchor_certificates 97767
-anchor_certificate_sha256 04de5910bd2043f2b98a7901819a71664813bd07e9d064aeb81244a619834deb
+missed_sets 37
+tested_missed_set_orientations 253265
+anchor_certificates 253265
+anchor_certificate_sha256 882a558c46dfc7a6b68008a598dd0e30aed3d51b8b05f5e15bca1554ea863d44
 failures 0
 PASS degree8_two_defect_component_closure
 ```
@@ -256,7 +246,7 @@ Suppose instead that both shores have two such components.  Apply
 Lemma 3.4 in each shore.  The resulting four connected sets are pairwise
 disjoint, the two sets in each shore are adjacent, and they have the
 boundary neighbourhoods required in Section 1 with the possibly different
-pairs `M_E,M_F`.  The compact boundary hypotheses (1.2) are supplied by
+pairs `M_E,M_F`.  The compact boundary hypotheses (1.1) are supplied by
 the audited full-component common-root reduction and the degree-eight
 boundary classification.  Theorem 2.1 gives an explicit `K_7`-minor model,
 contrary to the hypothetical-counterexample assumption. \(\square\)

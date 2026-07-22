@@ -28,7 +28,8 @@ Selected audited inputs:
 - [parallel common-root trace-cycle normalization](../results/hc7_common_root_parallel_two_cycle_normalization.md)
 - [degree-eight nonedge bipartition outside the odd wheel](../results/hc7_degree8_nonedge_bipartition_classification.md)
 - [operation-compatible bilateral cycle for an aligned degree-eight pair](../results/hc7_degree8_aligned_pair_bilateral_cycle.md)
-- [two two-defect components on each aligned shore force a `K_7` minor](../results/hc7_degree8_two_defect_component_closure.md)
+- [arbitrary two-defect four-bag allocation and aligned component closure](../results/hc7_degree8_two_defect_component_closure.md)
+- [four portal reductions to tagged confined lobes](../results/hc7_degree8_four_portal_reduction.md)
 - [degree-eight aligned root-star response](../results/hc7_degree8_common_root_star_response.md)
 - [minimal degree-eight root-star response reduction](../results/hc7_degree8_minimal_root_star_response_reduction.md)
 - [tight common-root five-reserve Kempe packet](../results/hc7_common_root_five_reserve_kempe_packet.md)
@@ -44,6 +45,8 @@ Immediate barriers:
 - [static four-colour boundary languages need not synchronize](../barriers/hc7_four_colour_parity_language_barrier.md)
 - [all local exact-block and pole-star responses can still force a last pole move](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
 - [common-root forked paths do not close after boundary-only contraction](../barriers/hc7_common_root_boundary_only_fork_barrier.md)
+- [terminal-free portal cuts can erase the independent-block role](../barriers/hc7_degree8_portal_role_erasure_barrier.md)
+- [independent two-defect bags need not force a `K_7` minor](../barriers/hc7_degree8_independent_two_defect_four_bag_barrier.md)
 
 ## Conditional refinements and frozen laboratories
 

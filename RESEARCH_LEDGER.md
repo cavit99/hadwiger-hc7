@@ -272,28 +272,58 @@ The separately audited
 now makes this quantitative.  Every literal `p`--`q` connector meets every
 carrier for either independent triple, so each carrier is a root separator.
 In one shore, all residual components missing exactly two boundary vertices
-miss the same one vertex of `I` and the same one vertex of `T`.  An exhaustive
-four-anchor allocation over all `97,767` labelled boundary and missed-pair
-instances proves that two such components in each shore give an explicit
-`K_7`-minor model.  Hence a surviving counterexample has an oriented shore
-with at most one two-defect residual component; every other residual
-component there misses at least three boundary vertices.
+miss the same one vertex of `I` and the same one vertex of `T`.  The finite
+four-anchor allocation is now stronger than that application: for every one
+of the `185` compact order-eight boundaries, including the odd wheel, and
+every ordered pair of arbitrary boundary-defect sets of order at most two,
+it returns an explicit `K_7`-minor certificate.  All `253,265` instances
+pass.  In particular, two two-defect components in each aligned shore give
+an explicit `K_7`-minor model.  Hence a surviving counterexample has an
+oriented shore with at most one two-defect residual component; every other
+residual component there misses at least three boundary vertices.
 
 This is a terminal closure of a real subcase, not a finite-size heuristic.
 It does not bound path attachments or turn a post-path residual component
 into a component of `G-N[u]`.  Explicit barriers show that the cycle and four
 incidence splits alone may fill both shores, while seven-connectivity plus
 the named local responses can still retain arbitrarily long attachment data
-when `K_7`-minor exclusion is omitted.  The next non-wheel target is therefore
-not another unconstrained cycle analysis.  It is to combine the new universal
-entanglement with the audited five-terminal two--three linkage reduction for
-each shore and each of `I,T`.  The forbidden packing outcome then leaves
-actual order-seven response interfaces, small shores, strict order-eight
-lobes, or at most four confined positive-excess lobes.  The immediate target
-is to couple the two minimal lobes in the oriented sparse-two-defect shore,
-forcing a terminal outcome or two adjacent connected sets with one common
-boundary defect of order at most two.  The odd-wheel boundary remains a
-separate case.
+when `K_7`-minor exclusion is omitted.  The separately audited
+[four-portal reduction](results/hc7_degree8_four_portal_reduction.md) now
+performs the next non-wheel composition.  Applying the five-terminal
+two--three linkage theorem to each shore and each of `I,T`, universal
+entanglement forbids its positive packing.  What remains is a fresh
+exact-seven response, a shore of order at most six, a strict order-eight
+lobe, or four selected (possibly repeated) confined positive-excess lobes.
+Each lobe lies behind at most five internal vertices, has boundary order
+between nine and thirteen, misses at most four old boundary vertices,
+retains its shore and completed-cut terminal form, and has a full-separator
+edge-deletion response incompatible with the fixed aligned shore colouring.
+Global minimum-boundary normalization then gives either an exact-seven
+response or a boundary of order eight through thirteen with exactly two or
+three boundary-full components, the universal contraction profile, and
+operation-specific mutually exclusive response partitions.
+
+The block label is not always structural.  The audited
+[portal role-erasure barrier](barriers/hc7_degree8_portal_role_erasure_barrier.md)
+shows that the `I`- and `T`-applications can return the identical
+terminal-free lobe while preserving the compact boundary, bilateral path,
+four incidence splits and universal entanglement.  The audited
+[independent-defect barrier](barriers/hc7_degree8_independent_two_defect_four_bag_barrier.md)
+also proves that allowing the two bags in one shore to miss different
+two-sets is insufficient.  Thus the former plan of independently minimizing
+two tagged lobes was not justified.
+
+The primary next theorem is the block-blind minimum-boundary
+response-coupling case, beginning with an order-eight boundary and exactly
+two full components.  It must produce an explicit `K_7` model, one common
+complete boundary partition, or an exact-seven response on a strictly
+smaller literal connected shore.  Genuinely split-terminal `I,T` cuts remain
+a conditional fast route to two adjacent bags with one common defect of
+order at most two; the strengthened finite allocation then closes them.
+The small-shore and odd-wheel alternatives remain separate.  Computation at
+the new order-eight-to-thirteen interface is presently diagnostic only: a
+proof search still needs a finite-signature replacement theorem for the
+unbounded component interiors and a certificate lift to the unchanged host.
 
 Audited response theorems now strengthen the tight cases.  In degree eight,
 the retained root `x` has nonempty opposite-shore leaf sets whose

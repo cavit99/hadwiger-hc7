@@ -7,23 +7,11 @@
 Audited theorem:
 [`hc7_degree8_two_defect_component_closure.md`](hc7_degree8_two_defect_component_closure.md)
 
-Current promoted theorem SHA-256:
+Audited theorem SHA-256:
 
 ```text
-3d7b868b33e76a4c383c6e91866073011ae0a595f8c6d4cdb754eea226738a22
+85e4f2d55545254f8a0bedc5e190f9299cf2f69afc960c0a4c186c9f00819857
 ```
-
-The mathematical draft checked before its status and rendering promotion
-had SHA-256
-
-```text
-142207c8d107ca4725c01f3042244d94a9d755cba0d5166768cb86ed17c76f7f
-```
-
-The promoted revision changes the status paragraph, repairs mathematical
-rendering, and makes the already-audited wheel and symmetry handling
-explicit.  It changes no theorem hypothesis, conclusion, proof step, or
-finite predicate.
 
 Audited mathematical verifier:
 [`hc7_degree8_two_defect_component_closure_verify.py`](hc7_degree8_two_defect_component_closure_verify.py)
@@ -31,20 +19,8 @@ Audited mathematical verifier:
 Audited verifier SHA-256:
 
 ```text
-8d1257535fc3128834ca18eae0bb0eb04170b5ce9e9c0a3e01d02c0d06ff2454
+b93e9a55dda0b61f35ce925fafaf5fca42441ec8b2249e647740621fd6f0e48f
 ```
-
-Current promoted verifier SHA-256:
-
-```text
-d090d63b3c70e32ed25cd3ecaf21b050658afe168d64025d7c2ec0ce6d2ea046
-```
-
-The promoted verifier removes one trailing blank line after `main()` and
-changes no executable token, predicate, enumeration order, or output.  A
-byte-level comparison with the audited verifier blob confirmed that this
-is the complete diff.  The promoted verifier was rerun and reproduced the
-recorded output below exactly.
 
 This is an internal mathematical audit, not external peer review or a
 proof-assistant certificate.  The result does not prove `HC_7`.
@@ -57,19 +33,19 @@ order-eight catalogue reproduced the recorded output exactly:
 ```text
 order8_graphs 12346
 compact_boundaries 185
-nonwheel_compact_boundaries 184
-aligned_labelled_instances 1207
-tested_missed_pair_orientations 97767
-anchor_certificates 97767
-anchor_certificate_sha256 04de5910bd2043f2b98a7901819a71664813bd07e9d064aeb81244a619834deb
+missed_sets 37
+tested_missed_set_orientations 253265
+anchor_certificates 253265
+anchor_certificate_sha256 882a558c46dfc7a6b68008a598dd0e30aed3d51b8b05f5e15bca1554ea863d44
 failures 0
 PASS degree8_two_defect_component_closure
 ```
 
-Both supported input modes were checked.  Explicitly piping `geng -q 8`
-and letting the script invoke `geng` after reading EOF gave the same output.
+The run was repeated under ordinary `python3` and under `python3 -O`, both
+with explicit `geng -q 8` input and with the verifier invoking `geng` after
+reading EOF.  All four runs produced the displayed output byte for byte.
 The sibling imports resolve under the documented repository-root command.
-Their audited source hashes are
+Their source hashes are
 
 ```text
 hc7_degree8_nonedge_bipartition_classification_verify.py
@@ -79,40 +55,47 @@ hc7_order8_three_component_boundary_verify.py
 d4677fcd39be4e4411176b8c916ae637057d34a70758ba3bbde70ed16badd68e
 ```
 
-The finite predicates match Section 1.  `has_independent_four` is the
-negation of `alpha(H)<=3`, and `has_compact_k4` exhausts all two-vertex
-deletions and applies an exact deletion--contraction `K_4`-minor test.
-For every retained unlabelled graph, the checker ranges over every nonedge
-whose deletion leaves a bipartite graph and then every independent
-three--three bipartition of the remainder.
+The finite predicates match the strengthened Section 1 directly.
+`has_independent_four` is true exactly when `alpha(H)>=4`, and
+`has_compact_k4` exhausts all two-vertex deletions and applies an exact
+deletion--contraction `K_4`-minor test.  The verifier therefore retains
+exactly the `185` unlabelled graphs satisfying (1.1), including
+`K_1 vee C_7`; it makes no choice of `I,T,p,q` and uses no aligned-boundary
+classification.
 
-The unique compact boundary `K_1 vee C_7` is skipped before this loop.  This
-does not remove a Section 1 instance: its only nonedges have both ends on
-the rim, and deleting them leaves the universal vertex together with a rim
-edge, hence a triangle and no bipartition into independent triples.  A raw
-enumeration over every nonedge independently reproduced the same `1,207`
-valid labelled instances.
-
-For a fixed aligned labelling there are nine possible missed pairs in
-`I times T` on each shore.  The ordered product therefore gives `81`
-orientations and
+There are exactly
 
 \[
-                         1207\cdot81=97767
+                1+\binom81+\binom82=37
 \]
 
-tested instances.  No symmetry case is lost:
+subsets of an eight-set of order at most two.  The outer product visits
+every ordered pair `(M_E,M_F)`, so the exact coverage count is
 
-- swapping `I,T` merely permutes the two three-vertex label blocks and the
-  two members of each unordered missed pair;
-- swapping `p,q` permutes the last two boundary labels, which have no
-  distinct role in the allocation predicate; and
-- swapping `E,F` reverses the ordered pair of missed pairs, both orders of
-  which are enumerated.
+\[
+                         185\cdot37^2=253265.
+\]
 
-The certificate-existence statement is invariant under all three
-permutations, so retaining one orientation of the first two symmetries is
-sound.
+Every labelled theorem instance is carried by an isomorphism to one of
+these unlabelled graphs together with one of the enumerated ordered
+missed-set pairs.  No boundary labelling or additional structure is needed
+by the strengthened theorem.
+
+The per-graph cache only identifies a missed-set pair with its shore
+reversal.  The certificate predicate is symmetric under that reversal:
+if the anchor tuple is `(e_0,e_1,f_0,f_1)`, then
+`(f_0,f_1,e_0,e_1)` is a certificate for the reversed pair, with the same
+two singleton anchors.  Nonexistence is symmetric for the same reason.
+The verifier performs exactly this half-tuple swap and then independently
+calls `valid_certificate` on every one of the `253,265` ordered instances.
+Thus the cache is an optimization, not a quotient of the asserted cases.
+
+Within either shore the two connected sets have identical hypotheses and
+their only required mutual relation is symmetric adjacency, so enumerating
+their two anchors as an unordered combination is complete.  The same is
+true of the two singleton branch sets.  The search ranges over every edge
+`rs`, every eligible two-anchor choice on each shore, and every disjoint
+combination of those choices.
 
 ## 2. The certificate gives all 21 adjacencies
 
@@ -123,7 +106,7 @@ B_E^0 = A_E^0 union {a_E^0},  B_E^1 = A_E^1 union {a_E^1},
 B_F^0 = A_F^0 union {a_F^0},  B_F^1 = A_F^1 union {a_F^1}.
 ```
 
-The four anchors are distinct, avoid the missed pair of their own
+The four anchors are distinct, avoid the missed set of their own
 connected set, and lie in `S`.  Each augmented bag is therefore connected.
 The four original sets are pairwise disjoint and avoid `S union {u}`;
 the anchors, `r,s`, and `u` are all distinct, so the seven branch sets are
@@ -238,12 +221,13 @@ component into an alleged component of `G-N[u]`.
 
 The finite result trusts nauty's complete unlabelled order-eight catalogue,
 CPython, and the two imported exact graph routines at the hashes above.
-The recorded certificate digest is deterministic for nauty's catalogue
-order but is not invariant under reordering the same complete input.  A
-sorted input produces the same counts and zero failures but a different
-certificate digest.  The digest is printed rather than asserted against a
-pinned constant.  This affects reproducibility metadata, not coverage or
-the theorem.
+The verifier's coverage totals and certificate checks use explicit
+`require` calls rather than removable `assert` statements.  The ordinary
+and optimized runs therefore enforce the same acceptance conditions and,
+as recorded above, return the same certificate digest.  The digest is
+deterministic for the documented catalogue order and is reproducibility
+metadata; coverage rests on visiting and validating every retained ordered
+instance, not on treating the digest as a proof certificate.
 
 No mathematical gap was found at the audited hashes.  The result excludes
 two two-defect residual components on both aligned shores.  It does not
