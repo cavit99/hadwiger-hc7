@@ -293,56 +293,25 @@ exclusively supported in one shore.  Any maximum independent set of order
 `d(u)-5` generates a rotated five-reserve packet with the same routing and
 rooted-minor alternatives.
 
-The audited
-[static reserve-rotation barrier](../barriers/hc7_degree8_static_reserve_rotation_barrier.md)
-shows that these rotations are not a well-founded descent.  In
-`K_3` disjoint-union `K_3` disjoint-union `K_2`, every maximum independent
-triple leaves a five-vertex reserve with exactly eight nonedges.  This is a
-boundary-only obstruction, but it rules out closing the concentrated case
-by static maximum-independent-set iteration.
+The audited static reserve-rotation barrier shows that rotation alone is
+not a well-founded descent.  The separately audited
+[low-degree concentrated-reserve elimination](../results/hc7_low_degree_concentrated_reserve_elimination.md)
+bypasses rotation.  A fixed-colouring path joins a complementary root pair
+while two further paths carry an independent reserve triple, with
+disjointness forced by their five distinct colours.  A proper-minor
+contraction forces the merged root response on the other shore, while
+root-connector reflection forces the split response there.  Whichever
+response occurs on the first shore therefore glues and six-colours `G`.
 
-The separately audited
-[exclusive-reserve response theorem](../results/hc7_common_root_exclusive_reserve_response.md)
-reduces that concentration further.  Matching exclusive pairs give
-commuting opposite-shore swaps.  A contraction-critical pole response must
-then contain a reserve block of order three or four, or one of at most one
-degree-eight or two degree-nine exceptional pairs.  Six exclusive demands
-give seven explicit branch sets whose contact graph has at most two missing
-adjacencies in degree eight and three in degree nine.  A missing adjacency
-does expose an actual separator, but its order has no proved upper bound.
-
-The separately audited
-[two-independent-triples theorem](../results/hc7_degree8_two_independent_triples.md)
-now resolves two of the three degree-eight configurations with exactly seven
-reserve nonedges.  Whenever the eight boundary vertices split into two
-independent triples and a remaining pair, that pair is a nonedge.  More
-precisely, the two closed shores have opposite merged/split response types
-at the pair while retaining both triples as exact boundary colour classes;
-the split-type shore contains a corresponding two-colour path.  It follows
-that a seven-nonedge reserve is necessarily
-
-\[
-                         G[R]\cong P_3\mathbin{\dot\cup}K_2.      \tag{5.1}
-\]
-
-The alternatives `K_3` disjoint-union `2K_1` and
-`P_4` disjoint-union `K_1` are impossible.  Thus the degree-eight
-seven-demand problem is no longer a three-shape extension of the general
-Kriesell--Mohr question; it is one host-specific response configuration.
-
-The separately audited
-[polarized-response theorem](../results/hc7_degree8_p3k2_polarized_response.md)
-closes the remaining path/certificate alignment.  It forces named `bd` and
-`be` response paths in both shores.  For either pair, six fixed-colouring
-demands give an `E`-confined rooted `K_5` missing at most that adjacency,
-and the corresponding `F`-path repairs it.  Thus the exact seven-demand
-case always contains an `R`-rooted `K_5` in `G-u`.
-
-This remains nonterminal because the repaired model uses both exterior
-components.  It need not preserve a connected remainder which is adjacent
-to all five rooted bags and to `{u}` (normally through a retained nonempty
-part of `I`).  Such a remainder would be the seventh branch set, with
-`{u}` as the sixth.
+This eliminates every concentration in degrees eight and nine.  Nine
+reserve nonedges are impossible; eight force
+`2K_2` disjoint-union `K_1`; seven force
+`P_3` disjoint-union `K_2`.  In the latter two cases the connector and
+triple carrier avoid every nonexclusive demand.  Consequently the
+five-reserve dichotomy always returns an `R`-rooted `K_5` in both tight
+atomic cases.  That model may use both exterior components, so it need not
+leave an `I`-connected seventh branch set adjacent to `{u}` and all five
+rooted bags.
 
 The explicit audited
 [boundary-only fork barrier](../barriers/hc7_common_root_boundary_only_fork_barrier.md)
@@ -356,14 +325,12 @@ residue, the bilateral degree-nine residue, and the exact crossed
 degree-nine four-cycle.  In degree eight the remaining response obstruction
 is now simultaneous allocation of the separately clean, distinctly ended
 leaf-fans while retaining the operation labels.  In either tight atomic
-case the remaining packet obstruction is a rooted `K_5` that consumes both
-shores.  In the exact degree-eight seven-demand case the missing rooted
-adjacency is now repaired; the precise residue is preservation of an
-`I`-connected seventh branch set adjacent to `{u}` and all five rooted
-bags.  Its failure must expose a response-preserving separator of order at
-most nine or an actual strict component descent.  The degree-nine
-concentrated cases still require
-trace-preserving completion of up to three missing adjacencies.
+case the remaining packet obstruction is an `R`-rooted `K_5` that consumes
+both shores; concentration is no longer a live alternative.  The precise
+residue is preservation of an `I`-connected seventh branch set adjacent to
+`{u}` and all five rooted bags.  Its failure must expose a
+response-preserving separator of order at most nine or an actual strict
+component descent.
 Connectivity alone is insufficient.
 
 This branch bypasses equal component order and cross-operation provenance.
@@ -503,7 +470,7 @@ an unbounded path neighbourhood or a one-sided palette split is insufficient.
 - [full-component common-root exchange](../results/hc7_full_exterior_component_common_root_exchange.md)
 - [common-root antipodal flip-cube fork](../results/hc7_common_root_flip_cube_fork.md)
 - [common-root alternating full-component cycle](../results/hc7_common_root_alternating_trace_cycle.md)
-- [polarized degree-eight `P_3`-plus-edge response](../results/hc7_degree8_p3k2_polarized_response.md)
+- [low-degree concentrated-reserve elimination](../results/hc7_low_degree_concentrated_reserve_elimination.md)
 - [split-boundary synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)

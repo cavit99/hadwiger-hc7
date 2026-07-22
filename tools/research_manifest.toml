@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "b5b38b1a4b646c051a464db3d560133665c1deee569fde19020368e5b0eff14f"
+expected_source_sha256 = "ef328bcc61cb01d130b8003d90ac6fe7ae74f42fde6b7411f46b3b8eaaab3e95"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -493,7 +493,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_common_root_exclusive_reserve_response.md"
 source_heading = "Theorem 2.1 (matching-swap closure)"
-active = true
+active = false
 audit = "results/hc7_common_root_exclusive_reserve_response_audit.md"
 expected_source_sha256 = "5d7e6a8520744fc6e4458a74fce2a41fe5fa04567b009b0860ccd30d1e230f19"
 scope = "a tight atomic five-reserve packet with at least seven reserve nonedges exclusively supported in one exterior component"
@@ -512,6 +512,33 @@ does_not_prove = [
   "a common complete boundary partition or strict response-preserving component descent",
 ]
 keywords = ["exclusive demand", "commuting Kempe swaps", "critical response", "near K7", "missing adjacency"]
+
+[[claims]]
+id = "hc7.low_degree_concentrated_reserve_elimination"
+title = "Concentrated reserve demands are impossible at degrees eight and nine"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_low_degree_concentrated_reserve_elimination.md"
+source_heading = "Theorem 4.1"
+active = true
+audit = "results/hc7_low_degree_concentrated_reserve_elimination_audit.md"
+expected_source_sha256 = "55b2d8fb8c3732d25a81da541b0752580e6bee467b5090788c5071cabda2c930"
+scope = "the degree-eight and degree-nine tight atomic common-root cases when at least seven reserve demands are exclusive to one exterior component"
+label_fidelity = "one fixed colouring, both literal shores, the independent boundary blocks, complementary roots, connector paths and triple carrier are retained"
+conclusions = [
+  "independent boundary blocks force opposite pair-equality responses on the two closed shores and make the complementary pair a nonedge",
+  "a chosen root connector disjoint from a carrier for the independent triple forces both pair responses on the opposite shore and hence a six-colouring contradiction",
+  "the nine-, eight- and seven-reserve-nonedge concentrations are all eliminated in degrees eight and nine",
+  "the five-reserve dichotomy therefore always yields an R-rooted K5 in both tight atomic cases",
+]
+does_not_prove = [
+  "HC7",
+  "an explicit K7-minor model",
+  "a rooted K5 confined to one shore",
+  "a connected seventh branch set disjoint from the rooted K5",
+  "a common all-degree bounded-interface composition theorem",
+]
+keywords = ["degree eight", "degree nine", "exclusive reserve", "root connector", "boundary response", "rooted K5"]
 
 [[claims]]
 id = "hc7.degree8_two_independent_triples"
@@ -546,7 +573,7 @@ kind = "theorem"
 status = "audited-green"
 source = "results/hc7_degree8_p3k2_polarized_response.md"
 source_heading = "Theorem 5.1 (bilateral-path completion)"
-active = true
+active = false
 audit = "results/hc7_degree8_p3k2_polarized_response_audit.md"
 expected_source_sha256 = "0cab22c0dd61f4c668cc5784772ca48673b66d98a735ea3c53723e0066c276e8"
 scope = "the surviving degree-eight two-full-component common-root residue with seven reserve demands and reserve graph P3 disjoint-union K2"
@@ -571,7 +598,7 @@ title = "Static maximum-independent reserve rotation need not escape the sparse 
 kind = "barrier"
 status = "audited-green"
 source = "barriers/hc7_degree8_static_reserve_rotation_barrier.md"
-active = true
+active = false
 audit = "barriers/hc7_degree8_static_reserve_rotation_barrier_audit.md"
 expected_source_sha256 = "c7426158ae2ac183480e5e49c6daf15d869beccc6e6270a500b07a7dad6f4e35"
 refutes = [
@@ -8269,12 +8296,7 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
-target = "hc7.common_root_exclusive_reserve_response"
-kind = "uses"
-
-[[relations]]
-source = "hc7.target.bounded_interface_bridge"
-target = "hc7.degree8_p3k2_polarized_response"
+target = "hc7.low_degree_concentrated_reserve_elimination"
 kind = "uses"
 
 [[relations]]
@@ -8282,12 +8304,6 @@ source = "hc7.target.bounded_interface_bridge"
 target = "hc7.barrier.common_root_boundary_only_fork"
 kind = "guarded_by"
 note = "The synchronized fork is genuine, but contracting its literal paths to three or even four boundary edges cannot force terminal clique-minor closure."
-
-[[relations]]
-source = "hc7.target.bounded_interface_bridge"
-target = "hc7.barrier.degree8_static_reserve_rotation"
-kind = "guarded_by"
-note = "Rotating only the maximum independent boundary block has no decreasing measure; the live completion must retain dynamic shore paths or proper-minor colouring responses."
 
 [[relations]]
 source = "hc7.common_root_flip_cube_fork"
@@ -8370,6 +8386,21 @@ kind = "uses"
 [[relations]]
 source = "hc7.common_root_exclusive_reserve_response"
 target = "hc7.common_root_short_trace_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.low_degree_concentrated_reserve_elimination"
+target = "hc7.common_root_five_reserve_kempe_packet"
+kind = "uses"
+
+[[relations]]
+source = "hc7.low_degree_concentrated_reserve_elimination"
+target = "hc7.common_root_exclusive_reserve_response"
+kind = "uses"
+
+[[relations]]
+source = "hc7.low_degree_concentrated_reserve_elimination"
+target = "hc7.order8_root_connector_reflection"
 kind = "uses"
 
 [[relations]]

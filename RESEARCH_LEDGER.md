@@ -263,47 +263,25 @@ be exclusively supported in one shore.  Any other maximum independent set
 of order `d(u)-5` can replace `I` and generate a rotated packet with the
 same conclusions.
 
-That rotation is a source of fresh packets, not a descent.  The audited
-[static reserve-rotation barrier](barriers/hc7_degree8_static_reserve_rotation_barrier.md)
-is the eight-vertex graph `K_3` disjoint-union `K_3` disjoint-union `K_2`:
-after every maximum-independent-set rotation its five-vertex reserve still
-has exactly eight nonedges.  The example is boundary-only, but it proves
-that static iteration cannot be the termination argument.
-
-That concentrated residue is now separately reduced.  Disjoint exclusive
-pairs give commuting Kempe swaps on the opposite shore.  Contracting that
-shore with `I` forces the pole-side response either to contain a reserve
-block of order three or four, or to use one of at most one exceptional pair
-in degree eight and two in degree nine.  Any six exclusive demands also
-give seven explicit branch sets whose contact graph is `K_7` with at most
-two missing adjacencies in degree eight or three in degree nine.  A missing
-adjacency yields an actual separator, but its order is not bounded above.
-Thus the concentration is a labelled near-`K_7` completion problem, not an
-unstructured collection of paths.
-
-In the degree-eight subcase with exactly seven reserve nonedges, the audited
-[two-independent-triples theorem](results/hc7_degree8_two_independent_triples.md)
-uses two proper-minor contractions to force opposite merged/split responses
-on the two literal shores.  It eliminates two of the three possible
-three-edge reserve graphs.  The sole survivor is
-
-\[
-                         G[R]\cong P_3\mathbin{\dot\cup}K_2.
-\]
-
+Static reserve rotation is not a descent, as the audited
+[rotation barrier](barriers/hc7_degree8_static_reserve_rotation_barrier.md)
+shows, but it is no longer needed to treat the degree-eight concentration.
 The audited
-[polarized-response theorem](results/hc7_degree8_p3k2_polarized_response.md)
-then closes the path/certificate alignment in this surviving shape.  Two
-proper-minor response pairs force both `bd` and `be` paths in each shore.
-For either pair, six demands give an `E`-confined rooted `K_5` missing at
-most that adjacency, and the corresponding `F`-path repairs it.  Hence the
-seven-demand case always has an `R`-rooted `K_5` in `G-u`.
+[concentrated-reserve elimination](results/hc7_low_degree_concentrated_reserve_elimination.md)
+selects an independent reserve triple, a disjoint fixed-colouring connector,
+and a carrier for that triple.  Proper-minor contractions force both the
+merged and split complementary-pair responses on one shore; one matches a
+response on the other shore and six-colours `G`.
 
-This is still nonterminal: the repaired model uses vertices from both
-exterior components, so it need not leave a connected remainder which is
-adjacent to all five rooted bags and to `{u}` (normally through a retained
-nonempty part of `I`).  Such a remainder would be the seventh branch set,
-with `{u}` as the sixth.
+This eliminates every concentration in both degrees eight and nine.  Nine
+reserve nonedges are impossible; with eight the reserve is
+`2K_2` disjoint-union `K_1`; with seven it is
+`P_3` disjoint-union `K_2`.  In the latter two cases the connector/carrier
+can avoid every nonexclusive demand.  Consequently the five-reserve
+dichotomy always gives an `R`-rooted `K_5` in both tight atomic cases.  It
+may still use both exterior components, so a connected remainder adjacent
+to all five rooted bags and to `{u}` is not yet reserved as the seventh
+branch set.
 
 This is a genuine host-level compression, but not a terminal decoder.
 The audited
@@ -318,17 +296,14 @@ It must use proper-minor colouring responses or literal bridge attachments
 to finish the branch.  In degree eight the remaining issue is now the
 simultaneous allocation of the separately clean, distinctly ended fans;
 the one-colouring proof does not make different leaf-fans disjoint or keep
-their rerouted endpoint colours.  In the tight atomic packet, the exact
-obstruction is a rooted `K_5` whose bags use both shores, leaving no
-disjoint seventh bag.  In the exact seven-demand subcase the missing rooted
-adjacency is now repaired; the immediate target is to choose the rooted
-bags and repair path while preserving an `I`-connected seventh bag adjacent
-to `{u}` and all five rooted bags, or make failure return a
-response-preserving separator of order at most nine or a strict literal
-component descent.  The degree-nine concentrated cases
-retain at most three missing near-model adjacencies.  A connectivity-only
-completion would be open-problem strength and is not an acceptable
-substitute.
+their rerouted endpoint colours.  In both tight atomic packets, the exact
+obstruction is now an `R`-rooted `K_5` whose bags use both shores, leaving
+no disjoint seventh bag; the concentrated alternative has been eliminated.
+The immediate target is to choose that model while preserving an
+`I`-connected seventh bag adjacent to `{u}` and all five rooted bags, or
+make failure return a response-preserving separator of order at most nine
+or a strict literal component descent.  A connectivity-only completion
+would be open-problem strength and is not an acceptable substitute.
 Further classification of the contracted boundary edge pattern cannot close
 this branch.
 
