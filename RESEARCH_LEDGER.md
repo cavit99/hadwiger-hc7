@@ -1,6 +1,6 @@
 # $HC_7$ research ledger
 
-**Last updated:** 21 July 2026
+**Last updated:** 22 July 2026
 **Authoritative status:** $HC_7$ is not proved here.
 
 This is the sole authority for the current status of the project. Exact
@@ -13,14 +13,20 @@ historical programme snapshots are archived rather than appended here.
 
 Let `G` be a hypothetical minor-minimal counterexample to `HC_7`. The
 [audited low-degree reduction](results/hc7_low_degree_adjacent_pair_alignment.md)
-and its
-[boundary-aligned strengthening](results/hc7_low_degree_boundary_edge_alignment.md)
-give a vertex `u`, a component `C` of `G-N[u]`, and a vertex
-$z\in S:=N_G(C)\subseteq N(u)$ such that
+and the
+[component-uniform strengthening](results/hc7_component_uniform_boundary_alignment.md)
+give a vertex `u` with `7<=d_G(u)<=9` such that every component `C` of
+`G-N[u]` has a vertex
 
 \[
- 7\le |S|\le d_G(u)\le9,
- \qquad \chi(G-\{u,z\})=6.
+ z_C\in S:=N_G(C)\subseteq N(u),
+ \qquad \chi(G-\{u,z_C\})=6.
+\]
+
+For any selected `C`,
+
+\[
+ 7\le |S|\le d_G(u)\le9.
 \]
 
 The pair
@@ -44,9 +50,9 @@ produce at least one of:
 1. an explicit `K_7`-minor model in `G`;
 2. one complete equality partition of `S` induced by six-colourings of both
    closed shores; or
-3. another full bounded-interface instance in the same graph, preserving
-   the named edge-deletion response and having a strictly smaller literal
-   anti-neighbourhood component.
+3. another full bounded-interface instance in the same graph on a strictly
+   smaller literal anti-neighbourhood component, using that component's own
+   named edge-deletion response.
 
 This theorem is unproved. Relative to the audited entry reduction, it is
 sufficient for `HC_7` and is the sole exhaustive all-degree obligation.
@@ -100,7 +106,7 @@ The audited
 then bypasses the former same-transition and endpoint-family bottleneck.
 The endpoint nonedge `e` of a first failed lift in `C` is used as the exact
 block for a second transition.  Unless a common boundary partition, the
-exact aligned smaller-component restart, or the tight pole residue occurs,
+strict smaller-component restart, or the tight pole residue occurs,
 this gives vertex-disjoint paths in opposite open shores with disjoint
 boundary nonedges `e,f`.  Moreover,
 
@@ -122,6 +128,20 @@ must close either the `K_6`-minor-free augmented-boundary path case or the
 tight pole case by an explicit `K_7` model, one common complete boundary
 partition, or the exact strict component restart.
 
+The new component-uniform theorem is the first new host-level monotonicity
+at this decoder.  If a retained path meets an actual component `D` with
+`|D|<|C|`, the edge `uz_D` regenerates the complete bounded-interface entry;
+the old vertex `z_C` need not be adjacent to `D`.  Selecting `C` initially
+with maximum order therefore confines the nonrecursive path case to
+components tied with `C` in order and the at most two vertices of `N(u)-S`.
+This removes the response-label obstruction but does not close equal-order
+components or the tight pole residue.
+
+A second-cycle attempt to treat a path for `C` as a failed-lift witness for
+an equal-order component `D` stopped because the switched boundary
+partition need not fail on `D` and the operation provenance does not
+transfer.  No further equal-order taxonomy was started.
+
 A gated marked-edge experiment has now been completed. The audited
 [response-coupling theorem](results/hc7_marked_edge_response_coupling.md)
 shows that deletion and contraction of one endpoint edge have identical
@@ -132,10 +152,10 @@ least one interior, but the audited
 shows that both interiors need not be blocked. A weighted marked-edge cut
 does produce literal separators of order seven through nine with the deletion
 operations on their correct shores, but it need not produce a separator
-different from the original and it carries fresh boundary partitions rather
-than the original exact-block response. This is not strict monotonicity or a
-response-preserving restart, so the declared gate stopped the proposed second
-cycle before any order-eight/nine or tight-pole taxonomy was started.
+different from the original or expose an actual smaller component of
+`G-N[u]`.  Component-uniform alignment repairs the response label only after
+such a component is found, so the declared gate still blocks any
+order-eight/nine or tight-pole taxonomy from this weighted cut alone.
 
 The audited
 [pole-star barrier](barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
@@ -177,6 +197,10 @@ was not started.
   order-`7`, `8`, or `9` full separation described above, with a
   four-colourable boundary and exact independent-block responses on both
   closed shores.
+- **Component-uniform alignment.** At one low-degree vertex, every component
+  outside the closed neighbourhood has its own boundary vertex `z_D` with
+  `chi(G-{u,z_D})=6`.  Any actual smaller component is therefore a strict
+  same-form restart without preserving the old boundary label.
 - **Two-transition opposite-shore geometry.** Audited pole normalization
   and a second exact-block transition give two vertex-disjoint paths in
   opposite open shores with disjoint boundary nonedges, unless the exact
@@ -362,6 +386,10 @@ was not started.
 
 - Exact attainment of every independent boundary block is separate on the
   two shores; it does not synchronize the rest of either colouring.
+- Component-uniform alignment regenerates the named response at every actual
+  anti-neighbourhood component.  It does not force a path to meet a smaller
+  component, synchronize equal-order components, or eliminate the tight pole
+  residue.
 - The two-transition theorem now gives vertex-disjoint paths in opposite
   open shores with disjoint boundary endpoints.  They may arise from
   different colouring operations, and when `G[S]+e+f` is `K_6`-minor-free

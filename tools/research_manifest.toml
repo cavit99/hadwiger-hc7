@@ -109,14 +109,14 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "ececc91e90d4421fda561e821e76ea3c9a5569a6fbdb8e92fadbf91754c37582"
+expected_source_sha256 = "8f17980b084b028664eaf76fb1629364aefe360f4d2a5dd565f154c4a6564fab"
 scope = "every hypothetical minor-minimal HC7 counterexample"
-label_fidelity = "literal boundary vertices, operation endpoints and host paths"
+label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
 colour_compatibility = "open"
 strict_parameter = "order of the chosen literal anti-neighbourhood component in the fixed host"
 hypotheses = [
-  "low-degree boundary-aligned adjacent pair",
+  "low-degree vertex with a component-uniform boundary-aligned response",
   "nonsplit four-colourable boundary of order seven, eight or nine",
   "literal failed-lift paths returned by exact-block Kempe transitions",
   "the audited last-pole normal form and two-transition opposite-shore reduction",
@@ -124,12 +124,13 @@ hypotheses = [
 allowed_exits = [
   "explicit K7-minor model",
   "one boundary equality partition realised by both closed shores",
-  "another full instance of the bounded-interface setup in the same host with a strictly smaller anti-neighbourhood component and preserved named response",
+  "another full instance in the same host with a strictly smaller anti-neighbourhood component and its newly certified component-local response",
 ]
 does_not_prove = [
   "HC7",
   "compatibility of arbitrary abstract boundary-extension languages",
   "a branch-set split from one unlabelled bichromatic path",
+  "that a retained path meets a component smaller than the selected component",
   "a terminal conclusion from disjoint opposite-shore paths when the twice-augmented boundary is K6-minor-free",
   "elimination of the tight pole residue from local exact-block and pole-star responses alone",
 ]
@@ -231,12 +232,27 @@ expected_source_sha256 = "dd8817ceec58b083e12adae943f49cf2bb5a401f17ca8795047790
 scope = "computer-assisted finite nine-vertex neighbourhood lemma"
 
 [[claims]]
+id = "hc7.component_uniform_boundary_alignment"
+title = "Component-uniform boundary alignment at a low-degree vertex"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_component_uniform_boundary_alignment.md"
+source_heading = "Theorem 1 (component-uniform boundary alignment)"
+active = true
+audit = "results/hc7_component_uniform_boundary_alignment_audit.md"
+expected_source_sha256 = "a6046ab5538b8468bdc211d40b537dec5fca909d47ab9c30acb197d74767410e"
+scope = "every component outside the closed neighbourhood of the same degree-seven-through-nine vertex in a hypothetical minor-minimal HC7 counterexample"
+strict_parameter = "order of the selected literal component of G-N[u]"
+does_not_prove = ["HC7", "existence of a smaller component along a retained path", "closure of equal-order components or the tight pole residue"]
+keywords = ["low degree", "component boundary", "edge-deletion response", "strict descent"]
+
+[[claims]]
 id = "hc7.low_degree_boundary_edge_alignment"
 title = "Boundary-aligned low-degree adjacent pair"
 kind = "theorem"
 status = "audited-green"
 source = "results/hc7_low_degree_boundary_edge_alignment.md"
-active = true
+active = false
 audit = "results/hc7_low_degree_boundary_edge_alignment_audit.md"
 expected_source_sha256 = "424bfaeaa9023a2be0b2c8817608d28e38d8b2f7893284f46b733e1f21de513b"
 
@@ -7746,6 +7762,12 @@ kind = "uses"
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
 target = "hc7.low_degree_boundary_edge_alignment"
+kind = "related_to"
+note = "This earlier existence theorem is superseded at the live entry by component-uniform alignment."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.component_uniform_boundary_alignment"
 kind = "uses"
 
 [[relations]]
@@ -7856,6 +7878,16 @@ note = "Local exact-block and pole-star response data do not eliminate the tight
 
 [[relations]]
 source = "hc7.low_degree_adjacent_pair_alignment"
+target = "hc7.degree9_pole_completion"
+kind = "uses"
+
+[[relations]]
+source = "hc7.component_uniform_boundary_alignment"
+target = "hc7.low_degree_adjacent_pair_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.component_uniform_boundary_alignment"
 target = "hc7.degree9_pole_completion"
 kind = "uses"
 

@@ -42,7 +42,8 @@ The main internally audited reductions currently establish that:
 - every hypothetical counterexample has a vertex `u` of degree seven,
   eight, or nine and an actual separation of order between seven and
   `d(u)`, with each open side containing a connected subgraph adjacent to
-  every boundary vertex;
+  every boundary vertex; at the same `u`, every component outside `N[u]`
+  has its own boundary vertex `z_D` with `chi(G-{u,z_D})=6`;
 - in the degree-seven case the exterior of the closed neighbourhood is
   connected, and its boundary-colouring constraints admit an exact
   matching description;
@@ -78,6 +79,7 @@ than duplicated here.
 | [Bounded-interface technical frontier](active/hc7_bounded_interface_synchronization_frontier.md) | Primary all-degree theorem, direct inputs, and trust boundary |
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
+| [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
 | [Degree-seven boundary-labelled near-clique model](results/hc7_degree7_aligned_near_k7_model.md) | Principal degree-seven structural compression |
 | [Research integrity tools](tools/README.md) | Search, curated dependency metadata, audit hashes, and CI checks |
 

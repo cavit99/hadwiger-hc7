@@ -48,6 +48,13 @@ the edge deletion `G-uz` makes `u,z` monochromatic and induces on `A` an
 exact singleton boundary block `{z}`.  That complete boundary partition
 does not extend to the original shore `B`.
 
+The audited
+[component-uniform alignment theorem](../results/hc7_component_uniform_boundary_alignment.md)
+strengthens this entry at the same `u`: every component `D` of `G-N[u]`
+has a vertex `z_D in N_G(D)` with `chi(G-{u,z_D})=6`.  Thus a later actual
+component has its own named response; the old `z` need not belong to
+`N_G(D)`.
+
 ## 2. What static boundary information settles
 
 If `G[S]` is split, the two shore colourings synchronize.  Indeed, for a
@@ -110,8 +117,8 @@ obtain at least one of:
 2. one equality partition of `S` induced by six-colourings of both `A`
    and `B`; or
 3. another instance satisfying Sections 1--3 in the same graph, with a
-   strictly smaller chosen anti-neighbourhood component and with the named
-   edge-deletion boundary response preserved.
+   strictly smaller chosen anti-neighbourhood component, equipped with its
+   own component-local edge-deletion response.
 
 The third outcome must decrease the order of the literal connected
 component in `G`; auxiliary path length, quotient size, or an unlabelled
@@ -140,8 +147,8 @@ first failed lift in any exact-singleton transition gives a `C`-path with
 boundary nonedge `e` as its endpoint pair.  Prescribe `e` itself as the
 exact block for a second shortest transition.  Its pole-free last failed
 lift has endpoints in `S-e` and interior in `B-(S union {u})`.  Consequently,
-after excluding a common partition and the exact aligned smaller-component
-restart, one obtains either:
+after excluding a common partition and any strict smaller-component restart,
+one obtains either:
 
 1. two vertex-disjoint opposite-shore paths with disjoint boundary nonedges
    `e,f`, where
@@ -175,8 +182,26 @@ The primary open theorem is now reduced to two explicit inputs:
 
 For either input, prove one of the three conclusions in Section 4.  In the
 recursive conclusion the returned set must be an actual component `D` of
-`G-N[u]` with `z in N_G(D)` and `|D|<|C|`; an arbitrary smaller connected
-piece, quotient, fresh response, or unbounded separator is not enough.
+`G-N[u]` with `|D|<|C|`.  The new theorem supplies `z_D`; the old `z` need
+not belong to `N_G(D)`.  An arbitrary smaller connected piece, quotient, or
+unbounded separator is still not enough.
+
+### Component-uniform response and the new size gate
+
+The component-uniform theorem removes the former response-label
+obstruction.  Whenever a retained path meets an actual component `D` with
+`|D|<|C|`, the edge `uz_D` gives a strict same-form restart ranked by the
+literal order of `D`.
+
+This is genuine monotonicity, but not yet a terminal decoder.  If `C` is
+initially selected with maximum order among the components of `G-N[u]`,
+then every component met by a nonrecursive opposite-shore path must have
+the same order as `C`; otherwise the smaller one is already a strict
+restart.  The irreducible path geometry is therefore confined to
+maximum-order ties and the at most two vertices of `N(u)-S`, together with
+the separate tight pole residue.  Turning that equality case into a model,
+common partition, or further decreasing invariant is the next structural
+step.
 
 The audited
 [independent-block pole-star barrier](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
@@ -210,20 +235,20 @@ form a lattice, and every member lifts to a literal separation of `G` of the
 same order with the three deletion operations assigned to the correct shore.
 This does not pass the continuation gate. The minimum lift may be the original
 separation, distinct deleted-edge separations can lift back to that same
-separation, and a new separator carries only fresh boundary partitions rather
-than the original exact-block response on `S`. In the actual degree-seven
-branch the opposite-shore path input is absent altogether.
+separation, and a new separator need not expose an actual smaller component
+of `G-N[u]`.  Component-uniform alignment repairs the response label only
+after such a component is found. In the actual degree-seven branch the
+opposite-shore path input is absent altogether.
 
 Consequently no order-eight/nine or tight-pole continuation was begun from
-this mechanism. A valid continuation must first force a strictly different
-lifted host separation or preserve the original complete boundary partition
-and literal component rank; an unbounded path neighbourhood or a one-sided
-palette split is insufficient.
+this mechanism. A valid continuation must force an actual strict component
+descent, preserve a complete boundary partition, or give a terminal model;
+an unbounded path neighbourhood or a one-sided palette split is insufficient.
 
 ## Dependencies and guardrails
 
 - [bounded low-degree entry](../results/hc7_low_degree_adjacent_pair_alignment.md)
-- [boundary-edge alignment](../results/hc7_low_degree_boundary_edge_alignment.md)
+- [component-uniform boundary alignment](../results/hc7_component_uniform_boundary_alignment.md)
 - [split-boundary synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)

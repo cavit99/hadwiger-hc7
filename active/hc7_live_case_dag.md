@@ -23,13 +23,15 @@ the exhaustiveness and descent obligations explicit; it does not prove
 
 Let `G` be a minor-minimal counterexample to `HC_7`.  The audited
 [low-degree adjacent-pair theorem](../results/hc7_low_degree_adjacent_pair_alignment.md)
-gives adjacent vertices `u,z`, a component `C` of `G-N[u]`, and its full
-neighbourhood `S=N_G(C)` such that
+gives a vertex `u` of degree seven through nine and a bounded full
+separation at every component of `G-N[u]`.  The audited
+[component-uniform alignment theorem](../results/hc7_component_uniform_boundary_alignment.md)
+gives, for every such component `C`, a vertex `z_C in S=N_G(C)` such that
 
 \[
  7\le d_G(u)\le9,
  \qquad 7\le |S|\le d_G(u),
- \qquad \chi(G-\{u,z\})=6.
+ \qquad \chi(G-\{u,z_C\})=6.
 \]
 
 The graphs `G[C\cup S]` and `G-C` form an actual separation.  The connected
@@ -50,7 +52,7 @@ flowchart TD
   M["OPEN: terminal bridge/pole decoder"]
   K7["Explicit K7-minor model"]
   CP["One boundary partition extends through both shores"]
-  R["Same response interface with smaller literal component C"]
+  R["Component-local response interface with smaller literal component C"]
   ONE["Singleton component: six-colouring contradiction"]
 
   G0 --> E
@@ -96,8 +98,11 @@ criticality, which are therefore the remaining available host-level inputs.
 
 The dashed arrows are precisely the open
 [pole-free bridge composition theorem](hc7_bounded_interface_synchronization_frontier.md#4-primary-open-theorem).
-Its third outcome is required to preserve the named edge-deletion response
-and all entry hypotheses while decreasing `|C|`.  A terminal singleton
+Its third outcome must return an actual component `D` with `|D|<|C|`.
+Component-uniform alignment then supplies a new named edge `uz_D`; the old
+boundary vertex need not be preserved.  Selecting `C` initially with maximum
+order isolates the nonrecursive path case to components tied with `C` in
+order and the at most two vertices of `N(u)-S`.  A terminal singleton
 component is impossible.  Consequently this one open theorem, together
 with the audited entry, would prove `HC_7`.
 
@@ -192,13 +197,13 @@ compression, not by itself a recursive arrow in the labelled programme.
 
 | Arrow | Preserved literal data | Rank | Status |
 |---|---|---|---|
-| Hypothetical counterexample to low-degree interface | Fixed host `G`; `u,z,C,S`; actual separation; two boundary-full connected subgraphs; edge-deletion response | none needed | proved and audited |
+| Hypothetical counterexample to low-degree interface | Fixed host `G`; `u,C,S`; actual separation; two boundary-full connected subgraphs; a component-specific edge-deletion response `uz_C` for every `C` | none needed | proved and audited |
 | Split boundary to common partition | Literal boundary and both extension languages | terminal | proved and audited |
 | Cycle-boundary family to `K_7` | Two universal vertices, induced cycle, connected full shores | terminal | proved and audited |
 | Exact-block transition to failed-lift path | Boundary root, selected edge deletion, exact block, literal path and first hits | none | proved and audited |
 | Last pole move to a pole-free path or the tight pole residue | Exact final trace, moved vertex, merged independent block, operation colours and all final opposite-shore extensions | none | proved and audited |
 | Two exact-block transitions to disjoint opposite-shore paths or the tight pole residue | Literal boundary nonedges, paths and shore ownership; operation provenance remains separate | none | proved and audited; the path survivor has `K_6 not minor G[S]+e+f` |
-| Disjoint paths or tight pole to global conclusion | Must preserve the complete bounded-interface data and displayed path or pole labels | required decrease `|C'|<|C|` in recursive outcome | **open; relative to the entry reduction this is `HC_7`-strength** |
+| Disjoint paths or tight pole to global conclusion | Must preserve the displayed path or pole labels and return an actual anti-neighbourhood component; its response is regenerated component-locally | required decrease `|C'|<|C|` in recursive outcome | **open; relative to the entry reduction this is `HC_7`-strength** |
 | Exact-seven proper core with boundary seven to restart | Fixed host, new literal seven-boundary, selected crossing edge and one operation-specific colouring | smaller connected operated shore | proved and audited |
 | Minimum positive-excess boundary to exact-seven response | Fixed host and a fresh selected response | no decrease proved | proved response; **not** an induction arrow |
 | Minimum positive-excess boundary to two/three full components | Fixed host, literal minimum boundary, operation-specific exclusive responses | minimum boundary is a normalization, not a recursive rank | proved and audited normal form; terminal coupling open |
