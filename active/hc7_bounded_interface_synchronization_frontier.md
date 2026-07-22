@@ -259,6 +259,43 @@ degree nine.  Therefore:
    must merge at least one pair of those five reserve vertices.
 
 The separately audited
+[parallel-cycle normalization](../results/hc7_common_root_parallel_two_cycle_normalization.md)
+gives the exact internal geometry of the bilateral case.  Among all parallel
+partners and connectors in the two fixed shore extensions, a lexicographic
+minimum has no repeated trace and no incidental trace on both shores.  Its
+open-shore sectors are induced and pairwise anticomplete, and joining the
+two connectors inside their endpoint traces gives a literal odd cycle using
+both shores.  There are at most three sectors in degree eight and four in
+degree nine; hence one degree-eight connector is boundary-clean, and the
+root-retaining choice puts `x` on the cycle.
+
+The clean connector is not automatically compatible with the independent-
+block response data.  If its endpoints do admit the required partition
+
+\[
+                  S=I\mathbin{\dot\cup}T
+                        \mathbin{\dot\cup}\{p,q\},
+\]
+
+and root contacts, a carrier disjoint from the connector for either `I` or
+`T` forces both merged and split `{p,q}` responses on the other shore.  Thus
+any aligned survivor splits both blocks across their component-incidence
+graphs after the connector interior is
+deleted.  For a residual component `D`, seven-connectivity yields only
+
+\[
+ h_D\ge m_D-1\quad(d(u)=8),\qquad
+ h_D\ge m_D-2\quad(d(u)=9),
+\]
+
+where `m_D` is the number of missed boundary vertices and `h_D` the number
+of neighbours on the deleted connector.  These are lower bounds; they do
+not bound the separator or turn `D` into an actual component of `G-N[u]`.
+Accordingly, the next bilateral theorem must obtain operation-compatible
+endpoint/block alignment or replace that response mechanism.  A generic
+shortest-cycle bridge analysis is insufficient.
+
+The separately audited
 [degree-eight root-star response theorem](../results/hc7_degree8_common_root_star_response.md)
 retains the literal root in proper-minor colouring responses.  Its two
 opposite-shore leaf sets are nonempty and form an induced star at `x`.

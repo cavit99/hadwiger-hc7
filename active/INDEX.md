@@ -25,6 +25,7 @@ Selected audited inputs:
 - [common-root antipodal flip-cube fork](../results/hc7_common_root_flip_cube_fork.md)
 - [rejection-cut edges force alternating full-component cycles](../results/hc7_common_root_alternating_trace_cycle.md)
 - [low-degree classification of common-root trace cycles](../results/hc7_common_root_short_trace_classification.md)
+- [parallel common-root trace-cycle normalization](../results/hc7_common_root_parallel_two_cycle_normalization.md)
 - [degree-eight aligned root-star response](../results/hc7_degree8_common_root_star_response.md)
 - [minimal degree-eight root-star response reduction](../results/hc7_degree8_minimal_root_star_response_reduction.md)
 - [tight common-root five-reserve Kempe packet](../results/hc7_common_root_five_reserve_kempe_packet.md)

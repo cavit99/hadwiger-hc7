@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "ef328bcc61cb01d130b8003d90ac6fe7ae74f42fde6b7411f46b3b8eaaab3e95"
+expected_source_sha256 = "93b0b8e2b635401077b63735e6f101a67065e67cec845ea2976227d0fb2352ff"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -404,6 +404,34 @@ does_not_prove = [
   "alignment of the five reserve colours or compulsory reserve merge with clique-minor branch-set labels",
 ]
 keywords = ["common root", "independence packing", "bilateral trace", "four-cycle", "boundary-rooted K4"]
+
+[[claims]]
+id = "hc7.common_root_parallel_two_cycle_normalization"
+title = "A minimal parallel common-root trace cycle has bounded clean geometry"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_common_root_parallel_two_cycle_normalization.md"
+source_heading = "Theorem 2.1 (minimal parallel-pair geometry)"
+active = true
+audit = "results/hc7_common_root_parallel_two_cycle_normalization_audit.md"
+expected_source_sha256 = "a26788b4a03e26c1ce75bcbf860a09ad1109259da58b7aa74471318061da87ea"
+scope = "a parallel two-edge cycle in the two fixed shore extensions of the degree-eight or degree-nine common-root residue"
+label_fidelity = "the operated trace, both fixed extensions, full bichromatic components, literal shore ownership, connector sectors and conditional independent-block responses are retained"
+conclusions = [
+  "lexicographically minimal bilateral connectors visit each boundary trace once and have no common incidental trace",
+  "their open-shore sectors are induced and pairwise anticomplete, and joining the connectors through their endpoint traces gives a literal odd cycle using both shores",
+  "there are at most three sectors in degree eight and four in degree nine; one degree-eight connector is boundary-clean and the root-retaining cycle contains x",
+  "under the separate endpoint/block alignment, a carrier disjoint from the connector for either independent block forces a six-colouring, so both component-incidence graphs split",
+  "seven-connectivity gives exact lower bounds on residual-component contacts with the deleted connector but no bounded separator",
+]
+does_not_prove = [
+  "HC7",
+  "that a normalized connector admits the required independent-block endpoint alignment",
+  "synchronization of the separately chosen opposite-shore extensions for two cube coordinates",
+  "an explicit K7-minor model or unconditional common boundary partition",
+  "a bounded response-preserving separator or strict actual anti-neighbourhood-component descent",
+]
+keywords = ["common root", "parallel trace cycle", "odd cycle", "clean connector", "incidence split"]
 
 [[claims]]
 id = "hc7.degree8_common_root_star_response"
@@ -8281,6 +8309,11 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
+target = "hc7.common_root_parallel_two_cycle_normalization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
 target = "hc7.degree8_common_root_star_response"
 kind = "uses"
 
@@ -8341,6 +8374,26 @@ source = "hc7.common_root_short_trace_classification"
 target = "hc7.barrier.common_root_boundary_only_fork"
 kind = "guarded_by"
 note = "The short-cycle theorem retains literal host geometry; the barrier forbids treating only its contracted boundary-edge pattern as terminal."
+
+[[relations]]
+source = "hc7.common_root_parallel_two_cycle_normalization"
+target = "hc7.common_root_alternating_trace_cycle"
+kind = "uses"
+
+[[relations]]
+source = "hc7.common_root_parallel_two_cycle_normalization"
+target = "hc7.common_root_short_trace_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.common_root_parallel_two_cycle_normalization"
+target = "hc7.low_degree_concentrated_reserve_elimination"
+kind = "uses"
+
+[[relations]]
+source = "hc7.common_root_parallel_two_cycle_normalization"
+target = "hc7.order8_root_connector_reflection"
+kind = "uses"
 
 [[relations]]
 source = "hc7.degree8_common_root_star_response"

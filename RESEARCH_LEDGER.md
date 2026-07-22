@@ -235,6 +235,28 @@ the four-cycle case all four traces are `K_1` or `K_2`; the literal shore
 paths form an odd cycle with two crossing same-shore connectors, giving an
 `N(u)`-meeting `K_4` model and hence a `K_5` model after adding `{u}`.
 
+The separately audited
+[parallel-cycle normalization](results/hc7_common_root_parallel_two_cycle_normalization.md)
+now compresses the dirty-path ambiguity inside every bilateral trace pair.
+Choosing the partner and the two fixed-extension connectors lexicographically
+gives one literal odd cycle using both shores.  Its open-shore sectors are
+induced and pairwise anticomplete; there are at most three in degree eight
+and four in degree nine.  Thus one degree-eight connector is boundary-clean,
+and the root-retaining choice makes the cycle contain the literal common
+root `x`.
+
+This does not yet align that clean connector with the independent blocks
+needed by the reserve-response theorem.  Conditional on such an alignment,
+a carrier for either independent block forces both complementary-pair
+responses on the other shore and six-colours `G`.  Hence a survivor must
+split both blocks across the component-incidence graphs after deleting the
+connector interior.  Seven-connectivity gives exact lower bounds on how
+many connector vertices each residual component must contact, but no upper
+bound, bounded separator, or actual anti-neighbourhood-component descent.
+The next bilateral step must therefore create the missing operation-compatible
+block alignment or use a different response; ordinary cycle bridges alone
+do not supply a terminal conclusion.
+
 Audited response theorems now strengthen the tight cases.  In degree eight,
 the retained root `x` has nonempty opposite-shore leaf sets whose
 union is an induced star.  Three of the four proper/monochromatic deletion
