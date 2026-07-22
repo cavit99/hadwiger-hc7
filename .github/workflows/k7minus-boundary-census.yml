@@ -33,10 +33,11 @@ jobs:
             sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
           fi
           python -m pip install -r tools/requirements-verifiers.txt
-      - name: Run exact census
+      - name: Run exact compact census
         run: |
           geng -q ${{ matrix.order }} \
-            | python active/hc7_k7minus_boundary_census.py --order ${{ matrix.order }} \
+            | python active/hc7_k7minus_boundary_census.py \
+                --order ${{ matrix.order }} --survivor-limit 0 \
             | tee k7minus-boundary-${{ matrix.order }}.json
       - uses: actions/upload-artifact@v6
         with:
