@@ -9049,7 +9049,9 @@ requires = ["nauty"]
 expected_stdout = [
   "component_exchange_five_core_verifier version=1",
   "layer h=7 e=18 graphs=1 marks=231 residues=0",
+  "certificate 7:F]~vw:(0, 1):(0, 1):001,004,010,040,080,00a,120",
   "layer h=8 e=20 graphs=3 marks=1218 residues=0",
+  "certificate 8:GFzvvW:(0, 1):(0, 1):001,008,020,100,012,044,280",
   "total_marks=1449 residues=0",
   "catalogue_sha256=0ef56bb5ba5a44e5c699f2d0a81c1f74cc9eb35e5a52aed4dc6846817948900d",
   "witness_sha256=b5af511f5eccf17baf6bd2dc8affa792d1391eb3128bc57111d4703227277caa",
