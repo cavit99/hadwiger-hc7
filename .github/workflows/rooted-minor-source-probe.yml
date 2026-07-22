@@ -1,0 +1,37 @@
+name: Probe rooted-minor source statement
+
+on:
+  pull_request:
+    paths:
+      - .github/workflows/rooted-minor-source-probe.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch publisher representations
+        shell: bash
+        run: |
+          set -x
+          urls=(
+            'https://www.sciencedirect.com/science/article/pii/S0012365X04003267'
+            'https://api.elsevier.com/content/article/pii/S0012365X04003267?httpAccept=text/xml'
+            'https://api.elsevier.com/content/article/doi/10.1016/j.disc.2004.07.007?httpAccept=text/xml'
+          )
+          i=0
+          for url in "${urls[@]}"; do
+            i=$((i+1))
+            curl -L --fail-with-body -A 'Mozilla/5.0' "$url" -o "source-$i.txt" || true
+            echo "=== source $i bytes $(wc -c < source-$i.txt 2>/dev/null || echo 0) ==="
+            grep -in -A12 -B5 'Theorem.1.3\|Theorem 1.3\|rooted.*K' "source-$i.txt" | head -200 || true
+          done
+      - uses: actions/upload-artifact@v6
+        with:
+          name: rooted-minor-source-probe
+          path: source-*.txt
+          if-no-files-found: ignore
