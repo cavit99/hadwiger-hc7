@@ -29,6 +29,7 @@ Selected audited inputs:
 - [minimal degree-eight root-star response reduction](../results/hc7_degree8_minimal_root_star_response_reduction.md)
 - [tight common-root five-reserve Kempe packet](../results/hc7_common_root_five_reserve_kempe_packet.md)
 - [concentrated exclusive-reserve responses and near-`K_7` model](../results/hc7_common_root_exclusive_reserve_response.md)
+- [polarized responses and a two-shore rooted `K_5` in the degree-eight seven-demand case](../results/hc7_degree8_p3k2_polarized_response.md)
 - [split-boundary colour synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction and pole-free path](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [last-pole move normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)

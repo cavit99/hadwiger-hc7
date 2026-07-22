@@ -281,6 +281,30 @@ adjacency yields an actual separator, but its order is not bounded above.
 Thus the concentration is a labelled near-`K_7` completion problem, not an
 unstructured collection of paths.
 
+In the degree-eight subcase with exactly seven reserve nonedges, the audited
+[two-independent-triples theorem](results/hc7_degree8_two_independent_triples.md)
+uses two proper-minor contractions to force opposite merged/split responses
+on the two literal shores.  It eliminates two of the three possible
+three-edge reserve graphs.  The sole survivor is
+
+\[
+                         G[R]\cong P_3\mathbin{\dot\cup}K_2.
+\]
+
+The audited
+[polarized-response theorem](results/hc7_degree8_p3k2_polarized_response.md)
+then closes the path/certificate alignment in this surviving shape.  Two
+proper-minor response pairs force both `bd` and `be` paths in each shore.
+For either pair, six demands give an `E`-confined rooted `K_5` missing at
+most that adjacency, and the corresponding `F`-path repairs it.  Hence the
+seven-demand case always has an `R`-rooted `K_5` in `G-u`.
+
+This is still nonterminal: the repaired model uses vertices from both
+exterior components, so it need not leave a connected remainder which is
+adjacent to all five rooted bags and to `{u}` (normally through a retained
+nonempty part of `I`).  Such a remainder would be the seventh branch set,
+with `{u}` as the sixth.
+
 This is a genuine host-level compression, but not a terminal decoder.
 The audited
 [boundary-only fork barrier](barriers/hc7_common_root_boundary_only_fork_barrier.md)
@@ -296,11 +320,13 @@ simultaneous allocation of the separately clean, distinctly ended fans;
 the one-colouring proof does not make different leaf-fans disjoint or keep
 their rerouted endpoint colours.  In the tight atomic packet, the exact
 obstruction is a rooted `K_5` whose bags use both shores, leaving no
-disjoint seventh bag; seven or more exclusive nonedge demands also reach
-the open five-root Kempe-packaging regime.  In the concentrated subcase the
-next lemma should use a remaining exclusive path to repair one of the at
-most two or three missing near-model adjacencies, or return a
-response-preserving separator of order at most nine.  A connectivity-only
+disjoint seventh bag.  In the exact seven-demand subcase the missing rooted
+adjacency is now repaired; the immediate target is to choose the rooted
+bags and repair path while preserving an `I`-connected seventh bag adjacent
+to `{u}` and all five rooted bags, or make failure return a
+response-preserving separator of order at most nine or a strict literal
+component descent.  The degree-nine concentrated cases
+retain at most three missing near-model adjacencies.  A connectivity-only
 completion would be open-problem strength and is not an acceptable
 substitute.
 Further classification of the contracted boundary edge pattern cannot close

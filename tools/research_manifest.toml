@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "d923c32f2f5617ce451c432e00e3c5c1ab0c42403cbbe4a4771f1c5fc6a27174"
+expected_source_sha256 = "b5b38b1a4b646c051a464db3d560133665c1deee569fde19020368e5b0eff14f"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -512,6 +512,58 @@ does_not_prove = [
   "a common complete boundary partition or strict response-preserving component descent",
 ]
 keywords = ["exclusive demand", "commuting Kempe swaps", "critical response", "near K7", "missing adjacency"]
+
+[[claims]]
+id = "hc7.degree8_two_independent_triples"
+title = "Two independent boundary triples force opposite pair responses"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_two_independent_triples.md"
+source_heading = "Theorem 2.1"
+active = false
+audit = "results/hc7_degree8_two_independent_triples_audit.md"
+expected_source_sha256 = "a4261f328857366972c320ebfd3f2e1b22478fdcc17cb5df6d734a0e79b52f6c"
+scope = "the degree-eight two-full-component common-root residue with two disjoint independent boundary triples"
+label_fidelity = "both independent triples, the complementary boundary pair, the two literal shores and the shore-confined split-response path are retained"
+conclusions = [
+  "the complementary pair is a boundary nonedge",
+  "the two shores have opposite singleton merged/split response types while both triples remain exact boundary colour classes",
+  "the split-response shore contains a two-colour path between the complementary pair",
+  "with exactly seven reserve nonedges, the reserve graph is P3 disjoint-union K2",
+]
+does_not_prove = [
+  "HC7",
+  "a rooted K5 or explicit K7 model in the surviving P3 disjoint-union K2 case",
+  "alignment of the split-response path with a selected six-demand certificate",
+  "a bounded response-preserving separator or strict component descent",
+]
+keywords = ["degree eight", "independent triples", "opposite response", "P3 plus K2", "seven demands"]
+
+[[claims]]
+id = "hc7.degree8_p3k2_polarized_response"
+title = "Polarized responses complete the degree-eight seven-demand rooted K5"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_p3k2_polarized_response.md"
+source_heading = "Theorem 5.1 (bilateral-path completion)"
+active = true
+audit = "results/hc7_degree8_p3k2_polarized_response_audit.md"
+expected_source_sha256 = "0cab22c0dd61f4c668cc5784772ca48673b66d98a735ea3c53723e0066c276e8"
+scope = "the surviving degree-eight two-full-component common-root residue with seven reserve demands and reserve graph P3 disjoint-union K2"
+label_fidelity = "the reserve roots, two literal shores, exact coarse/fine response partitions, named bd and be paths and five rooted bags are retained"
+conclusions = [
+  "each of two independent reserve triples gives opposite coarse/fine boundary partitions on the two closed shores",
+  "both bd and be have response-coloured paths in each open shore, with the two response rows separately quantified",
+  "for either missing demand, a six-demand rooted certificate in one shore and the named response path in the other form an R-rooted K5 in G-u",
+]
+does_not_prove = [
+  "HC7",
+  "an explicit K7 model",
+  "a rooted K5 confined to one shore",
+  "preservation of a connected seventh branch set after the opposite-shore repair path is absorbed",
+  "a bounded response-preserving separator or strict component descent",
+]
+keywords = ["degree eight", "P3 plus K2", "polarized response", "bilateral path", "rooted K5", "seventh branch set"]
 
 [[claims]]
 id = "hc7.barrier.degree8_static_reserve_rotation"
@@ -8222,6 +8274,11 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
+target = "hc7.degree8_p3k2_polarized_response"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
 target = "hc7.barrier.common_root_boundary_only_fork"
 kind = "guarded_by"
 note = "The synchronized fork is genuine, but contracting its literal paths to three or even four boundary edges cannot force terminal clique-minor closure."
@@ -8313,6 +8370,32 @@ kind = "uses"
 [[relations]]
 source = "hc7.common_root_exclusive_reserve_response"
 target = "hc7.common_root_short_trace_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_two_independent_triples"
+target = "hc7.common_root_short_trace_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_two_independent_triples"
+target = "hc7.common_root_exclusive_reserve_response"
+kind = "strengthens"
+note = "In the exact degree-eight seven-demand subcase, the dynamic two-triple responses eliminate two reserve shapes and leave only P3 disjoint-union K2."
+
+[[relations]]
+source = "hc7.degree8_p3k2_polarized_response"
+target = "hc7.degree8_two_independent_triples"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_p3k2_polarized_response"
+target = "hc7.common_root_exclusive_reserve_response"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_p3k2_polarized_response"
+target = "hc7.common_root_five_reserve_kempe_packet"
 kind = "uses"
 
 [[relations]]
