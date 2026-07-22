@@ -28,6 +28,7 @@ Selected audited inputs:
 - [parallel common-root trace-cycle normalization](../results/hc7_common_root_parallel_two_cycle_normalization.md)
 - [degree-eight nonedge bipartition outside the odd wheel](../results/hc7_degree8_nonedge_bipartition_classification.md)
 - [operation-compatible bilateral cycle for an aligned degree-eight pair](../results/hc7_degree8_aligned_pair_bilateral_cycle.md)
+- [two two-defect components on each aligned shore force a `K_7` minor](../results/hc7_degree8_two_defect_component_closure.md)
 - [degree-eight aligned root-star response](../results/hc7_degree8_common_root_star_response.md)
 - [minimal degree-eight root-star response reduction](../results/hc7_degree8_minimal_root_star_response_reduction.md)
 - [tight common-root five-reserve Kempe packet](../results/hc7_common_root_five_reserve_kempe_packet.md)

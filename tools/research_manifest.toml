@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "c70f680c6107038b05bbcc2ed2fe2f67d5bcdd4626802c0d2dafe8bdfc76e56b"
+expected_source_sha256 = "bfe9424c1f09f30a96103cba1b6a81ad325dcf15c48642f8e1e4fbaacefbf9ba"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -484,6 +484,33 @@ does_not_prove = [
   "closure of the fourfold incidence-split residue or the odd-wheel boundary",
 ]
 keywords = ["degree eight", "aligned pair", "bilateral path", "odd cycle", "operation provenance", "incidence split"]
+
+[[claims]]
+id = "hc7.degree8_two_defect_component_closure"
+title = "Two two-defect residual components on each aligned shore force a K7 minor"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree8_two_defect_component_closure.md"
+source_heading = "Theorem 4.1"
+active = true
+audit = "results/hc7_degree8_two_defect_component_closure_audit.md"
+expected_source_sha256 = "3d7b868b33e76a4c383c6e91866073011ae0a595f8c6d4cdb754eea226738a22"
+scope = "the non-wheel degree-eight two-full-component aligned bilateral residue after deleting the two named path interiors"
+label_fidelity = "the two literal shores, aligned roots, independent triples, fixed operation paths, residual components and their exact boundary misses are retained"
+conclusions = [
+  "every literal root connector meets every carrier for either independent boundary triple, so each carrier is a root separator",
+  "all two-defect residual components in one shore have one coherent missed pair",
+  "two two-defect components in each shore give an explicit K7-minor model by a finite four-anchor allocation over all 97767 labelled cases",
+  "in every surviving host one shore has at most one two-defect residual component and every other residual component there misses at least three boundary vertices",
+]
+does_not_prove = [
+  "HC7",
+  "closure of the asymmetric sparse-two-defect shore",
+  "a bound on literal path-attachment multiplicities",
+  "that a post-path residual component is a component of G-N[u] or supplies a strict restart",
+  "closure of the odd-wheel boundary",
+]
+keywords = ["degree eight", "two-defect component", "root connector", "carrier separator", "finite K7 certificate"]
 
 [[claims]]
 id = "hc7.degree8_common_root_star_response"
@@ -927,6 +954,32 @@ does_not_prove = [
   "an exhaustive degree-eight reduction or HC7",
 ]
 keywords = ["degree eight", "fixed colouring", "P5", "rooted certificate", "stress test"]
+
+[[claims]]
+id = "hc7.barrier.degree8_fourfold_incidence_bridge_interval"
+title = "Four incidence splits need not leave a bridge interval"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_degree8_fourfold_incidence_bridge_interval_barrier.md"
+active = false
+audit = "barriers/hc7_degree8_fourfold_incidence_bridge_interval_barrier_audit.md"
+expected_source_sha256 = "0c4976fe7213f35e663e320ac7a49d4146f545c2a5d833ce30e115da2d278f6b"
+refutes = ["boundary compactness, one aligned bilateral operation, its odd cycle and four incidence splits force an off-path bridge, proper attachment interval or smaller anti-neighbourhood component"]
+lacks = ["seven-connectivity", "seven-chromaticity", "the universal opposite-shore responses supplied by contraction-criticality"]
+keywords = ["degree eight", "incidence split", "shore filling", "bridge interval", "finite barrier"]
+
+[[claims]]
+id = "hc7.barrier.degree8_fourfold_incidence_unbounded_attachment"
+title = "Four incidence splits do not bound literal path attachments"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_degree8_fourfold_incidence_unbounded_attachment_barrier.md"
+active = false
+audit = "barriers/hc7_degree8_fourfold_incidence_unbounded_attachment_barrier_audit.md"
+expected_source_sha256 = "921b65fe1250e53132855730b64be7064ee2c8f9a5163aa2895ee0496c5ed556"
+refutes = ["the compact boundary, full shores, seven-connectivity, one aligned bilateral operation, bridge responses and four incidence splits alone bound path lengths or ordered residual attachment sets"]
+lacks = ["K7-minor exclusion", "seven-chromaticity", "full contraction-critical response languages"]
+keywords = ["degree eight", "incidence split", "unbounded attachment", "seven-connectivity", "barrier family"]
 
 [[claims]]
 id = "hc7.barrier.degree8_dirty_path_local_uncrossing"
@@ -8376,6 +8429,11 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
+target = "hc7.degree8_two_defect_component_closure"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
 target = "hc7.degree8_common_root_star_response"
 kind = "uses"
 
@@ -8481,6 +8539,33 @@ kind = "uses"
 source = "hc7.degree8_aligned_pair_bilateral_cycle"
 target = "hc7.common_root_parallel_two_cycle_normalization"
 kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_two_defect_component_closure"
+target = "hc7.degree8_aligned_pair_bilateral_cycle"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_two_defect_component_closure"
+target = "hc7.degree8_nonedge_bipartition_classification"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_two_defect_component_closure"
+target = "hc7.order8_root_connector_reflection"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree8_two_defect_component_closure"
+target = "hc7.barrier.degree8_fourfold_incidence_bridge_interval"
+kind = "guarded_by"
+note = "The finite local model shows that the four incidence splits may be shore-filling, so no proof may assume an off-path residual component exists."
+
+[[relations]]
+source = "hc7.degree8_two_defect_component_closure"
+target = "hc7.barrier.degree8_fourfold_incidence_unbounded_attachment"
+kind = "guarded_by"
+note = "Seven-connectivity and the named responses do not by themselves reduce the literal path-port language to finitely many cases; K7 exclusion or full criticality must be spent."
 
 [[relations]]
 source = "hc7.degree8_common_root_star_response"
@@ -9713,6 +9798,42 @@ expected_stdout = [
   "exception_sha256 0637152b1890aa89c1ee354c0036dc0929715fcc94e182deb4b851279f66aab0",
   "exception_structure K1_join_C7",
   "PASS degree8_nonedge_bipartition_classification",
+]
+
+[[verifiers]]
+id = "degree8-two-defect-component-closure"
+path = "results/hc7_degree8_two_defect_component_closure_verify.py"
+sha256 = "d090d63b3c70e32ed25cd3ecaf21b050658afe168d64025d7c2ec0ce6d2ea046"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "order8_graphs 12346",
+  "compact_boundaries 185",
+  "nonwheel_compact_boundaries 184",
+  "aligned_labelled_instances 1207",
+  "tested_missed_pair_orientations 97767",
+  "anchor_certificates 97767",
+  "anchor_certificate_sha256 04de5910bd2043f2b98a7901819a71664813bd07e9d064aeb81244a619834deb",
+  "failures 0",
+  "PASS degree8_two_defect_component_closure",
+]
+
+[[verifiers]]
+id = "degree8-fourfold-incidence-bridge-interval-barrier"
+path = "barriers/hc7_degree8_fourfold_incidence_bridge_interval_barrier_verify.py"
+sha256 = "b16efd4e33a02fcf21432f23d05f2c68da49655d9452e37b2a176ce05fa719db"
+timeout = 20
+expected_stdout = [
+  "vertices 12",
+  "edges 40",
+  "boundary_alpha 3",
+  "boundary_fill_width 2",
+  "host_fill_width 5",
+  "chromatic_number 5",
+  "vertex_connectivity 5",
+  "minimum_cut i1 t1 u e x",
+  "aligned_paths p-e-q p-x-y-q",
+  "PASS degree8_fourfold_incidence_bridge_interval_barrier",
 ]
 
 [[verifiers]]

@@ -313,10 +313,50 @@ and form a literal odd cycle.  In each fixed full two-colour component,
 either a `p`--`q`-separating bridge gives an aligned deletion/contraction
 response retaining the opposite path, or there are two edge-disjoint
 `p`--`q` routes.  Every non-wheel survivor splits both triples in both
-post-path incidence graphs.  The remaining degree-eight task is therefore
-to close this fourfold incidence-split geometry or the unique odd-wheel
-boundary.  A generic shortest-cycle bridge analysis still does not by
-itself supply a terminal conclusion.
+post-path incidence graphs.
+
+The separately audited
+[two-defect component closure](../results/hc7_degree8_two_defect_component_closure.md)
+strengthens this in two ways.  Every literal root connector meets every
+carrier for either independent triple, making each carrier a `p`--`q`
+separator.  Moreover, post-path components missing exactly two boundary
+vertices have one coherent missed pair in each shore.  A complete finite
+allocation over all `97,767` labelled compact-boundary and ordered
+missed-pair instances proves that two such components in each shore yield
+an explicit `K_7`-minor model.  Thus, after orienting a surviving non-wheel
+instance, one shore has at most one two-defect component and all its other
+residual components miss at least three boundary vertices.
+
+This is the current non-wheel laboratory.  The
+[shore-filling barrier](../barriers/hc7_degree8_fourfold_incidence_bridge_interval_barrier.md)
+shows that the odd cycle and four incidence splits need not leave any
+off-path component, even in a `K_7`-minor-free local model.  The
+[unbounded-attachment barrier](../barriers/hc7_degree8_fourfold_incidence_unbounded_attachment_barrier.md)
+shows that seven-connectivity and the named bridge responses do not bound
+the literal attachment language when `K_7` exclusion is omitted.  Hence a
+generic shortest-cycle bridge analysis or raw finite attachment search is
+insufficient.
+
+The highest-leverage next composition uses the audited
+[five-terminal two--three linkage reduction](../results/hc7_order8_three_portal_two_three_reduction.md)
+for each pair `(Q,B)` with `Q in {E,F}` and `B in {I,T}`.  Its positive
+packing is exactly a root connector disjoint from a `B`-carrier and is now
+forbidden by the universal entanglement theorem.  Its remaining outcomes
+are an actual order-seven response interface, a shore of order at most six,
+a strict order-eight lobe reduction, or a confined positive-excess lobe
+behind at most five internal vertices and with boundary order at least nine.
+
+The proposed **paired confined-lobe target** is to choose minimal `I`- and
+`T`-lobes in the oriented sparse-two-defect shore and prove that they give
+one of the three primary terminal outcomes, a generic exact-seven response
+interface, a strict response-preserving order-eight reduction, or two
+adjacent connected sets having one common boundary defect of order at most
+two.  The present four-bag theorem covers the case in which that defect has
+one vertex in each independent triple; extending its finite allocation to
+arbitrary defect sets of order at most two is a separate finite sublemma.
+The required host-level common-defect conclusion is open; mere positive
+boundary excess is not enough.  The unique odd-wheel boundary also remains
+separate.
 
 The separately audited
 [degree-eight root-star response theorem](../results/hc7_degree8_common_root_star_response.md)

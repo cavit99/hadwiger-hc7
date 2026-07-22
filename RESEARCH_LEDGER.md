@@ -265,11 +265,35 @@ deletion/contraction response, or has two edge-disjoint `p`--`q` routes.
 A carrier disjoint from either aligned path for either independent triple
 would six-colour `G`.  Thus every surviving non-wheel instance has four
 incidence splits: both `I` and `T` split after deleting the path interior in
-each shore.  Seven-connectivity gives lower bounds on the path contacts but
-still no bounded separator or actual anti-neighbourhood-component descent.
-The exact degree-eight residue is therefore the fourfold incidence-split
-geometry together with the separate odd-wheel boundary; endpoint alignment
-itself is no longer the obstruction.
+each shore.
+
+The separately audited
+[two-defect component closure](results/hc7_degree8_two_defect_component_closure.md)
+now makes this quantitative.  Every literal `p`--`q` connector meets every
+carrier for either independent triple, so each carrier is a root separator.
+In one shore, all residual components missing exactly two boundary vertices
+miss the same one vertex of `I` and the same one vertex of `T`.  An exhaustive
+four-anchor allocation over all `97,767` labelled boundary and missed-pair
+instances proves that two such components in each shore give an explicit
+`K_7`-minor model.  Hence a surviving counterexample has an oriented shore
+with at most one two-defect residual component; every other residual
+component there misses at least three boundary vertices.
+
+This is a terminal closure of a real subcase, not a finite-size heuristic.
+It does not bound path attachments or turn a post-path residual component
+into a component of `G-N[u]`.  Explicit barriers show that the cycle and four
+incidence splits alone may fill both shores, while seven-connectivity plus
+the named local responses can still retain arbitrarily long attachment data
+when `K_7`-minor exclusion is omitted.  The next non-wheel target is therefore
+not another unconstrained cycle analysis.  It is to combine the new universal
+entanglement with the audited five-terminal two--three linkage reduction for
+each shore and each of `I,T`.  The forbidden packing outcome then leaves
+actual order-seven response interfaces, small shores, strict order-eight
+lobes, or at most four confined positive-excess lobes.  The immediate target
+is to couple the two minimal lobes in the oriented sparse-two-defect shore,
+forcing a terminal outcome or two adjacent connected sets with one common
+boundary defect of order at most two.  The odd-wheel boundary remains a
+separate case.
 
 Audited response theorems now strengthen the tight cases.  In degree eight,
 the retained root `x` has nonempty opposite-shore leaf sets whose
