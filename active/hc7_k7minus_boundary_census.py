@@ -6,22 +6,27 @@ boundary graphs H satisfying the promoted static conditions
 
     chi(H) <= 4,  alpha(H) <= n-5.
 
+Optional filters spend further hypotheses that are genuinely available in
+the corresponding proof branch:
+
+* ``--nonsplit`` removes split boundaries, which already synchronize;
+* ``--join-target`` requires the quotient ``overline(K_2) join H`` to avoid
+  K7 or K7-minus.  In a K7-minus-minor-free host, the latter is mandatory,
+  since this quotient is obtained by contracting the two full open shores.
+
 For every pair e,f of vertex-disjoint nonedges, put J=H+e+f and ask whether
-J contains K6-minus as a minor.  A K6-minus model is six disjoint nonempty
-connected branch sets with at most one missing pairwise adjacency.
+J contains K6-minus as a minor.  Such a model lifts through the two literal
+disjoint host paths, and adjoining the low-degree vertex gives K7-minus.
 
-The script is a falsification experiment.  It deliberately begins with only
-the two inexpensive static boundary conditions.  Any survivor is then a
-candidate for filtering by the remaining host-derived condition that
-\bar K_2 join H has no K7 minor and by the operation-specific colouring data.
-
-The minor test is exact.  Since n<=9, every possible model is one of the
-precomputed set partitions of an arbitrary vertex subset into six blocks.
+All minor tests are exact.  Since the largest tested quotient has order 11,
+every possible model is one of the precomputed partitions of an arbitrary
+vertex subset into the required number of connected branch sets.
 """
 
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from functools import lru_cache
 from itertools import combinations
 import json
@@ -46,11 +51,7 @@ def adjacency_masks(graph: nx.Graph) -> tuple[int, ...]:
 
 @lru_cache(maxsize=None)
 def set_partitions_with_unused(n: int, k: int) -> tuple[tuple[int, ...], ...]:
-    """All partitions of an arbitrary subset of [n] into exactly k blocks.
-
-    Blocks are canonically introduced in restricted-growth order, so every
-    unordered partition occurs exactly once.  Vertices labelled -1 are unused.
-    """
+    """All partitions of an arbitrary subset of [n] into exactly k blocks."""
 
     result: list[tuple[int, ...]] = []
     labels = [-2] * n
@@ -87,7 +88,9 @@ def set_partitions_with_unused(n: int, k: int) -> tuple[tuple[int, ...], ...]:
     return tuple(result)
 
 
-def connected_and_neighbour_masks(adj: tuple[int, ...]) -> tuple[tuple[bool, ...], tuple[int, ...]]:
+def connected_and_neighbour_masks(
+    adj: tuple[int, ...],
+) -> tuple[tuple[bool, ...], tuple[int, ...]]:
     n = len(adj)
     connected = [False] * (1 << n)
     neighbours = [0] * (1 << n)
@@ -116,7 +119,11 @@ def connected_and_neighbour_masks(adj: tuple[int, ...]) -> tuple[tuple[bool, ...
     return tuple(connected), tuple(neighbours)
 
 
-def clique_minor_model(graph: nx.Graph, order: int, allowed_missing: int) -> tuple[int, ...] | None:
+def clique_minor_model(
+    graph: nx.Graph,
+    order: int,
+    allowed_missing: int,
+) -> tuple[int, ...] | None:
     """Return an exact branch-set model with at most allowed_missing nonedges."""
 
     n = graph.number_of_nodes()
@@ -187,30 +194,89 @@ def is_k_colourable(graph: nx.Graph, k: int) -> bool:
     return rec(0)
 
 
-def encode_blocks(blocks: tuple[int, ...] | None) -> list[list[int]] | None:
-    if blocks is None:
-        return None
-    return [
-        [v for v in range(max(1, max(mask.bit_length() for mask in blocks))) if mask & (1 << v)]
-        for mask in blocks
-    ]
+def is_split(graph: nx.Graph) -> bool:
+    """Exact split-graph test by all clique/independent-set partitions."""
+
+    n = graph.number_of_nodes()
+    adj = adjacency_masks(graph)
+    all_vertices = (1 << n) - 1
+    for clique in range(1 << n):
+        independent = all_vertices ^ clique
+        good = True
+        todo = clique
+        while todo and good:
+            bit = todo & -todo
+            todo -= bit
+            v = bit.bit_length() - 1
+            if (todo & ~adj[v]) != 0:
+                good = False
+        if not good:
+            continue
+        todo = independent
+        while todo and good:
+            bit = todo & -todo
+            todo -= bit
+            v = bit.bit_length() - 1
+            if todo & adj[v]:
+                good = False
+        if good:
+            return True
+    return False
+
+
+def two_shore_quotient(graph: nx.Graph) -> nx.Graph:
+    """Return overline(K2) join H with canonical integer labels."""
+
+    n = graph.number_of_nodes()
+    quotient = graph.copy()
+    quotient.add_nodes_from((n, n + 1))
+    quotient.add_edges_from((apex, v) for apex in (n, n + 1) for v in range(n))
+    return quotient
+
+
+def invariant_signature(graph: nx.Graph) -> str:
+    complement = nx.complement(graph)
+    component_orders = sorted(len(component) for component in nx.connected_components(graph))
+    complement_components = sorted(
+        len(component) for component in nx.connected_components(complement)
+    )
+    degrees = sorted(dict(graph.degree()).values())
+    complement_degrees = sorted(dict(complement.degree()).values())
+    return (
+        f"m{graph.number_of_edges()}"
+        f"-c{','.join(map(str, component_orders))}"
+        f"-d{','.join(map(str, degrees))}"
+        f"-bc{','.join(map(str, complement_components))}"
+        f"-bd{','.join(map(str, complement_degrees))}"
+    )
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--order", type=int, choices=(7, 8, 9), required=True)
     parser.add_argument("--survivor-limit", type=int, default=1000)
+    parser.add_argument("--nonsplit", action="store_true")
+    parser.add_argument(
+        "--join-target",
+        choices=("none", "k7", "k7minus"),
+        default="none",
+        help="minor forbidden in overline(K2) join H",
+    )
     args = parser.parse_args()
 
     n = args.order
     counts = {
         "graphs": 0,
         "static_boundaries": 0,
+        "nonsplit_boundaries": 0,
+        "join_target_free_boundaries": 0,
         "disjoint_nonedge_pairs": 0,
         "k6minus_positive": 0,
         "k6minus_survivors": 0,
     }
     survivors: list[dict[str, object]] = []
+    survivor_boundaries: Counter[str] = Counter()
+    survivor_signatures: Counter[str] = Counter()
 
     for raw in sys.stdin:
         raw = raw.strip()
@@ -226,6 +292,17 @@ def main() -> None:
         if not is_k_colourable(graph, 4):
             continue
         counts["static_boundaries"] += 1
+
+        if args.nonsplit and is_split(graph):
+            continue
+        counts["nonsplit_boundaries"] += 1
+
+        if args.join_target != "none":
+            quotient = two_shore_quotient(graph)
+            allowed_missing = 0 if args.join_target == "k7" else 1
+            if clique_minor_model(quotient, 7, allowed_missing) is not None:
+                continue
+        counts["join_target_free_boundaries"] += 1
 
         nonedges = [
             (u, v)
@@ -244,20 +321,36 @@ def main() -> None:
                 continue
 
             counts["k6minus_survivors"] += 1
+            code = graph6(graph)
+            survivor_boundaries[code] += 1
+            survivor_signatures[invariant_signature(graph)] += 1
             if len(survivors) < args.survivor_limit:
                 survivors.append(
                     {
-                        "H": graph6(graph),
+                        "H": code,
                         "e": list(e),
                         "f": list(f),
                         "J": graph6(augmented),
+                        "signature": invariant_signature(graph),
                     }
                 )
 
     result = {
         "order": n,
-        "partition_count": len(set_partitions_with_unused(n, 6)),
+        "nonsplit": args.nonsplit,
+        "join_target": args.join_target,
+        "partition_counts": {
+            "k6minus": len(set_partitions_with_unused(n, 6)),
+            "join": (
+                len(set_partitions_with_unused(n + 2, 7))
+                if args.join_target != "none"
+                else 0
+            ),
+        },
         "counts": counts,
+        "survivor_boundary_type_count": len(survivor_boundaries),
+        "survivor_boundaries": dict(sorted(survivor_boundaries.items())),
+        "survivor_signatures": dict(sorted(survivor_signatures.items())),
         "survivors_truncated": counts["k6minus_survivors"] > len(survivors),
         "survivors": survivors,
     }
