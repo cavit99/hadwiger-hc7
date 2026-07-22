@@ -17,7 +17,7 @@ jobs:
       matrix:
         order: [7, 8]
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
@@ -33,11 +33,14 @@ jobs:
             sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
           fi
           python -m pip install -r tools/requirements-verifiers.txt
-      - name: Run exact compact census
+      - name: Run exact host-filtered census
         run: |
           geng -q ${{ matrix.order }} \
             | python active/hc7_k7minus_boundary_census.py \
-                --order ${{ matrix.order }} --survivor-limit 0 \
+                --order ${{ matrix.order }} \
+                --nonsplit \
+                --join-target k7minus \
+                --survivor-limit 5000 \
             | tee k7minus-boundary-${{ matrix.order }}.json
       - uses: actions/upload-artifact@v6
         with:
@@ -71,9 +74,12 @@ jobs:
               fields.append(
                   f"n{order}:g={counts['graphs']},"
                   f"b={counts['static_boundaries']},"
+                  f"ns={counts['nonsplit_boundaries']},"
+                  f"q={counts['join_target_free_boundaries']},"
                   f"p={counts['disjoint_nonedge_pairs']},"
                   f"yes={counts['k6minus_positive']},"
-                  f"no={counts['k6minus_survivors']}"
+                  f"no={counts['k6minus_survivors']},"
+                  f"types={result['survivor_boundary_type_count']}"
               )
           summary = ";".join(fields)
           with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
