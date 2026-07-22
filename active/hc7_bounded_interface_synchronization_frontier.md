@@ -232,17 +232,103 @@ same-shore members are disjoint and anticomplete, and nonconsecutive members
 are disjoint and anticomplete.  No clean internal path or branch-set split is
 inferred.
 
+The separately audited
+[short-trace classification](../results/hc7_common_root_short_trace_classification.md)
+now applies the sharp neighbourhood independence bound.  The trace
+multigraph has at most three edges in degree eight and at most four in
+degree nine.  Therefore:
+
+1. in degree eight every trace cycle is a parallel pair, and the two fork
+   coordinates lie in one common full component of the fixed accepted
+   extension; this is either a bilateral pair or an atomic three-trace
+   configuration, and the fork can be chosen to retain the original
+   singleton root `x` as one operated trace;
+2. in degree nine every trace cycle is a parallel pair or one exact
+   four-cycle; if the two fixed components are distinct, their traces form
+   an exact `2+2` partition and each separately chosen opposite-shore
+   response is bilateral or transverse to it; and
+3. in the four-cycle case all four boundary traces are `K_1` or `K_2`, the
+   carrier paths have clean alternating shore interiors, and they form an
+   odd cycle with two crossing same-shore connectors.  This gives an
+   `X`-meeting `K_4` model in `G-u` and an explicit `K_5` model after adding
+   `{u}`; and
+4. in either tight atomic case, one representative per trace is a maximum
+   independent set.  Contracting its star with `u` forces the other five
+   boundary vertices to use the five remaining colours individually on
+   `G-u`, while every exact-block colouring of the pole-containing shore
+   must merge at least one pair of those five reserve vertices.
+
+The separately audited
+[degree-eight root-star response theorem](../results/hc7_degree8_common_root_star_response.md)
+retains the literal root in proper-minor colouring responses.  Its two
+opposite-shore leaf sets are nonempty and form an induced star at `x`.
+Three of the four proper/monochromatic deletion signatures occur.  For each
+shore, an inclusion-minimal aligned deletion set is either one edge, when
+the audited clean-five-path or exact-seven restart theorem applies, or has
+at least two edges and forces every deleted edge monochromatic in every
+aligned response.
+
+The separately audited
+[minimal root-star response reduction](../results/hc7_degree8_minimal_root_star_response_reduction.md)
+then handles that multi-edge alternative without exchanging colouring
+quantifiers.  Each deleted leaf has five colour-indexed paths in the same
+aligned colouring.  Retaining their inherited target information gives
+either a clean fan or a strict generic exact-seven shore decrease.
+Discarding only the endpoint colours allows a shore-confined rerouting to
+six paths with six distinct boundary ends, including the original root
+edge.  Fans belonging to different leaves are not proved disjoint.
+
+The separately audited
+[five-reserve Kempe packet](../results/hc7_common_root_five_reserve_kempe_packet.md)
+strengthens both tight atomic cases.  In one fixed colouring of `G-u`, all
+ten reserve pairs are bichromatically coupled and every reserve nonedge has
+a literal path in one named shore.  Deleting the common colour class of the
+trace transversal leaves a five-chromatic graph in which the five reserve
+vertices are rainbow in every five-colouring.  If their nonedge graph has
+at most six edges, the Kriesell--Mohr rooted-minor theorem gives a rooted
+`K_5`; if all those nonedge paths lie in one shore, the opposite full shore
+and `{u}` complete an explicit `K_7` model.  Failure even to assemble the
+rooted `K_5` across both shores forces at least seven reserve nonedges to be
+exclusively supported in one shore.  Any maximum independent set of order
+`d(u)-5` generates a rotated five-reserve packet with the same routing and
+rooted-minor alternatives.
+
+The audited
+[static reserve-rotation barrier](../barriers/hc7_degree8_static_reserve_rotation_barrier.md)
+shows that these rotations are not a well-founded descent.  In
+`K_3` disjoint-union `K_3` disjoint-union `K_2`, every maximum independent
+triple leaves a five-vertex reserve with exactly eight nonedges.  This is a
+boundary-only obstruction, but it rules out closing the concentrated case
+by static maximum-independent-set iteration.
+
+The separately audited
+[exclusive-reserve response theorem](../results/hc7_common_root_exclusive_reserve_response.md)
+reduces that concentration further.  Matching exclusive pairs give
+commuting opposite-shore swaps.  A contraction-critical pole response must
+then contain a reserve block of order three or four, or one of at most one
+degree-eight or two degree-nine exceptional pairs.  Six exclusive demands
+give seven explicit branch sets whose contact graph has at most two missing
+adjacencies in degree eight and three in degree nine.  A missing adjacency
+does expose an actual separator, but its order has no proved upper bound.
+
 The explicit audited
 [boundary-only fork barrier](../barriers/hc7_common_root_boundary_only_fork_barrier.md)
 shows why this does not yet close the branch.  A connected order-nine
 boundary satisfies the compact independence, degeneracy and minor-exclusion
 conditions and supports even two crossing shore-labelled matchings, while
 the four-edge augmentation remains `K_4`-minor-free.  Hence no decoder that
-remembers only the contracted boundary edges can succeed.  The next inference
-must analyse attachments to the entire shortest alternating component cycle
-and retain its literal shore ownership, producing a rooted model, a common
-partition, a coherent planar/cofacial outcome, or an actual strict component
-descent.
+remembers only the contracted boundary edges can succeed.  The next
+inference need only treat the bilateral or atomic three-trace degree-eight
+residue, the bilateral degree-nine residue, and the exact crossed
+degree-nine four-cycle.  In degree eight the remaining response obstruction
+is now simultaneous allocation of the separately clean, distinctly ended
+leaf-fans while retaining the operation labels.  In either tight atomic
+case the remaining packet obstruction is a rooted `K_5` that consumes both
+shores, or seven or more exclusive demands beyond the proved six-demand
+conversion.  The concentrated case is now specifically a trace-preserving
+near-`K_7` completion: a remaining exclusive path must repair a missing
+adjacency, or expose a response-preserving separator of order at most nine
+or an actual strict component descent.  Connectivity alone is insufficient.
 
 This branch bypasses equal component order and cross-operation provenance.
 It does not close the common-trace kernel allocation, turn lower boundary

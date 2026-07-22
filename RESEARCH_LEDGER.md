@@ -219,19 +219,92 @@ sequence of literal full two-colour components from the two fixed shore
 extensions.  Same-shore members are disjoint and anticomplete, and a shortest
 cycle controls every nonconsecutive overlap.
 
-This is genuine same-extension synchronization, but not a terminal decoder.
+The new separately audited
+[short-trace classification](results/hc7_common_root_short_trace_classification.md)
+spends the sharp neighbourhood independence bound on this cycle.  There are
+at most three boundary two-colour components in degree eight and at most
+four in degree nine.  Hence every shortest trace cycle is bilateral, except
+for one possible exact four-cycle in degree nine.  At the synchronized fork,
+degree eight always puts the two operated traces in one common component of
+the fixed accepted extension; the residual is either a bilateral pair or an
+atomic three-trace configuration.  The fork may be chosen so that one of
+those traces is the original singleton root `{x}`.  In degree nine, two
+distinct fixed components force an exact `2+2` partition, and each
+opposite-shore response is either bilateral or a transverse four-cycle.  In
+the four-cycle case all four traces are `K_1` or `K_2`; the literal shore
+paths form an odd cycle with two crossing same-shore connectors, giving an
+`N(u)`-meeting `K_4` model and hence a `K_5` model after adding `{u}`.
+
+Audited response theorems now strengthen the tight cases.  In degree eight,
+the retained root `x` has nonempty opposite-shore leaf sets whose
+union is an induced star.  Three of the four proper/monochromatic deletion
+signatures are realized.  An inclusion-minimal aligned deletion response is
+either one edge, which enters the existing clean-five-path or exact-seven
+restart theorem, or a genuinely multi-edge obstruction in which every
+deleted edge is forced monochromatic.  The multi-edge case is no longer
+opaque: every one of its leaves has five aligned colour-indexed paths.
+For each leaf these give either a strict generic exact-seven shore decrease
+or a clean fan, and in all cases they reroute within the same exterior
+component to a clean six-fan with six distinct boundary ends.  The rerouted
+ends do not retain their colour labels, and fans from different leaves need
+not be disjoint.
+
+In either tight atomic case, one representative per trace is a maximum
+independent set `I`, leaving five reserve vertices `R`.  One fixed colouring
+of `G-u` simultaneously joins every pair of `R` in its two colour classes;
+every boundary nonedge thereby has a literal path in one named shore.  After
+deleting the colour class containing `I`, the remaining graph is
+five-chromatic and `R` is rainbow in every five-colouring.  If the reserve
+nonedge graph has at most six edges, this packet yields an `R`-rooted `K_5`.
+If that model is confined to one shore, the other full shore, `I`, and
+`{u}` complete an explicit `K_7` model.  More generally, failure even to
+assemble a two-shore rooted `K_5` forces at least seven reserve nonedges to
+be exclusively supported in one shore.  Any other maximum independent set
+of order `d(u)-5` can replace `I` and generate a rotated packet with the
+same conclusions.
+
+That rotation is a source of fresh packets, not a descent.  The audited
+[static reserve-rotation barrier](barriers/hc7_degree8_static_reserve_rotation_barrier.md)
+is the eight-vertex graph `K_3` disjoint-union `K_3` disjoint-union `K_2`:
+after every maximum-independent-set rotation its five-vertex reserve still
+has exactly eight nonedges.  The example is boundary-only, but it proves
+that static iteration cannot be the termination argument.
+
+That concentrated residue is now separately reduced.  Disjoint exclusive
+pairs give commuting Kempe swaps on the opposite shore.  Contracting that
+shore with `I` forces the pole-side response either to contain a reserve
+block of order three or four, or to use one of at most one exceptional pair
+in degree eight and two in degree nine.  Any six exclusive demands also
+give seven explicit branch sets whose contact graph is `K_7` with at most
+two missing adjacencies in degree eight or three in degree nine.  A missing
+adjacency yields an actual separator, but its order is not bounded above.
+Thus the concentration is a labelled near-`K_7` completion problem, not an
+unstructured collection of paths.
+
+This is a genuine host-level compression, but not a terminal decoder.
 The audited
 [boundary-only fork barrier](barriers/hc7_common_root_boundary_only_fork_barrier.md)
 is a connected order-nine boundary satisfying all compact boundary
 conditions, with a singleton root component and even two crossing
 shore-labelled matchings, whose four-edge augmentation is still
-`K_4`-minor-free.  Thus the next lemma must analyse attachments to the whole
-shortest alternating trace cycle, retaining its literal full-component
-ownership, and use seven-connectivity or proper-minor criticality.  Crossing
-attachments must produce a rooted linkage or explicit minor; noncrossing
-attachments must produce one coherent web/disc structure or a bounded
-response-preserving separation.  Further classification of the contracted
-boundary edge pattern cannot close this branch.
+`K_4`-minor-free.  The remaining lemma now has only three shapes to close:
+the degree-eight bilateral/atomic-three-trace case, the degree-nine bilateral
+case, and the degree-nine crossed four-cycle carrying the rooted `K_4`.
+It must use proper-minor colouring responses or literal bridge attachments
+to finish the branch.  In degree eight the remaining issue is now the
+simultaneous allocation of the separately clean, distinctly ended fans;
+the one-colouring proof does not make different leaf-fans disjoint or keep
+their rerouted endpoint colours.  In the tight atomic packet, the exact
+obstruction is a rooted `K_5` whose bags use both shores, leaving no
+disjoint seventh bag; seven or more exclusive nonedge demands also reach
+the open five-root Kempe-packaging regime.  In the concentrated subcase the
+next lemma should use a remaining exclusive path to repair one of the at
+most two or three missing near-model adjacencies, or return a
+response-preserving separator of order at most nine.  A connectivity-only
+completion would be open-problem strength and is not an acceptable
+substitute.
+Further classification of the contracted boundary edge pattern cannot close
+this branch.
 
 The multi-rejected-trace alternative still needs a label-preserving
 allocation of its simultaneous list-critical kernels or supported
