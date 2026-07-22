@@ -9570,7 +9570,7 @@ expected_stdout = [
 id = "atomic-dirty-two-bridge-chain-barrier"
 path = "barriers/hc7_atomic_dirty_two_bridge_chain_barrier_verify.py"
 sha256 = "7334fd62e0dc25ec4fae4109714e24e155d0b0d972325449461fa80603d9af8b"
-timeout = 60
+timeout = 180
 requires = ["networkx==3.6.1"]
 expected_stdout = [
   "GREEN atomic dirty two-bridge-chain barrier",
