@@ -45,10 +45,16 @@ shore.
 flowchart TD
   G0["Hypothetical minor-minimal HC7 counterexample"]
   E["Low-degree boundary-aligned separation: 7 <= |S| <= d(u) <= 9"]
+  CN["Exterior components bounded by 1, 2, 3 at degrees 7, 8, 9"]
   SP["Split boundary"]
   CY["Induced-cycle / universal-pair family"]
   KP["Exact-block failed lifts and last-pole normal form"]
   TT["Two transitions: disjoint opposite-shore paths or tight pole"]
+  MX["Multi-component deletion exchange"]
+  CT["One trace rejected by several components"]
+  UR["Unique rejector switches between components"]
+  LB["Non-full component: lower boundary order, not strict component descent"]
+  CR["Exactly two full components: common root x and chi(G-x)=6"]
   M["OPEN: terminal bridge/pole decoder"]
   K7["Explicit K7-minor model"]
   CP["One boundary partition extends through both shores"]
@@ -58,7 +64,13 @@ flowchart TD
   G0 --> E
   E -->|"if split"| SP --> CP
   E -->|"if the displayed cycle family occurs"| CY --> K7
-  E -->|"in every remaining case; for each root x"| KP
+  E -->|"otherwise"| CN
+  CN -->|"one exterior component"| KP
+  CN -->|"at least two exterior components"| MX
+  MX -->|"some rejection set has size at least two"| CT --> M
+  MX -->|"every rejection set is a singleton"| UR
+  UR -->|"some component is not full"| LB --> M
+  UR -->|"all components are full"| CR --> M
   KP --> TT
   TT --> M
   M -.-> K7
@@ -87,8 +99,19 @@ disjoint boundary nonedges, or the tight pole residue.  In the path case a
 explicit `K_7` model, so the surviving augmented boundary is necessarily
 `K_6`-minor-free.
 
-The paths need not arise from one colouring operation, and neither the
-`K_6`-minor-free augmented-boundary case nor the tight pole case is terminal.
+In the multi-component branch, the audited sharp bounds leave at most two
+components in degree eight and at most three in degree nine.  Component
+deletion puts all their private rejection colourings in one connected Kempe
+space and retains one supported nonedge through every component at once.
+The full singleton-rejection outcome has exactly two components and one
+common recolouring root `x`; it reduces singleton completion to an
+`N(x)`-meeting `K_6` model in `G-x`.  A lower boundary is not a strict arrow
+unless the literal component also decreases, and the common-trace and
+common-root outcomes remain open inputs to `M`.
+
+In the connected branch, the two paths need not arise from one colouring
+operation, and neither the `K_6`-minor-free augmented-boundary case nor the
+tight pole case is terminal.
 The audited
 [pole-star barrier](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
 shows that local exact-block responses, all pole-star deletions,
@@ -198,6 +221,9 @@ compression, not by itself a recursive arrow in the labelled programme.
 | Arrow | Preserved literal data | Rank | Status |
 |---|---|---|---|
 | Hypothetical counterexample to low-degree interface | Fixed host `G`; `u,C,S`; actual separation; two boundary-full connected subgraphs; a component-specific edge-deletion response `uz_C` for every `C` | none needed | proved and audited |
+| Low-degree entry to sharp exterior-component counts | Fixed host and literal components of `G-N[u]` | none needed | proved and audited: at most one, two, three for degrees seven, eight, nine |
+| At least two components to component-deletion exchange | Common neighbourhood; one private rejected colouring and one supported nonedge for every literal component | none needed | proved and audited; full simultaneous augmentation is `K_6`-minor-free |
+| Singleton rejection with full components to common-root residue | Exactly two literal full components; one recolouring root `x`; two supported paths; `chi(G-x)=6` | terminal rooted completion still required | proved reduction; an `N(x)`-meeting `K_6` model remains open |
 | Split boundary to common partition | Literal boundary and both extension languages | terminal | proved and audited |
 | Cycle-boundary family to `K_7` | Two universal vertices, induced cycle, connected full shores | terminal | proved and audited |
 | Exact-block transition to failed-lift path | Boundary root, selected edge deletion, exact block, literal path and first hits | none | proved and audited |

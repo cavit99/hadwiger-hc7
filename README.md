@@ -43,7 +43,14 @@ The main internally audited reductions currently establish that:
   eight, or nine and an actual separation of order between seven and
   `d(u)`, with each open side containing a connected subgraph adjacent to
   every boundary vertex; at the same `u`, every component outside `N[u]`
-  has its own boundary vertex `z_D` with `chi(G-{u,z_D})=6`;
+  has its own boundary vertex `z_D` with `chi(G-{u,z_D})=6`, and the numbers
+  of such exterior components are at most one, two and three in degrees
+  seven, eight and nine, respectively;
+- whenever at least two exterior components occur, their private colouring
+  obstructions lie in one connected Kempe reconfiguration space and all
+  component-supported nonedges can be retained simultaneously in a
+  `K_6`-minor-free neighbourhood augmentation; in the full unique-rejector
+  case exactly two components remain and their failed lifts share one root;
 - in the degree-seven case the exterior of the closed neighbourhood is
   connected, and its boundary-colouring constraints admit an exact
   matching description;
@@ -80,6 +87,9 @@ than duplicated here.
 | [Degree-seven technical frontier](active/hc7_degree7_model_separator_frontier.md) | Conditional exact-seven refinement and residual cases |
 | [Low-degree bounded-interface entry](results/hc7_low_degree_adjacent_pair_alignment.md) | Uniform entry from a hypothetical counterexample |
 | [Component-uniform boundary alignment](results/hc7_component_uniform_boundary_alignment.md) | A named edge-deletion response for every exterior component at one low-degree vertex |
+| [Sharp exterior-component bounds](results/hc7_low_degree_exterior_component_bounds.md) | At most one, two and three components at degrees seven, eight and nine |
+| [Component-deletion Kempe exchange](results/hc7_component_deletion_kempe_exchange.md) | Simultaneous component-supported augmentation and rejection-map dichotomy |
+| [Full-component common-root exchange](results/hc7_full_exterior_component_common_root_exchange.md) | Exact two-component rooted residue in the full unique-rejector case |
 | [Degree-seven boundary-labelled near-clique model](results/hc7_degree7_aligned_near_k7_model.md) | Principal degree-seven structural compression |
 | [Research integrity tools](tools/README.md) | Search, curated dependency metadata, audit hashes, and CI checks |
 

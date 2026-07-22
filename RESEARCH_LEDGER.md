@@ -42,6 +42,20 @@ closed shore separately has a six-colouring in which `I` is exactly one
 boundary colour class. These two colourings need not induce the same
 partition on `S-I`.
 
+At the same low-degree vertex, the audited sharp component bounds give
+
+\[
+ \#\operatorname{comp}(G-N[u])\le
+ \begin{cases}
+ 1,&d_G(u)=7,\\
+ 2,&d_G(u)=8,\\
+ 3,&d_G(u)=9.
+ \end{cases}
+\]
+
+Thus the multi-component branch is globally bounded before any local path
+taxonomy is attempted.
+
 The exhaustive case map stops at the following
 [pole-free bridge-composition theorem](active/hc7_bounded_interface_synchronization_frontier.md#4-primary-open-theorem).
 The operation-specific paths forced by failed exact-block Kempe lifts must
@@ -123,24 +137,39 @@ nonterminal.
 The earlier audited endpoint-pair and robust-independent-triple theorems
 remain valid supporting results, but they are no longer direct inputs to the
 live reduction.  The exact remaining
-[terminal decoder](active/hc7_bounded_interface_synchronization_frontier.md#6-immediate-terminal-decoder)
-must close either the `K_6`-minor-free augmented-boundary path case or the
-tight pole case by an explicit `K_7` model, one common complete boundary
-partition, or the exact strict component restart.
+[terminal decoder](active/hc7_bounded_interface_synchronization_frontier.md#7-immediate-terminal-decoder)
+must close the connected-exterior `K_6`-minor-free augmented-boundary path
+case or tight pole case by an explicit `K_7` model, one common complete
+boundary partition, or the exact strict component restart.  The
+multi-component branch now has the separate audited preprocessing below.
 
-The new component-uniform theorem is the first new host-level monotonicity
-at this decoder.  If a retained path meets an actual component `D` with
-`|D|<|C|`, the edge `uz_D` regenerates the complete bounded-interface entry;
-the old vertex `z_C` need not be adjacent to `D`.  Selecting `C` initially
-with maximum order therefore confines the nonrecursive path case to
-components tied with `C` in order and the at most two vertices of `N(u)-S`.
-This removes the response-label obstruction but does not close equal-order
-components or the tight pole residue.
+The audited
+[component-deletion exchange theorem](results/hc7_component_deletion_kempe_exchange.md)
+supersedes the failed equal-order reinterpretation attempt whenever
+`G-N[u]` has at least two components.  The common neighbourhood is
+four-degenerate, every exterior component has a private rejected boundary
+colouring, and one supported nonedge can be chosen through every component
+simultaneously.  Adding all those nonedges to `G[N(u)]` remains
+`K_6`-minor-free.  The rejection map then gives either one boundary trace
+rejected by at least two literal components or one Kempe interchange whose
+unique rejector switches between two components.
 
-A second-cycle attempt to treat a path for `C` as a failed-lift witness for
-an equal-order component `D` stopped because the switched boundary
-partition need not fail on `D` and the operation provenance does not
-transfer.  No further equal-order taxonomy was started.
+In the singleton-rejection branch, the audited
+[full-component common-root theorem](results/hc7_full_exterior_component_common_root_exchange.md)
+gives a sharper dichotomy.  A non-full component returns a separator of
+strictly lower boundary order, though not necessarily smaller component
+order.  If every component is full to `N(u)`, there are exactly two; their
+failed lifts share one literal root `x`, `chi(G-x)=6`, and completion by
+`{x}` is reduced to a `K_6` model in `G-x` whose six bags all meet `N(x)`.
+The known `HC_6` supplies only an unrooted model.  This is a genuine rooted
+completion problem, not a solved terminal step.
+
+The multi-rejected-trace alternative still needs a label-preserving
+allocation of its simultaneous list-critical kernels or supported
+nonedges.  The connected-exterior branch, including degree seven, still
+uses the two-transition/tight-pole decoder above.  These are now the three
+high-leverage residues; further finite local boundary taxonomy is not the
+current strategy.
 
 A gated marked-edge experiment has now been completed. The audited
 [response-coupling theorem](results/hc7_marked_edge_response_coupling.md)
@@ -201,6 +230,17 @@ was not started.
   outside the closed neighbourhood has its own boundary vertex `z_D` with
   `chi(G-{u,z_D})=6`.  Any actual smaller component is therefore a strict
   same-form restart without preserving the old boundary label.
+- **Sharp exterior-component bounds.** At degrees seven, eight and nine,
+  the numbers of components outside the closed neighbourhood are at most
+  one, two and three, respectively.  The degree-eight and degree-nine
+  endpoints use retained, independently rerun finite boundary certificates.
+- **Multi-component exchange.** With at least two exterior components, all
+  component-supported nonedges can be retained simultaneously in one
+  `K_6`-minor-free neighbourhood augmentation.  Either one trace is rejected
+  by several components, or the unique rejector switches.  In the full
+  singleton-rejection case there are exactly two components and the switch
+  has one common root `x`, reducing singleton completion to an
+  `N(x)`-meeting `K_6` model in the six-chromatic graph `G-x`.
 - **Two-transition opposite-shore geometry.** Audited pole normalization
   and a second exact-block transition give two vertex-disjoint paths in
   opposite open shores with disjoint boundary nonedges, unless the exact
@@ -387,9 +427,10 @@ was not started.
 - Exact attainment of every independent boundary block is separate on the
   two shores; it does not synchronize the rest of either colouring.
 - Component-uniform alignment regenerates the named response at every actual
-  anti-neighbourhood component.  It does not force a path to meet a smaller
-  component, synchronize equal-order components, or eliminate the tight pole
-  residue.
+  anti-neighbourhood component.  Component deletion now couples all literal
+  components at the common neighbourhood, but its common-trace kernels and
+  its special common-root rooted-`K_6` residue are not terminal.  Neither
+  theorem addresses the connected-exterior tight pole residue.
 - The two-transition theorem now gives vertex-disjoint paths in opposite
   open shores with disjoint boundary endpoints.  They may arise from
   different colouring operations, and when `G[S]+e+f` is `K_6`-minor-free

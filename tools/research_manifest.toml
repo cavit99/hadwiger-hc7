@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "8f17980b084b028664eaf76fb1629364aefe360f4d2a5dd565f154c4a6564fab"
+expected_source_sha256 = "efcadbee9aee93f1b10a1e08607de33c18850cf3f0352e7e5f90192de7133a28"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -117,6 +117,7 @@ colour_compatibility = "open"
 strict_parameter = "order of the chosen literal anti-neighbourhood component in the fixed host"
 hypotheses = [
   "low-degree vertex with a component-uniform boundary-aligned response",
+  "sharp exterior-component bounds and the multi-component deletion-exchange reduction",
   "nonsplit four-colourable boundary of order seven, eight or nine",
   "literal failed-lift paths returned by exact-block Kempe transitions",
   "the audited last-pole normal form and two-transition opposite-shore reduction",
@@ -133,6 +134,9 @@ does_not_prove = [
   "that a retained path meets a component smaller than the selected component",
   "a terminal conclusion from disjoint opposite-shore paths when the twice-augmented boundary is K6-minor-free",
   "elimination of the tight pole residue from local exact-block and pole-star responses alone",
+  "rooted allocation of the simultaneous common-trace kernels",
+  "strict component descent from lower boundary order alone",
+  "an N(x)-meeting K6 model in the full two-component common-root residue",
 ]
 keywords = ["bounded separator", "Kempe path", "colour gluing", "low degree"]
 
@@ -245,6 +249,80 @@ scope = "every component outside the closed neighbourhood of the same degree-sev
 strict_parameter = "order of the selected literal component of G-N[u]"
 does_not_prove = ["HC7", "existence of a smaller component along a retained path", "closure of equal-order components or the tight pole residue"]
 keywords = ["low degree", "component boundary", "edge-deletion response", "strict descent"]
+
+[[claims]]
+id = "hc7.low_degree_exterior_component_bounds"
+title = "Sharp exterior-component bounds at low-degree vertices"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_low_degree_exterior_component_bounds.md"
+source_heading = "Theorem 1 (sharp current component bounds)"
+active = true
+audit = "results/hc7_low_degree_exterior_component_bounds_audit.md"
+expected_source_sha256 = "4ee48c6d71c994b166b29dcd969d64c3526e6b6b75fa8a849fae834cf95eea29"
+scope = "the literal components outside the closed neighbourhood of a degree-seven-through-nine vertex in a hypothetical minor-minimal HC7 counterexample"
+conclusions = [
+  "degree seven has at most one exterior component",
+  "degree eight has at most two exterior components",
+  "degree nine has at most three exterior components",
+]
+does_not_prove = [
+  "HC7",
+  "colour synchronization across the remaining components",
+  "closure of the connected-exterior tight pole residue",
+]
+keywords = ["low degree", "exterior components", "finite boundary certificate", "colour gluing"]
+
+[[claims]]
+id = "hc7.component_deletion_kempe_exchange"
+title = "Component-deletion Kempe exchange at a low-degree neighbourhood"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_component_deletion_kempe_exchange.md"
+source_heading = "Theorem 1 (common-neighbourhood component exchange)"
+active = true
+audit = "results/hc7_component_deletion_kempe_exchange_audit.md"
+expected_source_sha256 = "e659b2765053c34415cad0c6e9dcec78a250e751dd80d79f8e077d064d24835f"
+scope = "a degree-seven-through-nine neighbourhood with at least two literal exterior components in a hypothetical minor-minimal HC7 counterexample"
+label_fidelity = "the common boundary, each literal exterior component and every supported nonedge are retained"
+conclusions = [
+  "the common neighbourhood is four-degenerate and its labelled five-colourings are Kempe-connected",
+  "every exterior component has a private rejected boundary colouring",
+  "one supported nonedge can be retained through every component simultaneously and the full augmentation is K6-minor-free",
+  "either one trace is rejected by several components or one Kempe move switches the unique rejector",
+]
+does_not_prove = [
+  "HC7",
+  "rooted contacts for the common-trace list-critical kernels",
+  "a terminal conclusion from the K6-minor-free augmentation",
+  "the connected-exterior case",
+]
+keywords = ["component deletion", "Kempe exchange", "supported nonedge", "simultaneous augmentation"]
+
+[[claims]]
+id = "hc7.full_exterior_component_common_root_exchange"
+title = "Full exterior components force a common-root exchange"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_full_exterior_component_common_root_exchange.md"
+source_heading = "Theorem 1 (lower boundary or common-root exchange)"
+active = true
+audit = "results/hc7_full_exterior_component_common_root_exchange_audit.md"
+expected_source_sha256 = "11f7c6433687847edc3635f3284a074fa2f6157c304035ea9fc42e6a224fbc2f"
+scope = "the singleton-rejection branch of a degree-eight or degree-nine neighbourhood with at least two exterior components"
+label_fidelity = "the two literal components, common recolouring root, supported paths and boundary endpoints are retained"
+conclusions = [
+  "a non-full component gives a boundary of lower order with its own named response",
+  "or exactly two full exterior components remain and their unique-rejector switch has one common root x",
+  "in the full outcome chi(G-x)=6 and the supported two-nonedge augmentation is K6-minor-free",
+]
+does_not_prove = [
+  "HC7",
+  "that lower boundary order decreases literal component order",
+  "an N(x)-meeting K6 model in G-x",
+  "a universal rooted-K6 theorem",
+]
+keywords = ["full components", "common root", "single-vertex recolouring", "rooted K6 residue"]
 
 [[claims]]
 id = "hc7.low_degree_boundary_edge_alignment"
@@ -7772,6 +7850,37 @@ kind = "uses"
 
 [[relations]]
 source = "hc7.target.bounded_interface_bridge"
+target = "hc7.low_degree_exterior_component_bounds"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.component_deletion_kempe_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.full_exterior_component_common_root_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.full_exterior_component_common_root_exchange"
+target = "hc7.component_uniform_boundary_alignment"
+kind = "uses"
+
+[[relations]]
+source = "hc7.full_exterior_component_common_root_exchange"
+target = "hc7.component_deletion_kempe_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.low_degree_exterior_component_bounds"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+note = "Only the combined degree-seven/eight/nine headline uses the separate degree-seven theorem; the degree-eight and degree-nine bounds are proved in the wrapper and retained appendices."
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
 target = "hc7.split_boundary_synchronization"
 kind = "uses"
 
@@ -8820,6 +8929,22 @@ kind = "uses"
 source = "hc7.singleton_shore_nonbipartite"
 target = "hc7.special_five_plus_two_exact7_response"
 kind = "uses"
+
+[[verifiers]]
+id = "component-exchange-five-core"
+path = "results/hc7_component_exchange_five_core_verifier.py"
+sha256 = "27d3ab4a63d0c7bfa42a0d5b4ef4b5e3e0c6648e35e0953f5caffa7db30a28e2"
+timeout = 120
+requires = ["nauty"]
+expected_stdout = [
+  "component_exchange_five_core_verifier version=1",
+  "layer h=7 e=18 graphs=1 marks=231 residues=0",
+  "layer h=8 e=20 graphs=3 marks=1218 residues=0",
+  "total_marks=1449 residues=0",
+  "catalogue_sha256=0ef56bb5ba5a44e5c699f2d0a81c1f74cc9eb35e5a52aed4dc6846817948900d",
+  "witness_sha256=b5af511f5eccf17baf6bd2dc8affa792d1391eb3128bc57111d4703227277caa",
+  "PASS component-exchange five-core classification",
+]
 
 [[verifiers]]
 id = "degree-nine-pole-completion"

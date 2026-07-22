@@ -1,8 +1,8 @@
 # Bounded-interface bridge composition
 
-**Status:** sole exhaustive all-degree target.  Sections 1--3 and 5 summarize
-separately audited results; the theorem in Section 4 and the terminal decoder
-in Section 6 remain open.  The
+**Status:** sole exhaustive all-degree target.  Sections 1--3, 5 and 6
+summarize separately audited results; the theorem in Section 4 and the
+terminal decoder in Section 7 remain open.  The
 degree-seven branch has a sharper conditional refinement in
 [`hc7_degree7_model_separator_frontier.md`](hc7_degree7_model_separator_frontier.md),
 but it does not replace this global obligation.  Nothing here proves `HC_7`.
@@ -54,6 +54,18 @@ strengthens this entry at the same `u`: every component `D` of `G-N[u]`
 has a vertex `z_D in N_G(D)` with `chi(G-{u,z_D})=6`.  Thus a later actual
 component has its own named response; the old `z` need not belong to
 `N_G(D)`.
+
+The audited
+[low-degree exterior-component bounds](../results/hc7_low_degree_exterior_component_bounds.md)
+also give
+
+\[
+ \#\operatorname{comp}(G-N[u])\le1,2,3
+ \quad\text{when}\quad d_G(u)=7,8,9,
+\]
+
+respectively.  Hence every multi-component entry has at most three literal
+components before the response geometry is analysed.
 
 ## 2. What static boundary information settles
 
@@ -130,7 +142,63 @@ in a six-colouring of the opposite shore, the colour of `u` is absent from
 `S` and can be assigned to that one vertex, six-colouring `G`.  Hence this
 theorem, together with the audited entry reduction, would prove `HC_7`.
 
-## 5. Audited two-transition response reduction
+## 5. Audited multi-component exchange
+
+Suppose `G-N[u]` has at least two components and put `X=N(u)`,
+`H=G[X]`.  The audited
+[component-deletion exchange theorem](../results/hc7_component_deletion_kempe_exchange.md)
+proves that `H` is four-degenerate.  For each labelled proper
+five-colouring `phi` of `H`, let `R(phi)` be the set of exterior components
+through which `phi` does not extend.  Every `R(phi)` is nonempty, and each
+component `D` has a private colouring `phi_D` with `R(phi_D)={D}`.
+
+One failed-lift path can be chosen through every exterior component
+simultaneously.  If `f_D` is its boundary endpoint nonedge, then
+
+\[
+ K_6\not\preccurlyeq
+ H+\{f_D:D\text{ is a component of }G-N[u]\}.        \tag{5.1}
+\]
+
+The paths may come from unrelated Kempe moves and their boundary endpoints
+may overlap.  Their open interiors remain disjoint and anticomplete because
+they lie in different literal components; this is enough for the simultaneous
+minor lift establishing (5.1).
+
+The rejection map gives two structural branches.
+
+1. Some one boundary colouring is rejected by at least two components.
+   Those components contain simultaneous minimal list-critical kernels and
+   simultaneous failed-lift paths for the same fixed trace.  The kernels
+   have the proved degree and chromatic lower bounds, but their boundary
+   contacts are not yet sufficient for branch-set allocation.
+2. Every rejection set is a singleton.  One Kempe move transfers the unique
+   rejector from one component to another and has failed-lift paths in both.
+
+In the second branch, the audited
+[full-component common-root theorem](../results/hc7_full_exterior_component_common_root_exchange.md)
+adds a dichotomy.  If a component `E` is not full to `X`, its boundary has
+order between seven and `d(u)-1` and carries its own component-local response.
+This lowers boundary order but is not by itself a strict component descent.
+If every exterior component is full to `X`, then exactly two remain, `H` is
+three-degenerate, and one legal recolouring at a vertex `x` transfers the
+unique rejector.  The two failed lifts have the same literal root `x`,
+
+\[
+ \chi(G-x)=6,
+\]
+
+and the two supported nonedges still form a `K_6`-minor-free augmentation.
+The established case `HC_6` gives an unrooted `K_6` minor in `G-x`; the
+missing inference is a model whose six bags all meet `N(x)`, so that the
+singleton `{x}` can be added.  No universal rooted-minor assertion is made.
+
+This branch bypasses equal component order and cross-operation provenance.
+It does not close the common-trace kernel allocation, turn lower boundary
+order into a well-founded descent, or prove the special common-root
+completion.
+
+## 6. Audited two-transition response reduction
 
 The former same-transition target was too restrictive.  The audited
 [last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
@@ -154,7 +222,7 @@ one obtains either:
    `e,f`, where
 
    \[
-                         K_6\not\preccurlyeq G[S]+e+f; \tag{5.1}
+                         K_6\not\preccurlyeq G[S]+e+f; \tag{6.1}
    \]
 
    or
@@ -171,16 +239,20 @@ valid, but they are no longer direct inputs to this reduction.  Their
 set-system classification has been bypassed by using the first endpoint pair
 as the second exact block.
 
-## 6. Immediate terminal decoder
+## 7. Immediate terminal decoder
 
-The primary open theorem is now reduced to two explicit inputs:
+After the audited preprocessing, the primary open theorem has three explicit
+residual inputs:
 
-1. disjoint opposite-shore paths with endpoint nonedges `e,f` satisfying
-   (5.1); or
-2. the tight pole residue, with its literal moved vertex, merged independent
-   block, and universal quantifier over final `B`-extensions.
+1. in the connected-exterior branch, disjoint opposite-shore paths with
+   endpoint nonedges `e,f` satisfying the `K_6`-minor-free augmentation in
+   Section 6, or the tight pole residue;
+2. in the multi-rejected-trace branch, simultaneous component kernels and
+   supported nonedges for one fixed boundary colouring; or
+3. in the singleton-rejection branch, a lower-order component boundary or
+   the exact two-component common-root rooted-`K_6` residue from Section 5.
 
-For either input, prove one of the three conclusions in Section 4.  In the
+For every input, prove one of the three conclusions in Section 4.  In the
 recursive conclusion the returned set must be an actual component `D` of
 `G-N[u]` with `|D|<|C|`.  The new theorem supplies `z_D`; the old `z` need
 not belong to `N_G(D)`.  An arbitrary smaller connected piece, quotient, or
@@ -249,6 +321,9 @@ an unbounded path neighbourhood or a one-sided palette split is insufficient.
 
 - [bounded low-degree entry](../results/hc7_low_degree_adjacent_pair_alignment.md)
 - [component-uniform boundary alignment](../results/hc7_component_uniform_boundary_alignment.md)
+- [sharp low-degree exterior-component bounds](../results/hc7_low_degree_exterior_component_bounds.md)
+- [component-deletion Kempe exchange](../results/hc7_component_deletion_kempe_exchange.md)
+- [full-component common-root exchange](../results/hc7_full_exterior_component_common_root_exchange.md)
 - [split-boundary synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)

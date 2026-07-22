@@ -19,6 +19,9 @@ Selected audited inputs:
 
 - [low-degree adjacent pair and bounded full separation](../results/hc7_low_degree_adjacent_pair_alignment.md)
 - [component-uniform boundary alignment](../results/hc7_component_uniform_boundary_alignment.md)
+- [sharp low-degree exterior-component bounds](../results/hc7_low_degree_exterior_component_bounds.md)
+- [component-deletion Kempe exchange](../results/hc7_component_deletion_kempe_exchange.md)
+- [full-component common-root exchange](../results/hc7_full_exterior_component_common_root_exchange.md)
 - [split-boundary colour synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction and pole-free path](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [last-pole move normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
