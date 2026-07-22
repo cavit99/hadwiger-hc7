@@ -55,6 +55,35 @@ these paths into a `U`-rooted `K_5` model in `A-{a,b}`.
 This is the required common-colouring provenance.  It is stronger than an
 existential collection of paths obtained from unrelated edge deletions.
 
+The audited
+[tight-pole edge-localization theorem](../results/hc7_degree7_tight_pole_edge_localization.md)
+now shows that the pole transition is automatic in this exact matching
+language, rather than a separate transition-selection obstruction.  Choose
+three disjoint boundary nonedges `e_0,e_1,e_2` and the exact-`e_0`
+colouring above.  For each of the two disjoint bichromatic components
+joining the ends of `e_1,e_2`, either there are two internally
+vertex-disjoint routes or an internal articulation has a connected root
+side `W` with
+
+\[
+                              |W|<|C|,
+                              \qquad |N_G(W)|\ge7.       \tag{2.2}
+\]
+
+Any crossing edge from `W` to `N_G(W)` supplies a proper-minor response.
+Equality in (2.2) is a strict generic exact-seven selected-response descent.
+After excluding that outcome, each returned smaller side has boundary at
+least eight.  When
+the articulation is witnessed by a separating bichromatic edge, its
+edge-deletion colouring retains the prescribed matching `\{e_0,e_i\}` and
+all five endpoint Kempe locks.  If both layers have such edges, the two
+swaps commute and retain the exact triple matching under double deletion.
+Thus each layer independently has either two internally vertex-disjoint
+root-to-root routes or a response-bearing smaller side; after excluding
+order seven, each returned side has boundary at least eight.  Mixed
+route/separator outcomes are included, and none of these outcomes is
+terminal.
+
 ## 3. The model-carried obstruction
 
 For every `ab in E(F)`, either `G` already has a `K_7` minor or the union
@@ -1853,6 +1882,22 @@ shores realize one common complete equality partition.  Equivalently, any
 nonterminal operation must return a strictly smaller generic interface.
 
 The terminal modes have now been sharpened as follows.
+
+In the original degree-seven tight-pole instance, an internal articulation
+in either of two disjoint matching layers already gives the strict restart
+unless its smaller side has boundary at least eight.  If there is no such
+articulation, that layer has two internally vertex-disjoint root-to-root
+routes.  The next intermediate response lemma should select an edge on a
+nonseparating route and couple one proper-minor response simultaneously to
+
+1. a prescribed boundary matching containing `e_0,e_i`; and
+2. a label-compatible incidence or allocation in the fixed `U`-rooted
+   `K_5` model,
+
+or else give an explicit `K_7` model, a common boundary partition, or a
+strict order-seven descent.  Preserving the matching alone is nonterminal,
+and no such model-label coupling has yet been proved from the route
+geometry.
 
 1. In the singleton mode, cutvertices and bridges return exact order-seven
    interfaces; the surviving opposite exterior is nonbipartite and

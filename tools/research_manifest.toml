@@ -22,7 +22,7 @@ status = "conditional-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = false
-expected_source_sha256 = "108c9a0b8251ca42df8dd482942090a633b49478ddee2331183f4e8ceac34382"
+expected_source_sha256 = "5a61932d94a00c8919c46b62c58dad6ab45d96b4aa25d0dffd8830042fd58184"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -773,6 +773,37 @@ does_not_prove = [
   "label-preserving split of a multiply hit rooted bag",
   "colour compatibility at the returned order-seven separation",
 ]
+
+[[claims]]
+id = "hc7.degree7_tight_pole_edge_localization"
+title = "Tight-pole edge localization at degree seven"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_tight_pole_edge_localization.md"
+source_heading = "Tight-pole edge localization at degree seven"
+active = false
+audit = "results/hc7_degree7_tight_pole_edge_localization_audit.md"
+expected_source_sha256 = "df9c3b32584ee46379993e2a94ad677b14088e7c56545e4542d91b4dc456e171"
+scope = "the connected degree-seven anti-neighbourhood with its exact matching extension languages"
+label_fidelity = "an articulation gives an unlabelled selected response; a separating-edge witness retains e0 and one/two named matching augmentations"
+separator_order = "a smaller articulation side has boundary at least seven; equality is a strict generic exact-seven restart, while order at least eight remains open"
+colour_compatibility = "only the separating-edge subcase retains exact old-boundary matching {e0,ei}; two such layers retain the exact triple matching under double deletion"
+strict_parameter = "order of the connected literal articulation side compared with the original anti-neighbourhood component"
+conclusions = [
+  "the degree-seven exact-matching transition is automatically a one-step tight-pole move",
+  "an internal articulation exposes a smaller literal side with a selected crossing-edge response",
+  "a separating edge additionally carries the prescribed matching and five endpoint locks",
+  "an order-seven smaller-side boundary is a strict generic selected-response restart",
+  "two separating layers give a punctured response square with the exact triple matching",
+  "each layer otherwise has two internally vertex-disjoint root-to-root routes",
+]
+does_not_prove = [
+  "an upper bound on a positive-excess smaller-side boundary",
+  "an explicit K7-minor model from two internally vertex-disjoint routes",
+  "a nonseparating-route response preserving both a named matching and fixed rooted-K5 model labels",
+  "the degree-seven branch or HC7",
+]
+keywords = ["degree seven", "tight pole", "separating edge", "Kempe lock", "strict literal descent"]
 
 [[claims]]
 id = "hc7.exact7_rooted_k5_connector_separator"
@@ -8287,9 +8318,9 @@ kind = "related_to"
 note = "A component-missing descent with a split seven-vertex boundary closes by the audited synchronization theorem."
 evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
-evidence_start_line = 436
-evidence_end_line = 444
-evidence_sha256 = "108c9a0b8251ca42df8dd482942090a633b49478ddee2331183f4e8ceac34382"
+evidence_start_line = 477
+evidence_end_line = 485
+evidence_sha256 = "5a61932d94a00c8919c46b62c58dad6ab45d96b4aa25d0dffd8830042fd58184"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -8309,9 +8340,9 @@ kind = "related_to"
 note = "The target's model-carried obstruction is the rooted-K5 connector-or-full-separator dichotomy."
 evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
-evidence_start_line = 61
-evidence_end_line = 84
-evidence_sha256 = "108c9a0b8251ca42df8dd482942090a633b49478ddee2331183f4e8ceac34382"
+evidence_start_line = 89
+evidence_end_line = 112
+evidence_sha256 = "5a61932d94a00c8919c46b62c58dad6ab45d96b4aa25d0dffd8830042fd58184"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -9039,6 +9070,34 @@ kind = "uses"
 source = "hc7.singleton_shore_nonbipartite"
 target = "hc7.special_five_plus_two_exact7_response"
 kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_tight_pole_edge_localization"
+target = "hc7.degree7_antineighbourhood_connectivity"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_tight_pole_edge_localization"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_tight_pole_edge_localization"
+target = "hc7.bounded_interface_pole_move_normal_form"
+kind = "related_to"
+note = "The general pole theorem identifies the terminology; exact degree-seven matching languages force its tight alternative in one step."
+
+[[relations]]
+source = "hc7.degree7_tight_pole_edge_localization"
+target = "hc7.generic_exact7_response_restart"
+kind = "related_to"
+note = "A smaller articulation side with boundary exactly seven satisfies the generic selected-response interface definition and strictly decreases literal shore order."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_tight_pole_edge_localization"
+kind = "uses"
+note = "Removes transition selection from the degree-seven tight-pole residue and isolates nonseparating-route response provenance or positive separator excess."
 
 [[verifiers]]
 id = "component-exchange-five-core"
