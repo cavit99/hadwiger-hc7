@@ -43,3 +43,46 @@ jobs:
         with:
           name: k7minus-boundary-${{ matrix.order }}
           path: k7minus-boundary-${{ matrix.order }}.json
+
+  summarize:
+    needs: census
+    runs-on: ubuntu-latest
+    outputs:
+      summary: ${{ steps.counts.outputs.summary }}
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          pattern: k7minus-boundary-*
+          path: census-output
+          merge-multiple: true
+      - id: counts
+        name: Parse exact counts
+        shell: python
+        run: |
+          import json
+          import os
+          from pathlib import Path
+
+          fields = []
+          for order in (7, 8):
+              path = Path("census-output") / f"k7minus-boundary-{order}.json"
+              result = json.loads(path.read_text())
+              counts = result["counts"]
+              fields.append(
+                  f"n{order}:g={counts['graphs']},"
+                  f"b={counts['static_boundaries']},"
+                  f"p={counts['disjoint_nonedge_pairs']},"
+                  f"yes={counts['k6minus_positive']},"
+                  f"no={counts['k6minus_survivors']}"
+              )
+          summary = ";".join(fields)
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as output:
+              print(f"summary={summary}", file=output)
+          print(summary)
+
+  expose:
+    needs: summarize
+    name: ${{ needs.summarize.outputs.summary }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ needs.summarize.outputs.summary }}'
