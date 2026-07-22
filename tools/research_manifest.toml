@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "efcadbee9aee93f1b10a1e08607de33c18850cf3f0352e7e5f90192de7133a28"
+expected_source_sha256 = "b850f4d2fffa102957dd665d6e7a9d2e37dd4f40f60984b4e3993d6edd382dbe"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -323,6 +323,84 @@ does_not_prove = [
   "a universal rooted-K6 theorem",
 ]
 keywords = ["full components", "common root", "single-vertex recolouring", "rooted K6 residue"]
+
+[[claims]]
+id = "hc7.common_root_flip_cube_fork"
+title = "Common-root rejection symmetry forces a synchronized fork"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_common_root_flip_cube_fork.md"
+source_heading = "Theorem 1 (exclusive crossing and antipodal flip-cube fork)"
+active = true
+audit = "results/hc7_common_root_flip_cube_fork_audit.md"
+expected_source_sha256 = "e433cb80afc350252674a15f98ab85dd6e879c8f25f842bbeeca79bafcacc48e"
+scope = "the exact two-full-component singleton-rejection common-root residue at a degree-eight or degree-nine neighbourhood"
+label_fidelity = "the literal exterior components, common root, two-colour boundary components, fixed accepted extension and every retained path interior are preserved"
+conclusions = [
+  "the spliced colouring forces an induced odd cycle through the common root and crossing both exterior components",
+  "antipodal rejection symmetry forces two rejector-changing coordinates at one boundary colouring",
+  "one fixed accepted extension contains either a common full two-colour trace or two disjoint supported paths",
+  "an opposite-component path gives either three distinct K6-minor-free supported nonedges or one bilateral path pair plus the other supported nonedge",
+]
+does_not_prove = [
+  "HC7",
+  "an N(x)-meeting K6 model in G-x",
+  "compatibility of the two paths obtained separately through the opposite exterior component",
+  "a terminal conclusion from the contracted boundary augmentation alone",
+]
+keywords = ["common root", "flip cube", "antipodal symmetry", "fixed extension", "bilateral path"]
+
+[[claims]]
+id = "hc7.common_root_alternating_trace_cycle"
+title = "A rejection-cut edge forces an alternating full-component cycle"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_common_root_alternating_trace_cycle.md"
+source_heading = "Theorem 3.1 (affine incompatibility is exactly a cyclic edge)"
+active = true
+audit = "results/hc7_common_root_alternating_trace_cycle_audit.md"
+expected_source_sha256 = "79d4b4ab1ea7c1b696f2978bb8616988667ceb0454dfc4af1297e53112c7d7ee"
+scope = "two fixed opposite-shore extensions on the two sides of one rejector-changing two-colour boundary switch"
+label_fidelity = "the labelled boundary colouring, operated two-colour component, fixed shore extensions, full two-colour components and literal shore ownership are retained"
+conclusions = [
+  "the affine full-component switch spaces of the two fixed extensions are disjoint after translation by the operated coordinate",
+  "the operated coordinate lies on a cycle in the bipartite full-component intersection multigraph",
+  "a two-edge cycle is a bilateral full-trace outcome and every longer shortest cycle is an alternating literal two-shore component certificate",
+  "same-shore and nonconsecutive selected components are disjoint and anticomplete",
+]
+does_not_prove = [
+  "HC7",
+  "clean internal paths between the selected boundary components",
+  "a disjoint branch-set allocation from the alternating component cycle",
+  "a bounded response-preserving separation or strict component descent",
+]
+keywords = ["affine switch space", "cut space", "alternating cycle", "full two-colour component", "common root"]
+
+[[claims]]
+id = "hc7.barrier.common_root_boundary_only_fork"
+title = "Boundary-only contraction does not close the common-root fork"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_common_root_boundary_only_fork_barrier.md"
+active = true
+audit = "barriers/hc7_common_root_boundary_only_fork_barrier_audit.md"
+expected_source_sha256 = "e774fb867c13e8bd75c07f22cf959de0ce3867878b3978e5fc96787d2bf800df"
+refutes = [
+  "compact common-root boundary conditions plus three supported fork edges force a K6 minor after boundary contraction",
+  "two crossing shore-labelled matchings on four two-colour components force even a K4 minor in the augmented boundary",
+]
+satisfies = [
+  "connected order-nine boundary with independence number four and degeneracy two",
+  "a singleton distinguished two-colour component",
+  "the two-vertex K4-minor exclusions",
+  "two disjoint supported pairs on one shore and a crossing supported matching on the other",
+]
+lacks = [
+  "a seven-connected seven-chromatic minor-minimal host",
+  "the full rejection map",
+  "literal exterior-component path interiors",
+]
+keywords = ["common root", "boundary barrier", "crossing matching", "treewidth two"]
 
 [[claims]]
 id = "hc7.low_degree_boundary_edge_alignment"
@@ -7862,6 +7940,38 @@ kind = "uses"
 source = "hc7.target.bounded_interface_bridge"
 target = "hc7.full_exterior_component_common_root_exchange"
 kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.common_root_flip_cube_fork"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.common_root_alternating_trace_cycle"
+kind = "uses"
+
+[[relations]]
+source = "hc7.target.bounded_interface_bridge"
+target = "hc7.barrier.common_root_boundary_only_fork"
+kind = "guarded_by"
+note = "The synchronized fork is genuine, but contracting its literal paths to three or even four boundary edges cannot force terminal clique-minor closure."
+
+[[relations]]
+source = "hc7.common_root_flip_cube_fork"
+target = "hc7.full_exterior_component_common_root_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.common_root_alternating_trace_cycle"
+target = "hc7.full_exterior_component_common_root_exchange"
+kind = "uses"
+
+[[relations]]
+source = "hc7.common_root_alternating_trace_cycle"
+target = "hc7.common_root_flip_cube_fork"
+kind = "uses"
+note = "The base affine-cycle theorem needs one rejector-changing switch; the live application uses the two synchronized coordinates supplied by the flip-cube fork."
 
 [[relations]]
 source = "hc7.full_exterior_component_common_root_exchange"

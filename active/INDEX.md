@@ -22,6 +22,8 @@ Selected audited inputs:
 - [sharp low-degree exterior-component bounds](../results/hc7_low_degree_exterior_component_bounds.md)
 - [component-deletion Kempe exchange](../results/hc7_component_deletion_kempe_exchange.md)
 - [full-component common-root exchange](../results/hc7_full_exterior_component_common_root_exchange.md)
+- [common-root antipodal flip-cube fork](../results/hc7_common_root_flip_cube_fork.md)
+- [rejection-cut edges force alternating full-component cycles](../results/hc7_common_root_alternating_trace_cycle.md)
 - [split-boundary colour synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction and pole-free path](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [last-pole move normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
@@ -32,6 +34,7 @@ Immediate barriers:
 
 - [static four-colour boundary languages need not synchronize](../barriers/hc7_four_colour_parity_language_barrier.md)
 - [all local exact-block and pole-star responses can still force a last pole move](../barriers/hc7_opposite_shore_shortest_transition_pole_barrier.md)
+- [common-root forked paths do not close after boundary-only contraction](../barriers/hc7_common_root_boundary_only_fork_barrier.md)
 
 ## Conditional refinements and frozen laboratories
 

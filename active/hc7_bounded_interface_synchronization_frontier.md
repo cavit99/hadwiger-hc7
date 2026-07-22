@@ -193,6 +193,57 @@ The established case `HC_6` gives an unrooted `K_6` minor in `G-x`; the
 missing inference is a model whose six bags all meet `N(x)`, so that the
 singleton `{x}` can be added.  No universal rooted-minor assertion is made.
 
+The audited
+[antipodal flip-cube fork](../results/hc7_common_root_flip_cube_fork.md)
+sharpens the full two-component outcome in two independent ways.  First, the
+spliced six-colouring has exclusive exchanged-colour contacts in the two
+exterior components, and criticality joins them by an induced odd cycle
+through `x`.  Second, complement symmetry of the unique-rejector map on the
+two-colour flip cube forces one cube vertex with rejector-changing edges in
+two coordinates.  For the corresponding one fixed accepted extension,
+either both operated boundary components lie in one full two-colour
+component, or two disjoint full two-colour components supply two disjoint
+paths through one exterior component.  A separately obtained path through
+the other component then gives either:
+
+1. three distinct supported boundary nonedges whose augmentation is
+   `K_6`-minor-free; or
+2. a bilateral realization of one boundary nonedge through both exterior
+   components, together with the other fixed-extension path.
+
+The separately audited
+[alternating full-component cycle theorem](../results/hc7_common_root_alternating_trace_cycle.md)
+replaces the remaining isolated-path view by a coherent cyclic invariant.
+For either rejector-changing coordinate, fix one extension on the accepting
+shore before the switch and one on the other shore after the switch.  The
+full two-colour components in these fixed extensions partition the boundary
+two-colour components.  Arbitrary unions of partition blocks are independently
+switchable.  If the two resulting affine switch spaces intersected, the same
+labelled boundary colouring would extend through both shores and six-colour
+`G`.
+
+Equivalently, form the bipartite multigraph whose vertices are the two sets
+of full-component blocks and whose edges are the boundary two-colour
+components.  The operated coordinate is outside the incidence cut space,
+so it is not a bridge and lies on a cycle.  A parallel-edge two-cycle is a
+bilateral full-trace outcome.  Every longer shortest cycle is an alternating
+sequence of literal full two-colour components from the two fixed extensions;
+same-shore members are disjoint and anticomplete, and nonconsecutive members
+are disjoint and anticomplete.  No clean internal path or branch-set split is
+inferred.
+
+The explicit audited
+[boundary-only fork barrier](../barriers/hc7_common_root_boundary_only_fork_barrier.md)
+shows why this does not yet close the branch.  A connected order-nine
+boundary satisfies the compact independence, degeneracy and minor-exclusion
+conditions and supports even two crossing shore-labelled matchings, while
+the four-edge augmentation remains `K_4`-minor-free.  Hence no decoder that
+remembers only the contracted boundary edges can succeed.  The next inference
+must analyse attachments to the entire shortest alternating component cycle
+and retain its literal shore ownership, producing a rooted model, a common
+partition, a coherent planar/cofacial outcome, or an actual strict component
+descent.
+
 This branch bypasses equal component order and cross-operation provenance.
 It does not close the common-trace kernel allocation, turn lower boundary
 order into a well-founded descent, or prove the special common-root
@@ -250,7 +301,11 @@ residual inputs:
 2. in the multi-rejected-trace branch, simultaneous component kernels and
    supported nonedges for one fixed boundary colouring; or
 3. in the singleton-rejection branch, a lower-order component boundary or
-   the exact two-component common-root rooted-`K_6` residue from Section 5.
+   the exact two-component common-root residue from Section 5, now carrying
+   the induced crossing cycle and the synchronized common-trace/disjoint-path
+   flip-cube fork, with every changing coordinate contained in a coherent
+   alternating cycle of full two-colour components from two fixed shore
+   extensions.
 
 For every input, prove one of the three conclusions in Section 4.  In the
 recursive conclusion the returned set must be an actual component `D` of
@@ -324,6 +379,8 @@ an unbounded path neighbourhood or a one-sided palette split is insufficient.
 - [sharp low-degree exterior-component bounds](../results/hc7_low_degree_exterior_component_bounds.md)
 - [component-deletion Kempe exchange](../results/hc7_component_deletion_kempe_exchange.md)
 - [full-component common-root exchange](../results/hc7_full_exterior_component_common_root_exchange.md)
+- [common-root antipodal flip-cube fork](../results/hc7_common_root_flip_cube_fork.md)
+- [common-root alternating full-component cycle](../results/hc7_common_root_alternating_trace_cycle.md)
 - [split-boundary synchronization](../results/hc7_split_boundary_synchronization.md)
 - [exact-block Kempe reduction](../results/hc7_bounded_interface_exact_block_kempe_reduction.md)
 - [last-pole normal form](../results/hc7_bounded_interface_pole_move_normal_form.md)
@@ -339,6 +396,7 @@ an unbounded path neighbourhood or a one-sided palette split is insufficient.
 - [eight-boundary state-transfer barrier](../barriers/hc7_eight_boundary_gallai_state_transfer_barrier.md)
 - [marked-edge response coupling](../results/hc7_marked_edge_response_coupling.md)
 - [simultaneous bilateral-exposure barrier](../barriers/hc7_simultaneous_bipartite_bilateral_exposure_barrier.md)
+- [common-root boundary-only fork barrier](../barriers/hc7_common_root_boundary_only_fork_barrier.md)
 
 Do not identify a colour class with a branch set without an explicit lift.
 Do not treat a path as an extra branch set while simultaneously retaining

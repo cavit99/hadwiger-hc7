@@ -164,6 +164,52 @@ failed lifts share one literal root `x`, `chi(G-x)=6`, and completion by
 The known `HC_6` supplies only an unrooted model.  This is a genuine rooted
 completion problem, not a solved terminal step.
 
+The audited
+[common-root flip-cube theorem](results/hc7_common_root_flip_cube_fork.md)
+now adds a synchronized invariant inside that exact residue.  The spliced
+six-colouring has exclusive opposite-side contacts in the two exchanged
+colours, and criticality forces an induced odd cycle through `x` whose
+remaining path crosses between the two literal exterior components.
+Complement symmetry of the rejection map on the two-colour flip cube forces
+one boundary colouring with rejector-changing moves in two distinct
+coordinates.  In one fixed accepted extension, the two operated boundary
+components therefore lie either in one common two-colour component or in
+two disjoint two-colour components supporting two disjoint paths.  One path
+through the opposite exterior component yields either three distinct
+supported nonedges or a bilateral realization of one nonedge together with
+the other fixed-extension path.  The corresponding two- or three-edge
+augmentation remains `K_6`-minor-free.
+
+The separately audited
+[alternating trace-cycle theorem](results/hc7_common_root_alternating_trace_cycle.md)
+turns each rejector-changing coordinate into one coherent cyclic object.
+Fix an accepted extension on each shore, one before and one after the
+boundary switch.  Their full two-colour components define two partitions of
+the boundary two-colour components.  The independently switchable block
+unions are linear subspaces over `F_2`.  These two switch spaces cannot meet
+after translation by the operated coordinate, because an intersection would
+give the same labelled boundary colouring on both shores and six-colour
+`G`.  In the bipartite block-intersection multigraph, the operated coordinate
+is therefore not a bridge and lies on a cycle.  A two-edge cycle is one
+bilateral pair of full trace components; a longer cycle is an alternating
+sequence of literal full two-colour components from the two fixed shore
+extensions.  Same-shore members are disjoint and anticomplete, and a shortest
+cycle controls every nonconsecutive overlap.
+
+This is genuine same-extension synchronization, but not a terminal decoder.
+The audited
+[boundary-only fork barrier](barriers/hc7_common_root_boundary_only_fork_barrier.md)
+is a connected order-nine boundary satisfying all compact boundary
+conditions, with a singleton root component and even two crossing
+shore-labelled matchings, whose four-edge augmentation is still
+`K_4`-minor-free.  Thus the next lemma must analyse attachments to the whole
+shortest alternating trace cycle, retaining its literal full-component
+ownership, and use seven-connectivity or proper-minor criticality.  Crossing
+attachments must produce a rooted linkage or explicit minor; noncrossing
+attachments must produce one coherent web/disc structure or a bounded
+response-preserving separation.  Further classification of the contracted
+boundary edge pattern cannot close this branch.
+
 The multi-rejected-trace alternative still needs a label-preserving
 allocation of its simultaneous list-critical kernels or supported
 nonedges.  The connected-exterior branch, including degree seven, still
@@ -240,7 +286,13 @@ was not started.
   by several components, or the unique rejector switches.  In the full
   singleton-rejection case there are exactly two components and the switch
   has one common root `x`, reducing singleton completion to an
-  `N(x)`-meeting `K_6` model in the six-chromatic graph `G-x`.
+  `N(x)`-meeting `K_6` model in the six-chromatic graph `G-x`.  Antipodal
+  flip-cube symmetry now forces two rejector-changing coordinates at one
+  boundary colouring and hence a common-trace or disjoint-path fork in one
+  fixed extension.  Each changing coordinate now lies on a canonical
+  alternating cycle of literal full two-colour components from two fixed
+  shore extensions; boundary-edge augmentation alone is provably
+  insufficient.
 - **Two-transition opposite-shore geometry.** Audited pole normalization
   and a second exact-block transition give two vertex-disjoint paths in
   opposite open shores with disjoint boundary nonedges, unless the exact
@@ -429,8 +481,14 @@ was not started.
 - Component-uniform alignment regenerates the named response at every actual
   anti-neighbourhood component.  Component deletion now couples all literal
   components at the common neighbourhood, but its common-trace kernels and
-  its special common-root rooted-`K_6` residue are not terminal.  Neither
-  theorem addresses the connected-exterior tight pole residue.
+  its special common-root rooted-`K_6` residue are not terminal.  The
+  common-root flip-cube theorem synchronizes two moves in one accepted
+  extension, and affine switch-space incompatibility closes each changing
+  coordinate into a literal alternating trace cycle.  The explicit
+  compact-boundary barrier rules out closure from the resulting added edges
+  alone, and the cycle is not yet a branch-set allocation.  None of these
+  theorems addresses the
+  connected-exterior tight pole residue.
 - The two-transition theorem now gives vertex-disjoint paths in opposite
   open shores with disjoint boundary endpoints.  They may arise from
   different colouring operations, and when `G[S]+e+f` is `K_6`-minor-free

@@ -54,7 +54,7 @@ flowchart TD
   CT["One trace rejected by several components"]
   UR["Unique rejector switches between components"]
   LB["Non-full component: lower boundary order, not strict component descent"]
-  CR["Exactly two full components: common root x and chi(G-x)=6"]
+  CR["Exactly two full components: common root x, synchronized fork and alternating trace cycle"]
   M["OPEN: terminal bridge/pole decoder"]
   K7["Explicit K7-minor model"]
   CP["One boundary partition extends through both shores"]
@@ -104,10 +104,19 @@ components in degree eight and at most three in degree nine.  Component
 deletion puts all their private rejection colourings in one connected Kempe
 space and retains one supported nonedge through every component at once.
 The full singleton-rejection outcome has exactly two components and one
-common recolouring root `x`; it reduces singleton completion to an
-`N(x)`-meeting `K_6` model in `G-x`.  A lower boundary is not a strict arrow
-unless the literal component also decreases, and the common-trace and
-common-root outcomes remain open inputs to `M`.
+common recolouring root `x`.  Antipodal symmetry of its two-colour flip cube
+now forces two rejector-changing coordinates at one boundary colouring.  In
+one fixed accepted extension this gives either a common full two-colour trace
+or two disjoint paths, together with an opposite-component path and an
+induced crossing odd cycle through `x`.  Affine incompatibility of two fixed
+shore extensions further forces every changing coordinate onto an alternating
+cycle of literal full two-colour components.  A compact order-nine barrier shows
+that even the stronger four-edge crossing augmentation can remain
+`K_4`-minor-free, so literal path interiors cannot be discarded.  Singleton
+completion still requires an `N(x)`-meeting `K_6` model in `G-x` or another
+terminal outcome.  A lower boundary is not a strict arrow unless the literal
+component also decreases, and the common-trace and common-root outcomes
+remain open inputs to `M`.
 
 In the connected branch, the two paths need not arise from one colouring
 operation, and neither the `K_6`-minor-free augmented-boundary case nor the
@@ -223,7 +232,7 @@ compression, not by itself a recursive arrow in the labelled programme.
 | Hypothetical counterexample to low-degree interface | Fixed host `G`; `u,C,S`; actual separation; two boundary-full connected subgraphs; a component-specific edge-deletion response `uz_C` for every `C` | none needed | proved and audited |
 | Low-degree entry to sharp exterior-component counts | Fixed host and literal components of `G-N[u]` | none needed | proved and audited: at most one, two, three for degrees seven, eight, nine |
 | At least two components to component-deletion exchange | Common neighbourhood; one private rejected colouring and one supported nonedge for every literal component | none needed | proved and audited; full simultaneous augmentation is `K_6`-minor-free |
-| Singleton rejection with full components to common-root residue | Exactly two literal full components; one recolouring root `x`; two supported paths; `chi(G-x)=6` | terminal rooted completion still required | proved reduction; an `N(x)`-meeting `K_6` model remains open |
+| Singleton rejection with full components to common-root residue | Exactly two literal full components; one recolouring root `x`; `chi(G-x)=6`; an induced crossing cycle; two rejector-changing coordinates synchronized in one accepted extension | terminal rooted completion still required | proved and audited fork; each changing coordinate lies on a coherent alternating cycle of fixed-shore full components, while boundary-edge-only closure is refuted |
 | Split boundary to common partition | Literal boundary and both extension languages | terminal | proved and audited |
 | Cycle-boundary family to `K_7` | Two universal vertices, induced cycle, connected full shores | terminal | proved and audited |
 | Exact-block transition to failed-lift path | Boundary root, selected edge deletion, exact block, literal path and first hits | none | proved and audited |
