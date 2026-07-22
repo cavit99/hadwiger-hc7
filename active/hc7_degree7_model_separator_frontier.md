@@ -1887,17 +1887,45 @@ In the original degree-seven tight-pole instance, an internal articulation
 in either of two disjoint matching layers already gives the strict restart
 unless its smaller side has boundary at least eight.  If there is no such
 articulation, that layer has two internally vertex-disjoint root-to-root
-routes.  The next intermediate response lemma should select an edge on a
-nonseparating route and couple one proper-minor response simultaneously to
+routes.  The
+[doubled-route response and model-persistence theorem](../results/hc7_degree7_route_cycle_model_persistence.md)
+replaces the former isolated-edge target by two exact objects.
 
-1. a prescribed boundary matching containing `e_0,e_i`; and
-2. a label-compatible incidence or allocation in the fixed `U`-rooted
-   `K_5` model,
+First, every minimal root-separating edge bond has a simultaneous deletion
+colouring with exact matching `\{e_0,e_i\}`.  A minimal aligned subset is
+either one nonseparating edge, or has at least two edges: every proper
+subset then rejects all matchings containing `e_0,e_i`, while the common
+deletion retains the operation-labelled equality signatures.  For a
+two-edge bond these are the three corners
+`(equal,equal)`, `(equal,proper)` and `(proper,equal)`; the missing fourth
+corner would six-colour `G`.
 
-or else give an explicit `K_7` model, a common boundary partition, or a
-strict order-seven descent.  Preserving the matching alone is nonterminal,
-and no such model-label coupling has yet been proved from the route
-geometry.
+Second, test the two literal route cycles against the fixed `U`-rooted
+`K_5` model.  A persistent cycle edge carries its proper-minor response
+while the same five labelled bags survive.  If neither layer has such an
+edge, one layer is a literal `C_3`, `C_4` or `C_5` of rooted-bag sectors:
+every sector edge is a bridge of its bag, every cyclic cross-bag edge is
+the unique contact of that bag pair, and every off-sector bag component
+has one attachment vertex on its sector.
+
+The remaining intermediate theorem now has three exact branches.
+
+1. If a persistent cycle edge returns a matching containing `e_0,e_i`,
+   align its palette data with actual rooted-bag incidence.
+2. If persistent cycle edges exist but all their responses omit `e_0` or
+   `e_i`, use the minimal multi-edge bond signatures and the full host
+   hypotheses to force alignment, a terminal outcome, or a strict descent.
+   The
+   [abstract response-table barrier](../barriers/hc7_degree7_single_edge_response_alignment_barrier.md)
+   shows that matching counts and response reselection alone cannot do so.
+3. If no cycle edge is persistent, analyse attachments to the whole short
+   cycle, using crossing attachments for a labelled minor and interval-local
+   attachments for an actual order-seven descent or common boundary
+   partition.
+
+Every branch must give an explicit `K_7` model, a common complete boundary
+partition, or a strict same-host order-seven descent.  Matching/model
+coexistence alone is still nonterminal.
 
 1. In the singleton mode, cutvertices and bridges return exact order-seven
    interfaces; the surviving opposite exterior is nonbipartite and
@@ -1952,6 +1980,7 @@ one of the three literal host configurations above.
 
 - [connected degree-seven anti-neighbourhood](../results/hc7_degree7_anti_neighbourhood_connectivity.md)
 - [exact matching languages and simultaneous Kempe paths](../results/hc7_degree7_matching_bridge_bundle.md)
+- [doubled-route responses and short rooted-bag cycles](../results/hc7_degree7_route_cycle_model_persistence.md)
 - [boundary-labelled one-/two-edge-deficient `K_7` model](../results/hc7_degree7_aligned_near_k7_model.md)
 - [spanning enhancement, off-pole response and dual orientation](../results/hc7_degree7_one_spoke_bridge_corollaries.md)
 - [two-mark branch-set split or separation](../results/hc7_two_mark_branch_set_split.md)

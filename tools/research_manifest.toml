@@ -22,7 +22,7 @@ status = "conditional-target"
 source = "active/hc7_degree7_model_separator_frontier.md"
 source_heading = "Generic exact-seven restart and the remaining terminal theorem"
 active = false
-expected_source_sha256 = "5a61932d94a00c8919c46b62c58dad6ab45d96b4aa25d0dffd8830042fd58184"
+expected_source_sha256 = "2faab604c8fe1490f0c4263cef82891e4c8f8e64ff008a0a4ee2574be6c8149d"
 scope = "minimum-order generic exact-seven selected-response interfaces in the degree-seven branch of a hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "the recursion preserves a selected literal boundary-to-shore edge response; old near-clique labels are required only by any explicit labelled minor construction"
 separator_order = "an exact order-seven separator is terminal only when one complete equality partition is realized by both closed shores"
@@ -804,6 +804,58 @@ does_not_prove = [
   "the degree-seven branch or HC7",
 ]
 keywords = ["degree seven", "tight pole", "separating edge", "Kempe lock", "strict literal descent"]
+
+[[claims]]
+id = "hc7.degree7_route_cycle_model_persistence"
+title = "Doubled-route responses and short rooted-bag cycles"
+kind = "theorem"
+status = "audited-green"
+source = "results/hc7_degree7_route_cycle_model_persistence.md"
+source_heading = "Doubled Kempe routes: a persistent model edge or a short bag cycle"
+active = false
+audit = "results/hc7_degree7_route_cycle_model_persistence_audit.md"
+expected_source_sha256 = "886b7b65e53cdfd8d6940a64702155293fa902085c2a11d50a415404232f7f62"
+scope = "the doubled-route outcome in the connected degree-seven anti-neighbourhood, with one fixed exact-e0 colouring and one fixed U-rooted K5 model"
+label_fidelity = "bond operations retain e0 and ei simultaneously; a persistent edge retains the same five rooted bags; the essential-cycle outcome retains every literal sector and unique bag contact"
+colour_compatibility = "a minimal aligned bond response may require several edges; a persistent one-edge response may still omit e0 or ei"
+conclusions = [
+  "every root-separating layer bond has a simultaneous exact-{e0,ei} response with all bond edges monochromatic",
+  "a minimal aligned bond subset is one nonseparating edge or a multi-edge obstruction whose single-edge responses all omit e0 or ei",
+  "the bond deletion and all one-edge deletions give operation-labelled equality signatures on one common host",
+  "persistence of one route-cycle edge is decided exactly by bag connectivity and contact multiplicity",
+  "if neither of two disjoint route cycles has a persistent edge, one is a C3, C4 or C5 of bag-bridge sectors joined by unique contacts",
+]
+does_not_prove = [
+  "palette-to-bag incidence for an aligned persistent response",
+  "elimination of the persistent response-mismatch branch",
+  "a terminal K7-minor model, common complete boundary partition or strict order-seven descent",
+  "the degree-seven branch or HC7",
+]
+keywords = ["degree seven", "doubled route", "bond response", "persistent model edge", "rooted bag cycle"]
+
+[[claims]]
+id = "hc7.barrier.degree7_single_edge_response_alignment"
+title = "A two-edge bond response need not align either single edge"
+kind = "barrier"
+status = "audited-green"
+source = "barriers/hc7_degree7_single_edge_response_alignment_barrier.md"
+active = false
+audit = "barriers/hc7_degree7_single_edge_response_alignment_barrier_audit.md"
+expected_source_sha256 = "5698c4b4ce25a8aa9441443b60c2c6677586df446d282a0d029db7c8eb7f58ab"
+refutes = [
+  "exact degree-seven matching languages and a two-edge all-equal response force one single-edge response containing the same two prescribed pairs",
+  "matching counts or response reselection alone recover the missing one-edge existential quantifier",
+]
+satisfies = [
+  "boundary complement K3,4 with alpha(H)=2 and chi(H)=4",
+  "the exact matching orders and the three possible two-edge equality signatures",
+  "the finite K6-minor-free boundary augmentation condition for the selected matching",
+]
+lacks = [
+  "realization by one seven-connected K7-minor-free fully minor-critical host",
+  "the five endpoint Kempe locks and literal rooted-K5 allocation",
+]
+keywords = ["degree seven", "response alignment", "abstract barrier", "two-edge bond", "matching language"]
 
 [[claims]]
 id = "hc7.exact7_rooted_k5_connector_separator"
@@ -8320,7 +8372,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "Exact-seven first-entry and separator-excess reduction"
 evidence_start_line = 477
 evidence_end_line = 485
-evidence_sha256 = "5a61932d94a00c8919c46b62c58dad6ab45d96b4aa25d0dffd8830042fd58184"
+evidence_sha256 = "2faab604c8fe1490f0c4263cef82891e4c8f8e64ff008a0a4ee2574be6c8149d"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -8342,7 +8394,7 @@ evidence_source = "active/hc7_degree7_model_separator_frontier.md"
 evidence_heading = "3. The model-carried obstruction"
 evidence_start_line = 89
 evidence_end_line = 112
-evidence_sha256 = "5a61932d94a00c8919c46b62c58dad6ab45d96b4aa25d0dffd8830042fd58184"
+evidence_sha256 = "2faab604c8fe1490f0c4263cef82891e4c8f8e64ff008a0a4ee2574be6c8149d"
 
 [[relations]]
 source = "hc7.target.degree7_model_separator"
@@ -9098,6 +9150,39 @@ source = "hc7.target.degree7_model_separator"
 target = "hc7.degree7_tight_pole_edge_localization"
 kind = "uses"
 note = "Removes transition selection from the degree-seven tight-pole residue and isolates nonseparating-route response provenance or positive separator excess."
+
+[[relations]]
+source = "hc7.degree7_route_cycle_model_persistence"
+target = "hc7.degree7_tight_pole_edge_localization"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_route_cycle_model_persistence"
+target = "hc7.degree7_matching_rooted_separator"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_route_cycle_model_persistence"
+target = "hc7.degree7_one_spoke_bridge"
+kind = "uses"
+
+[[relations]]
+source = "hc7.degree7_route_cycle_model_persistence"
+target = "hc7.marked_edge_response_coupling"
+kind = "related_to"
+note = "Uses the same deletion/contraction response equivalence when excluding a second response family for one edge."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.degree7_route_cycle_model_persistence"
+kind = "uses"
+note = "Reduces the doubled-route subcase to an aligned persistent edge, a persistent response mismatch, or a short essential rooted-bag cycle."
+
+[[relations]]
+source = "hc7.target.degree7_model_separator"
+target = "hc7.barrier.degree7_single_edge_response_alignment"
+kind = "guarded_by"
+note = "Matching languages and common-host equality signatures alone do not select an aligned single-edge response."
 
 [[verifiers]]
 id = "component-exchange-five-core"
