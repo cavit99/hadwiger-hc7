@@ -2103,7 +2103,7 @@ def run_verifiers(root: Path, manifest: dict, selected: set[str] | None = None) 
     if unknown:
         raise IntegrityError(f"unknown verifier id(s): {', '.join(sorted(unknown))}")
     for verifier in manifest["verifiers"]:
-        if selected and verifier["id"] not in selected:
+        if selected is not None and verifier["id"] not in selected:
             continue
         command = [sys.executable, verifier["path"]]
         start = time.monotonic()
@@ -2150,6 +2150,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     context_parser.add_argument("--database", type=Path, default=DEFAULT_DATABASE)
     verifier_parser = subparsers.add_parser("verify", help="run the small deterministic verifier whitelist")
     verifier_parser.add_argument("--id", action="append", dest="ids")
+    verifier_parser.add_argument("--ids-file", type=Path)
     ci_parser = subparsers.add_parser("ci", help="run check, temporary index/report build, and verifiers")
     ci_parser.add_argument("--skip-verifiers", action="store_true")
     args = parser.parse_args(argv)
@@ -2180,7 +2181,18 @@ def main(argv: Sequence[str] | None = None) -> int:
             errors = validate_repository()
             if errors:
                 return print_errors(errors)
-            run_verifiers(ROOT, manifest, set(args.ids) if args.ids else None)
+            selected = set(args.ids or [])
+            if args.ids_file:
+                selected.update(
+                    line.strip()
+                    for line in args.ids_file.read_text(encoding="utf-8").splitlines()
+                    if line.strip()
+                )
+            run_verifiers(
+                ROOT,
+                manifest,
+                selected if args.ids or args.ids_file else None,
+            )
             return 0
         if args.command == "ci":
             errors = validate_repository()

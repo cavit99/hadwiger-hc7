@@ -1027,6 +1027,28 @@ class VerifierRunnerTests(unittest.TestCase):
         with self.assertRaises(index.IntegrityError):
             index.run_verifiers(Path.cwd(), {"verifiers": []}, {"missing"})
 
+    def test_empty_selection_runs_no_verifiers(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            marker = root / "ran"
+            script = root / "verifier.py"
+            script.write_text(
+                f"from pathlib import Path\nPath({str(marker)!r}).touch()\n",
+                encoding="utf-8",
+            )
+            manifest = {
+                "verifiers": [
+                    {
+                        "id": "verifier",
+                        "path": script.name,
+                        "timeout": 2,
+                        "expected_stdout": [],
+                    }
+                ]
+            }
+            index.run_verifiers(root, manifest, set())
+            self.assertFalse(marker.exists())
+
 
 if __name__ == "__main__":
     unittest.main()
