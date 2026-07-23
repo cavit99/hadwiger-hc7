@@ -1,0 +1,65 @@
+name: Degree-seven two-K4 census
+
+on:
+  pull_request:
+    paths:
+      - active/hc7_almost_dominating_rooted_k5_census.py
+      - active/hc7_degree7_two_k4_census.py
+      - .github/workflows/degree7-two-k4.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install nauty and NetworkX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nauty
+          if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
+            sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
+          fi
+          python -m pip install -r tools/requirements-verifiers.txt
+      - name: Run exact census
+        run: |
+          geng -q 7 | python active/hc7_degree7_two_k4_census.py | tee degree7-two-k4.json
+      - uses: actions/upload-artifact@v6
+        with:
+          name: degree7-two-k4
+          path: degree7-two-k4.json
+
+  summarize:
+    needs: census
+    runs-on: ubuntu-latest
+    outputs:
+      summary: ${{ steps.counts.outputs.summary }}
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: degree7-two-k4
+          path: output
+      - id: counts
+        shell: python
+        run: |
+          import json,os
+          from pathlib import Path
+          r=json.loads((Path('output')/'degree7-two-k4.json').read_text()); c=r['counts']
+          summary=(f"zero={c.get('input_k4_0',0)},one={c.get('input_k4_1',0)},"
+                   f"yes={c.get('rooted_k5_exit',0)},no={c.get('survivors',0)}")
+          with open(os.environ['GITHUB_OUTPUT'],'a') as out: print(f'summary={summary}',file=out)
+          print(summary); print('counts',c)
+          for s in r['survivors']: print('survivor',s)
+
+  expose:
+    needs: summarize
+    name: ${{ needs.summarize.outputs.summary }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ needs.summarize.outputs.summary }}'
