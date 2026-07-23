@@ -1,0 +1,74 @@
+name: Almost-dominating rooted-K5 census
+
+on:
+  pull_request:
+    paths:
+      - active/hc7_almost_dominating_rooted_k5_census.py
+      - .github/workflows/almost-dominating-rooted-k5.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    strategy:
+      matrix:
+        order: [7, 8]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install nauty and NetworkX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nauty
+          if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
+            sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
+          fi
+          python -m pip install -r tools/requirements-verifiers.txt
+      - name: Run exact census
+        run: |
+          geng -q ${{ matrix.order }} \
+            | python active/hc7_almost_dominating_rooted_k5_census.py --order ${{ matrix.order }} \
+            | tee rooted-k5-${{ matrix.order }}.json
+      - uses: actions/upload-artifact@v6
+        with:
+          name: rooted-k5-${{ matrix.order }}
+          path: rooted-k5-${{ matrix.order }}.json
+
+  summarize:
+    needs: census
+    runs-on: ubuntu-latest
+    outputs:
+      summary: ${{ steps.counts.outputs.summary }}
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          pattern: rooted-k5-*
+          path: output
+          merge-multiple: true
+      - id: counts
+        shell: python
+        run: |
+          import json, os
+          from pathlib import Path
+          pieces=[]
+          for order in (7,8):
+              r=json.loads((Path('output')/f'rooted-k5-{order}.json').read_text())
+              c=r['counts']
+              pieces.append(f"n{order}:free={c.get('k4_free',0)},yes={c.get('rooted_k5_exit',0)},no={c.get('survivors',0)}")
+              print('order',order,'counts',c)
+              for s in r['survivors'][:100]: print('survivor',order,s)
+          summary=';'.join(pieces)
+          with open(os.environ['GITHUB_OUTPUT'],'a') as out: print(f'summary={summary}',file=out)
+          print(summary)
+
+  expose:
+    needs: summarize
+    name: ${{ needs.summarize.outputs.summary }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ needs.summarize.outputs.summary }}'
