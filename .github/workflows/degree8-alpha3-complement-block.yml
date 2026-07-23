@@ -1,0 +1,87 @@
+name: Degree-eight alpha-three complement-block census
+
+on:
+  pull_request:
+    paths:
+      - active/hc7_degree8_alpha3_virtual_edge_census.py
+      - active/hc7_degree8_alpha3_complement_block_census.py
+      - .github/workflows/degree8-alpha3-complement-block.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: tools/requirements-verifiers.txt
+      - name: Install nauty and NetworkX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nauty
+          if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
+            sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
+          fi
+          python -m pip install -r tools/requirements-verifiers.txt
+      - name: Run exact census
+        run: |
+          geng -q 8 \
+            | python active/hc7_degree8_alpha3_complement_block_census.py \
+                --survivor-limit 3000 \
+            | tee degree8-alpha3-complement-block.json
+      - uses: actions/upload-artifact@v6
+        with:
+          name: degree8-alpha3-complement-block
+          path: degree8-alpha3-complement-block.json
+
+  summarize:
+    needs: census
+    runs-on: ubuntu-latest
+    outputs:
+      summary: ${{ steps.counts.outputs.summary }}
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: degree8-alpha3-complement-block
+          path: output
+      - id: counts
+        name: Parse exact counts
+        shell: python
+        run: |
+          import json, os
+          from collections import Counter
+          from pathlib import Path
+          result = json.loads((Path('output') / 'degree8-alpha3-complement-block.json').read_text())
+          c = result['counts']
+          summary = (
+              f"a3={c.get('alpha3',0)},"
+              f"k4free={c.get('alpha3_k4free',0)},"
+              f"yes={c.get('positive',0)},"
+              f"no={c.get('survivors',0)},"
+              f"triples={c.get('tested_triples',0)}"
+          )
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              print(f'summary={summary}', file=out)
+          print(summary)
+          survivors = result['survivors']
+          print('edge_distribution', sorted(Counter(s['edges'] for s in survivors).items()))
+          signatures = Counter((s['edges'], tuple(s['degree_sequence']), tuple(s['complement_components'])) for s in survivors)
+          print('signature_count', len(signatures))
+          for signature, count in signatures.most_common(50):
+              print(count, signature)
+          for survivor in survivors[:100]:
+              print('survivor', survivor)
+
+  expose:
+    needs: summarize
+    name: ${{ needs.summarize.outputs.summary }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ needs.summarize.outputs.summary }}'
