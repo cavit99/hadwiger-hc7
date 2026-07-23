@@ -52,10 +52,11 @@ jobs:
           name: degree8-alpha3-star-forest
           path: output
       - id: counts
-        name: Parse exact counts
+        name: Parse exact counts and survivor signatures
         shell: python
         run: |
           import json, os
+          from collections import Counter
           from pathlib import Path
           result = json.loads((Path('output') / 'degree8-alpha3-star-forest.json').read_text())
           c = result['counts']
@@ -69,6 +70,37 @@ jobs:
           with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
               print(f'summary={summary}', file=out)
           print(summary)
+          survivors = result['survivors']
+          signatures = Counter(
+              (
+                  s['edges'],
+                  tuple(s['degree_sequence']),
+                  tuple(s['complement_components']),
+                  s['max_forest_size'],
+              )
+              for s in survivors
+          )
+          print('signature_count', len(signatures))
+          print('edge_distribution', sorted(Counter(s['edges'] for s in survivors).items()))
+          print('max_forest_distribution', sorted(Counter(s['max_forest_size'] for s in survivors).items()))
+          print('top_signatures')
+          for signature, count in signatures.most_common(40):
+              print(count, signature)
+          print('representatives')
+          seen = set()
+          for survivor in survivors:
+              signature = (
+                  survivor['edges'],
+                  tuple(survivor['degree_sequence']),
+                  tuple(survivor['complement_components']),
+                  survivor['max_forest_size'],
+              )
+              if signature in seen:
+                  continue
+              seen.add(signature)
+              print(signature, survivor['H'])
+              if len(seen) >= 80:
+                  break
 
   expose:
     needs: summarize
