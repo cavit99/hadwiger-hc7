@@ -1,0 +1,71 @@
+name: Degree-seven K7-minus-free neighbourhood census
+
+on:
+  pull_request:
+    paths:
+      - active/hc7_degree8_alpha3_virtual_edge_census.py
+      - active/hc7_degree7_neighborhood_census.py
+      - .github/workflows/degree7-neighborhood-census.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install nauty and NetworkX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nauty
+          if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
+            sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
+          fi
+          python -m pip install -r tools/requirements-verifiers.txt
+      - name: Run exact census
+        run: |
+          geng -q 7 | python active/hc7_degree7_neighborhood_census.py | tee degree7-neighborhood.json
+      - uses: actions/upload-artifact@v6
+        with:
+          name: degree7-neighborhood
+          path: degree7-neighborhood.json
+
+  summarize:
+    needs: census
+    runs-on: ubuntu-latest
+    outputs:
+      summary: ${{ steps.counts.outputs.summary }}
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: degree7-neighborhood
+          path: output
+      - id: counts
+        shell: python
+        run: |
+          import json, os
+          from pathlib import Path
+          r=json.loads((Path('output')/'degree7-neighborhood.json').read_text())
+          c=r['counts']
+          summary=(f"alpha2={c.get('alpha_at_most_two',0)},"
+                   f"survivors={c.get('local_survivors',0)},"
+                   f"k4zero={c.get('k4_count_0',0)},"
+                   f"k4one={c.get('k4_count_1',0)},"
+                   f"k4two={sum(v for k,v in c.items() if k.startswith('k4_count_') and int(k.rsplit('_',1)[1])>=2)}")
+          with open(os.environ['GITHUB_OUTPUT'],'a') as out: print(f'summary={summary}',file=out)
+          print(summary)
+          print('counts',c)
+          print('signatures',r['signature_counts'])
+          for s in r['survivors']: print('survivor',s)
+
+  expose:
+    needs: summarize
+    name: ${{ needs.summarize.outputs.summary }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ needs.summarize.outputs.summary }}'

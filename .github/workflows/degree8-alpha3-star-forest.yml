@@ -1,0 +1,110 @@
+name: Degree-eight alpha-three star-forest census
+
+on:
+  pull_request:
+    paths:
+      - active/hc7_degree8_alpha3_virtual_edge_census.py
+      - active/hc7_degree8_alpha3_star_forest_census.py
+      - .github/workflows/degree8-alpha3-star-forest.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: tools/requirements-verifiers.txt
+      - name: Install nauty and NetworkX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nauty
+          if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
+            sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
+          fi
+          python -m pip install -r tools/requirements-verifiers.txt
+      - name: Run exact census
+        run: |
+          geng -q 8 \
+            | python active/hc7_degree8_alpha3_star_forest_census.py \
+                --survivor-limit 2000 \
+            | tee degree8-alpha3-star-forest.json
+      - uses: actions/upload-artifact@v6
+        with:
+          name: degree8-alpha3-star-forest
+          path: degree8-alpha3-star-forest.json
+
+  summarize:
+    needs: census
+    runs-on: ubuntu-latest
+    outputs:
+      summary: ${{ steps.counts.outputs.summary }}
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: degree8-alpha3-star-forest
+          path: output
+      - id: counts
+        name: Parse exact counts and survivor signatures
+        shell: python
+        run: |
+          import json, os
+          from collections import Counter
+          from pathlib import Path
+          result = json.loads((Path('output') / 'degree8-alpha3-star-forest.json').read_text())
+          c = result['counts']
+          summary = (
+              f"a3={c.get('alpha3',0)},"
+              f"k4free={c.get('alpha3_k4free',0)},"
+              f"yes={c.get('star_forest_positive',0)},"
+              f"no={c.get('survivors',0)},"
+              f"states={c.get('tested_states',0)}"
+          )
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as out:
+              print(f'summary={summary}', file=out)
+          print(summary)
+          survivors = result['survivors']
+          signatures = Counter(
+              (
+                  s['edges'],
+                  tuple(s['degree_sequence']),
+                  tuple(s['complement_components']),
+                  s['max_forest_size'],
+              )
+              for s in survivors
+          )
+          print('signature_count', len(signatures))
+          print('edge_distribution', sorted(Counter(s['edges'] for s in survivors).items()))
+          print('max_forest_distribution', sorted(Counter(s['max_forest_size'] for s in survivors).items()))
+          print('top_signatures')
+          for signature, count in signatures.most_common(40):
+              print(count, signature)
+          print('representatives')
+          seen = set()
+          for survivor in survivors:
+              signature = (
+                  survivor['edges'],
+                  tuple(survivor['degree_sequence']),
+                  tuple(survivor['complement_components']),
+                  survivor['max_forest_size'],
+              )
+              if signature in seen:
+                  continue
+              seen.add(signature)
+              print(signature, survivor['H'])
+              if len(seen) >= 80:
+                  break
+
+  expose:
+    needs: summarize
+    name: ${{ needs.summarize.outputs.summary }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ needs.summarize.outputs.summary }}'
