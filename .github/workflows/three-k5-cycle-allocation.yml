@@ -1,0 +1,23 @@
+name: Three-K5 prescribed-cycle allocation probe
+
+on:
+  pull_request:
+    paths:
+      - active/hc7_degree8_alpha3_virtual_edge_census.py
+      - active/hc7_three_k5_cycle_allocation_probe.py
+      - .github/workflows/three-k5-cycle-allocation.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r tools/requirements-verifiers.txt
+      - run: python active/hc7_three_k5_cycle_allocation_probe.py
