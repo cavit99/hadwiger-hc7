@@ -1,0 +1,74 @@
+name: Degree-eight exterior-component quotient census
+
+on:
+  pull_request:
+    paths:
+      - active/hc7_almost_dominating_rooted_k5_census.py
+      - active/hc7_degree8_alpha3_virtual_edge_census.py
+      - active/hc7_degree8_component_quotient_census.py
+      - .github/workflows/degree8-component-quotient.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install nauty and NetworkX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nauty
+          if ! command -v geng >/dev/null && command -v nauty-geng >/dev/null; then
+            sudo ln -s "$(command -v nauty-geng)" /usr/local/bin/geng
+          fi
+          python -m pip install -r tools/requirements-verifiers.txt
+      - name: Run exact quotient census
+        run: |
+          geng -q 8 \
+            | python active/hc7_degree8_component_quotient_census.py \
+            | tee degree8-component-quotient.json
+      - uses: actions/upload-artifact@v6
+        with:
+          name: degree8-component-quotient
+          path: degree8-component-quotient.json
+
+  summarize:
+    needs: census
+    runs-on: ubuntu-latest
+    outputs:
+      summary: ${{ steps.counts.outputs.summary }}
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: degree8-component-quotient
+          path: output
+      - id: counts
+        shell: python
+        run: |
+          import json, os
+          from pathlib import Path
+          r=json.loads((Path('output')/'degree8-component-quotient.json').read_text())
+          c=r['counts']
+          summary=(f"inputs={c.get('rooted_k5_survivors',0)},"
+                   f"oneclosed={c.get('one_component_closed_graphs',0)},"
+                   f"twoclosed={c.get('two_component_closed_graphs',0)},"
+                   f"full={c.get('fully_closed',0)},"
+                   f"remain={c.get('survivors',0)}")
+          with open(os.environ['GITHUB_OUTPUT'],'a') as out: print(f'summary={summary}',file=out)
+          print(summary)
+          print('counts',c)
+          for s in r['survivors'][:100]: print('survivor',s)
+
+  expose:
+    needs: summarize
+    name: ${{ needs.summarize.outputs.summary }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '${{ needs.summarize.outputs.summary }}'
