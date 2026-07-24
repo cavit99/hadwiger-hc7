@@ -379,6 +379,41 @@ thirteen follow only after these base cases.  Split-terminal `I,T` cuts
 remain a conditional tagged fast route, and the strengthened four-bag
 theorem closes their finite allocation once one common defect is obtained.
 
+One exact small-shore branch has now been recovered as an active,
+unpromoted package.  The separately audited
+[two-vertex-shore contraction lemma](hc7_two_vertex_shore_bipartite_contraction.md)
+excludes an open-shore edge `va` whenever deletion of at most two boundary
+vertices leaves an independent bipartition whose two sides lie respectively
+in `N(v)` and `N(a)`.  The independently checked
+[order-eight `K_4`-minor/OCT certificate](hc7_order8_k4minor_oct_audit.md)
+then excludes the boundary-full/boundary-full instance for a
+`K_4`-minor-free boundary.  Its exact limitation is orientation: when the
+two edge endpoints have distinct unique boundary misses, a bipartition may
+force the misses onto the wrong sides.
+
+The reproducible
+[near-full bipartition census](hc7_p2_nearfull_bipartition_census.md)
+retains exactly `520` `K_4`-minor-free ordered marked configurations with
+this incompatible parity, all having two distinct misses.  That number is
+only for the stated static finite universe; it does not encode host
+realizability, the opposite shore, the named operation, or all consequences
+of `K_7`-minor exclusion.  A separate conditional family is fully closed:
+the audited
+[relative-seven planar-deficit theorem](hc7_relative7_planar_deficit_closure.md)
+eliminates all `48` sharp marker quotients, `24` by direct `K_7` models and
+`24` by a protected-triangle rooted-`K_4`/planarity argument after literal
+expansion.  No proved reduction sends every live residue to that family.
+
+Finally, the
+[three-colourful-set route assessment](hc7_three_colourful_sets_route_assessment.md)
+formalizes the desired synchronized `K_4` model but shows that the available
+Colorful Minors theorem starts from a `K_22` model and may return a separator
+of order eleven.  It therefore does not give the required exact-seven
+alternative.  The next proof must use the full host geometry and operation
+provenance to eliminate the incompatible-parity residue or return a strict
+literal exact-seven response; further static boundary-colouring enumeration
+is not the missing mechanism.
+
 Computation on the bounded separator is presently a falsification and
 discovery tool.  A proof-producing exhaustive search first needs a finite-
 signature replacement lemma for the unbounded full components, retaining
