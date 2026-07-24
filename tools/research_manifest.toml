@@ -10561,8 +10561,8 @@ expected_stdout = [
 [[verifiers]]
 id = "order8-p2-nearfull-bipartition-census"
 path = "active/hc7_p2_nearfull_bipartition_census.py"
-sha256 = "20308f71f9b010d286db480c23227e78d724ef94b9583fe7fe679d464f250f65"
-timeout = 180
+sha256 = "71a69e330bed963571d557d510c3a682533f6ee4686c0ef6dad564065ab7b737"
+timeout = 30
 requires = ["nauty"]
 expected_stdout = [
   "graphs=12346",

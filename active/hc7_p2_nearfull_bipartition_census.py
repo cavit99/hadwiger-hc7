@@ -10,7 +10,6 @@ definition below.
 from __future__ import annotations
 
 import collections
-import functools
 import itertools
 import shutil
 import subprocess
@@ -19,6 +18,49 @@ import subprocess
 ORDER = 8
 ALL = (1 << ORDER) - 1
 FULL = ORDER
+PAIR_WIDTH = ORDER + 1
+
+
+def pair_bit(first: int, second: int) -> int:
+    return 1 << (first * PAIR_WIDTH + second)
+
+
+SUBSETS_BY_SIZE = tuple(
+    tuple(mask for mask in range(1 << ORDER) if mask.bit_count() == size)
+    for size in range(ORDER + 1)
+)
+DELETION_MASKS = tuple(
+    sum(1 << vertex for vertex in vertices)
+    for size in range(3)
+    for vertices in itertools.combinations(range(ORDER), size)
+)
+PAIR_CLASS_MASKS = tuple(
+    sum(
+        pair_bit(first, second)
+        for first in range(PAIR_WIDTH)
+        for second in range(PAIR_WIDTH)
+        if int(first != FULL) + int(second != FULL) == miss_count
+        and (first == FULL or second == FULL or first != second)
+    )
+    for miss_count in range(3)
+)
+FIRST_ENDPOINT_MASKS = tuple(
+    sum(pair_bit(first, second) for second in range(PAIR_WIDTH))
+    for first in range(ORDER)
+)
+SECOND_ENDPOINT_MASKS = tuple(
+    sum(pair_bit(first, second) for first in range(PAIR_WIDTH))
+    for second in range(ORDER)
+)
+SAME_SIDE_PAIR_MASKS = tuple(
+    sum(
+        pair_bit(first, second)
+        for first in range(ORDER)
+        for second in range(ORDER)
+        if first != second and mask >> first & 1 and mask >> second & 1
+    )
+    for mask in range(1 << ORDER)
+)
 
 
 def decode_graph6(raw: bytes) -> tuple[int, ...]:
@@ -40,16 +82,16 @@ def decode_graph6(raw: bytes) -> tuple[int, ...]:
     return tuple(rows)
 
 
-def is_independent(rows: tuple[int, ...], mask: int) -> bool:
-    return all(not (rows[vertex] & mask) for vertex in range(ORDER) if mask >> vertex & 1)
-
-
-def independence_number(rows: tuple[int, ...], mask: int = ALL) -> int:
-    return max(
-        subset.bit_count()
-        for subset in range(1 << ORDER)
-        if subset & ~mask == 0 and is_independent(rows, subset)
-    )
+def independent_masks(rows: tuple[int, ...]) -> tuple[bool, ...]:
+    """Classify all vertex subsets by independence in one dynamic pass."""
+    answer = [False] * (1 << ORDER)
+    answer[0] = True
+    for mask in range(1, 1 << ORDER):
+        bit = mask & -mask
+        vertex = bit.bit_length() - 1
+        rest = mask ^ bit
+        answer[mask] = answer[rest] and not rows[vertex] & rest
+    return tuple(answer)
 
 
 def is_colourable(rows: tuple[int, ...], colour_count: int) -> bool:
@@ -79,15 +121,35 @@ def is_colourable(rows: tuple[int, ...], colour_count: int) -> bool:
     return search(0)
 
 
-def canonical_five_partitions() -> tuple[tuple[int, ...], ...]:
-    """Return restricted-growth words for partitions into exactly five blocks."""
-    result: list[tuple[int, ...]] = []
+def canonical_five_partitions() -> tuple[tuple[int, int], ...]:
+    """Encode every five-block partition by conflicts and admitted miss pairs."""
+    result: list[tuple[int, int]] = []
     word = [0] * ORDER
 
     def search(index: int, maximum: int) -> None:
         if index == ORDER:
             if maximum == 4:
-                result.append(tuple(word))
+                multiplicities = [word.count(block) for block in range(5)]
+                repeated = [
+                    vertex
+                    for vertex in range(ORDER)
+                    if multiplicities[word[vertex]] >= 2
+                ]
+                choices = [FULL, *repeated]
+                admitted = sum(
+                    pair_bit(first, second)
+                    for first in choices
+                    for second in choices
+                    if first == FULL or second == FULL or first != second
+                )
+                conflicts = 0
+                position = 0
+                for right in range(1, ORDER):
+                    for left in range(right):
+                        if word[left] == word[right]:
+                            conflicts |= 1 << position
+                        position += 1
+                result.append((conflicts, admitted))
             return
         for value in range(min(maximum + 1, 4) + 1):
             word[index] = value
@@ -100,35 +162,29 @@ def canonical_five_partitions() -> tuple[tuple[int, ...], ...]:
 FIVE_PARTITIONS = canonical_five_partitions()
 
 
-def admissible_miss_pairs(rows: tuple[int, ...]) -> set[tuple[int, int]]:
+def graph_edge_mask(rows: tuple[int, ...]) -> int:
+    edges = 0
+    position = 0
+    for right in range(1, ORDER):
+        for left in range(right):
+            if rows[left] >> right & 1:
+                edges |= 1 << position
+            position += 1
+    return edges
+
+
+def admissible_miss_pair_bits(rows: tuple[int, ...]) -> int:
     """Return the ordered endpoint-miss pairs exposed by five-block traces.
 
     ``FULL`` records a boundary-full endpoint.  A non-full miss may be a
     vertex in a non-singleton block of some proper surjective five-colouring.
     Two non-full misses are required to be distinct.
     """
-    answer: set[tuple[int, int]] = set()
-    for partition in FIVE_PARTITIONS:
-        if any(
-            partition[left] == partition[right]
-            for left in range(ORDER)
-            for right in range(left + 1, ORDER)
-            if rows[left] >> right & 1
-        ):
-            continue
-        multiplicity = collections.Counter(partition)
-        repeated = [
-            vertex
-            for vertex in range(ORDER)
-            if multiplicity[partition[vertex]] >= 2
-        ]
-        choices = [FULL, *repeated]
-        answer.update(
-            (first, second)
-            for first in choices
-            for second in choices
-            if first == FULL or second == FULL or first != second
-        )
+    edges = graph_edge_mask(rows)
+    answer = 0
+    for conflicts, admitted in FIVE_PARTITIONS:
+        if not edges & conflicts:
+            answer |= admitted
     return answer
 
 
@@ -169,88 +225,65 @@ def bipartition(
     return True, tuple(components)
 
 
-def compatible_bipartition(
-    rows: tuple[int, ...], miss_v: int, miss_a: int
-) -> tuple[int, int, int] | None:
-    """Find ``Z,P,Q`` compatible with the two endpoint neighbourhoods.
+def compatible_miss_pair_bits(rows: tuple[int, ...], needed: int) -> int:
+    """Return marked pairs compatible with some ``Z,P,Q``.
 
     Here ``|Z| <= 2``, ``X-Z = P dotcup Q``, both ``P`` and ``Q`` are
     independent, ``P`` avoids the unique vertex missed by ``v``, and ``Q``
     avoids the unique vertex missed by ``a``.
+
+    For a fixed bipartite component, its two sides may be reversed
+    independently.  Two retained misses are therefore incompatible exactly
+    when they occur on the same side of the same component.  A deleted miss
+    imposes no restriction.  Since at least six vertices remain, the two
+    independent classes can always both be kept nonempty.
     """
-    for deleted_size in range(3):
-        for deleted_tuple in itertools.combinations(range(ORDER), deleted_size):
-            deleted = sum(1 << vertex for vertex in deleted_tuple)
-            kept = ALL ^ deleted
-            okay, components = bipartition(rows, kept)
-            if not okay:
-                continue
-            for orientation in range(1 << len(components)):
-                p = 0
-                q = 0
-                for index, (left, right) in enumerate(components):
-                    if orientation >> index & 1:
-                        left, right = right, left
-                    p |= left
-                    q |= right
-                if miss_v != FULL and p >> miss_v & 1:
-                    continue
-                if miss_a != FULL and q >> miss_a & 1:
-                    continue
-                if p and q:
-                    return deleted, p, q
-    return None
+    compatible = 0
+    for deleted in DELETION_MASKS:
+        okay, components = bipartition(rows, ALL ^ deleted)
+        if not okay:
+            continue
+        forbidden = 0
+        for left, right in components:
+            forbidden |= SAME_SIDE_PAIR_MASKS[left] | SAME_SIDE_PAIR_MASKS[right]
+        compatible |= needed & ~forbidden
+        if compatible == needed:
+            break
+    return compatible
 
 
-def induced(rows: tuple[int, ...], keep: tuple[int, ...]) -> tuple[int, ...]:
-    position = {vertex: index for index, vertex in enumerate(keep)}
-    result = [0] * len(keep)
-    for index, vertex in enumerate(keep):
-        for other in keep:
-            if rows[vertex] >> other & 1:
-                result[index] |= 1 << position[other]
-    return tuple(result)
+def has_k4_minor(rows: tuple[int, ...]) -> bool:
+    """Recognize a ``K_4`` minor by exact series reduction.
 
-
-def contract_edge(
-    rows: tuple[int, ...], first: int, second: int
-) -> tuple[int, ...]:
-    if first > second:
-        first, second = second, first
-    keep = tuple(vertex for vertex in range(len(rows)) if vertex != second)
-    result = [0] * len(keep)
-    for left_index, left in enumerate(keep):
-        for right_index in range(left_index + 1, len(keep)):
-            right = keep[right_index]
-            present = bool(rows[left] >> right & 1)
-            if left == first:
-                present |= bool(rows[second] >> right & 1)
-            if right == first:
-                present |= bool(rows[left] >> second & 1)
-            if present:
-                result[left_index] |= 1 << right_index
-                result[right_index] |= 1 << left_index
-    return tuple(result)
-
-
-@functools.lru_cache(maxsize=None)
-def has_complete_minor(rows: tuple[int, ...], order: int) -> bool:
-    if len(rows) < order:
-        return False
-    if len(rows) == order:
-        return all(row.bit_count() == order - 1 for row in rows)
-    for vertex in range(len(rows)):
-        if has_complete_minor(
-            induced(rows, tuple(other for other in range(len(rows)) if other != vertex)),
-            order,
-        ):
+    A graph is ``K_4``-minor-free exactly when it has treewidth at most two.
+    Deleting a vertex of degree at most one, or suppressing a degree-two
+    vertex after joining its neighbours, preserves the presence of a
+    ``K_4`` minor.  If no such vertex remains on at least four vertices, the
+    remaining minimum-degree-three graph has a ``K_4`` minor.
+    """
+    adjacency = list(rows)
+    active = ALL
+    while active.bit_count() >= 4:
+        vertex = next(
+            (
+                candidate
+                for candidate in range(ORDER)
+                if active >> candidate & 1
+                and (adjacency[candidate] & active).bit_count() <= 2
+            ),
+            None,
+        )
+        if vertex is None:
             return True
-    for first in range(len(rows)):
-        for second in range(first + 1, len(rows)):
-            if rows[first] >> second & 1 and has_complete_minor(
-                contract_edge(rows, first, second), order
-            ):
-                return True
+        neighbours = adjacency[vertex] & active
+        if neighbours.bit_count() == 2:
+            first_bit = neighbours & -neighbours
+            second_bit = neighbours ^ first_bit
+            first = first_bit.bit_length() - 1
+            second = second_bit.bit_length() - 1
+            adjacency[first] |= second_bit
+            adjacency[second] |= first_bit
+        active ^= 1 << vertex
     return False
 
 
@@ -277,33 +310,35 @@ def main() -> None:
     for raw in process.stdout:
         rows = decode_graph6(raw)
         graph_count += 1
-        if independence_number(rows) > 4 or not is_colourable(rows, 4):
+        independent = independent_masks(rows)
+        if any(independent[mask] for mask in SUBSETS_BY_SIZE[5]):
+            continue
+        if not is_colourable(rows, 4):
             continue
         eligible_graph_count += 1
-        k4_minor_free = not has_complete_minor(rows, 4)
+        k4_minor_free = not has_k4_minor(rows)
         if k4_minor_free:
             k4_minor_free_graph_count += 1
 
-        for miss_v, miss_a in admissible_miss_pairs(rows):
-            if miss_v != FULL and independence_number(
-                rows, ALL ^ (1 << miss_v)
-            ) > 3:
-                continue
-            if miss_a != FULL and independence_number(
-                rows, ALL ^ (1 << miss_a)
-            ) > 3:
-                continue
+        admitted = admissible_miss_pair_bits(rows)
+        for vertex in range(ORDER):
+            if any(
+                independent[mask] and not (mask >> vertex & 1)
+                for mask in SUBSETS_BY_SIZE[4]
+            ):
+                admitted &= ~FIRST_ENDPOINT_MASKS[vertex]
+                admitted &= ~SECOND_ENDPOINT_MASKS[vertex]
 
-            miss_count = int(miss_v != FULL) + int(miss_a != FULL)
-            eligible_instances[miss_count] += 1
+        compatible = compatible_miss_pair_bits(rows, admitted)
+        incompatible = admitted & ~compatible
+        for miss_count, class_mask in enumerate(PAIR_CLASS_MASKS):
+            eligible_count = (admitted & class_mask).bit_count()
+            incompatible_count = (incompatible & class_mask).bit_count()
+            eligible_instances[miss_count] += eligible_count
+            incompatible_instances[miss_count] += incompatible_count
             if k4_minor_free:
-                k4_minor_free_eligible[miss_count] += 1
-
-            if compatible_bipartition(rows, miss_v, miss_a) is not None:
-                continue
-            incompatible_instances[miss_count] += 1
-            if k4_minor_free:
-                k4_minor_free_incompatible[miss_count] += 1
+                k4_minor_free_eligible[miss_count] += eligible_count
+                k4_minor_free_incompatible[miss_count] += incompatible_count
 
     if process.wait() != 0:
         raise RuntimeError("geng failed")

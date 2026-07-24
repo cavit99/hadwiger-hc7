@@ -7,7 +7,7 @@ exact revisions:
 
 | file | SHA-256 |
 |---|---|
-| `hc7_p2_nearfull_bipartition_census.py` | `20308f71f9b010d286db480c23227e78d724ef94b9583fe7fe679d464f250f65` |
+| `hc7_p2_nearfull_bipartition_census.py` | `71a69e330bed963571d557d510c3a682533f6ee4686c0ef6dad564065ab7b737` |
 | `hc7_p2_nearfull_bipartition_census.md` | `e160ef08ccc29e54126f206c60ec71c55f568f68a21b0618b02c0a6205d09fc8` |
 | `hc7_three_colourful_sets_route_assessment.md` | `381a9c8749c8b20013ab0a119cbaed2aad6a203639499f43956c66b63bb65069` |
 
@@ -26,26 +26,50 @@ k4_minor_free_eligible_instances=18844 by_miss_count={0: 1116, 1: 6446, 2: 11282
 k4_minor_free_incompatible_instances=520 by_miss_count={0: 0, 1: 0, 2: 520}
 ```
 
-The implementation matches the finite universe stated in the companion
-note.  It:
+The optimized implementation matches the finite universe stated in the
+companion note.  It:
 
 1. enumerates the 12,346 unlabelled order-eight graph representatives from
    `geng -q 8`;
 2. retains precisely those representatives with independence number at most
    four and chromatic number at most four;
-3. enumerates every proper surjective five-colouring as a five-block
-   restricted-growth partition;
+3. encodes every proper surjective five-colouring as a five-block
+   restricted-growth partition, with edge conflicts and admitted marked
+   pairs represented by exact bit sets;
 4. permits a non-full miss precisely when it lies in a non-singleton block
    of one such colouring, requires two non-full misses to be distinct, and
    then applies the two displayed deletion-independence tests;
-5. searches every deletion set of order zero, one, or two and every
-   componentwise orientation of the remaining bipartite graph; and
+5. searches every deletion set of order zero, one, or two and encodes the
+   componentwise orientations exactly: two retained misses are incompatible
+   for a fixed deletion precisely when they lie on the same side of one
+   bipartite component; and
 6. tests exactly the endpoint-avoidance and nonempty-class conditions stated
    in the note.
 
-The recursive deletion/contraction `K_4`-minor test was also compared on all
-12,346 representatives with the independent connected-branch-set search in
-`hc7_order8_k4minor_oct_certificate.py`; there were zero disagreements.
+I compared the optimized program instance by instance with the exact
+implementation at Git revision `6f30c7c`.  On all 12,346 representatives,
+there were zero disagreements in graph eligibility, admitted marked pairs,
+either vertex-deletion independence filter, bipartition compatibility, or
+`K_4`-minor classification.  The compatibility comparison covered all
+522,939 marked pairs surviving the two deletion-independence filters, not
+only the aggregate census totals.
+
+The new `K_4`-minor recognizer is an exact series-reduction algorithm.
+Deleting a vertex of degree at most one, and suppressing a degree-two vertex
+after joining its two neighbours, preserve the presence of a `K_4` minor.
+If these reductions stop with at least four vertices, the remaining graph
+has minimum degree at least three and hence has a `K_4` minor; equivalently,
+every `K_4`-minor-free graph is a partial 2-tree and has a vertex of degree
+at most two.  Its result agreed with the previous recursive
+deletion/contraction test on every one of the 12,346 representatives.  The
+previous test had itself been compared with the independent
+connected-branch-set search in
+`hc7_order8_k4minor_oct_certificate.py`.
+
+Four local timed runs of the complete optimized census took 0.97--1.01
+seconds each.  Running with `python3 -O` exits nonzero before enumeration
+with the stated normal-mode requirement, so optimization cannot silently
+disable the embedded expected-output check.
 
 Accordingly, `520` is the exact count for the implemented marked static
 universe.  The note correctly says that it is a count of ordered marked pairs
