@@ -109,7 +109,7 @@ status = "active-target"
 source = "active/hc7_bounded_interface_synchronization_frontier.md"
 source_heading = "4. Primary open theorem"
 active = true
-expected_source_sha256 = "02ea034865b7d88c982397b9123e22b6603e94d66a9a1978e704f87875b35bf6"
+expected_source_sha256 = "0bd65dc7da766e22b1810052d5fd15db7fefed542980b3897b1d39b0d55fc020"
 scope = "every hypothetical minor-minimal HC7 counterexample"
 label_fidelity = "literal boundary vertices, operation endpoints, host paths and component-local edge-deletion responses"
 separator_order = "seven through nine; strict host-component descent allowed"
@@ -10528,4 +10528,76 @@ expected_stdout = [
   "saturation_r: K7=b,d,g,h survives=c,e,f,q,x",
   "saturation_s: K7=b,d survives=a,e,f,g,h,p,x",
   "two_apex_subdivision_exclusion=yes",
+]
+
+[[verifiers]]
+id = "order8-k4minor-oct-certificate"
+path = "active/hc7_order8_k4minor_oct_certificate.py"
+sha256 = "4b6eda8c37fb6a8793b65e38d0031a797b8bc9da13d4a6a3bf068fffd9cf7d5b"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "graphs 12346",
+  "oct_witnesses 8876",
+  "k4_witnesses 3470",
+  "records_sha256 a15a855eb45886eccac037642266ff47532f490301fc6fff9a495b07f923912e",
+  "PASS",
+]
+
+[[verifiers]]
+id = "order8-k4minor-oct-certificate-check"
+path = "active/hc7_order8_k4minor_oct_check.py"
+sha256 = "be6ef8ef9746befe2600c47293f5a122748a85f3df978b6a8a914bd54d301cd1"
+timeout = 30
+requires = ["nauty"]
+expected_stdout = [
+  "graphs 12346",
+  "oct_witnesses 8876",
+  "k4_witnesses 3470",
+  "records_sha256 a15a855eb45886eccac037642266ff47532f490301fc6fff9a495b07f923912e",
+  "PASS",
+]
+
+[[verifiers]]
+id = "order8-p2-nearfull-bipartition-census"
+path = "active/hc7_p2_nearfull_bipartition_census.py"
+sha256 = "20308f71f9b010d286db480c23227e78d724ef94b9583fe7fe679d464f250f65"
+timeout = 180
+requires = ["nauty"]
+expected_stdout = [
+  "graphs=12346",
+  "eligible_graphs=10460",
+  "eligible_instances=469852 by_miss_count={0: 10460, 1: 117796, 2: 341596}",
+  "incompatible_instances=209246 by_miss_count={0: 2514, 1: 39742, 2: 166990}",
+  "k4_minor_free_eligible_graphs=1116",
+  "k4_minor_free_eligible_instances=18844 by_miss_count={0: 1116, 1: 6446, 2: 11282}",
+  "k4_minor_free_incompatible_instances=520 by_miss_count={0: 0, 1: 0, 2: 520}",
+]
+
+[[verifiers]]
+id = "relative7-planar-deficit-classification"
+path = "active/hc7_relative7_planar_deficit_verify.py"
+sha256 = "74b655bb0db80c51f9ffb916bbe3bd0fd4a974e2cdd6c320fc139132616f4a55"
+timeout = 30
+expected_stdout = [
+  "PASS relative-seven planar-deficit exhaustive verification",
+  "root_sets=27 rooted_K4_models=644 triple_model_free=912",
+  "relative_survivors=48 direct_K7=24 hard=24",
+  "explicit_K7_minor_models=24 checked_adjacencies=504",
+  "unique_planar_deficit_certificates=24 deficit=10",
+  "fixed_graph6=I]~vy}jhw",
+  "catalogue_sha256=2cd2a8faf6f70327a9d2c7b4ec7084bd5981349d529a59708d69e84f05acdaa2",
+]
+
+[[verifiers]]
+id = "relative7-planar-deficit-certificate-check"
+path = "active/hc7_relative7_planar_deficit_certificate_check.py"
+sha256 = "339aa66677de3c1eaed08e929f6e59c4d4eadf46c27140defb95629fad5e589f"
+timeout = 30
+expected_stdout = [
+  "PASS independent relative-seven certificate check",
+  "survivor_complete=48 direct_K7_models=24 planar_deficit=24",
+  "checked_branch_sets=168 checked_adjacencies=504 deficit=10",
+  "fixed_graph6=I]~vy}jhw",
+  "catalogue_sha256=2cd2a8faf6f70327a9d2c7b4ec7084bd5981349d529a59708d69e84f05acdaa2",
 ]

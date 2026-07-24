@@ -325,6 +325,34 @@ the new order-eight-to-thirteen interface is presently diagnostic only: a
 proof search still needs a finite-signature replacement theorem for the
 unbounded component interiors and a certificate lift to the unchanged host.
 
+A recovered order-eight laboratory now settles one exact small-shore
+subcase.  The active, separately audited
+[two-vertex-shore contraction lemma](active/hc7_two_vertex_shore_bipartite_contraction.md)
+excludes an open-shore edge whenever deletion of at most two boundary
+vertices leaves an independent bipartition that can be oriented into the
+two endpoint neighbourhoods.  A separately checked finite certificate
+proves that every eight-vertex `K_4`-minor-free boundary has such an
+odd-cycle transversal; hence the boundary-full/boundary-full version of
+that two-vertex shore is impossible.  This is a genuine terminal
+subcase, but it is not yet a promoted input to the primary target.
+
+The [near-full census](active/hc7_p2_nearfull_bipartition_census.md) is
+diagnostic only.  In its explicitly defined static universe, the
+`K_4`-minor-free residue consists of exactly `520` ordered marked
+configurations, all with two distinct missed boundary vertices and
+incompatible bipartition parity.  It omits host realizability,
+opposite-shore geometry and operation provenance.  Separately, the audited
+[relative-seven quotient closure](active/hc7_relative7_planar_deficit_closure.md)
+closes all `48` sharp marker quotients (`24` by a direct `K_7` model and
+`24` by a rooted-`K_4`/planarity degree-deficit argument), but no theorem
+yet forces the live residue into that quotient family.  The checked
+[three-colourful-set assessment](active/hc7_three_colourful_sets_route_assessment.md)
+also records why the available Colorful Minors theorem does not supply the
+missing synchronization.  The live obligation is therefore to spend the
+full host hypotheses on the incompatible-parity residue, obtaining an
+explicit `K_7` model or a strict exact-seven response rather than another
+static boundary classification.
+
 Audited response theorems now strengthen the tight cases.  In degree eight,
 the retained root `x` has nonempty opposite-shore leaf sets whose
 union is an induced star.  Three of the four proper/monochromatic deletion
